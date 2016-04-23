@@ -1,4 +1,9 @@
-## README
+Working Title: D21
+=================
+
+[![Code Climate](https://codeclimate.com/github/initiatived21/d21/badges/gpa.svg)](https://codeclimate.com/github/initiatived21/d21) [![Build Status](https://travis-ci.org/initiatived21/clarat.svg?branch=master)](https://travis-ci.org/initiatived21/d21) [![Coverage Status](https://coveralls.io/repos/initiatived21/d21/badge.svg?branch=master&service=github)](https://coveralls.io/github/initiatived21/d21?branch=master)
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
