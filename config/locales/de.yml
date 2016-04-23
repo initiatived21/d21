@@ -1,0 +1,29 @@
+de:
+  layouts:
+    partials:
+      header:
+        new_pledge_link: 'Ein Versprechen abgeben'
+        faq_link: 'FAQ'
+        de: 'deutsch'
+        en: 'English'
+      footer:
+        faq_link: 'Häufige Fragen'
+        impressum_link: 'Impressum'
+  pages:
+    home:
+      recommended: 'Von der Redaktion empfohlen'
+      successful: 'Erfolgreiche Versprechen'
+  PledgeForm:
+    promise:
+      part1: 'Wir versprechen'
+      part2: 'wenn'
+    content:
+      label: 'Was?'
+      placeholder: 'z.B. eine Flüchtlingsfamilie als Paten zu unterstützen'
+    amount:
+      label: 'Wieviele?'
+    who:
+      label: 'Wer?'
+    requirement:
+      label: 'Was tun?'
+    submit: 'Abschicken'

@@ -1,0 +1,20 @@
+doctype html
+html lang=I18n.locale
+  head
+    meta charset="utf-8"
+    title
+      | D21
+
+    = csrf_meta_tags
+    = action_cable_meta_tag
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
+    javascript:
+      I18n.locale = '#{I18n.locale}'
+
+  body
+    = render '/layouts/partials/header'
+    = yield
+    = render '/layouts/partials/footer'

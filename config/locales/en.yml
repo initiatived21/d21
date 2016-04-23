@@ -1,0 +1,27 @@
+en:
+  layouts:
+    partials:
+      header:
+        new_pledge_link: 'Give a promise'
+        faq_link: 'FAQ'
+        de: 'deutsch'
+        en: 'English'
+      footer:
+        faq_link: 'Frequently Asked Questions'
+        impressum_link: 'Impressum'
+  pages:
+    home:
+      recommended: 'Recommended by the editors'
+      successful: 'Successful promises'
+  PledgeForm:
+    promise:
+      part1: 'We promise'
+  activerecord:
+    models:
+      pledge:
+        one: 'promise'
+        other: 'promise'
+    attributes:
+      pledge:
+        content: 'What?'
+        amount: 'How many?'
