@@ -16,12 +16,4 @@ en:
   PledgeForm:
     promise:
       part1: 'We promise'
-  activerecord:
-    models:
-      pledge:
-        one: 'promise'
-        other: 'promise'
-    attributes:
-      pledge:
-        content: 'What?'
-        amount: 'How many?'
+    submit: 'Submit'

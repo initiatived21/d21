@@ -12,6 +12,7 @@ AllCops:
     - 'config/environments/**/*'
     - 'config/initializers/**/*'
     - 'test/test_helper.rb'
+    - 'test/teaspoon_env.rb'
     - 'test/support/**/*'
 
 HasAndBelongsToMany:

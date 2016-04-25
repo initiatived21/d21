@@ -94,13 +94,16 @@ group :development, :test do
 
   # test suite
   gem 'minitest' # Testing using Minitest
-  gem 'minitest-rails', github: 'blowmage/minitest-rails', branch: 'rails5'
+  # gem 'minitest-rails', github: 'blowmage/minitest-rails', branch: 'rails5'
+  gem 'minitest-spec-rails'
   gem 'minitest-matchers'
   gem 'minitest-line'
   gem 'minitest-capybara'
   gem 'launchy' # save_and_open_page
   gem 'shoulda'
   gem 'mocha'
+  gem 'poltergeist'
+  gem 'teaspoon-mocha'
 
   # test suite additions
   gem 'rails_best_practices'

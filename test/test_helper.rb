@@ -8,7 +8,7 @@ end
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'minitest/rails'
+# require 'minitest/rails'
 # require 'minitest/rails/capybara'
 require 'minitest/pride'
 require 'mocha/mini_test'
@@ -49,6 +49,7 @@ File.open(Rails.root.join('log/test.log'), 'w') { |f| f.truncate(0) } # clearlog
 
 Minitest.after_run do
   if $suite_passing
+    teaspoon
     brakeman
     rails_best_practices
     rubocop
