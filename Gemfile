@@ -30,6 +30,8 @@ gem 'i18n-js'
 
 # React
 gem 'react-rails'
+gem 'browserify-rails'
+gem 'bower-rails'
 
 ### Rails extensions ###
 

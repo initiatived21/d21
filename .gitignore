@@ -47,6 +47,9 @@ secrets
 *.bowerrc
 bower.json
 
+# NPM modules
+/node_modules/**/*
+
 # OS files
 .DS_Store
 
