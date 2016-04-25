@@ -1,12 +1,9 @@
 {form, div, label, input, button} = React.DOM
 
-class @PledgeForm extends LocalizedComponent
-  handleSubmit: (e) ->
-    e.preventDefault()
-    alert('TODO: submit me!')
+class @PledgeForm extends BaseComponent
   render: ->
     form
-      onSubmit: @handleSubmit
+      onSubmit: @props.handleSubmit
 
       div
         className: 'PledgeForm-Sentence'
