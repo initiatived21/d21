@@ -37,4 +37,7 @@ class Pledge < ApplicationRecord
       transitions from: :active, to: :failed
     end
   end
+
+  # TODO: Just for testing purposes after_commit! Should be after activate:
+  after_commit { PledgeRelayJob.perform_later(self) }
 end

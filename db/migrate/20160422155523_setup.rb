@@ -8,9 +8,6 @@ class Setup < ActiveRecord::Migration[5.0]
 
       t.string :location
       t.date :deadline, null: false
-
-      t.string :title, null: false
-      t.text :short_description, null: false, limit: 300
       t.text :description
 
       # image

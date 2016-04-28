@@ -34,10 +34,6 @@ de:
         label: 'Ort'
       deadline:
         label: 'Kann unterzeichnet werden bis'
-      title:
-        label: 'Titel'
-      short_description:
-        label: 'Kurzbeschreibung'
       description:
         label: 'Beschreibung'
       initiator:

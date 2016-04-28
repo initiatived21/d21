@@ -8,8 +8,6 @@ class NewPledgeForm < Reform::Form
   property :requirement # , on: :pledge
   property :location # , on: :pledge
   property :deadline # , on: :pledge
-  property :title # , on: :pledge
-  property :short_description # , on: :pledge
   property :description # , on: :pledge
   # image
   # tags
