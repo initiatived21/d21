@@ -1,4 +1,3 @@
-{ div } = React.DOM
 { PropTypes } = React
 { Provider } = require('react-redux')
 BaseComponent = require('../../react_base/components/BaseComponent')

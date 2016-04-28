@@ -43,10 +43,6 @@ module.exports = class PledgeForm extends ChildComponent
         type: 'date'
         attribute: 'deadline'
       createElement Input,
-        attribute: 'title'
-      createElement Input,
-        attribute: 'short_description'
-      createElement Input,
         attribute: 'description'
       createElement Input,
         submodel: 'initiator'
