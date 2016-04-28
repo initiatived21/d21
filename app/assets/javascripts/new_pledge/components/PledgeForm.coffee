@@ -1,44 +1,64 @@
-{form, div, label, input, button} = React.DOM
+{ button, div } = React.DOM
+{ PropTypes, createElement } = React
+ChildComponent = require('../../react_base/components/ChildComponent')
+BaseForm = require('../../form/components/BaseForm')
+Input = require('../../form/components/Input')
 
-class @PledgeForm extends BaseComponent
+module.exports = class PledgeForm extends ChildComponent
+  @propTypes:
+    onSubmit: PropTypes.func.isRequired
+    formData: PropTypes.object.isRequired
+
   render: ->
-    form
-      onSubmit: @props.handleSubmit
+    createElement BaseForm,
+      formData: @props.formData
+      onSubmit: (e) =>
+        e.preventDefault()
+        @props.onSubmit
+          content: $('input[name=content]').val()
 
       div
         className: 'PledgeForm-Sentence'
         @t('.promise.part1')
 
-        label
-          htmlFor: 'content'
-          @t('.content.label')
-        input
-          type: 'text'
-          name: 'content'
-          placeholder: @t('.content.placeholder')
+        createElement Input,
+          attribute: 'content'
 
         @t('.promise.part2')
 
-        label
-          htmlFor: 'amount'
-          @t('.amount.label')
-        input
-          type: 'text'
-          name: 'amount'
-
-        label
-          htmlFor: 'who'
-          @t('.who.label')
-        input
+        createElement Input,
+          attribute: 'amount'
           type: 'number'
-          name: 'who'
 
-        label
-          htmlFor: 'requirement'
-          @t('.requirement.label')
-        input
-          type: 'text'
-          name: 'requirement'
+        createElement Input,
+          attribute: 'who'
+
+        createElement Input,
+          attribute: 'requirement'
+
+
+      createElement Input,
+        attribute: 'location'
+      createElement Input,
+        type: 'date'
+        attribute: 'deadline'
+      createElement Input,
+        attribute: 'title'
+      createElement Input,
+        attribute: 'short_description'
+      createElement Input,
+        attribute: 'description'
+      createElement Input,
+        submodel: 'initiator'
+        attribute: 'name'
+      createElement Input,
+        submodel: 'initiator'
+        attribute: 'email'
+        type: 'email'
+      createElement Input,
+        submodel: 'initiator'
+        attribute: 'password'
+        type: 'password'
 
       button
         type: 'submit'

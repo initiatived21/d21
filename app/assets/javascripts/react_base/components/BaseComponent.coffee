@@ -1,7 +1,7 @@
-# BaseComponent - should be used as ancestor for localized "Dumb"
-# Components
+# BaseComponent to be used for containers directly rendered in a rails view.
 #
-# Provides a lazy translation method.
-class @BaseComponent extends React.Component
-  t: (attrs...) ->
-    I18n.t(@constructor.name + attrs.shift(), attrs...)
+# This corrects the set locale, mostly for server side rendering.
+module.exports = class BaseComponent extends React.Component
+  constructor: (props) ->
+    super(props)
+    I18n.locale = props.locale

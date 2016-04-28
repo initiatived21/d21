@@ -16,4 +16,33 @@ en:
   PledgeForm:
     promise:
       part1: 'We promise'
+      part2: 'if'
     submit: 'Submit'
+  react_form:
+    pledge:
+      content:
+        label: 'What?'
+        placeholder: 'e.g. to give a refugee family a home'
+      amount:
+        label: 'How many?'
+      who:
+        label: 'Who?'
+      requirement:
+        label: 'Do what?'
+      location:
+        label: 'Location'
+      deadline:
+        label: 'Can be signed until'
+      title:
+        label: 'Title'
+      short_description:
+        label: 'Short description'
+      description:
+        label: 'Description'
+      initiator:
+        name:
+          label: 'Your Name'
+        email:
+          label: 'Your Email'
+        password:
+          label: 'Password'

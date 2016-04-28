@@ -15,10 +15,12 @@ class Setup < ActiveRecord::Migration[5.0]
 
       # image
       t.string :aasm_state, null: false
-      t.integer :signatures_count
+      t.integer :user_id, null: false
+      t.integer :signatures_count, null: false, default: 0
 
       t.timestamps
     end
+    add_index :pledges, :user_id
 
     create_table :tags do |t|
       t.string :name, null: false

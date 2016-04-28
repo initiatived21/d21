@@ -10,6 +10,7 @@ gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+
 ##################
 ### JAVASCRIPT ###
 ##################
@@ -30,13 +31,20 @@ gem 'i18n-js'
 
 # React
 gem 'react-rails'
+gem 'react-rails-hot-loader'
 gem 'browserify-rails'
 gem 'bower-rails'
 
+########################
 ### Rails extensions ###
+########################
 
 gem 'slim-rails'
+# gem 'dry-validation' # more explicit validations
+gem 'dry-validation', github: 'dry-rb/dry-validation'
+gem 'reform', github: 'apotonick/reform', branch: '2-2' # Form objects
 
+gem 'aasm'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # Use Redis adapter to run Action Cable in production

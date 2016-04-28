@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @recommended_pledges = Pledge.all
   end
 
   def faq

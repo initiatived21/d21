@@ -1,10 +1,12 @@
 {
   "name": "d21",
   "repository": "https://github.com/initiatived21/d21",
-  "dependencies" : {
+  "dependencies": {
     "browserify": "~10.2.4",
-    "browserify-incremental": "^3.0.1"
-    "coffeeify": "^0.6"
+    "browserify-incremental": "^3.0.1",
+    "coffeeify": "^0.6",
+    "react-redux": "^4.4.5",
+    "redux-thunk": "^2.0.1"
   },
   "license": "AGPL-3.0",
   "engines": {

@@ -30,20 +30,23 @@ ActiveRecord::Schema.define(version: 20160422155523) do
   add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
 
   create_table "pledges", force: :cascade do |t|
-    t.string   "content",                       null: false
-    t.integer  "amount",                        null: false
-    t.string   "who",                           null: false
-    t.string   "requirement",                   null: false
+    t.string   "content",                                   null: false
+    t.integer  "amount",                                    null: false
+    t.string   "who",                                       null: false
+    t.string   "requirement",                               null: false
     t.string   "location"
-    t.date     "deadline",                      null: false
-    t.string   "title",                         null: false
-    t.text     "short_description", limit: 300, null: false
+    t.date     "deadline",                                  null: false
+    t.string   "title",                                     null: false
+    t.text     "short_description", limit: 300,             null: false
     t.text     "description"
-    t.string   "aasm_state",                    null: false
-    t.integer  "signatures_count"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "aasm_state",                                null: false
+    t.integer  "user_id",                                   null: false
+    t.integer  "signatures_count",              default: 0, null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
+
+  add_index "pledges", ["user_id"], name: "index_pledges_on_user_id"
 
   create_table "pledges_tags", force: :cascade do |t|
     t.integer "pledge_id"

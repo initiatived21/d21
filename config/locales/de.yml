@@ -3,6 +3,7 @@ de:
     partials:
       header:
         new_pledge_link: 'Ein Versprechen abgeben'
+        search_link: 'Suchen'
         faq_link: 'FAQ'
         de: 'deutsch'
         en: 'English'
@@ -17,13 +18,32 @@ de:
     promise:
       part1: 'Wir versprechen'
       part2: 'wenn'
-    content:
-      label: 'Was?'
-      placeholder: 'z.B. eine Flüchtlingsfamilie als Paten zu unterstützen'
-    amount:
-      label: 'Wieviele?'
-    who:
-      label: 'Wer?'
-    requirement:
-      label: 'Was tun?'
     submit: 'Abschicken'
+  react_form:
+    pledge:
+      content:
+        label: 'Was?'
+        placeholder: 'z.B. eine Flüchtlingsfamilie als Paten zu unterstützen'
+      amount:
+        label: 'Wieviele?'
+      who:
+        label: 'Wer?'
+      requirement:
+        label: 'Was tun?'
+      location:
+        label: 'Ort'
+      deadline:
+        label: 'Kann unterzeichnet werden bis'
+      title:
+        label: 'Titel'
+      short_description:
+        label: 'Kurzbeschreibung'
+      description:
+        label: 'Beschreibung'
+      initiator:
+        name:
+          label: 'Ihr Name'
+        email:
+          label: 'Ihre Email'
+        password:
+          label: 'Passwort'
