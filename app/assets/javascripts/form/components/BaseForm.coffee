@@ -13,6 +13,7 @@ module.exports = class BaseForm extends ChildComponent
       action: PropTypes.string.isRequired
       authToken: PropTypes.string.isRequired
       model: PropTypes.string.isRequired
+      errors: PropTypes.object
 
   render: ->
     { onSubmit, children } = @props
@@ -44,7 +45,7 @@ module.exports = class BaseForm extends ChildComponent
       if child.type.name is 'Input' # is our custom Input component, inject!
         React.cloneElement child,
           model: @props.formData.model
-          errors: @props.errors?[child.attribute]
+          errors: @props.formData.errors?[child.props.attribute]
       else
         if child.props.children # has further children, needs recursion
           React.cloneElement child,

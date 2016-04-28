@@ -1,4 +1,4 @@
-{ label, input, div } = React.DOM
+{ label, input, div, span } = React.DOM
 { PropTypes, Component } = React
 # ChildComponent = require('../../react_base/components/ChildComponent')
 
@@ -8,9 +8,10 @@ module.exports = class Input extends React.Component
     attribute: PropTypes.string.isRequired
     type: PropTypes.string
     submodel: PropTypes.string
+    errors: PropTypes.array
 
   render: ->
-    { model, attribute, type, submodel } = @props
+    { model, attribute, type, submodel, errors } = @props
     modelParam = @_modelParam(model, submodel)
     submodelKey = if submodel then ".#{submodel}" else ''
 
@@ -26,6 +27,12 @@ module.exports = class Input extends React.Component
         name: "#{modelParam}[#{attribute}]"
         placeholder:
           I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.placeholder")
+
+      if errors
+        span
+          className: 'inline-errors'
+          errors.join(', ')
+
 
   _modelParam: (model, submodel) ->
     if submodel

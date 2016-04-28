@@ -6,9 +6,10 @@ class PledgesController < ApplicationController
       locale: I18n.locale,
       formData: {
         action: pledges_path, authToken: form_authenticity_token,
-        model: 'pledge', errors: @form.errors
+        model: 'pledge', errors: @form.errors.messages
       }
     }
+    render :new
   end
 
   def create
