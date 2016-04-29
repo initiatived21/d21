@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   # Serve websocket cable requests in-process
-  # mount ActionCable.server => '/cable'
+  mount ActionCable.server => '/cable'
 
   # Unlocalized unknown paths are forwarded to the German 404
   match '*path', to: 'pages#not_found', via: :all

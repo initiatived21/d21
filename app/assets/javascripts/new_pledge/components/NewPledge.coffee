@@ -1,9 +1,9 @@
 { PropTypes } = React
 { Provider } = require('react-redux')
-BaseComponent = require('../../react_base/components/BaseComponent')
+RootComponent = require('../../react_base/components/RootComponent')
 ActivePledgeForm = require('../containers/ActivePledgeForm')
 
-module.exports = class NewPledge extends BaseComponent
+module.exports = class NewPledge extends RootComponent
   @propTypes:
     formData: PropTypes.object.isRequired
 

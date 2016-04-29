@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    @recommended_pledges = Pledge.all
+    @recommended_pledges = Pledge.active.limit(4) # TODO: implement recommendations
   end
 
   def faq

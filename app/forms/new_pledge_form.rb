@@ -38,8 +38,6 @@ class NewPledgeForm < Reform::Form
     required(:requirement).filled
     required(:location)
     required(:deadline).filled(:date?)
-    required(:title).filled
-    required(:short_description).filled(:str?, size?: 0..300)
     required(:description)
   end
 

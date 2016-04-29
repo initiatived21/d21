@@ -7,4 +7,9 @@
 .PledgeBrick {
   width: 250px;
   border: 1px solid black;
+  float: left;
+}
+
+h2, footer {
+  clear: both;
 }

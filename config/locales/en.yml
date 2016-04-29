@@ -13,6 +13,8 @@ en:
     home:
       recommended: 'Recommended by the editors'
       successful: 'Successful promises'
+  LatestPledges:
+    latest_pledges_headline: 'The latest promises'
   PledgeForm:
     promise:
       part1: 'We promise'
