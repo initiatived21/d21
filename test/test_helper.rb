@@ -3,6 +3,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
 SimpleCov.start 'rails' do
   add_filter '/test/'
+  add_filter '/app/channels/' # As of Apr 16, there is no good way to test AC
   minimum_coverage 100
 end
 

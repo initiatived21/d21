@@ -11,4 +11,3 @@ FactoryGirl.define do
     initiator
   end
 end
-

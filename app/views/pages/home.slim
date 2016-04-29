@@ -9,9 +9,4 @@ h2
   = t '.successful'
 
 / TODO: Should actually be on search page. Should be moved.
-== react_component 'ListPledges', { \
-    locale: I18n.locale,
-    pledges: Pledge.last(4).map do |pledge| \
-      ActiveModelSerializers::SerializableResource.new(pledge).as_json \
-    end \
-  }, ReactHelper.settings(params)
+== react_component 'ListPledges', @list_props, ReactHelper.settings(params)

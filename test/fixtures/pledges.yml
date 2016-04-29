@@ -1,0 +1,9 @@
+active:
+  id: 1
+  content: activeContent
+  amount: 10
+  who: activeWho
+  requirement: activeRequirement
+  deadline: 2000-01-01
+  user_id: 1
+  aasm_state: active

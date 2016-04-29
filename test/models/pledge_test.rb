@@ -158,17 +158,17 @@ describe Pledge do
     describe 'guards' do
       describe '#past_deadline?' do
         it 'should be true when deadline is before current date' do
-          pledge.deadline = Time.now.to_date - 1.day
+          pledge.deadline = Time.zone.now.to_date - 1.day
           pledge.past_deadline?.must_equal true
         end
 
         it 'should be true when deadline is exactly current date' do
-          pledge.deadline = Time.now.to_date
+          pledge.deadline = Time.zone.now.to_date
           pledge.past_deadline?.must_equal true
         end
 
         it 'should be false when deadline is after current date' do
-          pledge.deadline = Time.now.to_date + 1.day
+          pledge.deadline = Time.zone.now.to_date + 1.day
           pledge.past_deadline?.must_equal false
         end
       end

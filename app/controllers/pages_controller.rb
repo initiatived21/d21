@@ -5,7 +5,12 @@ class PagesController < ApplicationController
   end
 
   def home
-    @recommended_pledges = Pledge.active.limit(4) # TODO: implement recommendations
+    @list_props = {
+      locale: I18n.locale,
+      pledges: Pledge.last(4).map do |pledge|
+        ActiveModelSerializers::SerializableResource.new(pledge).as_json
+      end
+    }
   end
 
   def faq

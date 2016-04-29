@@ -40,9 +40,4 @@ class NewPledgeForm < Reform::Form
     required(:deadline).filled(:date?)
     required(:description)
   end
-
-  def save
-    super
-    model.save!
-  end
 end
