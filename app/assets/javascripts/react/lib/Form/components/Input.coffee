@@ -1,6 +1,5 @@
 { label, input, div, span } = React.DOM
 { PropTypes, Component } = React
-# ChildComponent = require('../../react_base/components/ChildComponent')
 
 module.exports = class Input extends React.Component
   @propTypes:

@@ -1,8 +1,8 @@
 { button, div } = React.DOM
 { PropTypes, createElement } = React
-ChildComponent = require('../../react_base/components/ChildComponent')
-BaseForm = require('../../form/components/BaseForm')
-Input = require('../../form/components/Input')
+ChildComponent = require('../../lib/Base/components/ChildComponent')
+BaseForm = require('../../lib/Form/components/BaseForm')
+Input = require('../../lib/Form/components/Input')
 
 module.exports = class PledgeForm extends ChildComponent
   @propTypes:

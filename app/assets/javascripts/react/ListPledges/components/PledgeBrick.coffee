@@ -1,6 +1,7 @@
 { article, header, h3, p, main, footer, a } = React.DOM
 { PropTypes } = React
-ChildComponent = require('../../react_base/components/ChildComponent')
+ChildComponent = require('../../lib/Base/components/ChildComponent')
+
 
 module.exports = class PledgeBrick extends ChildComponent
   @propTypes:

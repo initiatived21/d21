@@ -1,7 +1,7 @@
 { div, h2 } = React.DOM
 { PropTypes } = React
 PledgeBrick = require('./PledgeBrick')
-ChildComponent = require('../../react_base/components/ChildComponent')
+ChildComponent = require('../../lib/Base/components/ChildComponent')
 
 module.exports = class LatestPledges extends ChildComponent
   @propTypes:

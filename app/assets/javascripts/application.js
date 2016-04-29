@@ -15,7 +15,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-// require react-rails-hot-loader
 //
 //= require react
 //= require react_ujs

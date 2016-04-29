@@ -1,9 +1,9 @@
 { PropTypes } = React
 { Provider } = require('react-redux')
 { addEntities, addDenormalizedPledges } = require('../actions/pledgeActions')
-RootComponent = require('../../react_base/components/RootComponent')
+RootComponent = require('../../lib/Base/components/RootComponent')
 LatestPledgesContainer = require('../containers/LatestPledgesContainer')
-normalize = require('../../normalization')
+normalize = require('../../lib/normalization')
 
 module.exports = class ListPledges extends RootComponent
   componentWillMount: ->

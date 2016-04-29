@@ -1,6 +1,6 @@
 { form, input } = React.DOM
 { PropTypes } = React
-ChildComponent = require('../../react_base/components/ChildComponent')
+ChildComponent = require('../../Base/components/ChildComponent')
 
 # A general form helper in the general style of rails' #form_for
 #
