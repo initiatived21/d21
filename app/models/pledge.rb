@@ -38,6 +38,14 @@ class Pledge < ApplicationRecord
     end
   end
 
+  def past_deadline?
+    deadline <= Time.zone.now.to_date
+  end
+
+  def sufficient_signatures?
+    signatures_count >= amount
+  end
+
   # TODO: Just for testing purposes after_commit! Should be after activate:
   after_commit { PledgeRelayJob.perform_later(self) }
 end
