@@ -1,8 +1,3 @@
-#= require react
-#= require components
-#= require react-addons-test-utils
-{ TestUtils } = React.addons
-
 RootComponent = require('react/lib/Base/components/RootComponent')
 
 describe 'RootComponent', ->

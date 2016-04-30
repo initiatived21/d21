@@ -1,10 +1,4 @@
-#= require react
-#= require components
-#= require react-addons-test-utils
-{ TestUtils } = React.addons
-
 ChildComponent = require('react/lib/Base/components/ChildComponent')
-
 
 describe 'ChildComponent', ->
   it 'should define a lazy translation helper', ->

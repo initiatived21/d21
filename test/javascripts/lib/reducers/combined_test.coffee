@@ -1,8 +1,3 @@
-#= require react
-#= require components
-#= require react-addons-test-utils
-{ TestUtils } = React.addons
-
 reducer = require('react/lib/reducers/combined')
 
 describe 'combined reducer', ->

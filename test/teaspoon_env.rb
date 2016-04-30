@@ -67,7 +67,7 @@ Teaspoon.configure do |config|
     # Determine whether specs loaded into the test harness should be embedded as individual script tags or concatenated
     # into a single file. Similar to Rails' asset `debug: true` and `config.assets.debug = true` options. By default,
     # Teaspoon expands all assets to provide more valuable stack traces that reference individual source files.
-    #suite.expand_assets = true
+    suite.expand_assets = true
 
     # Non-.js file extensions Teaspoon should consider JavaScript files
     #suite.js_extensions = [/(\.js)?.coffee/, /(\.js)?.es6/, ".es6.js"]

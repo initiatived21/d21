@@ -1,8 +1,3 @@
-#= require react
-#= require components
-#= require react-addons-test-utils
-{ TestUtils } = React.addons
-
 normalize = require('react/lib/normalization')
 
 describe 'Normalization#normalize', ->

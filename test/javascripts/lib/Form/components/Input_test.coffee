@@ -1,6 +1,3 @@
-#= require react
-#= require components
-#= require react-addons-test-utils
 { TestUtils } = React.addons
 
 Input = require('react/lib/Form/components/Input')
