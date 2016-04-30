@@ -15,11 +15,11 @@ module.exports = (state = {}, action) ->
     when 'ADD_ENTITIES'
       merge {}, state, action.entities
 
-    when 'SUBMIT_PLEDGE_FORM'
-      console.log('handling submitted pledge form', state)
-      retst = Object.assign {}, state, foo: action.formData.content
-      console.log retst
-      return retst
+    # when 'SUBMIT_PLEDGE_FORM'
+    #   console.log('handling submitted pledge form', state)
+    #   retst = Object.assign {}, state, foo: action.formData.content
+    #   console.log retst
+    #   return retst
 
     else
       state

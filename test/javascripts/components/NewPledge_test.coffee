@@ -15,7 +15,6 @@ describe 'NewPledge', ->
   before ->
     @element = React.createElement(PledgeForm, formProps)
 
-
   it 'should have a submit button', ->
     component = TestUtils.renderIntoDocument @element
     input = TestUtils.findRenderedDOMComponentWithTag component, 'button'

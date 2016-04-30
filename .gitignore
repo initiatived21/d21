@@ -24,6 +24,7 @@ capybara-*.html
 
 /public/system
 /coverage/
+/jscoverage/
 /spec/tmp
 **.orig
 rerun.txt

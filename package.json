@@ -11,6 +11,7 @@
     "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
+    "coffee-coverage": "^1.0.1",
     "istanbul": "^0.4.3"
   },
   "license": "AGPL-3.0",

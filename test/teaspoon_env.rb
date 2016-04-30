@@ -1,7 +1,7 @@
 Teaspoon.configure do |config|
   # Determines where the Teaspoon routes will be mounted. Changing this to "/jasmine" would allow you to browse to
   # `http://localhost:3000/jasmine` to run your tests.
-  config.mount_at = "/teaspoon"
+  config.mount_at = '/teaspoon'
 
   # Specifies the root where Teaspoon will look for files. If you're testing an engine using a dummy application it can
   # be useful to set this to your engines root (e.g. `Teaspoon::Engine.root`).
@@ -10,11 +10,11 @@ Teaspoon.configure do |config|
 
   # Paths that will be appended to the Rails assets paths
   # Note: Relative to `config.root`.
-  config.asset_paths = ["test/javascripts", "test/javascripts/stylesheets"]
+  config.asset_paths = ['test/javascripts', 'test/javascripts/stylesheets']
 
   # Fixtures are rendered through a controller, which allows using HAML, RABL/JBuilder, etc. Files in these paths will
   # be rendered as fixtures.
-  config.fixture_paths = ["test/javascripts/fixtures"]
+  config.fixture_paths = ['test/javascripts/fixtures']
 
   # SUITES
   #
@@ -34,11 +34,11 @@ Teaspoon.configure do |config|
     # Note: If no version is specified, the latest is assumed.
     #
     # Versions: 1.10.0, 1.17.1, 1.18.2, 1.19.0, 2.0.1, 2.1.0, 2.2.4, 2.2.5, 2.3.3
-    suite.use_framework :mocha, "2.3.3"
+    suite.use_framework :mocha, '2.3.3'
 
     # Specify a file matcher as a regular expression and all matching files will be loaded when the suite is run. These
     # files need to be within an asset path. You can add asset paths using the `config.asset_paths`.
-    suite.matcher = "{test/javascripts,app/assets}/**/*_test.{js,js.coffee,coffee}"
+    suite.matcher = '{test/javascripts,app/assets}/**/*_test.{js,js.coffee,coffee}'
 
     # Load additional JS files, but requiring them in your spec helper is the preferred way to do this.
     #suite.javascripts = []
@@ -157,7 +157,7 @@ Teaspoon.configure do |config|
   # Specify that you always want a coverage configuration to be used. Otherwise, specify that you want coverage
   # on the CLI.
   # Set this to "true" or the name of your coverage config.
-  #config.use_coverage = nil
+  config.use_coverage = true
 
   # You can have multiple coverage configs by passing a name to config.coverage.
   # e.g. config.coverage :ci do |coverage|
@@ -166,11 +166,11 @@ Teaspoon.configure do |config|
     # Which coverage reports Istanbul should generate. Correlates directly to what Istanbul supports.
     #
     # Available: text-summary, text, html, lcov, lcovonly, cobertura, teamcity
-    #coverage.reports = ["text-summary", "html"]
+    coverage.reports = ['text-summary', 'html']
 
     # The path that the coverage should be written to - when there's an artifact to write to disk.
     # Note: Relative to `config.root`.
-    #coverage.output_path = "coverage"
+    coverage.output_path = 'jscoverage'
 
     # Assets to be ignored when generating coverage reports. Accepts an array of filenames or regular expressions. The
     # default excludes assets from vendor, gems and support libraries.
@@ -178,9 +178,9 @@ Teaspoon.configure do |config|
 
     # Various thresholds requirements can be defined, and those thresholds will be checked at the end of a run. If any
     # aren't met the run will fail with a message. Thresholds can be defined as a percentage (0-100), or nil.
-    #coverage.statements = nil
-    #coverage.functions = nil
-    #coverage.branches = nil
-    #coverage.lines = nil
+    # coverage.statements = 100
+    # coverage.functions = 100
+    # coverage.branches = 100
+    # coverage.lines = 100
   end
 end
