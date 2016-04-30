@@ -13,7 +13,7 @@ class PledgesController < ApplicationController
   end
 
   def create
-    if @form.validate(params['pledge'])
+    if @form.validate(pledge_params)
       create_success!
     else
       create_failed!
@@ -48,5 +48,12 @@ class PledgesController < ApplicationController
       format.json { render json: { status: 'error' } }
       format.html { new }
     end
+  end
+
+  def pledge_params
+    params.require(:pledge).permit(
+      :content, :amount, :who, :requirement, :location, :description,
+      :deadline, initiator: [:name, :email, :organization, :password]
+    )
   end
 end

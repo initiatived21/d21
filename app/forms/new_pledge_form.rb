@@ -19,7 +19,7 @@ class NewPledgeForm < Reform::Form
     property :organization # , on: :user
     # image
     property :email # , on: :user
-    property :password, virtual: true # , on: :user
+    property :password # , on: :user
 
     validation :default do
       required(:name).filled

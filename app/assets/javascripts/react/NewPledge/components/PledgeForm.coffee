@@ -13,9 +13,9 @@ module.exports = class PledgeForm extends ChildComponent
     createElement BaseForm,
       formData: @props.formData
       onSubmit: (e) =>
-        e.preventDefault()
-        @props.onSubmit
-          content: $('input[name=content]').val()
+        # e.preventDefault()
+        # @props.onSubmit
+        #   content: $('input[name=content]').val()
 
       div
         className: 'PledgeForm-Sentence'

@@ -8,9 +8,11 @@
 
 orga = User.create! name: 'Bill Tore',
                     organization: 'Winzigweich Deutschland GmbH',
-                    email: 'bill@example.org'
+                    email: 'bill@example.org',
+                    password: 'password'
 
-Pledge.create! content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu spenden',
+Pledge.create! content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu'\
+                        ' spenden',
                amount: 10,
                who: 'andere Unternehmen',
                requirement: 'das Gleiche tun',

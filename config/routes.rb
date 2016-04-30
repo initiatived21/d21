@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  devise_for :users
+
   root to: 'pages#locale_forward'
 
   scope ':locale', locale: /de|en/ do

@@ -14,9 +14,14 @@
 ActiveRecord::Schema.define(version: 20160422155523) do
 
   create_table "admins", force: :cascade do |t|
-    t.string   "email",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "email",              default: "", null: false
+    t.string   "encrypted_password", default: "", null: false
+    t.integer  "failed_attempts",    default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
   create_table "comments", force: :cascade do |t|
@@ -25,9 +30,8 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.string   "commentable_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
   end
-
-  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
 
   create_table "pledges", force: :cascade do |t|
     t.string   "content",                      null: false
@@ -42,25 +46,22 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.integer  "signatures_count", default: 0, null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.index ["user_id"], name: "index_pledges_on_user_id"
   end
-
-  add_index "pledges", ["user_id"], name: "index_pledges_on_user_id"
 
   create_table "pledges_tags", force: :cascade do |t|
     t.integer "pledge_id"
     t.integer "tag_id"
+    t.index ["pledge_id"], name: "index_pledges_tags_on_pledge_id"
+    t.index ["tag_id"], name: "index_pledges_tags_on_tag_id"
   end
-
-  add_index "pledges_tags", ["pledge_id"], name: "index_pledges_tags_on_pledge_id"
-  add_index "pledges_tags", ["tag_id"], name: "index_pledges_tags_on_tag_id"
 
   create_table "reports", force: :cascade do |t|
     t.integer  "pledge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pledge_id"], name: "index_reports_on_pledge_id"
   end
-
-  add_index "reports", ["pledge_id"], name: "index_reports_on_pledge_id"
 
   create_table "signatures", force: :cascade do |t|
     t.integer  "pledge_id"
@@ -72,9 +73,8 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.boolean  "anonymous"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.index ["pledge_id"], name: "index_signatures_on_pledge_id"
   end
-
-  add_index "signatures", ["pledge_id"], name: "index_signatures_on_pledge_id"
 
   create_table "tags", force: :cascade do |t|
     t.string   "name",       null: false
@@ -87,16 +87,30 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pledge_id"], name: "index_updates_on_pledge_id"
   end
 
-  add_index "updates", ["pledge_id"], name: "index_updates_on_pledge_id"
-
   create_table "users", force: :cascade do |t|
-    t.string   "name",         null: false
+    t.string   "name",                                null: false
     t.string   "organization"
-    t.string   "email",        null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
