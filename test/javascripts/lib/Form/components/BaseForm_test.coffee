@@ -24,7 +24,7 @@ describe 'BaseForm', ->
     it 'should output a form tag', ->
       form = TestUtils.findRenderedDOMComponentWithTag basicComponent, 'form'
       form.action.should.include 'testAction'
-      form.method.should.equal 'post'
+      form.method.toUpperCase().should.equal 'POST'
 
     it 'should output two hidden input tags for token and utf8', ->
       inputs =
