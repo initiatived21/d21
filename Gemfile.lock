@@ -228,9 +228,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    memory_test_fix (1.2.1)
-      activerecord (>= 3.0.0)
-      railties (>= 3.0.0)
     meta_request (0.4.0)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -262,6 +259,11 @@ GEM
     orm_adapter (0.5.0)
     parser (2.3.1.0)
       ast (~> 2.2)
+    pg (0.18.4)
+    pg_search (1.0.5)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -481,7 +483,6 @@ DEPENDENCIES
   launchy
   letter_opener
   listen (~> 3.0.5)
-  memory_test_fix
   meta_request
   minitest
   minitest-capybara
@@ -489,6 +490,8 @@ DEPENDENCIES
   minitest-matchers
   minitest-spec-rails
   mocha
+  pg
+  pg_search
   poltergeist
   pry-byebug
   pry-doc

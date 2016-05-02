@@ -3,8 +3,6 @@ ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -61,6 +59,13 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+################
+### Database ###
+################
+
+gem 'pg'
+gem 'pg_search' # Postgres search index
+
 #####################
 # Dev/Test Specific #
 #####################
@@ -87,7 +92,7 @@ group :development do
 end
 
 group :test do
-  gem 'memory_test_fix' # Sqlite inmemory fix
+  # gem 'memory_test_fix' # Sqlite inmemory fix
   gem 'rake'
   gem 'database_cleaner'
   # gem 'colorize' # use this when RBP quits using `colored`
@@ -101,6 +106,9 @@ group :test do
 end
 
 group :development, :test do
+  # Use sqlite3 for testing
+  gem 'sqlite3'
+
   # debugging
   gem 'pry-rails' # pry is awsome
   gem 'hirb' # hirb makes pry output even more awesome

@@ -1,10 +1,15 @@
 h2
   | Entdecke interessante Versprechen
 
-input type="search" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
-button type="submit"
-  | Suchen
+form method='get' action=pledges_path(locale: I18n.locale)
+  input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
+  button type="submit"
+    | Suchen
 
+- unless @search_results.blank?
+  ul
+    - @search_results.each do |result|
+      li= result.id
 
 h3
   | Von der Redaktion empfohlen

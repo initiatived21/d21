@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422155523) do
+ActiveRecord::Schema.define(version: 20160502130447) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.datetime "locked_at"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -30,7 +33,16 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.string   "commentable_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
+  end
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text     "content"
+    t.string   "searchable_type"
+    t.integer  "searchable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
   end
 
   create_table "pledges", force: :cascade do |t|
@@ -46,21 +58,21 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.integer  "signatures_count", default: 0, null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.index ["user_id"], name: "index_pledges_on_user_id"
+    t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 
   create_table "pledges_tags", force: :cascade do |t|
     t.integer "pledge_id"
     t.integer "tag_id"
-    t.index ["pledge_id"], name: "index_pledges_tags_on_pledge_id"
-    t.index ["tag_id"], name: "index_pledges_tags_on_tag_id"
+    t.index ["pledge_id"], name: "index_pledges_tags_on_pledge_id", using: :btree
+    t.index ["tag_id"], name: "index_pledges_tags_on_tag_id", using: :btree
   end
 
   create_table "reports", force: :cascade do |t|
     t.integer  "pledge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pledge_id"], name: "index_reports_on_pledge_id"
+    t.index ["pledge_id"], name: "index_reports_on_pledge_id", using: :btree
   end
 
   create_table "signatures", force: :cascade do |t|
@@ -73,7 +85,7 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.boolean  "anonymous"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["pledge_id"], name: "index_signatures_on_pledge_id"
+    t.index ["pledge_id"], name: "index_signatures_on_pledge_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -87,7 +99,7 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pledge_id"], name: "index_updates_on_pledge_id"
+    t.index ["pledge_id"], name: "index_updates_on_pledge_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -108,9 +120,9 @@ ActiveRecord::Schema.define(version: 20160422155523) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end

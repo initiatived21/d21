@@ -48,4 +48,8 @@ class Pledge < ApplicationRecord
 
   # TODO: Just for testing purposes after_commit! Should be after activate:
   after_commit { PledgeRelayJob.perform_later(self) }
+
+  # Search
+  include PgSearch
+  multisearchable against: [:content, :requirement, :description, :location]
 end
