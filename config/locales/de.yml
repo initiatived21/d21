@@ -14,8 +14,6 @@ de:
     home:
       recommended: 'Von der Redaktion empfohlen'
       successful: 'Erfolgreiche Versprechen'
-  LatestPledges:
-    latest_pledges_headline: 'Die neusten Versprechen'
   PledgeForm:
     promise:
       part1: 'Wir versprechen'

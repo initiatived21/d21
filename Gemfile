@@ -42,6 +42,8 @@ gem 'slim-rails'
 # gem 'dry-validation' # more explicit validations
 gem 'dry-validation', github: 'dry-rb/dry-validation'
 gem 'reform', github: 'apotonick/reform', branch: '2-2' # Form objects
+gem 'cells'
+gem 'cells-slim'
 
 gem 'aasm'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

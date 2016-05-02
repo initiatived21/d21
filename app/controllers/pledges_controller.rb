@@ -25,6 +25,7 @@ class PledgesController < ApplicationController
   end
 
   def index
+    @active_pledges = Pledge.active.limit(4)
   end
 
   private

@@ -5,12 +5,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    @list_props = {
-      locale: I18n.locale,
-      pledges: Pledge.last(4).map do |pledge|
-        ActiveModelSerializers::SerializableResource.new(pledge).as_json
-      end
-    }
+    @successful_pledges = Pledge.successful.limit(4)
   end
 
   def faq

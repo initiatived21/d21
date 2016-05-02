@@ -8,9 +8,13 @@ button type="submit"
 
 h3
   | Von der Redaktion empfohlen
+p TODO: Needs recommendation feature
 
 h3
   | Beliebteste Versprechen
+p TODO: Needs popularity scope
+/== cell(:pledge_list, @popular_pledges, filter: :popular)
 
 h3
   | Neuste Versprechen
+== cell(:pledge_list, @active_pledges, filter: :active)

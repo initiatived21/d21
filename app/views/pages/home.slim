@@ -3,10 +3,8 @@ h2
 
 h2
   = t '.recommended'
-p Needs recommendation feature
+p TODO: Needs recommendation feature
 
 h2
   = t '.successful'
-
-/ TODO: Should actually be on search page. Should be moved.
-== react_component 'ListPledges', @list_props, ReactHelper.settings(params)
+== cell(:pledge_list, @successful_pledges, filter: :successful)

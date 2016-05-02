@@ -8,4 +8,4 @@
 // set globally accessible react classes
 global.store = require('./react/lib/store')
 global.NewPledge = require('./react/NewPledge/components/NewPledge')
-global.ListPledges = require('./react/ListPledges/components/ListPledges')
+global.ElementList = require('./react/ElementList/components/ElementList')

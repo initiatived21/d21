@@ -112,6 +112,12 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cells (4.0.4)
+      tilt (>= 1.4, < 3)
+      uber (~> 0.0.9)
+    cells-slim (0.0.4)
+      cells (~> 4.0.0.beta6)
+      slim (~> 3.0)
     choice (0.2.0)
     cliver (0.3.2)
     code_analyzer (0.4.5)
@@ -454,6 +460,8 @@ DEPENDENCIES
   brakeman
   browserify-rails
   bullet
+  cells
+  cells-slim
   coffee-rails (~> 4.1.0)
   colorize
   coveralls

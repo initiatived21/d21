@@ -1,13 +1,13 @@
 { connect } = require('react-redux')
 pledgeActions = require('../actions/pledgeActions')
-LatestPledges = require('../components/LatestPledges')
+FilteredList = require('../components/FilteredList')
 
 mapStateToProps = (state) ->
-  pledges: state.pledges
+  pledges: state.pledges or {}
 
 mapDispatchToProps = (dispatch) -> {}
 
 module.exports = connect(
   mapStateToProps,
   mapDispatchToProps
-)(LatestPledges)
+)(FilteredList)

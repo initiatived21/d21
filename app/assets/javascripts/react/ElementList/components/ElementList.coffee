@@ -2,12 +2,16 @@
 { Provider } = require('react-redux')
 { addEntities, addDenormalizedPledges } = require('../actions/pledgeActions')
 RootComponent = require('../../lib/Base/components/RootComponent')
-LatestPledgesContainer = require('../containers/LatestPledgesContainer')
+FilteredListContainer = require('../containers/FilteredListContainer')
 normalize = require('../../lib/normalization')
 
-module.exports = class ListPledges extends RootComponent
+module.exports = class ElementList extends RootComponent
+  @propTypes:
+    pledges: PropTypes.array.isRequired
+    filter: PropTypes.string.isRequired
+
   componentWillMount: ->
-    # Register actioncable listener
+    # Register actioncable listener TODO: somewhere else! call only once
     App?.pledges = App.cable.subscriptions.create 'PledgesChannel',
       received: (data) ->
         console.log 'new from cable:', data.pledge
@@ -22,4 +26,5 @@ module.exports = class ListPledges extends RootComponent
     React.createElement Provider,
       store: global.store
 
-      React.createElement LatestPledgesContainer
+      React.createElement FilteredListContainer,
+        filter: @props.filter
