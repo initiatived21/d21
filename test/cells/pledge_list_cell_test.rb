@@ -1,10 +1,13 @@
-require 'test_helper'
+require_relative '../test_helper'
 
-class PledgeListCellTest < Cell::TestCase
-  test "show" do
-    html = cell("pledge_list").(:show)
-    assert html.match /<p>/
+describe PledgeListCell, type: :cell do
+  include Cell::Testing
+
+  let(:renderedCell) do
+    cell('pledge_list', [], scope: 'testScope').call(:show)
   end
 
-
+  it 'renders a react ElementList' do
+    renderedCell.must_match(/div data-react-class="ElementList"/)
+  end
 end

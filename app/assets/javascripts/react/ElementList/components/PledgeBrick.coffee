@@ -13,6 +13,7 @@ module.exports = class PledgeBrick extends ChildComponent
       requirement: PropTypes.string.isRequired
       deadline: PropTypes.string.isRequired
       signatures_count: PropTypes.number.isRequired
+      aasm_state: PropTypes.string.isRequired
 
   render: ->
     { pledge } = @props

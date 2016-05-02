@@ -7,4 +7,5 @@ p TODO: Needs recommendation feature
 
 h2
   = t '.successful'
-== cell(:pledge_list, @successful_pledges, filter: :successful)
+== cell :pledge_list, @successful_pledges,
+        filter: :successful, settings: ReactHelper.settings(params)

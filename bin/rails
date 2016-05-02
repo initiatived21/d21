@@ -7,8 +7,4 @@ end
 APP_PATH = File.expand_path('../../config/application', __FILE__)
 require_relative '../config/boot'
 
-# Trick server script to use puma instead of thin. HACK!
-require 'rack/handler'
-Rack::Handler::Thin = Rack::Handler.get(:puma)
-
 require 'rails/commands'

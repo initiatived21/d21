@@ -17,7 +17,7 @@ class PledgeListCell < Cell::ViewModel
   end
 
   def settings
-    ReactHelper.settings(params)
+    options[:settings] || {}
   end
 
   def serialized_elements

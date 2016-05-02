@@ -7,7 +7,7 @@ describe PledgeSerializer do
     json.must_equal(
       id: 1, content: 'activeContent', amount: 10, who: 'activeWho',
       requirement: 'activeRequirement', location: nil,
-      deadline: Date.new(2000), signatures_count: 0,
+      deadline: Date.new(2000), signatures_count: 0, aasm_state: 'active',
       initiator: {
         id: 1, name: 'pledgerName', organization: 'pledgerOrganiztion'
       }

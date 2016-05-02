@@ -17,4 +17,5 @@ p TODO: Needs popularity scope
 
 h3
   | Neuste Versprechen
-== cell(:pledge_list, @active_pledges, filter: :active)
+== cell :pledge_list, @active_pledges,
+        filter: :active, settings: ReactHelper.settings(params)

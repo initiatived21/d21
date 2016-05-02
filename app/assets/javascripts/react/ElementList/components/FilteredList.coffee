@@ -4,9 +4,10 @@ pickBy = require('lodash/pickBy')
 PledgeBrick = require('./PledgeBrick')
 ChildComponent = require('../../lib/Base/components/ChildComponent')
 
-module.exports = class LatestPledges extends ChildComponent
+module.exports = class FilteredList extends ChildComponent
   @propTypes:
     pledges: PropTypes.object.isRequired
+    filter: PropTypes.string.isRequired
 
   FILTERS =
     successful: (e) -> e.aasm_state == 'successful'
@@ -17,7 +18,7 @@ module.exports = class LatestPledges extends ChildComponent
     filteredList = pickBy pledges, FILTERS[filter]
 
     div
-      className: 'LatestPledges'
+      className: 'FilteredList'
 
       for id, pledge of filteredList
         React.createElement PledgeBrick,
