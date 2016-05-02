@@ -55,6 +55,12 @@ gem 'redis', '>= 3.0'
 
 # Auth
 gem 'devise'
+gem 'devise-i18n'
+
+gem 'rails-i18n'
+
+# Admin Backend
+gem 'activeadmin', github: 'activeadmin'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

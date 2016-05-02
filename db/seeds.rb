@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-orga = User.create! name: 'Bill Tore',
+user = User.create! name: 'Bill Tore',
                     organization: 'Winzigweich Deutschland GmbH',
                     email: 'bill@example.org',
                     password: 'password'
+
+AdminUser.create! email: 'admin@admin.com', password: 'password'
 
 Pledge.create! content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu'\
                         ' spenden',
@@ -18,4 +20,5 @@ Pledge.create! content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu'\
                requirement: 'das Gleiche tun',
                deadline: 5.days.from_now,
                aasm_state: 'active',
-               initiator: orga
+               initiator: user
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
