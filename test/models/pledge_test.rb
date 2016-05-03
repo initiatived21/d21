@@ -19,8 +19,8 @@ describe Pledge do
       pledge.aasm.current_state.must_equal :initialized
     end
 
-    describe 'request event' do
-      let(:event) { pledge.aasm.events.find { |e| e.name == :request } }
+    describe 'finalize event' do
+      let(:event) { pledge.aasm.events.find { |e| e.name == :finalize } }
 
       it 'must only have one transition' do
         event.transitions.size.must_equal 1

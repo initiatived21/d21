@@ -19,7 +19,7 @@ class Pledge < ApplicationRecord
 
     ### Transitions ###
 
-    event :request do
+    event :finalize do
       transitions from: :initialized, to: :requested
     end
 
