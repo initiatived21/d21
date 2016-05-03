@@ -11,13 +11,6 @@ module.exports = class ElementList extends RootComponent
     filter: PropTypes.string.isRequired
 
   componentWillMount: ->
-    # Register actioncable listener TODO: somewhere else! call only once
-    App?.pledges = App.cable.subscriptions.create 'PledgesChannel',
-      received: (data) ->
-        console.log 'new from cable:', data.pledge
-        normalized = normalize('pledge', data.pledge)
-        store.dispatch addEntities(normalized.entities)
-
     # Put received pledges into store
     normalizedPledges = normalize('pledges', @props.pledges)
     store.dispatch addEntities(normalizedPledges.entities)
