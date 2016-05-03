@@ -1,4 +1,4 @@
-normalize = require('../../lib/normalization')
+normalize = require('../react/lib/normalization')
 
 # ! Docready called only once, not on turbolinks site switch.
 $(document).ready ->

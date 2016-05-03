@@ -18,43 +18,59 @@ module.exports = class PledgeForm extends ChildComponent
         #   content: $('input[name=content]').val()
 
       div
-        className: 'PledgeForm-Sentence'
-        @t('.promise.part1')
+        className: 'PledgeForm-PledgeData'
+
+        div
+          className: 'PledgeForm-Sentence'
+          @t('.promise.part1')
+
+          createElement Input,
+            attribute: 'content'
+
+          @t('.promise.part2')
+
+          createElement Input,
+            attribute: 'amount'
+            type: 'number'
+
+          createElement Input,
+            attribute: 'who'
+
+          createElement Input,
+            attribute: 'requirement'
+
 
         createElement Input,
-          attribute: 'content'
+          attribute: 'location'
+        createElement Input,
+          type: 'date'
+          attribute: 'deadline'
+        createElement Input,
+          attribute: 'description'
+          as: 'textarea'
 
-        @t('.promise.part2')
+        '[Bild]'
+        '[Themenbereiche]'
+
+        button
+          type: 'button'
+          disabled: true
+          'Entwurf speichern'
+
+      div
+        className: 'PledgeForm-UserData'
 
         createElement Input,
-          attribute: 'amount'
-          type: 'number'
-
+          submodel: 'initiator'
+          attribute: 'name'
         createElement Input,
-          attribute: 'who'
-
+          submodel: 'initiator'
+          attribute: 'email'
+          type: 'email'
         createElement Input,
-          attribute: 'requirement'
-
-
-      createElement Input,
-        attribute: 'location'
-      createElement Input,
-        type: 'date'
-        attribute: 'deadline'
-      createElement Input,
-        attribute: 'description'
-      createElement Input,
-        submodel: 'initiator'
-        attribute: 'name'
-      createElement Input,
-        submodel: 'initiator'
-        attribute: 'email'
-        type: 'email'
-      createElement Input,
-        submodel: 'initiator'
-        attribute: 'password'
-        type: 'password'
+          submodel: 'initiator'
+          attribute: 'password'
+          type: 'password'
 
       button
         type: 'submit'

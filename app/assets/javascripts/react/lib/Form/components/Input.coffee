@@ -1,4 +1,4 @@
-{ label, input, div, span } = React.DOM
+{ label, input, textarea, div, span } = React.DOM
 { PropTypes, Component } = React
 
 module.exports = class Input extends React.Component
@@ -8,9 +8,10 @@ module.exports = class Input extends React.Component
     type: PropTypes.string
     submodel: PropTypes.string
     errors: PropTypes.array
+    as: PropTypes.string
 
   render: ->
-    { model, attribute, type, submodel, errors } = @props
+    { model, attribute, type, submodel, errors, as } = @props
     modelParam = @_modelParam(model, submodel)
     submodelKey = if submodel then ".#{submodel}" else ''
 
@@ -21,11 +22,18 @@ module.exports = class Input extends React.Component
         htmlFor: "#{modelParam}[#{attribute}]"
         I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.label")
 
-      input
-        type: type or 'text'
-        name: "#{modelParam}[#{attribute}]"
-        placeholder:
-          I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.placeholder")
+      if as is 'textarea'
+        textarea
+          name: "#{modelParam}[#{attribute}]"
+          placeholder:
+            I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.placeholder")
+
+      else
+        input
+          type: type or 'text'
+          name: "#{modelParam}[#{attribute}]"
+          placeholder:
+            I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.placeholder")
 
       if errors
         span

@@ -32,10 +32,14 @@ de:
         label: 'Was tun?'
       location:
         label: 'Ort'
+        placeholder: 'z.B. Bundesweit'
       deadline:
         label: 'Kann unterzeichnet werden bis'
       description:
         label: 'Mehr Infos (Optional)'
+        placeholder: |
+          Informieren Sie Ihre Unterstützer zu dem Hintergrund Ihres
+          Versprechens und Ihrer Motivation.
       initiator:
         name:
           label: 'Ihr Name'
