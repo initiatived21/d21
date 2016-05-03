@@ -34,7 +34,7 @@ en:
       deadline:
         label: 'Can be signed until'
       description:
-        label: 'Description'
+        label: 'More Info (optional)'
       initiator:
         name:
           label: 'Your Name'

@@ -35,7 +35,7 @@ de:
       deadline:
         label: 'Kann unterzeichnet werden bis'
       description:
-        label: 'Beschreibung'
+        label: 'Mehr Infos (Optional)'
       initiator:
         name:
           label: 'Ihr Name'
