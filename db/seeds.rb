@@ -15,7 +15,7 @@ privat = User.create! name: 'Max Mustermann',
                       password: 'password'
 corn = User.create! name: 'Frieda Freude',
                     organization: 'Getreidelsen Verlag',
-                    email: 'max@example.org',
+                    email: 'frieda@example.org',
                     password: 'password'
 
 AdminUser.create! email: 'admin@admin.com', password: 'password'
