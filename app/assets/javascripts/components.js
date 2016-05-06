@@ -1,5 +1,7 @@
 //= require i18n
 //= require i18n/translations
+//= require jayform
+//= require_tree ../../forms
 //= require_tree ./react
 
 // I18n setup

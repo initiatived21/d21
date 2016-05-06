@@ -1,9 +1,9 @@
 { TestUtils } = React.addons
 merge = require('lodash/merge')
 
-Input = require('react/lib/Form/components/Input')
+InputComponent = require('react/lib/Form/components/InputComponent')
 
-describe 'Input', ->
+describe 'InputComponent', ->
   component = null
   defaultProps =
     model: 'testModel'
@@ -89,7 +89,7 @@ describe 'Input', ->
 # utilities
 
 makeComponent = (props) ->
-  element = React.createElement(Input, props)
+  element = React.createElement(InputComponent, props)
   TestUtils.renderIntoDocument element
 
 errorClass = 'inline-errors'

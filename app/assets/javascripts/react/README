@@ -5,6 +5,7 @@
 - lib/            -- Non-domain-specific code
   - Base/         -- Common ancestors for react components
   - Form/         -- Rails' form_for-inspired form helper
+  - actions/      -- Collection of general purpose actions
   - reducers/     -- Collection of every domain's redux reducers
   - normalization -- bridge nested json-objects to normalized in-state struct.
   - store         -- There should only ever be one redux store. It lives here.

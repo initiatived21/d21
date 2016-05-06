@@ -1,11 +1,16 @@
 { connect } = require('react-redux')
-submitForm = require('../actions/submitForm')
+{ setEntity } = require('../../lib/actions/entityActions')
 PledgeForm = require('../components/PledgeForm')
 
-mapStateToProps = (state) ->
-  foo: 'bar'
+mapStateToProps = (state, ownProps) ->
+  editedPledge: state.pledges[ownProps.formObject.name]
 
 mapDispatchToProps = (dispatch) ->
+  ensurePledgeObjectExistence: (formObject, editedPledge) ->
+    return if editedPledge
+    dispatch setEntity(
+      'pledge', formObject.constructor.name, formObject.attributes)
+
   onSubmit: (formData) ->
     dispatch submitForm(formData)
 

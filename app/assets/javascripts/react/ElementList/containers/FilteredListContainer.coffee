@@ -1,5 +1,5 @@
 { connect } = require('react-redux')
-pledgeActions = require('../actions/pledgeActions')
+# pledgeActions = require('../actions/pledgeActions')
 FilteredList = require('../components/FilteredList')
 
 mapStateToProps = (state) ->

@@ -42,10 +42,11 @@ module.exports = class BaseForm extends ChildComponent
       unless typeof child is 'object'
         return child
 
-      if child.type.name is 'Input' # is our custom Input component, inject!
+      if child.type.isInput # is our custom Input component: inject!
         React.cloneElement child,
           model: @props.formData.model
-          errors: @props.formData.errors?[child.props.attribute]
+          object: @props.object
+          serverErrors: @props.formData.errors?[child.props.attribute]
       else
         if child.props.children # has further children, needs recursion
           React.cloneElement child,

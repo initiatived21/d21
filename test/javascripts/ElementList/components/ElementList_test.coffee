@@ -14,12 +14,12 @@ describe 'ElementList', ->
     filter: 'testFilter'
 
   describe 'with basic props', ->
-    basicComponent = makeComponent(props)
 
     it 'should output a FilteredListContainer', ->
-      container = TestUtils.findRenderedComponentWithType basicComponent,
-                                                        FilteredListContainer
-      container.props.filter.should.equal 'testFilter'
+      render ElementList, props, [], (component) ->
+        container = TestUtils.findRenderedComponentWithType component,
+                                                          FilteredListContainer
+        container.props.filter.should.equal 'testFilter'
 
   describe 'with pledges', ->
     oldDispatch = store.dispatch

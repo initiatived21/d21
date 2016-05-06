@@ -1,21 +1,25 @@
 { button, div } = React.DOM
 { PropTypes, createElement } = React
 ChildComponent = require('../../lib/Base/components/ChildComponent')
-BaseForm = require('../../lib/Form/components/BaseForm')
-Input = require('../../lib/Form/components/Input')
+FormFor = require('../../lib/Form/containers/FormFor')
+Input = require('../../lib/Form/containers/Input')
 
 module.exports = class PledgeForm extends ChildComponent
   @propTypes:
     onSubmit: PropTypes.func.isRequired
     formData: PropTypes.object.isRequired
 
+  componentWillMount: ->
+    @newPledge = new NewPledgeForm(@props.editedPledge)
+    @props.ensurePledgeObjectExistence(@newPledge, @props.editedPledge)
+
   render: ->
-    createElement BaseForm,
+    createElement FormFor,
+      object: @newPledge
       formData: @props.formData
       onSubmit: (e) =>
         # e.preventDefault()
         # @props.onSubmit
-        #   content: $('input[name=content]').val()
 
       div
         className: 'PledgeForm-PledgeData'
@@ -39,7 +43,6 @@ module.exports = class PledgeForm extends ChildComponent
           createElement Input,
             attribute: 'requirement'
 
-
         createElement Input,
           attribute: 'location'
         createElement Input,
@@ -49,8 +52,8 @@ module.exports = class PledgeForm extends ChildComponent
           attribute: 'description'
           as: 'textarea'
 
-        '[Bild]'
-        '[Themenbereiche]'
+        div {}, '[Bild]'
+        div {}, '[Themenbereiche]'
 
         button
           type: 'button'

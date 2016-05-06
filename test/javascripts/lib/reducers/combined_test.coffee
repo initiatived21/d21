@@ -1,4 +1,5 @@
 reducer = require('react/lib/reducers/combined')
+store = require('react/lib/store')
 
 describe 'combined reducer', ->
   it 'should return the initial state when given undefined', ->

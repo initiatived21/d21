@@ -39,3 +39,38 @@
 # window.assert = chai.assert
 # window.expect = chai.expect
 window.should = chai.should()
+
+# General requires
+global.ReactDOM = require('react-dom')
+
+# Fail on warnings
+err = console.error
+console.error = (warning) ->
+  if (/(Invalid prop|Failed propType)/.test(warning))
+    throw new Error(warning)
+
+  err.apply(console, arguments)
+
+# Helper Functions
+
+## common render
+_ = require('lodash')
+{ TestUtils } = React.addons
+defaultProps = {}
+
+# makeComponent = (props, children = []) ->
+#   element = React.createElement(ElementList, props, children)
+#   TestUtils.renderIntoDocument element
+global.render = (component, newProps, children, callback) ->
+  props = _.merge(defaultProps, newProps)
+  element = React.createElement(component, props, children)
+  component = TestUtils.renderIntoDocument element
+  console.log component
+  if (typeof callback is 'function') then setTimeout(callback(component))
+
+## default cleanup (default afterEach)
+# global.cleanup = (done) ->
+#   # ReactDOM.unmountComponentAtNode(document.body) # Assuming mounted to body
+#   # document.body.innerHTML = ""                   # Just to be sure
+#   setTimeout(done)
+

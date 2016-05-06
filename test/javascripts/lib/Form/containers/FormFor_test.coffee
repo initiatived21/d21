@@ -1,13 +1,13 @@
 { TestUtils } = React.addons
 
-BaseForm = require('react/lib/Form/components/BaseForm')
-Input = require('react/lib/Form/components/Input')
+FormFor = require('react/lib/Form/containers/FormFor')
+Input = require('react/lib/Form/containers/Input')
 
 makeComponent = (props, children = []) ->
-  element = React.createElement(BaseForm, props, children)
+  element = React.createElement(FormFor, props, children)
   TestUtils.renderIntoDocument element
 
-describe 'BaseForm', ->
+describe 'FormFor', ->
   props =
     onSubmit: ->
     formData:

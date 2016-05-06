@@ -2,5 +2,4 @@
 reducer = require('./reducers/combined')
 module.exports = require('redux').createStore(
   reducer
-  initialState = {}
 )

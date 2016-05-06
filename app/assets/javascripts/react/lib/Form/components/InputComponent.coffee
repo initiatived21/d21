@@ -1,7 +1,7 @@
-{ label, input, textarea, div, span } = React.DOM
 { PropTypes, Component } = React
+{ label, input, textarea, div, span } = React.DOM
 
-module.exports = class Input extends React.Component
+module.exports = class Input extends Component
   @propTypes:
     model: PropTypes.string # required, but injection later is ok
     attribute: PropTypes.string.isRequired
@@ -11,7 +11,7 @@ module.exports = class Input extends React.Component
     as: PropTypes.string
 
   render: ->
-    { model, attribute, type, submodel, errors, as } = @props
+    { model, attribute, type, submodel, errors, as, object } = @props
     modelParam = @_modelParam(model, submodel)
     submodelKey = if submodel then ".#{submodel}" else ''
 
@@ -34,6 +34,10 @@ module.exports = class Input extends React.Component
           name: "#{modelParam}[#{attribute}]"
           placeholder:
             I18n.t("react_form.#{model}#{submodelKey}.#{attribute}.placeholder")
+          onChange: (e) =>
+            @props.onChange attribute, $(e.target).val()
+          # onBlur: (e) =>
+          #   @props.onBlur attribute, object
 
       if errors
         span

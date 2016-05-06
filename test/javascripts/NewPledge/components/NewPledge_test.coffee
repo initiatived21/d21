@@ -1,18 +1,20 @@
 { TestUtils } = React.addons
-PledgeForm = require('react/NewPledge/components/PledgeForm')
-
-formProps =
-  onSubmit: ->
-  formData:
-    action: '/'
-    authToken: 'a'
-    model: 'pledge'
+{  Provider } = require('react-redux')
+NewPledge = require('react/NewPledge/components/NewPledge')
 
 describe 'NewPledge', ->
+  formProps = null
   before ->
-    @element = React.createElement(PledgeForm, formProps)
+    formProps =
+      onSubmit: ->
+      formData:
+        action: '/'
+        authToken: 'a'
+        model: 'pledge'
 
   it 'should have a submit button', ->
-    component = TestUtils.renderIntoDocument @element
-    input = TestUtils.findRenderedDOMComponentWithTag component, 'button'
-    input.innerText.should.equal 'Submit'
+    render NewPledge, formProps, [], (tree) ->
+      # element = React.createElement(NewPledge, formProps)
+      # component = TestUtils.renderIntoDocument element
+      input = TestUtils.scryRenderedDOMComponentsWithTag tree, 'button'
+      input[1].innerText.should.equal 'Submit'

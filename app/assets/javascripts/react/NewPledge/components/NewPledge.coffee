@@ -12,4 +12,5 @@ module.exports = class NewPledge extends RootComponent
       store: global.store
 
       React.createElement ActivePledgeForm,
+        formObject: NewPledgeForm
         formData: @props.formData
