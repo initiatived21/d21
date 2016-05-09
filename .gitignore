@@ -50,6 +50,7 @@ bower.json
 
 # NPM modules
 /node_modules/**/*
+client/npm-debug.log*
 
 # OS files
 .DS_Store

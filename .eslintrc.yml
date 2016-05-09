@@ -3,3 +3,7 @@ parserOptions:
   sourceType: "module"
   ecmaFeatures:
     jsx: true
+
+parser: "babel-eslint"
+rules:
+  strict: 0

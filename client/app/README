@@ -1,0 +1,18 @@
+# React-Frontend
+
+## General Folder Structure
+
+- lib/            -- Non-domain-specific code
+  - Base/         -- Common ancestors for react components
+  - Form/         -- Rails' form_for-inspired form helper
+  - form_objects/ -- form objects to provide desired fields and validations
+  - actions/      -- Collection of general purpose actions
+  - reducers/     -- Collection of every domain's redux reducers
+  - normalization -- bridge nested json-objects to normalized in-state struct.
+  - store         -- There should only ever be one redux store. It lives here.
+- *DomainWidgets/ -- The specific react domains
+  - actions/      -- Redux action definitions
+  - components/   -- "Dumb" components that contain markup
+  - containers/   -- "Smart" components that contain logic
+
+This structure is not considered final.

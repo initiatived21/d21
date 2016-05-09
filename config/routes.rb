@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -23,6 +22,8 @@ Rails.application.routes.draw do
 
   # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'
+
+  get 'hello_world', to: 'hello_world#index'
 
   # Unlocalized unknown paths are forwarded to the German 404
   match '*path', to: 'pages#not_found', via: :all

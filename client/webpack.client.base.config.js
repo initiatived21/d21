@@ -16,18 +16,23 @@ module.exports = {
     vendor: [
       'babel-polyfill',
       'jquery',
+      'i18n-js',
+      // './vendor/i18n/i18n',
     ],
 
     // This will contain the app entry points defined by webpack.hot.config and
     // webpack.rails.config
     app: [
-      './app/bundles/HelloWorld/startup/clientRegistration',
+      './vendor/translations',
+      './app/HelloWorld/startup/clientRegistration',
+      './app/lib/startup/clientRegistration',
     ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
       lib: path.join(process.cwd(), 'app', 'lib'),
+      // 'i18n-js': path.join('./node_modules/i18n-js'),
       react: path.resolve('./node_modules/react'),
       'react-dom': path.resolve('./node_modules/react-dom'),
     },
@@ -60,6 +65,8 @@ module.exports = {
       // bootstrap js
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
+      { test: require.resolve('i18n-js'), loader: 'expose?I18n' },
+      // { test: require.resolve('./vendor/i18n/i18n'), loader: 'expose?I18n' },
     ],
   },
 };

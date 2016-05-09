@@ -12,7 +12,11 @@ module.exports = {
   context: __dirname,
   entry: [
     'babel-polyfill',
-    './app/bundles/HelloWorld/startup/serverRegistration',
+    'i18n-js',
+    // './vendor/i18n/i18n',
+    './vendor/translations',
+    './app/HelloWorld/startup/serverRegistration',
+    './app/lib/startup/serverRegistration',
   ],
   output: {
     filename: 'server-bundle.js',
@@ -34,6 +38,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: require.resolve('i18n-js'), loader: 'expose?I18n' },
     ],
   },
 };
