@@ -15,7 +15,6 @@ export default class ElementList extends RootComponent {
   componentWillMount() {
     // Put received pledges into store
     const normalizedPledges = normalize('pledges', this.props.pledges);
-    console.log(normalizedPledges.entities)
     return store.dispatch(addEntities(normalizedPledges.entities));
   }
 

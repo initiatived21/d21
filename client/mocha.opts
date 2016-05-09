@@ -1,0 +1,3 @@
+--compilers coffee:coffee-script/register
+./test_helper.js
+app/**/**/*_test.*

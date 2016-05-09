@@ -12,7 +12,7 @@
     "build:dev:server": "webpack -w --config webpack.server.rails.config.js",
     "build:production:client": "NODE_ENV=production webpack --config webpack.client.rails.build.config.js",
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.build.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha -- --opts ./mocha.opts"
   },
   "dependencies": {
     "autoprefixer": "^6.3.5",
@@ -50,5 +50,17 @@
     "redux-thunk": "^2.0.1",
     "webpack": "^1.12.14"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-register": "^6.8.0",
+    "chai": "^3.5.0",
+    "coffee-coverage": "^1.0.1",
+    "enzyme": "^2.2.0",
+    "istanbul": "^0.4.3",
+    "jsdom": "^9.0.0",
+    "mocha": "^2.4.5",
+    "mocha-istanbul": "^0.2.0",
+    "react-addons-test-utils": "^15.0.2",
+    "sinon": "^1.17.4"
+  }
 }

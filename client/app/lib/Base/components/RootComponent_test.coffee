@@ -1,4 +1,5 @@
-RootComponent = require('react/lib/Base/components/RootComponent')
+I18n = require('i18n-js')
+RootComponent = require('./RootComponent').default
 
 describe 'RootComponent', ->
   it 'should set the global locale to the given locale', ->

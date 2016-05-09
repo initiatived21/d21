@@ -27,7 +27,6 @@ export default class JayForm {
     return this._attributes
   }
   set attributes(attributes) {
-    // console.log('aldj', attributes, this._attributes)
     this._attributes = attributes
   }
 

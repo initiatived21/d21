@@ -1,4 +1,4 @@
-store = require('react/lib/store')
+store = require('./store').default
 
 describe 'store', ->
   it 'should have an empty initial state', ->
