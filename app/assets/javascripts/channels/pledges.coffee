@@ -1,5 +1,3 @@
-normalize = require('../react/lib/normalization')
-
 # ! Docready called only once, not on turbolinks site switch.
 $(document).ready ->
   App.pledges = App.cable.subscriptions.create 'PledgesChannel',
@@ -9,5 +7,6 @@ $(document).ready ->
     # When receiving new pledges, put them into the state store normalized
     received: (data) ->
       console.log 'new from cable:', data.pledge
+      # TODO: import normalize
       normalized = normalize('pledge', data.pledge)
       store.dispatch addEntities(normalized.entities)

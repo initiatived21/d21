@@ -2,7 +2,7 @@ en:
   layouts:
     partials:
       header:
-        new_pledge_link: 'Give a promise'
+        new_pledge_link: 'Make a promise'
         faq_link: 'FAQ'
         de: 'deutsch'
         en: 'English'

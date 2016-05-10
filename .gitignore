@@ -50,6 +50,8 @@ bower.json
 
 # NPM modules
 /node_modules/**/*
+client/npm-debug.log*
+client/coverage/
 
 # OS files
 .DS_Store
@@ -73,3 +75,9 @@ Procfile.development
 .htaccess
 .htpasswd
 
+# React on Rails
+npm-debug.log
+node_modules
+
+# Generated js bundles
+/app/assets/webpack/*

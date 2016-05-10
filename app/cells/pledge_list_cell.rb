@@ -1,12 +1,17 @@
 class PledgeListCell < Cell::ViewModel
   include Cell::Slim
-  include React::Rails::ViewHelper
+  # include React::Rails::ViewHelper
+  include ReactOnRailsHelper
 
   def show
     render
   end
 
   private
+
+  def opts
+    ReactHelper.settings(props, params)
+  end
 
   def props
     {
@@ -16,8 +21,8 @@ class PledgeListCell < Cell::ViewModel
     }
   end
 
-  def settings
-    options[:settings] || {}
+  def params
+    options[:params] || {}
   end
 
   def serialized_elements

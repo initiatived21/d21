@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,8 +29,9 @@ gem 'i18n-js'
 # React
 gem 'react-rails'
 # gem 'react-rails-hot-loader'
-gem 'browserify-rails'
+# gem 'browserify-rails'
 gem 'bower-rails'
+gem 'react_on_rails'
 
 ########################
 ### Rails extensions ###
