@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #PLEDGE TILE
+\*------------------------------------*/
+
+/**
+ * A component for pledge tiles e.g. for the search page.
+ */
+
+/**
+ * 1. Pledge text is quoted.
+ *
+ * - The plegde-tile component does not create a grid. This is done by the Aleut.css layout object.
+ * - TODO: progress bar, social media icons
+ */
+
+.c-pledge-tile {
+  border: 1px solid $text-color;
+  padding-bottom: $spacing;
+}
+
+.c-pledge-tile__initiator-title {
+  text-transform: uppercase;
+}
+
+.c-pledge-tile__initiator-name {
+  text-transform: uppercase;
+}
+
+.c-pledge-tile__text {
+  color: $gray;
+  font-weight: bold;
+
+  &:before {
+    content: open-quote; /* [1] */
+  }
+
+  &:after {
+    content: close-quote; /* [1] */
+  }
+}
+
+.c-pledge-tile__days {
+  color: #c00;
+  @include font-size(20px);
+}
