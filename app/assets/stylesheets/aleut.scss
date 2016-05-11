@@ -20,10 +20,10 @@
     These are just for SCSS – nothing here gets compiled to CSS directly
 \*------------------------------------*/
 
-@import "aleut/_settings.vars.scss"; //here we override some of the variables down the line
-@import "aleut.settings.defaults/_settings.defaults.scss";
-@import "aleut.settings.responsive/_settings.responsive.scss";
-//@import "aleut/_settings.fonts.scss";
+@import "aleut/settings.vars"; //here we override some of the variables down the line
+@import "aleut.settings.defaults/settings.defaults";
+@import "aleut.settings.responsive/settings.responsive";
+//@import "aleut/settings.fonts";
 //++ our own remaps of inuits variables
 
 
@@ -33,12 +33,12 @@
     These are just for SCSS - nothing here gets directly compiled to CSS.
 \*------------------------------------*/
 
-@import "aleut.tools.functions/_tools.functions.scss";
-@import "aleut.tools.mixins/_tools.mixins.scss";
-@import "aleut.tools.responsive/_tools.responsive.scss";
-@import "aleut.tools.widths/_tools.widths.scss";
-@import "aleut.tools.clearfix/_tools.clearfix.scss";
-@import "aleut/_tools.mixins.scss"; //++ Our additional mixins
+@import "aleut.tools.functions/tools.functions";
+@import "aleut.tools.mixins/tools.mixins";
+@import "aleut.tools.responsive/tools.responsive";
+@import "aleut.tools.widths/tools.widths";
+@import "aleut.tools.clearfix/tools.clearfix";
+@import "aleut/tools.mixins"; //++ Our additional mixins
 //++ Our additional functions
 
 
@@ -49,10 +49,10 @@
     Here we have our basic resets
 \*------------------------------------*/
 
-@import "aleut.generic.normalize/_generic.normalize.scss";
-@import "aleut.generic.reset/_generic.reset.scss";
-@import "aleut.generic.box-sizing/_generic.box-sizing.scss";
-//@import "aleut.generic.shared/_generic.shared.scss";
+@import "aleut.generic.normalize/generic.normalize";
+@import "aleut.generic.reset/generic.reset";
+@import "aleut.generic.box-sizing/generic.box-sizing";
+//@import "aleut.generic.shared/generic.shared";
 
 
 /*------------------------------------*\
@@ -62,11 +62,11 @@
   https://github.com/aleutcss?query=base
 \*------------------------------------*/
 
-@import "aleut.base.page/_base.page.scss";
-@import "aleut.base.images/_base.images.scss";
-@import "aleut.base.lists/_base.lists.scss";
-@import "aleut.base.headings/_base.headings.scss";
-//@import "aleut/_base.page.scss"; //our own variation of base.page
+@import "aleut.base.page/base.page";
+@import "aleut.base.images/base.images";
+@import "aleut.base.lists/base.lists";
+@import "aleut.base.headings/base.headings";
+//@import "aleut/base.page"; //our own variation of base.page
 
 /*------------------------------------*\
     #OBJECTS (o-prefix)
@@ -77,18 +77,18 @@
     https://github.com/aleutcss?query=objects.
 \*------------------------------------*/
 
-//@import "aleut.objects.block/_objects.block.scss";
+//@import "aleut.objects.block/objects.block";
 
 $o-box--small:       true;
-@import "aleut.objects.box/_objects.box.scss";
+@import "aleut.objects.box/objects.box";
 
 $o-btn--pill:        true;
 $o-btn--small:       true;
 $o-btn--full:        true;
 $o-btn-color:        white;
 $o-btn-background:   #4a8ec2;
-@import "aleut.objects.buttons/_objects.buttons.scss";
-//@import "aleut.objects.flag/_objects.flag.scss";
+@import "aleut.objects.buttons/objects.buttons";
+//@import "aleut.objects.flag/objects.flag";
 
 $o-layout--tiny:     false !default;
 $o-layout--small:    false !default;
@@ -102,18 +102,18 @@ $o-layout--right:    false !default;
 $o-layout--center:   false !default;
 $o-layout--auto:     false !default;
 
-@import "aleut.objects.layout/_objects.layout.scss";
-@import "aleut.objects.list-bare/_objects.list-bare";
-//@import "aleut.objects.list-block/_objects.list-block";
-@import "aleut.objects.list-inline/_objects.list-inline";
-//@import "aleut.objects.list-ui/_objects.list-ui";
-@import "aleut.objects.media/_objects.media";
-//@import "aleut.objects.pack/_objects.pack.scss";
-//@import "aleut.objects.tables/_objects.tables.scss";
-//@import "aleut.objects.tabs/_objects.tabs.scss";
+@import "aleut.objects.layout/objects.layout";
+@import "aleut.objects.list-bare/objects.list-bare";
+//@import "aleut.objects.list-block/objects.list-block";
+@import "aleut.objects.list-inline/objects.list-inline";
+//@import "aleut.objects.list-ui/objects.list-ui";
+@import "aleut.objects.media/objects.media";
+//@import "aleut.objects.pack/objects.pack";
+//@import "aleut.objects.tables/objects.tables";
+//@import "aleut.objects.tabs/objects.tabs";
 
 // Our own objects
-@import "aleut/objects/_objects.wrapper.scss";
+@import "aleut/objects/objects.wrapper";
 
 
 /*------------------------------------*\
@@ -121,7 +121,7 @@ $o-layout--auto:     false !default;
     Third party CSS for plugins etc.
 \*------------------------------------*/
 
-//@import "_vendor.[something].scss";
+//@import "vendor.[something]";
 
 
 /*------------------------------------*\
@@ -131,11 +131,11 @@ $o-layout--auto:     false !default;
     Here you place your own visual styling.
 \*------------------------------------*/
 
-//@import "aleut/components/_components.site-nav.scss";
-//@import "aleut/components/_components.footer.scss";
-//@import "aleut/components/_components.tag-list.scss";
-@import "aleut/components/_components.pledge-tile.scss";
-//@import "aleut/components/_components.container.scss";
+//@import "aleut/components/components.site-nav";
+//@import "aleut/components/components.footer";
+//@import "aleut/components/components.tag-list";
+@import "aleut/components/components.pledge-tile";
+//@import "aleut/components/components.container";
 
 
 /*------------------------------------*\
@@ -144,13 +144,13 @@ $o-layout--auto:     false !default;
     Helpers and layout-classes
   https://github.com/aleutcss?query=utilities
 \*------------------------------------*/
-@import "aleut.utilities.clearfix/_utilities.clearfix.scss";
-@import "aleut.utilities.headings/_utilities.headings.scss";
-@import "aleut.utilities.print/_utilities.print.scss";
+@import "aleut.utilities.clearfix/utilities.clearfix";
+@import "aleut.utilities.headings/utilities.headings";
+@import "aleut.utilities.print/utilities.print";
 $u-p: true;
-@import "aleut.utilities.spacing/_utilities.spacing.scss";
-@import "aleut.utilities.spacing-responsive/_utilities.spacing-responsive.scss";
-@import "aleut.utilities.widths/_utilities.widths.scss";
-@import "aleut.utilities.widths-responsive/_utilities.widths-responsive.scss";
-@import "aleut/_utilities.helpers.scss";
+@import "aleut.utilities.spacing/utilities.spacing";
+@import "aleut.utilities.spacing-responsive/utilities.spacing-responsive";
+@import "aleut.utilities.widths/utilities.widths";
+@import "aleut.utilities.widths-responsive/utilities.widths-responsive";
+@import "aleut/utilities.helpers";
 //++ shame.scss (http://csswizardry.com/2013/04/shame-css/)
