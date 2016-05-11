@@ -1,25 +1,35 @@
-h2
-  | Entdecke interessante Versprechen
+section
+  .o-wrapper
+    h2
+      | Entdecke interessante Versprechen
+    p
+      | Suche nach Schlagwörtern, Orten, Unternehmen oder Organisationen
 
-form method='get' action=pledges_path(locale: I18n.locale)
-  input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
-  button type="submit"
-    | Suchen
+    form method='get' action=pledges_path(locale: I18n.locale)
+      input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
+      button type="submit"
+        | Suchen
 
-- unless @search_results.blank?
-  ul
-    - @search_results.each do |result|
-      li= result.id
+    - unless @search_results.blank?
+      ul
+        - @search_results.each do |result|
+          li= result.id
 
-h3
-  | Von der Redaktion empfohlen
-p TODO: Needs recommendation feature
+section
+  .o-wrapper
+    h2
+      | Von der Redaktion empfohlen
+    p TODO: Needs recommendation feature
 
-h3
-  | Beliebteste Versprechen
-p TODO: Needs popularity scope
-/== cell(:pledge_list, @popular_pledges, filter: :popular)
+section
+  .o-wrapper
+    h2
+      | Beliebteste Versprechen
+    p TODO: Needs popularity scope
+    /== cell(:pledge_list, @popular_pledges, filter: :popular)
 
-h3
-  | Neuste Versprechen
-== cell :pledge_list, @active_pledges, filter: :active, params: params
+section
+  .o-wrapper
+    h2
+      | Neueste Versprechen
+    == cell :pledge_list, @active_pledges, filter: :active, params: params

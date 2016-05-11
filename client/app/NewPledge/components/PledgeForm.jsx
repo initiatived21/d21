@@ -17,44 +17,49 @@ export default class PledgeForm extends ChildComponent {
 
   render() {
     return(
-      <FormFor
-        object={this.newPledge}
-        formData={this.props.formData}
-        onSubmit={this.props.onSubmit}>
+      <section>
+        <div className='o-wrapper'>
+          <h2>Ein Versprechen abgeben</h2>
+          <FormFor
+            object={this.newPledge}
+            formData={this.props.formData}
+            onSubmit={this.props.onSubmit}>
 
-        <div className='PledgeForm-PledgeData'>
+            <div className='PledgeForm-PledgeData'>
 
-          <div className='PledgeForm-Sentence'>
-            {this.t('.promise.part1')}
-            <Input attribute='content' />
-            {this.t('.promise.part2')}
-            <Input attribute='amount' type='number' />
-            <Input attribute='who' />
-            <Input attribute='requirement' />
-          </div>
+              <div className='PledgeForm-Sentence'>
+                {this.t('.promise.part1')}
+                <Input attribute='content' />
+                {this.t('.promise.part2')}
+                <Input attribute='amount' type='number' />
+                <Input attribute='who' />
+                <Input attribute='requirement' />
+              </div>
 
-          <Input attribute='location' />
-          <Input type='date' attribute='deadline' />
-          <Input attribute='description' type='textarea' />
+              <Input attribute='location' />
+              <Input type='date' attribute='deadline' />
+              <Input attribute='description' type='textarea' />
 
-          <div>[Bild]</div>
-          <div>[Themenbereiche]</div>
+              <div>[Bild]</div>
+              <div>[Themenbereiche]</div>
 
-          <button type='button' disabled='true' >
-            Entwurf speichern
-          </button>
+              <button type='button' disabled='true' >
+                Entwurf speichern
+              </button>
+            </div>
+
+            <div className='PledgeForm-UserData'>
+              <Input submodel='initiator' attribute='name' />
+              <Input submodel='initiator' attribute='email' type='email' />
+              <Input submodel='initiator' attribute='password' type='password' />
+            </div>
+
+            <button type='submit'>
+              {this.t('.submit')}
+            </button>
+          </FormFor>
         </div>
-
-        <div className='PledgeForm-UserData'>
-          <Input submodel='initiator' attribute='name' />
-          <Input submodel='initiator' attribute='email' type='email' />
-          <Input submodel='initiator' attribute='password' type='password' />
-        </div>
-
-        <button type='submit'>
-          {this.t('.submit')}
-        </button>
-      </FormFor>
+      </section>
     )
   }
 };
