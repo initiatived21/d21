@@ -19,24 +19,26 @@ export default class PledgeBrick extends ChildComponent {
     const { pledge } = this.props
 
     return (
-      <article className='PledgeBrick'>
-        <header className='PledgeBrick-Initiator'>
-          <h3>Initiator</h3>
-        </header>
-        <main className='PledgeBrick-Pledge'>
-          <a href="/{I18n.locale}/pledges/{pledge.id}">
-            Wir versprechen, {pledge.content}, wenn {pledge.amount}
-            {pledge.who} {pledge.requirement}.
-          </a>
-          <p>{pledge.deadline}</p>
-          <p>
-            {pledge.signatures_count} von {pledge.amount} Unterzeichnern
-          </p>
-        </main>
-        <footer className='PledgeBrick-Footer'>
-          [Share Buttons]
-        </footer>
-      </article>
+      <div className='o-layout__item u-1/2@m u-1/3@l'>
+        <article className='c-pledge-tile o-box o-box--small'>
+          <header className='PledgeBrick-Initiator'>
+            <h3>Initiator</h3>
+          </header>
+          <main className='PledgeBrick-Pledge'>
+            <a href="/{I18n.locale}/pledges/{pledge.id}">
+              Wir versprechen, {pledge.content}, wenn {pledge.amount}
+              {pledge.who} {pledge.requirement}.
+            </a>
+            <p>{pledge.deadline}</p>
+            <p>
+              {pledge.signatures_count} von {pledge.amount} Unterzeichnern
+            </p>
+          </main>
+          <footer className='PledgeBrick-Footer'>
+            [Share Buttons]
+          </footer>
+        </article>
+      </div>
     )
   }
 };

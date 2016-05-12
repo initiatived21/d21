@@ -16,7 +16,7 @@ describe 'FilteredList', ->
       wrapper = mount(React.createElement(FilteredList, props))
       div = wrapper.find('div')
       div.length.should.equal 1
-      div.node.className.should.equal 'FilteredList'
+      div.node.className.should.equal 'o-layout FilteredList'
 
       bricks = wrapper.find(PledgeBrick)
       bricks.length.should.equal 0

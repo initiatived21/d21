@@ -19,7 +19,7 @@ export default class FilteredList extends ChildComponent {
     const filteredList = _.pickBy(pledges, FILTERS[filter])
 
     return (
-      <div className='FilteredList'>
+      <div className='o-layout FilteredList'>
         {Object.keys(filteredList).map( (id) =>
           <PledgeBrick key={id} pledge={filteredList[id]} />
         )}
