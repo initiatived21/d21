@@ -1,11 +1,11 @@
-import normalize from './normalization';
+import normalize from './normalization.js';
 
 describe('Normalization#normalize', function() {
-  let pledge =
+  const pledge =
     {id: 1, content: 'foo', initiator: { id: 2, name: 'Carl' }};
 
   it('should normalize a single pledge', function() {
-    let expected = {
+    const expected = {
       entities: {
         pledges: {
           1: pledge
@@ -13,14 +13,16 @@ describe('Normalization#normalize', function() {
       },
       result: 1
     };
-    let output = normalize('pledge', pledge);
-    return output.should.deep.equal(expected);
+
+    const output = normalize('pledge', pledge);
+
+    output.should.deep.equal(expected);
   });
 
   it('should normalize multiple pledges', function() {
-    let pledge2 = { id: 3, content: 'bar', initiator: pledge.initiator };
-    let pledges = [pledge, pledge2];
-    let expected = {
+    const pledge2 = { id: 3, content: 'bar', initiator: pledge.initiator };
+    const pledges = [pledge, pledge2];
+    const expected = {
       entities: {
         pledges: {
           1: pledge,
@@ -29,7 +31,9 @@ describe('Normalization#normalize', function() {
       },
       result: [1, 3]
     };
-    let output = normalize('pledges', pledges);
-    return output.should.deep.equal(expected);
+
+    const output = normalize('pledges', pledges);
+
+    output.should.deep.equal(expected);
   });
 });
