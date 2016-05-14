@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
+import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 
 export default class PledgeBrick extends ChildComponent {
   static propTypes = {
@@ -19,24 +19,25 @@ export default class PledgeBrick extends ChildComponent {
     const { pledge } = this.props
 
     return (
-      <div className='o-layout__item u-1/2@m u-1/3@l'>
-        <article className='c-pledge-tile o-box o-box--small'>
-          <header className='PledgeBrick-Initiator'>
-            <h3>Initiator</h3>
-          </header>
-          <main className='PledgeBrick-Pledge'>
+      <div className="o-layout__item u-1/2@m u-1/3@l">
+        <article className="c-pledge-tile o-box o-box--small">
+          <p className="c-pledge-tile__initiator-title">
+            Initiator
+          </p>
+          <p className="c-pledge-tile__initiator-name">
+            Max Mustermann
+          </p>
+          <p className="c-pledge-tile__text">
             <a href="/{I18n.locale}/pledges/{pledge.id}">
               Wir versprechen, {pledge.content}, wenn {pledge.amount}
+              {' '}
               {pledge.who} {pledge.requirement}.
             </a>
-            <p>{pledge.deadline}</p>
-            <p>
-              {pledge.signatures_count} von {pledge.amount} Unterzeichnern
-            </p>
-          </main>
-          <footer className='PledgeBrick-Footer'>
-            [Share Buttons]
-          </footer>
+          </p>
+          <p className="c-pledge-tile__days u-tc">{pledge.deadline}</p>
+          <p className="c-pledge-tile__signees u-tc">
+            {pledge.signatures_count} von {pledge.amount} Unterzeichnern
+          </p>
         </article>
       </div>
     )
