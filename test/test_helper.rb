@@ -50,7 +50,7 @@ File.open(Rails.root.join('log/test.log'), 'w') { |f| f.truncate(0) } # clearlog
 
 Minitest.after_run do
   if $suite_passing
-    teaspoon
+    client_tests
     brakeman
     rails_best_practices
     rubocop
