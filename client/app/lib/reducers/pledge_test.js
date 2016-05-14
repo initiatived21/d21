@@ -21,7 +21,7 @@ describe('pledge reducer', function() {
     pledge(undefined, {}).should.deep.equal(initialState);
   });
 
-  it('should update an attribute', () => {
+  it('should update an attribute if id is correct', () => {
     const stateBefore = {
       id: 0,
       foo: 'bar'
@@ -38,5 +38,20 @@ describe('pledge reducer', function() {
     };
 
     pledge(stateBefore, action).should.deep.equal(stateAfter);
+  });
+
+  it('should not update an attribute if id is not correct', () => {
+    const state = {
+      id: 0,
+      foo: 'bar'
+    };
+    const action = {
+      type: 'UPDATE_PLEDGE_ATTRIBUTE',
+      id: 1,
+      attribute: 'foo',
+      value: 'baz'
+    };
+
+    pledge(state, action).should.deep.equal(state);
   });
 });

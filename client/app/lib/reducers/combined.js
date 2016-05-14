@@ -1,5 +1,7 @@
 import _ from 'lodash';
 
+import pledge from './pledge.js';
+
 export default function(state = { pledges: {} }, action) {
   switch (action.type) {
     case 'ADD_ENTITIES':
