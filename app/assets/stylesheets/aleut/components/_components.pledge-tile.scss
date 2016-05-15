@@ -8,6 +8,7 @@
 
 /**
  * 1. Pledge text is quoted.
+ * 2. The whole pledge tile is clickable.
  *
  * - The plegde-tile component does not create a grid. This is done by the Aleut.css layout object.
  * - TODO: progress bar, social media icons
@@ -16,6 +17,15 @@
 .c-pledge-tile {
   border: 1px solid $text-color;
   margin-bottom: $spacing;
+  position: relative;
+}
+
+.c-pledge-tile__link {
+  bottom: 0; /* [2] */
+  left: 0; /* [2] */
+  position: absolute; /* [2] */
+  right: 0; /* [2] */
+  top: 0; /* [2] */
 }
 
 .c-pledge-tile__initiator-title {

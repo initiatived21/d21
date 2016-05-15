@@ -15,11 +15,16 @@ export default class PledgeBrick extends ChildComponent {
     })
   };
 
+  getPledgePath() {
+    return `/${I18n.locale}/pledges/${this.props.pledge.id}`;
+  }
+
   render() {
-    const { pledge } = this.props
+    const { pledge } = this.props;
 
     return (
       <article className="c-pledge-tile o-box o-box--small">
+        <a className="c-pledge-tile__link" href={this.getPledgePath()}></a>
         <p className="c-pledge-tile__initiator-title">
           Initiator
         </p>
@@ -27,11 +32,9 @@ export default class PledgeBrick extends ChildComponent {
           Max Mustermann
         </p>
         <p className="c-pledge-tile__text">
-          <a href="/{I18n.locale}/pledges/{pledge.id}">
-            Wir versprechen, {pledge.content}, wenn {pledge.amount}
-            {' '}
-            {pledge.who} {pledge.requirement}.
-          </a>
+          Wir versprechen, {pledge.content}, wenn {pledge.amount}
+          {' '}
+          {pledge.who} {pledge.requirement}.
         </p>
         <p className="c-pledge-tile__days u-tc">{pledge.deadline}</p>
         <p className="c-pledge-tile__signees u-tc">
