@@ -47,7 +47,7 @@ export default class PledgeTile extends ChildComponent {
           {pledge.who} {pledge.requirement}.
         </p>
         <p className="c-pledge-tile__days u-tc">
-          {this.getRemainingDays()} Tage
+          Noch {this.getRemainingDays()} Tage
         </p>
         <p className="c-pledge-tile__signees u-tc">
           {pledge.signatures_count} von {pledge.amount} Unterzeichnern
