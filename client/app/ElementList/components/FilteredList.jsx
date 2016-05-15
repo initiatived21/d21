@@ -1,29 +1,31 @@
-import _ from 'lodash';
+import _                    from 'lodash';
 import React, { PropTypes } from 'react';
-import PledgeBrick from './PledgeBrick';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
+
+import PledgeBrick          from './PledgeBrick.jsx';
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
 
 export default class FilteredList extends ChildComponent {
   static propTypes = {
     pledges: PropTypes.object.isRequired,
-    filter: PropTypes.string.isRequired
+    filter:  PropTypes.string.isRequired
   }
 
   render() {
     const FILTERS = {
-      successful: (e) => e.aasm_state == 'successful',
-      active: (e) => e.aasm_state == 'active'
+      successful: (e) => e.aasm_state === 'successful',
+      active:     (e) => e.aasm_state === 'active'
     }
 
-    const { pledges, filter } = this.props
-    const filteredList = _.pickBy(pledges, FILTERS[filter])
+    const filteredList = _.pickBy(this.props.pledges, FILTERS[this.props.filter])
 
     return (
       <div className='o-layout FilteredList'>
         {Object.keys(filteredList).map( (id) =>
-          <PledgeBrick key={id} pledge={filteredList[id]} />
+          <div className="o-layout__item u-1/2@m u-1/3@l">
+            <PledgeBrick key={id} pledge={filteredList[id]} />
+          </div>
         )}
       </div>
-    )
+    );
   }
 }

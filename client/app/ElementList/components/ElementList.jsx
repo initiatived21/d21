@@ -1,15 +1,16 @@
-import React, { PropTypes } from 'react';
-import { Provider } from 'react-redux';
-import store from '../../lib/store'
-import { addEntities } from '../../lib/actions/entityActions';
-import RootComponent from '../../lib/Base/components/RootComponent';
-import FilteredListContainer from '../containers/FilteredListContainer';
-import normalize from '../../lib/normalization';
+import React, { PropTypes }  from 'react';
+import { Provider }          from 'react-redux';
+
+import store                 from '../../lib/store.js';
+import { addEntities }       from '../../lib/actions/entityActions.js';
+import RootComponent         from '../../lib/Base/components/RootComponent.js';
+import FilteredListContainer from '../containers/FilteredListContainer.js';
+import normalize             from '../../lib/normalization.js';
 
 export default class ElementList extends RootComponent {
   static propTypes = {
     pledges: PropTypes.array.isRequired,
-    filter: PropTypes.string.isRequired
+    filter:  PropTypes.string.isRequired
   };
 
   componentWillMount() {
@@ -19,11 +20,9 @@ export default class ElementList extends RootComponent {
   }
 
   render() {
-    const { filter } = this.props
-
     return(
       <Provider store={store}>
-        <FilteredListContainer filter={filter} />
+        <FilteredListContainer filter={this.props.filter} />
       </Provider>
     );
   }

@@ -19,27 +19,25 @@ export default class PledgeBrick extends ChildComponent {
     const { pledge } = this.props
 
     return (
-      <div className="o-layout__item u-1/2@m u-1/3@l">
-        <article className="c-pledge-tile o-box o-box--small">
-          <p className="c-pledge-tile__initiator-title">
-            Initiator
-          </p>
-          <p className="c-pledge-tile__initiator-name">
-            Max Mustermann
-          </p>
-          <p className="c-pledge-tile__text">
-            <a href="/{I18n.locale}/pledges/{pledge.id}">
-              Wir versprechen, {pledge.content}, wenn {pledge.amount}
-              {' '}
-              {pledge.who} {pledge.requirement}.
-            </a>
-          </p>
-          <p className="c-pledge-tile__days u-tc">{pledge.deadline}</p>
-          <p className="c-pledge-tile__signees u-tc">
-            {pledge.signatures_count} von {pledge.amount} Unterzeichnern
-          </p>
-        </article>
-      </div>
+      <article className="c-pledge-tile o-box o-box--small">
+        <p className="c-pledge-tile__initiator-title">
+          Initiator
+        </p>
+        <p className="c-pledge-tile__initiator-name">
+          Max Mustermann
+        </p>
+        <p className="c-pledge-tile__text">
+          <a href="/{I18n.locale}/pledges/{pledge.id}">
+            Wir versprechen, {pledge.content}, wenn {pledge.amount}
+            {' '}
+            {pledge.who} {pledge.requirement}.
+          </a>
+        </p>
+        <p className="c-pledge-tile__days u-tc">{pledge.deadline}</p>
+        <p className="c-pledge-tile__signees u-tc">
+          {pledge.signatures_count} von {pledge.amount} Unterzeichnern
+        </p>
+      </article>
     )
   }
 };
