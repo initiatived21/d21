@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent.js';
+import I18n                 from 'i18n-js';
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
 
 export default class PledgeBrick extends ChildComponent {
   static propTypes = {
@@ -19,6 +20,15 @@ export default class PledgeBrick extends ChildComponent {
     return `/${I18n.locale}/pledges/${this.props.pledge.id}`;
   }
 
+  // rough-and-ready version
+  // among other things, should update itself at 0:00 o'clock
+  getRemainingDays() {
+    const pledge_date = Date.parse(this.props.pledge.deadline);
+    const now = Date.now();
+
+    return Math.floor((pledge_date - now)/1000/60/60/24).toString();
+  }
+
   render() {
     const { pledge } = this.props;
 
@@ -36,7 +46,9 @@ export default class PledgeBrick extends ChildComponent {
           {' '}
           {pledge.who} {pledge.requirement}.
         </p>
-        <p className="c-pledge-tile__days u-tc">{pledge.deadline}</p>
+        <p className="c-pledge-tile__days u-tc">
+          {this.getRemainingDays()} Tage
+        </p>
         <p className="c-pledge-tile__signees u-tc">
           {pledge.signatures_count} von {pledge.amount} Unterzeichnern
         </p>
