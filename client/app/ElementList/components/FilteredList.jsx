@@ -1,7 +1,6 @@
 import _                    from 'lodash';
 import React, { PropTypes } from 'react';
-
-import PledgeBrick          from './PledgeBrick.jsx';
+import PledgeTile           from './PledgeTile.jsx';
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
 
 export default class FilteredList extends ChildComponent {
@@ -22,7 +21,7 @@ export default class FilteredList extends ChildComponent {
       <div className='o-layout FilteredList'>
         {Object.keys(filteredList).map( (id) =>
           <div className="o-layout__item u-1/2@m u-1/3@l">
-            <PledgeBrick key={id} pledge={filteredList[id]} />
+            <PledgeTile key={id} pledge={filteredList[id]} />
           </div>
         )}
       </div>

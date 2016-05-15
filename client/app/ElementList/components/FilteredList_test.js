@@ -3,7 +3,7 @@ import TestUtils from 'react-addons-test-utils';
 import { mount } from 'enzyme';
 
 import FilteredList from './FilteredList.jsx';
-import PledgeBrick from './PledgeBrick.jsx';
+import PledgeTile   from './PledgeTile.jsx';
 
 describe('FilteredList', function() {
   const props = {
@@ -12,15 +12,15 @@ describe('FilteredList', function() {
   };
 
   describe('with basic props', function() {
-    it('should output a div and no PledgeBricks', function() {
+    it('should output a div and no PledgeTiles', function() {
       const wrapper = mount(React.createElement(FilteredList, props));
 
       const div = wrapper.find('div');
       div.length.should.equal(1);
       div.node.className.should.equal('o-layout FilteredList');
 
-      const bricks = wrapper.find(PledgeBrick);
-      bricks.length.should.equal(0);
+      const tile = wrapper.find(PledgeTile);
+      tile.length.should.equal(0);
     });
   });
 
@@ -67,26 +67,26 @@ describe('FilteredList', function() {
     });
 
     it(
-      'should output PledgeBricks filtered by the successful filter',
+      'should output PledgeTiles filtered by the successful filter',
       function() {
         pledgeProps.filter = 'successful';
         const wrapper = mount(React.createElement(FilteredList, pledgeProps));
 
-        const bricks = wrapper.find(PledgeBrick);
-        bricks.length.should.equal(1);
-        bricks.node.props.pledge.id.should.equal(2);
-        bricks.node.props.pledge.aasm_state.should.equal('successful');
+        const tiles = wrapper.find(PledgeTile);
+        tiles.length.should.equal(1);
+        tiles.node.props.pledge.id.should.equal(2);
+        tiles.node.props.pledge.aasm_state.should.equal('successful');
       }
     );
 
-    it('should output PledgeBricks filtered by the active filter', function() {
+    it('should output PledgeTiles filtered by the active filter', function() {
       pledgeProps.filter = 'active';
       const wrapper = mount(React.createElement(FilteredList, pledgeProps));
 
-      const bricks = wrapper.find(PledgeBrick);
-      bricks.length.should.equal(1);
-      bricks.node.props.pledge.id.should.equal(1);
-      bricks.node.props.pledge.aasm_state.should.equal('active');
+      const tiles = wrapper.find(PledgeTile);
+      tiles.length.should.equal(1);
+      tiles.node.props.pledge.id.should.equal(1);
+      tiles.node.props.pledge.aasm_state.should.equal('active');
     });
   });
 });
