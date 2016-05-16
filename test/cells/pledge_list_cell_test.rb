@@ -10,7 +10,8 @@ describe PledgeListCell, type: :cell do
   before do
     # react_component calls controller.request internally
     PledgeListCell.any_instance.stubs(:request).returns(
-      ::ActionController::TestRequest.create)
+      ::ActionController::TestRequest.create
+    )
   end
 
   it 'renders a react ElementList' do

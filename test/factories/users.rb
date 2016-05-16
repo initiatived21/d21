@@ -5,6 +5,7 @@ FactoryGirl.define do
     name { FFaker::Internet.user_name }
     organization { maybe FFaker::Company.name }
     email { FFaker::Internet.email }
+    password 'password'
   end
 end
 

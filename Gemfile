@@ -42,6 +42,7 @@ gem 'slim-rails'
 gem 'dry-validation', github: 'dry-rb/dry-validation'
 gem 'reform', github: 'apotonick/reform', branch: '2-2' # Form objects
 gem 'cells'
+gem 'cells-rails'
 gem 'cells-slim'
 
 gem 'aasm'
@@ -130,11 +131,11 @@ group :development, :test do
   gem 'minitest-matchers'
   gem 'minitest-line'
   gem 'minitest-capybara'
+  # gem 'minitest-rails-capybara'
   gem 'launchy' # save_and_open_page
   gem 'shoulda'
   gem 'mocha'
   gem 'poltergeist'
-  gem 'teaspoon-mocha'
 
   # test suite additions
   gem 'rails_best_practices'

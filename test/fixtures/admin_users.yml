@@ -1,0 +1,6 @@
+basic:
+  id: 1
+  email: admin@example.org
+  encrypted_password: <%= Devise::Encryptor.digest(AdminUser, 'password') %>
+  created_at: 0
+  updated_at: 0
