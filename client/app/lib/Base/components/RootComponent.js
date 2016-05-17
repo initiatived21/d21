@@ -7,6 +7,10 @@ import I18n from 'i18n-js';
 export default class RootComponent extends React.Component {
   constructor(props) {
     I18n.locale = props.locale;
-    return super(props)
+
+    // We need this for CSS (e.g. quotes) to work properly; needs testing?
+    document.documentElement.lang = props.locale;
+
+    return super(props);
   }
 };

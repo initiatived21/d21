@@ -5,9 +5,9 @@ section
     p
       | Suche nach Schlagwörtern, Orten, Unternehmen oder Organisationen
 
-    form method='get' action=pledges_path(locale: I18n.locale)
-      input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
-      button type="submit"
+    form method="get" action=pledges_path(locale: I18n.locale)
+      input> type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation"
+      button class="o-btn o-btn--pill o-btn--small" type="submit"
         | Suchen
 
     - unless @search_results.blank?
