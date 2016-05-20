@@ -4,7 +4,7 @@ import { Provider }          from 'react-redux';
 import store                 from '../../lib/store.js';
 import { addEntities }       from '../../lib/actions/entityActions.js';
 import RootComponent         from '../../lib/Base/components/RootComponent.js';
-import FilteredListContainer from '../containers/FilteredListContainer.js';
+import FilteredPledgeList    from '../containers/FilteredPledgeList.js';
 import normalize             from '../../lib/normalization.js';
 
 export default class ElementList extends RootComponent {
@@ -22,7 +22,7 @@ export default class ElementList extends RootComponent {
   render() {
     return(
       <Provider store={store}>
-        <FilteredListContainer filter={this.props.filter} />
+        <FilteredPledgeList filter={this.props.filter} />
       </Provider>
     );
   }
