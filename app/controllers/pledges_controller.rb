@@ -38,7 +38,7 @@ class PledgesController < ApplicationController
 
   def create_success!
     @form.save
-    # AdminMailer.new_pledge(@form).deliver_later
+    AdminMailer.new_pledge(@form.model.id).deliver_later
     respond_to do |format|
       format.json { render json: { status: 'success' } }
       format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }
