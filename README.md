@@ -4,26 +4,25 @@ Working Title: D21
 [![Code Climate](https://codeclimate.com/github/initiatived21/d21/badges/gpa.svg)](https://codeclimate.com/github/initiatived21/d21) [![Build Status](https://travis-ci.org/initiatived21/d21.svg?branch=develop)](https://travis-ci.org/initiatived21/d21) [![Coverage Status](https://coveralls.io/repos/initiatived21/d21/badge.svg?branch=develop&service=github)](https://coveralls.io/github/initiatived21/d21?branch=develop)
 
 
+Installation
+------------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You will need ruby version 2.3.0, git, npm, and bundler installed.
 
-Things you may want to cover:
+`git clone` this repository to your local drive, `cd` into it, and
+`bundle install`. Afterwards `npm install` as well.
 
-* Ruby version
+Then you will also need to `rake db:create` and `rake db:migrate` to get the
+database up and running. You can `rake db:seed` to load some initial testing
+data.
 
-* System dependencies
+The rails server is started via `npm run rails-server`
 
-* Configuration
+Testing
+-------
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run the test suite, simply type in `rake`.
+The server-side test suite is located in the `/test/` directory. Most client-
+side code can be found in `/client/`, including javascript tests. The JS
+test suite is run after a successful run of the server-side test suite, as well
+as a couple of additional checks: brakeman, rails-best-practices, and rubocop.
