@@ -1,6 +1,6 @@
 import _                    from 'lodash';
 import React, { PropTypes } from 'react';
-import PledgeTile           from './PledgeTile.jsx';
+import PledgeTile           from '../../PledgeTile/components/PledgeTile';
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
 
 export default class FilteredList extends ChildComponent {

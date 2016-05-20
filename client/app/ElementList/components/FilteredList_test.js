@@ -3,7 +3,7 @@ import TestUtils from 'react-addons-test-utils';
 import { mount } from 'enzyme';
 
 import FilteredList from './FilteredList.jsx';
-import PledgeTile   from './PledgeTile.jsx';
+import PledgeTile   from '../../PledgeTile/components/PledgeTile';
 
 describe('FilteredList', function() {
   const props = {
