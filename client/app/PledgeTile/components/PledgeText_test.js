@@ -18,6 +18,5 @@ describe('<PledgeText />', function () {
     wrapper.text().should.equal('Wir versprechen, Schulbücher im Wert von 2.500 Euro für den Einsatz '
       + 'in Willkommensklassen bereitzustellen, wenn mindestens 10 Dolmetscher bereit sind, '
       + 'im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen.');
-
   });
 });

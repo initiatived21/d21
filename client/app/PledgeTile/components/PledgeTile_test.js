@@ -20,7 +20,8 @@ describe('<PledgeTile />', function () {
   it('should render', function () {
     const wrapper = shallow(<PledgeTile {...props} />);
 
-    wrapper.hasClass('c-pledge-tile').should.be.true;
+    wrapper.hasClass('o-layout__item').should.be.true;
+    wrapper.find('article').hasClass('c-pledge-tile').should.be.true;
     wrapper.find('a').length.should.equal(1);
     wrapper.find(PledgeTagList).length.should.equal(1);
     wrapper.find(PledgeInitiator).length.should.equal(1);

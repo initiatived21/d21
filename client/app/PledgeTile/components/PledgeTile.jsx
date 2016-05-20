@@ -33,24 +33,26 @@ export default class PledgeTile extends ChildComponent {
     const { pledge } = this.props;
 
     return (
-      <article className="c-pledge-tile">
-        <a className="c-pledge-tile__link o-box o-box--small"
-           href={this.getPledgePath()}>
-          <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
-          <PledgeInitiator name="Max Mustermann" />
-          <PledgeText
-            content={pledge.content}
-            amount={pledge.amount}
-            who={pledge.who}
-            requirement={pledge.requirement}
-          />
-          <PledgeDaysRemaining days={this.getRemainingDays()} />
-          <PledgeProgress
-            amount={pledge.amount}
-            signatures_count={pledge.signatures_count}
-          />
-        </a>
-      </article>
+      <div className="o-layout__item u-1/2@m u-1/3@l">
+        <article className="c-pledge-tile">
+          <a className="c-pledge-tile__link o-box o-box--small"
+             href={this.getPledgePath()}>
+            <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
+            <PledgeInitiator name="Max Mustermann" />
+            <PledgeText
+              content={pledge.content}
+              amount={pledge.amount}
+              who={pledge.who}
+              requirement={pledge.requirement}
+            />
+            <PledgeDaysRemaining days={this.getRemainingDays()} />
+            <PledgeProgress
+              amount={pledge.amount}
+              signatures_count={pledge.signatures_count}
+            />
+          </a>
+        </article>
+      </div>
     )
   }
 };
@@ -82,7 +84,7 @@ export class PledgeTagList extends ChildComponent {
     return (
       <ul className="c-tag-list o-list-inline">
         {names.map( (name) =>
-          <PledgeTag name={name} />
+          <PledgeTag key={name} name={name} />
         )}
       </ul>
     );

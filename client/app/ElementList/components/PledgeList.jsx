@@ -13,9 +13,7 @@ export default class PledgeList extends ChildComponent {
     return (
       <div className='o-layout'>
         {pledges.map( (pledge) =>
-          <div className="o-layout__item u-1/2@m u-1/3@l">
-            <PledgeTile key={pledge.id} pledge={pledge} />
-          </div>
+          <PledgeTile key={pledge.id} pledge={pledge} />
         )}
       </div>
     );
