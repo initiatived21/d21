@@ -1,7 +1,6 @@
-import React from 'react';
+import React       from 'react';
 import { shallow } from 'enzyme';
-
-import { PledgeText } from './PledgeTile';
+import PledgeText  from './PledgeText';
 
 describe('<PledgeText />', function () {
   const props = {

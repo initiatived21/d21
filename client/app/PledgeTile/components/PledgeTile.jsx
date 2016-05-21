@@ -1,6 +1,12 @@
 import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import ChildComponent       from '../../lib/Base/components/ChildComponent';
+import PledgeTagList        from './PledgeTagList';
+import PledgeText           from './PledgeText';
+import PledgeInitiator      from './PledgeInitiator';
+import PledgeDaysRemaining  from './PledgeDaysRemaining';
+import PledgeProgress       from './PledgeProgress';
+import PledgeSocialMedia    from './PledgeSocialMedia';
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -20,8 +26,8 @@ export default class PledgeTile extends ChildComponent {
     return `/${I18n.locale}/pledges/${this.props.pledge.id}`;
   }
 
-  // rough-and-ready version
-  // among other things, should update itself at 0:00 o'clock
+  // provisional version
+  // should update itself at 0:00 o'clock
   getRemainingDays() {
     const pledge_date = Date.parse(this.props.pledge.deadline);
     const now = Date.now();
@@ -50,124 +56,10 @@ export default class PledgeTile extends ChildComponent {
               amount={pledge.amount}
               signatures_count={pledge.signatures_count}
             />
+            <PledgeSocialMedia />
           </a>
         </article>
       </div>
     )
   }
 };
-
-export class PledgeTag extends ChildComponent {
-  static propTypes = {
-    name: PropTypes.string.isRequired
-  };
-
-  render() {
-    const { name } = this.props;
-
-    return (
-      <li className="c-tag-list__item">
-        {name}
-      </li>
-    );
-  }
-}
-
-export class PledgeTagList extends ChildComponent {
-  static propTypes = {
-    names: PropTypes.array.isRequired
-  };
-
-  render() {
-    const { names } = this.props;
-
-    return (
-      <ul className="c-tag-list o-list-inline">
-        {names.map( (name) =>
-          <PledgeTag key={name} name={name} />
-        )}
-      </ul>
-    );
-  }
-}
-
-export class PledgeInitiator extends ChildComponent {
-  static propTypes = {
-    name: PropTypes.string.isRequired
-  };
-
-  render() {
-    const { name } = this.props;
-
-    return (
-      <div className="o-media">
-        <img className="o-media__img" src="" width="100" height="100" alt="" />
-        <div className="o-media__body">
-          <p className="c-pledge__initiator-title">Initiator</p>
-          <p className="c-pledge__initiator-name">{name}</p>
-        </div>
-      </div>
-    );
-  }
-}
-
-export class PledgeText extends ChildComponent {
-  static propTypes = {
-    content:     PropTypes.string.isRequired,
-    amount:      PropTypes.number.isRequired,
-    who:         PropTypes.string.isRequired,
-    requirement: PropTypes.string.isRequired
-  };
-
-  render() {
-    const { content, amount, who, requirement } = this.props;
-
-    return (
-      <p className="c-pledge-tile__text">
-        Wir versprechen, {content}, wenn mindestens {amount} {who} {requirement}.
-      </p>
-    );
-  }
-}
-
-export class PledgeDaysRemaining extends ChildComponent {
-  static propTypes = {
-    days: PropTypes.number.isRequired
-  };
-
-  pluralized_days() {
-    if (this.props.days === 1) {
-      return 'Tag';
-    }
-    else {
-      return 'Tage';
-    }
-  }
-
-  render() {
-    const { days } = this.props;
-
-    return (
-      <p className="c-pledge-tile__days u-tc">
-        Noch {days} {this.pluralized_days()}
-      </p>
-    );
-  }
-}
-
-export class PledgeProgress extends ChildComponent {
-  static propTypes = {
-    amount:           PropTypes.number.isRequired,
-    signatures_count: PropTypes.number.isRequired
-  };
-
-  render() {
-    const { amount, signatures_count } = this.props;
-
-    return (
-      <p className="c-pledge-tile__signees u-tc">
-        {signatures_count} von {amount} Unterzeichnern
-      </p>
-    );
-  }
-}

@@ -1,7 +1,13 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React               from 'react';
+import { shallow }         from 'enzyme';
 
-import PledgeTile, { PledgeTagList, PledgeText, PledgeInitiator, PledgeDaysRemaining, PledgeProgress } from './PledgeTile';
+import PledgeTile          from './PledgeTile';
+import PledgeTagList       from './PledgeTagList';
+import PledgeText          from './PledgeText';
+import PledgeInitiator     from './PledgeInitiator';
+import PledgeDaysRemaining from './PledgeDaysRemaining';
+import PledgeProgress      from './PledgeProgress';
+import PledgeSocialMedia   from './PledgeSocialMedia';
 
 describe('<PledgeTile />', function () {
   const props = {
@@ -28,5 +34,6 @@ describe('<PledgeTile />', function () {
     wrapper.find(PledgeText).length.should.equal(1);
     wrapper.find(PledgeDaysRemaining).length.should.equal(1);
     wrapper.find(PledgeProgress).length.should.equal(1);
+    wrapper.find(PledgeSocialMedia).length.should.equal(1);
   });
 });

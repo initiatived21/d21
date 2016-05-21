@@ -1,6 +1,6 @@
-import React                   from 'react';
-import { shallow }             from 'enzyme';
-import { PledgeDaysRemaining } from './PledgeTile';
+import React               from 'react';
+import { shallow }         from 'enzyme';
+import PledgeDaysRemaining from './PledgeDaysRemaining';
 
 describe('<PledgeDaysRemaining />', function () {
   const

@@ -1,6 +1,6 @@
-import React         from 'react';
-import { shallow }   from 'enzyme';
-import { PledgeTag } from './PledgeTile';
+import React       from 'react';
+import { shallow } from 'enzyme';
+import PledgeTag   from './PledgeTag';
 
 describe('<PledgeTag />', function () {
   const props = {

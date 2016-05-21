@@ -2,7 +2,7 @@ import React     from 'react';
 import TestUtils from 'react-addons-test-utils';
 import { mount } from 'enzyme';
 
-import PledgeList from './PledgeList.jsx';
+import PledgeList from './PledgeList';
 import PledgeTile from '../../PledgeTile/components/PledgeTile';
 
 describe('<PledgeList />', function() {

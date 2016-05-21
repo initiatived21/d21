@@ -1,6 +1,6 @@
-import React              from 'react';
-import { shallow }        from 'enzyme';
-import { PledgeProgress } from './PledgeTile';
+import React          from 'react';
+import { shallow }    from 'enzyme';
+import PledgeProgress from './PledgeProgress';
 
 describe('<PledgeProgress />', function () {
   const props = {
