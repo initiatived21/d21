@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #TAG LIST
+\*------------------------------------*/
+
+/**
+ * Tag list for the pledge tile.
+ *
+ * Depends on object 'o-list-inline'.
+ */
+
+/**
+ * 1. Spacing between tags.
+ */
+
+.c-tag-list {
+}
+
+.c-tag-list__item {
+  @include font-size(10px);
+  color: $white;
+  background-color: $tag-background-color;
+  padding: 0 $spacing--tiny;
+  margin-right: $spacing--tiny; /* [1] */
+
+  &:last-child {
+    margin-right: 0; /* [1] */
+  }
+}
