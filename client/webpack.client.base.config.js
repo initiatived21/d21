@@ -23,7 +23,7 @@ module.exports = {
     // This will contain the app entry points defined by webpack.hot.config and
     // webpack.rails.config
     app: [
-      './vendor/translations',
+      'imports?I18n=i18n-js!./vendor/translations',
       './app/HelloWorld/startup/clientRegistration',
       './app/lib/startup/clientRegistration',
     ],
