@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+
+/**
+ * Default, language-specific settings for q tags.
+ */
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+:lang(de) {
+  q {
+    quotes: '„' '“';
+  }
+}
+
+:lang(en) {
+  q {
+    quotes: '“' '”';
+  }
+}
