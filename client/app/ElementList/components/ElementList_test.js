@@ -8,7 +8,7 @@ import store       from '../../lib/store.js';
 
 describe('ElementList', function() {
   describe('with basic props', function() {
-    it('should output a FilteredListContainer', function() {
+    it('should output a PledgeList', function() {
       const component = mount(React.createElement(ElementList, {
         pledges: [],
         filter: 'testFilter'
@@ -17,7 +17,7 @@ describe('ElementList', function() {
       const container = component.find('Connect');
 
       container.length.should.equal(1);
-      container.node.renderedElement.type.name.should.equal('FilteredList');
+      container.node.renderedElement.type.name.should.equal('PledgeList');
       container.node.props.filter.should.equal('testFilter');
     });
   });
