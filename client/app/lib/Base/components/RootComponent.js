@@ -8,8 +8,10 @@ export default class RootComponent extends React.Component {
   constructor(props) {
     I18n.locale = props.locale;
 
-    // We need this for CSS (e.g. quotes) to work properly; needs testing?
-    document.documentElement.lang = props.locale;
+    // We need this for CSS (e.g. quotes) to work properly.
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = props.locale;
+    }
 
     return super(props);
   }
