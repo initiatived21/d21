@@ -20,6 +20,10 @@ corn = User.create! name: 'Frieda Freude',
 
 AdminUser.create! email: 'admin@admin.com', password: 'password'
 
+# Tags
+Tag.create!(name: 'family')
+Tag.create!(name: 'books')
+
 # Draft pledge
 Pledge.create!(
   content: 'irgendwas zu machen, was wir uns noch ausdenken',

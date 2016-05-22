@@ -1,4 +1,5 @@
 import React, { PropTypes  } from 'react';
+import Select from 'react-select'
 import ChildComponent from '../../lib/Base/components/ChildComponent';
 import FormFor from '../../lib/Form/containers/FormFor';
 import Input from '../../lib/Form/containers/Input';
@@ -6,13 +7,14 @@ import Input from '../../lib/Form/containers/Input';
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    formData: PropTypes.object.isRequired
-  };
+    formData: PropTypes.object.isRequired,
+    availableTags: PropTypes.array.isRequired,
+    newPledge: PropTypes.object.isRequired,
+  }
 
   componentWillMount() {
-    this.newPledge = new this.props.formObject(this.props.editedPledge);
     this.props.ensurePledgeObjectExistence(
-      this.newPledge, this.props.editedPledge);
+      this.props.newPledge, this.props.editedPledge, this.props.formData.attributes)
   }
 
   render() {
@@ -21,7 +23,7 @@ export default class PledgeForm extends ChildComponent {
         <div className='o-wrapper'>
           <h2>Ein Versprechen abgeben</h2>
           <FormFor
-            object={this.newPledge}
+            object={this.props.newPledge}
             formData={this.props.formData}
             onSubmit={this.props.onSubmit}>
 
@@ -41,7 +43,8 @@ export default class PledgeForm extends ChildComponent {
               <Input attribute='description' type='textarea' />
 
               <div>[Bild]</div>
-              <div>[Themenbereiche]</div>
+              <Input type='multiselect' attribute='tags'
+                options={this.props.availableTags} />
 
               <button type='button' disabled='true' >
                 Entwurf speichern

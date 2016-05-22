@@ -26,24 +26,34 @@ de:
         placeholder: 'z.B. eine Flüchtlingsfamilie als Paten zu unterstützen'
       amount:
         label: 'Wieviele?'
+        placeholder: ''
       who:
         label: 'Wer?'
+        placeholder: ''
       requirement:
         label: 'Was tun?'
+        placeholder: ''
       location:
         label: 'Ort'
         placeholder: 'z.B. Bundesweit'
       deadline:
         label: 'Kann unterzeichnet werden bis'
+        placeholder: ''
       description:
         label: 'Mehr Infos (Optional)'
         placeholder: |
           Informieren Sie Ihre Unterstützer zu dem Hintergrund Ihres
           Versprechens und Ihrer Motivation.
+      tags:
+        label: ''
+        placeholder: 'Themenbereiche'
       initiator:
         name:
           label: 'Ihr Name'
+          placeholder: ''
         email:
           label: 'Ihre Email'
+          placeholder: ''
         password:
           label: 'Passwort'
+          placeholder: ''

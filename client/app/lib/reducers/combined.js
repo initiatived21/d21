@@ -2,7 +2,12 @@ import _ from 'lodash';
 
 import pledge from './pledge.js';
 
-export default function(state = { pledges: {} }, action) {
+export const initialState = {
+  pledges: {},
+  tags: [],
+}
+
+export default function(state = initialState, action) {
   switch (action.type) {
     case 'ADD_ENTITIES':
       return _.merge({}, state, action.entities);

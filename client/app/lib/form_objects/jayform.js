@@ -17,7 +17,7 @@ export default class JayForm {
     }
 
     // let iterable = initialData.keys();
-    for (let field in Object.keys(initialData)) {
+    for (let field of Object.keys(initialData)) {
       if (!this.constructor.properties.includes(field)) { continue; }
       this.attributes[field] = initialData[field];
     }

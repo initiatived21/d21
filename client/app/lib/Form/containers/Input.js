@@ -1,25 +1,32 @@
 import { connect } from 'react-redux';
+import concat from 'lodash/concat'
+import compact from 'lodash/compact'
 import updateAction from '../actions/updateAction';
 import InputComponent from '../components/InputComponent';
 
 const mapStateToProps = function(state, ownProps) {
+  const formObjectName = ownProps.object.constructor.name
+
   // get saved & server provided errors, concat them together
   let errors = null
   if (ownProps.errors) {
-    errors = state.pledges[ownProps.object.constructor.name]
-      .errors[ownProps.attribute] || []
-    errors.concat(ownProps.serverErrors)
+    errors = state.pledges[formObjectName].errors[ownProps.attribute] || []
   }
+  errors = compact(concat(errors, ownProps.serverErrors))
+
+  const value = ownProps.object.attributes[ownProps.attribute] || ''
 
   return {
-    errors: errors
+    errors,
+    value,
+    formObjectName
   };
 };
 
 const mapDispatchToProps = dispatch =>
   ({
-    onChange(attribute, value) {
-      return dispatch(updateAction('NewPledgeFormObject', attribute, value));
+    onChange(formObjectName, attribute, value) {
+      return dispatch(updateAction(formObjectName, attribute, value));
     }
   })
 ;
