@@ -15,7 +15,9 @@ export default class PledgeText extends ChildComponent {
 
     return (
       <p className="c-pledge-tile__text">
-        Wir versprechen, {content}, wenn mindestens {amount} {who} {requirement}.
+        <q>
+          Wir versprechen, {content}, wenn mindestens {amount} {who} {requirement}.
+        </q>
       </p>
     );
   }

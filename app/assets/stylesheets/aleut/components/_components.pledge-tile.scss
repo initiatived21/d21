@@ -7,8 +7,7 @@
  */
 
 /**
- * 1. Pledge text is quoted.
- * 2. The whole pledge tile is clickable, therefore set neutral text decoration and color.
+ * 1. The whole pledge tile is clickable, therefore set neutral text decoration and color.
  *
  * - The plegde-tile component does not create a grid. This is done by the Aleut.css layout object.
  * - TODO: progress bar, social media icons
@@ -20,8 +19,8 @@
 }
 
 .c-pledge-tile__link {
-  text-decoration: none; /* [2] */
-  color: $text-color; /* [2] */
+  text-decoration: none; /* [1] */
+  color: $text-color; /* [1] */
 }
 
 .c-pledge-tile__initiator-title {
@@ -35,14 +34,6 @@
 .c-pledge-tile__text {
   color: $gray;
   font-weight: bold;
-
-  &:before {
-    content: open-quote; /* [1] */
-  }
-
-  &:after {
-    content: close-quote; /* [1] */
-  }
 }
 
 .c-pledge-tile__days {
