@@ -10,7 +10,7 @@ class NewPledgeForm < Reform::Form
   property :deadline # , on: :pledge
   property :description # , on: :pledge
   # image
-  # tags
+  property :tag_ids
 
   property :initiator do
     include Reform::Form::Dry::Validations

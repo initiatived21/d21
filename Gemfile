@@ -74,6 +74,12 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'pg'
 gem 'pg_search' # Postgres search index
 
+#########################
+### External Services ###
+#########################
+
+gem 'localeapp'
+
 #####################
 # Dev/Test Specific #
 #####################

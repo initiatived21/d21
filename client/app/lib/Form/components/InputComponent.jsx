@@ -9,7 +9,7 @@ export default class Input extends Component {
     type: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string),
+      PropTypes.arrayOf(PropTypes.number),
     ]).isRequired,
     submodel: PropTypes.string,
     errors: PropTypes.array,
@@ -33,6 +33,11 @@ export default class Input extends Component {
         formObjectName, attribute, $(e.target).val()
       );
     }
+            // changes => {
+            //   const changesToSave =
+            //     changes ? changes.map(change => change.value) : null
+            //   this.props.onChange(formObjectName, attribute, changesToSave)
+            // }}
 
     let field
     switch (type) {
@@ -49,7 +54,7 @@ export default class Input extends Component {
       case 'multiselect':
         field =
           <Select multi
-            name={name}
+            name={name + '[]'}
             value={value}
             placeholder={placeholder}
             options={this.props.options}

@@ -40,6 +40,7 @@ class PledgesController < ApplicationController
 
   def create_success!
     @form.save
+    TODO_debug_tags_here?
     AdminMailer.new_pledge(@form.model.id).deliver_later
     respond_to do |format|
       format.json { render json: { status: 'success' } }
@@ -58,7 +59,9 @@ class PledgesController < ApplicationController
   def pledge_params
     params.require(:pledge).permit(
       :content, :amount, :who, :requirement, :location, :description,
-      :deadline, initiator: [:name, :email, :organization, :password]
+      :deadline,
+      tag_ids: [],
+      initiator: [:name, :email, :organization, :password]
     )
   end
 end

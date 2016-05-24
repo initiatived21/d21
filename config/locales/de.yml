@@ -1,59 +1,59 @@
 de:
-  layouts:
-    partials:
-      header:
-        new_pledge_link: 'Ein Versprechen abgeben'
-        search_link: 'Suchen'
-        faq_link: 'FAQ'
-        de: 'deutsch'
-        en: 'English'
-      footer:
-        faq_link: 'Häufige Fragen'
-        impressum_link: 'Impressum'
-  pages:
-    home:
-      recommended: 'Von der Redaktion empfohlen'
-      successful: 'Erfolgreiche Versprechen'
   PledgeForm:
     promise:
-      part1: 'Wir versprechen'
-      part2: 'wenn'
-    submit: 'Abschicken'
+      part1: Wir versprechen
+      part2: wenn
+    submit: Abschicken
+  layouts:
+    partials:
+      footer:
+        faq_link: Häufige Fragen
+        impressum_link: Impressum
+      header:
+        de: deutsch
+        en: English
+        faq_link: FAQ
+        new_pledge_link: Ein Versprechen abgeben
+        search_link: Suchen
+  pages:
+    home:
+      recommended: Von der Redaktion empfohlen
+      successful: Erfolgreiche Versprechen
   react_form:
     pledge:
-      content:
-        label: 'Was?'
-        placeholder: 'z.B. eine Flüchtlingsfamilie als Paten zu unterstützen'
       amount:
-        label: 'Wieviele?'
-        placeholder: ''
-      who:
-        label: 'Wer?'
-        placeholder: ''
-      requirement:
-        label: 'Was tun?'
-        placeholder: ''
-      location:
-        label: 'Ort'
-        placeholder: 'z.B. Bundesweit'
+        label: Wieviele?
+        placeholder: 
+      content:
+        label: Was?
+        placeholder: z.B. eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
-        label: 'Kann unterzeichnet werden bis'
-        placeholder: ''
+        label: Kann unterzeichnet werden bis
+        placeholder: 
       description:
-        label: 'Mehr Infos (Optional)'
+        label: Mehr Infos (Optional)
         placeholder: |
           Informieren Sie Ihre Unterstützer zu dem Hintergrund Ihres
           Versprechens und Ihrer Motivation.
-      tags:
-        label: ''
-        placeholder: 'Themenbereiche'
       initiator:
-        name:
-          label: 'Ihr Name'
-          placeholder: ''
         email:
-          label: 'Ihre Email'
-          placeholder: ''
+          label: Ihre Email
+          placeholder: 
+        name:
+          label: Ihr Name
+          placeholder: 
         password:
-          label: 'Passwort'
-          placeholder: ''
+          label: Passwort
+          placeholder: 
+      location:
+        label: Ort
+        placeholder: z.B. Bundesweit
+      requirement:
+        label: Was tun?
+        placeholder: 
+      tag_ids:
+        label: 
+        placeholder: Themenbereiche
+      who:
+        label: Wer?
+        placeholder: 

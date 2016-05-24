@@ -1,44 +1,57 @@
 en:
-  layouts:
-    partials:
-      header:
-        new_pledge_link: 'Make a promise'
-        faq_link: 'FAQ'
-        de: 'deutsch'
-        en: 'English'
-      footer:
-        faq_link: 'Frequently Asked Questions'
-        impressum_link: 'Impressum'
-  pages:
-    home:
-      recommended: 'Recommended by the editors'
-      successful: 'Successful promises'
   PledgeForm:
     promise:
-      part1: 'We promise'
-      part2: 'if'
-    submit: 'Submit'
+      part1: We promise
+      part2: if
+    submit: Submit
+  layouts:
+    partials:
+      footer:
+        faq_link: Frequently Asked Questions
+        impressum_link: Impressum
+      header:
+        de: deutsch
+        en: English
+        faq_link: FAQ
+        new_pledge_link: Make a promise
+        search_link: 
+  pages:
+    home:
+      recommended: Recommended by the editors
+      successful: Successful promises
   react_form:
     pledge:
-      content:
-        label: 'What?'
-        placeholder: 'e.g. to give a refugee family a home'
       amount:
-        label: 'How many?'
-      who:
-        label: 'Who?'
-      requirement:
-        label: 'Do what?'
-      location:
-        label: 'Location'
+        label: How many?
+        placeholder: 
+      content:
+        label: What?
+        placeholder: e.g. to give a refugee family a home
       deadline:
-        label: 'Can be signed until'
+        label: Can be signed until
+        placeholder: 
       description:
-        label: 'More Info (optional)'
+        label: More Info (optional)
+        placeholder: 
       initiator:
-        name:
-          label: 'Your Name'
         email:
-          label: 'Your Email'
+          label: Your Email
+          placeholder: 
+        name:
+          label: Your Name
+          placeholder: 
         password:
-          label: 'Password'
+          label: Password
+          placeholder: 
+      location:
+        label: Location
+        placeholder: 
+      requirement:
+        label: Do what?
+        placeholder: 
+      tag_ids:
+        label: 
+        placeholder: 
+      who:
+        label: Who?
+        placeholder: 

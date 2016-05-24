@@ -14,7 +14,7 @@ const mapStateToProps = function(state, ownProps) {
 function assembleTags(tags) {
   return tags.map(function(tag) {
     return {
-      value: tag.name,
+      value: tag.id,
       label: tag.name,
     }
   })

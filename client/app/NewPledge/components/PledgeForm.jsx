@@ -43,7 +43,7 @@ export default class PledgeForm extends ChildComponent {
               <Input attribute='description' type='textarea' />
 
               <div>[Bild]</div>
-              <Input type='multiselect' attribute='tags'
+              <Input type='multiselect' attribute='tag_ids'
                 options={this.props.availableTags} />
 
               <button type='button' disabled='true' >
