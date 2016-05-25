@@ -14,7 +14,8 @@ export default class PledgeForm extends ChildComponent {
 
   componentWillMount() {
     this.props.ensurePledgeObjectExistence(
-      this.props.newPledge, this.props.editedPledge, this.props.formData.attributes)
+      this.props.newPledge, this.props.editedPledge,
+      this.props.existingAttributes)
   }
 
   render() {

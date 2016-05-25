@@ -30,7 +30,7 @@ export default class Input extends Component {
     )
     const onChange = e => {
       this.props.onChange(
-        formObjectName, attribute, $(e.target).val()
+        formObjectName, attribute, submodel, $(e.target).val()
       );
     }
             // changes => {
@@ -61,7 +61,9 @@ export default class Input extends Component {
             onChange={changes => {
               const changesToSave =
                 changes ? changes.map(change => change.value) : null
-              this.props.onChange(formObjectName, attribute, changesToSave)
+              this.props.onChange(
+                formObjectName, attribute, submodel, changesToSave
+              )
             }}
           />
         break

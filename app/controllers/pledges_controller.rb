@@ -6,8 +6,10 @@ class PledgesController < ApplicationController
       locale: I18n.locale,
       formData: {
         action: pledges_path, authToken: form_authenticity_token,
-        model: 'pledge', errors: @form.errors.messages,
-        attributes: @form.as_json['fields']
+        model: 'pledge',
+        errors: @form.errors.messages,
+        attributes: @form.as_json['fields'],
+        object: @form
       },
       tags: Tag.all
     }
@@ -40,7 +42,6 @@ class PledgesController < ApplicationController
 
   def create_success!
     @form.save
-    TODO_debug_tags_here?
     AdminMailer.new_pledge(@form.model.id).deliver_later
     respond_to do |format|
       format.json { render json: { status: 'success' } }

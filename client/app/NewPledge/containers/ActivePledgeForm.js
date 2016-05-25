@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import merge from 'lodash/merge'
 import { setEntity } from '../../lib/actions/entityActions';
 import PledgeForm from '../components/PledgeForm';
 
@@ -8,6 +9,7 @@ const mapStateToProps = function(state, ownProps) {
     editedPledge,
     newPledge: new ownProps.formObject(editedPledge),
     availableTags: assembleTags(ownProps.tags),
+    existingAttributes: assembleAttributesFromServer(ownProps.formData.object)
   }
 };
 
@@ -18,6 +20,12 @@ function assembleTags(tags) {
       label: tag.name,
     }
   })
+}
+
+function assembleAttributesFromServer(serializedReformObject) {
+  let attrs = merge({}, serializedReformObject.fields)
+  attrs.initiator = serializedReformObject.fields.initiator.fields
+  return attrs
 }
 
 const mapDispatchToProps = dispatch => ({

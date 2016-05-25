@@ -19,7 +19,12 @@ export default function(state = initialState, action) {
 
     case 'UPDATE_PLEDGE_ATTRIBUTE':
       newState = Object.assign({}, state);
-      newState.pledges[action.id][action.attribute] = action.value;
+      const basePath = newState.pledges[action.id]
+      if (action.submodel) {
+        basePath[action.submodel][action.attribute] = action.value;
+      } else {
+        basePath[action.attribute] = action.value;
+      }
       return newState;
 
     default:

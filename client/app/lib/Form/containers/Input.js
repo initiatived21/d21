@@ -6,6 +6,7 @@ import InputComponent from '../components/InputComponent';
 
 const mapStateToProps = function(state, ownProps) {
   const formObjectName = ownProps.object.constructor.name
+  const attrs = ownProps.object.attributes
 
   // get saved & server provided errors, concat them together
   let errors = null
@@ -14,7 +15,12 @@ const mapStateToProps = function(state, ownProps) {
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
-  const value = ownProps.object.attributes[ownProps.attribute] || ''
+  let value = null
+  if (ownProps.submodel && attrs[ownProps.submodel]) {
+    value = attrs[ownProps.submodel][ownProps.attribute] || ''
+  } else {
+    value = attrs[ownProps.attribute] || ''
+  }
 
   return {
     errors,
@@ -25,8 +31,8 @@ const mapStateToProps = function(state, ownProps) {
 
 const mapDispatchToProps = dispatch =>
   ({
-    onChange(formObjectName, attribute, value) {
-      return dispatch(updateAction(formObjectName, attribute, value));
+    onChange(formObjectName, attribute, submodel, value) {
+      return dispatch(updateAction(formObjectName, attribute, submodel, value));
     }
   })
 ;

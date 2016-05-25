@@ -10,7 +10,6 @@ export default class JayForm {
   static required() {}
 
   constructor(initialData = {}) {
-    console.log('initD', initialData)
     this.attributes = { errors: {} };
 
     for (let property of this.constructor.properties) {
