@@ -7,4 +7,7 @@ class User < ApplicationRecord
 
   # Associations
   has_many :initiated_pledges, class_name: 'Pledge', inverse_of: :initiator
+
+  # CarrierWave Image Uploader
+  mount_uploader :avatar, AvatarUploader
 end

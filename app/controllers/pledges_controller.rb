@@ -7,9 +7,8 @@ class PledgesController < ApplicationController
       formData: {
         action: pledges_path, authToken: form_authenticity_token,
         model: 'pledge',
-        errors: @form.errors.messages,
-        attributes: @form.as_json['fields'],
-        object: @form
+        # errors: @form.errors.messages,
+        object: @form.as_json
       },
       tags: Tag.all
     }
@@ -62,7 +61,7 @@ class PledgesController < ApplicationController
       :content, :amount, :who, :requirement, :location, :description,
       :deadline,
       tag_ids: [],
-      initiator: [:name, :email, :organization, :password]
+      initiator: [:name, :email, :organization, :avatar, :password]
     )
   end
 end

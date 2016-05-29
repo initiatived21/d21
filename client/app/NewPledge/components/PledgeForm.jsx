@@ -23,7 +23,7 @@ export default class PledgeForm extends ChildComponent {
       <section>
         <div className='o-wrapper'>
           <h2>Ein Versprechen abgeben</h2>
-          <FormFor
+          <FormFor multipart
             object={this.props.newPledge}
             formData={this.props.formData}
             onSubmit={this.props.onSubmit}>
@@ -43,7 +43,6 @@ export default class PledgeForm extends ChildComponent {
               <Input type='date' attribute='deadline' />
               <Input attribute='description' type='textarea' />
 
-              <div>[Bild]</div>
               <Input type='multiselect' attribute='tag_ids'
                 options={this.props.availableTags} />
 
@@ -53,6 +52,7 @@ export default class PledgeForm extends ChildComponent {
             </div>
 
             <div className='PledgeForm-UserData'>
+              <Input submodel='initiator' attribute='avatar' type='file' />
               <Input submodel='initiator' attribute='name' />
               <Input submodel='initiator' attribute='email' type='email' />
               <Input submodel='initiator' attribute='password' type='password' />

@@ -34,6 +34,8 @@ en:
         label: More Info (optional)
         placeholder: 
       initiator:
+        avatar:
+          label: Profile Image
         email:
           label: Your Email
           placeholder: 

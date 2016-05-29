@@ -17,11 +17,13 @@ export default class BaseForm extends ChildComponent {
   };
 
   render() {
-    const { onSubmit, children } = this.props;
+    const { onSubmit, children, multipart } = this.props;
     const { action, authToken } = this.props.formData;
+    const enctype =
+      multipart ? 'multipart/form-data' : 'application/x-www-form-urlencoded'
 
     return(
-      <form action={action} method='POST' onSubmit={onSubmit}>
+      <form action={action} method='POST' onSubmit={onSubmit} encType={enctype}>
 
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='utf8' value='&#x2713;' />

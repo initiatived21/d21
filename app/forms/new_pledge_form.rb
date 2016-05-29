@@ -1,4 +1,3 @@
-
 class NewPledgeForm < Reform::Form
   include Reform::Form::Dry::Validations
 
@@ -15,11 +14,11 @@ class NewPledgeForm < Reform::Form
   property :initiator do
     include Reform::Form::Dry::Validations
 
-    property :name # , on: :user
-    property :organization # , on: :user
-    # image
-    property :email # , on: :user
-    property :password # , on: :user
+    property :name
+    property :organization
+    property :avatar
+    property :email
+    property :password
 
     validation :default do
       required(:name).filled
@@ -39,5 +38,12 @@ class NewPledgeForm < Reform::Form
     required(:location)
     required(:deadline).filled(:date?)
     required(:description)
+  end
+
+  def as_json
+    json = super
+    # Delete image content, browsers don't let us set that value anyway
+    json['fields']['initiator']['fields']['avatar'] = ''
+    json
   end
 end
