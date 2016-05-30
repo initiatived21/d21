@@ -16,6 +16,13 @@ en:
         new_pledge_link: Make a promise
         search_link: 
   pages:
+    faq:
+      answer1: Yellow
+      answer2: I don't know that.
+      answer3: What do you mean? An African or European swallow?
+      question1: What is your favourite color?
+      question2: What is the capital of Assyria?
+      question3: What is the air-speed of an unladen swallow?
     home:
       recommended: Recommended by the editors
       successful: Successful promises

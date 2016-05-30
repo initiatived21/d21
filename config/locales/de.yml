@@ -16,6 +16,13 @@ de:
         new_pledge_link: Ein Versprechen abgeben
         search_link: Suchen
   pages:
+    faq:
+      answer1: Gelb
+      answer2: Das weiß ich nicht.
+      answer3: Was meint Ihr, eine europäische oder eine afrikanische Schwalbe?
+      question1: Was ist deine Lieblingsfarbe?
+      question2: Was ist die Hauptstadt von Assyrien?
+      question3: Was ist die Höchstgeschwindigkeit einer unbeladenen Schwalbe?
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
