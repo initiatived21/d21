@@ -12,6 +12,5 @@
  *
  * require_tree .
  *= require_self
- *= require react-select.min
- *= require aleut
+ *= require main
  */
