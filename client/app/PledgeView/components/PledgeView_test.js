@@ -7,14 +7,17 @@ import Pledge from './Pledge';
 
 describe('<PledgeView />', function () {
   const props = {
-    id: 1,
-    content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
-    amount: 10,
-    who: 'Dolmetscher',
-    requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
-    location: 'Berlin',
-    deadline: '2016-09-30',
-    signatures_count: 5
+    pledge: {
+      id: 1,
+      content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
+      amount: 10,
+      who: 'Dolmetscher',
+      requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
+      location: 'Berlin',
+      deadline: '2016-09-30',
+      signatures_count: 5,
+      created_at: '2016-09-01T12:45:22.964Z'
+    }
   };
 
   it('should render', function () {

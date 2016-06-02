@@ -4,6 +4,11 @@ import ChildComponent from '../../lib/Base/components/ChildComponent';
 import TagList from './TagList';
 import PledgeLocation from './PledgeLocation';
 import PledgeQuote from './PledgeQuote';
+import PledgeFeatures from './PledgeFeatures';
+import SocialMediaButtons from './SocialMediaButtons';
+import PledgeImage from './PledgeImage';
+import PledgeDescription from './PledgeDescription';
+import PledgeCreatedAt from './PledgeCreatedAt';
 
 export default class Pledge extends ChildComponent {
   static propTypes = {
@@ -14,11 +19,12 @@ export default class Pledge extends ChildComponent {
     requirement: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     deadline: PropTypes.string.isRequired,
-    signatures_count: PropTypes.number.isRequired
+    signatures_count: PropTypes.number.isRequired,
+    created_at: PropTypes.string.isRequired
   };
 
   render() {
-    const { content, amount, who, requirement, location } = this.props;
+    const { content, amount, who, requirement, location, deadline, signatures_count, created_at } = this.props;
 
     return (
       <div className="o-layout__item u-3/4@l">
@@ -31,11 +37,15 @@ export default class Pledge extends ChildComponent {
             who={who}
             requirement={requirement}
           />
-          {/* <PledgeFeatures /> */}
-          {/* <SocialMediaButtons /> */}
-          {/* <PledgeImage /> */}
-          {/* <PledgeDescription /> */}
-          {/* <PledgeCreatedAt /> */}
+          <PledgeFeatures
+            amount={amount}
+            deadline={deadline}
+            signatures_count={signatures_count}
+          />
+          <SocialMediaButtons />
+          <PledgeImage src="/images/5000_laptops.png" />
+          <PledgeDescription>Dummy description</PledgeDescription>
+          <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
         </article>
       </div>
     );
