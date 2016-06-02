@@ -13,11 +13,13 @@ export default class PledgeView extends RootComponent {
       <Provider store={store}>
         <main>
           <div className="o-wrapper">
-            <Pledge />
-            {/*<PledgeAdditionalForms />
-            <PledgeUpdates />
-            <PledgeQAs />
-            <PledgeSignees />*/}
+            <div className="o-layout">
+              <Pledge {...this.props.pledge} />
+              {/*<PledgeAdditionalForms />
+              <PledgeUpdates />
+              <PledgeQAs />
+              <PledgeSignees />*/}
+            </div>
           </div>
         </main>
       </Provider>

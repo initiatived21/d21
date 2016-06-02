@@ -6,11 +6,11 @@
  * Default, language-specific settings for q tags.
  */
 
-q:before {
+q:before, blockquote:before {
   content: open-quote;
 }
 
-q:after {
+q:after, blockquote:after {
   content: close-quote;
 }
 

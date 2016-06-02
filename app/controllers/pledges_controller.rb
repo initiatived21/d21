@@ -24,7 +24,10 @@ class PledgesController < ApplicationController
   end
 
   def show
-    @pledge = Pledge.find(params[:id])
+    @pledge_props = {
+      pledge: Pledge.find(params[:id]),
+      locale: I18n.locale
+    }
   end
 
   def index

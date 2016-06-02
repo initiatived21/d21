@@ -52,6 +52,7 @@ Pledge.create!(
   amount: 10,
   who: 'andere Unternehmen',
   requirement: 'das Gleiche tun',
+  location: 'bundesweit',
   deadline: 7.days.from_now,
   aasm_state: 'active',
   initiator: micro
@@ -65,6 +66,7 @@ active_few = Pledge.create!(
   who: 'Dolmetscher',
   requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch'\
                ' auf arabisch zu übersetzen',
+  location: 'Berlin',
   deadline: 8.days.from_now,
   aasm_state: 'active',
   initiator: corn
@@ -79,6 +81,7 @@ active_enough = Pledge.create!(
   requirement: 'bereit sind, diese Tablets für Kinder und Jugendliche in'\
                ' Flüchtlingsheimen zur Aus-, Weiterbildung oder'\
                ' Berufsvorbereitung zu nutzen',
+  location: 'Brandenburg',
   deadline: 9.days.from_now,
   aasm_state: 'active',
   initiator: micro
@@ -93,6 +96,7 @@ Pledge.create!(
   amount: 5,
   who: 'Menschen oder Unternehmen',
   requirement: 'bereit sind, mindestens 5 Meter Stoff zu spenden',
+  location: 'Augsburg',
   deadline: 2.days.ago,
   aasm_state: 'failed',
   initiator: privat
@@ -105,6 +109,7 @@ Pledge.create!(
   amount: 10,
   who: 'Menschen',
   requirement: 'bereit sind, ein fahrtüchtiges Fahrrad zu spenden',
+  location: 'Hamburg',
   deadline: 3.days.ago,
   aasm_state: 'successful',
   initiator: privat
@@ -116,6 +121,7 @@ Pledge.create!(
   amount: 99,
   who: 'rosa Elefanten',
   requirement: 'im Park spazieren',
+  location: 'Bielefeld',
   deadline: 10.days.from_now,
   aasm_state: 'disapproved',
   initiator: privat
