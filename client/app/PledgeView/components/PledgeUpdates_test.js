@@ -8,6 +8,6 @@ describe('<PledgeUpdates />', function () {
   it('should render', function () {
     const wrapper = shallow(<PledgeUpdates />);
 
-    wrapper.find('ul').length.should.equal(1);
+    wrapper.find('ol').length.should.equal(1);
   });
 });

@@ -13,11 +13,11 @@ export default class PledgeUpdates extends ChildComponent {
     return (
       <section>
         <h3>Neuigkeiten</h3>
-        <ul>
+        <ol className="o-list-bare">
           <PledgeUpdate created_at='2016-09-01T12:05:22.964Z'>
             Die Laptops wurden abgeholt.
           </PledgeUpdate>
-        </ul>
+        </ol>
       </section>
     );
   }

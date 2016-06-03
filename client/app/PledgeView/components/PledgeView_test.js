@@ -6,6 +6,7 @@ import PledgeView from './PledgeView';
 import Pledge from './Pledge';
 import PledgeAdditionalForms from './PledgeAdditionalForms';
 import PledgeUpdates from './PledgeUpdates';
+import PledgeQAs from './PledgeQAs';
 
 describe('<PledgeView />', function () {
   const props = {
@@ -30,5 +31,6 @@ describe('<PledgeView />', function () {
     wrapper.find(Pledge).length.should.equal(1);
     wrapper.find(PledgeAdditionalForms).length.should.equal(1);
     wrapper.find(PledgeUpdates).length.should.equal(1);
+    wrapper.find(PledgeQAs).length.should.equal(1);
   });
 });
