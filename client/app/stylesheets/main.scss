@@ -85,6 +85,7 @@ $o-box--small:       true;
 
 $o-btn--pill:        true;
 $o-btn--small:       true;
+$o-btn--full:        true;
 $o-btn-color:        white;
 $o-btn-background:   #4a8ec2;
 @import "~aleut.objects.buttons/objects.buttons";
@@ -136,7 +137,7 @@ $o-layout--auto:     false !default;
 //@import "aleut/components/components.footer";
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";
-//@import "aleut/components/components.container";
+@import "aleut/components/components.sign-pledge";
 
 
 /*------------------------------------*\
