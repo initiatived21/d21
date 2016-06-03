@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import PledgeView from './PledgeView';
 import Pledge from './Pledge';
 import PledgeAdditionalForms from './PledgeAdditionalForms';
+import PledgeUpdates from './PledgeUpdates';
 
 describe('<PledgeView />', function () {
   const props = {
@@ -28,5 +29,6 @@ describe('<PledgeView />', function () {
     wrapper.find('main').length.should.equal(1);
     wrapper.find(Pledge).length.should.equal(1);
     wrapper.find(PledgeAdditionalForms).length.should.equal(1);
+    wrapper.find(PledgeUpdates).length.should.equal(1);
   });
 });

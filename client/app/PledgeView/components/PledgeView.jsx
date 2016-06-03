@@ -4,6 +4,7 @@ import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent';
 import Pledge from './Pledge';
 import PledgeAdditionalForms from './PledgeAdditionalForms';
+import PledgeUpdates from './PledgeUpdates';
 
 export default class PledgeView extends RootComponent {
   static propTypes = {
@@ -17,8 +18,8 @@ export default class PledgeView extends RootComponent {
             <div className="o-layout">
               <Pledge {...this.props.pledge} />
               <PledgeAdditionalForms id={this.props.pledge.id} />
-              {/*<PledgeUpdates />
-              <PledgeQAs />
+              <PledgeUpdates />
+              {/*<PledgeQAs />
               <PledgeSignees />*/}
             </div>
           </div>
