@@ -31,8 +31,15 @@ class PledgesController < ApplicationController
   end
 
   def index
-    @active_pledges = Pledge.active.limit(4)
-    @search_results = PgSearch.multisearch(params['query'])
+    search = Search.new(params)
+    if search.empty?
+      @pledges = Pledge.active.limit(4)
+      @result_ids = []
+    else
+      search.run
+      @pledges = search.results
+      @result_ids = search.results.ids
+    end
   end
 
   private
