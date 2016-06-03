@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent';
 import Pledge from './Pledge';
+import PledgeAdditionalForms from './PledgeAdditionalForms';
 
 export default class PledgeView extends RootComponent {
   static propTypes = {
@@ -15,8 +16,8 @@ export default class PledgeView extends RootComponent {
           <div className="o-wrapper">
             <div className="o-layout">
               <Pledge {...this.props.pledge} />
-              {/*<PledgeAdditionalForms />
-              <PledgeUpdates />
+              <PledgeAdditionalForms id={this.props.pledge.id} />
+              {/*<PledgeUpdates />
               <PledgeQAs />
               <PledgeSignees />*/}
             </div>

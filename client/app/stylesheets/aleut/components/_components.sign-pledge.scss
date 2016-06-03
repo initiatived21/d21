@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #SIGN PLEDGE
+\*------------------------------------*/
+
+/**
+ * Sign pledge form in pledge show view
+ */
+
+/**
+ * 1. All form elements are full-width.
+ */
+
+.c-sign-pledge {
+  margin-bottom: $spacing;
+
+  input[type="text"], input[type="email"], textarea {
+    width: 100%; /* [1] */
+  }
+}
