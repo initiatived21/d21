@@ -12,7 +12,7 @@ export default class PledgeQAs extends ChildComponent {
     const { children } = this.props;
 
     return (
-      <section>
+      <section className="o-layout__item">
         <h3>Fragen und Antworten an den Initiator</h3>
         <dl>
           <PledgeQuestion>Um welche Laptops handelt es sich?</PledgeQuestion>

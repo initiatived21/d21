@@ -11,7 +11,7 @@ export default class PledgeUpdates extends ChildComponent {
     const { children } = this.props;
 
     return (
-      <section>
+      <section className="o-layout__item">
         <h3>Neuigkeiten</h3>
         <ol className="o-list-bare">
           <PledgeUpdate created_at='2016-09-01T12:05:22.964Z'>
