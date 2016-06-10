@@ -64,3 +64,18 @@ en:
       who:
         label: Who?
         placeholder: 
+    signature:
+      anonymous:
+        label: Don't publish my name
+      contact_person:
+        label: I am the contact person
+      email:
+        label: 
+        placeholder: E-Mail*
+      name:
+        label: 
+        placeholder: Name*
+      organization:
+        placeholder: Company or Organization (optional)
+      reason:
+        placeholder: I'm supporting this because … {optional)

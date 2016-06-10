@@ -10,6 +10,8 @@ import SigneeList from './SigneeList';
 
 export default class PledgeView extends RootComponent {
   static propTypes = {
+    pledge: PropTypes.object.isRequired,
+    signPledgeForm: PropTypes.object.isRequired,
   };
 
   render() {
@@ -19,7 +21,8 @@ export default class PledgeView extends RootComponent {
           <div className="o-wrapper">
             <div className="o-layout">
               <Pledge {...this.props.pledge} />
-              <PledgeAdditionalForms id={this.props.pledge.id} />
+              <PledgeAdditionalForms id={this.props.pledge.id}
+                signPledgeForm={this.props.signPledgeForm} />
               <PledgeUpdates />
               <PledgeQAs />
               <SigneeList />

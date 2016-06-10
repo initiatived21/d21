@@ -21,7 +21,6 @@ const mapStateToProps = function(state, ownProps) {
   } else {
     value = attrs[ownProps.attribute] || ''
   }
-  console.log('Input value', value)
 
   return {
     errors,

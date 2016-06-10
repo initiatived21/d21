@@ -24,9 +24,17 @@ class PledgesController < ApplicationController
   end
 
   def show
+    pledge = Pledge.find(params[:id])
     @pledge_props = {
-      pledge: Pledge.find(params[:id]),
-      locale: I18n.locale
+      pledge: pledge,
+      locale: I18n.locale,
+      signPledgeForm: {
+        formData: {
+          action: signatures_path(id: params[:id], locale: I18n.locale),
+          authToken: form_authenticity_token,
+          model: 'signature'
+        }
+      }
     }
   end
 

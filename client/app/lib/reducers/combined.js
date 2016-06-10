@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
-import pledge from './pledge.js';
+import pledge from './pledge'
+import signPledgeFormReducer from '../../PledgeView/reducers/signPledgeFormReducer'
 
 export const initialState = {
   pledges: {},

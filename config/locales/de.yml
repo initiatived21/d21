@@ -29,7 +29,7 @@ de:
   react_form:
     pledge:
       amount:
-        label: Wieviele?
+        label: Wie viele?
         placeholder: 
       content:
         label: Was?
@@ -66,3 +66,18 @@ de:
       who:
         label: Wer?
         placeholder: 
+    signature:
+      anonymous:
+        label: Namen nicht veröffentlichen
+      contact_person:
+        label: Ich bin Ansprechpartner
+      email:
+        label: 
+        placeholder: E-Mail*
+      name:
+        label: 
+        placeholder: Name*
+      organization:
+        placeholder: Unternehmen oder Organisation (optional)
+      reason:
+        placeholder: Ich unterstützte, weil … (optional)

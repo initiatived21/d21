@@ -14,7 +14,11 @@ Rails.application.routes.draw do
     get '/impressum' => 'pages#impressum', as: :impressum
 
     # RESTful resources
-    resources :pledges, only: [:new, :create, :show, :index]
+    resources :pledges, only: [:new, :create, :show, :index] do
+      member do
+        resources :signatures, only: [:create]
+      end
+    end
 
     # All other localized paths => localized 404
     match '*path', to: 'pages#not_found', via: :all
