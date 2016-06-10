@@ -21,8 +21,10 @@ export default class PledgeView extends RootComponent {
           <div className="o-wrapper">
             <div className="o-layout">
               <Pledge {...this.props.pledge} />
-              <PledgeAdditionalForms id={this.props.pledge.id}
-                signPledgeForm={this.props.signPledgeForm} />
+              <PledgeAdditionalForms
+                id={this.props.pledge.id}
+                signPledgeForm={this.props.signPledgeForm}
+              />
               <PledgeUpdates />
               <PledgeQAs />
               <SigneeList />

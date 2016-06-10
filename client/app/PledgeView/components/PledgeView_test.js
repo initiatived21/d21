@@ -21,6 +21,14 @@ describe('<PledgeView />', function () {
       deadline: '2016-09-30',
       signatures_count: 5,
       created_at: '2016-09-01T12:45:22.964Z'
+    },
+
+    signPledgeForm: {
+      formData: {
+        action: '/',
+        authToken: 'a',
+        model: 'signature'
+      }
     }
   };
 

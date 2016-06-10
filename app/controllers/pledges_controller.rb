@@ -5,13 +5,15 @@ class PledgesController < ApplicationController
     @pledge_props = {
       locale: I18n.locale,
       formData: {
-        action: pledges_path, authToken: form_authenticity_token,
+        action: pledges_path,
+        authToken: form_authenticity_token,
         model: 'pledge',
         # errors: @form.errors.messages,
         object: @form.as_json
       },
       tags: Tag.all
     }
+
     render :new
   end
 

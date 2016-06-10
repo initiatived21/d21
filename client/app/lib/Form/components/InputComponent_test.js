@@ -9,7 +9,8 @@ const errorClass = 'inline-errors';
 describe('InputComponent', function() {
   const defaultProps = {
     model: 'testModel',
-    attribute: 'testAttribute'
+    attribute: 'testAttribute',
+    value: ''
   };
 
   describe('with minimal props', function() {
