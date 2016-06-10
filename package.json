@@ -2,10 +2,7 @@
   "name": "d21",
   "repository": "https://github.com/initiatived21/d21",
   "dependencies": {},
-  "devDependencies": {
-    "coffee-coverage": "^1.0.1",
-    "istanbul": "^0.4.3"
-  },
+  "devDependencies": {},
   "license": "AGPL-3.0",
   "engines": {
     "node": ">= 5.10.0",
