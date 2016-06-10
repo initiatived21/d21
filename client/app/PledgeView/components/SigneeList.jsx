@@ -12,7 +12,7 @@ export default class SigneeList extends ChildComponent {
 
     return (
       <section className="o-layout__item">
-        <h3>Unterzeichner</h3>
+        <h3>{this.t('.heading')}</h3>
         <ol className="o-list-bare">
           <Signee
             id={1}

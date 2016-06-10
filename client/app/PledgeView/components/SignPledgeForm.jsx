@@ -22,9 +22,7 @@ export default class SignPledgeForm extends ChildComponent {
         onSubmit={onSubmit}
         object={newSignature}
         formData={formData}>
-        <p>
-          Ich unterzeichne dieses Versprechen.
-        </p>
+        <p>{this.t('.i_sign')}</p>
 
         <Input attribute='name' />
 
@@ -33,7 +31,7 @@ export default class SignPledgeForm extends ChildComponent {
         </div>
 
         <Input type="email" attribute='email' />
-        <p>Ihre E-Mail wird nicht veröffentlicht.</p>
+        <p>{this.t('.email_hint')}</p>
 
         <Input type="text" attribute='organization' />
 
@@ -43,17 +41,9 @@ export default class SignPledgeForm extends ChildComponent {
 
         <Input type='textarea' attribute='reason' />
 
-        <p><small>
-          Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von "Projektname"
-          und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten.
-          Sie können sich jederzeit aus den Benachrichtigungen austragen lassen.
-          Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator
-          weitergegeben.
-        </small></p>
+        <p><small>{this.t('.small_print', { project: 'Projektname' })}</small></p>
 
-        <button className="o-btn o-btn--small o-btn--full" type="submit">
-          Unterzeichnen
-        </button>
+        <button className="o-btn o-btn--small o-btn--full" type="submit">{this.t('.sign')}</button>
       </FormFor>
     );
   }
