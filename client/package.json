@@ -12,7 +12,7 @@
     "build:dev:server": "webpack --watch --color --config webpack.server.rails.config.js",
     "build:production:client": "NODE_ENV=production webpack --config webpack.client.rails.build.config.js",
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.build.config.js",
-    "test": "istanbul cover _mocha -- --opts ./mocha.opts"
+    "test": "istanbul cover _mocha -- --reporter dot --opts ./mocha.opts"
   },
   "dependencies": {
     "aleut.base.headings": "^1.0.3",
