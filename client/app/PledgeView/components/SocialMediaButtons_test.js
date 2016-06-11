@@ -6,6 +6,7 @@ describe('<SocialMediaButtons />', function () {
   it('should render', function () {
     const wrapper = shallow(<SocialMediaButtons />);
 
-    wrapper.text().should.equal('social media buttons');
+    wrapper.hasClass('c-social-media-buttons').should.be.true;
+    wrapper.hasClass('shariff').should.be.true;
   });
 });

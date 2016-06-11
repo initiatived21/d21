@@ -122,9 +122,12 @@ $o-layout--auto:     false !default;
     Third party CSS for plugins etc.
 \*------------------------------------*/
 
-//@import "vendor.[something]";
+// React Select component
 @import "~react-select/dist/react-select";
 
+// Shariff social media buttons
+@import "~shariff/build/shariff.complete"; // TODO: Only import parts that we need
+// @import Shariff overrides here, e.g. "aleut/vendor.shariff.overrides";
 
 /*------------------------------------*\
     #COMPONENTS (c-prefix)

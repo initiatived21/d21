@@ -35,6 +35,8 @@ de:
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
   SigneeList:
     heading: Unterzeichner
+  SocialMediaButtons:
+    twitter_message: 'Versprechen unterzeichnen:'
   layouts:
     partials:
       footer:

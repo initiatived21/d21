@@ -38,6 +38,10 @@ config.module.loaders.push(
   {
     test: require.resolve('jquery-ujs'),
     loader: 'imports?jQuery=jquery',
+  },
+  {
+    test: require.resolve('./app/PledgeView/components/SocialMediaButtons.jsx'),
+    loader: 'imports?Shariff=shariff'
   }
 );
 

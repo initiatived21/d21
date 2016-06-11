@@ -35,6 +35,8 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+  SocialMediaButtons:
+    twitter_message: 'Sign pledge:'
   layouts:
     partials:
       footer:
