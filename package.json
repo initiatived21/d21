@@ -18,6 +18,5 @@
     "build:server": "(cd client && npm run build:server --silent)",
     "build:dev:client": "(cd client && npm run build:dev:client --silent)",
     "build:dev:server": "(cd client && npm run build:dev:server --silent)",
-    "test": "mocha test/javascripts/mocha_setup.js test/javascripts/**/*-test.js"
   }
 }

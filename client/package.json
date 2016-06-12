@@ -12,7 +12,7 @@
     "build:dev:server": "webpack --watch --color --config webpack.server.rails.config.js",
     "build:production:client": "NODE_ENV=production webpack --config webpack.client.rails.build.config.js",
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.build.config.js",
-    "test": "istanbul cover _mocha -- --reporter dot --opts ./mocha.opts"
+    "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts"
   },
   "dependencies": {
     "aleut.base.headings": "^1.0.3",
@@ -96,7 +96,7 @@
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "enzyme": "^2.2.0",
-    "istanbul": "^0.4.3",
+    "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.0.0",
     "mocha": "^2.4.5",
     "mocha-istanbul": "^0.2.0",

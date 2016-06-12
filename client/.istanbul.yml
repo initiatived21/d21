@@ -7,7 +7,6 @@ instrumentation:
     - .js
     - .jsx
   es-modules: true
-  include-all-sources: true
 reporting:
   reports:
     watermarks:
