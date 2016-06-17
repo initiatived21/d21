@@ -18,5 +18,13 @@
     "build:server": "(cd client && npm run build:server --silent)",
     "build:dev:client": "(cd client && npm run build:dev:client --silent)",
     "build:dev:server": "(cd client && npm run build:dev:server --silent)"
-  }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ]
 }
