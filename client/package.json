@@ -12,6 +12,8 @@
     "build:dev:server": "webpack --watch --color --config webpack.server.rails.config.js",
     "build:production:client": "NODE_ENV=production webpack --config webpack.client.rails.build.config.js",
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.build.config.js",
+    "build:test": "npm run build:client && npm run build:server",
+    "build:production": "npm run build:production:client && npm run build:production:server",
     "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts"
   },
   "dependencies": {
@@ -79,9 +81,9 @@
     "node-sass": "^3.7.0",
     "normalizr": "^2.0.1",
     "pad-number": "0.0.4",
-    "react": "^0.14.8 || ^15.0.0",
-    "react-dom": "^0.14.8 || ^15.0.0",
-    "react-on-rails": "5.2.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-on-rails": "6.0.4",
     "react-redux": "^4.4.1",
     "react-select": "^1.0.0-beta13",
     "redux": "^3.3.1",

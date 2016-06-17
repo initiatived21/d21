@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta3'
+gem 'rails', '5.0.0.rc1'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -31,7 +31,7 @@ gem 'react-rails'
 # gem 'react-rails-hot-loader'
 # gem 'browserify-rails'
 gem 'bower-rails'
-gem 'react_on_rails'
+gem 'react_on_rails', '6.0.4'
 
 ########################
 ### Rails extensions ###
