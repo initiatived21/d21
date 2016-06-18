@@ -27,10 +27,6 @@ gem 'turbolinks', '~> 5.x'
 gem 'i18n-js'
 
 # React
-gem 'react-rails'
-# gem 'react-rails-hot-loader'
-# gem 'browserify-rails'
-gem 'bower-rails'
 gem 'react_on_rails', '6.0.4'
 
 ########################

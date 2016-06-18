@@ -95,10 +95,6 @@ GEM
       activesupport (>= 3.0.0)
     arel (7.0.0)
     ast (2.2.0)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -109,7 +105,6 @@ GEM
     bourbon (4.2.7)
       sass (~> 3.4)
       thor (~> 0.19)
-    bower-rails (0.10.0)
     brakeman (3.3.0)
     builder (3.2.2)
     bullet (5.0.0)
@@ -399,13 +394,6 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    react-rails (1.7.1)
-      babel-transpiler (>= 0.7.0)
-      coffee-script-source (~> 1.8)
-      connection_pool
-      execjs
-      rails (>= 3.2)
-      tilt
     react_on_rails (6.0.4)
       addressable
       connection_pool
@@ -521,7 +509,6 @@ DEPENDENCIES
   activeadmin!
   better_errors
   binding_of_caller
-  bower-rails
   brakeman
   bullet
   carrierwave
@@ -571,7 +558,6 @@ DEPENDENCIES
   rails-i18n
   rails_best_practices
   rake
-  react-rails
   react_on_rails (= 6.0.4)
   redis (>= 3.0)
   reform!
