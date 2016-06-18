@@ -5,11 +5,16 @@
 
 $border-radius: 3px;
 $btn-radius: $border-radius/2;
-$font-family-heading: Helvetica, Arial, sans-serif;
-$main-font-family:  Helvetica, Arial, sans-serif;
+$background-color: #fff;
+
+/** FONTS
+ * Font family values taken from https://www.sitepoint.com/eight-definitive-font-stacks/
+ */
+
+$font-family-heading: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+$main-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $font-size-primary: 16px;
 $font-size-small: 14px;
-$background-color: #fff;
 
 /**
  * COLORS
