@@ -41,10 +41,6 @@ config.module.loaders.push(
     loader: 'imports?jQuery=jquery',
   },
   {
-    test: require.resolve('./app/PledgeView/components/SocialMediaButtons.jsx'),
-    loader: 'imports?Shariff=shariff'
-  },
-  {
     test: /\.scss$/,
     include: [
       path.resolve(process.cwd(), 'app/assets/stylesheets')

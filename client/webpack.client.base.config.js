@@ -60,9 +60,13 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: require.resolve('jquery'), loader: 'expose?$' },
+
+      // Not all apps require jQuery. Many Rails apps do, such as those using TurboLinks or
+      // bootstrap js
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
+      { test: require.resolve('jquery'), loader: 'expose?$' },
       { test: require.resolve('i18n-js'), loader: 'expose?I18n' }
+      // { test: require.resolve('./vendor/i18n/i18n'), loader: 'expose?I18n' },
     ],
   },
 };
