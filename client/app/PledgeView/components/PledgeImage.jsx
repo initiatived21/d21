@@ -14,7 +14,7 @@ export default class PledgeImage extends ChildComponent {
       <img
         className="c-pledge-img"
         src={src}
-        alt="Bild, welches das Versprechen beschreibt."
+        alt={this.t('.img_alt')}
       />
     );
   }

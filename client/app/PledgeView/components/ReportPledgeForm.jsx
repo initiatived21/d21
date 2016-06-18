@@ -11,12 +11,9 @@ export default class ReportPledgeForm extends ChildComponent {
 
     return (
       <aside className="c-report-pledge">
-        <p>
-          Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen?
-          Melde es an unsere Redaktion, und wir überprüfen die Seite.
-        </p>
+        <p>{this.t('.description')}</p>
 
-        <a className="o-btn o-btn--small o-btn--full" href="">Versprechen melden</a>
+        <a className="o-btn o-btn--small o-btn--full" href="">{this.t('.report_pledge')}</a>
       </aside>
     );
   }

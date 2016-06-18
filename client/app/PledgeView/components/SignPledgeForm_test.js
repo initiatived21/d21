@@ -4,7 +4,15 @@ import SignPledgeForm from './SignPledgeForm';
 
 describe('<SignPledgeForm />', function () {
   const props = {
-    id: 1
+    id: 1,
+
+    formData: {
+      action: '/',
+      authToken: 'a',
+      model: 'signature'
+    },
+
+    onSubmit: () => {}
   };
 
   it('should render', function () {

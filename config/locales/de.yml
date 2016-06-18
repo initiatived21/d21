@@ -1,9 +1,42 @@
 de:
+  PledgeFeatures:
+    initiator:
+      title: Initiator
+    signees:
+      of: von
+      of_goal: vom Ziel
+      title: Unterzeichner
+    time:
+      closes_on: Endet am
+      days: Tage
+      title: Zeit übrig
   PledgeForm:
     promise:
       part1: Wir versprechen
       part2: wenn
     submit: Abschicken
+  PledgeImage:
+    img_alt: Bild, welches das Versprechen beschreibt
+  PledgeQAs:
+    heading: Fragen und Antworten an den Initiator
+  PledgeQuote:
+    promise:
+      part1: Wir versprechen,
+      part2: ", wenn mindestens"
+  PledgeUpdates:
+    heading: Neuigkeiten
+  ReportPledgeForm:
+    description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
+    report_pledge: Versprechen melden
+  SignPledgeForm:
+    email_hint: Ihre E-Mail wird nicht veröffentlicht.
+    i_sign: Ich unterzeichne dieses Versprechen.
+    sign: Unterzeichnen
+    small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
+  SigneeList:
+    heading: Unterzeichner
+  SocialMediaButtons:
+    twitter_message: 'Versprechen unterzeichnen:'
   layouts:
     partials:
       footer:
@@ -38,15 +71,15 @@ de:
         label: Kann unterzeichnet werden bis
         placeholder: 
       description:
-        label: Mehr Infos (Optional)
-        placeholder: |
-          Informieren Sie Ihre Unterstützer zu dem Hintergrund Ihres
-          Versprechens und Ihrer Motivation.
+        label: Mehr Infos (optional)
+        placeholder: |-
+          Informieren Sie Ihre Unterstützer über den Hintergrund Ihres
+          Versprechens und Ihre Motivation.
       initiator:
         avatar:
           label: Profilbild
         email:
-          label: Ihre Email
+          label: Ihre E-Mail
           placeholder: 
         name:
           label: Ihr Name
@@ -80,4 +113,4 @@ de:
       organization:
         placeholder: Unternehmen oder Organisation (optional)
       reason:
-        placeholder: Ich unterstützte, weil … (optional)
+        placeholder: Ich unterstütze, weil … (optional)

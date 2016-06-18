@@ -18,7 +18,7 @@ export default class PledgeQuote extends ChildComponent {
         <img className="o-media__img" src="cornelsen.png" width="100" height="100" alt="Cornelsen Logo" />
         <figure className="o-media__body">
           <blockquote className="c-pledge__text">
-            Wir versprechen, {content}, wenn mindestens {amount} {who} {requirement}.
+            {this.t('.promise.part1')} {content}{this.t('.promise.part2')} {amount} {who} {requirement}.
           </blockquote>
           <figcaption>{'Cornelsen Verlag'}</figcaption>
         </figure>

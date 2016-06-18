@@ -10,12 +10,35 @@ describe('NewPledge', function() {
     formData: {
       action: '/',
       authToken: 'a',
-      model: 'pledge'
-    }
+      model: 'pledge',
+      object: {
+        fields: {
+          content:     null,
+          amount:      null,
+          who:         null,
+          requirement: null,
+          location:    null,
+          deadline:    null,
+          description: null,
+          tag_ids:     [],
+          initiator: {
+            fields: {
+              name:         null,
+              organization: null,
+              avatar:       null,
+              email:        null,
+              password:     null
+            }
+          }
+        }
+      }
+    },
+
+    tags: []
   };
 
   it('should have a submit button', function() {
-    const wrapper = mount(React.createElement(NewPledge, formProps));
+    const wrapper = mount(<NewPledge {...formProps} />);
 
     const inputs = wrapper.find('button');
     inputs.length.should.equal(2);

@@ -13,7 +13,7 @@ export default class PledgeUpdates extends ChildComponent {
 
     return (
       <section className="o-layout__item">
-        <h3>Neuigkeiten</h3>
+        <h3>{this.t('.heading')}</h3>
         <ol className="o-list-bare">
           {updates.map( update =>
             <PledgeUpdate key={update.id} update={update} />

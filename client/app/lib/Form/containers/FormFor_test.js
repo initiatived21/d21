@@ -16,7 +16,15 @@ describe('FormFor', function() {
     formData: {
       action: 'testAction',
       authToken: 'testAuthToken',
-      model: 'testModel'
+      model: 'testModel',
+      errors: null
+    },
+
+    object: {
+      attributes: {
+        test_input: null,
+        nested_test_input: null
+      }
     }
   };
 
@@ -112,6 +120,7 @@ describe('FormFor', function() {
 
         const inputs = wrapper.find('Input');
         inputs.length.should.equal(2);
+
         assert(inputs.first().props().errors === null);
         assert(inputs.last().props().errors === null);
       });

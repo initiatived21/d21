@@ -7,7 +7,7 @@ Working Title: D21
 Installation
 ------------
 
-You will need ruby version 2.3.0, git, npm, and bundler installed.
+You will need ruby version 2.3.1, git, npm, and bundler installed.
 
 `git clone` this repository to your local drive, `cd` into it, and
 `bundle install`. Afterwards `npm install` as well.
