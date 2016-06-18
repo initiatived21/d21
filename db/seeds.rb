@@ -47,7 +47,7 @@ Pledge.create!(
 )
 
 # active pledge without signatures
-Pledge.create!(
+active_none = Pledge.create!(
   content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu spenden',
   amount: 10,
   who: 'andere Unternehmen',
@@ -56,6 +56,15 @@ Pledge.create!(
   deadline: 7.days.from_now,
   aasm_state: 'active',
   initiator: micro
+)
+Comment.create!(
+  pledge: active_none,
+  content: 'Um welche Laptops handelt es sich?',
+  response: 'Sie sind von der Firma Levono'
+)
+Comment.create!(
+  pledge: active_none,
+  content: 'Warum bekomme ich keine Antwort?'
 )
 
 # active pledge with a few signatures
@@ -71,7 +80,7 @@ active_few = Pledge.create!(
   aasm_state: 'active',
   initiator: corn
 )
-# Signature.create! pledge: active_few
+FactoryGirl.create :signature, pledge: active_few
 
 # active pledge with a enough signatures
 active_enough = Pledge.create!(
@@ -86,9 +95,9 @@ active_enough = Pledge.create!(
   aasm_state: 'active',
   initiator: micro
 )
-# 15.times do
-#   Signature.create! pledge: active_enough
-# end
+15.times do
+  FactoryGirl.create :signature, pledge: active_enough
+end
 
 # failed pledge
 Pledge.create!(

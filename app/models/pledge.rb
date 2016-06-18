@@ -5,6 +5,8 @@ class Pledge < ApplicationRecord
   has_many :pledges_tags, inverse_of: :pledge
   has_many :tags, through: :pledges_tags, inverse_of: :pledges
   has_many :signatures, inverse_of: :pledge
+  has_many :updates, inverse_of: :pledge
+  has_many :comments, inverse_of: :pledge
 
   # State Machine
   include AASM

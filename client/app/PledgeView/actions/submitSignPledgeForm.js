@@ -20,8 +20,9 @@ export default function submitSignPledgeForm(url, data) {
     dispatch(submitSignPledgeFormRequest())
 
     const fetch = require('isomorphic-fetch') // regular import breaks in SSR
-    return fetch(url + '.json', { method: 'POST', body: data })
-      .then(
+    return fetch(url + '.json', {
+        method: 'POST', body: data, credentials: 'same-origin'
+      }).then(
         function(response) {
           const { status, statusText } = response
           if (status >= 400) {

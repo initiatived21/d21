@@ -34,7 +34,10 @@ class PledgesController < ApplicationController
           authToken: form_authenticity_token,
           model: 'signature'
         }
-      }
+      },
+      signatures: pledge.signatures,
+      updates: pledge.updates,
+      comments: pledge.comments
     }
   end
 

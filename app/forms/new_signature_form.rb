@@ -10,7 +10,7 @@ class NewSignatureForm < Reform::Form
   # Validation
 
   validation :default do
-    required(:name).filled
-    required(:email).filled
+    required(:name) { size?(2..32) }
+    required(:email) { size?(2..32) }
   end
 end

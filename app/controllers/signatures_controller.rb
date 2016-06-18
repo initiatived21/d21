@@ -1,4 +1,7 @@
 class SignaturesController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create],
+                                                 if: :json_request?
+
   def create
     @signature = Signature.new
     @signature.pledge_id = params['id']
@@ -14,16 +17,31 @@ class SignaturesController < ApplicationController
 
   def create_success!
     @form.save
-    redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
+    respond_to do |format|
+      format.html do
+        redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
+      end
+      format.json do
+        render json: { status: 'success', added: @form.model }
+      end
+    end
   end
 
   def create_failed!
-    flash.alert = @form.errors # TODO: probably needs to be ajax form...
-    redirect_to pledge_path(id: @signature.pledge.id, locale: I18n.locale)
+    respond_to do |format|
+      format.html do
+        # TODO: good non-js alternative
+        flash.alert = @form.errors
+        redirect_to pledge_path(id: @signature.pledge.id, locale: I18n.locale)
+      end
+      format.json do
+        render json: { status: 'formErrors', errors: @form.errors.messages }
+      end
+    end
   end
 
   def signature_params
-    params.require(:signature).permit(
+    params.require(:form).permit(
       :name, :email, :anonymous, :reason, :contact_person
     )
   end

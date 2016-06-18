@@ -8,9 +8,36 @@ const Schemas = new function() {
 
   this.pledges =
     arrayOf(this.pledge)
+
+  this.signature =
+    new Schema('signatures', {
+      idAttribute: 'id'
+    });
+
+  this.signatures =
+    arrayOf(this.signature)
+
+  this.comment =
+    new Schema('comments', {
+      idAttribute: 'id'
+    });
+
+  this.comments =
+    arrayOf(this.comment)
+
+  this.update =
+    new Schema('updates', {
+      idAttribute: 'id'
+    });
+
+  this.updates =
+    arrayOf(this.update)
 }
 
 export default function normalized(schemaName, data) {
+  if (!Schemas[schemaName]) {
+    console.error(`No normalization schema for ${schemaName}`)
+  }
   return normalize(data, Schemas[schemaName])
 }
 

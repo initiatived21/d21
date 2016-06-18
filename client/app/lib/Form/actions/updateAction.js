@@ -1,6 +1,6 @@
 export default (id, attribute, submodel, value) =>
   ({
-    type: 'UPDATE_PLEDGE_ATTRIBUTE',
+    type: 'UPDATE_FORM_ATTRIBUTE',
     id,
     attribute,
     submodel,

@@ -10,14 +10,16 @@ export default class PledgeAdditionalForms extends ChildComponent {
     signPledgeForm: PropTypes.shape({
       formData: PropTypes.object.isRequired,
     }),
+    signPledgeFormObject: PropTypes.object.isRequired,
   };
 
   render() {
-    const { id, signPledgeForm } = this.props;
+    const { id, signPledgeForm, signPledgeFormObject } = this.props;
 
     return (
       <div className="o-layout__item u-1/4@l">
-        <SignPledgeFormContainer id={id} formData={signPledgeForm.formData} />
+        <SignPledgeFormContainer id={id} formData={signPledgeForm.formData}
+                                 object={signPledgeFormObject}/>
         <ReportPledgeForm id={id} />
       </div>
     );

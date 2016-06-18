@@ -69,7 +69,6 @@ export default class Input extends Component {
         break
 
       case 'file': // no value
-        console.log('here')
         field =
           <input
             type='file'

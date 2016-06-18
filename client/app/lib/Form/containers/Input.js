@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
-import updateAction from '../actions/updateAction';
-import InputComponent from '../components/InputComponent';
+import updateAction from '../actions/updateAction'
+import InputComponent from '../components/InputComponent'
 
 const mapStateToProps = function(state, ownProps) {
   const formObjectName = ownProps.object.constructor.name
@@ -10,8 +10,9 @@ const mapStateToProps = function(state, ownProps) {
 
   // get saved & server provided errors, concat them together
   let errors = null
-  if (ownProps.errors) {
-    errors = state.pledges[formObjectName].errors[ownProps.attribute] || []
+  // if (ownProps.errors) {
+  if (state[formObjectName].errors) {
+    errors = state[formObjectName].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
@@ -26,16 +27,16 @@ const mapStateToProps = function(state, ownProps) {
     errors,
     value,
     formObjectName
-  };
-};
+  }
+}
 
 const mapDispatchToProps = dispatch =>
   ({
     onChange(formObjectName, attribute, submodel, value) {
-      return dispatch(updateAction(formObjectName, attribute, submodel, value));
+      return dispatch(updateAction(formObjectName, attribute, submodel, value))
     }
   })
-;
+
   // Frontend validations, unfinished:
   // onBlur: (attribute, formObject) ->
   //   errors = formObject.validate(attribute)
@@ -45,7 +46,7 @@ const mapDispatchToProps = dispatch =>
 const connected = connect(
   mapStateToProps,
   mapDispatchToProps
-)(InputComponent);
-connected.isInput = true;
+)(InputComponent)
+connected.isInput = true
 
-export default connected;
+export default connected

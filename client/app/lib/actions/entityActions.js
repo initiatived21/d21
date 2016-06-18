@@ -5,7 +5,7 @@ const addEntities = function(entities) {
   }
 }
 
-const setEntity = function(entityType, entityId, entity) {
+const setEntity = function(entityId, entity, entityType = null) {
   return {
     type: 'SET_ENTITY',
     entityType,

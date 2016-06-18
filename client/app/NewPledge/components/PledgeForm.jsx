@@ -1,8 +1,8 @@
-import React, { PropTypes  } from 'react';
+import React, { PropTypes  } from 'react'
 import Select from 'react-select'
-import ChildComponent from '../../lib/Base/components/ChildComponent';
-import FormFor from '../../lib/Form/containers/FormFor';
-import Input from '../../lib/Form/containers/Input';
+import ChildComponent from '../../lib/Base/components/ChildComponent'
+import FormFor from '../../lib/Form/containers/FormFor'
+import Input from '../../lib/Form/containers/Input'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -15,7 +15,8 @@ export default class PledgeForm extends ChildComponent {
   componentWillMount() {
     this.props.ensurePledgeObjectExistence(
       this.props.newPledge, this.props.editedPledge,
-      this.props.existingAttributes)
+      this.props.existingAttributes
+    )
   }
 
   render() {
@@ -66,4 +67,4 @@ export default class PledgeForm extends ChildComponent {
       </section>
     )
   }
-};
+}

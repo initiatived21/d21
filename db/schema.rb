@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160529094456) do
+ActiveRecord::Schema.define(version: 20160616073536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20160529094456) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "content"
-    t.string   "commentable_type"
-    t.string   "commentable_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
+    t.string   "pledge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "response"
+    t.index ["pledge_id"], name: "index_comments_on_pledge_id", using: :btree
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -92,14 +92,15 @@ ActiveRecord::Schema.define(version: 20160529094456) do
 
   create_table "signatures", force: :cascade do |t|
     t.integer  "pledge_id"
-    t.string   "name",           null: false
-    t.string   "email",          null: false
+    t.string   "name",                                      null: false
+    t.string   "email",                                     null: false
     t.string   "organization"
-    t.boolean  "contact_person"
+    t.boolean  "contact_person",            default: false
     t.string   "reason"
-    t.boolean  "anonymous"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.boolean  "anonymous",                 default: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "aasm_state",     limit: 32
     t.index ["pledge_id"], name: "index_signatures_on_pledge_id", using: :btree
   end
 
@@ -110,11 +111,10 @@ ActiveRecord::Schema.define(version: 20160529094456) do
   end
 
   create_table "updates", force: :cascade do |t|
-    t.string   "pledge_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pledge_id"], name: "index_updates_on_pledge_id", using: :btree
+    t.integer  "pledge_id",  null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -3,23 +3,23 @@ export default class JayForm {
   //   return this.properties.push(name);
   // }
 
-  static validation(definitionFunction) {
-    // definitionFunction.call(@)
-  }
+  // static validation(definitionFunction) {
+  //   definitionFunction.call(@)
+  // }
 
-  static required() {}
+  // static required() {}
 
   constructor(initialData = {}) {
-    this.attributes = { errors: {} };
+    this.attributes = { errors: {} }
 
     for (let property of this.constructor.properties) {
-      this.attributes[property] = null;
+      this.attributes[property] = null
     }
 
     // let iterable = initialData.keys();
     for (let field of Object.keys(initialData)) {
-      if (!this.constructor.properties.includes(field)) { continue; }
-      this.attributes[field] = initialData[field];
+      if (!this.constructor.properties.includes(field)) { continue }
+      this.attributes[field] = initialData[field]
     }
   }
 
@@ -35,6 +35,16 @@ export default class JayForm {
     if (!this.attributes[attribute]) {
       return {[attribute]: ['must be filled']}
     }
-    return {};
+    return {}
   }
-};
+
+  toFormData() {
+    let formDataObject = new FormData()
+
+    for (let property of this.constructor.properties) {
+      formDataObject.set(`form[${property}]`, this.attributes[property] || '')
+    }
+
+    return formDataObject
+  }
+}
