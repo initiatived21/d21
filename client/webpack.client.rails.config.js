@@ -2,9 +2,10 @@
 // cd client && npm run build:dev:client
 // Note that Foreman (Procfile.dev) has also been configured to take care of this.
 
-// NOTE: All style sheets handled by the asset pipeline in rails
-
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const path = require('path');
+
 const config = require('./webpack.client.base.config');
 const devBuild = process.env.NODE_ENV !== 'production';
 
@@ -42,8 +43,19 @@ config.module.loaders.push(
   {
     test: require.resolve('./app/PledgeView/components/SocialMediaButtons.jsx'),
     loader: 'imports?Shariff=shariff'
+  },
+  {
+    test: /\.scss$/,
+    include: [
+      path.resolve(process.cwd(), 'app/stylesheets')
+    ],
+    loader: 'file?name=[name].css!extract!css!postcss!sass'
   }
 );
+
+config.postcss = function() {
+  return [autoprefixer({ browsers: ['last 2 versions'] })];
+}
 
 module.exports = config;
 

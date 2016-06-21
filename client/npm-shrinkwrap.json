@@ -2658,6 +2658,11 @@
       "from": "postcss-filter-plugins@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/postcss-filter-plugins/-/postcss-filter-plugins-2.0.0.tgz"
     },
+    "postcss-loader": {
+      "version": "0.9.1",
+      "from": "postcss-loader@latest",
+      "resolved": "https://registry.npmjs.org/postcss-loader/-/postcss-loader-0.9.1.tgz"
+    },
     "postcss-merge-idents": {
       "version": "2.1.6",
       "from": "postcss-merge-idents@>=2.1.5 <3.0.0",

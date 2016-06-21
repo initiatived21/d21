@@ -5,7 +5,7 @@ import PledgeView from '../../PledgeView/components/PledgeView';
 import Search from '../../Search/components/Search';
 
 // Lets Webpack generate the main css file that gets picked up by Sprockets
-require('file?name=[name].css!extract!css!sass!../../stylesheets/main.scss');
+require('../../stylesheets/main.scss');
 
 ReactOnRails.register({
   ElementList,
