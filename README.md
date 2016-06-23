@@ -9,7 +9,18 @@ Installation
 
 You will need ruby version 2.3.1, git, npm, and bundler installed.
 
-`git clone` this repository to your local drive, `cd` into it, and
+To install node/npm, find out the latest version (> 5) on https://nodejs.org/ , download it and
+install it like so (assuming the version is 6.2.2):
+
+  ```bash
+  wget https://nodejs.org/dist/v6.2.2/node-v6.2.2-linux-x64.tar.xz
+  tar -xvf node-v6.2.2-linux-x64.tar.xz
+  mv node-v6.2.2-linux-x64 ~/bin
+  echo 'export PATH="$HOME/bin/node-v6.2.2-linux-x64/bin:$PATH"' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+
+Then, `git clone` this repository to your local drive, `cd` into it, and
 `bundle install`. Afterwards `npm install` as well.
 
 Then you will also need to `rake db:create` and `rake db:migrate` to get the
