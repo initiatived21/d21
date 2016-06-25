@@ -47,9 +47,13 @@ config.module.loaders.push(
   {
     test: /\.scss$/,
     include: [
-      path.resolve(process.cwd(), 'app/stylesheets')
+      path.resolve(process.cwd(), 'app/assets/stylesheets')
     ],
     loader: 'file?name=[name].css!extract!css!postcss!sass'
+  },
+  {
+    test: /\.woff$/,
+    loader: 'url?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]'
   }
 );
 
