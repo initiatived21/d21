@@ -42,7 +42,7 @@ export default class Pledge extends ChildComponent {
             deadline={deadline}
             signatures_count={signatures_count}
           />
-          <SocialMediaButtons />
+          <SocialMediaButtons url="http://www.example.com" />
           <PledgeImage src="/images/5000_laptops.png" />
           <PledgeDescription>Dummy description</PledgeDescription>
           <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
