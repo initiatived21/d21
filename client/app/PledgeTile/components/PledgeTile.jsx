@@ -6,7 +6,7 @@ import PledgeText           from './PledgeText';
 import PledgeInitiator      from './PledgeInitiator';
 import PledgeDaysRemaining  from './PledgeDaysRemaining';
 import PledgeProgress       from './PledgeProgress';
-import PledgeSocialMedia    from './PledgeSocialMedia';
+import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons';
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -56,8 +56,8 @@ export default class PledgeTile extends ChildComponent {
               amount={pledge.amount}
               signatures_count={pledge.signatures_count}
             />
-            <PledgeSocialMedia />
           </a>
+          <SocialMediaButtons url="http://www.example.com" />
         </article>
       </div>
     )
