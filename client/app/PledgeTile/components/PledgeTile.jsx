@@ -39,7 +39,7 @@ export default class PledgeTile extends ChildComponent {
     const { pledge } = this.props;
 
     return (
-      <div className="o-layout__item u-1/2@m u-1/3@l">
+      <li className="o-layout__item u-1/2@m u-1/3@l">
         <article className="c-pledge-tile">
           <a className="c-pledge-tile__link o-box o-box--small"
              href={this.getPledgePath()}>
@@ -59,7 +59,7 @@ export default class PledgeTile extends ChildComponent {
           </a>
           <SocialMediaButtons url="http://www.example.com" />
         </article>
-      </div>
+      </li>
     )
   }
 };

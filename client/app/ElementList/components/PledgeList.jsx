@@ -11,11 +11,11 @@ export default class PledgeList extends ChildComponent {
     const { pledges } = this.props;
 
     return (
-      <div className='o-layout'>
+      <ul className='o-layout'>
         {pledges.map( (pledge) =>
           <PledgeTile key={pledge.id} pledge={pledge} />
         )}
-      </div>
+      </ul>
     );
   }
 }

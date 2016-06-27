@@ -11,7 +11,7 @@ export default class SearchResults extends ChildComponent {
 
   render() {
     return (
-      <ul>
+      <ul className="o-layout">
         {this.props.results.map( result =>
           <PledgeTile key={result.id} pledge={result} />
         )}
