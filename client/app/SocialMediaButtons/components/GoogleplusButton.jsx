@@ -9,7 +9,7 @@ export default class GoogleplusButton extends ChildComponent {
       <li>
         <a
           className="c-social-media__button c-social-media__button--googleplus"
-          href={`https://plus.google.com/share?url=${url}`}
+          href={`https://plus.google.com/share?url=${encodeURIComponent(url)}`}
           title={this.t('.title')}
           onClick={handleClick}
         >

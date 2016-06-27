@@ -9,7 +9,7 @@ export default class TwitterButton extends ChildComponent {
       <li>
         <a
           className="c-social-media__button c-social-media__button--twitter"
-          href={`https://twitter.com/intent/tweet?text=${this.props.text}&url=${url}`}
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(this.t('.text'))}&url=${encodeURIComponent(url)}`}
           title={this.t('.title')}
           onClick={handleClick}
         >
@@ -31,6 +31,5 @@ export default class TwitterButton extends ChildComponent {
 
 TwitterButton.propTypes = {
   url: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired
 }

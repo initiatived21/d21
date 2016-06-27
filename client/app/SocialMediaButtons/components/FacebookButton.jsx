@@ -11,7 +11,7 @@ export default class FacebookButton extends ChildComponent {
       <li>
         <a
           className="c-social-media__button c-social-media__button--facebook"
-          href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
           title={this.t('.title')}
           onClick={handleClick}
         >

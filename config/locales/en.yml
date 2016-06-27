@@ -41,10 +41,9 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
-  SocialMediaButtons:
-    twitter_text: 'Sign pledge:'
   TwitterButton:
     title: Share via Twitter
+    text: 'Sign pledge:'
   XingButton:
     title: Share via Xing
   active_admin:

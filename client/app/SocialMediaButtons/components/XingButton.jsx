@@ -9,7 +9,7 @@ export default class XingButton extends ChildComponent {
       <li>
         <a
           className="c-social-media__button c-social-media__button--xing"
-          href={`https://www.xing.com/social_plugins/share?url=${url}`}
+          href={`https://www.xing.com/social_plugins/share?url=${encodeURIComponent(url)}`}
           title={this.t('.title')}
           onClick={handleClick}
         >

@@ -6,7 +6,7 @@ import TagList from './TagList';
 import PledgeLocation from './PledgeLocation';
 import PledgeQuote from './PledgeQuote';
 import PledgeFeatures from './PledgeFeatures';
-import SocialMediaButtons from './SocialMediaButtons';
+import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons';
 import PledgeImage from './PledgeImage';
 import PledgeDescription from './PledgeDescription';
 import PledgeCreatedAt from './PledgeCreatedAt';

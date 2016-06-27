@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import I18n from 'i18n-js';
 
 import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 import FacebookButton from './FacebookButton.jsx';
@@ -22,14 +23,8 @@ export default class SocialMediaButtons extends ChildComponent {
     global.window.open(url, windowName, windowSize);
   }
 
-  twitterText() {
-    let text = this.props.twitterText ? this.props.twitterText : this.t('.twitter_text');
-    text = encodeURIComponent(text);
-    return text;
-  }
-
   render() {
-    const url = this.props.url;
+    const { url } = this.props;
 
     const commonProps = {
       url,
@@ -39,7 +34,7 @@ export default class SocialMediaButtons extends ChildComponent {
     return (
       <ul className="c-social-media o-list-inline">
         <FacebookButton {...commonProps} />
-        <TwitterButton {...commonProps} text={this.twitterText()} />
+        <TwitterButton {...commonProps} />
         <GoogleplusButton {...commonProps} />
         <XingButton {...commonProps} />
         <LinkedinButton {...commonProps} />
@@ -49,10 +44,9 @@ export default class SocialMediaButtons extends ChildComponent {
 }
 
 SocialMediaButtons.propTypes = {
-  url: PropTypes.string,
-  twitterText: PropTypes.string
+  url: PropTypes.string
 };
 
 SocialMediaButtons.defaultProps = {
-  url: '', /*global.document.location.href,*/
+  url: '' /*global.document.location.href,*/
 };

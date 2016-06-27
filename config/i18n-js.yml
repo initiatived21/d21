@@ -3,4 +3,4 @@ translations:
     only: ["*.layouts.*", "*.pages.*", "*.PledgeForm.*", "*.PledgeQuote.*", "*.PledgeFeatures.*",
       "*.PledgeUpdates.*", "*.PledgeQAs.*", "*.PledgeImage.*", "*.SigneeList.*", "*.react_form.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
-      "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.SocialMediaButtons.*"]
+      "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*"]
