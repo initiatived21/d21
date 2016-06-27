@@ -1,4 +1,10 @@
 en:
+  FacebookButton:
+    title: Share via Facebook
+  GoogleplusButton:
+    title: Share via Google+
+  LinkedinButton:
+    title: Share via LinkedIn
   PledgeFeatures:
     initiator:
       title: Initiator
@@ -35,6 +41,61 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+  SocialMediaButtons:
+    twitter_text: 'Sign pledge:'
+  TwitterButton:
+    title: Share via Twitter
+  XingButton:
+    title: Share via Xing
+  active_admin:
+    sidebars:
+      Zustand: 
+  activerecord:
+    attributes:
+      admin_user:
+        email: 
+      pledge:
+        aasm_state: 
+        amount: 
+        content: 
+        created_at: 
+        deadline: 
+        description: 
+        id: 
+        location: 
+        requirement: 
+        signatures_count: 
+        updated_at: 
+        user_id: 
+        who: 
+    models:
+      admin: 
+      admin_user: 
+      comment: 
+      pledge: 
+  formtastic:
+    hints:
+      active_admin/comment:
+        show:
+          body: 
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
+    placeholders:
+      active_admin/comment:
+        show:
+          body: 
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
   layouts:
     partials:
       footer:

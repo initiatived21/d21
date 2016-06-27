@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 
 export default class TwitterButton extends ChildComponent {
@@ -10,7 +10,7 @@ export default class TwitterButton extends ChildComponent {
         <a
           className="c-social-media__button c-social-media__button--twitter"
           href={`https://twitter.com/intent/tweet?text=${this.props.text}&url=${url}`}
-          title="über Twitter teilen"
+          title={this.t('.title')}
           onClick={handleClick}
         >
           <svg
@@ -27,4 +27,10 @@ export default class TwitterButton extends ChildComponent {
       </li>
     );
   }
+}
+
+TwitterButton.propTypes = {
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 }

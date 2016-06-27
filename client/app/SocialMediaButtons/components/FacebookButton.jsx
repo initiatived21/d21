@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 
 export default class FacebookButton extends ChildComponent {
   render() {
     const { url, handleClick } = this.props;
 
+    console.log(this.t('.title'));
+
     return (
       <li>
         <a
           className="c-social-media__button c-social-media__button--facebook"
           href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
-          title="über Facebook teilen"
+          title={this.t('.title')}
           onClick={handleClick}
         >
           <svg
@@ -27,4 +29,9 @@ export default class FacebookButton extends ChildComponent {
       </li>
     );
   }
+}
+
+FacebookButton.propTypes = {
+  url: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 }

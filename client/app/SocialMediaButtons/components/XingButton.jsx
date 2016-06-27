@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 
 export default class XingButton extends ChildComponent {
@@ -10,7 +10,7 @@ export default class XingButton extends ChildComponent {
         <a
           className="c-social-media__button c-social-media__button--xing"
           href={`https://www.xing.com/social_plugins/share?url=${url}`}
-          title="über Xing teilen"
+          title={this.t('.title')}
           onClick={handleClick}
         >
           <svg
@@ -27,4 +27,9 @@ export default class XingButton extends ChildComponent {
       </li>
     );
   }
+}
+
+XingButton.propTypes = {
+  url: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 }

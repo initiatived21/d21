@@ -2,4 +2,5 @@ translations:
   - file: "client/vendor/translations.js"
     only: ["*.layouts.*", "*.pages.*", "*.PledgeForm.*", "*.PledgeQuote.*", "*.PledgeFeatures.*",
       "*.PledgeUpdates.*", "*.PledgeQAs.*", "*.PledgeImage.*", "*.SigneeList.*", "*.react_form.*",
-      "*.ReportPledgeForm.*", "*.SignPledgeForm.*"]
+      "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
+      "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.SocialMediaButtons.*"]

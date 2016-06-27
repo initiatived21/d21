@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import I18n from 'i18n-js';
 
 import ChildComponent from '../../lib/Base/components/ChildComponent.js';
 import FacebookButton from './FacebookButton.jsx';
@@ -8,7 +7,7 @@ import GoogleplusButton from './GoogleplusButton.jsx';
 import XingButton from './XingButton.jsx';
 import LinkedinButton from './LinkedinButton.jsx';
 
-class SocialMediaButtons extends ChildComponent {
+export default class SocialMediaButtons extends ChildComponent {
   handleClick(e) {
     e.preventDefault();
 
@@ -23,17 +22,27 @@ class SocialMediaButtons extends ChildComponent {
     global.window.open(url, windowName, windowSize);
   }
 
+  twitterText() {
+    let text = this.props.twitterText ? this.props.twitterText : this.t('.twitter_text');
+    text = encodeURIComponent(text);
+    return text;
+  }
+
   render() {
     const url = this.props.url;
-    const twitterText = encodeURIComponent(this.props.twitterText);
+
+    const commonProps = {
+      url,
+      handleClick: this.handleClick
+    };
 
     return (
       <ul className="c-social-media o-list-inline">
-        <FacebookButton url={url} handleClick={this.handleClick} />
-        <TwitterButton url={url} handleClick={this.handleClick} text={twitterText} />
-        <GoogleplusButton url={url} handleClick={this.handleClick} />
-        <XingButton url={url} handleClick={this.handleClick} />
-        <LinkedinButton url={url} handleClick={this.handleClick} />
+        <FacebookButton {...commonProps} />
+        <TwitterButton {...commonProps} text={this.twitterText()} />
+        <GoogleplusButton {...commonProps} />
+        <XingButton {...commonProps} />
+        <LinkedinButton {...commonProps} />
       </ul>
     );
   }
@@ -46,7 +55,4 @@ SocialMediaButtons.propTypes = {
 
 SocialMediaButtons.defaultProps = {
   url: '', /*global.document.location.href,*/
-  twitterText: 'Wir versprechen:'
 };
-
-export default SocialMediaButtons;
