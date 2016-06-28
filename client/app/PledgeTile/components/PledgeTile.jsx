@@ -7,6 +7,7 @@ import PledgeInitiator      from './PledgeInitiator';
 import PledgeDaysRemaining  from './PledgeDaysRemaining';
 import PledgeProgress       from './PledgeProgress';
 import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons';
+import { DOMAIN_PROD }      from '../../lib/config';
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -57,7 +58,7 @@ export default class PledgeTile extends ChildComponent {
               signatures_count={pledge.signatures_count}
             />
           </a>
-          <SocialMediaButtons url="http://www.example.com" />
+          <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
         </article>
       </li>
     )

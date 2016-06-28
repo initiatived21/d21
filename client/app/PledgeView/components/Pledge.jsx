@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent';
+import I18n from 'i18n-js';
 
 import TagList from './TagList';
 import PledgeLocation from './PledgeLocation';
@@ -9,6 +10,7 @@ import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaB
 import PledgeImage from './PledgeImage';
 import PledgeDescription from './PledgeDescription';
 import PledgeCreatedAt from './PledgeCreatedAt';
+import { DOMAIN_PROD } from '../../lib/config';
 
 export default class Pledge extends ChildComponent {
   static propTypes = {
@@ -22,6 +24,10 @@ export default class Pledge extends ChildComponent {
     signatures_count: PropTypes.number.isRequired,
     created_at: PropTypes.string.isRequired
   };
+
+  getPledgePath() {
+    return `/${I18n.locale}/pledges/${this.props.id}`;
+  }
 
   render() {
     const { content, amount, who, requirement, location, deadline, signatures_count, created_at } = this.props;
@@ -42,7 +48,7 @@ export default class Pledge extends ChildComponent {
             deadline={deadline}
             signatures_count={signatures_count}
           />
-          <SocialMediaButtons url="http://www.example.com" />
+          <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
           <PledgeImage src="/images/5000_laptops.png" />
           <PledgeDescription>Dummy description</PledgeDescription>
           <PledgeCreatedAt>{created_at}</PledgeCreatedAt>

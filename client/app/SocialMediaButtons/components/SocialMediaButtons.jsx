@@ -44,9 +44,5 @@ export default class SocialMediaButtons extends ChildComponent {
 }
 
 SocialMediaButtons.propTypes = {
-  url: PropTypes.string
-};
-
-SocialMediaButtons.defaultProps = {
-  url: '' /*global.document.location.href,*/
+  url: PropTypes.string.isRequired
 };
