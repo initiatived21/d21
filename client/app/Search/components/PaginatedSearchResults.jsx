@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent';
 import SearchResults from './SearchResults';
 import GetMoreResultsButton from './GetMoreResultsButton';
+import request from 'superagent';
 
 export default class PaginatedSearchResults extends ChildComponent {
   constructor(props) {
@@ -18,7 +19,14 @@ export default class PaginatedSearchResults extends ChildComponent {
     // What to do here?
     this.setState({ loading: true });
 
-    setTimeout(function() { this.setState({ loading: false }); }.bind(this), 2000);
+    request
+      .get('/de/index')
+      .query({ query: 'Manny', range: '1..5', order: 'desc' })
+      .set('Accept', 'application/json')
+      .end(function(err, res) {
+        console.log(err, res);
+        this.setState({ loading: false });
+      }.bind(this));
   }
 
   render() {
