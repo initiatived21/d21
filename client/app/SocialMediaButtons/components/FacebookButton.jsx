@@ -5,8 +5,6 @@ export default class FacebookButton extends ChildComponent {
   render() {
     const { url, handleClick } = this.props;
 
-    console.log(this.t('.title'));
-
     return (
       <li>
         <a
