@@ -140,12 +140,12 @@ $o-media--small: true;
     Here you place your own visual styling.
 \*------------------------------------*/
 
-//@import "aleut/components/components.site-nav";
 @import "aleut/components/components.page-head";
 @import "aleut/components/components.primary-nav";
 @import "aleut/components/components.secondary-nav";
 @import "aleut/components/components.search-bar";
 @import "aleut/components/components.page-foot";
+@import "aleut/components/components.buttons";
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";
 @import "aleut/components/components.sign-pledge";
