@@ -4,7 +4,7 @@ import store from '../../lib/store'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent';
 import EmptyResults from './EmptyResults'
-import SearchResults from './SearchResults'
+import PaginatedSearchResults from './PaginatedSearchResults';
 
 export default class Search extends ChildComponent {
   static propTypes = {
@@ -21,7 +21,7 @@ export default class Search extends ChildComponent {
     if (elements.length == 0) {
       resultView = <EmptyResults pledges={elements} />
     } else {
-      resultView = <SearchResults results={elements} />
+      resultView = <PaginatedSearchResults results={elements} />
     }
 
     return (
