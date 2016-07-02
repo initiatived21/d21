@@ -7,6 +7,9 @@ import Search from '../../Search/components/Search';
 // Lets Webpack generate the main css file that gets picked up by Sprockets
 require('../../assets/stylesheets/main.scss');
 
+// Dummy images
+require.context('../../assets/images', false, /\./);
+
 ReactOnRails.register({
   ElementList,
   NewPledge,

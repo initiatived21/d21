@@ -50,6 +50,13 @@ config.module.loaders.push(
   {
     test: /\.woff$/,
     loader: 'url?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]'
+  },
+  {
+    test: /\.(png|jpe?g)$/,
+    include: [
+      path.resolve(process.cwd(), 'app/assets/images')
+    ],
+    loader: 'file?name=images/[name].[ext]'
   }
 );
 

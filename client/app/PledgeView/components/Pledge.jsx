@@ -10,7 +10,8 @@ import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaB
 import PledgeImage from './PledgeImage';
 import PledgeDescription from './PledgeDescription';
 import PledgeCreatedAt from './PledgeCreatedAt';
-import { DOMAIN_PROD } from '../../lib/config';
+
+import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class Pledge extends ChildComponent {
   static propTypes = {
@@ -49,7 +50,7 @@ export default class Pledge extends ChildComponent {
             signatures_count={signatures_count}
           />
           <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
-          <PledgeImage src="/images/5000_laptops.png" />
+          <PledgeImage src={`${DUMMY_IMAGE_PATH}/peru-landscape.jpg`} />
           <PledgeDescription>Dummy description</PledgeDescription>
           <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
         </article>
