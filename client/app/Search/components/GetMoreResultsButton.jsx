@@ -9,7 +9,7 @@ export default class GetMoreResultsButton extends ChildComponent {
   }
 
   render() {
-    const { children, disabled, clickHandler } = this.props;
+    const { children, disabled, clickHandler, numResults } = this.props;
 
     const buttonProps = {};
     if (disabled) {
@@ -18,7 +18,7 @@ export default class GetMoreResultsButton extends ChildComponent {
     }
     else {
       buttonProps['className'] = 'o-btn o-btn--small';
-      buttonProps['onClick'] = clickHandler;
+      buttonProps['onClick'] = () => clickHandler(numResults);
     }
 
     return (

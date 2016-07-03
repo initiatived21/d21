@@ -63,7 +63,7 @@ class PledgesController < ApplicationController
       limit = ends[1] - ends[0] + 1
     else
       offset = 0
-      limit = 2
+      limit = 1
     end
 
     @query = params[:query]
@@ -78,7 +78,7 @@ class PledgesController < ApplicationController
       search.run
       @result_count = search.results.count
       @pledges = search.results.offset(offset).limit(limit)
-      @result_ids = search.results.ids
+      @result_ids = @pledges.ids
     end
 
     respond_to do |format|

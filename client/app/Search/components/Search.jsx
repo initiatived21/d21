@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import store from '../../lib/store'
+import normalize from '../../lib/normalization';
+import { addEntities } from '../../lib/actions/entityActions';
 
 import ChildComponent from '../../lib/Base/components/ChildComponent';
 import EmptyResults from './EmptyResults'
-import PaginatedSearchResults from './PaginatedSearchResults';
+import PaginatedSearchResultsContainer from '../containers/PaginatedSearchResultsContainer';
 
 export default class Search extends ChildComponent {
   static propTypes = {
@@ -14,6 +16,13 @@ export default class Search extends ChildComponent {
     ).isRequired
   };
 
+  componentWillMount() {
+    // Put received pledges into store
+    const normalizedPledges = normalize('pledges', this.props.elements);
+    store.dispatch(addEntities(normalizedPledges.entities));
+    console.log(store.getState());
+  }
+
   render() {
     const { locale, elements, query, resultCount } = this.props
 
@@ -21,7 +30,7 @@ export default class Search extends ChildComponent {
     if (elements.length == 0) {
       resultView = <EmptyResults pledges={elements} />
     } else {
-      resultView = <PaginatedSearchResults results={elements} resultCount={resultCount} query={query} />
+      resultView = <PaginatedSearchResultsContainer total={resultCount} query={query} />
     }
 
     return (
@@ -34,9 +43,6 @@ export default class Search extends ChildComponent {
             <p>
               Suche nach Schlagwörtern, Orten, Unternehmen oder Organisationen
             </p>
-
-            <p>Suchbegriff: {query}</p>
-            <p>Treffer: {resultCount}</p>
 
             <form method="get" action={`/${locale}/pledges`}>
               <input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation" />
