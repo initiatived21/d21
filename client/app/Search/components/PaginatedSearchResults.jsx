@@ -30,14 +30,18 @@ export default class PaginatedSearchResults extends ChildComponent {
   }
 
   render() {
-    const { results } = this.props;
+    const { results, resultCount } = this.props;
+
+    const showMoreButton = resultCount > results.length;
 
     return (
       <div>
         <SearchResults results={results} />
-        <GetMoreResultsButton disabled={this.state.loading} clickHandler={this.onButtonClick} >
-          Mehr anzeigen…
-        </GetMoreResultsButton>
+        { showMoreButton ?
+          <GetMoreResultsButton disabled={this.state.loading} clickHandler={this.onButtonClick} >
+            Mehr anzeigen…
+          </GetMoreResultsButton>
+          : null }
       </div>
     )
   }

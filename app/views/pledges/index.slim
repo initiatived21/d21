@@ -1,3 +1,4 @@
 == cell :react_with_serialization, @pledges, params: params,
                                              component: 'Search',
-                                             props: { resultIds: @result_ids }
+                                             props: { query: @query, resultIds: @result_ids,
+                                                      resultCount: @result_count }

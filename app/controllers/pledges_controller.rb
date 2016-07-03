@@ -58,13 +58,16 @@ class PledgesController < ApplicationController
 
   def index
     search = Search.new(params)
+    @query = params[:query]
     if search.empty?
       @pledges = Pledge.active.limit(4)
       @result_ids = []
+      @result_count = 0
     else
       search.run
-      @pledges = search.results
-      @result_ids = @pledges.ids
+      @result_count = search.results.count
+      @pledges = search.results.limit(2)
+      @result_ids = search.results.ids
     end
   end
 

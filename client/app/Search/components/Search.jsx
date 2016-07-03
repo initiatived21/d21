@@ -11,17 +11,17 @@ export default class Search extends ChildComponent {
     locale: PropTypes.string.isRequired,
     elements: PropTypes.arrayOf(
       PropTypes.object
-    ).isRequired,
+    ).isRequired
   };
 
   render() {
-    const { locale, elements } = this.props
+    const { locale, elements, query, resultCount } = this.props
 
     let resultView = undefined
     if (elements.length == 0) {
       resultView = <EmptyResults pledges={elements} />
     } else {
-      resultView = <PaginatedSearchResults results={elements} />
+      resultView = <PaginatedSearchResults results={elements} resultCount={resultCount} />
     }
 
     return (
@@ -34,6 +34,9 @@ export default class Search extends ChildComponent {
             <p>
               Suche nach Schlagwörtern, Orten, Unternehmen oder Organisationen
             </p>
+
+            <p>Suchbegriff: {query}</p>
+            <p>Treffer: {resultCount}</p>
 
             <form method="get" action={`/${locale}/pledges`}>
               <input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation" />
