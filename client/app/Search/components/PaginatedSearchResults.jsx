@@ -6,7 +6,6 @@ import GetMoreResultsButton from './GetMoreResultsButton';
 export default class PaginatedSearchResults extends ChildComponent {
   constructor(props) {
     super(props);
-    this.state = { loading: false };
   }
 
   static propTypes = {
@@ -14,7 +13,7 @@ export default class PaginatedSearchResults extends ChildComponent {
   }
 
   render() {
-    const { results, query, resultCount, onButtonClick } = this.props;
+    const { results, query, resultCount, isLoading, onButtonClick } = this.props;
 
     const showMoreButton = resultCount > results.length;
 
@@ -24,7 +23,7 @@ export default class PaginatedSearchResults extends ChildComponent {
         <p>Treffer: {results.length} von {resultCount}</p>
         <SearchResults results={results} />
         { showMoreButton ?
-          <GetMoreResultsButton disabled={this.state.loading} numResults={results.length} clickHandler={onButtonClick} >
+          <GetMoreResultsButton disabled={isLoading} numResults={results.length} clickHandler={onButtonClick} >
             Mehr anzeigen…
           </GetMoreResultsButton>
           : null }
