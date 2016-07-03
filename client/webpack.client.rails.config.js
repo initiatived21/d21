@@ -41,15 +41,22 @@ config.module.loaders.push(
     loader: 'imports?jQuery=jquery',
   },
   {
-    test: require.resolve('./app/PledgeView/components/SocialMediaButtons.jsx'),
-    loader: 'imports?Shariff=shariff'
-  },
-  {
     test: /\.scss$/,
     include: [
-      path.resolve(process.cwd(), 'app/stylesheets')
+      path.resolve(process.cwd(), 'app/assets/stylesheets')
     ],
     loader: 'file?name=[name].css!extract!css!postcss!sass'
+  },
+  {
+    test: /\.woff$/,
+    loader: 'url?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]'
+  },
+  {
+    test: /\.(png|jpe?g)$/,
+    include: [
+      path.resolve(process.cwd(), 'app/assets/images')
+    ],
+    loader: 'file?name=images/[name].[ext]'
   }
 );
 

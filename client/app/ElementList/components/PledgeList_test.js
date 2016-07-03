@@ -1,6 +1,6 @@
 import React     from 'react';
 import TestUtils from 'react-addons-test-utils';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import PledgeList from './PledgeList';
 import PledgeTile from '../../PledgeTile/components/PledgeTile';
@@ -11,14 +11,14 @@ describe('<PledgeList />', function() {
       pledges: []
     };
 
-    it('should output a div and no PledgeTiles', function() {
-      const wrapper = mount(
+    it('should output a ul and no PledgeTiles', function() {
+      const wrapper = shallow(
         <PledgeList {...props} />
       );
 
-      const div = wrapper.find('div');
-      div.length.should.equal(1);
-      div.node.className.should.equal('o-layout');
+      const ul = wrapper.find('ul');
+      ul.length.should.equal(1);
+      ul.props().className.should.equal('o-layout');
 
       const tile = wrapper.find(PledgeTile);
       tile.length.should.equal(0);
@@ -64,7 +64,7 @@ describe('<PledgeList />', function() {
     };
 
     it('should output PledgeTiles', function() {
-        const wrapper = mount(
+        const wrapper = shallow(
           <PledgeList {...props} />
         );
 

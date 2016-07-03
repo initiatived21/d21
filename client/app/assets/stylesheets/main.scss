@@ -23,7 +23,7 @@
 @import "aleut/settings.vars"; //here we override some of the variables down the line
 @import "~aleut.settings.defaults/settings.defaults";
 @import "~aleut.settings.responsive/settings.responsive";
-//@import "aleut/settings.fonts";
+@import "aleut/settings.fonts";
 //++ our own remaps of inuits variables
 
 
@@ -67,8 +67,9 @@
 @import "~aleut.base.images/base.images";
 @import "~aleut.base.lists/base.lists";
 @import "~aleut.base.headings/base.headings";
-@import "aleut/base.quotes"; // default styles for q tags
 //@import "aleut/base.page"; //our own variation of base.page
+@import "aleut/base.headings";  // Headings styles
+@import "aleut/base.quotes"; // default styles for q tags
 
 /*------------------------------------*\
     #OBJECTS (o-prefix)
@@ -123,12 +124,9 @@ $o-layout--auto:     false !default;
     Third party CSS for plugins etc.
 \*------------------------------------*/
 
-// React Select component
+//@import "vendor.[something]";
 @import "~react-select/dist/react-select";
 
-// Shariff social media buttons
-@import "~shariff/build/shariff.complete"; // TODO: Only import parts that we need
-// @import Shariff overrides here, e.g. "aleut/vendor.shariff.overrides";
 
 /*------------------------------------*\
     #COMPONENTS (c-prefix)
@@ -142,6 +140,7 @@ $o-layout--auto:     false !default;
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";
 @import "aleut/components/components.sign-pledge";
+@import "aleut/components/components.social-media";
 
 
 /*------------------------------------*\

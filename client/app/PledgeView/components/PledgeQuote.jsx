@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import { DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class PledgeQuote extends ChildComponent {
   static propTypes = {
@@ -15,7 +16,7 @@ export default class PledgeQuote extends ChildComponent {
 
     return (
       <div className="o-media">
-        <img className="o-media__img" src="cornelsen.png" width="100" height="100" alt="Cornelsen Logo" />
+        <img className="o-media__img" src={`${DUMMY_IMAGE_PATH}/cornelsen.png`} width="100" height="100" alt="Cornelsen Logo" />
         <figure className="o-media__body">
           <blockquote className="c-pledge__text">
             {this.t('.promise.part1')} {content}{this.t('.promise.part2')} {amount} {who} {requirement}.

@@ -7,7 +7,7 @@ import PledgeText          from './PledgeText';
 import PledgeInitiator     from './PledgeInitiator';
 import PledgeDaysRemaining from './PledgeDaysRemaining';
 import PledgeProgress      from './PledgeProgress';
-import PledgeSocialMedia   from './PledgeSocialMedia';
+import SocialMediaButtons  from '../../SocialMediaButtons/components/SocialMediaButtons';
 
 describe('<PledgeTile />', function () {
   const props = {
@@ -34,6 +34,6 @@ describe('<PledgeTile />', function () {
     wrapper.find(PledgeText).length.should.equal(1);
     wrapper.find(PledgeDaysRemaining).length.should.equal(1);
     wrapper.find(PledgeProgress).length.should.equal(1);
-    wrapper.find(PledgeSocialMedia).length.should.equal(1);
+    wrapper.find(SocialMediaButtons).length.should.equal(1);
   });
 });

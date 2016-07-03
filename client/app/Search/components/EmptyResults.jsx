@@ -12,7 +12,7 @@ export default class EmptyResults extends ChildComponent {
     return (
       <div>
         <section>
-          <div className='o-wrapper'>
+          <div>
             <h2>
               Von der Redaktion empfohlen
             </h2>
@@ -21,7 +21,7 @@ export default class EmptyResults extends ChildComponent {
         </section>
 
         <section>
-          <div className='o-wrapper'>
+          <div>
             <h2>
               Beliebteste Versprechen
             </h2>
@@ -30,7 +30,7 @@ export default class EmptyResults extends ChildComponent {
         </section>
 
         <section>
-          <div className='o-wrapper'>
+          <div>
             <h2>
                Neueste Versprechen
             </h2>

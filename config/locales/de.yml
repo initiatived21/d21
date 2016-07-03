@@ -1,4 +1,10 @@
 de:
+  FacebookButton:
+    title: Über Facebook teilen
+  GoogleplusButton:
+    title: Über Google+ teilen
+  LinkedinButton:
+    title: Über LinkedIn teilen
   PledgeFeatures:
     initiator:
       title: Initiator
@@ -35,6 +41,60 @@ de:
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
   SigneeList:
     heading: Unterzeichner
+  TwitterButton:
+    title: Über Twitter teilen
+    text: 'Versprechen unterzeichnen:'
+  XingButton:
+    title: Über Xing teilen
+  active_admin:
+    sidebars:
+      Zustand: Zustand
+  activerecord:
+    attributes:
+      admin_user:
+        email: Email
+      pledge:
+        aasm_state: Aasm State
+        amount: Amount
+        content: Content
+        created_at: Created At
+        deadline: Deadline
+        description: Description
+        id: Id
+        location: Location
+        requirement: Requirement
+        signatures_count: Signatures Count
+        updated_at: Updated At
+        user_id: User
+        who: Who
+    models:
+      admin: Admin
+      admin_user: Admin Users
+      comment: Comments
+      pledge: Pledge
+  formtastic:
+    hints:
+      active_admin/comment:
+        show:
+          body: 
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
+    placeholders:
+      active_admin/comment:
+        show:
+          body: 
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
   layouts:
     partials:
       footer:

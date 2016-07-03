@@ -33,10 +33,13 @@
 
 .c-pledge-tile__text {
   color: $gray;
-  font-weight: bold;
+  font-family: $font-family-heading;
+  font-weight: $font-weight-regular;
 }
 
 .c-pledge-tile__days {
   color: #c00;
   @include font-size(20px);
+  font-family: $font-family-heading;
+  font-weight: $font-weight-medium;
 }
