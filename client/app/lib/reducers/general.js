@@ -1,4 +1,5 @@
-import _ from 'lodash'
+import merge from 'lodash/merge'
+import assign from 'lodash/assign'
 
 export const initialState = {
   pledges: {},
@@ -6,21 +7,24 @@ export const initialState = {
 }
 
 export default function generalReducer(state = initialState, action) {
+  let newState = assign({}, state)
+
   switch (action.type) {
     case 'ADD_ENTITIES':
-      return _.merge({}, state, action.entities)
+      return merge(newState, action.entities)
 
     case 'SET_ENTITY':
-      let newState = Object.assign({}, state)
       const entityBasePath =
         (action.entityType) ? newState[action.entityType] : newState
       entityBasePath[action.entityId] = action.entity
       return newState
 
     case 'UPDATE_FORM_ATTRIBUTE':
-      newState = Object.assign({}, state)
-      const formBasePath = newState[action.id]
+      const formBasePath = newState[action.formObjectName]
       if (action.submodel) {
+        if (!formBasePath[action.submodel]) {
+          formBasePath[action.submodel] = {}
+        }
         formBasePath[action.submodel][action.attribute] = action.value
       } else {
         formBasePath[action.attribute] = action.value
@@ -28,6 +32,6 @@ export default function generalReducer(state = initialState, action) {
       return newState
 
     default:
-      return state
+      return newState
   }
 }

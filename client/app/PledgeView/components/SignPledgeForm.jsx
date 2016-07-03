@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
+import NewSignatureFormObject from '../../lib/form_objects/new_signature_form'
 
 export default class SignPledgeForm extends ChildComponent {
   static propTypes = {
@@ -10,28 +11,28 @@ export default class SignPledgeForm extends ChildComponent {
       action: PropTypes.string.isRequired,
     }),
     editedSignature: PropTypes.object,
-    existingAttrs: PropTypes.object.isRequired,
+    // existingAttrs: PropTypes.object.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
-    ensureStateObjectExistence: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    object: PropTypes.object.isRequired,
+    // object: PropTypes.object.isRequired,
   }
 
-  componentWillMount() {
-    const {
-      editedSignature, existingAttrs, ensureStateObjectExistence, object
-    } = this.props
-    ensureStateObjectExistence(object, editedSignature, existingAttrs)
-  }
+  // componentWillMount() {
+  //   const {
+  //     editedSignature, existingAttrs, ensureStateObjectExistence, object
+  //   } = this.props
+  //   ensureStateObjectExistence(object, editedSignature, existingAttrs)
+  // }
 
   render() {
     const { id, formData, onSubmit, object, isSubmitting } = this.props
 
     return (
-      <FormFor className="c-sign-pledge"
-        onSubmit={onSubmit}
-        object={object}
+      <FormFor
+        className="c-sign-pledge"
+        ajax={true}
+        object={NewSignatureFormObject}
         formData={formData}>
+
         <p>{this.t('.i_sign')}</p>
 
         <Input attribute='name' />

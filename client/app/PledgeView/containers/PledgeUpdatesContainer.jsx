@@ -5,7 +5,7 @@ import PledgeUpdates from '../components/PledgeUpdates'
 const mapStateToProps = (state, ownProps) => {
   const updates =
     values(state.updates).filter(
-      update => update.pledge_id === ownProps.pledge_id
+      update => update.pledge_id == ownProps.pledge_id
     )
 
   return {

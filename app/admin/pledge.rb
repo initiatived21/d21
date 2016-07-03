@@ -21,7 +21,7 @@ ActiveAdmin.register Pledge do
         end
 
         permitted_events.map do |event|
-          link_to event.capitalize, send("#{event}_admin_pledge_path")
+          link_to("#{event.capitalize} ", send("#{event}_admin_pledge_path"))
         end
       end
     end

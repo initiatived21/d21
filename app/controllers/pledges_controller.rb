@@ -37,6 +37,13 @@ class PledgesController < ApplicationController
           model: 'signature'
         }
       },
+      questionForm: {
+        formData: {
+          action: comments_path(id: params[:id], locale: I18n.locale),
+          authToken: form_authenticity_token,
+          model: 'comment'
+        }
+      },
       signatures: pledge.signatures,
       updates: pledge.updates,
       comments: pledge.comments
@@ -51,7 +58,7 @@ class PledgesController < ApplicationController
     else
       search.run
       @pledges = search.results
-      @result_ids = search.results.ids
+      @result_ids = @pledges.ids
     end
   end
 

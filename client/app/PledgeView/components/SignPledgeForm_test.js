@@ -1,6 +1,6 @@
-import React       from 'react';
-import { shallow } from 'enzyme';
-import SignPledgeForm from './SignPledgeForm';
+import React       from 'react'
+import { shallow } from 'enzyme'
+import SignPledgeForm from './SignPledgeForm'
 
 describe('<SignPledgeForm />', function () {
   const props = {
@@ -11,11 +11,11 @@ describe('<SignPledgeForm />', function () {
       authToken: 'a',
       model: 'signature'
     },
-
-    onSubmit: () => {}
-  };
+    editedSignature: {},
+    isSubmitting: false,
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<SignPledgeForm {...props} />);
-  });
-});
+    const wrapper = shallow(<SignPledgeForm {...props} />)
+  })
+})

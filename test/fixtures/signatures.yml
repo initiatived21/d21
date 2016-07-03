@@ -1,0 +1,6 @@
+basic:
+  id: 1
+  pledge_id: 1
+  reason: 'basicSignatureReason'
+  name: 'basicSignatureName'
+  email: 'basicSignatureEmail@example.org'

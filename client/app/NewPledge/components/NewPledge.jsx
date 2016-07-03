@@ -15,7 +15,6 @@ export default class NewPledge extends RootComponent {
     return (
       <Provider store={store}>
         <ActivePledgeForm
-          formObject={NewPledgeFormObject}
           formData={this.props.formData}
           tags={this.props.tags} />
       </Provider>

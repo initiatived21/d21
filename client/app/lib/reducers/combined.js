@@ -1,15 +1,15 @@
-import _ from 'lodash'
+import merge from 'lodash/merge'
 
 import generalReducer, { generalInitialState } from './general'
-import signPledgeFormReducer, { initialSPFRState }
-  from '../../PledgeView/reducers/signPledgeFormReducer'
+import ajaxSubmissionReducer, { initialAjaxSubmissionState }
+  from '../Form/reducers/ajaxSubmissionReducer'
 
-export const initialState = _.merge(
+export const initialState = merge(
   generalInitialState,
-  initialSPFRState
+  initialAjaxSubmissionState
 )
 export default function combinedReducer(state = initialState, action) {
-  const reducers = [ generalReducer, signPledgeFormReducer ]
+  const reducers = [ generalReducer, ajaxSubmissionReducer ]
 
   let newState = state
   for (let reducer of reducers) {

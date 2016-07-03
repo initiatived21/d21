@@ -6,7 +6,7 @@ import PledgeUpdates from './PledgeUpdates';
 
 describe('<PledgeUpdates />', function () {
   it('should render', function () {
-    const wrapper = shallow(<PledgeUpdates />);
+    const wrapper = shallow(<PledgeUpdates updates={[]} />);
 
     wrapper.find('ol').length.should.equal(1);
   });

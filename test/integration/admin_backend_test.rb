@@ -32,7 +32,7 @@ class AdminBackendTest < Minitest::Capybara::Spec
 
         fill_in 'admin_user_password', with: 'newpassword'
         fill_in 'admin_user_password_confirmation', with: 'newpassword'
-        click_on 'Admin user aktualisieren'
+        click_on 'Admin Users aktualisieren'
 
         # automatic logout
         page.must_have_content 'Sie müssen sich anmelden oder registrieren,'\
@@ -52,7 +52,7 @@ class AdminBackendTest < Minitest::Capybara::Spec
         pledge.may_activate?.must_equal true
 
         visit '/admin'
-        click_link 'Pledges'
+        click_link 'Pledge'
         click_link pledge.id
 
         page.must_have_content 'Aktuell: requested'
@@ -67,7 +67,7 @@ class AdminBackendTest < Minitest::Capybara::Spec
         pledge.may_disapprove?.must_equal true
 
         visit '/admin'
-        click_link 'Pledges'
+        click_link 'Pledge'
         click_link pledge.id
 
         page.must_have_content 'Aktuell: requested'

@@ -7,14 +7,25 @@ import ChildComponent from '../../Base/components/ChildComponent';
 // up it's children with information about the outer form.
 export default class BaseForm extends ChildComponent {
   static propTypes = {
+    object: PropTypes.func.isRequired,
+    formObject: PropTypes.object.isRequired,
+    existingAttrs: PropTypes.object.isRequired,
+    ensureStateObjectExistence: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
     formData: PropTypes.shape({
       action: PropTypes.string.isRequired,
       authToken: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
       errors: PropTypes.object
-    })
-  };
+    }),
+  }
+
+  componentWillMount() {
+    const {
+      ensureStateObjectExistence, formObject, editedStateObject, existingAttrs
+    } = this.props
+    ensureStateObjectExistence(formObject, editedStateObject, existingAttrs)
+  }
 
   render() {
     const { onSubmit, children, multipart } = this.props;
@@ -40,14 +51,16 @@ export default class BaseForm extends ChildComponent {
       if (typeof child !== 'object') { return child; }
 
       if (child.type.isInput) { // is our custom Input component: inject!
+        const { formData, formObject } = this.props
+
         let errors = undefined
-        if (this.props.formData.errors) {
-          errors = this.props.formData.errors[child.props.attribute]
+        if (formData.object && formData.object.errors) {
+          errors = formData.object.errors.errors[child.props.attribute]
         }
 
         return React.cloneElement(child, {
-          model: this.props.formData.model,
-          object: this.props.object,
+          model: formData.model,
+          object: formObject,
           serverErrors: errors
         });
       } else {

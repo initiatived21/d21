@@ -6,4 +6,8 @@ export default class NewSignatureFormObject extends JayForm {
       'name', 'anonymous', 'reason', 'email', 'organization', 'contact_person'
     ]
   }
+
+  static get model() {
+    return 'signature'
+  }
 }

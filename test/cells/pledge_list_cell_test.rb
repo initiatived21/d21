@@ -3,8 +3,12 @@ require_relative '../test_helper'
 describe PledgeListCell, type: :cell do
   include Cell::Testing
 
-  let(:renderedCell) do
+  let(:emptyCell) do
     cell('pledge_list', [], filter: 'testScope', params: {}).call(:show)
+  end
+
+  let(:filledCell) do
+    cell('pledge_list', Pledge.all, filter: 'testScope', params: {}).call(:show)
   end
 
   before do
@@ -15,6 +19,11 @@ describe PledgeListCell, type: :cell do
   end
 
   it 'renders a react ElementList' do
-    renderedCell.must_match(/data-dom-id="ElementList-react-component-0"/)
+    emptyCell.must_match(/data-component-name="ElementList"/)
+    emptyCell.wont_match(/activeContent/)
+  end
+
+  it 'renders given plege children' do
+    filledCell.must_match(/activeContent/)
   end
 end

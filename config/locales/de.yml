@@ -35,8 +35,6 @@ de:
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
   SigneeList:
     heading: Unterzeichner
-  SocialMediaButtons:
-    twitter_message: 'Versprechen unterzeichnen:'
   layouts:
     partials:
       footer:
@@ -114,3 +112,63 @@ de:
         placeholder: Unternehmen oder Organisation (optional)
       reason:
         placeholder: Ich unterstütze, weil … (optional)
+  activerecord:
+    attributes:
+      admin_user:
+        email: Email
+      pledge:
+        amount: Amount
+        content: Content
+        aasm_state: Aasm State
+        id: Id
+        deadline: Deadline
+        signatures_count: Signatures Count
+        user_id: User
+        who: Who
+        updated_at: Updated At
+        created_at: Created At
+        description: Description
+        location: Location
+        requirement: Requirement
+    models:
+      comment: Comments
+      pledge: Pledge
+      admin: Admin
+      admin_user: Admin Users
+  formtastic:
+    hints:
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          password: 
+          email: 
+      active_admin/comment:
+        show:
+          body: 
+    placeholders:
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
+      active_admin/comment:
+        show:
+          body: 
+  active_admin:
+    sidebars:
+      Zustand: Zustand
+  FacebookButton:
+    title: Über Facebook teilen
+  GoogleplusButton:
+    title: Über Google+ teilen
+  LinkedinButton:
+    title: Über LinkedIn teilen
+  TwitterButton:
+    title: Über Twitter teilen
+    text: 'Versprechen unterzeichnen:'
+  XingButton:
+    title: Über Xing teilen

@@ -7,6 +7,10 @@ export default class NewPledgeFormObject extends JayForm {
       'description', 'tag_ids', 'initiator'
     ]
   }
+
+  static get submodels() {
+    return ['initiator']
+  }
 }
   // properties...
 

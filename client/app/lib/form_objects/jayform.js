@@ -23,6 +23,14 @@ export default class JayForm {
     }
   }
 
+  static get model() {
+    throw `FormObject ${this.name} needs to define a model name.`
+  }
+
+  static get submodels() {
+    return []
+  }
+
   get attributes() {
     return this._attributes
   }
@@ -42,7 +50,10 @@ export default class JayForm {
     let formDataObject = new FormData()
 
     for (let property of this.constructor.properties) {
-      formDataObject.set(`form[${property}]`, this.attributes[property] || '')
+      formDataObject.set(
+        `${this.constructor.model}[${property}]`,
+        this.attributes[property] || ''
+      )
     }
 
     return formDataObject

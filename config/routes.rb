@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :pledges, only: [:new, :create, :show, :index] do
       member do
         resources :signatures, only: [:create]
+        resources :comments, only: [:create, :update]
       end
     end
 

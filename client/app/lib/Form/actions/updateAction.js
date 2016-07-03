@@ -1,7 +1,7 @@
-export default (id, attribute, submodel, value) =>
+export default (formObjectName, attribute, submodel, value) =>
   ({
     type: 'UPDATE_FORM_ATTRIBUTE',
-    id,
+    formObjectName,
     attribute,
     submodel,
     value

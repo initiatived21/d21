@@ -9,5 +9,9 @@ FactoryGirl.define do
     deadline { Time.zone.now.to_date + rand(1..10).days }
 
     initiator
+
+    trait :active do
+      aasm_state 'active'
+    end
   end
 end

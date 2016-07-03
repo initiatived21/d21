@@ -41,7 +41,6 @@ export default class RootComponent extends React.Component {
         normalized(objectName, this.props[objectName]).entities
       )
     }
-    console.log('pushableO', pushableObject)
     store.dispatch(addEntities(pushableObject))
   }
 }

@@ -1,23 +1,24 @@
 import React, { PropTypes  } from 'react'
 import Select from 'react-select'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import NewPledgeFormObject from '../../lib/form_objects/new_pledge_form';
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
-    onSubmit: PropTypes.func.isRequired,
+    // onSubmit: PropTypes.func.isRequired,
     formData: PropTypes.object.isRequired,
     availableTags: PropTypes.array.isRequired,
-    newPledge: PropTypes.object.isRequired,
+    // newPledge: PropTypes.object.isRequired,
   }
 
-  componentWillMount() {
-    this.props.ensurePledgeObjectExistence(
-      this.props.newPledge, this.props.editedPledge,
-      this.props.existingAttributes
-    )
-  }
+  // componentWillMount() {
+  //   this.props.ensurePledgeObjectExistence(
+  //     this.props.newPledge, this.props.editedPledge,
+  //     this.props.existingAttributes
+  //   )
+  // }
 
   render() {
     return(
@@ -25,9 +26,8 @@ export default class PledgeForm extends ChildComponent {
         <div className='o-wrapper'>
           <h2>Ein Versprechen abgeben</h2>
           <FormFor multipart
-            object={this.props.newPledge}
-            formData={this.props.formData}
-            onSubmit={this.props.onSubmit}>
+            object={NewPledgeFormObject}
+            formData={this.props.formData}>
 
             <div className='PledgeForm-PledgeData'>
 

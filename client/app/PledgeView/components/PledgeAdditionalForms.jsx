@@ -10,7 +10,7 @@ export default class PledgeAdditionalForms extends ChildComponent {
     signPledgeForm: PropTypes.shape({
       formData: PropTypes.object.isRequired,
     }),
-    signPledgeFormObject: PropTypes.object.isRequired,
+    // signPledgeFormObject: PropTypes.object.isRequired,
   };
 
   render() {
@@ -18,8 +18,7 @@ export default class PledgeAdditionalForms extends ChildComponent {
 
     return (
       <div className="o-layout__item u-1/4@l">
-        <SignPledgeFormContainer id={id} formData={signPledgeForm.formData}
-                                 object={signPledgeFormObject}/>
+        <SignPledgeFormContainer id={id} formData={signPledgeForm.formData} />
         <ReportPledgeForm id={id} />
       </div>
     );

@@ -11,7 +11,7 @@ const mapStateToProps = function(state, ownProps) {
   // get saved & server provided errors, concat them together
   let errors = null
   // if (ownProps.errors) {
-  if (state[formObjectName].errors) {
+  if (state[formObjectName] && state[formObjectName].errors) {
     errors = state[formObjectName].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))

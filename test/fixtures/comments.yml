@@ -1,0 +1,9 @@
+unanswered:
+  id: 1
+  content: unansweredCommentContent
+  pledge_id: 1
+answered:
+  id: 2
+  content: answeredCommentContent
+  response: answeredCommentResponse
+  pledge_id: 1

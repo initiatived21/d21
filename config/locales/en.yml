@@ -35,8 +35,6 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
-  SocialMediaButtons:
-    twitter_message: 'Sign pledge:'
   layouts:
     partials:
       footer:
@@ -112,3 +110,60 @@ en:
         placeholder: Company or Organization (optional)
       reason:
         placeholder: I'm supporting this because … (optional)
+  activerecord:
+    attributes:
+      admin_user:
+        email: 
+      pledge:
+        amount: 
+        content: 
+        aasm_state: 
+        signatures_count: 
+        user_id: 
+        who: 
+        created_at: 
+        description: 
+        location: 
+        requirement: 
+    models:
+      comment: 
+      pledge: 
+      admin: 
+      admin_user: 
+  formtastic:
+    hints:
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          password: 
+          email: 
+      active_admin/comment:
+        show:
+          body: 
+    placeholders:
+      admin_user:
+        create:
+          email: 
+          password: 
+        new:
+          email: 
+          password: 
+      active_admin/comment:
+        show:
+          body: 
+  active_admin:
+    sidebars:
+      Zustand: 
+  FacebookButton:
+    title: Share via Facebook
+  GoogleplusButton:
+    title: Share via Google+
+  LinkedinButton:
+    title: Share via LinkedIn
+  TwitterButton:
+    title: Share via Twitter
+    text: 'Sign pledge:'
+  XingButton:
+    title: Share via Xing

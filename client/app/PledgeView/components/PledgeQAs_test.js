@@ -5,7 +5,7 @@ import PledgeQAs from './PledgeQAs';
 
 describe('<PledgeQAs />', function () {
   it('should render', function () {
-    const wrapper = shallow(<PledgeQAs />);
+    const wrapper = shallow(<PledgeQAs comments={[]} />);
 
     wrapper.find('dl').length.should.equal(1);
   });

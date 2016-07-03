@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import Pledge from './Pledge'
-import PledgeAdditionalForms from '../containers/PledgeAdditionalFormsContainer'
+import PledgeAdditionalForms from './PledgeAdditionalForms'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
 import SigneeListContainer from '../containers/SigneeListContainer'
@@ -12,6 +12,10 @@ export default class PledgeView extends RootComponent {
   static propTypes = {
     pledge: PropTypes.object.isRequired,
     signPledgeForm: PropTypes.object.isRequired,
+    questionForm: PropTypes.object.isRequired,
+    signatures: PropTypes.array.isRequired,
+    comments: PropTypes.array.isRequired,
+    updates: PropTypes.array.isRequired,
   }
 
   get objectsToForwardToState() {
@@ -19,7 +23,6 @@ export default class PledgeView extends RootComponent {
   }
 
   render() {
-    console.log('PledgeView props', this.props)
     return (
       <Provider store={store}>
         <main>
@@ -29,7 +32,8 @@ export default class PledgeView extends RootComponent {
               <PledgeAdditionalForms id={this.props.pledge.id}
                 signPledgeForm={this.props.signPledgeForm} />
               <PledgeUpdatesContainer pledge_id={this.props.pledge.id} />
-              <PledgeQAsContainer pledge_id={this.props.pledge.id} />
+              <PledgeQAsContainer pledge_id={this.props.pledge.id}
+                formData={this.props.questionForm.formData} />
               <SigneeListContainer pledge_id={this.props.pledge.id} />
             </div>
           </div>

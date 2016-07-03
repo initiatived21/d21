@@ -1,7 +1,7 @@
-import React     from 'react';
-import { mount } from 'enzyme';
+import React     from 'react'
+import { mount } from 'enzyme'
 
-import NewPledge from './NewPledge.jsx';
+import NewPledge from './NewPledge.jsx'
 
 describe('NewPledge', function() {
   const formProps = {
@@ -35,13 +35,13 @@ describe('NewPledge', function() {
     },
 
     tags: []
-  };
+  }
 
   it('should have a submit button', function() {
-    const wrapper = mount(<NewPledge {...formProps} />);
+    const wrapper = mount(<NewPledge {...formProps} />)
 
-    const inputs = wrapper.find('button');
-    inputs.length.should.equal(2);
-    inputs.last().text().should.include('submit');
-  });
-});
+    const inputs = wrapper.find('button')
+    inputs.length.should.equal(2)
+    inputs.last().node.type.should.equal('submit')
+  })
+})
