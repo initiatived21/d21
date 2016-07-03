@@ -16,16 +16,22 @@ export default class PaginatedSearchResults extends ChildComponent {
   }
 
   onButtonClick() {
-    // What to do here?
     this.setState({ loading: true });
 
+    // Ajax request
     request
-      .get('/de/index')
-      .query({ query: 'Manny', range: '1..5', order: 'desc' })
+      .get('/de/pledges')
+      .query({ query: this.props.query, range: '2..2' })
       .set('Accept', 'application/json')
       .end(function(err, res) {
-        console.log(err, res);
         this.setState({ loading: false });
+
+        if (!err) {
+          const pledges = res.body.pledges;
+          console.log(pledges.length);
+          console.log(pledges);
+        }
+
       }.bind(this));
   }
 

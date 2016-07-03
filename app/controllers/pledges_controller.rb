@@ -57,8 +57,19 @@ class PledgesController < ApplicationController
   end
 
   def index
-    search = Search.new(params)
+    if (params[:range])
+      ends = params[:range].split('..').map{|d| Integer(d)}
+      offset = ends[0]
+      limit = ends[1] - ends[0] + 1
+    else
+      offset = 0
+      limit = 2
+    end
+
     @query = params[:query]
+
+    search = Search.new(params)
+
     if search.empty?
       @pledges = Pledge.active.limit(4)
       @result_ids = []
@@ -66,8 +77,17 @@ class PledgesController < ApplicationController
     else
       search.run
       @result_count = search.results.count
-      @pledges = search.results.limit(2)
+      @pledges = search.results.offset(offset).limit(limit)
       @result_ids = search.results.ids
+    end
+
+    respond_to do |format|
+      format.html do
+      end
+      format.json do
+        render json: { status: 'success', query: @query, pledges: @pledges, resultIds: @result_ids,
+          resultCount: @result_count }
+      end
     end
   end
 

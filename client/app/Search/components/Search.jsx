@@ -21,7 +21,7 @@ export default class Search extends ChildComponent {
     if (elements.length == 0) {
       resultView = <EmptyResults pledges={elements} />
     } else {
-      resultView = <PaginatedSearchResults results={elements} resultCount={resultCount} />
+      resultView = <PaginatedSearchResults results={elements} resultCount={resultCount} query={query} />
     }
 
     return (
