@@ -152,6 +152,9 @@ $o-layout--auto:     false !default;
 @import "~aleut.utilities.clearfix/utilities.clearfix";
 @import "~aleut.utilities.headings/utilities.headings";
 @import "~aleut.utilities.print/utilities.print";
+
+$u-m: true;
+$u-m-small: true;
 $u-p: true;
 @import "~aleut.utilities.spacing/utilities.spacing";
 @import "~aleut.utilities.spacing-responsive/utilities.spacing-responsive";

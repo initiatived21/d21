@@ -17,7 +17,7 @@ $footer-separator-color: rgb(242, 145, 0);
 
 $footer-separator-thickness: 2px;
 $footer-spacing-top: 80px;
-$footer-spacing-bottom: 66px;
+$footer-spacing-bottom: 42px;
 $footer-spacing-below-icons: 34px;
 
 $svg-size: 32px;
@@ -39,6 +39,10 @@ $svg-icon-border-size: 1px;
   a {
     color: $text-color;
     text-decoration: none;
+  }
+
+  nav {
+    margin-bottom: $spacing;
   }
 }
 
