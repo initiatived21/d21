@@ -1,4 +1,5 @@
 import assign from 'lodash/assign'
+import forIn from 'lodash/forIn'
 
 export const initialAjaxSubmissionState = {
   isSubmitting: {}
@@ -23,8 +24,10 @@ export default function ajaxSumbissionReducer(state = initialState, action) {
       switch (response.status) {
       case 'success':
         responseChanges[action.formObjectName] = {}
-        responseChanges.signatures = state.signatures || {}
-        responseChanges.signatures[response.added.id] = response.added
+        forIn(response.changes, (changedInstance, changedList) => {
+          responseChanges[changedList] = state[changedList] || {}
+          responseChanges[changedList][changedInstance.id] = changedInstance
+        })
       break
       case 'formErrors':
         responseChanges[action.formObjectName] = state[action.formObjectName]

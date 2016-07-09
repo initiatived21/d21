@@ -32,6 +32,21 @@ describe('<PledgeView />', function () {
       }
     },
 
+    commentForms: {
+      questionForm: {
+        action: '/',
+        authToken: 'a',
+        model: 'comment',
+        object: { object: { fields: {} } }
+      },
+      answerForm: {
+        action: '/',
+        authToken: 'a',
+        model: 'comment',
+        object: { object: { fields: {} } }
+      }
+    },
+
     questionForm: {
       formData: {
         action: '/',

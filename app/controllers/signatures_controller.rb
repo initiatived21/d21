@@ -1,6 +1,6 @@
 class SignaturesController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create],
-                                                 if: :json_request?
+  # skip_before_action :verify_authenticity_token, only: [:create],
+  #                                                if: :json_request?
 
   def create
     @signature = Signature.new
@@ -22,7 +22,7 @@ class SignaturesController < ApplicationController
         redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
       end
       format.json do
-        render json: { status: 'success', added: @form.model }
+        render json: { status: 'success', changes: { signatures: @form.model } }
       end
     end
   end

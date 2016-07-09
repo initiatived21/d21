@@ -16,7 +16,8 @@ export default class BaseForm extends ChildComponent {
       action: PropTypes.string.isRequired,
       authToken: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
-      errors: PropTypes.object
+      errors: PropTypes.object,
+      method: PropTypes.string,
     }),
   }
 
@@ -29,15 +30,25 @@ export default class BaseForm extends ChildComponent {
 
   render() {
     const { onSubmit, children, multipart } = this.props;
-    const { action, authToken } = this.props.formData;
+    const { action, authToken, method } = this.props.formData;
     const enctype =
       multipart ? 'multipart/form-data' : 'application/x-www-form-urlencoded'
 
+    let formMethod
+    let hiddenMethodField = undefined
+    if (['PUT', 'PATCH', 'DELETE'].indexOf(method) > -1) {
+      formMethod = 'POST'
+      hiddenMethodField = <input type='hidden' name='_method' value={method} />
+    } else {
+      formMethod = method || 'POST'
+    }
+
     return(
-      <form action={action} method='POST' onSubmit={onSubmit} encType={enctype}>
+      <form action={action} method={formMethod} onSubmit={onSubmit} encType={enctype}>
 
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='utf8' value='&#x2713;' />
+        {hiddenMethodField}
 
         {this.renderChildren(children)}
       </form>

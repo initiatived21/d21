@@ -20,10 +20,12 @@ describe PledgeListCell, type: :cell do
 
   it 'renders a react ElementList' do
     emptyCell.must_match(/data-component-name="ElementList"/)
-    emptyCell.wont_match(/activeContent/)
+    # doesn't have "active" pledge fixture props
+    emptyCell.wont_match(/&quot;content&quot;:&quot;activeContent&quot;,/)
   end
 
   it 'renders given plege children' do
-    filledCell.must_match(/activeContent/)
+    # has "active" pledge fixture props
+    filledCell.must_match(/&quot;content&quot;:&quot;activeContent&quot;,/)
   end
 end

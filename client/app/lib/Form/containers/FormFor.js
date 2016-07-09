@@ -57,7 +57,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
 
     const { dispatch } = dispatchProps
     const { formObject } = stateProps
-    const data = formObject.toFormData()
+    const data = formObject.toFormData(event.nativeEvent.target)
     dispatch(submitAjaxForm(ownProps.formData.action, data, formObject))
 
     return false

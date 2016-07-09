@@ -46,15 +46,24 @@ export default class JayForm {
     return {}
   }
 
-  toFormData() {
+  toFormData(form) {
     let formDataObject = new FormData()
 
+    // Add stored props to FormData
     for (let property of this.constructor.properties) {
       formDataObject.set(
         `${this.constructor.model}[${property}]`,
         this.attributes[property] || ''
       )
     }
+
+    // Add meta data to FormData
+    const metaFields = [ 'utf8', 'authenticity_token' ]
+    for (let metaField of metaFields) {
+      formDataObject.set(metaField, (form[metaField] && form[metaField].value))
+    }
+    const method = form._method ? form._method.value : 'POST'
+    formDataObject.set('_method', method)
 
     return formDataObject
   }

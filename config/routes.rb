@@ -17,9 +17,10 @@ Rails.application.routes.draw do
     resources :pledges, only: [:new, :create, :show, :index] do
       member do
         resources :signatures, only: [:create]
-        resources :comments, only: [:create, :update]
+        resources :comments, only: [:create]
       end
     end
+    resources :comments, only: [:update]
 
     # All other localized paths => localized 404
     match '*path', to: 'pages#not_found', via: :all

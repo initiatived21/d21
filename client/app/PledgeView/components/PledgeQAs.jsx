@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import PledgeQuestion from './PledgeQuestion'
-import PledgeAnswer from './PledgeAnswer'
+import PledgeQA from './PledgeQA'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
@@ -10,6 +8,10 @@ import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 export default class PledgeQAs extends ChildComponent {
   static propTypes = {
     comments: PropTypes.array.isRequired,
+    formData: PropTypes.shape({
+      questionForm: PropTypes.object.isRequired,
+      answerForm: PropTypes.object.isRequired,
+    }).isRequired,
   }
 
   render() {
@@ -20,21 +22,19 @@ export default class PledgeQAs extends ChildComponent {
         <h3>{this.t('.heading')}</h3>
         <dl>
           {comments.map( comment =>
-            <div class='PledgeComment' key={comment.id}>
-              <PledgeQuestion>{comment.content}</PledgeQuestion>
-              <PledgeAnswer>{comment.response}</PledgeAnswer>
-            </div>
+          <PledgeQA key={comment.id} comment={comment}
+                    formData={formData.answerForm} />
           )}
         </dl>
         <FormFor
-          ajax={true}
           object={NewQuestionFormObject}
-          formData={formData}>
+          ajax={true}
+          formData={formData.questionForm}>
 
           <Input attribute='content' />
 
           <button className="o-btn" type="submit" disabled={isSubmitting}>
-            {this.t('.sign')}
+            {this.t('.submit')}
           </button>
         </FormFor>
       </section>

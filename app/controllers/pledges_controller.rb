@@ -37,11 +37,17 @@ class PledgesController < ApplicationController
           model: 'signature'
         }
       },
-      questionForm: {
-        formData: {
+      commentForms: {
+        questionForm: {
           action: comments_path(id: params[:id], locale: I18n.locale),
           authToken: form_authenticity_token,
           model: 'comment'
+        },
+        answerForm: {
+          action: comment_path(id: ':id', locale: I18n.locale),
+          authToken: form_authenticity_token,
+          model: 'comment',
+          method: 'PATCH'
         }
       },
       signatures: pledge.signatures,

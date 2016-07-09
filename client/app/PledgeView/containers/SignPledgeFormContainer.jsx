@@ -7,7 +7,7 @@ import SignPledgeForm from '../components/SignPledgeForm'
 
 const mapStateToProps = (state, ownProps) => ({
   // existingAttrs: merge({}, ownProps.formData.object),
-  isSubmitting: state.isSubmittingSignatureForm || false,
+  isSubmitting: state.isSubmitting.NewSignatureFormObject || false,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

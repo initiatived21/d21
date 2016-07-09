@@ -26,7 +26,9 @@ export default function submitAjaxForm(url, data, formObject) {
 
     const fetch = require('isomorphic-fetch') // regular import breaks in SSR
     return fetch(url + '.json', {
-        method: 'POST', body: data, credentials: 'same-origin'
+        method: (data.get('_method')),
+        body: data,
+        credentials: 'same-origin'
       }).then(
         function(response) {
           const { status, statusText } = response
