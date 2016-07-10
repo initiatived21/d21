@@ -25,6 +25,7 @@ de:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
+    submit: Abschicken
   PledgeQuote:
     promise:
       part1: Wir versprechen,
@@ -34,6 +35,8 @@ de:
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
+  SignInForm:
+    submit: Anmelden
   SignPledgeForm:
     email_hint: Ihre E-Mail wird nicht veröffentlicht.
     i_sign: Ich unterzeichne dieses Versprechen.
@@ -42,8 +45,8 @@ de:
   SigneeList:
     heading: Unterzeichner
   TwitterButton:
-    title: Über Twitter teilen
     text: 'Versprechen unterzeichnen:'
+    title: Über Twitter teilen
   XingButton:
     title: Über Xing teilen
   active_admin:
@@ -56,15 +59,22 @@ de:
       pledge:
         aasm_state: Aasm State
         amount: Amount
+        comments: Comments
         content: Content
         created_at: Created At
         deadline: Deadline
         description: Description
         id: Id
+        initiator: Initiator
         location: Location
+        pg_search_document: Pg search document
+        pledges_tags: Pledges tags
         requirement: Requirement
+        signatures: Signatures
         signatures_count: Signatures Count
+        tags: Tags
         updated_at: Updated At
+        updates: Updates
         user_id: User
         who: Who
     models:
@@ -73,6 +83,10 @@ de:
       comment: Comments
       pledge: Pledge
   formtastic:
+    actions:
+      pledge:
+        edit:
+          update: 
     hints:
       active_admin/comment:
         show:
@@ -84,6 +98,48 @@ de:
         new:
           email: 
           password: 
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+    labels:
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
     placeholders:
       active_admin/comment:
         show:
@@ -95,11 +151,75 @@ de:
         new:
           email: 
           password: 
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
+  helpers:
+    label:
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
+      user:
+        email: 
+        password: 
+        remember_me: 
   layouts:
     partials:
       footer:
+        contact_link: Kontakt
+        facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: Häufige Fragen
+        howitworks_link: So funktionierts
         impressum_link: Impressum
+        logo_bmfsfj_title: Logo vom Bundesministerium für Familie, Senioren, Frauen und Jugend
+        logo_d21_title: Logo von der Initiative D21 e.V.
+        newsletter_link: Newsletter
+        privacy_link: Datenschutz
+        sitemap_link: Sitemap
+        terms_link: AGB
+        twitter_title: Bunt und Verbindlich auf Twitter
       header:
         de: deutsch
         en: English
@@ -118,6 +238,11 @@ de:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
   react_form:
+    comment:
+      content:
+        placeholder: Ihre Frage
+      response:
+        placeholder: Ihre Antwort
     pledge:
       amount:
         label: Wie viele?
@@ -172,63 +297,10 @@ de:
         placeholder: Unternehmen oder Organisation (optional)
       reason:
         placeholder: Ich unterstütze, weil … (optional)
-  activerecord:
-    attributes:
-      admin_user:
-        email: Email
-      pledge:
-        amount: Amount
-        content: Content
-        aasm_state: Aasm State
-        id: Id
-        deadline: Deadline
-        signatures_count: Signatures Count
-        user_id: User
-        who: Who
-        updated_at: Updated At
-        created_at: Created At
-        description: Description
-        location: Location
-        requirement: Requirement
-    models:
-      comment: Comments
-      pledge: Pledge
-      admin: Admin
-      admin_user: Admin Users
-  formtastic:
-    hints:
-      admin_user:
-        create:
-          email: 
-          password: 
-        new:
-          password: 
-          email: 
-      active_admin/comment:
-        show:
-          body: 
-    placeholders:
-      admin_user:
-        create:
-          email: 
-          password: 
-        new:
-          email: 
-          password: 
-      active_admin/comment:
-        show:
-          body: 
-  active_admin:
-    sidebars:
-      Zustand: Zustand
-  FacebookButton:
-    title: Über Facebook teilen
-  GoogleplusButton:
-    title: Über Google+ teilen
-  LinkedinButton:
-    title: Über LinkedIn teilen
-  TwitterButton:
-    title: Über Twitter teilen
-    text: 'Versprechen unterzeichnen:'
-  XingButton:
-    title: Über Xing teilen
+    user:
+      email:
+        label: E-Mail
+      password:
+        label: Passwort
+      remember_me:
+        label: Angemeldet bleiben

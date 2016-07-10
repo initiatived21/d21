@@ -25,6 +25,7 @@ en:
     img_alt: image describing the pledge
   PledgeQAs:
     heading: Questions and answers to the initiator
+    submit: Submit
   PledgeQuote:
     promise:
       part1: We promise to
@@ -34,6 +35,8 @@ en:
   ReportPledgeForm:
     description: 
     report_pledge: Report pledge
+  SignInForm:
+    submit: Sign in
   SignPledgeForm:
     email_hint: 
     i_sign: I sign this pledge.
@@ -42,8 +45,8 @@ en:
   SigneeList:
     heading: Signees
   TwitterButton:
-    title: Share via Twitter
     text: 'Sign pledge:'
+    title: Share via Twitter
   XingButton:
     title: Share via Xing
   active_admin:
@@ -56,15 +59,22 @@ en:
       pledge:
         aasm_state: 
         amount: 
+        comments: 
         content: 
         created_at: 
         deadline: 
         description: 
         id: 
+        initiator: 
         location: 
+        pg_search_document: 
+        pledges_tags: 
         requirement: 
+        signatures: 
         signatures_count: 
+        tags: 
         updated_at: 
+        updates: 
         user_id: 
         who: 
     models:
@@ -73,6 +83,10 @@ en:
       comment: 
       pledge: 
   formtastic:
+    actions:
+      pledge:
+        edit:
+          update: 
     hints:
       active_admin/comment:
         show:
@@ -84,6 +98,48 @@ en:
         new:
           email: 
           password: 
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+    labels:
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
     placeholders:
       active_admin/comment:
         show:
@@ -95,11 +151,75 @@ en:
         new:
           email: 
           password: 
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
+  helpers:
+    label:
+      pledge:
+        edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
+      q:
+        index:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
+      user:
+        email: 
+        password: 
+        remember_me: 
   layouts:
     partials:
       footer:
+        contact_link: Contact
+        facebook_title: Bund und Verbindlich on Facebook
         faq_link: Frequently Asked Questions
-        impressum_link: Impressum
+        howitworks_link: How it works
+        impressum_link: Imprint
+        logo_bmfsfj_title: Logo of Federal Ministry of Family Affairs, Senior Citizens, Women and Youth
+        logo_d21_title: Logo of Initiative D21 e.V.
+        newsletter_link: Newsletter
+        privacy_link: Privacy
+        sitemap_link: Sitemap
+        terms_link: Terms
+        twitter_title: Bunt und Verbindlich on Twitter
       header:
         de: deutsch
         en: English
@@ -118,6 +238,11 @@ en:
       recommended: Recommended by the editors
       successful: Successful promises
   react_form:
+    comment:
+      content:
+        placeholder: Your question
+      response:
+        placeholder: Your answer
     pledge:
       amount:
         label: How many?
@@ -170,60 +295,10 @@ en:
         placeholder: Company or Organization (optional)
       reason:
         placeholder: I'm supporting this because … (optional)
-  activerecord:
-    attributes:
-      admin_user:
-        email: 
-      pledge:
-        amount: 
-        content: 
-        aasm_state: 
-        signatures_count: 
-        user_id: 
-        who: 
-        created_at: 
-        description: 
-        location: 
-        requirement: 
-    models:
-      comment: 
-      pledge: 
-      admin: 
-      admin_user: 
-  formtastic:
-    hints:
-      admin_user:
-        create:
-          email: 
-          password: 
-        new:
-          password: 
-          email: 
-      active_admin/comment:
-        show:
-          body: 
-    placeholders:
-      admin_user:
-        create:
-          email: 
-          password: 
-        new:
-          email: 
-          password: 
-      active_admin/comment:
-        show:
-          body: 
-  active_admin:
-    sidebars:
-      Zustand: 
-  FacebookButton:
-    title: Share via Facebook
-  GoogleplusButton:
-    title: Share via Google+
-  LinkedinButton:
-    title: Share via LinkedIn
-  TwitterButton:
-    title: Share via Twitter
-    text: 'Sign pledge:'
-  XingButton:
-    title: Share via Xing
+    user:
+      email:
+        label: E-Mail
+      password:
+        label: Password
+      remember_me:
+        label: Stay signed in

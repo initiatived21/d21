@@ -5,16 +5,16 @@
         <i class="c-page-foot__icon"><svg height="32" viewBox="0 0 1792 1792" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M1216 1344v128q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h64v-384h-64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h384q26 0 45 19t19 45v576h64q26 0 45 19t19 45zm-128-1152v192q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-192q0-26 19-45t45-19h256q26 0 45 19t19 45z"></path></svg></i>
         <ul class="o-list-bare">
           <li>
-            <a href="">AGB</a>
+            <%= link_to t('.terms_link'), terms_path(locale: I18n.locale) %>
           </li>
           <li>
-            <a href="">Datenschutz</a>
+            <%= link_to t('.privacy_link'), privacy_path(locale: I18n.locale) %>
           </li>
           <li>
-            <a href="/de/impressum">Impressum</a>
+            <%= link_to t('.impressum_link'), impressum_path(locale: I18n.locale) %>
           </li>
           <li>
-            <a href="">Sitemap</a>
+            <%= link_to t('.sitemap_link'), sitemap_path(locale: I18n.locale) %>
           </li>
         </ul>
       </nav><!--
@@ -22,10 +22,10 @@
         <i class="c-page-foot__icon"><svg height="32" viewBox="0 0 1792 1792" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M1088 1256v240q0 16-12 28t-28 12h-240q-16 0-28-12t-12-28v-240q0-16 12-28t28-12h240q16 0 28 12t12 28zm316-600q0 54-15.5 101t-35 76.5-55 59.5-57.5 43.5-61 35.5q-41 23-68.5 65t-27.5 67q0 17-12 32.5t-28 15.5h-240q-15 0-25.5-18.5t-10.5-37.5v-45q0-83 65-156.5t143-108.5q59-27 84-56t25-76q0-42-46.5-74t-107.5-32q-65 0-108 29-35 25-107 115-13 16-31 16-12 0-25-8l-164-125q-13-10-15.5-25t5.5-28q160-266 464-266 80 0 161 31t146 83 106 127.5 41 158.5z"></path></svg></i>
         <ul class="o-list-bare">
           <li>
-            <a href="">So funktionierts</a>
+            <%= link_to t('.howitworks_link'), howitworks_path(locale: I18n.locale) %>
           </li>
           <li>
-            <a href="/de/faq">Häufige Fragen</a>
+            <%= link_to t('.faq_link'), faq_path(locale: I18n.locale) %>
           </li>
         </ul>
       </nav><!--
@@ -33,25 +33,22 @@
         <i class="c-page-foot__icon"><svg height="32" viewBox="0 0 1792 1792" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M1472 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 .5-3t.5-3l575-474 575 474q1 2 1 6zm223-69l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z"></path></svg></i>
         <ul class="o-list-bare">
           <li>
-            <a href="">Kontakt</a>
+            <%= link_to t('.contact_link'), contact_path(locale: I18n.locale) %>
           </li>
           <li>
-            <a href="">FAQ</a>
-          </li>
-          <li>
-            <a href="">Newsletter</a>
+            <%= link_to t('.newsletter_link'), '' %>
           </li>
         </ul>
         <ul class="c-social-media u-mt">
           <li>
-            <a class="c-social-media__button" href="https://www.facebook.com/bundundverbindlich/" title="Bunt und Verbindlich auf Facebook">
+            <a class="c-social-media__button" href="https://www.facebook.com/bundundverbindlich/" title="<%= t('.facebook_title') %>">
               <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414">
                 <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fillRule="nonzero"/>
               </svg>
             </a>
           </li><!--
           --><li>
-            <a class="c-social-media__button" href="https://twitter.com/buntundverbindlich/" title="Bunt und Verbindlich auf Twitter">
+            <a class="c-social-media__button" href="https://twitter.com/buntundverbindlich/" title="<%= t('.twitter_title') %>">
               <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414">
                 <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fillRule="nonzero"/>
               </svg>
@@ -65,7 +62,7 @@
           <li class="u-mb">
             <a href="http://www.bmfsfj.de/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="202" height="77" viewBox="0 0 202 77" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Logo Bundesministerium für Familie, Senioren, Frauen und Jugend</title>
+                <title><%= t('.logo_bmfsfj_title') %></title>
                 <defs>
                   <path id="bmfsfj-a" d="M28.941.342H0v26.994h28.941V.342z"/>
                   <path id="bmfsfj-c" d="M0 76h201.787V.342H0z"/>
@@ -92,7 +89,7 @@
           <li>
             <a href="http://www.initiatived21.de/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="163" height="30" viewBox="0 0 163 30" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Logo Initiative D21 e.V.</title>
+                <title><%= t('.logo_d21_title') %></title>
                 <defs>
                   <path id="d21-a" d="M0 29.586h162.988V1H0z"/>
                 </defs>
