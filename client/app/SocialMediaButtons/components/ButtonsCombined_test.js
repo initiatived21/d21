@@ -18,7 +18,7 @@ describe('Social media button', function() {
     {
       component: TwitterButton,
       componentName: 'TwitterButton',
-      expectedUrlRegex: /^https:\/\/twitter\.com\/intent\/tweet\?text=[0-9a-z%]+&url=http%3A%2F%2Fwww\.example\.com$/
+      expectedUrlRegex: /^https:\/\/twitter\.com\/intent\/tweet\?text=[0-9a-z%]*&url=http%3A%2F%2Fwww\.example\.com$/
     },
     {
       component: GoogleplusButton,
