@@ -22,6 +22,41 @@ describe PagesController do
     end
   end
 
+  describe "GET 'terms'" do
+    it 'should work' do
+      get :terms, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
+  describe "GET 'privacy'" do
+    it 'should work' do
+      get :privacy, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
+  describe "GET 'contact'" do
+    it 'should work' do
+      get :contact, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
+  describe "GET 'sitemap'" do
+    it 'should work' do
+      get :sitemap, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
+  describe "GET 'howitworks'" do
+    it 'should work' do
+      get :howitworks, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
   describe "GET 'not_found'" do
     it 'should work and return 404' do
       get :not_found, params: { locale: 'de' }
