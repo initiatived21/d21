@@ -110,6 +110,8 @@ $o-layout--auto:     false !default;
 //@import "aleut.objects.list-block/objects.list-block";
 @import "~aleut.objects.list-inline/objects.list-inline";
 //@import "aleut.objects.list-ui/objects.list-ui";
+
+$o-media--small: true;
 @import "~aleut.objects.media/objects.media";
 //@import "aleut.objects.pack/objects.pack";
 //@import "aleut.objects.tables/objects.tables";
@@ -141,6 +143,7 @@ $o-layout--auto:     false !default;
 @import "aleut/components/components.pledge-tile";
 @import "aleut/components/components.sign-pledge";
 @import "aleut/components/components.social-media";
+@import "aleut/components/components.progress";
 
 
 /*------------------------------------*\
@@ -156,6 +159,7 @@ $o-layout--auto:     false !default;
 $u-m: true;
 $u-m-small: true;
 $u-p: true;
+$u-p-tiny: true;
 @import "~aleut.utilities.spacing/utilities.spacing";
 @import "~aleut.utilities.spacing-responsive/utilities.spacing-responsive";
 @import "~aleut.utilities.widths/utilities.widths";

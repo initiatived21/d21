@@ -39,6 +39,9 @@ export default class PledgeTile extends ChildComponent {
   render() {
     const { pledge } = this.props;
 
+    const remainingDays = this.getRemainingDays();
+    const isUrgent = remainingDays <= 5 ? true : false;
+
     return (
       <li className="o-layout__item u-1/2@m u-1/3@l">
         <article className="c-pledge-tile">
@@ -52,10 +55,11 @@ export default class PledgeTile extends ChildComponent {
               who={pledge.who}
               requirement={pledge.requirement}
             />
-            <PledgeDaysRemaining days={this.getRemainingDays()} />
             <PledgeProgress
               amount={pledge.amount}
-              signatures_count={pledge.signatures_count}
+              signaturesCount={pledge.signatures_count}
+              remainingDays={remainingDays}
+              urgent={isUrgent}
             />
           </a>
           <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
