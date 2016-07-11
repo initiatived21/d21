@@ -108,6 +108,9 @@ $o-layout--auto:     false !default;
 @import "~aleut.objects.layout/objects.layout";
 @import "~aleut.objects.list-bare/objects.list-bare";
 //@import "aleut.objects.list-block/objects.list-block";
+
+$o-list-inline--delimited: true;
+$o-list-inline-delimit-character: "\00A0|";
 @import "~aleut.objects.list-inline/objects.list-inline";
 //@import "aleut.objects.list-ui/objects.list-ui";
 
@@ -138,6 +141,9 @@ $o-media--small: true;
 \*------------------------------------*/
 
 //@import "aleut/components/components.site-nav";
+@import "aleut/components/components.page-head";
+@import "aleut/components/components.primary-nav";
+@import "aleut/components/components.secondary-nav";
 @import "aleut/components/components.page-foot";
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";

@@ -45,7 +45,7 @@ export default class PledgeTile extends ChildComponent {
     return (
       <li className="o-layout__item u-1/2@m u-1/3@l">
         <article className="c-pledge-tile">
-          <a className="c-pledge-tile__link o-box o-box--small"
+          <a className="c-pledge-tile__link o-box"
              href={this.getPledgePath()}>
             <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
             <PledgeInitiator name="Max Mustermann" />
