@@ -16,9 +16,23 @@
 }
 
 .c-tag-list__item {
-  @include font-size(10px);
+  @include font-size(12px);
+
   color: $white;
-  background-color: $tag-background-color;
+  border-radius: 5px;
+
+  &:nth-of-type(3n) {
+    background-color: $primary-color-lighter;
+  }
+
+  &:nth-of-type(3n+1) {
+    background-color: $secondary-color-lighter;
+  }
+
+  &:nth-of-type(3n+2) {
+    background-color: $tertiary-color-lighter;
+  }
+
   padding: 0 $spacing--tiny;
   margin-right: $spacing--tiny; /* [1] */
 

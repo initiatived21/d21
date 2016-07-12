@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #PRIMARY NAV
+\*------------------------------------*/
+
+/**
+ *
+ */
+
+/**
+ * 1.
+ */
+
+.c-primary-nav {
+  font-size: 1.1em;
+
+  margin-top: $spacing;
+}
+
+.c-primary-nav__item {
+
+}
+
+.c-primary-nav__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+
+  color: $primary-color;
+  background-color: white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  user-select: none;
+}
+
+.c-primary-nav__item--active span {
+  display: inline-block;
+  padding: 10px 20px;
+
+  background-color: $primary-color;
+  color: white;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  user-select: none;
+}

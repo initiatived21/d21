@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    #SEARCH BAR
+\*------------------------------------*/
+
+/**
+ *
+ */
+
+/**
+ * 1.
+ */
+
+.c-search-bar__social-media {
+  margin-top: 2px;
+  margin-right: $spacing--small;
+
+  display: inline-block;
+}
+
+.c-search-bar__form {
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.c-search-bar__input {
+  border: 1px solid #999;
+  border-radius: 5px;
+
+  padding-left: $spacing--small;
+  padding-right: $spacing--small;
+
+  width: 20em;
+  height: 40px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+}
+
+.c-search-bar__submit {
+  height: 40px;
+  width: 4em;
+
+  background-color: $primary-color;
+
+  border: none;
+  border-radius: 5px;
+
+  svg {
+    fill: white;
+  }
+}

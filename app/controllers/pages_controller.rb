@@ -14,6 +14,21 @@ class PagesController < ApplicationController
   def impressum
   end
 
+  def terms
+  end
+
+  def privacy
+  end
+
+  def sitemap
+  end
+
+  def contact
+  end
+
+  def howitworks
+  end
+
   def not_found
     render status: 404, formats: [:html]
   end

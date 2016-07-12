@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    #SECONDARY NAV
+\*------------------------------------*/
+
+/**
+ *
+ */
+
+/**
+ * 1.
+ */
+
+$info-nav-color: rgb(23%, 23%, 23%);
+$lang-nav-color: rgb(60%, 60%, 60%);
+$lang-nav-active-color: rgb(0%, 0%, 0%);
+
+.c-secondary-nav__info {
+  display: inline-block;
+  color: $info-nav-color;
+
+  .c-secondary-nav__link {
+    color: $info-nav-color;
+    padding: $spacing--tiny;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    user-select: none;
+  }
+}
+
+
+.c-secondary-nav__lang {
+  display: inline-block;
+  vertical-align: top;
+
+  margin-left: $spacing;
+
+  .c-secondary-nav__item {
+    margin: 0 1px;
+  }
+
+  .c-secondary-nav__item--active {
+  }
+
+  .c-secondary-nav__link {
+    display: inline-block;
+    vertical-align: middle;
+
+    color: $lang-nav-color;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    user-select: none;
+
+    padding: 9px 5px 6px;
+    background-color: $lang-nav-color;
+    color: white;
+  }
+
+  .c-secondary-nav__item--active .c-secondary-nav__link {
+    background-color: $lang-nav-active-color;
+  }
+
+  .c-secondary-nav__item:first-of-type .c-secondary-nav__link {
+    border-bottom-left-radius: 5px;
+  }
+
+  .c-secondary-nav__item:last-of-type .c-secondary-nav__link {
+    border-bottom-right-radius: 5px;
+  }
+}
+
+
+.c-secondary-nav__sign-in {
+  background-color: $primary-color;
+
+  height: 40px;
+
+  margin-left: $spacing;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    vertical-align: middle;
+  }
+
+  user-select: none;
+}

@@ -2,15 +2,23 @@
  * Social media buttons
  */
 
-$color-facebook: #3B5998;
-$color-twitter: #55ACEE;
-$color-googleplus: #DC4E41;
-$color-xing: #005A5F;
-$color-linkedin: #0077B5;
+$social-media-button-color: rgb(60%, 60%, 60%);
+
+.c-social-media {
+}
 
 .c-social-media > li {
   display: inline-block;
-  padding: $spacing--small;
+
+  border: 1px solid $social-media-button-color;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .c-social-media__button {
@@ -18,33 +26,9 @@ $color-linkedin: #0077B5;
 }
 
 .c-social-media__button > svg {
-  width: 1.75em;
-  height: 1.75em;
-  fill: #ccc;
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+  fill: $social-media-button-color;
   background-color: transparent;
-}
-
-.c-social-media__button--facebook > svg {
-  fill: $color-facebook;
-  &:hover { fill: lighten($color-facebook, 10%); }
-}
-
-.c-social-media__button--twitter > svg {
-  fill: $color-twitter;
-  &:hover { fill: lighten($color-twitter, 10%); }
-}
-
-.c-social-media__button--googleplus > svg {
-  fill: $color-googleplus;
-  &:hover { fill: lighten($color-googleplus, 10%); }
-}
-
-.c-social-media__button--xing > svg {
-  fill: $color-xing;
-  &:hover { fill: lighten($color-xing, 10%); }
-}
-
-.c-social-media__button--linkedin > svg {
-  fill: $color-linkedin;
-  &:hover { fill: lighten($color-linkedin, 10%); }
 }

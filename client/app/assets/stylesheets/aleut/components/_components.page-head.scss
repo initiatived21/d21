@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #PAGE HEADER
+\*------------------------------------*/
+
+/**
+ *
+ */
+
+/**
+ * 1.
+ */
+
+$primary-color: rgb(12%, 44%, 72%);
+
+.c-page-head {
+  border-bottom: 1px solid $primary-color;
+}
+
+.c-page-head__logo {
+
+}
+
+.c-page-head__main {
+  @include clearfix;
+}

@@ -1,0 +1,83 @@
+/*------------------------------------*\
+    #PLEDGE PROGRESS
+\*------------------------------------*/
+
+/**
+ * A component for showing pledge progress
+ */
+
+/**
+ */
+
+$pledge-tile-darkgray: rgb(29%, 29%, 29%);
+
+$pledge-tile-border-color: rgb(70%, 70%, 70%);
+
+$pledge-tile-gray: rgb(60%, 60%, 60%);
+
+$pledge-tile-lightgray: rgb(85%, 85%, 85%);
+
+$pledge-tile-black: rgb(0%, 0%, 0%);
+
+$pledge-tile-success-color: rgb(47%, 60%, 69%);
+
+$pledge-tile-urgent-color: rgb(71%, 6%, 5%);
+
+
+.c-progress {
+  margin-top: $spacing--small;
+  margin-bottom: $spacing--small;
+}
+
+
+/* Circle showing remaining days */
+
+.c-progress__countdown {
+  border-radius: 100px;
+  padding-top: 9px;
+  height: 89px;
+  width: 89px;
+  text-align: center;
+  line-height: 0.95;
+  border: 1px solid $pledge-tile-gray;
+}
+
+.c-progress__still {
+  @include font-size(15px, none);
+  color: $pledge-tile-darkgray;
+}
+
+.c-progress__number-of-days {
+  @include font-size(40px, none);
+}
+
+.c-progress--urgent .c-progress__number-of-days {
+  color: $pledge-tile-urgent-color;
+}
+
+.c-progress__days {
+  @include font-size(15px, none);
+  color: $pledge-tile-darkgray;
+}
+
+
+
+/* The progress bar */
+
+.c-progress__outer-bar {
+  width: 100%;
+  height: 17px;
+  background-color: $pledge-tile-lightgray;
+  border-radius: 10px;
+  overflow: hidden; /* So that border-radius applies also to the fill */
+  margin-top: $spacing--small;
+}
+
+.c-progress__inner-bar {
+  height: 17px;
+  background-color: $pledge-tile-success-color;
+}
+
+.c-progress--urgent .c-progress__inner-bar {
+  background-color: $pledge-tile-urgent-color;
+}
