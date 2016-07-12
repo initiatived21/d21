@@ -17,14 +17,18 @@
         </li>
       </ul>
 
+
       <ul class="c-secondary-nav__lang o-list-inline">
-        <li class="c-secondary-nav__item c-secondary-nav__item--active">
-          <a class="c-secondary-nav__link" href="">de</a>
-        </li><!--
-        --><li class="c-secondary-nav__item">
-          <a class="c-secondary-nav__link" href="">en</a>
-        </li>
+        <!--
+        <% I18n.available_locales.each do |locale| %>
+          --><li class="c-secondary-nav__item<%= locale == I18n.locale ? ' c-secondary-nav__item--active' : '' %>">
+            <%= link_to locale.to_s, { locale: locale, action: params['action'] },
+              class: 'c-secondary-nav__link' %>
+          </li><!--
+        <% end %>
+        -->
       </ul>
+
 
       <a class="c-secondary-nav__sign-in o-btn o-btn--small">
         <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +67,7 @@
       </a>
 
       <div class="c-search-bar u-mt u-fr">
-        <ul class="c-social-media">
+        <ul class="c-search-bar__social-media c-social-media">
           <li>
             <a class="c-social-media__button" href="https://www.facebook.com/bundundverbindlich/" title="Bunt und Verbindlich auf Facebook">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414">
@@ -80,9 +84,9 @@
           </li>
         </ul>
 
-        <form class="c-search-bar__form">
-          <input class="c-search-bar__input" type="search" placeholder="z.B. nach Unternehmen suchen" />
-          <button class="o-btn c-search-bar__button" type="submit">
+        <form class="c-search-bar__form" action="<%= pledges_path(locale: I18n.locale) %>" method="GET">
+          <input class="c-search-bar__input" name="query" type="search" placeholder="z.B. nach Unternehmen suchen" />
+          <button class="o-btn c-search-bar__submit" type="submit">
             <svg width="18" height="18" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
               <title>Suchen</title>
               <path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" />

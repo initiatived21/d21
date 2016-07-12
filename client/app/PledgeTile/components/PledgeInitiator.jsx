@@ -12,7 +12,7 @@ export default class PledgeInitiator extends ChildComponent {
     const { name } = this.props;
 
     return (
-      <div className="o-media u-mt-small u-mb-small">
+      <div className="o-media u-mt u-mb-small">
         <img className="c-pledge-tile__initiator-img o-media__img" src={`${DUMMY_IMAGE_PATH}/schwesig.jpg`} width="89" height="89" alt="" />
         <div className="o-media__body">
           <p className="c-pledge-tile__initiator-title u-mt-small">Initiator</p>

@@ -43,9 +43,9 @@ $pledge-tile-border-color: rgb(70%, 70%, 70%);
 }
 
 .c-pledge-tile__text {
-  color: $gray;
-  font-family: $font-family-heading;
-  font-weight: $font-weight-regular;
+  @include font-size(14px);
+  color: $text-color;
+  // text-align: center;
 }
 
 .c-pledge-tile__days {

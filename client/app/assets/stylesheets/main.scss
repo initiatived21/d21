@@ -89,7 +89,7 @@ $o-btn--pill:        true;
 $o-btn--small:       true;
 $o-btn--full:        true;
 $o-btn-color:        white;
-$o-btn-background:   #4a8ec2;
+$o-btn-background:   $primary-color;
 @import "~aleut.objects.buttons/objects.buttons";
 //@import "aleut.objects.flag/objects.flag";
 
@@ -144,6 +144,7 @@ $o-media--small: true;
 @import "aleut/components/components.page-head";
 @import "aleut/components/components.primary-nav";
 @import "aleut/components/components.secondary-nav";
+@import "aleut/components/components.search-bar";
 @import "aleut/components/components.page-foot";
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";
