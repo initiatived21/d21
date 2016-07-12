@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { values } from 'lodash';
-import request from 'superagent';
 
 import normalize from '../../lib/normalization';
 import PaginatedSearchResults from '../components/PaginatedSearchResults';
@@ -9,24 +8,20 @@ import setSearchResultsLoadingState from '../actions/setSearchResultsLoadingStat
 
 const fetchMoreResults = function(dispatch, query, offset, limit) {
   // Ajax request
-  setTimeout(function() {
-    request
-      .get('/de/pledges')
-      .query({ query: query, range: `${offset}..${offset + limit - 1}` })
-      .set('Accept', 'application/json')
-      .end(function(err, res) {
-        dispatch(setSearchResultsLoadingState(false));
-
-        if (!err) {
-          const pledges = res.body.pledges;
-          console.log(pledges.length);
-          console.log(pledges);
-
-          const normalizedPledges = normalize('pledges', pledges);
-          dispatch(addEntities(normalizedPledges.entities));
-        }
-      });
-    }, 2000);
+  fetch(`/de/pledges.json?query=${query}&range=${offset}..${offset + limit - 1}`)
+    .then(function(response) {
+      dispatch(setSearchResultsLoadingState(false));
+      return response.json();
+    }).then(function(json) {
+      console.log('parsed json', json);
+      const pledges = json.pledges;
+      console.log(pledges.length);
+      console.log(pledges);
+      const normalizedPledges = normalize('pledges', pledges);
+      dispatch(addEntities(normalizedPledges.entities));
+    }).catch(function(ex) {
+      console.log('parsing failed', ex)
+    });
 };
 
 const mapStateToProps = function(state, ownProps) {
