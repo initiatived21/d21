@@ -4,15 +4,15 @@
     <nav class="c-secondary-nav u-tr">
       <ul class="c-secondary-nav__info o-list-inline o-list-inline--delimited">
         <li class="c-secondary-nav__item">
-          <%= link_to 'Kontakt', contact_path(locale: I18n.locale),
+          <%= link_to t('.contact_link'), contact_path(locale: I18n.locale),
             class: 'c-secondary-nav__link' %>
         </li><!--
         --><li class="c-secondary-nav__item">
-          <%= link_to 'FAQ', faq_path(locale: I18n.locale),
+          <%= link_to t('.faq_link'), faq_path(locale: I18n.locale),
             class: 'c-secondary-nav__link' %>
         </li><!--
         --><li class="c-secondary-nav__item">
-          <%= link_to 'Newsletter', '',
+          <%= link_to t('.newsletter_link'), '',
             class: 'c-secondary-nav__link' %>
         </li>
       </ul>
@@ -34,7 +34,7 @@
         <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
           <path d="M1312 896q0 26-19 45l-544 544q-19 19-45 19t-45-19-19-45v-288h-448q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h448v-288q0-26 19-45t45-19 45 19l544 544q19 19 19 45zm352-352v704q0 119-84.5 203.5t-203.5 84.5h-320q-13 0-22.5-9.5t-9.5-22.5q0-4-1-20t-.5-26.5 3-23.5 10-19.5 20.5-6.5h320q66 0 113-47t47-113v-704q0-66-47-113t-113-47h-312l-11.5-1-11.5-3-8-5.5-7-9-2-13.5q0-4-1-20t-.5-26.5 3-23.5 10-19.5 20.5-6.5h320q119 0 203.5 84.5t84.5 203.5z"/>
         </svg>
-        Login
+        <%= t('.login') %>
       </a>
     </nav>
 
@@ -42,7 +42,7 @@
 
       <a class="c-page-head__logo u-fl" href="<%= home_path(locale: I18n.locale) %>">
         <svg xmlns="http://www.w3.org/2000/svg" width="417" height="76" viewBox="0 0 417 76" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <title>Bunt-und-Verbindlich-Logo</title>
+          <title><%= t('.logo_title') %></title>
           <defs>
             <path id="buv-a" d="M0 69.992h413.001V.001H0z"/>
           </defs>
@@ -69,14 +69,14 @@
       <div class="c-search-bar u-mt u-fr">
         <ul class="c-search-bar__social-media c-social-media">
           <li>
-            <a class="c-social-media__button" href="https://www.facebook.com/bundundverbindlich/" title="Bunt und Verbindlich auf Facebook">
+            <a class="c-social-media__button" href="https://www.facebook.com/bundundverbindlich/" title="<%= t('.facebook_title') %>">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414">
                 <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fillRule="nonzero"/>
               </svg>
             </a>
           </li><!--
           --><li>
-            <a class="c-social-media__button" href="https://twitter.com/buntundverbindlich/" title="Bunt und Verbindlich auf Twitter">
+            <a class="c-social-media__button" href="https://twitter.com/buntundverbindlich/" title="<%= t('.twitter_title') %>">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414">
                 <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fillRule="nonzero"/>
               </svg>
@@ -85,10 +85,10 @@
         </ul>
 
         <form class="c-search-bar__form" action="<%= pledges_path(locale: I18n.locale) %>" method="GET">
-          <input class="c-search-bar__input" name="query" type="search" placeholder="z.B. nach Unternehmen suchen" />
+          <input class="c-search-bar__input" name="query" type="search" placeholder="<%= t('.search_placeholder') %>" />
           <button class="o-btn c-search-bar__submit" type="submit">
             <svg width="18" height="18" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <title>Suchen</title>
+              <title><%= t('.search_title') %></title>
               <path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" />
             </svg>
           </button>
@@ -100,7 +100,7 @@
       <nav class="c-primary-nav">
         <ul class="o-list-inline">
           <li class="c-primary-nav__item c-primary-nav__item--active">
-            <span>Start</span>
+            <span><%= t('.start_link') %></span>
           </li><!--
           --><li class="c-primary-nav__item">
             <%= link_to t('.new_pledge_link'), new_pledge_path(locale: I18n.locale),
