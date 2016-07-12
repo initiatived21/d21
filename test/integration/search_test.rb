@@ -4,7 +4,7 @@ class SearchTest < Minitest::Capybara::Spec
   it 'should find partial matches' do
     FactoryGirl.create :pg_search_document, content: 'searchable'
     FactoryGirl.create :pg_search_document, content: 'will not be found'
-    visit '/de/pledges'
+    visit '/'
 
     fill_in 'query', with: 'sear'
     click_button 'Suchen'

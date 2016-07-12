@@ -32,7 +32,6 @@ describe('<PledgeTile />', function () {
     wrapper.find(PledgeTagList).length.should.equal(1);
     wrapper.find(PledgeInitiator).length.should.equal(1);
     wrapper.find(PledgeText).length.should.equal(1);
-    wrapper.find(PledgeDaysRemaining).length.should.equal(1);
     wrapper.find(PledgeProgress).length.should.equal(1);
     wrapper.find(SocialMediaButtons).length.should.equal(1);
   });
