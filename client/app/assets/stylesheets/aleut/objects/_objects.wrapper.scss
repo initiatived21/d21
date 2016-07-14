@@ -1,3 +1,18 @@
+/*------------------------------------*\
+    #WRAPPER OBJECT
+\*------------------------------------*/
+
+/**
+ * Wrapper to appear as child of top-level elements, e.g.:
+ *
+ * <header>
+ *   <div class="o-wrapper">
+ *     ...
+ *   </div>
+ * </header>
+ *
+ */
+
 .o-wrapper {
   margin: 0 auto;
   max-width: 1130px;

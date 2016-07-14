@@ -28,8 +28,8 @@ $svg-icon-border-size: 1px;
 .c-page-foot {
   background-color: $footer-background-color;
 
+  margin-top: $spacing;
   border-top: $footer-separator-thickness solid $footer-separator-color;
-
   padding-top: $footer-spacing-top;
   padding-bottom: $footer-spacing-bottom;
 

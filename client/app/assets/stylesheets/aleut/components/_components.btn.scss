@@ -1,0 +1,15 @@
+
+.c-btn {
+  margin-top: $spacing--small;
+  margin-bottom: $spacing--small;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+  }
+}
+
+.c-btn--center {
+  text-align: center;
+}

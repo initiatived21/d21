@@ -80,7 +80,8 @@
     https://github.com/aleutcss?query=objects.
 \*------------------------------------*/
 
-//@import "aleut.objects.block/objects.block";
+$o-block--center: true;
+@import "~aleut.objects.block/objects.block";
 
 $o-box--small:       true;
 @import "~aleut.objects.box/objects.box";
@@ -91,37 +92,28 @@ $o-btn--full:        true;
 $o-btn-color:        white;
 $o-btn-background:   $primary-color;
 @import "~aleut.objects.buttons/objects.buttons";
-//@import "aleut.objects.flag/objects.flag";
-
-$o-layout--tiny:     false !default;
-$o-layout--small:    false !default;
-$o-layout--large:    false !default;
-$o-layout--huge:     false !default;
-$o-layout--flush:    false !default;
-$o-layout--rev:      false !default;
-$o-layout--middle:   false !default;
-$o-layout--bottom:   false !default;
-$o-layout--right:    false !default;
-$o-layout--center:   false !default;
-$o-layout--auto:     false !default;
+//@import "~aleut.objects.flag/objects.flag";
 
 @import "~aleut.objects.layout/objects.layout";
 @import "~aleut.objects.list-bare/objects.list-bare";
-//@import "aleut.objects.list-block/objects.list-block";
+//@import "~aleut.objects.list-block/objects.list-block";
 
 $o-list-inline--delimited: true;
 $o-list-inline-delimit-character: "\00A0|";
 @import "~aleut.objects.list-inline/objects.list-inline";
-//@import "aleut.objects.list-ui/objects.list-ui";
+//@import "~aleut.objects.list-ui/objects.list-ui";
 
 $o-media--small: true;
 @import "~aleut.objects.media/objects.media";
-//@import "aleut.objects.pack/objects.pack";
-//@import "aleut.objects.tables/objects.tables";
-//@import "aleut.objects.tabs/objects.tabs";
+//@import "~aleut.objects.pack/objects.pack";
+//@import "~aleut.objects.tables/objects.tables";
+//@import "~aleut.objects.tabs/objects.tabs";
 
 // Our own objects
 @import "aleut/objects/objects.wrapper";
+
+$o-flipper-speed: 0.5s;
+@import "aleut/objects/objects.flipper";
 
 
 /*------------------------------------*\
@@ -140,7 +132,6 @@ $o-media--small: true;
     Here you place your own visual styling.
 \*------------------------------------*/
 
-//@import "aleut/components/components.site-nav";
 @import "aleut/components/components.page-head";
 @import "aleut/components/components.primary-nav";
 @import "aleut/components/components.secondary-nav";
@@ -151,6 +142,7 @@ $o-media--small: true;
 @import "aleut/components/components.sign-pledge";
 @import "aleut/components/components.social-media";
 @import "aleut/components/components.progress";
+@import "aleut/components/components.btn";
 
 
 /*------------------------------------*\

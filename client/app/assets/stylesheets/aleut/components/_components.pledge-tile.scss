@@ -9,11 +9,10 @@
 /**
  * 1. The whole pledge tile is clickable, therefore set neutral text decoration and color.
  *
- * - The plegde-tile component does not create a grid. This is done by the Aleut.css layout object.
- * - TODO: progress bar, social media icons
  */
 
 $pledge-tile-gray: rgb(60%, 60%, 60%);
+$pledge-tile-black: rgb(0%, 0%, 0%);
 $pledge-tile-border-color: rgb(70%, 70%, 70%);
 
 
@@ -23,9 +22,31 @@ $pledge-tile-border-color: rgb(70%, 70%, 70%);
   margin-bottom: $spacing;
 }
 
+.c-pledge-tile__front {
+}
+
+.c-pledge-tile__back {
+
+}
+
 .c-pledge-tile__link {
   text-decoration: none; /* [1] */
   color: $text-color; /* [1] */
+}
+
+.c-pledge-tile__title {
+  @include font-size(22px);
+  color: $pledge-tile-black;
+  text-align: center;
+
+  border-top: 2px solid $pledge-tile-gray;
+  border-bottom: 2px solid $pledge-tile-gray;
+
+  padding-top: $spacing--small;
+  padding-bottom: $spacing--small;
+
+  margin-top: $spacing--small;
+  margin-bottom: $spacing--small;
 }
 
 .c-pledge-tile__initiator-img {
@@ -45,7 +66,7 @@ $pledge-tile-border-color: rgb(70%, 70%, 70%);
 .c-pledge-tile__text {
   @include font-size(14px);
   color: $text-color;
-  // text-align: center;
+  text-align: center;
 }
 
 .c-pledge-tile__days {
