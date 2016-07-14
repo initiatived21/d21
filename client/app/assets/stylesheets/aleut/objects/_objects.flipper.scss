@@ -11,8 +11,6 @@
 $o-flipper-speed: 1s !default;
 
 
-
-
 .o-flipper {
   perspective: 1000px; /* entire container, keeps perspective */
 
@@ -21,9 +19,12 @@ $o-flipper-speed: 1s !default;
   }
 
   height: 400px;
+  margin-bottom: $spacing;
 }
 
 .o-flipper__inner {
+  background-color: white;
+
   transition: transform $o-flipper-speed;
   transform-style: preserve-3d;
 

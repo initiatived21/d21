@@ -1,13 +1,9 @@
 import React               from 'react';
 import { shallow }         from 'enzyme';
 
-import PledgeTile          from './PledgeTile';
-import PledgeTagList       from './PledgeTagList';
-import PledgeText          from './PledgeText';
-import PledgeInitiator     from './PledgeInitiator';
-import PledgeDaysRemaining from './PledgeDaysRemaining';
-import PledgeProgress      from './PledgeProgress';
-import SocialMediaButtons  from '../../SocialMediaButtons/components/SocialMediaButtons';
+import PledgeTile from './PledgeTile';
+import PledgeTileFront from './PledgeTileFront';
+import PledgeTileBack from './PledgeTileBack';
 
 describe('<PledgeTile />', function () {
   const props = {
@@ -28,11 +24,7 @@ describe('<PledgeTile />', function () {
 
     wrapper.hasClass('o-layout__item').should.be.true;
     wrapper.find('article').hasClass('c-pledge-tile').should.be.true;
-    wrapper.find('a').length.should.equal(1);
-    wrapper.find(PledgeTagList).length.should.equal(1);
-    wrapper.find(PledgeInitiator).length.should.equal(1);
-    wrapper.find(PledgeText).length.should.equal(1);
-    wrapper.find(PledgeProgress).length.should.equal(1);
-    wrapper.find(SocialMediaButtons).length.should.equal(1);
+    wrapper.find(PledgeTileFront).length.should.equal(1);
+    wrapper.find(PledgeTileBack).length.should.equal(1);
   });
 });
