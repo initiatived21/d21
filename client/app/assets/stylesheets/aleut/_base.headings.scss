@@ -3,13 +3,26 @@
 \*------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-heading;
+  //font-family: $font-family-heading;
 }
 
 h1, h2 {
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-regular;
+  color: $secondary-color;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 h3, h4, h5, h6 {
   font-weight: $font-weight-light;
+}
+
+h1 {
+  @include media-query(s) {
+    @include font-size(24px, 1.5);
+  }
+}
+
+h2 {
+  @include font-size(24px, 1.5);
 }

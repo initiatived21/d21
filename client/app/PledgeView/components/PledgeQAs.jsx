@@ -28,7 +28,7 @@ export default class PledgeQAs extends ChildComponent {
 
     return (
       <section className="o-layout__item">
-        <h3>{this.t('.heading')}</h3>
+        <h2>{this.t('.heading')}</h2>
         <dl>
           {comments.map( comment =>
             <PledgeQA key={comment.id} comment={comment}

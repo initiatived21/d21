@@ -15,14 +15,13 @@ export default class PledgeQuote extends ChildComponent {
     const { content, amount, who, requirement } = this.props;
 
     return (
-      <div className="o-media">
-        <img className="o-media__img" src={`${DUMMY_IMAGE_PATH}/cornelsen.png`} width="100" height="100" alt="Cornelsen Logo" />
-        <figure className="o-media__body">
-          <blockquote className="c-pledge__text">
+      <div className="c-pledge-view__text o-media o-media__responsive">
+        <img className="o-media__img" src={`${DUMMY_IMAGE_PATH}/schwesig.jpg`} width="89" height="89" alt="Cornelsen Logo" />
+        <div className="o-media__body">
+          <blockquote className="c-pledge-view__quote">
             {this.t('.promise.part1')} {content}{this.t('.promise.part2')} {amount} {who} {requirement}.
           </blockquote>
-          <figcaption>{'Cornelsen Verlag'}</figcaption>
-        </figure>
+        </div>
       </div>
     );
   }

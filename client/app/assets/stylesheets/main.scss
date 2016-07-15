@@ -104,6 +104,7 @@ $o-list-inline-delimit-character: "\00A0|";
 //@import "~aleut.objects.list-ui/objects.list-ui";
 
 $o-media--small: true;
+$o-media--responsive: true;
 @import "~aleut.objects.media/objects.media";
 //@import "~aleut.objects.pack/objects.pack";
 //@import "~aleut.objects.tables/objects.tables";
@@ -139,6 +140,7 @@ $o-flipper-speed: 0.5s;
 @import "aleut/components/components.page-foot";
 @import "aleut/components/components.tag-list";
 @import "aleut/components/components.pledge-tile";
+@import "aleut/components/components.pledge-view";
 @import "aleut/components/components.sign-pledge";
 @import "aleut/components/components.social-media";
 @import "aleut/components/components.progress";

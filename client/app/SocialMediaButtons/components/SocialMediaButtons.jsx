@@ -36,7 +36,7 @@ export default class SocialMediaButtons extends ChildComponent {
     };
 
     return (
-      <ul className="c-social-media o-list-inline u-tc">
+      <ul className="c-social-media o-list-inline">
         <FacebookButton {...commonProps} />
         <TwitterButton {...commonProps} />
         <GoogleplusButton {...commonProps} />
