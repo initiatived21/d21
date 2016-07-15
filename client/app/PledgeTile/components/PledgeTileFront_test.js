@@ -3,9 +3,9 @@ import { shallow }         from 'enzyme';
 
 import PledgeTileFront     from './PledgeTileFront';
 import TagList             from '../../TagList/components/TagList';
-import PledgeInitiator     from './PledgeInitiator';
-import PledgeDaysRemaining from './PledgeDaysRemaining';
-import PledgeProgress      from './PledgeProgress';
+import InitiatorWithImage  from '../../PledgeData/components/InitiatorWithImage';
+import PledgeState         from '../../PledgeData/components/PledgeState';
+import ProgressBar         from '../../PledgeData/components/ProgressBar';
 
 describe('<PledgeTileFront />', function () {
   const props = {
@@ -22,7 +22,8 @@ describe('<PledgeTileFront />', function () {
     wrapper.hasClass('c-pledge-tile__front').should.be.true;
     wrapper.find('a').length.should.equal(1);
     wrapper.find(TagList).length.should.equal(1);
-    wrapper.find(PledgeInitiator).length.should.equal(1);
-    wrapper.find(PledgeProgress).length.should.equal(1);
+    wrapper.find(InitiatorWithImage).length.should.equal(1);
+    wrapper.find(PledgeState).length.should.equal(1);
+    wrapper.find(ProgressBar).length.should.equal(1);
   });
 });

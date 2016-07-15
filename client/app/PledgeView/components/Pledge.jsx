@@ -5,7 +5,7 @@ import I18n from 'i18n-js';
 import TagList from '../../TagList/components/TagList';
 import PledgeLocation from './PledgeLocation';
 import PledgeQuote from './PledgeQuote';
-import PledgeFeatures from './PledgeFeatures';
+import PledgeData from './PledgeData';
 import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons';
 import PledgeImage from './PledgeImage';
 import PledgeDescription from './PledgeDescription';
@@ -47,12 +47,12 @@ export default class Pledge extends ChildComponent {
             who={who}
             requirement={requirement}
           />
-          <PledgeFeatures
+          <PledgeData
             amount={amount}
             deadline={deadline}
             signatures_count={signatures_count}
           />
-          <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
+          <SocialMediaButtons className="u-mt-small" url={DOMAIN_PROD + this.getPledgePath()} />
           <PledgeImage src={`${DUMMY_IMAGE_PATH}/peru-landscape.jpg`} />
           <PledgeDescription>
             Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi

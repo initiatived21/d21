@@ -3,6 +3,10 @@ en:
     title: Share via Facebook
   GoogleplusButton:
     title: Share via Google+
+  Initiator:
+    title: Initiator
+  InitiatorWithImage:
+    title: Initiator
   LinkedinButton:
     title: Share via LinkedIn
   LoggedIn:

@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent';
 import TagList              from '../../TagList/components/TagList';
-import PledgeInitiator      from './PledgeInitiator';
-import PledgeDaysRemaining  from './PledgeDaysRemaining';
-import PledgeProgress       from './PledgeProgress';
+import InitiatorWithImage   from '../../PledgeData/components/InitiatorWithImage';
+import PledgeState          from '../../PledgeData/components/PledgeState';
+import ProgressBar          from '../../PledgeData/components/ProgressBar';
 import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class PledgeTileFront extends ChildComponent {
@@ -31,23 +31,33 @@ export default class PledgeTileFront extends ChildComponent {
     const remainingDays = this.getRemainingDays();
     const isUrgent = remainingDays <= 5 ? true : false;
 
+    const percentage = Math.round(100 / signatures_total * signatures_count);
+
     return (
       <div className="c-pledge-tile__front o-flipper__front">
         <a className="c-pledge-tile__link o-box"
            href={path}>
           <TagList names={['Familie', 'Frauen', 'Kinder']} />
-          <PledgeInitiator name="Max Mustermann" />
+          <InitiatorWithImage imageUrl={`${DUMMY_IMAGE_PATH}/schwesig.jpg`}>
+            Max Mustermann
+          </InitiatorWithImage>
+
           <div className="c-pledge-tile__title">
-            <h2>
-              {title}
-            </h2>
+            <h2>{title}</h2>
           </div>
-          <PledgeProgress
-            amount={signatures_total}
-            signaturesCount={signatures_count}
-            remainingDays={remainingDays}
-            urgent={isUrgent}
-          />
+
+          <div className="o-media o-media--small">
+            <div className="o-media__img">
+              <PledgeState remainingDays={remainingDays} urgent={isUrgent} />
+            </div>
+            <div className="o-media__body">
+              <p className="u-pt-tiny">
+                {signatures_count} von {signatures_total}<br />Unterzeichnern
+              </p>
+              <ProgressBar percentage={percentage} urgent={isUrgent} />
+            </div>
+          </div>
+
         </a>
       </div>
     );

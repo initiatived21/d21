@@ -1,14 +1,14 @@
 import React           from 'react';
 import { shallow }     from 'enzyme';
-import PledgeInitiator from './PledgeInitiator';
+import InitiatorWithImage from './InitiatorWithImage';
 
-describe('<PledgeInitiator />', function () {
+describe('<InitiatorWithImage />', function () {
   const props = {
-    name: 'Max Mustermann'
+    imageUrl: 'dummy'
   };
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeInitiator {...props} />);
+    const wrapper = shallow(<InitiatorWithImage {...props}>Max Mustermann</InitiatorWithImage>);
 
     wrapper.hasClass('o-media').should.be.true;
     wrapper.find('p').at(0).text().should.equal('Initiator');

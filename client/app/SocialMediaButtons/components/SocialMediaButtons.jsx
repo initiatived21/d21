@@ -35,8 +35,13 @@ export default class SocialMediaButtons extends ChildComponent {
       handleClick: this.handleClick
     };
 
+    let className = "c-social-media o-list-inline";
+    if (this.props.className) {
+      className += ` ${this.props.className}`;
+    }
+
     return (
-      <ul className="c-social-media o-list-inline">
+      <ul className={className}>
         <FacebookButton {...commonProps} />
         <TwitterButton {...commonProps} />
         <GoogleplusButton {...commonProps} />
@@ -48,5 +53,6 @@ export default class SocialMediaButtons extends ChildComponent {
 }
 
 SocialMediaButtons.propTypes = {
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  className: PropTypes.string
 };

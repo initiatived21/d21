@@ -3,6 +3,10 @@ de:
     title: Über Facebook teilen
   GoogleplusButton:
     title: Über Google+ teilen
+  Initiator:
+    title: Initiator
+  InitiatorWithImage:
+    title: Initiator
   LinkedinButton:
     title: Über LinkedIn teilen
   LoggedIn:

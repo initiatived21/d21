@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #INITIATOR
+\*------------------------------------*/
+
+/**
+ * Pledge initiator for pledge tiles and pledge view.
+ */
+
+.c-initiator {
+
+}
+
+.c-initiator__title {
+  text-transform: uppercase;
+}
+
+// For pledge tiles
+.c-initiator--with-image {
+  .c-initiator__img {
+    border-radius: 50px;
+  }
+
+  .c-initiator__title {
+    color: $gray;
+    @include font-size(14px);
+  }
+
+  .c-initiator__name {
+    @include font-size(18px);
+  }
+}
+
+// For pledge views
+.c-initiator--wo-image {
+  .c-initiator__title {
+    color: $text-color;
+    @include font-size(18px);
+  }
+
+  .c-initiator__name {
+    @include font-size(16px);
+  }
+}

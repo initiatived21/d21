@@ -1,8 +1,8 @@
 import React       from 'react';
 import { shallow } from 'enzyme';
-import PledgeFeatures from './PledgeFeatures';
+import PledgeData from './PledgeData';
 
-describe('<PledgeFeatures />', function () {
+describe('<PledgeData />', function () {
   const props = {
     deadline: '2016-09-30',
     amount: 10,
@@ -10,7 +10,6 @@ describe('<PledgeFeatures />', function () {
   };
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeFeatures {...props} />);
-
+    const wrapper = shallow(<PledgeData {...props} />);
   });
 });

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #PLEDGE PROGRESS BAR
+\*------------------------------------*/
+
+/**
+ * Shows number of signees as a progress bar
+ */
+
+
+$pledge-tile-success-color: rgb(47%, 60%, 69%);
+
+$pledge-tile-urgent-color: rgb(71%, 6%, 5%);
+
+
+.c-progress-bar {
+  width: 100%;
+  height: 17px;
+  background-color: $light-gray;
+  border-radius: 10px;
+  overflow: hidden; /* So that border-radius applies also to the fill */
+  margin-top: $spacing--small;
+}
+
+.c-progress-bar__liquid {
+  height: 17px;
+  background-color: $pledge-tile-success-color;
+}
+
+.c-progress-bar--urgent .c-progress-bar__liquid {
+  background-color: $pledge-tile-urgent-color;
+}

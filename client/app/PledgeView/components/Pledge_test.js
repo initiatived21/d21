@@ -5,7 +5,7 @@ import Pledge from './Pledge';
 import TagList from '../../TagList/components/TagList';
 import PledgeLocation from './PledgeLocation';
 import PledgeQuote from './PledgeQuote';
-import PledgeFeatures from './PledgeFeatures';
+import PledgeData from './PledgeData';
 import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons';
 import PledgeImage from './PledgeImage';
 import PledgeDescription from './PledgeDescription';
@@ -30,7 +30,7 @@ describe('<Pledge />', function () {
     wrapper.find(TagList).length.should.equal(1);
     //wrapper.find(PledgeLocation).length.should.equal(1);
     wrapper.find(PledgeQuote).length.should.equal(1);
-    wrapper.find(PledgeFeatures).length.should.equal(1);
+    wrapper.find(PledgeData).length.should.equal(1);
     wrapper.find(SocialMediaButtons).length.should.equal(1);
     wrapper.find(PledgeImage).length.should.equal(1);
     wrapper.find(PledgeDescription).length.should.equal(1);

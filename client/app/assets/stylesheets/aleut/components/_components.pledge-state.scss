@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #PLEDGE STATE
+\*------------------------------------*/
+
+/**
+ * A component for showing pledge state as a circle
+ */
+
+.c-pledge-state {
+  border-radius: 100px;
+  padding-top: 9px;
+  height: 89px;
+  width: 89px;
+  text-align: center;
+  line-height: 0.95;
+  border: 1px solid $gray;
+}
+
+.c-pledge-state__still {
+  @include font-size(15px, none);
+  color: $dark-gray;
+}
+
+.c-pledge-state__number-of-days {
+  @include font-size(40px, none);
+}
+
+.c-pledge-state--urgent .c-pledge-state__number-of-days {
+  color: $urgent-color;
+}
+
+.c-pledge-state__days {
+  @include font-size(15px, none);
+  color: $dark-gray;
+}

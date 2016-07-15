@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent';
 import PledgeText           from './PledgeText';
-import PledgeInitiator      from './PledgeInitiator';
 import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons';
 import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
