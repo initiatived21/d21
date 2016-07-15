@@ -37,9 +37,11 @@ export default class PledgeTileFront extends ChildComponent {
            href={path}>
           <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
           <PledgeInitiator name="Max Mustermann" />
-          <h2 className="c-pledge-tile__title">
-            {title}
-          </h2>
+          <div className="c-pledge-tile__title">
+            <h2>
+              {title}
+            </h2>
+          </div>
           <PledgeProgress
             amount={signatures_total}
             signaturesCount={signatures_count}

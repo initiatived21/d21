@@ -17,18 +17,12 @@ $o-flipper-speed: 1s !default;
   &:hover .o-flipper__inner {
     transform: rotateY(180deg); /* flip the pane when hovered */
   }
-
-  height: 400px;
-  margin-bottom: $spacing;
 }
 
 .o-flipper__inner {
-  background-color: white;
-
   transition: transform $o-flipper-speed;
   transform-style: preserve-3d;
 
-  height: 400px;
   position: relative;
 }
 
@@ -39,6 +33,7 @@ $o-flipper-speed: 1s !default;
   position: absolute;
   top: 0;
   left: 0;
+  height: 400px;
 }
 
 .o-flipper__front {

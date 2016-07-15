@@ -11,8 +11,8 @@
  */
 
 
-$footer-background-color: rgb(243, 243, 243);
-$footer-separator-color: rgb(242, 145, 0);
+$footer-background-color: rgb(95%, 95%, 95%);
+$footer-separator-color: rgb(95%, 57%, 0%);
 
 $footer-separator-thickness: 2px;
 $footer-spacing-top: 80px;
@@ -28,7 +28,6 @@ $svg-icon-border-size: 1px;
 .c-page-foot {
   background-color: $footer-background-color;
 
-  margin-top: $spacing;
   border-top: $footer-separator-thickness solid $footer-separator-color;
   padding-top: $footer-spacing-top;
   padding-bottom: $footer-spacing-bottom;

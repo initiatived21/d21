@@ -39,22 +39,24 @@ export default class PledgeTile extends ChildComponent {
     const isUrgent = remainingDays <= 5 ? true : false;
 
     return (
-      <li className="o-layout__item u-1/2@m u-1/3@l o-flipper">
-        <article className="c-pledge-tile o-flipper__inner">
-          <PledgeTileFront
-            title="Schulbücher für Willkommensklassen"
-            deadline={pledge.deadline}
-            signatures_count={pledge.signatures_count}
-            signatures_total={pledge.amount}
-            path={pledgePath}
-          />
-          <PledgeTileBack
-            content={pledge.content}
-            amount={pledge.amount}
-            who={pledge.who}
-            requirement={pledge.requirement}
-            path={pledgePath}
-          />
+      <li className="o-layout__item u-1/2@m u-1/3@l u-mb">
+        <article className="c-pledge-tile o-flipper">
+          <div className="c-pledge-tile__inner o-flipper__inner">
+            <PledgeTileFront
+              title="Schulbücher für Willkommensklassen"
+              deadline={pledge.deadline}
+              signatures_count={pledge.signatures_count}
+              signatures_total={pledge.amount}
+              path={pledgePath}
+            />
+            <PledgeTileBack
+              content={pledge.content}
+              amount={pledge.amount}
+              who={pledge.who}
+              requirement={pledge.requirement}
+              path={pledgePath}
+            />
+          </div>
         </article>
       </li>
     );
