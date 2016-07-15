@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import ChildComponent from '../../lib/Base/components/ChildComponent';
 import I18n from 'i18n-js';
 
-import TagList from './TagList';
+import TagList from '../../TagList/components/TagList';
 import PledgeLocation from './PledgeLocation';
 import PledgeQuote from './PledgeQuote';
 import PledgeFeatures from './PledgeFeatures';

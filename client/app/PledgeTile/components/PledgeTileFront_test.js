@@ -2,7 +2,7 @@ import React               from 'react';
 import { shallow }         from 'enzyme';
 
 import PledgeTileFront     from './PledgeTileFront';
-import PledgeTagList       from './PledgeTagList';
+import TagList             from '../../TagList/components/TagList';
 import PledgeInitiator     from './PledgeInitiator';
 import PledgeDaysRemaining from './PledgeDaysRemaining';
 import PledgeProgress      from './PledgeProgress';
@@ -21,7 +21,7 @@ describe('<PledgeTileFront />', function () {
 
     wrapper.hasClass('c-pledge-tile__front').should.be.true;
     wrapper.find('a').length.should.equal(1);
-    wrapper.find(PledgeTagList).length.should.equal(1);
+    wrapper.find(TagList).length.should.equal(1);
     wrapper.find(PledgeInitiator).length.should.equal(1);
     wrapper.find(PledgeProgress).length.should.equal(1);
   });

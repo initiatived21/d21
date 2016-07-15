@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent';
-import PledgeTagList        from './PledgeTagList';
+import TagList              from '../../TagList/components/TagList';
 import PledgeInitiator      from './PledgeInitiator';
 import PledgeDaysRemaining  from './PledgeDaysRemaining';
 import PledgeProgress       from './PledgeProgress';
@@ -35,7 +35,7 @@ export default class PledgeTileFront extends ChildComponent {
       <div className="c-pledge-tile__front o-flipper__front">
         <a className="c-pledge-tile__link o-box"
            href={path}>
-          <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
+          <TagList names={['Familie', 'Frauen', 'Kinder']} />
           <PledgeInitiator name="Max Mustermann" />
           <div className="c-pledge-tile__title">
             <h2>

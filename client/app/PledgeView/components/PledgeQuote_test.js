@@ -14,8 +14,7 @@ describe('<PledgeQuote />', function () {
     const wrapper = shallow(<PledgeQuote {...props} />);
 
     wrapper.find('img').length.should.equal(1);
-    wrapper.find('figure').length.should.equal(1);
-    wrapper.find('figcaption').length.should.equal(1);
+    wrapper.find('div').length.should.equal(2);
     wrapper.find('blockquote').length.should.equal(1);
   });
 });
