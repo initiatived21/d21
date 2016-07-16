@@ -12,3 +12,6 @@ header class="c-header"
       -  I18n.available_locales.reject { |l| l == I18n.locale }.each do |locale|
         li
           = link_to t(".#{locale}"), locale: locale, action: params["action"]
+
+      li
+        = react_component 'UserSession', ReactHelper.settings({currentUser: current_user}, params)

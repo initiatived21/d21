@@ -8,7 +8,7 @@
 
 micro = User.create! name: 'Bill Tore',
                      organization: 'Winzigweich Deutschland GmbH',
-                     email: 'bill@example.org',
+                     email: 'user@user.com',
                      password: 'password'
 privat = User.create! name: 'Max Mustermann',
                       email: 'max@example.org',

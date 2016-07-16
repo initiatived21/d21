@@ -12,15 +12,16 @@ export default class PledgeQAs extends ChildComponent {
       response: PropTypes.string,
     }).isRequired,
     formData: PropTypes.object.isRequired,
+    userCanAnswer: PropTypes.bool.isRequired,
   }
 
   render() {
-    const { comment, formData } = this.props
+    const { comment, formData, userCanAnswer } = this.props
 
     let answerDisplayOrForm
     if (comment.response) {
       answerDisplayOrForm = <PledgeAnswer>{comment.response}</PledgeAnswer>
-    } else {
+    } else if (userCanAnswer) {
       answerDisplayOrForm = (
         <AnswerFormContainer id={comment.id} formData={formData} />
       )

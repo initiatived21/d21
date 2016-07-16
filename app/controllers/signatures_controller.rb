@@ -5,6 +5,7 @@ class SignaturesController < ApplicationController
   def create
     @signature = Signature.new
     @signature.pledge_id = params['id']
+    authorize @signature
     @form = NewSignatureForm.new(@signature)
     if @form.validate(signature_params)
       create_success!

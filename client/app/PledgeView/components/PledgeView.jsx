@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import Pledge from './Pledge'
-import PledgeAdditionalForms from './PledgeAdditionalForms'
+import PledgeSidebarContainer from '../containers/PledgeSidebarContainer'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
 import SigneeListContainer from '../containers/SigneeListContainer'
@@ -11,8 +11,12 @@ import SigneeListContainer from '../containers/SigneeListContainer'
 export default class PledgeView extends RootComponent {
   static propTypes = {
     pledge: PropTypes.object.isRequired,
-    signPledgeForm: PropTypes.object.isRequired,
-    commentForms: PropTypes.object.isRequired,
+    forms: PropTypes.shape({
+      signPledgeForm: PropTypes.object.isRequired,
+      updateForm: PropTypes.object.isRequired,
+      questionForm: PropTypes.object.isRequired,
+      answerForm: PropTypes.object.isRequired,
+    }).isRequired,
     signatures: PropTypes.array.isRequired,
     comments: PropTypes.array.isRequired,
     updates: PropTypes.array.isRequired,
@@ -29,11 +33,11 @@ export default class PledgeView extends RootComponent {
           <div className="o-wrapper">
             <div className="o-layout">
               <Pledge {...this.props.pledge} />
-              <PledgeAdditionalForms id={this.props.pledge.id}
-                signPledgeForm={this.props.signPledgeForm} />
+              <PledgeSidebarContainer pledge_id={this.props.pledge.id}
+                forms={this.props.forms} />
               <PledgeUpdatesContainer pledge_id={this.props.pledge.id} />
               <PledgeQAsContainer pledge_id={this.props.pledge.id}
-                formData={this.props.commentForms} />
+                forms={this.props.forms} />
               <SigneeListContainer pledge_id={this.props.pledge.id} />
             </div>
           </div>

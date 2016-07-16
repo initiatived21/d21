@@ -9,8 +9,19 @@ const mapStateToProps = (state, ownProps) => {
       comment => comment.pledge_id == ownProps.pledge_id
     )
 
+  const currentPledge = state.pledges[ownProps.pledge_id]
+  let userCanAskQuestions
+  if (state.currentUser && currentPledge) {
+    userCanAskQuestions = state.currentUser.id != currentPledge.user_id
+  } else {
+    userCanAskQuestions = true
+  }
+
   return {
-    comments
+    comments,
+    userCanAskQuestions,
+    userCanAnswer: !userCanAskQuestions,
+    isSubmitting: false, // TODO
   }
 }
 

@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new
     @comment.pledge_id = params['id']
+    authorize @comment
     @form = NewCommentForm.new(@comment)
     if @form.validate(create_comment_params)
       validate_success!
@@ -15,6 +16,7 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params['id'])
+    authorize @comment
     @form = EditCommentForm.new(@comment)
     if @form.validate(update_comment_params)
       validate_success!

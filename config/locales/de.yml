@@ -8,17 +8,6 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als %{name}
     logout: Abmelden
-  PledgeFeatures:
-    initiator:
-      title: Initiator
-    signees:
-      of: von
-      of_goal: vom Ziel
-      title: Unterzeichner
-    time:
-      closes_on: Endet am
-      days: Tage
-      title: Zeit übrig
   PledgeForm:
     promise:
       part1: Wir versprechen
@@ -227,6 +216,7 @@ de:
         about_link: Über uns
         blog_link: Blog
         contact_link: Kontakt
+        en: 
         facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: FAQ
         howitworks_link: So funktioniert's
@@ -235,6 +225,7 @@ de:
         new_pledge_link: Ich versprech's
         newsletter_link: Newsletter
         press_link: Presse
+        search_link: 
         search_placeholder: z.B. nach Unternehmen suchen
         search_title: Suchen
         start_link: Start
@@ -317,3 +308,18 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
+  Initiator:
+    title: Initiator
+  InitiatorWithImage:
+    title: Initiator
+  PledgeData:
+    initiator:
+      title: Initiator
+    signees:
+      of: von
+      of_goal: vom Ziel
+      title: Unterzeichner
+    time:
+      closes_on: Endet am
+      days: Tage
+      title: Zeit übrig

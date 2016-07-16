@@ -8,17 +8,6 @@ en:
   LoggedIn:
     logged_in_as: Logged in as %{name}
     logout: Logout
-  PledgeFeatures:
-    initiator:
-      title: Initiator
-    signees:
-      of: of
-      of_goal: of goal
-      title: Signees
-    time:
-      closes_on: Closes on
-      days: days
-      title: Time left
   PledgeForm:
     promise:
       part1: We promise
@@ -227,6 +216,7 @@ en:
         about_link: About us
         blog_link: Blog
         contact_link: Contact
+        en: 
         facebook_title: Bunt und Verbindlich on Facebook
         faq_link: FAQ
         howitworks_link: How it works
@@ -235,6 +225,7 @@ en:
         new_pledge_link: Make a pledge
         newsletter_link: Newsletter
         press_link: Press
+        search_link: 
         search_placeholder: e.g. search for companies
         search_title: Search
         start_link: Start
@@ -315,3 +306,18 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
+  Initiator:
+    title: Initiator
+  InitiatorWithImage:
+    title: Initiator
+  PledgeData:
+    initiator:
+      title: Initiator
+    signees:
+      of: of
+      of_goal: of goal
+      title: Signees
+    time:
+      closes_on: Closes on
+      days: days
+      title: Time left

@@ -31,16 +31,30 @@ export default class RootComponent extends React.Component {
     return []
   }
 
-  pushServerProvidedObjectsToState() {
-    if (this.objectsToForwardToState.length == 0) { return }
+  get objectsToForwardToStateUnnormalized() {
+    return []
+  }
 
+  pushServerProvidedObjectsToState() {
     let pushableObject = {}
-    for (let objectName of this.objectsToForwardToState) {
-      merge(
-        pushableObject,
-        normalized(objectName, this.props[objectName]).entities
-      )
+
+    if (this.objectsToForwardToState.length > 0 ||
+        this.objectsToForwardToStateUnnormalized.length > 0) {
+
+      for (let objectName of this.objectsToForwardToState) {
+        if (!this.props[objectName]) { continue }
+
+        merge(
+          pushableObject,
+          normalized(objectName, this.props[objectName]).entities
+        )
+      }
+
+      for (let objectName of this.objectsToForwardToStateUnnormalized) {
+        pushableObject[objectName] = this.props[objectName]
+      }
+
+      store.dispatch(addEntities(pushableObject))
     }
-    store.dispatch(addEntities(pushableObject))
   }
 }

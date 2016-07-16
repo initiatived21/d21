@@ -1,5 +1,6 @@
 class PledgesController < ApplicationController
   before_action :set_new_form, only: [:new, :create]
+  before_action :authenticate!, only: [:request]
 
   def new
     @pledge_props = {
@@ -18,6 +19,7 @@ class PledgesController < ApplicationController
   end
 
   def create
+    authorize @form.model
     if @form.validate(pledge_params)
       create_success!
     else
@@ -30,14 +32,17 @@ class PledgesController < ApplicationController
     @pledge_props = {
       pledge: pledge,
       locale: I18n.locale,
-      signPledgeForm: {
-        formData: {
+      forms: {
+        signPledgeForm: {
           action: signatures_path(id: params[:id], locale: I18n.locale),
           authToken: form_authenticity_token,
           model: 'signature'
-        }
-      },
-      commentForms: {
+        },
+        updateForm: {
+          action: updates_path(id: params[:id], locale: I18n.locale),
+          authToken: form_authenticity_token,
+          model: 'update'
+        },
         questionForm: {
           action: comments_path(id: params[:id], locale: I18n.locale),
           authToken: form_authenticity_token,
@@ -68,6 +73,15 @@ class PledgesController < ApplicationController
     end
   end
 
+  # single-purpose action with which the initiator requests approval of their
+  # draft
+  def finalize
+    @pledge = Pledge.find(params['id'])
+    authorize @pledge
+    @pledge.finalize!
+    redirect_to @pledge
+  end
+
   private
 
   def set_new_form
@@ -78,6 +92,7 @@ class PledgesController < ApplicationController
   def create_success!
     @form.save
     AdminMailer.new_pledge(@form.model.id).deliver_later
+    sign_in @form.model.initiator
     respond_to do |format|
       format.json { render json: { status: 'success' } }
       format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }

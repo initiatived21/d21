@@ -21,8 +21,10 @@ Rails.application.routes.draw do
     # RESTful resources
     resources :pledges, only: [:new, :create, :show, :index] do
       member do
+        patch '/finalize' => 'pledges#finalize', as: :finalize
         resources :signatures, only: [:create]
         resources :comments, only: [:create]
+        resources :updates, only: [:create]
       end
     end
     resources :comments, only: [:update]
