@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #SIGNEE LIST
+\*------------------------------------*/
+
+/**
+ * List of signees on the pledge view page
+ */
+
+.c-signee-list {
+  margin-bottom: $spacing;
+}
+
+.c-signee-list__item {
+  margin-bottom: $spacing--small;
+}
+
+.c-signee-list__signee-data {
+  border-top: 1px solid $light-gray;
+  padding-left: $spacing--tiny;
+  padding-right: $spacing--tiny;
+}
+
+.c-signee-list__item:last-of-type .c-signee-list__signee-data {
+  border-bottom: 1px solid $light-gray;
+}
+
+.c-signee-list__signee-img {
+  margin-top: $spacing--tiny;
+  border-radius: 50px;
+}
+
+.c-signee-list__signee-name {
+  margin-top: $spacing--tiny;
+  margin-bottom: $spacing--tiny;
+  @include font-size(20px, 1.5);
+  color: $primary-color;
+}
+
+.c-signee-list__signee-date {
+  margin-top: $spacing--tiny;
+  @include font-size(14px, 1.5);
+  font-style: italic;
+  color: $gray;
+}

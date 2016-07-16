@@ -34,7 +34,7 @@ export default class Pledge extends ChildComponent {
     const { content, amount, who, requirement, location, deadline, signatures_count, created_at } = this.props;
 
     return (
-      <div className="o-layout__item u-3/4@l">
+      <div className="o-layout__item u-2/3@l">
         <article className="c-pledge">
           <TagList names={['Familie', 'Unterstützung']} />
           <h1>

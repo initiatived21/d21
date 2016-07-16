@@ -25,4 +25,5 @@ h1 {
 
 h2 {
   @include font-size(24px, 1.5);
+  margin-bottom: $spacing;
 }

@@ -15,13 +15,13 @@ export default class Signee extends ChildComponent {
     const { id, name, img_src, comment, created_at } = this.props;
 
     return (
-      <li>
+      <li className="c-signee-list__item">
         <div className="o-media">
-          <img className="o-media__img" src={img_src} width="50" height="50" alt={name} />
-          <div className="o-media__body">
-            <p>{name}</p>
-            <p>{comment}</p>
-            <p>{created_at}</p>
+          <img className="c-signee-list__signee-img o-media__img" src={img_src} width="89" height="89" alt={name} />
+          <div className="c-signee-list__signee-data o-media__body">
+            <h3 className="c-signee-list__signee-name">{name}</h3>
+            <p className="c-signee-list__signee-comment">{comment}</p>
+            <p className="c-signee-list__signee-date">{created_at}</p>
             {/* TODO: display id */}
           </div>
         </div>
