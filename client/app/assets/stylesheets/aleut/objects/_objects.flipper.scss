@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #FLIPPER OBJECT
+\*------------------------------------*/
+
+/**
+ * Provides a two-faced card that is 3d-rotated on mouse-over
+ */
+
+
+// Predefine the variables below in order to alter and enable specific features.
+$o-flipper-speed: 1s !default;
+
+
+.o-flipper {
+  perspective: 1000px; /* entire container, keeps perspective */
+
+  &:hover .o-flipper__inner {
+    transform: rotateY(180deg); /* flip the pane when hovered */
+  }
+}
+
+.o-flipper__inner {
+  transition: transform $o-flipper-speed;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.o-flipper__front, .o-flipper__back {
+  width: 100%;
+  backface-visibility: hidden; /* hide back of pane during swap */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+}
+
+.o-flipper__front {
+  z-index: 2;
+  transform: rotateY(0deg); /* for Firefox 31 */
+}
+
+.o-flipper__back {
+  transform: rotateY(180deg);
+}

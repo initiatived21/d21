@@ -28,22 +28,7 @@ export default class Search extends ChildComponent {
       <Provider store={store}>
         <section>
           <div className='o-wrapper'>
-            <h2>
-              Entdecke interessante Versprechen
-            </h2>
-            <p>
-              Suche nach Schlagwörtern, Orten, Unternehmen oder Organisationen
-            </p>
-
-            <form method="get" action={`/${locale}/pledges`}>
-              <input type="search" name="query" placeholder="Schlagwort, Ort, Unternehmen/Organisation" />
-              <button className="o-btn o-btn--pill o-btn--small" type="submit">
-                Suchen
-              </button>
-            </form>
-
             {resultView}
-
           </div>
         </section>
       </Provider>

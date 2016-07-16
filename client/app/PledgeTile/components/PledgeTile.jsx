@@ -1,13 +1,8 @@
 import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent';
-import PledgeTagList        from './PledgeTagList';
-import PledgeText           from './PledgeText';
-import PledgeInitiator      from './PledgeInitiator';
-import PledgeDaysRemaining  from './PledgeDaysRemaining';
-import PledgeProgress       from './PledgeProgress';
-import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons';
-import { DOMAIN_PROD }      from '../../lib/config';
+import PledgeTileFront      from './PledgeTileFront';
+import PledgeTileBack       from './PledgeTileBack';
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -38,33 +33,32 @@ export default class PledgeTile extends ChildComponent {
 
   render() {
     const { pledge } = this.props;
+    const pledgePath = this.getPledgePath();
 
     const remainingDays = this.getRemainingDays();
     const isUrgent = remainingDays <= 5 ? true : false;
 
     return (
-      <li className="o-layout__item u-1/2@m u-1/3@l">
-        <article className="c-pledge-tile">
-          <a className="c-pledge-tile__link o-box"
-             href={this.getPledgePath()}>
-            <PledgeTagList names={['Familie', 'Frauen', 'Kinder']} />
-            <PledgeInitiator name="Max Mustermann" />
-            <PledgeText
+      <li className="o-layout__item u-1/2@m u-1/3@l u-mb">
+        <article className="c-pledge-tile o-flipper">
+          <div className="c-pledge-tile__inner o-flipper__inner">
+            <PledgeTileFront
+              title="Schulbücher für Willkommensklassen"
+              deadline={pledge.deadline}
+              signatures_count={pledge.signatures_count}
+              signatures_total={pledge.amount}
+              path={pledgePath}
+            />
+            <PledgeTileBack
               content={pledge.content}
               amount={pledge.amount}
               who={pledge.who}
               requirement={pledge.requirement}
+              path={pledgePath}
             />
-            <PledgeProgress
-              amount={pledge.amount}
-              signaturesCount={pledge.signatures_count}
-              remainingDays={remainingDays}
-              urgent={isUrgent}
-            />
-          </a>
-          <SocialMediaButtons url={DOMAIN_PROD + this.getPledgePath()} />
+          </div>
         </article>
       </li>
-    )
+    );
   }
 };

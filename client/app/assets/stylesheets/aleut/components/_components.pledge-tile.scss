@@ -9,23 +9,68 @@
 /**
  * 1. The whole pledge tile is clickable, therefore set neutral text decoration and color.
  *
- * - The plegde-tile component does not create a grid. This is done by the Aleut.css layout object.
- * - TODO: progress bar, social media icons
  */
 
 $pledge-tile-gray: rgb(60%, 60%, 60%);
+$pledge-tile-black: rgb(0%, 0%, 0%);
 $pledge-tile-border-color: rgb(70%, 70%, 70%);
+
+$pledge-tile-height: 400px;
+
+$color-white: rgb(100%, 100%, 100%);
 
 
 .c-pledge-tile {
+  height: $pledge-tile-height;
+}
+
+.c-pledge-tile__title {
+  display: table;
+
+  border-top: 2px solid $pledge-tile-gray;
+  border-bottom: 2px solid $pledge-tile-gray;
+
+  padding-top: $spacing--small;
+  padding-bottom: $spacing--small;
+
+  margin-top: $spacing--small;
+  margin-bottom: $spacing--small;
+
+  width: 100%;
+}
+
+.c-pledge-tile__title > h2 {
+  display: table-cell;
+  vertical-align: middle;
+
+  height: 3em;
+}
+
+.c-pledge-tile__inner {
   border: 1px solid $pledge-tile-border-color;
   border-radius: 8px;
-  margin-bottom: $spacing;
+  background-color: $color-white;
+
+  height: $pledge-tile-height;
+}
+
+.c-pledge-tile__front {
+}
+
+.c-pledge-tile__back {
+
 }
 
 .c-pledge-tile__link {
   text-decoration: none; /* [1] */
   color: $text-color; /* [1] */
+}
+
+.c-pledge-tile__title h2 {
+  @include font-size(22px);
+  color: $pledge-tile-black;
+  text-align: center;
+
 }
 
 .c-pledge-tile__initiator-img {
@@ -45,7 +90,7 @@ $pledge-tile-border-color: rgb(70%, 70%, 70%);
 .c-pledge-tile__text {
   @include font-size(14px);
   color: $text-color;
-  // text-align: center;
+  text-align: center;
 }
 
 .c-pledge-tile__days {
@@ -53,4 +98,29 @@ $pledge-tile-border-color: rgb(70%, 70%, 70%);
   @include font-size(20px);
   font-family: $font-family-heading;
   font-weight: $font-weight-medium;
+}
+
+
+/* Absolute positioning of other components inside of pledge tiles */
+
+.c-pledge-tile .c-social-media {
+  position: absolute;
+  left: $spacing;
+  right: $spacing;
+  bottom: $spacing;
+  text-align: center;
+}
+
+.c-pledge-tile .c-progress {
+  position: absolute;
+  left: $spacing;
+  right: $spacing;
+  bottom: $spacing;
+}
+
+.c-pledge-tile .c-btn {
+  position: absolute;
+  left: $spacing;
+  right: $spacing;
+  bottom: ($spacing + 45px);
 }
