@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import PledgeView from './PledgeView'
 import Pledge from './Pledge'
-import PledgeAdditionalForms from './PledgeAdditionalForms'
+import PledgeSidebar from './PledgeSidebar'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
 import SigneeListContainer from '../containers/SigneeListContainer'
@@ -67,7 +67,7 @@ describe('<PledgeView />', function () {
     wrapper.is(Provider).should.be.true
     wrapper.find('main').length.should.equal(1)
     wrapper.find(Pledge).length.should.equal(1)
-    wrapper.find(PledgeAdditionalForms).length.should.equal(1)
+    wrapper.find(PledgeSidebar).length.should.equal(1)
     wrapper.find(PledgeUpdatesContainer).length.should.equal(1)
     wrapper.find(PledgeQAsContainer).length.should.equal(1)
     wrapper.find(SigneeListContainer).length.should.equal(1)
