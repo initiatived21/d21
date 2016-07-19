@@ -1,9 +1,12 @@
 import merge from 'lodash/merge'
 import assign from 'lodash/assign'
 
-export const initialState = {
+export const generalInitialState = {
   pledges: {},
   tags: [],
+  ui: {
+    searchResultsLoading: false
+  }
 }
 
 export default function generalReducer(state = initialState, action) {
@@ -17,7 +20,7 @@ export default function generalReducer(state = initialState, action) {
       const entityBasePath =
         (action.entityType) ? newState[action.entityType] : newState
       entityBasePath[action.entityId] = action.entity
-      return newState
+      return newState;
 
     case 'UPDATE_FORM_ATTRIBUTE':
       const formBasePath = newState[action.formObjectName]
@@ -29,7 +32,10 @@ export default function generalReducer(state = initialState, action) {
       } else {
         formBasePath[action.attribute] = action.value
       }
-      return newState
+      return newState;
+
+    case 'SET_SEARCH_RESULTS_LOADING_STATE':
+      return merge(newState, { ui: { searchResultsLoading: action.state } });
 
     default:
       return newState
