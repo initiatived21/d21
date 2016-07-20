@@ -19,7 +19,7 @@ describe('InputComponent', function() {
 
       const label = wrapper.find('label');
       label.length.should.equal(1);
-      label.node.htmlFor.should.equal('testModel[testAttribute]');
+      label.node.htmlFor.should.equal('testModel_testAttribute');
     });
 
     it('should output an input tag of default type text', function() {
@@ -28,6 +28,7 @@ describe('InputComponent', function() {
       const input = wrapper.find('input');
       input.length.should.equal(1);
       input.node.type.should.equal('text');
+      input.node.id.should.equal('testModel_testAttribute');
       input.node.name.should.equal('testModel[testAttribute]');
     });
 
@@ -48,13 +49,14 @@ describe('InputComponent', function() {
       const wrapper = mount(React.createElement(InputComponent, submodelProps));
 
       const label = wrapper.find('label');
-      label.node.htmlFor.should.equal('testModel[testSubmodel][testAttribute]');
+      label.node.htmlFor.should.equal('testModel_testSubmodel_testAttribute');
     });
 
     it('should output an input tag with that submodel', function() {
       const wrapper = mount(React.createElement(InputComponent, submodelProps));
 
       const input = wrapper.find('input');
+      input.node.id.should.equal('testModel_testSubmodel_testAttribute');
       input.node.name.should.equal('testModel[testSubmodel][testAttribute]');
     });
   });
@@ -99,6 +101,7 @@ describe('InputComponent', function() {
 
       const area = wrapper.find('textarea');
       area.length.should.equal(1);
+      area.node.id.should.equal('testModel_testAttribute');
       area.node.name.should.equal('testModel[testAttribute]');
     });
   });

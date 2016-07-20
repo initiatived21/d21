@@ -21,10 +21,15 @@ export default class Input extends Component {
       model, attribute, type, submodel, errors, as, object, value,
       formObjectName
     } = this.props;
-    const modelParam = this._modelParam(model, submodel);
+
+    const modelParamName = this._modelParamName(model, submodel);
+    const modelParamId = this._modelParamId(model, submodel);
+
     const submodelKey = submodel ? `.${submodel}` : '';
 
-    const name = `${modelParam}[${attribute}]`
+    const id = `${modelParamId}_${attribute}`
+    const name = `${modelParamName}[${attribute}]`
+
     const placeholder = I18n.t(
       `react_form.${model}${submodelKey}.${attribute}.placeholder`
     )
@@ -44,6 +49,7 @@ export default class Input extends Component {
       case 'textarea':
         field =
           <textarea
+            id={id}
             name={name}
             value={value}
             placeholder={placeholder}
@@ -71,6 +77,7 @@ export default class Input extends Component {
       case 'file': // no value
         field =
           <input
+            id={id}
             type='file'
             name={name}
             placeholder={placeholder}
@@ -80,6 +87,7 @@ export default class Input extends Component {
       default:
         field =
           <input
+            id={id}
             type={type || 'text'}
             name={name}
             value={value}
@@ -99,7 +107,7 @@ export default class Input extends Component {
 
     return(
       <div className={`input-${attribute}`}>
-        <label htmlFor={`${modelParam}[${attribute}]`}>
+        <label htmlFor={id}>
           {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
         </label>
 
@@ -110,9 +118,17 @@ export default class Input extends Component {
     )
   }
 
-  _modelParam(model, submodel) {
+  _modelParamName(model, submodel) {
     if (submodel) {
       return `${model}[${submodel}]`;
+    } else {
+      return model;
+    }
+  }
+
+  _modelParamId(model, submodel) {
+    if (submodel) {
+      return `${model}_${submodel}`;
     } else {
       return model;
     }
