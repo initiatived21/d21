@@ -9,10 +9,11 @@
 
 .c-sign-in {
   position: absolute;
-  width: 250px;
+  width: 320px; /* originally 250px */
   top: 58px;
   right: $spacing--tiny;
 
+  text-align: left;
 
   padding: $spacing;
 
