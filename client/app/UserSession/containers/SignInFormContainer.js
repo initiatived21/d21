@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
+import onClickOutside from 'react-onclickoutside'
+
 import SignInForm from '../components/SignInForm'
-import toggleSignInFormVisibility from '../actions/toggleSignInFormVisibility'
+import { toggleSignInFormVisibility, hideSignInForm } from '../actions/SignInFormActions'
 
 const mapStateToProps = (state, ownProps) => ({
   formData: {
@@ -14,10 +16,15 @@ const mapDispatchToProps = dispatch => ({
   onLoginClick: function(event) {
     event.preventDefault()
     dispatch(toggleSignInFormVisibility())
+  },
+  onWindowClick: function(event) {
+    dispatch(hideSignInForm())
   }
 })
+
+const OnClickOutsideWrappedComponent = onClickOutside(SignInForm)
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignInForm)
+)(OnClickOutsideWrappedComponent)

@@ -41,6 +41,9 @@ export default function generalReducer(state = initialState, action) {
     case 'TOGGLE_SIGN_IN_FORM_VISIBILITY':
       return merge(newState, { ui: { signInFormVisible: !state.ui.signInFormVisible }});
 
+    case 'HIDE_SIGN_IN_FORM':
+      return merge(newState, { ui: { signInFormVisible: false }});
+
     default:
       return newState
   }
