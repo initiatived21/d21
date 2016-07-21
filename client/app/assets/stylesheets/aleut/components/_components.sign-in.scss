@@ -6,12 +6,16 @@
  * Sign-in form
  */
 
+/*
+ *  1. Should be on top of most other stuff.
+ */
 
 .c-sign-in {
   position: absolute;
   width: 320px; /* originally 250px */
   top: 58px;
   right: $spacing--tiny;
+  z-index: 15; /* [1] */
 
   text-align: left;
 
