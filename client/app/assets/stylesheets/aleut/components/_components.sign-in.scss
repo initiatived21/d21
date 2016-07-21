@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    #SIGN-IN FORM
+\*------------------------------------*/
+
+/**
+ * Sign-in form
+ */
+
+
+.c-sign-in {
+  position: absolute;
+  width: 250px;
+  top: 58px;
+  right: $spacing--tiny;
+
+
+  padding: $spacing;
+
+  font-family: "DejaVu Sans", sans-serif;
+  line-height: 1.25;
+  color: $text-color;
+
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+
+  a {
+    display: block;
+  }
+}
+
+.c-sign-in--hidden {
+  display: none;
+}
+
+.c-sign-in__input {
+  margin-bottom: $spacing--small;
+
+  input {
+    width: 100%;
+    padding: $spacing--tiny;
+    border: 1px solid $gray;
+    background-color: transparent;
+    height: 40px;
+  }
+}
+
+.c-sign-in__submit {
+  button {
+    border-color: $primary-color;
+    background-color: $primary-color;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      vertical-align: -4px;
+    }
+  }
+}
+
+.c-sign-in__link {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// SVG
+.c-sign-in__triangle {
+  position: absolute;
+  top: -18px;
+  right: 40px;
+
+  fill: $primary-color;
+}
+
+// Sign-in / sign-out button, TODO: Refactor
+
+/*
+ *  1. Act as container for absolutely-positioned pop-up window
+ */
+
+.c-sign-in__toggle {
+  display: inline-block;
+
+  position: relative; /* [1] */
+}

@@ -28,7 +28,7 @@ export default class UserSession extends RootComponent {
     }
 
     return (
-      <Provider store={store}>
+      <Provider className="hello" store={store}>
         {loggedInOrOutComponent}
       </Provider>
     )
