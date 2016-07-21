@@ -1,7 +1,10 @@
-- if notice
-  p class="notice"
-    = notice
+div
+  div.o-wrapper
+    - if notice
+      p class="notice"
+        = notice
 
-- if alert
-  p class="alert"
-    = alert
+    - if alert
+      p class="alert"
+        = alert
+

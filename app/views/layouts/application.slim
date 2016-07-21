@@ -17,7 +17,7 @@ html lang=I18n.locale
         I18n.locale = '#{I18n.locale}';
 
   body
-    = render '/layouts/partials/flash'
     = render '/layouts/partials/header'
+    = render '/layouts/partials/flash'
     = yield
     = render '/layouts/partials/footer'
