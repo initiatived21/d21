@@ -5,7 +5,8 @@ export const generalInitialState = {
   pledges: {},
   tags: [],
   ui: {
-    searchResultsLoading: false
+    searchResultsLoading: false,
+    signInFormVisible: false
   }
 }
 
@@ -36,6 +37,9 @@ export default function generalReducer(state = initialState, action) {
 
     case 'SET_SEARCH_RESULTS_LOADING_STATE':
       return merge(newState, { ui: { searchResultsLoading: action.state } });
+
+    case 'TOGGLE_SIGN_IN_FORM_VISIBILITY':
+      return merge(newState, { ui: { signInFormVisible: !state.ui.signInFormVisible }});
 
     default:
       return newState
