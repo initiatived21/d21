@@ -130,15 +130,28 @@ export default class Input extends Component {
       combinedClassName += ` ${className}`;
     }
 
-    return(
-      <div className={combinedClassName}>
-        {labelElement}
+    if (type === 'checkbox') {
+      return (
+        <div className={combinedClassName}>
+          {field}
 
-        {field}
+          {labelElement}
 
-        {errorSpan}
-      </div>
-    )
+          {errorSpan}
+        </div>
+      )
+    }
+    else {
+      return (
+        <div className={combinedClassName}>
+          {labelElement}
+
+          {field}
+
+          {errorSpan}
+        </div>
+      )
+    }
   }
 
   _modelParamName(model, submodel) {
