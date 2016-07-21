@@ -14,13 +14,14 @@ export default class Input extends Component {
     inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
-    as: PropTypes.string
+    as: PropTypes.string,
+    className: PropTypes.string
   };
 
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
-      inlineLabel, formObjectName
+      inlineLabel, formObjectName, className
     } = this.props;
 
     const modelParamName = this._modelParamName(model, submodel);
@@ -124,9 +125,13 @@ export default class Input extends Component {
         </span>
     }
 
+    let combinedClassName = `input-${attribute}`;
+    if (className) {
+      combinedClassName += ` ${className}`;
+    }
 
     return(
-      <div className={`input-${attribute}`}>
+      <div className={combinedClassName}>
         {labelElement}
 
         {field}

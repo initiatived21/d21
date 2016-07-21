@@ -110,4 +110,13 @@ describe('InputComponent', function() {
       area.node.name.should.equal('testModel[testAttribute]');
     });
   });
+
+  describe('with a className prop', function() {
+    it('should "pass through" its className prop', function() {
+      const wrapper = mount(<InputComponent className="dummy" {...defaultProps} />)
+
+      const div = wrapper.find('div')
+      div.hasClass('dummy').should.be.true
+    })
+  })
 });

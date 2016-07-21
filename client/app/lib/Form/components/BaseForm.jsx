@@ -19,6 +19,7 @@ export default class BaseForm extends ChildComponent {
       errors: PropTypes.object,
       method: PropTypes.string,
     }),
+    className: PropTypes.string
   }
 
   componentWillMount() {
@@ -29,7 +30,7 @@ export default class BaseForm extends ChildComponent {
   }
 
   render() {
-    const { onSubmit, children, multipart } = this.props;
+    const { onSubmit, children, multipart, className } = this.props;
     const { action, authToken, method } = this.props.formData;
     const enctype =
       multipart ? 'multipart/form-data' : 'application/x-www-form-urlencoded'
@@ -43,8 +44,14 @@ export default class BaseForm extends ChildComponent {
       formMethod = method || 'POST'
     }
 
+    let combinedClassName
+    if (className) {
+      combinedClassName = className
+    }
+
     return(
-      <form action={action} method={formMethod} onSubmit={onSubmit} encType={enctype}>
+      <form className={combinedClassName} action={action} method={formMethod} onSubmit={onSubmit}
+        encType={enctype}>
 
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='utf8' value='&#x2713;' />

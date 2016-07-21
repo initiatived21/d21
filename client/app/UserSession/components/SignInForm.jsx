@@ -13,13 +13,14 @@ export default class SignInForm extends ChildComponent {
     return(
       <FormFor
         object={SignInFormObject}
-        formData={this.props.formData}>
+        formData={this.props.formData}
+        className="c-sign-in">
 
-        <Input attribute='email' inlineLabel />
-        <Input attribute='password' type='password' inlineLabel />
-        <Input attribute='remember_me' type='checkbox' />
+        <Input className="c-input" attribute='email' inlineLabel />
+        <Input className="c-input" attribute='password' type='password' inlineLabel />
+        <Input className="c-checkbox" attribute='remember_me' type='checkbox' />
 
-        <button type='submit'>
+        <button className="o-btn o-btn--small" type='submit'>
           Anmelden
           {this.t('.submit')}
         </button>
