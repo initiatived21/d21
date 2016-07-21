@@ -15,15 +15,36 @@ describe('InputComponent', function() {
 
   describe('with minimal props', function() {
     it('should output a default label', function() {
-      const wrapper = mount(React.createElement(InputComponent, defaultProps));
+      const wrapper = mount(<InputComponent {...defaultProps} />);
 
       const label = wrapper.find('label');
       label.length.should.equal(1);
       label.node.htmlFor.should.equal('testModel_testAttribute');
     });
 
+    it('should not output a label in inline label mode', function() {
+      const wrapper = mount(<InputComponent inlineLabel {...defaultProps} />)
+
+      const label = wrapper.find('label')
+      label.length.should.equal(0)
+    })
+
+    it('should set the aria-label attribute in inline label mode', function() {
+      const wrapper = mount(<InputComponent inlineLabel {...defaultProps} />)
+
+      const input = wrapper.find('input')
+      input.node.hasAttribute('aria-label').should.be.true
+    })
+
+    it('should not set the aria-label attribute normally', function() {
+      const wrapper = mount(<InputComponent {...defaultProps} />)
+
+      const input = wrapper.find('input')
+      input.node.hasAttribute('aria-label').should.be.false
+    })
+
     it('should output an input tag of default type text', function() {
-      const wrapper = mount(React.createElement(InputComponent, defaultProps));
+      const wrapper = mount(<InputComponent {...defaultProps} />);
 
       const input = wrapper.find('input');
       input.length.should.equal(1);
@@ -33,7 +54,7 @@ describe('InputComponent', function() {
     });
 
     it('wont output any errors', function() {
-      const wrapper = mount(React.createElement(InputComponent, defaultProps));
+      const wrapper = mount(<InputComponent {...defaultProps} />);
 
       const errors = wrapper.find(`.${errorClass}`);
       errors.length.should.equal(0);
@@ -41,19 +62,15 @@ describe('InputComponent', function() {
   });
 
   describe('with a submodel', function() {
-    const submodelProps = Object.assign({}, defaultProps, {
-      submodel: 'testSubmodel'
-    });
-
     it('should output a label containing that submodel', function() {
-      const wrapper = mount(React.createElement(InputComponent, submodelProps));
+      const wrapper = mount(<InputComponent submodel="testSubmodel" {...defaultProps} />);
 
       const label = wrapper.find('label');
       label.node.htmlFor.should.equal('testModel_testSubmodel_testAttribute');
     });
 
     it('should output an input tag with that submodel', function() {
-      const wrapper = mount(React.createElement(InputComponent, submodelProps));
+      const wrapper = mount(<InputComponent submodel="testSubmodel" {...defaultProps} />);
 
       const input = wrapper.find('input');
       input.node.id.should.equal('testModel_testSubmodel_testAttribute');
@@ -62,12 +79,8 @@ describe('InputComponent', function() {
   });
 
   describe('with a valid type', function() {
-    const validTypeProps = Object.assign({}, defaultProps, {
-      type: 'number'
-    });
-
     it('should output an input tag with that type', function() {
-      const wrapper = mount(React.createElement(InputComponent, validTypeProps));
+      const wrapper = mount(<InputComponent type="number" {...defaultProps} />);
 
       const input = wrapper.find('input');
       input.node.type.should.equal('number');
@@ -75,12 +88,8 @@ describe('InputComponent', function() {
   });
 
   describe('with errors', function() {
-    const errorProps = Object.assign({}, defaultProps, {
-      errors: ['foo', 'bar']
-    });
-
     it('must output those errors', function() {
-      const wrapper = mount(React.createElement(InputComponent, errorProps));
+      const wrapper = mount(<InputComponent errors={['foo', 'bar']} {...defaultProps} />);
 
       const errors = wrapper.find(`.${errorClass}`);
       errors.length.should.equal(1);
@@ -89,12 +98,8 @@ describe('InputComponent', function() {
   });
 
   describe('with a textarea type', function() {
-    const areaProps = Object.assign({}, defaultProps, {
-      type: 'textarea'
-    });
-
     it('must output a non-standard input field', function() {
-      const wrapper = mount(React.createElement(InputComponent, areaProps));
+      const wrapper = mount(<InputComponent type="textarea" {...defaultProps} />);
 
       const input = wrapper.find('input');
       input.length.should.equal(0);

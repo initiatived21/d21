@@ -15,8 +15,8 @@ export default class SignInForm extends ChildComponent {
         object={SignInFormObject}
         formData={this.props.formData}>
 
-        <Input attribute='email' />
-        <Input attribute='password' type='password' />
+        <Input attribute='email' inlineLabel />
+        <Input attribute='password' type='password' inlineLabel />
         <Input attribute='remember_me' type='checkbox' />
 
         <button type='submit'>

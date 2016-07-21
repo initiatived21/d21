@@ -11,6 +11,7 @@ export default class Input extends Component {
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.number),
     ]).isRequired,
+    inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
     as: PropTypes.string
@@ -19,7 +20,7 @@ export default class Input extends Component {
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
-      formObjectName
+      inlineLabel, formObjectName
     } = this.props;
 
     const modelParamName = this._modelParamName(model, submodel);
@@ -29,10 +30,19 @@ export default class Input extends Component {
 
     const id = `${modelParamId}_${attribute}`
     const name = `${modelParamName}[${attribute}]`
-
+    const label = I18n.t(
+      `react_form.${model}${submodelKey}.${attribute}.label`
+    )
     const placeholder = I18n.t(
       `react_form.${model}${submodelKey}.${attribute}.placeholder`
     )
+
+    let ariaLabel, placeholderOrLabel = placeholder
+    if (inlineLabel) {
+      ariaLabel = label
+      placeholderOrLabel = label
+    }
+
     const onChange = e => {
       this.props.onChange(
         formObjectName, attribute, submodel, $(e.target).val()
@@ -43,6 +53,15 @@ export default class Input extends Component {
             //     changes ? changes.map(change => change.value) : null
             //   this.props.onChange(formObjectName, attribute, changesToSave)
             // }}
+
+    let labelElement
+    if (!inlineLabel) {
+      labelElement = (
+        <label htmlFor={id}>
+          {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
+        </label>
+      )
+    }
 
     let field
     switch (type) {
@@ -91,7 +110,8 @@ export default class Input extends Component {
             type={type || 'text'}
             name={name}
             value={value}
-            placeholder={placeholder}
+            placeholder={placeholderOrLabel}
+            aria-label={ariaLabel}
             onChange={onChange}
           />
     }
@@ -107,9 +127,7 @@ export default class Input extends Component {
 
     return(
       <div className={`input-${attribute}`}>
-        <label htmlFor={id}>
-          {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
-        </label>
+        {labelElement}
 
         {field}
 
