@@ -1,20 +1,19 @@
 /*------------------------------------*\
-    #INPUT
+    #TEXTAREA
 \*------------------------------------*/
 
 /**
- * Normal input component
+ * textarea component
  */
 
-.c-input {
+.c-textarea {
   margin-bottom: $spacing--small;
 
-  > input {
+  > textarea {
     width: 100%;
     padding: $spacing--tiny;
     border: 1px solid $gray;
     border-radius: 5px;
     background-color: transparent;
-    height: 40px;
   }
 }

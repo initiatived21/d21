@@ -19,9 +19,9 @@ export default class PledgeQAs extends ChildComponent {
         ajax={true}
         formData={formData}>
 
-        <Input attribute='content' />
+        <Input className="c-input u-1/2" attribute='content' />
 
-        <button className="o-btn" type="submit" disabled={isSubmitting}>
+        <button className="o-btn o-btn--small" type="submit" disabled={isSubmitting}>
           {this.t('.submit')}
         </button>
       </FormFor>

@@ -37,6 +37,10 @@ $primary-color: rgb(12%, 44%, 72%);
 $secondary-color: rgb(71%, 6%, 5%);
 $tertiary-color: rgb(95%, 57%, 0%);
 
+$primary-color-highlight: lighten($primary-color, 5%);
+$secondary-color-highlight: lighten($secondary-color, 5%);
+$tertiary-color-highlight: lighten($tertiary-color, 5%);
+
 $primary-color-lighter: rgb(38%, 61%, 80%);
 $secondary-color-lighter: rgb(80%, 34%, 33%);
 $tertiary-color-lighter: rgb(96%, 70%, 30%);
