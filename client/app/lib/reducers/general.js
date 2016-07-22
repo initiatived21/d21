@@ -6,7 +6,7 @@ export const generalInitialState = {
   tags: [],
   ui: {
     searchResultsLoading: false,
-    signInFormVisible: false
+    sessionPopupVisible: false
   }
 }
 
@@ -38,11 +38,11 @@ export default function generalReducer(state = initialState, action) {
     case 'SET_SEARCH_RESULTS_LOADING_STATE':
       return merge(newState, { ui: { searchResultsLoading: action.state } });
 
-    case 'TOGGLE_SIGN_IN_FORM_VISIBILITY':
-      return merge(newState, { ui: { signInFormVisible: !state.ui.signInFormVisible }});
+    case 'TOGGLE_SESSION_POPUP':
+      return merge(newState, { ui: { sessionPopupVisible: !state.ui.sessionPopupVisible }});
 
-    case 'HIDE_SIGN_IN_FORM':
-      return merge(newState, { ui: { signInFormVisible: false }});
+    case 'HIDE_SESSION_POPUP':
+      return merge(newState, { ui: { sessionPopupVisible: false }});
 
     default:
       return newState

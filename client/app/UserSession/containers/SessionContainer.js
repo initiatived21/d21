@@ -2,19 +2,19 @@ import { connect } from 'react-redux'
 import onClickOutside from 'react-onclickoutside'
 
 import Session from '../components/Session'
-import { toggleSignInFormVisibility, hideSignInForm } from '../actions/SignInFormActions'
+import { toggleSessionPopup, hideSessionPopup } from '../actions/SessionActions'
 
 const mapStateToProps = (state, ownProps) => ({
-  isVisible: state.ui.signInFormVisible
+  isVisible: state.ui.sessionPopupVisible
 })
 
 const mapDispatchToProps = dispatch => ({
   onLoginClick: function(event) {
     event.preventDefault()
-    dispatch(toggleSignInFormVisibility())
+    dispatch(toggleSessionPopup())
   },
   onWindowClick: function(event) {
-    dispatch(hideSignInForm())
+    dispatch(hideSessionPopup())
   }
 })
 

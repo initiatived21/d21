@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #INPUT
+\*------------------------------------*/
+
+/**
+ * Normal input component
+ */
+
+.c-input {
+  margin-bottom: $spacing--small;
+
+  > input {
+    width: 100%;
+    padding: $spacing--tiny;
+    border: 1px solid $gray;
+    background-color: transparent;
+    height: 40px;
+  }
+}

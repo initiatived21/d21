@@ -18,7 +18,7 @@ export default class BaseForm extends ChildComponent {
     }
 
     return(
-      <form style={{ display: 'inline-block' }} action={action} method='POST'>
+      <form action={action} method='POST'>
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='_method' value={method} />
         <button className={className} type='submit'>{children}</button>

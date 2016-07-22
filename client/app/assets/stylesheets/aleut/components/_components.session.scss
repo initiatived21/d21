@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    #SESSION
+\*------------------------------------*/
+
+/**
+ * Session pop-up container
+ */
+
+/*
+ *  1. Should be on top of most other stuff.
+ *  2. Reset of text-align needed because of parent elements.
+ *  3. Acts as container for absolutely-positioned pop-up window.
+ */
+
+.c-session {
+  display: inline-block;
+
+  position: relative;  /* [3] */
+}
+
+// We need this element temporarily
+.c-session__root-element {
+  display: inline-block;
+}
+
+.c-session__triangle {
+  position: absolute;
+  top: -18px;
+  right: 40px;
+
+  fill: $primary-color;
+}
+
+.c-session__toggle {
+  display: inline-block;
+
+  background-color: $primary-color;
+
+  height: 40px;
+
+  margin-left: $spacing;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  > svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+
+    fill: $white;
+  }
+
+  user-select: none;
+}
+
+.c-session__window {
+  position: absolute;
+  width: 320px; /* originally 250px */
+  top: 58px;
+  right: $spacing--tiny;
+  z-index: 15; /* [1] */
+
+  text-align: left; /* [2] */
+
+  padding: $spacing;
+
+  line-height: 1.25;
+  color: $text-color;
+
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.c-session__window--hidden {
+  display: none;
+}
+
+.c-session__submit {
+  border-color: $primary-color;
+  background-color: $primary-color;
+
+  > svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+  }
+}
+
+.c-session__link {
+  display: block;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

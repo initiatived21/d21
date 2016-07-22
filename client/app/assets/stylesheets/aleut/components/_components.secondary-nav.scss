@@ -78,26 +78,3 @@ $lang-nav-active-color: rgb(0%, 0%, 0%);
     border-bottom-right-radius: 5px;
   }
 }
-
-
-.c-secondary-nav__sign-in {
-  background-color: $primary-color;
-
-  height: 40px;
-
-  margin-left: $spacing;
-
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
-    vertical-align: middle;
-  }
-
-  user-select: none;
-}
