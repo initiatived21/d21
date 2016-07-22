@@ -4,7 +4,6 @@ class PledgesController < ApplicationController
 
   def new
     @pledge_props = {
-      locale: I18n.locale,
       formData: {
         action: pledges_path,
         authToken: form_authenticity_token,
@@ -31,7 +30,6 @@ class PledgesController < ApplicationController
     pledge = Pledge.find(params[:id])
     @pledge_props = {
       pledge: pledge,
-      locale: I18n.locale,
       forms: {
         signPledgeForm: {
           action: signatures_path(id: params[:id], locale: I18n.locale),
@@ -62,17 +60,6 @@ class PledgesController < ApplicationController
   end
 
   def index
-    if (params[:range])
-      ends = params[:range].split('..').map{|d| Integer(d)}
-      offset = ends[0]
-      limit = ends[1] - ends[0] + 1
-    else
-      offset = 0
-      limit = 1
-    end
-
-    @query = params[:query]
-
     search = Search.new(params)
 
     if search.empty?
@@ -81,17 +68,19 @@ class PledgesController < ApplicationController
       @result_count = 0
     else
       search.run
-      @result_count = search.results.count
-      @pledges = search.results.offset(offset).limit(limit)
+      @pledges = search.results
       @result_ids = @pledges.ids
+      @result_count = search.unscoped_results.count
     end
 
     respond_to do |format|
       format.html do
       end
       format.json do
-        render json: { status: 'success', query: @query, pledges: @pledges, resultIds: @result_ids,
-          resultCount: @result_count }
+        render json: {
+          status: 'success', query: search.query, pledges: @pledges,
+          resultIds: @result_ids, resultCount: @result_count
+        }
       end
     end
   end

@@ -1,27 +1,31 @@
-import React       from 'react';
-import { shallow } from 'enzyme';
+import React       from 'react'
+import { shallow } from 'enzyme'
 
-import PledgeSidebar from './PledgeSidebar';
-import SignPledgeFormContainer from '../containers/SignPledgeFormContainer';
-import ReportPledgeForm from './ReportPledgeForm';
+import PledgeSidebar from './PledgeSidebar'
+import SignPledgeFormContainer from '../containers/SignPledgeFormContainer'
+import ReportPledgeForm from './ReportPledgeForm'
 
 describe('<PledgeSidebar />', function () {
   const props = {
-    id: 1,
+    pledge_id: 1,
 
-    signPledgeForm: {
-      formData: {
+    forms: {
+      signPledgeForm: {
         action: '/',
         authToken: 'a',
         model: 'signature'
       }
-    }
-  };
+    },
+    isPreview: false,
+    isDraft: false,
+    activateAction: '/',
+    userIsInitiator: false,
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeSidebar {...props} />);
+    const wrapper = shallow(<PledgeSidebar {...props} />)
 
-    wrapper.find(SignPledgeFormContainer).length.should.equal(1);
-    wrapper.find(ReportPledgeForm).length.should.equal(1);
-  });
-});
+    wrapper.find(SignPledgeFormContainer).length.should.equal(1)
+    wrapper.find(ReportPledgeForm).length.should.equal(1)
+  })
+})

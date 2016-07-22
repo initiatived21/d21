@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import PledgeView from './PledgeView'
 import Pledge from './Pledge'
-import PledgeSidebar from './PledgeSidebar'
+import PledgeSidebarContainer from '../containers/PledgeSidebarContainer'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
 import SigneeListContainer from '../containers/SigneeListContainer'
@@ -23,16 +23,19 @@ describe('<PledgeView />', function () {
       created_at: '2016-09-01T12:45:22.964Z'
     },
 
-    signPledgeForm: {
-      formData: {
+    forms: {
+      signPledgeForm: {
         action: '/',
         authToken: 'a',
         model: 'signature',
         object: { object: { fields: {} } }
-      }
-    },
-
-    commentForms: {
+      },
+      updateForm: {
+        action: '/',
+        authToken: 'a',
+        model: 'update',
+        object: { object: { fields: {} } }
+      },
       questionForm: {
         action: '/',
         authToken: 'a',
@@ -44,16 +47,7 @@ describe('<PledgeView />', function () {
         authToken: 'a',
         model: 'comment',
         object: { object: { fields: {} } }
-      }
-    },
-
-    questionForm: {
-      formData: {
-        action: '/',
-        authToken: 'a',
-        model: 'comment',
-        object: { object: { fields: {} } }
-      }
+      },
     },
 
     signatures: [],
@@ -67,7 +61,7 @@ describe('<PledgeView />', function () {
     wrapper.is(Provider).should.be.true
     wrapper.find('main').length.should.equal(1)
     wrapper.find(Pledge).length.should.equal(1)
-    wrapper.find(PledgeSidebar).length.should.equal(1)
+    wrapper.find(PledgeSidebarContainer).length.should.equal(1)
     wrapper.find(PledgeUpdatesContainer).length.should.equal(1)
     wrapper.find(PledgeQAsContainer).length.should.equal(1)
     wrapper.find(SigneeListContainer).length.should.equal(1)

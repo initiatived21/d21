@@ -16,8 +16,13 @@ describe PledgesController do
   end
 
   describe "GET 'index'" do
-    it 'should work' do
+    it 'should work for an html request' do
       get :index, params: { locale: 'de' }
+      assert_response :success
+    end
+
+    it 'should work for a json request' do
+      get :index, params: { locale: 'de' }, format: 'json'
       assert_response :success
     end
   end
@@ -59,6 +64,17 @@ describe PledgesController do
                       params: { locale: 'de', pledge: { foo: 'bar' } }
         assert_response 200
       end
+    end
+  end
+
+  describe 'PATCH finalize' do
+    it 'must call finalize! on the pledge with the given id' do
+      spyPledge = Pledge.new
+      Pledge.expects(:find).with('99').returns spyPledge
+      spyPledge.expects(:finalize!)
+
+      patch :finalize, params: { locale: 'de', id: '99' }
+      assert_response 302
     end
   end
 end
