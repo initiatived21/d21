@@ -10,10 +10,6 @@ export default class SignInForm extends ChildComponent {
     isVisible: PropTypes.bool.isRequired
   }
 
-  handleClickOutside(event) {
-    this.props.onWindowClick(event)
-  }
-
   render() {
     const { isVisible, onLoginClick } = this.props
 
