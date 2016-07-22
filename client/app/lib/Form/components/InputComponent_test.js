@@ -17,8 +17,13 @@ describe('InputComponent', function() {
     it('should output a default label', function() {
       const wrapper = mount(<InputComponent {...defaultProps} />);
 
+      const div = wrapper.find('div')
+      div
+        .children().nodes
+        .map((el) => el.constructor.name)
+        .should.deep.equal(['HTMLLabelElement', 'HTMLInputElement'])
+
       const label = wrapper.find('label');
-      label.length.should.equal(1);
       label.node.htmlFor.should.equal('testModel_testAttribute');
     });
 
@@ -110,6 +115,18 @@ describe('InputComponent', function() {
       area.node.name.should.equal('testModel[testAttribute]');
     });
   });
+
+  describe('with a checkbox type', function() {
+    it ('should render the label after the input element', function() {
+      const wrapper = mount(<InputComponent type="checkbox" {...defaultProps} />)
+
+      const div = wrapper.find('div')
+      div
+        .children().nodes
+        .map((el) => el.constructor.name)
+        .should.deep.equal(['HTMLInputElement', 'HTMLLabelElement'])
+    })
+  })
 
   describe('with a className prop', function() {
     it('should "pass through" its className prop', function() {
