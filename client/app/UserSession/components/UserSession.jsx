@@ -5,7 +5,7 @@ import RootComponent from '../../lib/Base/components/RootComponent';
 import SignInFormContainer from '../containers/SignInFormContainer';
 import LoggedIn from './LoggedIn';
 
-export default class NewPledge extends RootComponent {
+export default class UserSession extends RootComponent {
   static propTypes = {
     currentUser: PropTypes.object.isRequired,
     authToken: PropTypes.string.isRequired,
