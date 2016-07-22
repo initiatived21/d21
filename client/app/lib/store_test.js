@@ -6,7 +6,7 @@ describe('store', function() {
     tags: [],
     ui: {
       searchResultsLoading: false,
-      signInFormVisible: false
+      sessionPopupVisible: false
     },
     isSubmitting: {}
   };
