@@ -4,6 +4,7 @@ import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent';
 import ActivePledgeForm from '../containers/ActivePledgeForm';
 import NewPledgeFormObject from '../../lib/form_objects/new_pledge_form';
+import PledgeFormHelp from './PledgeFormHelp'
 
 export default class NewPledge extends RootComponent {
   static propTypes = {
@@ -14,9 +15,16 @@ export default class NewPledge extends RootComponent {
   render() {
     return (
       <Provider store={store}>
-        <ActivePledgeForm
-          formData={this.props.formData}
-          tags={this.props.tags} />
+        <div className="o-wrapper o-layout">
+          <div className="o-layout__item u-1/2@m u-2/3@l">
+            <ActivePledgeForm
+              formData={this.props.formData}
+              tags={this.props.tags} />
+          </div>
+          <div className="o-layout__item u-1/2@m u-1/3@l">
+            <PledgeFormHelp />
+          </div>
+        </div>
       </Provider>
     )
   }
