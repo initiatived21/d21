@@ -1,5 +1,7 @@
 import React, { PropTypes  } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import I18n from 'i18n-js'
+import { FAQ_PATH } from '../../lib/config'
 
 export default class PledgeFormHelp extends ChildComponent {
   static propTypes = {
@@ -46,7 +48,7 @@ export default class PledgeFormHelp extends ChildComponent {
             </svg>
             <div className="o-media__body">
               <h3>Sie haben weitere Fragen?</h3>
-              <p><a href="">Schauen Sie in unseren FAQ nach.</a></p>
+              <p><a href={`/${I18n.locale}${FAQ_PATH}`}>Schauen Sie in unseren FAQ nach.</a></p>
             </div>
           </div>
 

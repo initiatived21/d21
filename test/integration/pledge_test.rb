@@ -21,13 +21,13 @@ class PledgeTest < Minitest::Capybara::Spec
     within('.input-deadline') { page.must_have_content('must be filled') }
     within('.input-description') { page.wont_have_content('must be filled') }
     within('.input-tag_ids') { page.wont_have_content('must be filled') }
-    within('.PledgeForm-UserData .input-name') do
+    within('.c-new-pledge__user-data .input-name') do
       page.wont_have_content('must be filled')
     end
-    within('.PledgeForm-UserData .input-email') do
+    within('.c-new-pledge__user-data .input-email') do
       page.wont_have_content('must be filled')
     end
-    within('.PledgeForm-UserData .input-password') do
+    within('.c-new-pledge__user-data .input-password') do
       page.wont_have_content('must be filled')
     end
   end
