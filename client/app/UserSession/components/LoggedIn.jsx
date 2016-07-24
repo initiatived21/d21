@@ -11,10 +11,16 @@ export default class LoggedIn extends ChildComponent {
 
   render() {
     const { currentUser, authToken } = this.props
+    const profileLink = (
+      <a href={`/${I18n.locale}/users/profile`}>
+        {currentUser.name}
+      </a>
+    )
 
     return (
       <div className='LoggedIn'>
-        {this.t('.logged_in_as', { name: currentUser.name })}
+        {this.t('.logged_in_as') + ' '}
+        {profileLink}
         <ButtonFor action='/users/sign_out' method='DELETE'>
           {this.t('.logout')}
         </ButtonFor>

@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     get '/howitworks' => 'pages#howitworks', as: :howitworks
     get '/sitemap' => 'pages#sitemap', as: :sitemap
 
+    get '/users/profile' => 'users#profile', as: :profile
+
     # RESTful resources
     resources :pledges, only: [:new, :create, :show, :index] do
       member do

@@ -7,18 +7,9 @@ import Input from '../../lib/Form/containers/Input'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
-    // onSubmit: PropTypes.func.isRequired,
     formData: PropTypes.object.isRequired,
     availableTags: PropTypes.array.isRequired,
-    // newPledge: PropTypes.object.isRequired,
   }
-
-  // componentWillMount() {
-  //   this.props.ensurePledgeObjectExistence(
-  //     this.props.newPledge, this.props.editedPledge,
-  //     this.props.existingAttributes
-  //   )
-  // }
 
   render() {
     return(

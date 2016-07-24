@@ -65,8 +65,16 @@ export default class BaseForm extends ChildComponent {
         const { formData, formObject } = this.props
 
         let errors = undefined
-        if (formData.object && formData.object.errors) {
-          errors = formData.object.errors.errors[child.props.attribute]
+        if (formData.object) {
+          if (
+            child.props.submodel &&
+              formData.object.fields[child.props.submodel].errors
+          ) {
+            errors = formData.object.fields[child.props.submodel]
+              .errors.errors[child.props.attribute]
+          } else if (formData.object.errors) {
+            errors = formData.object.errors.errors[child.props.attribute]
+          }
         }
 
         return React.cloneElement(child, {

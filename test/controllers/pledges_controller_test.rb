@@ -29,6 +29,14 @@ describe PledgesController do
 
   describe "POST 'create'" do
     describe 'when sending valid params' do
+      before do
+        PledgesController.disable_sign_in!
+      end
+
+      after do
+        PledgesController.enable_sign_in!
+      end
+
       let(:pledge_params) do
         pledges(:active).attributes.merge(
           initiator: users(:pledger).attributes.merge(password: 'abc')
