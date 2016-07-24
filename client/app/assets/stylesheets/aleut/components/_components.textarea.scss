@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #TEXTAREA
+\*------------------------------------*/
+
+/**
+ * textarea component
+ */
+
+.c-textarea {
+  margin-bottom: $spacing--small;
+
+  > textarea {
+    width: 100%;
+    padding: $spacing--tiny;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+}

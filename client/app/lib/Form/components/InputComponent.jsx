@@ -11,23 +11,39 @@ export default class Input extends Component {
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.number),
     ]).isRequired,
+    inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
-    as: PropTypes.string
+    as: PropTypes.string,
+    className: PropTypes.string
   };
 
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
-      formObjectName
+      inlineLabel, formObjectName, className
     } = this.props;
-    const modelParam = this._modelParam(model, submodel);
+
+    const modelParamName = this._modelParamName(model, submodel);
+    const modelParamId = this._modelParamId(model, submodel);
+
     const submodelKey = submodel ? `.${submodel}` : '';
 
-    const name = `${modelParam}[${attribute}]`
+    const id = `${modelParamId}_${attribute}`
+    const name = `${modelParamName}[${attribute}]`
+    const label = I18n.t(
+      `react_form.${model}${submodelKey}.${attribute}.label`
+    )
     const placeholder = I18n.t(
       `react_form.${model}${submodelKey}.${attribute}.placeholder`
     )
+
+    let ariaLabel, placeholderOrLabel = placeholder
+    if (inlineLabel) {
+      ariaLabel = label
+      placeholderOrLabel = label
+    }
+
     const onChange = e => {
       this.props.onChange(
         formObjectName, attribute, submodel, $(e.target).val()
@@ -39,11 +55,21 @@ export default class Input extends Component {
             //   this.props.onChange(formObjectName, attribute, changesToSave)
             // }}
 
+    let labelElement
+    if (!inlineLabel) {
+      labelElement = (
+        <label htmlFor={id}>
+          {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
+        </label>
+      )
+    }
+
     let field
     switch (type) {
       case 'textarea':
         field =
           <textarea
+            id={id}
             name={name}
             value={value}
             placeholder={placeholder}
@@ -71,6 +97,7 @@ export default class Input extends Component {
       case 'file': // no value
         field =
           <input
+            id={id}
             type='file'
             name={name}
             placeholder={placeholder}
@@ -80,10 +107,12 @@ export default class Input extends Component {
       default:
         field =
           <input
+            id={id}
             type={type || 'text'}
             name={name}
             value={value}
-            placeholder={placeholder}
+            placeholder={placeholderOrLabel}
+            aria-label={ariaLabel}
             onChange={onChange}
           />
     }
@@ -96,23 +125,46 @@ export default class Input extends Component {
         </span>
     }
 
+    let combinedClassName = `input-${attribute}`;
+    if (className) {
+      combinedClassName += ` ${className}`;
+    }
 
-    return(
-      <div className={`input-${attribute}`}>
-        <label htmlFor={`${modelParam}[${attribute}]`}>
-          {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
-        </label>
+    if (type === 'checkbox') {
+      return (
+        <div className={combinedClassName}>
+          {field}
 
-        {field}
+          {labelElement}
 
-        {errorSpan}
-      </div>
-    )
+          {errorSpan}
+        </div>
+      )
+    }
+    else {
+      return (
+        <div className={combinedClassName}>
+          {labelElement}
+
+          {field}
+
+          {errorSpan}
+        </div>
+      )
+    }
   }
 
-  _modelParam(model, submodel) {
+  _modelParamName(model, submodel) {
     if (submodel) {
       return `${model}[${submodel}]`;
+    } else {
+      return model;
+    }
+  }
+
+  _modelParamId(model, submodel) {
+    if (submodel) {
+      return `${model}_${submodel}`;
     } else {
       return model;
     }

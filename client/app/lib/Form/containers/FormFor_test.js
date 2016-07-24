@@ -144,4 +144,13 @@ describe('FormFor', function() {
       })
     })
   })
+
+  describe('with a className prop', function() {
+    it('should "pass through" its className prop', function() {
+      const wrapper = mount(<FormFor className="dummy" {...props} />)
+
+      const form = wrapper.find('form')
+      form.hasClass('dummy').should.be.true
+    })
+  })
 })

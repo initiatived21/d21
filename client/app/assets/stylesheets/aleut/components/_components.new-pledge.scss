@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #NEW PLEDGE
+\*------------------------------------*/
+
+/**
+ * New pledge form
+ */
+
+.c-new-pledge {
+  margin-bottom: $spacing;
+
+  h1 {
+    margin-top: 0;
+    @include font-size(36px, 1.5);
+    font-weight: normal;
+    color: $secondary-color;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  label {
+    display: inline-block;
+  }
+}
+
+.c-new-pledge__pledge-data {
+  padding-bottom: $spacing;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: $spacing;
+}
+
+.c-new-pledge__user-data {
+  margin-top: $spacing--large;
+}
+
+.c-new-pledge__save-draft {
+  border-color: $primary-color;
+  background-color: $primary-color;
+}
+
+.c-new-pledge__preview {
+  border-color: $secondary-color;
+  background-color: $secondary-color;
+}
+
+.c-new-pledge__save-draft, .c-new-pledge__preview {
+  svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: -3px;
+  }
+}

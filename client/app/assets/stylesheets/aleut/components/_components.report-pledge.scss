@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #REPORT PLEDGE
+\*------------------------------------*/
+
+/**
+ * Report pledge form in pledge show view
+ */
+
+.c-report-pledge {
+  margin-bottom: $spacing;
+
+  border: 1px solid $gray;
+  border-radius: 5px;
+
+  background-color: $almost-white;
+}
+
+.c-report-pledge__button {
+  border-radius: 5px;
+
+  background-color: $gray;
+  border-color: $gray;
+
+  > svg {
+    vertical-align: -2px;
+  }
+}

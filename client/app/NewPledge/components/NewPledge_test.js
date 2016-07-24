@@ -42,6 +42,6 @@ describe('NewPledge', function() {
 
     const inputs = wrapper.find('button')
     inputs.length.should.equal(2)
-    inputs.last().node.type.should.equal('submit')
+    inputs.first().node.type.should.equal('submit')
   })
 })

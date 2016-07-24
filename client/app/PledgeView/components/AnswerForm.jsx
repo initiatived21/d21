@@ -22,9 +22,9 @@ export default class AnswerForm extends ChildComponent {
         method='put'
         formData={formData}>
 
-        <Input attribute='response' />
+        <Input className="c-input" attribute='response' />
 
-        <button className='o-btn' type='submit' disabled={isSubmitting}>
+        <button className="o-btn o-btn--small" type='submit' disabled={isSubmitting}>
           {this.t('.submit')}
         </button>
       </FormFor>

@@ -5,7 +5,8 @@ export const generalInitialState = {
   pledges: {},
   tags: [],
   ui: {
-    searchResultsLoading: false
+    searchResultsLoading: false,
+    sessionPopupVisible: false
   }
 }
 
@@ -36,6 +37,12 @@ export default function generalReducer(state = initialState, action) {
 
     case 'SET_SEARCH_RESULTS_LOADING_STATE':
       return merge(newState, { ui: { searchResultsLoading: action.state } });
+
+    case 'TOGGLE_SESSION_POPUP':
+      return merge(newState, { ui: { sessionPopupVisible: !state.ui.sessionPopupVisible }});
+
+    case 'HIDE_SESSION_POPUP':
+      return merge(newState, { ui: { sessionPopupVisible: false }});
 
     default:
       return newState

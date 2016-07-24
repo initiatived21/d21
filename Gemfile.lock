@@ -283,6 +283,8 @@ GEM
     mimemagic (0.3.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    minitest-around (0.3.2)
+      minitest (~> 5.0)
     minitest-capybara (0.8.2)
       capybara (~> 2.2)
       minitest (~> 5.0)
@@ -548,6 +550,7 @@ DEPENDENCIES
   localeapp
   meta_request
   minitest
+  minitest-around
   minitest-capybara
   minitest-line
   minitest-matchers

@@ -12,50 +12,80 @@ export default class PledgeForm extends ChildComponent {
   }
 
   render() {
+    const { onLinkClick } = this.props
+
     return(
-      <section>
-        <div className='o-wrapper'>
-          <h2>Ein Versprechen abgeben</h2>
-          <FormFor multipart
-            object={NewPledgeFormObject}
-            formData={this.props.formData}>
+      <FormFor multipart
+        className="c-new-pledge"
+        object={NewPledgeFormObject}
+        formData={this.props.formData}>
 
-            <div className='PledgeForm-PledgeData'>
+        <h1>Ein Versprechen abgeben</h1>
 
-              <div className='PledgeForm-Sentence'>
-                {this.t('.promise.part1')}
-                <Input attribute='content' />
-                {this.t('.promise.part2')}
-                <Input attribute='amount' type='number' />
-                <Input attribute='who' />
-                <Input attribute='requirement' />
-              </div>
+        <p>
+          Sie haben bereits ein Nutzerkonto?
+          {' '}
+          <a href="#" onClick={onLinkClick}>
+            Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
+          </a>
+        </p>
 
-              <Input attribute='location' />
-              <Input type='date' attribute='deadline' />
-              <Input attribute='description' type='textarea' />
+        <div className='c-new-pledge__pledge-data'>
 
-              <Input type='multiselect' attribute='tag_ids'
-                options={this.props.availableTags} />
+          <div className='PledgeForm-Sentence'>
+            {this.t('.promise.part1')}
+            <Input className="c-input" attribute='content' />
+            {this.t('.promise.part2')}
+            <Input className="c-input" attribute='amount' type='number' />
+            <Input className="c-input" attribute='who' />
+            <Input className="c-input" attribute='requirement' />
+          </div>
 
-              <button type='button' disabled='true' >
-                Entwurf speichern
-              </button>
-            </div>
+          <Input className="c-input" attribute='location' />
+          <Input className="c-input" type='date' attribute='deadline' />
+          <Input className="c-textarea" attribute='description' type='textarea' />
 
-            <div className='PledgeForm-UserData'>
-              <Input submodel='initiator' attribute='avatar' type='file' />
-              <Input submodel='initiator' attribute='name' />
-              <Input submodel='initiator' attribute='email' type='email' />
-              <Input submodel='initiator' attribute='password' type='password' />
-            </div>
-
-            <button type='submit'>
-              {this.t('.submit')}
-            </button>
-          </FormFor>
+          <Input type='multiselect' attribute='tag_ids'
+            options={this.props.availableTags} />
         </div>
-      </section>
+
+        <div className='c-new-pledge__user-data'>
+          <h2>Ihre Daten für Ihr Nutzerkonto</h2>
+
+          <p class="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
+
+          <Input className="c-input" submodel='initiator' attribute='avatar' type='file' />
+          <Input className="c-input" submodel='initiator' attribute='name' />
+          <Input className="c-input" submodel='initiator' attribute='email' type='email' />
+          <Input className="c-input" submodel='initiator' attribute='password' type='password' />
+        </div>
+
+        <div className="o-layout u-mt u-mb-huge">
+          <div className="o-layout__item u-1/3">
+            <button className="c-new-pledge__save-draft o-btn o-btn--small u-mb-small"
+               type="submit">
+              <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/></svg>
+              {` ${this.t('.submit')}`}
+            </button>
+            <p>
+              Speichert Entwurf in Ihrem Nutzerkonto.
+            </p>
+          </div>
+          <div className="o-layout__item u-2/3">
+            <button className="c-new-pledge__preview o-btn o-btn--small u-mb-small"
+              type="button" disabled="true">
+              <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5t-316.5 131.5-316.5-131.5-131.5-316.5q0-121 61-225-229 117-381 353 133 205 333.5 326.5t434.5 121.5 434.5-121.5 333.5-326.5zm-720-384q0-20-14-34t-34-14q-125 0-214.5 89.5t-89.5 214.5q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69-140 230-376.5 368.5t-499.5 138.5-499.5-139-376.5-368q-20-35-20-69t20-69q140-229 376.5-368t499.5-139 499.5 139 376.5 368q20 35 20 69z" fill="#fff"/></svg>
+              {' '}
+              Zur Vorschau
+            </button>
+            <p>
+              Im nächsten Schritt können Sie Ihr Versprechen noch einmal überprüfen, bevor Sie
+              es abschicken.
+            </p>
+          </div>
+        </div>
+
+      </FormFor>
     )
   }
 }

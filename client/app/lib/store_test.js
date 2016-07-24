@@ -5,7 +5,8 @@ describe('store', function() {
     pledges: {},
     tags: [],
     ui: {
-      searchResultsLoading: false
+      searchResultsLoading: false,
+      sessionPopupVisible: false
     },
     isSubmitting: {}
   };

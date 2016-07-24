@@ -109,6 +109,7 @@ group :test do
   # gem 'memory_test_fix' # Sqlite inmemory fix
   gem 'rake'
   gem 'database_cleaner'
+  gem 'minitest-around'
   # gem 'colorize' # use this when RBP quits using `colored`
   gem 'fakeredis'
   gem 'fakeweb', '~> 1.3'

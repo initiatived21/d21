@@ -6,14 +6,50 @@
  * Sign pledge form in pledge show view
  */
 
-/**
- * 1. All form elements are full-width.
- */
-
 .c-sign-pledge {
+  color: $text-color;
+  border: 2px solid $secondary-color;
+  border-radius: 5px;
   margin-bottom: $spacing;
+}
 
-  input[type="text"], input[type="email"], textarea {
-    width: 100%; /* [1] */
+.c-sign-pledge__title {
+  margin-top: 0;
+  padding: $spacing--small $spacing;
+  @include font-size(22px, 1.5);
+  font-weight: normal;
+  color: $white;
+  background-color: $secondary-color;
+
+  user-select: none;
+}
+
+.c-sign-pledge__wrapper {
+  margin: $spacing--small $spacing $spacing;
+}
+
+.c-sign-pledge__small-print {
+  @include font-size(12px, 1.5);
+
+  small {
+    @include font-size(12px, 1.25);
+  }
+}
+
+.c-sign-pledge__submit {
+  @include font-size(24px, 1.5);
+  border-color: $secondary-color;
+  border-radius: 5px;
+  background-color: $secondary-color;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    vertical-align: -7px;
+  }
+
+  &:hover, &:active {
+    background-color: $secondary-color-highlight;
+    border-color: $secondary-color-highlight;
   }
 }

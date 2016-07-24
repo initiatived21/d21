@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import merge from 'lodash/merge'
 import { setEntity } from '../../lib/actions/entityActions'
+import { toggleSessionPopup } from '../../UserSession/actions/SessionActions'
 import PledgeForm from '../components/PledgeForm'
 
 const mapStateToProps = function(state, ownProps) {
@@ -29,6 +30,11 @@ function assembleTags(tags) {
 // }
 
 const mapDispatchToProps = dispatch => ({
+  onLinkClick: function(event) {
+    event.preventDefault()
+    dispatch(toggleSessionPopup())
+  }
+
     // ensurePledgeObjectExistence(formObject, editedPledge, existingAttributes) {
     //   if (editedPledge) { return }
     //   return dispatch(setEntity(
@@ -41,7 +47,7 @@ const mapDispatchToProps = dispatch => ({
     //   return true
     //   return dispatch(submitForm(formData))
     // }
-  })
+})
 
 export default connect(
   mapStateToProps,

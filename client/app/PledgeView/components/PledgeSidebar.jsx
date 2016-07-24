@@ -40,7 +40,7 @@ export default class PledgeSidebar extends ChildComponent {
     }
 
     return (
-      <div className="o-layout__item u-1/3@l">
+      <div className="o-layout__item u-1/2@m u-1/3@l">
         {sidebarField}
         <ReportPledgeForm id={pledge_id} />
       </div>

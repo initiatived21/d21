@@ -8,8 +8,8 @@ class PledgeTest < Minitest::Capybara::Spec
   end
 
   it 'should be possible to create a pledge' do
-    Pledge.destroy_all
     visit '/en/pledges/new'
+    Pledge.active.count.must_equal 1
 
     # Try to submit the form without entering data
     click_button 'Submit'
@@ -22,41 +22,41 @@ class PledgeTest < Minitest::Capybara::Spec
     within('.input-deadline') { page.must_have_content('must be filled') }
     within('.input-description') { page.wont_have_content('must be filled') }
     within('.input-tag_ids') { page.wont_have_content('must be filled') }
-    within('.PledgeForm-UserData .input-name') do
+    within('.c-new-pledge__user-data .input-name') do
       page.must_have_content('must be filled')
     end
-    within('.PledgeForm-UserData .input-email') do
+    within('.c-new-pledge__user-data .input-email') do
       page.must_have_content('must be filled')
     end
-    within('.PledgeForm-UserData .input-password') do
+    within('.c-new-pledge__user-data .input-password') do
       page.must_have_content('must be filled')
     end
 
     # Sucessfully submit the form, make sure it's in preview mode
-    fill_in 'pledge[content]', with: 'fooContent'
+    fill_in 'pledge[content]', with: 'integration1Content'
     fill_in 'pledge[amount]', with: '123'
-    fill_in 'pledge[who]', with: 'fooWho'
-    fill_in 'pledge[requirement]', with: 'fooRequirement'
+    fill_in 'pledge[who]', with: 'integration1Who'
+    fill_in 'pledge[requirement]', with: 'integration1Requirement'
     fill_in 'pledge[deadline]', with: '01-01-2222'
-    fill_in 'pledge[initiator][name]', with: 'fooName'
-    fill_in 'pledge[initiator][email]', with: 'foo@email.com'
-    fill_in 'pledge[initiator][password]', with: 'fooPassword'
+    fill_in 'pledge[initiator][name]', with: 'integration1Name'
+    fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
+    fill_in 'pledge[initiator][password]', with: 'integration1Password'
     click_button 'Submit'
 
-    page.must_have_content 'We promise to fooContent if at least 123 fooWho'\
-                           ' fooRequirement.'
+    page.must_have_content 'We promise to integration1Content if at least 123'\
+                           ' integration1Who integration1Requirement.'
     page.must_have_content 'This is a preview of your pledge.'
     PledgesController.any_instance.stubs(:current_user).returns User.last
 
     visit '/en/pledges'
+    Pledge.active.count.must_equal 1
     page.must_have_content 'activeContent' # fixture pledge
-    page.wont_have_content 'fooContent'
+    page.wont_have_content 'integration1Content'
 
     # I can view the pledge in my profile view
 
-    click_link 'fooName'
-    save_and_open_page
-    page.must_have_content 'fooContent'
+    click_link 'Meine Daten'
+    page.must_have_content 'integration1Content'
     page.must_have_content 'preview'
   end
 end

@@ -2,8 +2,7 @@ import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent';
-import SignInFormContainer from '../containers/SignInFormContainer';
-import LoggedIn from './LoggedIn';
+import SessionContainer from '../containers/SessionContainer';
 
 export default class UserSession extends RootComponent {
   static propTypes = {
@@ -20,16 +19,11 @@ export default class UserSession extends RootComponent {
   }
 
   render() {
-    let loggedInOrOutComponent
-    if (this.props.currentUser) {
-      loggedInOrOutComponent = <LoggedIn currentUser={this.props.currentUser} />
-    } else {
-      loggedInOrOutComponent = <SignInFormContainer />
-    }
+    const { currentUser, authToken } = this.props
 
     return (
       <Provider store={store}>
-        {loggedInOrOutComponent}
+        <SessionContainer authToken={authToken} currentUser={currentUser} />
       </Provider>
     )
   }
