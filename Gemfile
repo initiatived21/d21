@@ -53,6 +53,7 @@ gem 'redis', '>= 3.0'
 
 # image uploads
 gem 'carrierwave'
+gem 'mini_magick'
 
 # Auth
 gem 'devise'
