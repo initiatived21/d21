@@ -12,7 +12,7 @@ class Search
   end
 
   def empty?
-    @query.nil?
+    @query.nil? || @query.empty?
   end
 
   private
