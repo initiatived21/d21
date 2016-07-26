@@ -332,3 +332,15 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
+  StateFooter:
+    active: Delete
+    initialized: Edit
+    requested: Delete
+    successful: Contact signers
+    failed: Republish
+  StateHeader:
+    active: Published
+    failed: not successful
+    initialized: Draft
+    requested: Waiting for Review
+    successful: Successful
