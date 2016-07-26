@@ -46,17 +46,25 @@ class PledgeTest < Minitest::Capybara::Spec
     page.must_have_content 'We promise to integration1Content if at least 123'\
                            ' integration1Who integration1Requirement.'
     page.must_have_content 'This is a preview of your pledge.'
-    PledgesController.any_instance.stubs(:current_user).returns User.last
 
-    visit '/en/pledges'
     Pledge.active.count.must_equal 1
-    page.must_have_content 'activeContent' # fixture pledge
-    page.wont_have_content 'integration1Content'
+    pledge = Pledge.find_by(content: 'integration1Content')
+    pledge.aasm_state.must_equal 'initialized'
 
     # I can view the pledge in my profile view
 
+    PledgesController.any_instance.stubs(:current_user).returns User.last
+    visit '/'
+
     click_link 'Meine Daten'
     page.must_have_content 'integration1Content'
-    page.must_have_content 'preview'
+    page.must_have_content 'Entwurf'
+
+    # I can edit the pledge in preview mode
+
+
+    # I can submit the pledge for admin review, it is still now shown publicly
+
+    # I can login as an admin and approve the
   end
 end

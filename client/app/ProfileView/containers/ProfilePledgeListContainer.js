@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
     )
 
   return {
-    pledges
+    pledges,
+    showControls: true
   }
 }
 

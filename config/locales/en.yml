@@ -51,6 +51,17 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+  StateFooter:
+    contact: Contact signers
+    delete: Delete
+    edit: Edit
+    republish: Republish
+  StateHeader:
+    active: Published
+    failed: not successful
+    initialized: Draft
+    requested: Waiting for Review
+    successful: Successful
   TwitterButton:
     text: 'Sign pledge:'
     title: Share via Twitter
