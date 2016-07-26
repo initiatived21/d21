@@ -23,6 +23,7 @@ capybara-*.html
 .rspec
 
 /public/system
+/public/uploads
 /coverage/
 /jscoverage/
 /spec/tmp
