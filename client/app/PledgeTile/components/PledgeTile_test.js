@@ -15,7 +15,15 @@ describe('<PledgeTile />', function () {
       requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
       deadline: '2016-09-30',
       signatures_count: 5,
-      aasm_state: 'successful'
+      aasm_state: 'successful',
+      initiator: {
+        name: 'Max Mustermann',
+        avatar: {
+          avatar: {
+            url: 'dummy'
+          }
+        }
+      }
     }
   };
 

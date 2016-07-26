@@ -36,7 +36,15 @@ describe('<PledgeList />', function() {
           who: 'test',
           requirement: 'test',
           deadline: '2000-01-01',
-          signatures_count: 0
+          signatures_count: 0,
+          initiator: {
+            name: 'Max Mustermann',
+            avatar: {
+              avatar: {
+                url: 'dummy'
+              }
+            }
+          }
         },
 
         {
@@ -47,7 +55,15 @@ describe('<PledgeList />', function() {
           who: 'test',
           requirement: 'test',
           deadline: '2000-01-01',
-          signatures_count: 0
+          signatures_count: 0,
+          initiator: {
+            name: 'Max Mustermann',
+            avatar: {
+              avatar: {
+                url: 'dummy'
+              }
+            }
+          }
         },
 
         {
@@ -58,7 +74,15 @@ describe('<PledgeList />', function() {
           who: 'test',
           requirement: 'test',
           deadline: '2000-01-01',
-          signatures_count: 0
+          signatures_count: 0,
+          initiator: {
+            name: 'Max Mustermann',
+            avatar: {
+              avatar: {
+                url: 'dummy'
+              }
+            }
+          }
         }
       ]
     };

@@ -9,6 +9,8 @@ import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class PledgeTileFront extends ChildComponent {
   static propTypes = {
+    initiatorName: PropTypes.string.isRequired,
+    initiatorImage: PropTypes.string,
     title: PropTypes.string.isRequired,
     deadline: PropTypes.string.isRequired,
     signatures_count: PropTypes.number.isRequired,
@@ -26,7 +28,8 @@ export default class PledgeTileFront extends ChildComponent {
   }
 
   render() {
-    const { title, deadline, signatures_count, signatures_total, path } = this.props;
+    const { initiatorName, initiatorImage, title, deadline, signatures_count, signatures_total,
+      path } = this.props;
 
     const remainingDays = this.getRemainingDays();
     const isUrgent = remainingDays <= 5 ? true : false;
@@ -38,8 +41,8 @@ export default class PledgeTileFront extends ChildComponent {
         <a className="c-pledge-tile__link o-box"
            href={path}>
           <TagList names={['Familie', 'Frauen', 'Kinder']} />
-          <InitiatorWithImage imageUrl={`${DUMMY_IMAGE_PATH}/schwesig.jpg`}>
-            Max Mustermann
+          <InitiatorWithImage imagePath={initiatorImage}>
+            {initiatorName}
           </InitiatorWithImage>
 
           <div className="c-pledge-tile__title">

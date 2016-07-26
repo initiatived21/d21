@@ -40,15 +40,15 @@ en:
   PledgeUpdates:
     heading: Updates
   ReportPledgeForm:
-    description:
+    description: 
     report_pledge: Report pledge
   SignInForm:
     submit: Sign in
   SignPledgeForm:
-    email_hint:
+    email_hint: 
     i_sign: I sign this pledge.
     sign: Sign
-    small_print:
+    small_print: 
   SigneeList:
     heading: Signees
   StateFooter:
@@ -69,160 +69,160 @@ en:
     title: Share via Xing
   active_admin:
     sidebars:
-      Zustand:
+      Zustand: 
   activerecord:
     attributes:
       admin_user:
-        email:
+        email: 
       pledge:
-        aasm_state:
-        amount:
-        comments:
-        content:
-        created_at:
-        deadline:
-        description:
-        id:
-        initiator:
-        location:
-        pg_search_document:
-        pledges_tags:
-        requirement:
-        signatures:
-        signatures_count:
-        tags:
-        updated_at:
-        updates:
-        user_id:
-        who:
+        aasm_state: 
+        amount: 
+        comments: 
+        content: 
+        created_at: 
+        deadline: 
+        description: 
+        id: 
+        initiator: 
+        location: 
+        pg_search_document: 
+        pledges_tags: 
+        requirement: 
+        signatures: 
+        signatures_count: 
+        tags: 
+        updated_at: 
+        updates: 
+        user_id: 
+        who: 
     models:
-      admin:
-      admin_user:
-      comment:
-      pledge:
+      admin: 
+      admin_user: 
+      comment: 
+      pledge: 
   formtastic:
     actions:
       pledge:
         edit:
-          update:
+          update: 
     hints:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          initiator:
-          location:
-          requirement:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
     labels:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          initiator:
-          location:
-          requirement:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          initiator:
-          location:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          signatures:
-          tags:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
     placeholders:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          description:
-          location:
-          requirement:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          content:
-          description:
-          location:
-          requirement:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          who: 
   helpers:
     label:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          initiator:
-          location:
-          requirement:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          requirement: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          initiator:
-          location:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          signatures:
-          tags:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          initiator: 
+          location: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          signatures: 
+          tags: 
+          updated_at: 
+          updates: 
+          who: 
       user:
-        email:
-        password:
-        remember_me:
+        email: 
+        password: 
+        remember_me: 
   layouts:
     partials:
       footer:
@@ -242,7 +242,7 @@ en:
         about_link: About us
         blog_link: Blog
         contact_link: Contact
-        en:
+        en: 
         facebook_title: Bunt und Verbindlich on Facebook
         faq_link: FAQ
         howitworks_link: How it works
@@ -251,7 +251,7 @@ en:
         new_pledge_link: Make a pledge
         newsletter_link: Newsletter
         press_link: Press
-        search_link:
+        search_link: 
         search_placeholder: e.g. search for companies
         search_title: Search
         start_link: Start
@@ -281,50 +281,50 @@ en:
     pledge:
       amount:
         label: How many?
-        placeholder:
+        placeholder: 
       content:
         label: What?
         placeholder: e.g. to give a refugee family a home
       deadline:
         label: Can be signed until
-        placeholder:
+        placeholder: 
       description:
         label: More Info (optional)
-        placeholder:
+        placeholder: 
       initiator:
         avatar:
           label: Profile Image
         email:
           label: Your Email
-          placeholder:
+          placeholder: 
         name:
           label: Your Name
-          placeholder:
+          placeholder: 
         password:
           label: Password
-          placeholder:
+          placeholder: 
       location:
         label: Location
-        placeholder:
+        placeholder: 
       requirement:
         label: Do what?
-        placeholder:
+        placeholder: 
       tag_ids:
-        label:
-        placeholder:
+        label: 
+        placeholder: 
       who:
         label: Who?
-        placeholder:
+        placeholder: 
     signature:
       anonymous:
         label: Don't publish my name
       contact_person:
         label: I am the contact person
       email:
-        label:
+        label: 
         placeholder: Email*
       name:
-        label:
+        label: 
         placeholder: Name*
       organization:
         placeholder: Company or Organization (optional)

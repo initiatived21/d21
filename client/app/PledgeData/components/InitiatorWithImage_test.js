@@ -4,7 +4,7 @@ import InitiatorWithImage from './InitiatorWithImage';
 
 describe('<InitiatorWithImage />', function () {
   const props = {
-    imageUrl: 'dummy'
+    imagePath: 'dummy'
   };
 
   it('should render', function () {

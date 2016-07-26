@@ -7,6 +7,7 @@ import SocialMediaButtons  from '../../SocialMediaButtons/components/SocialMedia
 
 describe('<PledgeTileBack />', function () {
   const props = {
+    initiatorName: 'Max Mustermann',
     content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
     amount: 10,
     who: 'Dolmetscher',
