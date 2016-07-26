@@ -323,3 +323,15 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
+  StateFooter:
+    active: Löschen
+    initialized: Bearbeiten
+    requested: Löschen
+    successful: Unterzeichner kontaktieren
+    failed: Erneut einstellen
+  StateHeader:
+    active: Veröffentlicht
+    failed: nicht erfolgreich
+    initialized: Entwurf
+    requested: Wartet auf Freigabe
+    successful: Erfolgreich
