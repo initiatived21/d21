@@ -23,7 +23,8 @@ export default class Pledge extends ChildComponent {
     location: PropTypes.string.isRequired,
     deadline: PropTypes.string.isRequired,
     signatures_count: PropTypes.number.isRequired,
-    created_at: PropTypes.string.isRequired
+    created_at: PropTypes.string.isRequired,
+    user: PropTypes.object.isRequired
   };
 
   getPledgePath() {
@@ -31,7 +32,10 @@ export default class Pledge extends ChildComponent {
   }
 
   render() {
-    const { content, amount, who, requirement, location, deadline, signatures_count, created_at } = this.props;
+    const { content, amount, who, requirement, location, deadline, signatures_count,
+      created_at, user } = this.props;
+
+    const initiator = user.organization ? user.organization : user.name
 
     return (
       <div className="o-layout__item u-2/3@l">
@@ -42,12 +46,15 @@ export default class Pledge extends ChildComponent {
           </h1>
           {/*<PledgeLocation>{location}</PledgeLocation>*/}
           <PledgeQuote
+            imagePath={user.avatar.url}
+            initiatorName={initiator}
             content={content}
             amount={amount}
             who={who}
             requirement={requirement}
           />
           <PledgeData
+            initiator={initiator}
             amount={amount}
             deadline={deadline}
             signatures_count={signatures_count}

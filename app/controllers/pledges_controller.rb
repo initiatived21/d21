@@ -44,6 +44,7 @@ class PledgesController < ApplicationController
           method: 'PATCH'
         }
       },
+      user: pledge.initiator,
       signatures: pledge.signatures,
       updates: pledge.updates,
       comments: pledge.comments

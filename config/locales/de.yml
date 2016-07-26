@@ -104,125 +104,125 @@ de:
     actions:
       pledge:
         edit:
-          update: 
+          update:
     hints:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
+          email:
+          password:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          initiator:
+          location:
+          requirement:
+          who:
     labels:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          initiator:
+          location:
+          requirement:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          comments: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          pg_search_document: 
-          pledges_tags: 
-          requirement: 
-          signatures: 
-          tags: 
-          updated_at: 
-          updates: 
-          who: 
+          aasm_state:
+          amount:
+          comments:
+          content:
+          created_at:
+          deadline:
+          description:
+          initiator:
+          location:
+          pg_search_document:
+          pledges_tags:
+          requirement:
+          signatures:
+          tags:
+          updated_at:
+          updates:
+          who:
     placeholders:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
+          email:
+          password:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          description: 
-          location: 
-          requirement: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          description:
+          location:
+          requirement:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          content: 
-          description: 
-          location: 
-          requirement: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          description:
+          location:
+          requirement:
+          who:
   helpers:
     label:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          initiator:
+          location:
+          requirement:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          comments: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          pg_search_document: 
-          pledges_tags: 
-          requirement: 
-          signatures: 
-          tags: 
-          updated_at: 
-          updates: 
-          who: 
+          aasm_state:
+          amount:
+          comments:
+          content:
+          created_at:
+          deadline:
+          description:
+          initiator:
+          location:
+          pg_search_document:
+          pledges_tags:
+          requirement:
+          signatures:
+          tags:
+          updated_at:
+          updates:
+          who:
       user:
-        email: 
-        password: 
-        remember_me: 
+        email:
+        password:
+        remember_me:
   layouts:
     partials:
       footer:
@@ -242,7 +242,7 @@ de:
         about_link: Über uns
         blog_link: Blog
         contact_link: Kontakt
-        en: 
+        en:
         facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: FAQ
         howitworks_link: So funktioniert's
@@ -251,7 +251,7 @@ de:
         new_pledge_link: Ich versprech's
         newsletter_link: Newsletter
         press_link: Presse
-        search_link: 
+        search_link:
         search_placeholder: z.B. nach Unternehmen suchen
         search_title: Suchen
         start_link: Start
@@ -281,13 +281,13 @@ de:
     pledge:
       amount:
         label: Wie viele?
-        placeholder: 
+        placeholder:
       content:
         label: Was?
         placeholder: z.B. eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
-        placeholder: 
+        placeholder:
       description:
         label: Mehr Infos (optional)
         placeholder: |-
@@ -298,35 +298,35 @@ de:
           label: Profilbild
         email:
           label: Ihre E-Mail
-          placeholder: 
+          placeholder:
         name:
           label: Ihr Name
-          placeholder: 
+          placeholder:
         password:
           label: Passwort
-          placeholder: 
+          placeholder:
       location:
         label: Ort
         placeholder: z.B. Bundesweit
       requirement:
         label: Was tun?
-        placeholder: 
+        placeholder:
       tag_ids:
-        label: 
+        label:
         placeholder: Themenbereiche
       who:
         label: Wer?
-        placeholder: 
+        placeholder:
     signature:
       anonymous:
         label: Namen nicht veröffentlichen
       contact_person:
         label: Ich bin Ansprechpartner
       email:
-        label: 
+        label:
         placeholder: E-Mail*
       name:
-        label: 
+        label:
         placeholder: Name*
       organization:
         placeholder: Unternehmen oder Organisation (optional)

@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 import I18n                 from 'i18n-js';
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
-import { DUMMY_IMAGE_PATH } from '../../lib/config';
+import Avatar from '../../Avatar/components/Avatar'
 
 export default class PledgeQuote extends ChildComponent {
   static propTypes = {
+    imagePath: PropTypes.string,
+    initiatorName: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     who: PropTypes.string.isRequired,
@@ -12,11 +14,11 @@ export default class PledgeQuote extends ChildComponent {
   };
 
   render() {
-    const { content, amount, who, requirement } = this.props;
+    const { imagePath, initiatorName, content, amount, who, requirement } = this.props;
 
     return (
       <div className="c-pledge-view__text o-media o-media__responsive">
-        <img className="o-media__img" src={`${DUMMY_IMAGE_PATH}/schwesig.jpg`} width="89" height="89" alt="Cornelsen Logo" />
+        <Avatar className="o-media__img" name={initiatorName} imagePath={imagePath} />
         <div className="o-media__body">
           <blockquote className="c-pledge-view__quote">
             {this.t('.promise.part1')} {content}{this.t('.promise.part2')} {amount} {who} {requirement}.

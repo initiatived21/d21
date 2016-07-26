@@ -6,20 +6,21 @@ import PledgeState from '../../PledgeData/components/PledgeState';
 
 export default class PledgeData extends ChildComponent {
   static propTypes = {
+    initiator: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     deadline: PropTypes.string.isRequired,
     signatures_count: PropTypes.number.isRequired
   };
 
   render() {
-    const { amount, deadline, signatures_count } = this.props;
+    const { initiator, amount, deadline, signatures_count } = this.props;
 
     return (
       <div className="c-pledge-data">
         <div className="o-layout">
           <div className="c-pledge-data__initiator o-layout__item u-1/3">
             <p className="c-pledge-data__title">{this.t('.initiator.title')}</p>
-            <p>Microsoft Deutschland GmbH</p>
+            <p>{initiator}</p>
           </div>
           <div className="c-pledge-data__signees o-layout__item u-1/3">
             <p className="c-pledge-data__title">{this.t('.signees.title')}</p>

@@ -50,6 +50,13 @@ describe('<PledgeView />', function () {
       },
     },
 
+    user: {
+      name: '',
+      avatar: {
+        url: ''
+      }
+    },
+
     signatures: [],
     comments: [],
     updates: [],
