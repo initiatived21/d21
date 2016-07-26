@@ -30,7 +30,7 @@ export default class StateFooter extends ChildComponent {
     return (
       <div className="c-pledge-tile__state-footer">
         <a href={actionHrefs[action]}>
-          {this.t(`.${state}`)}
+          {this.t(`.${action}`)}
         </a>
       </div>
     )
