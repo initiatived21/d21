@@ -89,7 +89,7 @@ export default class ImageUploadComponent extends Component {
     const image = new Image()
     const self = this
 
-    this.cropImage(image, this.state.imagePreviewUrl, this.state.crop)
+    this.cropImage(image, this.state.imagePreviewUrl, this.state.crop, 200, 200)
 
     image.onload = function() {
       self.setState({
@@ -110,27 +110,63 @@ export default class ImageUploadComponent extends Component {
     image.src = src
   }
 
-  cropImage(imgDest, imgSrc, crop) {
+  scale(options) {
+    var scale = options.scale ||
+      Math.min(options.maxWidth/options.width, options.maxHeight/options.height);
+
+    scale = Math.min(scale, options.maxScale || 1);
+
+    return {
+      scale: scale,
+      width: options.width * scale,
+      height: options.height * scale
+    };
+  }
+
+  cropImage(imgDest, imgSrc, crop, maxWidth, maxHeight) {
     this.loadImage(imgSrc, cropAfterLoad.bind(this))
 
     function cropAfterLoad (loadedImg) {
-      const imageWidth = loadedImg.naturalWidth
-      const imageHeight = loadedImg.naturalHeight
+      var imageWidth = loadedImg.naturalWidth;
+      var imageHeight = loadedImg.naturalHeight;
 
-      const cropX = (crop.x / 100) * imageWidth
-      const cropY = (crop.y / 100) * imageHeight
+      var cropX = (crop.x / 100) * imageWidth;
+      var cropY = (crop.y / 100) * imageHeight;
 
-      const cropWidth = (crop.width / 100) * imageWidth
-      const cropHeight = (crop.height / 100) * imageHeight
+      var cropWidth = (crop.width / 100) * imageWidth;
+      var cropHeight = (crop.height / 100) * imageHeight;
 
-      const canvas = document.createElement('canvas')
-      canvas.width = cropWidth
-      canvas.height = cropHeight
-      const ctx = canvas.getContext('2d')
+      var destWidth = cropWidth;
+      var destHeight = cropHeight;
 
-      ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight)
+      if (maxWidth || maxHeight) {
+          // Scale the crop.
+          var scaledCrop = this.scale({
+              width: cropWidth,
+              height: cropHeight,
+              maxWidth: maxWidth,
+              maxHeight: maxHeight
+          });
 
-      imgDest.src = canvas.toDataURL('image/jpeg')
+          // Scale the image based on the crop scale.
+          var scaledImage = this.scale({
+              scale: scaledCrop.scale,
+              width: imageWidth,
+              height: imageHeight
+          });
+
+          destWidth = scaledCrop.width;
+          destHeight = scaledCrop.height;
+      }
+
+      var canvas = document.createElement('canvas');
+      canvas.width = scaledCrop.width;
+      canvas.height = scaledCrop.height;
+      var ctx = canvas.getContext('2d');
+
+      ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, destWidth, destHeight);
+
+      imgDest.src = canvas.toDataURL('image/jpeg');
     }
   }
 
