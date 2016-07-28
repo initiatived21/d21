@@ -84,6 +84,8 @@
     "postcss-loader": "^0.9.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "react-dropzone": "^3.5.3",
+    "react-image-crop": "^1.0.0-rc5",
     "react-on-rails": "6.0.4",
     "react-onclickoutside": "^5.3.2",
     "react-redux": "^4.4.1",
