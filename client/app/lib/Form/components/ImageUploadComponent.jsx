@@ -16,7 +16,6 @@ export default class ImageUploadComponent extends Component {
         width: 100,
         aspect: 1
       },
-      geometry: '0x0+0+0',
       previewReady: false
     };
 
@@ -40,16 +39,37 @@ export default class ImageUploadComponent extends Component {
       const self = this
 
       image.onload = function() {
+        const imgWidth = this.width, imgHeight = this.height
+
+        let cropWidth, cropHeight, cropX, cropY
+        const aspectRatio = 1
+
+        if (imgWidth > imgHeight) {
+          cropWidth = (100 / imgWidth) * imgHeight
+          cropHeight = 100
+          cropX = (100 - cropWidth) / 2
+          cropY = 0
+        }
+        else {
+          cropWidth = 100
+          cropHeight = (100 / imgHeight) * imgWidth
+          cropX = 0
+          cropY = (100 - cropHeight) / 2
+        }
+
+        console.log(imgWidth, imgHeight, cropWidth, cropHeight)
+
         self.setState({
           file: file,
           imagePreviewUrl: image_url,
           croppedImagePreviewUrl: '',
-          width: this.width,
-          height: this.height,
+          width: imgWidth,
+          height: imgHeight,
           crop: {
-            x: 0,
-            y: 0,
-            width: 100,
+            x: cropX,
+            y: cropY,
+            width: cropWidth,
+            height: cropHeight,
             aspect: 1
           },
           previewReady: false
@@ -61,42 +81,22 @@ export default class ImageUploadComponent extends Component {
   }
 
   onComplete(crop) {
-    const
-      imageWidthPx = this.state.width,
-      imageHeightPx = this.state.height,
-      offsetX = crop.x,
-      offsetY = crop.y,
-      width = crop.width,
-      height = crop.height
-
-    const
-      offsetXPx = Math.floor(imageWidthPx * offsetX / 100),
-      offsetYPx = Math.floor(imageHeightPx * offsetY / 100),
-      widthPx = Math.floor(imageWidthPx * width / 100),
-      heightPx = Math.floor(imageHeightPx * height / 100)
-
-    const geometry = `${widthPx}x${heightPx}+${offsetXPx}+${offsetYPx}`
-
     this.setState({
-      crop: crop,
-      geometry: geometry
+      crop
     })
   }
 
   onButtonClick(e) {
     e.preventDefault()
 
-    const image = new Image()
     const self = this
 
-    this.cropImage(image, this.state.imagePreviewUrl, this.state.crop, 200, 200)
-
-    image.onload = function() {
+    this.cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImage) {
       self.setState({
         previewReady: true,
-        croppedImagePreviewUrl: image.src
+        croppedImagePreviewUrl: croppedImage.src
       })
-    }
+    })
   }
 
   loadImage(src, callback) {
@@ -123,7 +123,7 @@ export default class ImageUploadComponent extends Component {
     };
   }
 
-  cropImage(imgDest, imgSrc, crop, maxWidth, maxHeight) {
+  cropImage(imgSrc, crop, maxWidth, maxHeight, callback) {
     this.loadImage(imgSrc, cropAfterLoad.bind(this))
 
     function cropAfterLoad (loadedImg) {
@@ -166,7 +166,22 @@ export default class ImageUploadComponent extends Component {
 
       ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, destWidth, destHeight);
 
-      imgDest.src = canvas.toDataURL('image/jpeg');
+
+      const imgDest = new Image()
+
+      // Polyfill needed!
+      canvas.toBlob(function(blob) {
+        var url = URL.createObjectURL(blob)
+
+        imgDest.onload = function() {
+          // URL.revokeObjectURL(url)
+          // This should be called when the image is no longer needed
+          // Memory leaks
+          callback(this)
+        }
+
+        imgDest.src = url
+      }, 'image/jpeg')
     }
   }
 
@@ -215,7 +230,6 @@ export default class ImageUploadComponent extends Component {
 
     return (
       <div className="c-image-upload">
-        <input type="hidden" name="crop_geometry" value={this.state.geometry} />
         <input className="" type="file" onChange={(e)=>this._handleImageChange(e)} />
         {imagePreview}
       </div>
