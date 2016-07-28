@@ -14,7 +14,8 @@ export default class ImageUploadComponent extends Component {
         y: 0,
         width: 100,
         aspect: 1
-      }
+      },
+      geometry: '0x0+0+0'
     };
 
     this.onComplete = this.onComplete.bind(this)
@@ -39,7 +40,13 @@ export default class ImageUploadComponent extends Component {
           file: file,
           imagePreviewUrl: image_url,
           width: this.width,
-          height: this.height
+          height: this.height,
+          crop: {
+            x: 0,
+            y: 0,
+            width: 100,
+            aspect: 1
+          },
         })
       }
     }
@@ -62,38 +69,57 @@ export default class ImageUploadComponent extends Component {
       widthPx = Math.floor(imageWidthPx * width / 100),
       heightPx = Math.floor(imageHeightPx * height / 100)
 
-    this.setState({
-      crop: crop
-    })
-
     const geometry = `${widthPx}x${heightPx}+${offsetXPx}+${offsetYPx}`
-    console.log(geometry)
+
+    this.setState({
+      crop: crop,
+      geometry: geometry
+    })
+  }
+
+  onButtonClick(e) {
+    e.preventDefault()
+
   }
 
   render() {
-    let {imagePreviewUrl} = this.state;
-    let $imagePreview = null;
+    let { imagePreviewUrl, width, height, crop } = this.state;
+    let imagePreview = null;
+
+    const previewArea = 90000  // Set 90000 Pixels for the preview area, calculate width from that
+    let styleWidth = (previewArea / height) * Math.sqrt((width * height) / previewArea)
+
     if (imagePreviewUrl) {
-      $imagePreview = (
-        <ReactCrop
-          src={imagePreviewUrl}
-          crop={this.state.crop}
-          minWidth={30}
-          minHeight={30}
-          keepSelection
-          onComplete={this.onComplete}
-        />
+      imagePreview = (
+        <div className="c-image-upload__preview" style={{ width: `${styleWidth}px` }}>
+          <ReactCrop
+            src={imagePreviewUrl}
+            crop={crop}
+            minWidth={30}
+            minHeight={30}
+            keepSelection
+            onComplete={this.onComplete}
+          />
+          <button type="button" onClick={this.onButtonClick}>
+            Fertig
+          </button>
+        </div>
       )
     } else {
-      $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+      imagePreview = (
+        <div className="c-image-upload__preview">
+          <p className="c-image-upload__preview-text">
+            Bitte wählen Sie ein Bild aus. Danach können Sie es noch beschneiden.
+          </p>
+        </div>
+      )
     }
 
     return (
       <div className="c-image-upload">
+        <input type="hidden" name="crop_geometry" value={this.state.geometry} />
         <input className="" type="file" onChange={(e)=>this._handleImageChange(e)} />
-        <div className="c-image-upload__preview">
-          {$imagePreview}
-        </div>
+        {imagePreview}
       </div>
     )
   }
