@@ -7,6 +7,7 @@ export default class ImageUploadComponent extends Component {
     this.state = {
       file: '',
       imagePreviewUrl: '',
+      croppedImagePreviewUrl: '',
       width: 0,
       height: 0,
       crop: {
@@ -15,10 +16,13 @@ export default class ImageUploadComponent extends Component {
         width: 100,
         aspect: 1
       },
-      geometry: '0x0+0+0'
+      geometry: '0x0+0+0',
+      previewReady: false
     };
 
     this.onComplete = this.onComplete.bind(this)
+    this.onButtonClick = this.onButtonClick.bind(this)
+    this.cropImage = this.cropImage.bind(this)
   }
 
   _handleImageChange(e) {
@@ -39,6 +43,7 @@ export default class ImageUploadComponent extends Component {
         self.setState({
           file: file,
           imagePreviewUrl: image_url,
+          croppedImagePreviewUrl: '',
           width: this.width,
           height: this.height,
           crop: {
@@ -47,6 +52,7 @@ export default class ImageUploadComponent extends Component {
             width: 100,
             aspect: 1
           },
+          previewReady: false
         })
       }
     }
@@ -80,39 +86,95 @@ export default class ImageUploadComponent extends Component {
   onButtonClick(e) {
     e.preventDefault()
 
+    const image = new Image()
+    const self = this
+
+    this.cropImage(image, this.state.imagePreviewUrl, this.state.crop)
+
+    image.onload = function() {
+      self.setState({
+        previewReady: true,
+        croppedImagePreviewUrl: image.src
+      })
+    }
+  }
+
+  loadImage(src, callback) {
+    let image = new Image()
+
+    image.onload = function(e) {
+      callback(image)
+      image = null
+    }
+
+    image.src = src
+  }
+
+  cropImage(imgDest, imgSrc, crop) {
+    this.loadImage(imgSrc, cropAfterLoad.bind(this))
+
+    function cropAfterLoad (loadedImg) {
+      const imageWidth = loadedImg.naturalWidth
+      const imageHeight = loadedImg.naturalHeight
+
+      const cropX = (crop.x / 100) * imageWidth
+      const cropY = (crop.y / 100) * imageHeight
+
+      const cropWidth = (crop.width / 100) * imageWidth
+      const cropHeight = (crop.height / 100) * imageHeight
+
+      const canvas = document.createElement('canvas')
+      canvas.width = cropWidth
+      canvas.height = cropHeight
+      const ctx = canvas.getContext('2d')
+
+      ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight)
+
+      imgDest.src = canvas.toDataURL('image/jpeg')
+    }
   }
 
   render() {
-    let { imagePreviewUrl, width, height, crop } = this.state;
-    let imagePreview = null;
+    let { imagePreviewUrl, croppedImagePreviewUrl, width, height, crop, previewReady } = this.state
+    let imagePreview = null
 
     const previewArea = 90000  // Set 90000 Pixels for the preview area, calculate width from that
     let styleWidth = (previewArea / height) * Math.sqrt((width * height) / previewArea)
 
-    if (imagePreviewUrl) {
+    if (previewReady) {
       imagePreview = (
-        <div className="c-image-upload__preview" style={{ width: `${styleWidth}px` }}>
-          <ReactCrop
-            src={imagePreviewUrl}
-            crop={crop}
-            minWidth={30}
-            minHeight={30}
-            keepSelection
-            onComplete={this.onComplete}
-          />
-          <button type="button" onClick={this.onButtonClick}>
-            Fertig
-          </button>
+        <div className="c-image-upload__preview" style={{ width: '150px' }}>
+          <img src={croppedImagePreviewUrl} width="150" height="150" />
         </div>
       )
-    } else {
-      imagePreview = (
-        <div className="c-image-upload__preview">
-          <p className="c-image-upload__preview-text">
-            Bitte wählen Sie ein Bild aus. Danach können Sie es noch beschneiden.
-          </p>
-        </div>
-      )
+    }
+    else
+    {
+      if (imagePreviewUrl) {
+        imagePreview = (
+          <div className="c-image-upload__preview" style={{ width: `${styleWidth}px` }}>
+            <ReactCrop
+              src={imagePreviewUrl}
+              crop={crop}
+              minWidth={30}
+              minHeight={30}
+              keepSelection
+              onComplete={this.onComplete}
+            />
+            <button type="button" onClick={this.onButtonClick}>
+              Fertig
+            </button>
+          </div>
+        )
+      } else {
+        imagePreview = (
+          <div className="c-image-upload__preview">
+            <p className="c-image-upload__preview-text">
+              Bitte wählen Sie ein Bild aus. Danach können Sie es noch beschneiden.
+            </p>
+          </div>
+        )
+      }
     }
 
     return (
