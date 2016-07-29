@@ -29,14 +29,6 @@ describe PledgesController do
 
   describe "POST 'create'" do
     describe 'when sending valid params' do
-      before do
-        PledgesController.disable_sign_in!
-      end
-
-      after do
-        PledgesController.enable_sign_in!
-      end
-
       let(:pledge_params) do
         pledges(:active).attributes.merge(
           initiator: users(:pledger).attributes.merge(password: 'abc')
@@ -77,8 +69,10 @@ describe PledgesController do
 
   describe 'PATCH finalize' do
     it 'must call finalize! on the pledge with the given id' do
-      spyPledge = Pledge.new
-      Pledge.expects(:find).with('99').returns spyPledge
+      sign_in users(:pledger)
+      spyPledge = Pledge.new(initiator: users(:pledger), id: 99)
+      Pledge.stubs(:find).with('99').returns spyPledge
+      Pledge.stubs(:find).with(99).returns spyPledge
       spyPledge.expects(:finalize!)
 
       patch :finalize, params: { locale: 'de', id: '99' }

@@ -1,20 +1,10 @@
 class PledgesController < ApplicationController
   before_action :set_new_form, only: [:new, :create]
   before_action :set_edit_form, only: [:edit, :update]
-  before_action :authenticate_user!, except: [:new, :create]
+  before_action :authenticate_user!, except: [:new, :create, :index, :show]
 
   def new
-    @pledge_props = {
-      formData: {
-        action: pledges_path,
-        authToken: form_authenticity_token,
-        model: 'pledge',
-        # errors: @form.errors.messages,
-        object: @form.as_json
-      },
-      tags: Tag.all
-    }
-
+    @pledge_props = pledge_form_props('POST', pledges_path)
     render :new
   end
 
@@ -88,11 +78,17 @@ class PledgesController < ApplicationController
 
   def edit
     authorize @pledge
-    new
+    @pledge_props = pledge_form_props('PATCH', pledge_path(id: @pledge.id))
+    render :new
   end
 
   def update
-    authorize @pledge
+    authorize @form.model
+    if @form.validate(pledge_params)
+      update_success!
+    else
+      update_failed!
+    end
   end
 
   # single-purpose action with which the initiator requests approval of their
@@ -101,7 +97,8 @@ class PledgesController < ApplicationController
     @pledge = Pledge.find(params['id'])
     authorize @pledge
     @pledge.finalize!
-    redirect_to @pledge
+    AdminMailer.new_pledge(@pledge.id).deliver_later
+    redirect_to pledge_path(id: @pledge.id)
   end
 
   private
@@ -123,8 +120,7 @@ class PledgesController < ApplicationController
 
   def create_success!
     @form.save
-    AdminMailer.new_pledge(@form.model.id).deliver_later
-    sign_in @form.model.initiator
+    sign_in @form.model.initiator unless current_user
     respond_to do |format|
       format.json { render json: { status: 'success' } }
       format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }
@@ -132,10 +128,24 @@ class PledgesController < ApplicationController
   end
 
   def create_failed!
-    # return render json: @form.errors.to_json # TODO: Remove!
     respond_to do |format|
       format.json { render json: { status: 'error' } }
       format.html { new }
+    end
+  end
+
+  def update_success!
+    @form.save
+    respond_to do |format|
+      format.json { render json: { status: 'success' } }
+      format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }
+    end
+  end
+
+  def update_failed!
+    respond_to do |format|
+      format.json { render json: { status: 'error' } }
+      format.html { edit }
     end
   end
 
@@ -146,5 +156,18 @@ class PledgesController < ApplicationController
       tag_ids: [],
       initiator: [:name, :email, :organization, :avatar, :password]
     )
+  end
+
+  def pledge_form_props method, path
+    {
+      formData: {
+        action: path,
+        authToken: form_authenticity_token,
+        model: 'pledge',
+        object: @form.as_json,
+        method: method
+      },
+      tags: Tag.all
+    }
   end
 end
