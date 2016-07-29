@@ -25,6 +25,7 @@ export default class PledgeForm extends ChildComponent {
     return(
       <FormFor multipart
         className="c-new-pledge"
+        ajax={true}
         object={formObject}
         formData={this.props.formData}>
 
