@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import ReactCrop from 'react-image-crop'
+import cropImage from '../../utilities/crop_image'
 
 export default class ImageUploadComponent extends Component {
   constructor(props) {
@@ -21,7 +22,6 @@ export default class ImageUploadComponent extends Component {
 
     this.onComplete = this.onComplete.bind(this)
     this.onButtonClick = this.onButtonClick.bind(this)
-    this.cropImage = this.cropImage.bind(this)
   }
 
   _handleImageChange(e) {
@@ -91,98 +91,12 @@ export default class ImageUploadComponent extends Component {
 
     const self = this
 
-    this.cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImage) {
+    cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImage) {
       self.setState({
         previewReady: true,
         croppedImagePreviewUrl: croppedImage.src
       })
     })
-  }
-
-  loadImage(src, callback) {
-    let image = new Image()
-
-    image.onload = function(e) {
-      callback(image)
-      image = null
-    }
-
-    image.src = src
-  }
-
-  scale(options) {
-    var scale = options.scale ||
-      Math.min(options.maxWidth/options.width, options.maxHeight/options.height);
-
-    scale = Math.min(scale, options.maxScale || 1);
-
-    return {
-      scale: scale,
-      width: options.width * scale,
-      height: options.height * scale
-    };
-  }
-
-  cropImage(imgSrc, crop, maxWidth, maxHeight, callback) {
-    this.loadImage(imgSrc, cropAfterLoad.bind(this))
-
-    function cropAfterLoad (loadedImg) {
-      var imageWidth = loadedImg.naturalWidth;
-      var imageHeight = loadedImg.naturalHeight;
-
-      var cropX = (crop.x / 100) * imageWidth;
-      var cropY = (crop.y / 100) * imageHeight;
-
-      var cropWidth = (crop.width / 100) * imageWidth;
-      var cropHeight = (crop.height / 100) * imageHeight;
-
-      var destWidth = cropWidth;
-      var destHeight = cropHeight;
-
-      if (maxWidth || maxHeight) {
-          // Scale the crop.
-          var scaledCrop = this.scale({
-              width: cropWidth,
-              height: cropHeight,
-              maxWidth: maxWidth,
-              maxHeight: maxHeight
-          });
-
-          // Scale the image based on the crop scale.
-          var scaledImage = this.scale({
-              scale: scaledCrop.scale,
-              width: imageWidth,
-              height: imageHeight
-          });
-
-          destWidth = scaledCrop.width;
-          destHeight = scaledCrop.height;
-      }
-
-      var canvas = document.createElement('canvas');
-      canvas.width = scaledCrop.width;
-      canvas.height = scaledCrop.height;
-      var ctx = canvas.getContext('2d');
-
-      ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, destWidth, destHeight);
-
-
-      const imgDest = new Image()
-
-      // Polyfill needed!
-      canvas.toBlob(function(blob) {
-        var url = URL.createObjectURL(blob)
-
-        imgDest.onload = function() {
-          // URL.revokeObjectURL(url)
-          // This should be called when the image is no longer needed
-          // Memory leaks
-          callback(this)
-        }
-
-        imgDest.src = url
-      }, 'image/jpeg')
-    }
   }
 
   render() {
