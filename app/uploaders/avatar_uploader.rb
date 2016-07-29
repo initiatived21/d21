@@ -29,7 +29,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  process crop: '300x150+0+0'
+  #process crop: '300x150+0+0'
   #process resize_to_fill: [200, 200]
 
   # Create different versions of your uploaded files:
@@ -40,7 +40,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
-    %w(jpg jpeg png)
+    %w(jpg jpeg)
   end
 
   # Override the filename of the uploaded files:
@@ -51,26 +51,4 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
 private
 
-  # Simplest way
-  def crop(geometry)
-    offset_x = 0.1
-    offset_y = 0.1
-    width = 0.2
-    height = 0.3
-
-    binding.pry
-
-    # avatar_crop_geometry
-    # -> evtl. gleich richtig in JavaScript berechnen, dann kann man sie gleich
-    # übergeben ohne Regex!
-    # "0.2x0.3+0.1+0.1"
-    # Regex /^([0-9.]+)x([0-9.]+)\+([0-9.]+)\+([0-9.]+)$/
-
-    manipulate! do |img|
-      a = img.width
-      b = img.height
-      str = "#{a * width}x#{b * height}+#{a * offset_x}+#{b * offset_y}"
-      img.crop(str)
-    end
-  end
 end

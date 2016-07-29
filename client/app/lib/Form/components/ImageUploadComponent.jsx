@@ -99,15 +99,15 @@ export default class ImageUploadComponent extends Component {
 
     const self = this
 
-    cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImage) {
+    cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImageUrl) {
       self.setState({
         previewReady: true,
-        croppedImagePreviewUrl: croppedImage.src
+        croppedImagePreviewUrl: croppedImageUrl
       })
 
       // update
       self.props.onChange(
-        self.props.formObjectName, self.props.attribute, self.props.submodel, croppedImage
+        self.props.formObjectName, self.props.attribute, self.props.submodel, croppedImageUrl
       )
     })
   }

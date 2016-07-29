@@ -48,21 +48,8 @@ function cropImage(imgSrc, crop, maxWidth, maxHeight, callback) {
     const ctx = canvas.getContext('2d')
     ctx.drawImage(loadedImg, cropX, cropY, cropWidth, cropHeight, 0, 0, destWidth, destHeight)
 
-    const imgDest = new Image()
-
-    // Polyfill needed!
-    canvas.toBlob(function(blob) {
-      const url = URL.createObjectURL(blob)
-
-      imgDest.onload = function() {
-        // URL.revokeObjectURL(url)
-        // This should be called when the image is no longer needed
-        // Memory leaks
-        callback(this)
-      }
-
-      imgDest.src = url
-    }, 'image/jpeg')
+    const imgDest = canvas.toDataURL('image/jpeg')
+    callback(imgDest)
   }
 }
 
