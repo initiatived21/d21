@@ -66,7 +66,7 @@ export default class BaseForm extends ChildComponent {
   // with model and error props
   renderChildren(children) {
     return React.Children.map(children, child => {
-      if (typeof child !== 'object') { return child; }
+      if (!child || typeof child !== 'object') { return child; }
 
       if (child.type.isInput) { // is our custom Input component: inject!
         const { formData, formObject } = this.props

@@ -10,7 +10,6 @@ export default class PledgeList extends ChildComponent {
 
   render() {
     const { pledges, showControls } = this.props;
-    console.log(pledges.length)
 
     return (
       <ul className='o-layout'>

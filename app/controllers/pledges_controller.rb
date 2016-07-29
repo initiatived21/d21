@@ -1,6 +1,7 @@
 class PledgesController < ApplicationController
   before_action :set_new_form, only: [:new, :create]
-  before_action :authenticate!, only: [:request]
+  before_action :set_edit_form, only: [:edit, :update]
+  before_action :authenticate_user!, except: [:new, :create]
 
   def new
     @pledge_props = {
@@ -85,6 +86,15 @@ class PledgesController < ApplicationController
     end
   end
 
+  def edit
+    authorize @pledge
+    new
+  end
+
+  def update
+    authorize @pledge
+  end
+
   # single-purpose action with which the initiator requests approval of their
   # draft
   def finalize
@@ -97,8 +107,18 @@ class PledgesController < ApplicationController
   private
 
   def set_new_form
-    @pledge = Pledge.new(initiator: User.new)
-    @form = NewPledgeForm.new(@pledge)
+    if current_user
+      @pledge = Pledge.new(initiator: current_user)
+      @form = BasePledgeForm.new(@pledge)
+    else
+      @pledge = Pledge.new(initiator: User.new)
+      @form = PledgeWithInitiatorForm.new(@pledge)
+    end
+  end
+
+  def set_edit_form
+    @pledge = Pledge.find(params['id'])
+    @form = BasePledgeForm.new(@pledge)
   end
 
   def create_success!

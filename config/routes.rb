@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     get '/users/profile' => 'users#profile', as: :profile
 
     # RESTful resources
-    resources :pledges, only: [:new, :create, :show, :index] do
+    resources :pledges do
       member do
         patch '/finalize' => 'pledges#finalize', as: :finalize
         resources :signatures, only: [:create]

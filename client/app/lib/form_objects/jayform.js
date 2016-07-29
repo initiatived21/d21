@@ -1,14 +1,4 @@
 export default class JayForm {
-  // static property(name, subproperties) {
-  //   return this.properties.push(name);
-  // }
-
-  // static validation(definitionFunction) {
-  //   definitionFunction.call(@)
-  // }
-
-  // static required() {}
-
   constructor(initialData = {}) {
     this.attributes = { errors: {} }
 

@@ -61,10 +61,23 @@ class PledgeTest < Minitest::Capybara::Spec
     page.must_have_content 'Entwurf'
 
     # I can edit the pledge in preview mode
+    click_link 'Bearbeiten'
+    save_and_open_page
 
+    fill_in 'pledge[content]', with: 'changedContent'
+    click_button 'Abschicken'
+
+    page.must_have_content 'We promise to changedContent'
+    page.must_have_content 'This is a preview of your pledge.'
+    pledge.reload.aasm_state.must_equal 'initialized'
 
     # I can submit the pledge for admin review, it is still now shown publicly
+    click_link 'Click here to submit it for approval'
+    pledge.reload.aasm_state.must_equal 'requested'
+    page.must have_content 'something'
 
-    # I can login as an admin and approve the
+    click_link 'Meine Daten'
+    page.wont_have_content 'Entwurf'
+    page.must_have_content 'Wird Freigeschaltet'
   end
 end

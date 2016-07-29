@@ -1,15 +1,11 @@
 import JayForm from './jayform';
 
-export default class NewPledgeFormObject extends JayForm {
+export default class BasePledgeFormObject extends JayForm {
   static get properties() {
     return [
       'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'description', 'tag_ids', 'initiator'
+      'description', 'tag_ids'
     ]
-  }
-
-  static get submodels() {
-    return ['initiator']
   }
 }
   // properties...

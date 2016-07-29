@@ -26,7 +26,9 @@ function assembleAttrsFromServer(serializedReformObject, jayformObject) {
   // Otherwise assemble main and submodels' fields
   let attrs = merge({}, serializedReformObject.fields)
   for (let submodel of jayformObject.submodels) {
-    attrs[submodel] = serializedReformObject.fields[submodel].fields
+    if (serializedReformObject.fields[submodel]) {
+      attrs[submodel] = serializedReformObject.fields[submodel].fields
+    }
   }
   return attrs
 }

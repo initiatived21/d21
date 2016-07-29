@@ -6,4 +6,12 @@ class PledgePolicy < ApplicationPolicy
   def finalize?
     @record.initiator == @user
   end
+
+  def update?
+    @record.initiator == @user
+  end
+
+  def delete?
+    @record.initiator == @user
+  end
 end

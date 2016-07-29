@@ -1,7 +1,8 @@
 import React, { PropTypes  } from 'react'
 import Select from 'react-select'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import NewPledgeFormObject from '../../lib/form_objects/new_pledge_form';
+import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
+import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 
@@ -9,26 +10,25 @@ export default class PledgeForm extends ChildComponent {
   static propTypes = {
     formData: PropTypes.object.isRequired,
     availableTags: PropTypes.array.isRequired,
+    currentUser: PropTypes.object,
   }
 
   render() {
-    const { onLinkClick } = this.props
+    const { onLinkClick, currentUser } = this.props
+
+    const formObject = currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
+    const initiatorForm = currentUser ? null : this.renderInitiatorForm()
+    const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
 
     return(
       <FormFor multipart
         className="c-new-pledge"
-        object={NewPledgeFormObject}
+        object={formObject}
         formData={this.props.formData}>
 
         <h1>Ein Versprechen abgeben</h1>
 
-        <p>
-          Sie haben bereits ein Nutzerkonto?
-          {' '}
-          <a href="#" onClick={onLinkClick}>
-            Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
-          </a>
-        </p>
+        {loginPrompt}
 
         <div className='c-new-pledge__pledge-data'>
 
@@ -49,16 +49,7 @@ export default class PledgeForm extends ChildComponent {
             options={this.props.availableTags} />
         </div>
 
-        <div className='c-new-pledge__user-data'>
-          <h2>Ihre Daten für Ihr Nutzerkonto</h2>
-
-          <p class="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
-
-          <Input className="c-input" submodel='initiator' attribute='avatar' type='file' />
-          <Input className="c-input" submodel='initiator' attribute='name' />
-          <Input className="c-input" submodel='initiator' attribute='email' type='email' />
-          <Input className="c-input" submodel='initiator' attribute='password' type='password' />
-        </div>
+        {initiatorForm}
 
         <div className="o-layout u-mt u-mb-huge">
           <div className="o-layout__item u-1/3">
@@ -79,13 +70,48 @@ export default class PledgeForm extends ChildComponent {
               Zur Vorschau
             </button>
             <p>
-              Im nächsten Schritt können Sie Ihr Versprechen noch einmal überprüfen, bevor Sie
-              es abschicken.
+              Im nächsten Schritt können Sie Ihr Versprechen noch einmal
+              überprüfen, bevor Sie es abschicken.
             </p>
           </div>
         </div>
 
       </FormFor>
+    )
+  }
+
+  renderInitiatorForm() {
+    return (
+      <div className='c-new-pledge__user-data'>
+        <h2>Ihre Daten für Ihr Nutzerkonto</h2>
+
+        <p class="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
+
+        <Input
+          className="c-input" submodel='initiator' attribute='avatar'
+          type='file'
+        />
+        <Input className="c-input" submodel='initiator' attribute='name' />
+        <Input
+          className="c-input" submodel='initiator' attribute='email'
+          type='email'
+        />
+        <Input
+          className="c-input" submodel='initiator' attribute='password'
+          type='password'
+        />
+      </div>
+    )
+  }
+  renderLoginPrompt(onLinkClick) {
+    return (
+      <p>
+        Sie haben bereits ein Nutzerkonto?
+        {' '}
+        <a href="#" onClick={onLinkClick}>
+          Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
+        </a>
+      </p>
     )
   }
 }
