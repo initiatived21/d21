@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 import updateAction from '../actions/updateAction'
-import ImageUploadComponent from '../components/ImageUploadComponent'
+import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
   const formObjectName = ownProps.object.constructor.name
@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch =>
 const connected = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ImageUploadComponent)
+)(ImageInputComponent)
 connected.isInput = true
 
 export default connected

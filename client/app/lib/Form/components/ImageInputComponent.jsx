@@ -1,24 +1,16 @@
 import React, { PropTypes, Component } from 'react'
 import ReactCrop from 'react-image-crop'
+import readImageFromFile from '../../utilities/read_image_from_file'
 import cropImage from '../../utilities/crop_image'
 
-export default class ImageUploadComponent extends Component {
+export default class ImageInputComponent extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       file: '',
       imagePreviewUrl: '',
-      croppedImagePreviewUrl: '',
-      width: 0,
-      height: 0,
-      crop: {
-        x: 0,
-        y: 0,
-        width: 100,
-        aspect: 1
-      },
       previewReady: false
-    };
+    }
 
     this.onComplete = this.onComplete.bind(this)
     this.onButtonClick = this.onButtonClick.bind(this)
@@ -29,63 +21,61 @@ export default class ImageUploadComponent extends Component {
     attribute: PropTypes.string.isRequired,
     submodel: PropTypes.string,
     errors: PropTypes.array,
-    className: PropTypes.string
+    className: PropTypes.string,
+    aspectRatio: PropTypes.number.isRequired,
+    scaleToX: PropTypes.number.isRequired,
+    scaleToY: PropTypes.number.isRequired,
+    previewArea: PropTypes.number
   }
 
-  _handleImageChange(e) {
+  static defaultProps = {
+    previewArea: 100000
+  }
+
+  handleImageChange(e) {
     e.preventDefault()
 
-    let reader = new FileReader();
-    let file = e.target.files[0];
+    const
+      file = e.target.files[0]
+      self = this
 
-    reader.onloadend = () => {
-      const image_url = reader.result
+    readImageFromFile(file, function(image) {
+      const
+        imgWidth = image.width,
+        imgHeight = image.height
 
-      const image = new Image()
-      image.src = image_url
+      let cropWidth, cropHeight, cropX, cropY
+      const { aspectRatio } = self.props
 
-      const self = this
-
-      image.onload = function() {
-        const imgWidth = this.width, imgHeight = this.height
-
-        let cropWidth, cropHeight, cropX, cropY
-        const aspectRatio = 1
-
-        if (imgWidth > imgHeight) {
-          cropWidth = (100 / imgWidth) * imgHeight
-          cropHeight = 100
-          cropX = (100 - cropWidth) / 2
-          cropY = 0
-        }
-        else {
-          cropWidth = 100
-          cropHeight = (100 / imgHeight) * imgWidth
-          cropX = 0
-          cropY = (100 - cropHeight) / 2
-        }
-
-        console.log(imgWidth, imgHeight, cropWidth, cropHeight)
-
-        self.setState({
-          file: file,
-          imagePreviewUrl: image_url,
-          croppedImagePreviewUrl: '',
-          width: imgWidth,
-          height: imgHeight,
-          crop: {
-            x: cropX,
-            y: cropY,
-            width: cropWidth,
-            height: cropHeight,
-            aspect: 1
-          },
-          previewReady: false
-        })
+      if (imgWidth > imgHeight) {
+        cropWidth = (100 / imgWidth) * imgHeight
+        cropHeight = 100
+        cropX = (100 - cropWidth) / 2
+        cropY = 0
       }
-    }
+      else {
+        cropWidth = 100
+        cropHeight = (100 / imgHeight) * imgWidth
+        cropX = 0
+        cropY = (100 - cropHeight) / 2
+      }
 
-    reader.readAsDataURL(file)
+      self.setState({
+        file: file,
+        imagePreviewUrl: image.src,
+        croppedImagePreviewUrl: '',
+        width: imgWidth,
+        height: imgHeight,
+        crop: {
+          x: cropX,
+          y: cropY,
+          width: cropWidth,
+          height: cropHeight,
+          aspect: 1
+        },
+        previewReady: false
+      })
+    })
   }
 
   onComplete(crop) {
@@ -97,15 +87,18 @@ export default class ImageUploadComponent extends Component {
   onButtonClick(e) {
     e.preventDefault()
 
+    const { imagePreviewUrl, crop } = this.state
+    const { scaleToX, scaleToY } = this.props
+
     const self = this
 
-    cropImage(this.state.imagePreviewUrl, this.state.crop, 200, 200, function(croppedImageUrl) {
+    cropImage(imagePreviewUrl, crop, scaleToX, scaleToY, function(croppedImageUrl) {
       self.setState({
         previewReady: true,
         croppedImagePreviewUrl: croppedImageUrl
       })
 
-      // update
+      // update store
       self.props.onChange(
         self.props.formObjectName, self.props.attribute, self.props.submodel, croppedImageUrl
       )
@@ -116,7 +109,7 @@ export default class ImageUploadComponent extends Component {
     let { imagePreviewUrl, croppedImagePreviewUrl, width, height, crop, previewReady } = this.state
     let imagePreview = null
 
-    const previewArea = 90000  // Set 90000 Pixels for the preview area, calculate width from that
+    const { previewArea } = this.props
     let styleWidth = (previewArea / height) * Math.sqrt((width * height) / previewArea)
 
     if (previewReady) {
@@ -139,7 +132,7 @@ export default class ImageUploadComponent extends Component {
               keepSelection
               onComplete={this.onComplete}
             />
-            <button type="button" onClick={this.onButtonClick}>
+            <button className="o-btn o-btn--small" type="button" onClick={this.onButtonClick}>
               Fertig
             </button>
           </div>
@@ -155,9 +148,18 @@ export default class ImageUploadComponent extends Component {
       }
     }
 
+    // Clear file input when crop is done so change is detected even if the same image is
+    // selected
+    const fileValueProps = previewReady ? { value: '' } : {}
+
     return (
       <div className="c-image-upload">
-        <input className="" type="file" onChange={(e)=>this._handleImageChange(e)} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e)=>this.handleImageChange(e)}
+          {...fileValueProps}
+        />
         {imagePreview}
       </div>
     )

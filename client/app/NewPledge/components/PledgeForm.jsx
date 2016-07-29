@@ -5,7 +5,7 @@ import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
-import ImageUploadContainer from '../../lib/Form/containers/ImageUploadContainer'
+import ImageInput from '../../lib/Form/containers/ImageInput'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -93,7 +93,14 @@ export default class PledgeForm extends ChildComponent {
 
         <p className="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
 
-        <ImageUploadContainer submodel="initiator" attribute="avatar" />
+        <ImageInput
+          className="c-image-input c-image-input--avatar"
+          submodel="initiator"
+          attribute="avatar"
+          aspectRatio={1}
+          scaleToX={200}
+          scaleToY={200}
+        />
         <Input className="c-input" submodel='initiator' attribute='name' />
         <Input
           className="c-input" submodel='initiator' attribute='email'
