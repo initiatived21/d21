@@ -19,7 +19,7 @@ export default class PledgeWithInitiatorFormObject extends JayForm {
   static get submodelProperties() {
     return {
       initiator: [
-        'name', 'email', 'password'
+        'name', 'email', 'password', 'avatar'
       ]
     }
   }

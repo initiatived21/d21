@@ -24,8 +24,16 @@ export default class ImageUploadComponent extends Component {
     this.onButtonClick = this.onButtonClick.bind(this)
   }
 
+  static propTypes = {
+    model: PropTypes.string, // required, but injection later is ok
+    attribute: PropTypes.string.isRequired,
+    submodel: PropTypes.string,
+    errors: PropTypes.array,
+    className: PropTypes.string
+  }
+
   _handleImageChange(e) {
-    e.preventDefault();
+    e.preventDefault()
 
     let reader = new FileReader();
     let file = e.target.files[0];
@@ -96,6 +104,11 @@ export default class ImageUploadComponent extends Component {
         previewReady: true,
         croppedImagePreviewUrl: croppedImage.src
       })
+
+      // update
+      self.props.onChange(
+        self.props.formObjectName, self.props.attribute, self.props.submodel, croppedImage
+      )
     })
   }
 
