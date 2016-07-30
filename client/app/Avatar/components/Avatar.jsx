@@ -24,7 +24,7 @@ export default class Avatar extends ChildComponent {
       :
       (<svg className={combinedClassName} xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
         <title>{avatarName}</title>
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <path fill="#FEFEFE" d="M86.92 43.472c0 23.995-19.452 43.447-43.448 43.447-23.997 0-43.45-19.452-43.45-43.447C.023 19.476 19.476.024 43.473.024c23.996 0 43.448 19.452 43.448 43.448"/>
           <path stroke="#B2B2B1" d="M86.92 43.472c0 23.995-19.452 43.447-43.448 43.447-23.997 0-43.45-19.452-43.45-43.447C.023 19.476 19.476.024 43.473.024c23.996 0 43.448 19.452 43.448 43.448z"/>
           <path fill="#D8D8D8" d="M65.487 18.735a3.55 3.55 0 1 1-.382 7.09 3.549 3.549 0 0 1-3.354-3.736 3.549 3.549 0 0 1 3.736-3.354"/>

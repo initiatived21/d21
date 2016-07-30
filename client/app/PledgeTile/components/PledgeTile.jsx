@@ -17,7 +17,7 @@ export default class PledgeTile extends ChildComponent {
       deadline: PropTypes.string.isRequired,
       signatures_count: PropTypes.number.isRequired,
       aasm_state: PropTypes.string.isRequired,
-      initiator: PropTypes.object.isRequired
+      initiator: PropTypes.object,
     }),
     showControls: PropTypes.bool
   }
@@ -38,6 +38,7 @@ export default class PledgeTile extends ChildComponent {
   render() {
     const { pledge, showControls } = this.props
     const initiator = pledge.initiator
+    const avatarUrl = initiator.avatar.url || initiator.avatar.avatar.url
     const pledgePath = this.getPledgePath()
 
     const remainingDays = this.getRemainingDays()
@@ -54,7 +55,7 @@ export default class PledgeTile extends ChildComponent {
             {stateHeader}
             <PledgeTileFront
               initiatorName={initiator.name}
-              initiatorImage={initiator.avatar.avatar.url}
+              initiatorImage={avatarUrl}
               title="Schulbücher für Willkommensklassen"
               deadline={pledge.deadline}
               signatures_count={pledge.signatures_count}
@@ -63,7 +64,7 @@ export default class PledgeTile extends ChildComponent {
             />
             <PledgeTileBack
               initiatorName={initiator.name}
-              initiatorImage={initiator.avatar.avatar.url}
+              initiatorImage={avatarUrl}
               content={pledge.content}
               amount={pledge.amount}
               who={pledge.who}

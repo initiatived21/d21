@@ -16,7 +16,11 @@ function filterPledges(pledges, filter) {
 
 export function mapStateToProps(state, ownProps) {
   return ({
-    pledges: filterPledges(state.pledges, ownProps.filter)
+      pledges: filterPledges(state.pledges, ownProps.filter).map((pledge) => {
+        pledge.initiator = state.users[pledge.initiator]
+        return pledge
+      }
+    )
   })
 }
 

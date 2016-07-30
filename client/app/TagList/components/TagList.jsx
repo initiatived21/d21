@@ -6,7 +6,7 @@ function TagList(props) {
   return (
     <ul className="c-tag-list o-list-inline">
       {props.names.map( (name) =>
-        <Tag>{name}</Tag>
+        <Tag key={name}>{name}</Tag>
       )}
     </ul>
   );

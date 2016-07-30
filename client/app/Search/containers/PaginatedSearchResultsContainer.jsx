@@ -27,7 +27,10 @@ const fetchMoreResults = function(dispatch, query, offset, limit) {
 }
 
 const mapStateToProps = function(state, ownProps) {
-  const results = values(state.pledges)
+  const results = values(state.pledges).map((pledge) => {
+    pledge.initiator = state.users[pledge.initiator]
+    return pledge
+  })
 
   return {
     results,

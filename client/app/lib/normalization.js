@@ -42,6 +42,12 @@ const Schemas = new function() {
     arrayOf(this.user)
 
   this.currentUser = this.user
+
+  // Definitions //
+
+  this.pledge.define({
+    initiator: this.user
+  })
 }
 
 export default function normalized(schemaName, data) {
