@@ -14,7 +14,8 @@
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.build.config.js",
     "build:test": "npm run build:client && npm run build:server",
     "build:production": "npm run build:production:client && npm run build:production:server",
-    "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts"
+    "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts",
+    "test:lint": "eslint . --ext .js --ext .jsx --cache"
   },
   "dependencies": {
     "aleut.base.headings": "^1.0.3",
@@ -98,9 +99,12 @@
   },
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-eslint": "^6.1.2",
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "enzyme": "^2.2.0",
+    "eslint": "^3.2.0",
+    "eslint-plugin-react": "^5.2.2",
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.0.0",
     "mocha": "^2.4.5",

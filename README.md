@@ -38,6 +38,9 @@ side code can be found in `/client/`, including javascript tests. The JS
 test suite is run after a successful run of the server-side test suite, as well
 as a couple of additional checks: brakeman, rails-best-practices, and rubocop.
 
+To just run the frontend tests, change into the `/client` directory and type
+`npm test`. To run the JavaScript linter, type `npm run test:lint`.
+
 ---
 
 A ruby translation project managed on [Locale](http://www.localeapp.com/) that's open to all!

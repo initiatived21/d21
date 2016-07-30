@@ -66,6 +66,7 @@ tags
 .env
 Procfile.development
 .byebug_history
+client/.eslintcache
 
 # staging only files
 .htaccess
