@@ -12,7 +12,7 @@ class PledgeTest < Minitest::Capybara::Spec
     Pledge.active.count.must_equal 1
 
     # Try to submit the form without entering data
-    click_button 'Submit'
+    click_button 'Save Draft'
 
     within('.input-content') { page.must_have_content('must be filled') }
     within('.input-amount') { page.must_have_content('must be filled') }
@@ -41,7 +41,11 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[initiator][name]', with: 'integration1Name'
     fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
     fill_in 'pledge[initiator][password]', with: 'integration1Password'
-    click_button 'Submit'
+    click_button 'Save Draft'
+
+    page.must_have_content 'Draft successfully saved'
+    click_link 'Meine Daten'
+    save_and_open_page
 
     page.must_have_content 'We promise to integration1Content if at least 123'\
                            ' integration1Who integration1Requirement.'
@@ -68,7 +72,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[who]', with: 'changdWho'
     fill_in 'pledge[requirement]', with: 'changedRequirement'
     fill_in 'pledge[deadline]', with: '01-01-3333'
-    click_button 'Abschicken'
+    click_button 'Zur Vorschau'
 
     page.must_have_content 'Wir versprechen, changedContent, wenn mindestens'\
                            ' 456 changdWho changedRequirement'
@@ -85,5 +89,10 @@ class PledgeTest < Minitest::Capybara::Spec
     click_link 'Meine Versprechen'
     page.wont_have_content 'Entwurf'
     page.must_have_content 'Wartet auf Freigabe'
+
+    # I can delete my requested pledge
+    click_link 'Löschen'
+    page.must_have_content 'Wurde gelöscht'
+    pledge.reload
   end
 end

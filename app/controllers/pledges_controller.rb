@@ -91,6 +91,14 @@ class PledgesController < ApplicationController
     end
   end
 
+  def destroy
+    @pledge = Pledge.find(params[:id])
+    authorize @pledge
+    @pledge.destroy!
+    flash[:success] = t('.success')
+    redirect_to profile_path
+  end
+
   # single-purpose action with which the initiator requests approval of their
   # draft
   def finalize
@@ -123,7 +131,14 @@ class PledgesController < ApplicationController
     sign_in @form.model.initiator unless current_user
     respond_to do |format|
       format.json { render json: { status: 'success' } }
-      format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }
+      format.html do
+        if params[:commit] == 'save_draft'
+          flash[:success] = t('.saved_draft')
+          redirect_to edit_pledge_path(id: @pledge.id)
+        else
+          redirect_to pledge_path(@pledge, locale: I18n.locale)
+        end
+      end
     end
   end
 

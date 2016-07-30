@@ -27,7 +27,7 @@ de:
     promise:
       part1: Wir versprechen
       part2: wenn
-    submit: Abschicken
+    save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeQAs:
@@ -267,6 +267,11 @@ de:
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+  pledges:
+    create:
+      saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
+    destroy:
+      success: Versprechen erfolgreich gelöscht.
   react_form:
     comment:
       content:

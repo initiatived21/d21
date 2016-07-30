@@ -1,10 +1,5 @@
 div
   div.o-wrapper
-    - if notice
-      p class="notice"
-        = notice
-
-    - if alert
-      p class="alert"
-        = alert
-
+    - flash.each do |type, content|
+      p class="flash #{type}"
+        = content

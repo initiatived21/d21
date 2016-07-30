@@ -1,37 +1,23 @@
 import React, { PropTypes } from 'react'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
+import ButtonFor from '../../lib/Form/containers/ButtonFor'
 
 export default class StateFooter extends ChildComponent {
   static propTypes = {
     pledge: PropTypes.object.isRequired,
+    action: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    method: PropTypes.string.isRequired,
   }
 
   render() {
-    const { pledge } = this.props
-    const state = pledge.aasm_state
-
-    const stateActions = {
-      initialized: 'edit',
-      requested: 'delete',
-      active: 'delete',
-      successful: 'contact',
-      failed: 'republish',
-    }
-
-    const actionHrefs = {
-      edit: `/${I18n.locale}/pledges/${pledge.id}/edit`,
-      delete: '/todo',
-      contact: '/todo',
-      republish: '/todo',
-    }
-
-    const action = stateActions[state]
+    const { action, href, method } = this.props
 
     return (
       <div className="c-pledge-tile__state-footer">
-        <a href={actionHrefs[action]}>
+        <ButtonFor action={href} method={method}>
           {this.t(`.${action}`)}
-        </a>
+        </ButtonFor>
       </div>
     )
   }

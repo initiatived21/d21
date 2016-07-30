@@ -27,7 +27,7 @@ en:
     promise:
       part1: We promise
       part2: if
-    submit: Submit
+    save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
   PledgeQAs:
@@ -267,6 +267,11 @@ en:
     home:
       recommended: Recommended by the editors
       successful: Successful promises
+  pledges:
+    create:
+      saved_draft: The draft was successfully saved to your profile.
+    destroy:
+      success: Pledge successfully deleted.
   react_form:
     comment:
       content:

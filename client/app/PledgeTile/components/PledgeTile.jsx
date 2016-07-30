@@ -4,7 +4,7 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent'
 import PledgeTileFront      from './PledgeTileFront'
 import PledgeTileBack       from './PledgeTileBack'
 import StateHeader          from './StateHeader'
-import StateFooter          from './StateFooter'
+import StateFooterContainer from '../containers/StateFooterContainer'
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -43,7 +43,7 @@ export default class PledgeTile extends ChildComponent {
 
     const state = pledge.aasm_state
     const stateHeader = showControls ? <StateHeader state={state} /> : null
-    const stateFooter = showControls ? <StateFooter pledge={pledge} /> : null
+    const stateFooter = showControls ? <StateFooterContainer pledge={pledge} /> : null
 
     return (
       <li className="o-layout__item u-1/2@m u-1/3@l u-mb">

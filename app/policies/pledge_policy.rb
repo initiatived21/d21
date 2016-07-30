@@ -11,7 +11,7 @@ class PledgePolicy < ApplicationPolicy
     @record.initiator == @user
   end
 
-  def delete?
+  def destroy?
     @record.initiator == @user
   end
 end

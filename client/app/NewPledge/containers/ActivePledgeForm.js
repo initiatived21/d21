@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
   onLinkClick: function(event) {
     event.preventDefault()
     dispatch(toggleSessionPopup())
-  }
+  },
 })
 
 export default connect(
