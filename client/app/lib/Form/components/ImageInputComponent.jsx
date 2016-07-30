@@ -1,7 +1,8 @@
 import React, { PropTypes, Component } from 'react'
-import ReactCrop from 'react-image-crop'
+import ImageCrop from './ImageCrop'
 import readImageFromFile from '../../utilities/read_image_from_file'
 import cropImage from '../../utilities/crop_image'
+import calculateDefaultCrop from '../../utilities/calculate_default_crop'
 
 export default class ImageInputComponent extends Component {
   constructor(props) {
@@ -32,31 +33,6 @@ export default class ImageInputComponent extends Component {
     previewArea: 100000
   }
 
-  getDefaultCrop(imgWidth, imgHeight, aspectRatio) {
-    let cropWidth, cropHeight, cropX, cropY
-
-    if (imgWidth > imgHeight) {
-      cropWidth = (100 / imgWidth) * imgHeight
-      cropHeight = 100
-      cropX = (100 - cropWidth) / 2
-      cropY = 0
-    }
-    else {
-      cropWidth = 100
-      cropHeight = (100 / imgHeight) * imgWidth
-      cropX = 0
-      cropY = (100 - cropHeight) / 2
-    }
-
-    return {
-      x: cropX,
-      y: cropY,
-      width: cropWidth,
-      height: cropHeight,
-      aspect: aspectRatio
-    }
-  }
-
   handleImageChange(e) {
     e.preventDefault()
 
@@ -65,7 +41,7 @@ export default class ImageInputComponent extends Component {
       self = this
 
     readImageFromFile(file, function(image) {
-      const crop = self.getDefaultCrop(image.width, image.height, self.props.aspectRatio)
+      const crop = calculateDefaultCrop(image.width, image.height, self.props.aspectRatio)
 
       self.setState({
         file,
@@ -96,6 +72,7 @@ export default class ImageInputComponent extends Component {
     cropImage(imagePreviewUrl, crop, scaleToX, scaleToY, function(croppedImageUrl) {
       self.setState({
         previewReady: true,
+        imagePreviewUrl: '',
         croppedImagePreviewUrl: croppedImageUrl
       })
 
@@ -116,6 +93,7 @@ export default class ImageInputComponent extends Component {
     if (previewReady) {
       imagePreview = (
         <div className="c-image-input__preview">
+
           <img src={croppedImagePreviewUrl} width="150" height="150" />
         </div>
       )
@@ -124,27 +102,19 @@ export default class ImageInputComponent extends Component {
     {
       if (imagePreviewUrl) {
         imagePreview = (
-          <div className="c-image-input__crop" style={{ width: `${styleWidth}px` }}>
-            <ReactCrop
-              src={imagePreviewUrl}
-              crop={crop}
-              minWidth={30}
-              minHeight={30}
-              keepSelection
-              onComplete={this.onComplete}
-            />
-            <button className="o-btn o-btn--small" type="button" onClick={this.onButtonClick}>
-              Fertig
-            </button>
-          </div>
+          <ImageCrop
+            width={styleWidth}
+            src={imagePreviewUrl}
+            crop={crop}
+            onComplete={this.onComplete}
+            onButtonClick={this.onButtonClick}
+          />
         )
       } else {
         imagePreview = (
-          <div className="c-image-input__upload">
-            <p className="c-image-input__upload-text">
-              Bitte wählen Sie ein Bild aus.
-            </p>
-          </div>
+          <p className="c-image-input__text">
+            Bitte wählen Sie ein Bild aus.
+          </p>
         )
       }
     }
