@@ -43,9 +43,9 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[initiator][password]', with: 'integration1Password'
     click_button 'Save Draft'
 
-    page.must_have_content 'Draft successfully saved'
+    page.must_have_content 'The draft was successfully saved to your profile.'
     click_link 'Meine Daten'
-    save_and_open_page
+    click_link 'zum Versprechen'
 
     page.must_have_content 'We promise to integration1Content if at least 123'\
                            ' integration1Who integration1Requirement.'
@@ -65,14 +65,14 @@ class PledgeTest < Minitest::Capybara::Spec
     page.must_have_content 'Entwurf'
 
     # I can edit the pledge in preview mode
-    click_link 'Bearbeiten'
+    click_button 'Bearbeiten'
 
     fill_in 'pledge[content]', with: 'changedContent'
     fill_in 'pledge[amount]', with: '456'
     fill_in 'pledge[who]', with: 'changdWho'
     fill_in 'pledge[requirement]', with: 'changedRequirement'
     fill_in 'pledge[deadline]', with: '01-01-3333'
-    click_button 'Zur Vorschau'
+    click_button 'Entwurf speichern'
 
     page.must_have_content 'Wir versprechen, changedContent, wenn mindestens'\
                            ' 456 changdWho changedRequirement'
@@ -91,8 +91,8 @@ class PledgeTest < Minitest::Capybara::Spec
     page.must_have_content 'Wartet auf Freigabe'
 
     # I can delete my requested pledge
-    click_link 'Löschen'
-    page.must_have_content 'Wurde gelöscht'
-    pledge.reload
+    click_button 'Löschen'
+    page.must_have_content 'Versprechen erfolgreich gelöscht'
+    assert_raises(ActiveRecord::RecordNotFound) { pledge.reload }
   end
 end
