@@ -3014,6 +3014,11 @@
       "from": "react-element-to-jsx-string@>=3.0.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/react-element-to-jsx-string/-/react-element-to-jsx-string-3.2.0.tgz"
     },
+    "react-image-crop": {
+      "version": "1.0.0-rc5",
+      "from": "react-image-crop@latest",
+      "resolved": "https://registry.npmjs.org/react-image-crop/-/react-image-crop-1.0.0-rc5.tgz"
+    },
     "react-input-autosize": {
       "version": "0.6.13",
       "from": "react-input-autosize@>=0.6.13 <0.7.0",

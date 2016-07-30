@@ -4,6 +4,7 @@ import PledgeData from './PledgeData';
 
 describe('<PledgeData />', function () {
   const props = {
+    initiator: 'Max Mustermann',
     deadline: '2016-09-30',
     amount: 10,
     signatures_count: 5

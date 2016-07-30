@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #IMAGE INPUT
+\*------------------------------------*/
+
+/**
+ * Image input with crop component
+ */
+
+.c-image-input {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+
+.c-image-input__preview {
+  width: 150px;
+  
+  img {
+    border-radius: 75px;
+  }
+}

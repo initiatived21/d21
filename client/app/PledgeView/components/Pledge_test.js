@@ -21,7 +21,13 @@ describe('<Pledge />', function () {
     location: 'Berlin',
     deadline: '2016-09-30',
     signatures_count: 5,
-    created_at: '2016-09-01T12:45:22.964Z'
+    created_at: '2016-09-01T12:45:22.964Z',
+    user: {
+      name: '',
+      avatar: {
+        url: ''
+      }
+    }
   };
 
   it('should render', function () {

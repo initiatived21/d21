@@ -125,6 +125,8 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    carrierwave-base64 (2.3.1)
+      carrierwave (>= 0.8.0, < 0.12.0)
     cells (4.1.1)
       tilt (>= 1.4, < 3)
       uber (>= 0.0.9)
@@ -281,6 +283,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.99.2)
     mimemagic (0.3.1)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     minitest-around (0.3.2)
@@ -524,6 +527,7 @@ DEPENDENCIES
   brakeman
   bullet
   carrierwave
+  carrierwave-base64
   cells
   cells-rails
   cells-slim
@@ -549,6 +553,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   localeapp
   meta_request
+  mini_magick
   minitest
   minitest-around
   minitest-capybara

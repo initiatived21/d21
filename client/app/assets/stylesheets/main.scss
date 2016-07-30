@@ -125,6 +125,7 @@ $o-flipper-speed: 0.5s;
 
 //@import "vendor.[something]";
 @import "~react-select/dist/react-select";
+@import "~react-image-crop/lib/ReactCrop.scss";
 
 
 /*------------------------------------*\
@@ -161,6 +162,7 @@ $o-flipper-speed: 0.5s;
 @import "aleut/components/components.report-pledge";
 @import "aleut/components/components.new-pledge";
 @import "aleut/components/components.help";
+@import "aleut/components/components.image-input";
 
 
 /*------------------------------------*\

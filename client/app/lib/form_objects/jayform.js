@@ -6,10 +6,32 @@ export default class JayForm {
       this.attributes[property] = null
     }
 
-    // let iterable = initialData.keys();
+    const { submodelProperties } = this.constructor
+    if (submodelProperties) {
+      for (let submodel in submodelProperties) {
+        this.attributes[submodel] = {}
+        for (let property of submodelProperties[submodel]) {
+          this.attributes[submodel][property] = null
+        }
+      }
+    }
+
     for (let field of Object.keys(initialData)) {
-      if (!this.constructor.properties.includes(field)) { continue }
-      this.attributes[field] = initialData[field]
+      if (this.constructor.properties.includes(field)) {
+        this.attributes[field] = initialData[field]
+      }
+    }
+
+    if (submodelProperties) {
+      for (let submodel in submodelProperties) {
+        if (initialData.hasOwnProperty(submodel)) {
+          for (let field in initialData[submodel]) {
+            if (submodelProperties[submodel].includes(field)) {
+              this.attributes[submodel][field] = initialData[submodel][field]
+            }
+          }
+        }
+      }
     }
   }
 
@@ -39,12 +61,27 @@ export default class JayForm {
   toFormData(form) {
     let formDataObject = new FormData()
 
+    console.log('Attributes', this.attributes)
+
     // Add stored props to FormData
     for (let property of this.constructor.properties) {
       formDataObject.set(
         `${this.constructor.model}[${property}]`,
         this.attributes[property] || ''
       )
+    }
+
+    // Add submodel props to FormData
+    const { submodelProperties } = this.constructor
+    if (submodelProperties) {
+      for (let submodel in submodelProperties) {
+        for (let property of submodelProperties[submodel]) {
+          formDataObject.set(
+            `${this.constructor.model}[${submodel}][${property}]`,
+            this.attributes[submodel][property] || ''
+          )
+        }
+      }
     }
 
     // Add meta data to FormData

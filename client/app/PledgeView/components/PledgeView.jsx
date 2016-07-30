@@ -17,28 +17,31 @@ export default class PledgeView extends RootComponent {
       questionForm: PropTypes.object.isRequired,
       answerForm: PropTypes.object.isRequired,
     }).isRequired,
+    user: PropTypes.object.isRequired,
     signatures: PropTypes.array.isRequired,
     comments: PropTypes.array.isRequired,
     updates: PropTypes.array.isRequired,
   }
 
   get objectsToForwardToState() {
-    return ['pledge', 'signatures', 'comments', 'updates']
+    return ['pledge', 'user', 'signatures', 'comments', 'updates']
   }
 
   render() {
+    const { pledge, user, forms } = this.props
+
     return (
       <Provider store={store}>
         <main>
           <div className="o-wrapper">
             <div className="o-layout">
-              <Pledge {...this.props.pledge} />
-              <PledgeSidebarContainer pledge_id={this.props.pledge.id}
-                forms={this.props.forms} />
-              <PledgeUpdatesContainer pledge_id={this.props.pledge.id} />
-              <PledgeQAsContainer pledge_id={this.props.pledge.id}
-                forms={this.props.forms} />
-              <SigneeListContainer pledge_id={this.props.pledge.id} />
+              <Pledge {...pledge} user={user} />
+              <PledgeSidebarContainer pledge_id={pledge.id}
+                forms={forms} />
+              <PledgeUpdatesContainer pledge_id={pledge.id} />
+              <PledgeQAsContainer pledge_id={pledge.id}
+                forms={forms} />
+              <SigneeListContainer pledge_id={pledge.id} />
             </div>
           </div>
         </main>
