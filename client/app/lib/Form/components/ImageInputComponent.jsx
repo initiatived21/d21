@@ -14,7 +14,7 @@ export default class ImageInputComponent extends Component {
     }
 
     this.onComplete = this.onComplete.bind(this)
-    this.onButtonClick = this.onButtonClick.bind(this)
+    this.handleFinishCrop = this.handleFinishCrop.bind(this)
   }
 
   static propTypes = {
@@ -61,9 +61,7 @@ export default class ImageInputComponent extends Component {
     })
   }
 
-  onButtonClick(e) {
-    e.preventDefault()
-
+  handleFinishCrop() {
     const { imagePreviewUrl, crop } = this.state
     const { scaleToX, scaleToY } = this.props
 
@@ -107,7 +105,7 @@ export default class ImageInputComponent extends Component {
             src={imagePreviewUrl}
             crop={crop}
             onComplete={this.onComplete}
-            onButtonClick={this.onButtonClick}
+            handleFinishCrop={this.handleFinishCrop}
           />
         )
       } else {
