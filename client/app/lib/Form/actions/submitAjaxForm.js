@@ -24,7 +24,7 @@ export default function submitAjaxForm(url, data, formObject) {
   return function(dispatch) {
     dispatch(submitAjaxFormRequest(formObjectName))
 
-    const fetch = require('isomorphic-fetch') // regular import breaks in SSR
+    //const fetch = require('isomorphic-fetch') // regular import breaks in SSR
     return fetch(url + '.json', {
         method: (data.get('_method')),
         body: data,
