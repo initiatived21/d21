@@ -14,6 +14,7 @@ class PledgeTest < Minitest::Capybara::Spec
     # Try to submit the form without entering data
     click_button 'Save Draft'
 
+    within('.input-title') { page.must_have_content('must be filled') }
     within('.input-content') { page.must_have_content('must be filled') }
     within('.input-amount') { page.must_have_content('must be filled') }
     within('.input-who') { page.must_have_content('must be filled') }
@@ -33,6 +34,7 @@ class PledgeTest < Minitest::Capybara::Spec
     end
 
     # Sucessfully submit the form, make sure it's in preview mode
+    fill_in 'pledge[title]', with: 'integration1Title'
     fill_in 'pledge[content]', with: 'integration1Content'
     fill_in 'pledge[amount]', with: '123'
     fill_in 'pledge[who]', with: 'integration1Who'
@@ -47,12 +49,13 @@ class PledgeTest < Minitest::Capybara::Spec
     click_link 'Meine Daten'
     click_link 'zum Versprechen'
 
+    page.must_have_content 'integration1Title'
     page.must_have_content 'We promise to integration1Content if at least 123'\
                            ' integration1Who integration1Requirement.'
     page.must_have_content 'This is a preview of your pledge.'
 
     Pledge.active.count.must_equal 1
-    pledge = Pledge.find_by(content: 'integration1Content')
+    pledge = Pledge.find_by(title: 'integration1Title')
     pledge.aasm_state.must_equal 'initialized'
 
     # I can view the pledge in my profile view
@@ -61,12 +64,13 @@ class PledgeTest < Minitest::Capybara::Spec
     visit '/'
 
     click_link 'Meine Daten'
-    page.must_have_content 'integration1Content'
+    page.must_have_content 'integration1Title'
     page.must_have_content 'Entwurf'
 
     # I can edit the pledge in preview mode
     click_button 'Bearbeiten'
 
+    fill_in 'pledge[title]', with: 'changedTitle'
     fill_in 'pledge[content]', with: 'changedContent'
     fill_in 'pledge[amount]', with: '456'
     fill_in 'pledge[who]', with: 'changdWho'
@@ -74,13 +78,14 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[deadline]', with: '01-01-3333'
     click_button 'Entwurf speichern'
 
+    page.must_have_content 'changedTitle'
     page.must_have_content 'Wir versprechen, changedContent, wenn mindestens'\
                            ' 456 changdWho changedRequirement'
     page.must_have_content 'This is a preview of your pledge.'
     pledge.reload.aasm_state.must_equal 'initialized'
     pledge.content.must_equal 'changedContent'
 
-    # I can submit the pledge for admin review, it is still now shown publicly
+    # I can submit the pledge for admin review, it is still not shown publicly
     click_button 'Click here to submit it for approval'
     pledge.reload.aasm_state.must_equal 'requested'
     page.must_have_content 'This is a preview of your pledge.'

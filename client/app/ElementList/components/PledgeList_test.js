@@ -31,6 +31,7 @@ describe('<PledgeList />', function() {
         {
           id: 1,
           aasm_state: 'active',
+          title: 'testTitle',
           content: 'test',
           amount: 10,
           who: 'test',
@@ -50,6 +51,7 @@ describe('<PledgeList />', function() {
         {
           id: 2,
           aasm_state: 'successful',
+          title: 'testTitle',
           content: 'test',
           amount: 10,
           who: 'test',
@@ -69,6 +71,7 @@ describe('<PledgeList />', function() {
         {
           id: 3,
           aasm_state: 'initialized',
+          title: 'testTitle',
           content: 'test',
           amount: 10,
           who: 'test',

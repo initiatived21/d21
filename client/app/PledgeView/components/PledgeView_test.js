@@ -13,6 +13,7 @@ describe('<PledgeView />', function () {
   const props = {
     pledge: {
       id: 1,
+      title: 'Dinge',
       content: 'Dinge zu tun',
       amount: 10,
       who: 'andere',

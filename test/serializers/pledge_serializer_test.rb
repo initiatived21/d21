@@ -5,7 +5,7 @@ describe PledgeSerializer do
   it 'must correctly render attributes' do
     json = ActiveModelSerializers::SerializableResource.new(pledge).as_json
     json.must_equal(
-      id: 1, content: 'activeContent', amount: 10, who: 'activeWho',
+      id: 1, title: 'activeTitle', content: 'activeContent', amount: 10, who: 'activeWho',
       requirement: 'activeRequirement', location: nil,
       deadline: Date.new(2000), signatures_count: 0, aasm_state: 'active',
       initiator: {

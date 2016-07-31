@@ -2,6 +2,7 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :pledge do
+    title { FFaker::Lorem.words(rand(3..5)).join(' ') }
     content { FFaker::Lorem.words(rand(3..5)).join(' ') }
     amount { rand(1..99) }
     who { FFaker::Lorem.words(rand(1..2)).join(' ') }

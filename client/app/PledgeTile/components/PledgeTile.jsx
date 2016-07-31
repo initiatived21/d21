@@ -10,6 +10,7 @@ export default class PledgeTile extends ChildComponent {
   static propTypes = {
     pledge: PropTypes.shape({
       id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
       amount: PropTypes.number.isRequired,
       who: PropTypes.string.isRequired,
@@ -56,7 +57,7 @@ export default class PledgeTile extends ChildComponent {
             <PledgeTileFront
               initiatorName={initiator.name}
               initiatorImage={avatarUrl}
-              title="Schulbücher für Willkommensklassen"
+              title={pledge.title}
               deadline={pledge.deadline}
               signatures_count={pledge.signatures_count}
               signatures_total={pledge.amount}

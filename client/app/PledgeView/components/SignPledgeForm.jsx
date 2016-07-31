@@ -4,6 +4,8 @@ import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 import NewSignatureFormObject from '../../lib/form_objects/new_signature_form'
 
+import { PROJECT_NAME } from '../../lib/config'
+
 export default class SignPledgeForm extends ChildComponent {
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -54,7 +56,7 @@ export default class SignPledgeForm extends ChildComponent {
 
           <p className="c-sign-pledge__small-print u-mb">
             <small>
-              {this.t('.small_print', { project: 'Projektname' })}
+              {this.t('.small_print', { project: PROJECT_NAME })}
             </small>
           </p>
 

@@ -16,6 +16,7 @@ import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 export default class Pledge extends ChildComponent {
   static propTypes = {
     id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     who: PropTypes.string.isRequired,
@@ -32,7 +33,7 @@ export default class Pledge extends ChildComponent {
   }
 
   render() {
-    const { content, amount, who, requirement, location, deadline, signatures_count,
+    const { title, content, amount, who, requirement, location, deadline, signatures_count,
       created_at, user } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
@@ -42,7 +43,7 @@ export default class Pledge extends ChildComponent {
         <article className="c-pledge">
           <TagList names={['Familie', 'Unterstützung']} />
           <h1>
-            Schulbücher im Wert von 2.500 Euro
+            {title}
           </h1>
           {/*<PledgeLocation>{location}</PledgeLocation>*/}
           <PledgeQuote

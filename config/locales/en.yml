@@ -329,6 +329,9 @@ en:
       tag_ids:
         label: 
         placeholder: 
+      title:
+        label: Title
+        placeholder: e.g. Sponsorship
       who:
         label: Who?
         placeholder: 

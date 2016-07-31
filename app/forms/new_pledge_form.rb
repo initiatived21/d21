@@ -1,6 +1,7 @@
 class NewPledgeForm < Reform::Form
   include Reform::Form::Dry::Validations
 
+  property :title # , on: :pledge
   property :content # , on: :pledge
   property :amount # , on: :pledge
   property :who # , on: :pledge
@@ -31,6 +32,7 @@ class NewPledgeForm < Reform::Form
   # Validation
 
   validation :default do
+    required(:title).filled
     required(:content).filled
     required(:amount).filled(:int?)
     required(:who).filled

@@ -3,7 +3,7 @@ import JayForm from './jayform';
 export default class PledgeWithInitiatorFormObject extends JayForm {
   static get properties() {
     return [
-      'content', 'amount', 'who', 'requirement', 'location', 'deadline',
+      'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
       'description', 'tag_ids'
     ]
   }

@@ -9,6 +9,7 @@ describe('<PledgeTile />', function () {
   const props = {
     pledge: {
       id: 1,
+      title: 'Bücher für Schulklassen',
       content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
       amount: 10,
       who: 'Dolmetscher',

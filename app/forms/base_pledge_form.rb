@@ -1,6 +1,7 @@
 class BasePledgeForm < Reform::Form
   include Reform::Form::Dry::Validations
 
+  property :title
   property :content
   property :amount
   property :who
@@ -13,6 +14,7 @@ class BasePledgeForm < Reform::Form
 
   # Validations
   validation :default do
+    required(:title).filled
     required(:content).filled
     required(:amount).filled(:int?)
     required(:who).filled

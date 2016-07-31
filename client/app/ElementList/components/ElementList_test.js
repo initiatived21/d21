@@ -29,6 +29,7 @@ describe('ElementList', function() {
       mount(React.createElement(ElementList, {
         pledges: [{
           id: 1,
+          title: 'testTitle',
           content: 'testContent',
           amount: 1
         }],

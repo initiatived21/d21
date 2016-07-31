@@ -26,6 +26,7 @@ Tag.create!(name: 'books')
 
 # Draft pledge
 Pledge.create!(
+  title: 'Irgendwas Unspezifisches',
   content: 'irgendwas zu machen, was wir uns noch ausdenken',
   amount: 10,
   who: 'andere Unternehmen',
@@ -37,6 +38,7 @@ Pledge.create!(
 
 # requested pledge
 Pledge.create!(
+  title: 'Mehr Versprechen',
   content: 'noch mehr Versprechen einzustellen',
   amount: 1,
   who: 'Administrator',
@@ -48,6 +50,7 @@ Pledge.create!(
 
 # active pledge without signatures
 active_none = Pledge.create!(
+  title: 'Viele Laptops',
   content: '5000 Laptops an eine Flüchtlingshilfe-Initiative zu spenden',
   amount: 10,
   who: 'andere Unternehmen',
@@ -69,6 +72,7 @@ Comment.create!(
 
 # active pledge with a few signatures
 active_few = Pledge.create!(
+  title: 'Bücher für Schulklassen',
   content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in'\
            ' Willkommensklassen bereitstellen',
   amount: 10,
@@ -84,6 +88,7 @@ FactoryGirl.create :signature, pledge: active_few
 
 # active pledge with a enough signatures
 active_enough = Pledge.create!(
+  title: 'Moderne Tablets',
   content: '200 TabletPCs zur Verfügung stellen',
   amount: 15,
   who: 'ehrenamtliche Institutionen',
@@ -101,6 +106,7 @@ end
 
 # failed pledge
 Pledge.create!(
+  title: 'Nähkurse für Frauen',
   content: 'Nähkurse für mindestens 10 Flüchtlingsfrauen anzubieten',
   amount: 5,
   who: 'Menschen oder Unternehmen',
@@ -113,6 +119,7 @@ Pledge.create!(
 
 # successful pledge
 Pledge.create!(
+  title: 'Fahrradfahren lernen',
   content: 'zehn Frauen und Kindern aus Flüchtlingsfamilien Fahrradfahren'\
            ' beizubringen',
   amount: 10,
@@ -126,6 +133,7 @@ Pledge.create!(
 
 # disapproved pledge
 Pledge.create!(
+  title: 'Klingelstreiche!!!',
   content: '20 Klingelstreiche zu spielen',
   amount: 99,
   who: 'rosa Elefanten',

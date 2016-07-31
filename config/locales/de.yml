@@ -331,6 +331,9 @@ de:
       tag_ids:
         label: 
         placeholder: Themenbereiche
+      title:
+        label: Titel
+        placeholder: z.B. Patenschaft
       who:
         label: Wer?
         placeholder: 
