@@ -43,6 +43,9 @@ class Pledge < ApplicationRecord
     end
   end
 
+  # CarrierWave Image Uploader
+  mount_base64_uploader :image, PledgeImageUploader, file_name: 'pledge_image'
+
   def past_deadline?
     deadline <= Time.zone.now.to_date
   end
