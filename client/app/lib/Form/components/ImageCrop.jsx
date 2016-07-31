@@ -18,10 +18,7 @@ export default class ImageCrop extends Component {
         <div
           className="c-image-input__crop-area"
           style={{ width: `${width}px` }}
-          onDoubleClick={(e) => {
-            e.preventDefault()
-            handleFinishCrop()
-          }}
+          onDoubleClick={handleFinishCrop}
         >
           <ReactCrop
             src={src}
@@ -33,11 +30,9 @@ export default class ImageCrop extends Component {
           />
         </div>
         <button
-          className="o-btn o-btn--small" type="button"
-          onclick={(e) => {
-            e.preventDefault()
-            handleFinishCrop()
-          }}
+          className="o-btn o-btn--small"
+          type="button"
+          onClick={handleFinishCrop}
         >
           Fertig
         </button>
