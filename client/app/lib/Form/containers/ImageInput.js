@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 
-import loadImage, { changeCropAction, cropImageAction } from '../actions/imageInputActions'
+import loadImageAction, { changeCropAction, cropImageAction } from '../actions/imageInputActions'
 
 import updateAction from '../actions/updateAction'
 
@@ -27,7 +27,7 @@ const mapStateToProps = function(state, ownProps) {
   }
 
   const {imageState, originalImage, originalImageWidth, originalImageHeight, crop,
-    croppedImageUrl} = state.imageInput
+    croppedImageUrl} = state.imageInputs[ownProps.attribute]
 
   return {
     imageState,
@@ -46,20 +46,22 @@ const mapStateToProps = function(state, ownProps) {
 const mapDispatchToProps = function(dispatch, ownProps) {
   const { formObjectName, attribute, submodel, scaleToX, scaleToY } = ownProps
 
+  const id = attribute  // attribute serves as id for the store
+
   return {
     handleFileSelect(e) {
       e.preventDefault()
       const file = e.target.files[0]
-      dispatch(loadImage(file))
+      dispatch(loadImageAction(id, file))
     },
 
     handleChangeCrop: function(crop) {
-      dispatch(changeCropAction(crop))  
+      dispatch(changeCropAction(id, crop))  
     },    
 
     handleFinishCrop: function() {
       const { scaleToX, scaleToY } = ownProps
-      dispatch(cropImageAction(scaleToX, scaleToY))
+      dispatch(cropImageAction(id, scaleToX, scaleToY))
 
       // How to do this?
       //dispatch(updateAction(formObjectName, attribute, submodel, croppedImageUrl))

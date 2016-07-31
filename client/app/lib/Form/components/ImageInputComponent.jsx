@@ -1,11 +1,8 @@
 import React, { PropTypes, Component } from 'react'
-import ImageCrop from './ImageCrop'
 
-const
-  IMAGE_STATE_NONE = 0,
-  IMAGE_STATE_LOADING = 1,
-  IMAGE_STATE_LOADED = 2,
-  IMAGE_STATE_CROPPED = 3
+import ImageCrop from './ImageCrop'
+import { IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED, IMAGE_STATE_CROPPED } from
+  '../reducers/imageInputReducer'
 
 export default class ImageInputComponent extends Component {
   static propTypes = {
