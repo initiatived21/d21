@@ -18,6 +18,14 @@ export const initialImageInputState = {
       originalImageHeight: 0,
       crop: {},
       croppedImageUrl: ''
+    },
+    image: {
+      imageState: IMAGE_STATE_NONE,
+      originalImage: null,
+      originalImageWidth: 0,
+      originalImageHeight: 0,
+      crop: {},
+      croppedImageUrl: ''
     }
   }
 }
@@ -33,8 +41,8 @@ export default function imageInputReducer(state = initialImageInputState, action
       return newState
 
     case 'LOAD_IMAGE_SUCCESS':
-      const originalImage = action.image
-      const crop = calculateDefaultCrop(originalImage.width, originalImage.height, 1)
+      const originalImage = action.image, aspect = action.aspect
+      const crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
 
       newState.imageInputs[id] = {
         originalImage,

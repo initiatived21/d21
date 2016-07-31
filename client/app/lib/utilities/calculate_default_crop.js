@@ -8,14 +8,14 @@ function calculateDefaultCrop(imgWidth, imgHeight, aspectRatio) {
   let cropWidth, cropHeight, cropX, cropY
 
   if (imgWidth > imgHeight) {
-    cropWidth = (100 / imgWidth) * imgHeight
+    cropWidth = (100 / imgWidth) * imgHeight * aspectRatio
     cropHeight = 100
     cropX = (100 - cropWidth) / 2
     cropY = 0
   }
   else {
     cropWidth = 100
-    cropHeight = (100 / imgHeight) * imgWidth
+    cropHeight = (100 / imgHeight) * imgWidth * aspectRatio
     cropX = 0
     cropY = (100 - cropHeight) / 2
   }

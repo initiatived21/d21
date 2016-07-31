@@ -36,16 +36,22 @@ export default class ImageInputComponent extends Component {
   render() {
     const {
       imageState, originalImage, originalImageWidth, originalImageHeight, crop, croppedImageUrl,
-      previewArea, handleFileSelect, handleChangeCrop, handleFinishCrop } = this.props
+      previewArea, handleFileSelect, handleChangeCrop, handleFinishCrop, className } = this.props
 
     let fileValueProps = {}
     let imagePreview = null
     switch(imageState) {
       case IMAGE_STATE_NONE:
-      case IMAGE_STATE_LOADING:
         imagePreview = (
           <p className="c-image-input__text">
             Bitte wählen Sie ein Bild aus.
+          </p>
+        )
+        break
+      case IMAGE_STATE_LOADING:
+        imagePreview = (
+          <p className="c-image-input__text">
+            <i>Lade Bild. Bitte warten…</i>
           </p>
         )
         break
@@ -67,7 +73,7 @@ export default class ImageInputComponent extends Component {
       case IMAGE_STATE_CROPPED:
         imagePreview = (
           <div className="c-image-input__preview">
-            <img src={croppedImageUrl} width="150" height="150" />
+            <img src={croppedImageUrl} />
           </div>
         )
         // Clear file input when crop is done so change is detected even if the same image is
@@ -79,8 +85,13 @@ export default class ImageInputComponent extends Component {
         imagePreview = null
     }
 
+    let combinedClassName = 'c-image-input'
+    if (className) {
+      combinedClassName += ` ${className}`
+    }
+
     return (
-      <div className="c-image-input">
+      <div className={combinedClassName}>
         <input
           className="u-mb-small"
           type="file"

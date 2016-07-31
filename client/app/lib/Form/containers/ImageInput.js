@@ -44,7 +44,7 @@ const mapStateToProps = function(state, ownProps) {
 }
 
 const mapDispatchToProps = function(dispatch, ownProps) {
-  const { formObjectName, attribute, submodel, scaleToX, scaleToY } = ownProps
+  const { formObjectName, attribute, submodel, aspectRatio, scaleToX, scaleToY } = ownProps
 
   const id = attribute  // attribute serves as id for the store
 
@@ -52,7 +52,7 @@ const mapDispatchToProps = function(dispatch, ownProps) {
     handleFileSelect(e) {
       e.preventDefault()
       const file = e.target.files[0]
-      dispatch(loadImageAction(id, file))
+      dispatch(loadImageAction(id, file, aspectRatio))
     },
 
     handleChangeCrop: function(crop) {
