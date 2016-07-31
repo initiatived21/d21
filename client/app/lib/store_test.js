@@ -1,4 +1,5 @@
-import store from './store.js';
+import store from './store.js'
+import { IMAGE_STATE_NONE } from './Form/reducers/imageInputReducer'
 
 describe('store', function() {
   const initialState = {
@@ -8,10 +9,31 @@ describe('store', function() {
       searchResultsLoading: false,
       sessionPopupVisible: false
     },
-    isSubmitting: {}
-  };
+    isSubmitting: {},
+    imageInputs: {
+      avatar: {
+        crop: {},
+        croppedImageUrl: '',
+        imageState: IMAGE_STATE_NONE,
+        originalImage: null,
+        originalImageHeight: 0,
+        originalImageWidth: 0
+      },
+      image: {
+        crop: {},
+        croppedImageUrl: '',
+        imageState: IMAGE_STATE_NONE,
+        originalImage: null,
+        originalImageHeight: 0,
+        originalImageWidth: 0
+      }
+    }
+  }
 
   it('should have an empty initial state', function() {
-    store.getState().should.deep.equal(initialState);
-  });
-});
+    store.getState().should.deep.equal(initialState)
+  })
+})
+
+
+
