@@ -100,6 +100,10 @@ de:
       admin_user: Admin Users
       comment: Comments
       pledge: Pledge
+  application_mailer:
+    farewell: Mit besten Grüßen,
+    impressum: "<Impressum>"
+    signed: Ihre bunt und verbindlich Redaktion
   formtastic:
     actions:
       pledge:
@@ -223,6 +227,19 @@ de:
         email: 
         password: 
         remember_me: 
+  initiator_mailer:
+    pledge_was_approved:
+      faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
+      greeting: Liebe/r Herr/Frau %{name}
+      intro_paragraph: 'Ihr Versprechen wurde soeben veröffentlicht und kann nun von anderen Nutzern unterzeichnet werden:'
+      outro_paragraph: Wir wünschen Ihnen viel Erfolg!
+      subject: Ihr Versprechen wurde veröffentlicht
+      success_paragraph:
+        first_line: 'Und so machen Sie Ihr Versprechen erfolgreich:'
+        steps:
+          '1': Bewerben Sie das Versprechen in Ihren Netzwerken
+          '2': Schreiben Sie regelmäßig Neuigkeiten zu Ihrem Versprechen
+          '3': Antworten Sie zeitnah auf Rückfragen der Nutzer
   layouts:
     partials:
       footer:

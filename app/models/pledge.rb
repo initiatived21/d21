@@ -28,7 +28,7 @@ class Pledge < ApplicationRecord
       transitions from: :initialized, to: :requested
     end
 
-    event :activate do
+    event :activate, success: :after_activate_success do
       transitions from: :requested, to: :active
     end
 
@@ -51,8 +51,13 @@ class Pledge < ApplicationRecord
     signatures_count >= amount
   end
 
-  # TODO: Just for testing purposes after_commit! Should be after activate:
-  after_commit { PledgeRelayJob.perform_later(self) }
+  def after_activate_success
+    # Send Mailing
+    InitiatorMailer.pledge_was_approved(id).deliver_later
+
+    # Send new pledge over ActionCable
+    PledgeRelayJob.perform_later(self)
+  end
 
   # Search
   include PgSearch

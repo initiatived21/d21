@@ -100,6 +100,10 @@ en:
       admin_user: 
       comment: 
       pledge: 
+  application_mailer:
+    farewell: 
+    impressum: 
+    signed: 
   formtastic:
     actions:
       pledge:
@@ -223,6 +227,19 @@ en:
         email: 
         password: 
         remember_me: 
+  initiator_mailer:
+    pledge_was_approved:
+      faq_paragraph: 
+      greeting: 
+      intro_paragraph: 
+      outro_paragraph: 
+      subject: 
+      success_paragraph:
+        first_line: 
+        steps:
+          '1': 
+          '2': 
+          '3': 
   layouts:
     partials:
       footer:
