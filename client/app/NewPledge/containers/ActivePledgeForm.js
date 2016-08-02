@@ -3,6 +3,7 @@ import merge from 'lodash/merge'
 import { setEntity } from '../../lib/actions/entityActions'
 import { toggleSessionPopup } from '../../UserSession/actions/SessionActions'
 import PledgeForm from '../components/PledgeForm'
+import updateAction from '../../lib/Form/actions/updateAction'
 
 const mapStateToProps = function(state, ownProps) {
   return {
@@ -25,6 +26,9 @@ const mapDispatchToProps = dispatch => ({
     event.preventDefault()
     dispatch(toggleSessionPopup())
   },
+  onSaveDraftClick: function(formObject) {
+    dispatch(updateAction(formObject.name, 'commit', null, 'save_draft'))
+  }
 })
 
 export default connect(

@@ -134,11 +134,22 @@ class PledgesController < ApplicationController
     @form.save
     sign_in @form.model.initiator unless current_user
     respond_to do |format|
-      format.json { render json: { status: 'success', changes: { pledge: @form.model } } }
+      format.json do
+        if params[:pledge][:commit] == 'save_draft'
+          redirect_url = edit_pledge_url(@pledge, locale: I18n.locale)
+        else
+          redirect_url = pledge_url(@pledge, locale: I18n.locale)
+        end
+        render(json: {
+          status: 'success',
+          redirect_to: redirect_url,
+          changes: { pledge: @form.model }
+        })
+      end
       format.html do
         if params[:commit] == 'save_draft'
           flash[:success] = t('.saved_draft')
-          redirect_to edit_pledge_path(id: @pledge.id)
+          redirect_to edit_pledge_path(@pledge, locale: I18n.locale)
         else
           redirect_to pledge_path(@pledge, locale: I18n.locale)
         end
