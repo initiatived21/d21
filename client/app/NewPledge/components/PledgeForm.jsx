@@ -48,6 +48,16 @@ export default class PledgeForm extends ChildComponent {
 
           <Input className="c-input" attribute='location' />
           <Input className="c-input" type='date' attribute='deadline' />
+
+          <ImageInput
+            className="c-image-input--pledge-image"
+            attribute="image"
+            previewArea={300000}
+            aspectRatio={3/2}
+            scaleToX={1200}
+            scaleToY={800}
+          />
+
           <Input className="c-textarea" attribute='description' type='textarea' />
 
           <Input type='multiselect' attribute='tag_ids'
@@ -96,7 +106,7 @@ export default class PledgeForm extends ChildComponent {
         <p className="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
 
         <ImageInput
-          className="c-image-input c-image-input--avatar"
+          className="c-image-input--avatar"
           submodel="initiator"
           attribute="avatar"
           aspectRatio={1}

@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :initiated_pledges, class_name: 'Pledge', inverse_of: :initiator
 
   # CarrierWave Image Uploader
-  mount_base64_uploader :avatar, AvatarUploader, file_name: 'userpic'
+  mount_base64_uploader :avatar, AvatarUploader, file_name: 'avatar'
 end

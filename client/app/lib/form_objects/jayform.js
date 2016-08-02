@@ -61,8 +61,6 @@ export default class JayForm {
   toFormData(form) {
     let formDataObject = new FormData()
 
-    console.log('Attributes', this.attributes)
-
     // Add stored props to FormData
     for (let property of this.constructor.properties) {
       formDataObject.set(

@@ -11,10 +11,19 @@
   margin-bottom: $spacing;
 }
 
-.c-image-input__preview {
-  width: 150px;
-  
+.c-image-input__crop-area {
+  max-width: 100%;
+}
+
+.c-image-input--avatar .c-image-input__preview {
   img {
+    width: 150px;
     border-radius: 75px;
+  }
+}
+
+.c-image-input--pledge-image .c-image-input__preview {
+  img {
+    max-width: 100%;
   }
 }

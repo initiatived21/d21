@@ -168,7 +168,7 @@ class PledgesController < ApplicationController
   def pledge_params
     params.require(:pledge).permit(
       :title, :content, :amount, :who, :requirement, :location, :description,
-      :deadline,
+      :deadline, :image,
       tag_ids: [],
       initiator: [:name, :email, :organization, :avatar, :password]
     )

@@ -10,7 +10,7 @@ export const generalInitialState = {
   }
 }
 
-export default function generalReducer(state = initialState, action) {
+export default function generalReducer(state = generalInitialState, action) {
   let newState = assign({}, state)
 
   switch (action.type) {

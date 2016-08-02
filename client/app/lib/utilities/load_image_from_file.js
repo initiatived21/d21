@@ -1,9 +1,10 @@
 /**
+ *  Asynchronous function
  *  Reads image from file and loads it
  *  Used for image crop tool
  */
 
-function readImageFromFile(file, callback) {
+function loadImageFromFile(file, callback) {
   // Todo: polyfill for IE9
   const reader = new FileReader()
 
@@ -19,4 +20,4 @@ function readImageFromFile(file, callback) {
   reader.readAsDataURL(file)
 }
 
-export default readImageFromFile
+export default loadImageFromFile

@@ -38,7 +38,6 @@ export default class PledgeView extends RootComponent {
               <Pledge {...pledge} user={user} />
               <PledgeSidebarContainer pledge_id={pledge.id}
                 forms={forms} />
-              }
               <PledgeUpdatesContainer pledge_id={pledge.id} />
               <PledgeQAsContainer pledge_id={pledge.id}
                 forms={forms} />

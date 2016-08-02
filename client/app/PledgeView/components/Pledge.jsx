@@ -23,6 +23,7 @@ export default class Pledge extends ChildComponent {
     requirement: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     deadline: PropTypes.string.isRequired,
+    image: PropTypes.object,
     signatures_count: PropTypes.number.isRequired,
     created_at: PropTypes.string.isRequired,
     user: PropTypes.object.isRequired
@@ -33,10 +34,11 @@ export default class Pledge extends ChildComponent {
   }
 
   render() {
-    const { title, content, amount, who, requirement, location, deadline, signatures_count,
+    const { title, content, amount, who, requirement, location, deadline, image, signatures_count,
       created_at, user } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
+    const pledgeImage = image.url ? (<PledgeImage src={image.url} />) : null
 
     return (
       <div className="o-layout__item u-2/3@l">
@@ -61,7 +63,7 @@ export default class Pledge extends ChildComponent {
             signatures_count={signatures_count}
           />
           <SocialMediaButtons className="u-mt-small" url={DOMAIN_PROD + this.getPledgePath()} />
-          <PledgeImage src={`${DUMMY_IMAGE_PATH}/peru-landscape.jpg`} />
+          {pledgeImage}
           <PledgeDescription>
             Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi
             Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor
