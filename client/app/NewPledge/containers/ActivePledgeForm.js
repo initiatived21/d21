@@ -28,6 +28,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onSaveDraftClick: function(formObject) {
     dispatch(updateAction(formObject.name, 'commit', null, 'save_draft'))
+  },
+  onSavePreviewClick: function(formObject) {
+    dispatch(updateAction(formObject.name, 'commit', null, ''))
   }
 })
 
