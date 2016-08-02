@@ -8,7 +8,7 @@ class PledgePolicy < ApplicationPolicy
   end
 
   def update?
-    @record.initiator == @user
+    @record.initiator == @user && @record.initialized?
   end
 
   def destroy?
