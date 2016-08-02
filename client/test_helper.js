@@ -22,7 +22,7 @@ documentRef = document;
 
 // chai setup
 var chai = require('chai')
-window.should = chai.should()
+global.should = chai.should()
 
 // Fail on prop warnings
 var err = console.error
