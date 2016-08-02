@@ -92,6 +92,7 @@ $o-btn--small:       true;
 $o-btn--full:        true;
 $o-btn-color:        white;
 $o-btn-background:   $primary-color;
+$o-btn-radius:       5px;
 @import "~aleut.objects.buttons/objects.buttons";
 //@import "~aleut.objects.flag/objects.flag";
 
@@ -113,8 +114,6 @@ $o-media--responsive: true;
 
 // Our own objects
 @import "aleut/objects/objects.wrapper";
-
-$o-flipper-speed: 0.5s;
 @import "aleut/objects/objects.flipper";
 
 

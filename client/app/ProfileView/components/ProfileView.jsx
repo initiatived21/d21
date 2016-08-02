@@ -17,8 +17,10 @@ export default class ProfileView extends RootComponent {
     return (
       <Provider store={store}>
         <main>
-          <h1>Profile</h1>
-          <ProfilePledgeListContainer />
+          <div className="o-wrapper">
+            <h1>Profile</h1>
+            <ProfilePledgeListContainer />
+          </div>
         </main>
       </Provider>
     )

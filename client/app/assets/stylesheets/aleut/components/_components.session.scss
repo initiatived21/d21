@@ -58,7 +58,7 @@
 
 .c-session__window {
   position: absolute;
-  width: 320px; /* originally 250px */
+  width: 250px;
   top: 58px;
   right: $spacing--tiny;
   z-index: 15; /* [1] */
@@ -67,7 +67,7 @@
 
   padding: $spacing;
 
-  line-height: 1.25;
+  @include font-size(14px, 1.25);
   color: $text-color;
 
   border-radius: 5px;

@@ -13,12 +13,15 @@ const mapStateToProps = (state, ownProps) => {
     userIsInitiator = false
   }
 
+  const renderReportForm = !userIsInitiator
+
   return {
     isPreview: ['initialized', 'requested'].includes(currentPledge.aasm_state),
     isDraft: (currentPledge.aasm_state == 'initialized'),
     userConfirmed: (currentUser && currentUser.confirmed),
     activateAction: `/${I18n.locale}/pledges/${currentPledge.id}/finalize`,
     userIsInitiator,
+    renderReportForm
   }
 }
 

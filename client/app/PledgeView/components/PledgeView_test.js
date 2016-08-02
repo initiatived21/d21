@@ -21,7 +21,8 @@ describe('<PledgeView />', function () {
       location: 'Berlin',
       deadline: '2016-09-30',
       signatures_count: 5,
-      created_at: '2016-09-01T12:45:22.964Z'
+      created_at: '2016-09-01T12:45:22.964Z',
+      aasm_state: 'active'
     },
 
     forms: {
@@ -73,5 +74,27 @@ describe('<PledgeView />', function () {
     wrapper.find(PledgeUpdatesContainer).length.should.equal(1)
     wrapper.find(PledgeQAsContainer).length.should.equal(1)
     wrapper.find(SigneeListContainer).length.should.equal(1)
+  })
+
+  it('should not render updates, qas or signatures for some pledge states', function() {
+    const initializedPledge = {
+      id: 1,
+      title: 'Dinge',
+      content: 'Dinge zu tun',
+      amount: 10,
+      who: 'andere',
+      requirement: 'anderes tun',
+      location: 'Berlin',
+      deadline: '2016-09-30',
+      signatures_count: 5,
+      created_at: '2016-09-01T12:45:22.964Z',
+      aasm_state: 'initialized'
+    }
+
+    const wrapper = shallow(<PledgeView {...props} pledge={initializedPledge} />)
+
+    wrapper.find(PledgeUpdatesContainer).length.should.equal(0)
+    wrapper.find(PledgeQAsContainer).length.should.equal(0)
+    wrapper.find(SigneeListContainer).length.should.equal(0)
   })
 })

@@ -14,12 +14,19 @@ describe('<PledgeSidebar />', function () {
         action: '/',
         authToken: 'a',
         model: 'signature'
+      },
+      updateForm: {
+        action: '/',
+        authToken: 'a',
+        model: 'update'
       }
     },
     isPreview: false,
     isDraft: false,
     activateAction: '/',
     userIsInitiator: false,
+    userConfirmed: false,
+    renderReportForm: true
   }
 
   it('should render', function () {

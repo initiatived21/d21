@@ -4,26 +4,27 @@ import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SignPledgeFormContainer from '../containers/SignPledgeFormContainer'
 import ReportPledgeForm from './ReportPledgeForm'
 import PreviewExplanation from './PreviewExplanation'
-import UpdateForm from './UpdateForm'
+import UpdateFormContainer from '../containers/UpdateFormContainer'
 
 export default class PledgeSidebar extends ChildComponent {
   static propTypes = {
     pledge_id: PropTypes.number.isRequired,
     forms: PropTypes.shape({
       signPledgeForm: PropTypes.object.isRequired,
+      updateForm: PropTypes.object.isRequired
     }),
-    // signPledgeFormObject: PropTypes.object.isRequired,
     isPreview: PropTypes.bool.isRequired,
     isDraft: PropTypes.bool.isRequired,
     userConfirmed: PropTypes.bool.isRequired,
     activateAction: PropTypes.string.isRequired,
     userIsInitiator: PropTypes.bool.isRequired,
+    renderReportForm: PropTypes.bool
   }
 
   render() {
     const {
       pledge_id, forms, signPledgeFormObject, isPreview, userIsInitiator,
-      isDraft, activateAction, userConfirmed,
+      isDraft, activateAction, userConfirmed, renderReportForm
     } = this.props
     const { signPledgeForm, updateForm } = forms
 
@@ -35,7 +36,7 @@ export default class PledgeSidebar extends ChildComponent {
           userConfirmed={userConfirmed} />
       )
     } else if (userIsInitiator) {
-      sidebarField = <UpdateForm formData={updateForm} />
+      sidebarField = <UpdateFormContainer formData={updateForm} />
     } else {
       sidebarField =
         <SignPledgeFormContainer id={pledge_id} formData={signPledgeForm} />
@@ -44,7 +45,7 @@ export default class PledgeSidebar extends ChildComponent {
     return (
       <div className="o-layout__item u-1/2@m u-1/3@l">
         {sidebarField}
-        <ReportPledgeForm id={pledge_id} />
+        {renderReportForm ? <ReportPledgeForm id={pledge_id} /> : null}
       </div>
     )
   }

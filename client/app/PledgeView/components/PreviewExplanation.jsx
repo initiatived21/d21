@@ -15,7 +15,10 @@ export default class PreviewExplanation extends ChildComponent {
     if (isDraft) {
       if (userConfirmed) {
         statusInfo = (
-          <ButtonFor action={activateAction} method='PATCH'>
+          <ButtonFor
+            className="o-btn o-btn--full u-mt-small"
+            action={activateAction}
+            method='PATCH'>
             Click here to submit it for approval
           </ButtonFor>
         )
@@ -34,3 +37,5 @@ export default class PreviewExplanation extends ChildComponent {
     )
   }
 }
+
+
