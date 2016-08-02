@@ -8,8 +8,8 @@ class BasePledgeForm < Reform::Form
   property :requirement
   property :location
   property :deadline
+  property :image
   property :description
-  # image
   property :tag_ids
 
   # Validations

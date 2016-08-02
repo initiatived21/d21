@@ -2,7 +2,6 @@ import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
 
 import calculateDefaultCrop from '../../utilities/calculate_default_crop'
-import cropImage from '../../utilities/crop_image'
 
 export const IMAGE_STATE_NONE = 0
 export const IMAGE_STATE_LOADING = 1
@@ -62,15 +61,8 @@ export default function imageInputReducer(state = initialImageInputState, action
       return newState
 
     case 'CROP_IMAGE':
-      const croppedImageUrl = cropImage(
-        state.imageInputs[id].originalImage,
-        state.imageInputs[id].crop,
-        action.scaleToX,
-        action.scaleToY
-      )
-
       newState.imageInputs[id] = {
-        croppedImageUrl,
+        croppedImageUrl: action.croppedImageUrl,
         originalImage: null,
         originalImageWidth: 0,
         originalImageHeight: 0,

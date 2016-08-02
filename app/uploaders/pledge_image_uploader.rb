@@ -4,7 +4,7 @@ class PledgeImageUploader < CarrierWave::Uploader::Base
 
   # Include RMa gick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file

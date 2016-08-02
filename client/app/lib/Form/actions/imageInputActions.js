@@ -8,11 +8,11 @@ export const changeCropAction = function(id, crop) {
   }
 }
 
-// This one is synchronous (blocking)
-export const cropImageAction = function(id, scaleToX, scaleToY) {
+export const cropImageAction = function(id, croppedImageUrl, scaleToX, scaleToY) {
   return {
     type: 'CROP_IMAGE',
     id,
+    croppedImageUrl,
     scaleToX,
     scaleToY
   }
@@ -25,7 +25,6 @@ export const clearImageAction = function(id) {
   }
 }
 
-// This one needs to work asynchronously
 const loadImageStartAction = function(id) {
   return {
     type: 'LOAD_IMAGE_START',
@@ -50,6 +49,7 @@ const loadImageSuccessAction = function(id, image, aspect) {
   }
 }
 
+// Asynchronous action
 export default function loadImageAction(id, file, aspect) {
   return function(dispatch) {
     dispatch(loadImageStartAction(id))
@@ -59,5 +59,3 @@ export default function loadImageAction(id, file, aspect) {
     })
   }
 }
-
-

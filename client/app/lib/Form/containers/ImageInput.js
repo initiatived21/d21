@@ -2,10 +2,9 @@ import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 
+import cropImage from '../../utilities/crop_image'
 import loadImageAction, { changeCropAction, cropImageAction } from '../actions/imageInputActions'
-
 import updateAction from '../actions/updateAction'
-
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
@@ -36,7 +35,6 @@ const mapStateToProps = function(state, ownProps) {
     originalImageHeight,
     crop,
     croppedImageUrl,
-
     errors,
     value,
     formObjectName
@@ -57,21 +55,42 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 
     handleChangeCrop: function(crop) {
       dispatch(changeCropAction(id, crop))  
-    },    
+    },
+
+    dispatch
+  }
+}
+
+const mergeProps = function(stateProps, dispatchProps, ownProps) {
+  const { formObjectName, originalImage, crop } = stateProps
+  const { attribute, submodel, scaleToX, scaleToY } = ownProps
+  const { dispatch } = dispatchProps
+
+  const id = attribute  // attribute serves as id for the store
+
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...ownProps,
 
     handleFinishCrop: function() {
-      const { scaleToX, scaleToY } = ownProps
-      dispatch(cropImageAction(id, scaleToX, scaleToY))
+      const croppedImageUrl = cropImage(
+        originalImage,
+        crop,
+        scaleToX,
+        scaleToY
+      )
 
-      // How to do this?
-      //dispatch(updateAction(formObjectName, attribute, submodel, croppedImageUrl))
+      dispatch(cropImageAction(id, croppedImageUrl, scaleToX, scaleToY))
+      dispatch(updateAction(formObjectName, attribute, submodel, croppedImageUrl))
     }
   }
 }
 
 const connected = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(ImageInputComponent)
 connected.isInput = true
 
