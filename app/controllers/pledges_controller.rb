@@ -134,7 +134,10 @@ class PledgesController < ApplicationController
     @form.save
     sign_in @form.model.initiator unless current_user
     respond_to do |format|
-      format.json { render json: { status: 'success', changes: { pledge: @form.model } } }
+      format.json { render json: {
+        status: 'success',
+        redirect_to: pledge_url(@pledge, locale:I18n.locale),
+        changes: { pledge: @form.model } } }
       format.html do
         if params[:commit] == 'save_draft'
           flash[:success] = t('.saved_draft')
