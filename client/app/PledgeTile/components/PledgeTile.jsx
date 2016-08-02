@@ -39,7 +39,7 @@ export default class PledgeTile extends ChildComponent {
   render() {
     const { pledge, showControls } = this.props
     const initiator = pledge.initiator
-    const avatarUrl = initiator.avatar.url || initiator.avatar.avatar.url
+    const avatarUrl = initiator.avatar.url
     const pledgePath = this.getPledgePath()
 
     const remainingDays = this.getRemainingDays()
