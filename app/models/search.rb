@@ -15,6 +15,11 @@ class Search
     @query.nil? || @query.empty?
   end
 
+  # Return a result set of original models, not PgSearch::Document
+  def solved_results
+    results.map(&:searchable)
+  end
+
   private
 
   def parse_range(range)

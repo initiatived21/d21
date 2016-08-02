@@ -6,7 +6,7 @@ import LoggedIn from './LoggedIn';
 
 export default class Session extends ChildComponent {
   static propTypes = {
-    currentUser: PropTypes.object.isRequired,
+    currentUser: PropTypes.object,
     authToken: PropTypes.string.isRequired,
     onLoginClick: PropTypes.func.isRequired,
     onWindowClick: PropTypes.func.isRequired,

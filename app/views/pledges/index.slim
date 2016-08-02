@@ -1,4 +1,6 @@
-== cell :react_with_serialization, @pledges, params: params,
-                                             component: 'Search',
-                                             props: { query: @query, resultIds: @result_ids,
-                                                      resultCount: @result_count }
+== react_component('Search', ReactHelper.settings({\
+  pledges: @pledges,
+  query: @query,
+  resultIds: @result_ids,
+  resultCount: @result_count \
+}, params))

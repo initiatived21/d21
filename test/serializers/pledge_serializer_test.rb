@@ -9,7 +9,10 @@ describe PledgeSerializer do
       requirement: 'activeRequirement', location: nil,
       deadline: Date.new(2000), signatures_count: 0, aasm_state: 'active',
       initiator: {
-        id: 1, name: 'pledgerName', organization: 'pledgerOrganiztion', avatar_path: 'whatever'
+        id: 1, name: 'pledgerName', organization: 'pledgerOrganiztion',
+        avatar: {
+          url: nil
+        }
       }
     )
   end

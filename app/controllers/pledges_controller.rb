@@ -60,10 +60,13 @@ class PledgesController < ApplicationController
       @result_count = 0
     else
       search.run
-      @pledges = search.results
-      @result_ids = @pledges.ids
+      @pledges = search.solved_results
+      @result_ids = search.results.ids
       @result_count = search.unscoped_results.count
     end
+
+    @pledges =
+      ActiveModelSerializers::SerializableResource.new(@pledges).as_json
 
     respond_to do |format|
       format.html do

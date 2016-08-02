@@ -18,7 +18,12 @@ export default class PledgeTile extends ChildComponent {
       deadline: PropTypes.string.isRequired,
       signatures_count: PropTypes.number.isRequired,
       aasm_state: PropTypes.string.isRequired,
-      initiator: PropTypes.object,
+      initiator: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        avatar: PropTypes.shape({
+          url: PropTypes.string,
+        }).isRequired,
+      }).isRequired,
     }),
     showControls: PropTypes.bool
   }

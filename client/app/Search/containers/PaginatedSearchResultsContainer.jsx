@@ -15,20 +15,20 @@ const fetchMoreResults = function(dispatch, query, offset, limit) {
       dispatch(setSearchResultsLoadingState(false))
       return response.json()
     }).then(function(json) {
-      console.log('parsed json', json)
       const pledges = json.pledges
-      console.log(pledges.length)
-      console.log(pledges)
       const normalizedPledges = normalize('pledges', pledges)
       dispatch(addEntities(normalizedPledges.entities))
     }).catch(function(ex) {
-      console.log('parsing failed', ex)
+      console.error('parsing failed', ex)
     })
 }
 
 const mapStateToProps = function(state, ownProps) {
   const results = values(state.pledges).map((pledge) => {
-    pledge.initiator = state.users[pledge.initiator]
+    if (typeof pledge.initiator === 'number') {
+      // Denormalize
+      pledge.initiator = state.users[pledge.initiator]
+    }
     return pledge
   })
 

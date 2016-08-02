@@ -6,7 +6,7 @@ import SessionContainer from '../containers/SessionContainer';
 
 export default class UserSession extends RootComponent {
   static propTypes = {
-    currentUser: PropTypes.object.isRequired,
+    currentUser: PropTypes.object,
     authToken: PropTypes.string.isRequired,
   }
 
