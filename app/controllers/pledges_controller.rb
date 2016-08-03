@@ -135,9 +135,9 @@ class PledgesController < ApplicationController
     respond_to do |format|
       format.json do
         if params[:pledge][:commit] == 'save_draft'
-          redirect_url = edit_pledge_url(@pledge, locale: I18n.locale)
+          redirect_url = edit_pledge_url(id: @pledge.id, locale: I18n.locale)
         else
-          redirect_url = pledge_url(@pledge, locale: I18n.locale)
+          redirect_url = pledge_url(id: @pledge.id, locale: I18n.locale)
         end
         render(json: {
           status: 'success',
@@ -148,9 +148,9 @@ class PledgesController < ApplicationController
       format.html do
         if params[:commit] == 'save_draft'
           flash[:success] = t('.saved_draft')
-          redirect_to edit_pledge_path(@pledge, locale: I18n.locale)
+          redirect_to edit_pledge_path(id: @pledge, locale: I18n.locale)
         else
-          redirect_to pledge_path(@pledge, locale: I18n.locale)
+          redirect_to pledge_path(id: @pledge.id, locale: I18n.locale)
         end
       end
     end

@@ -359,3 +359,7 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
+  devise:
+    mailer:
+      confirmation_instructions:
+        user_subject: Confirmation instructions

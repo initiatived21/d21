@@ -45,6 +45,7 @@ describe PledgesController do
 
       it 'should save and render for JSON' do
         Pledge.any_instance.expects(:save)
+        Pledge.any_instance.stubs(:id).returns(123)
         post :create, format: :json,
                       params: { locale: 'de', pledge: pledge_params }
         assert_response 200

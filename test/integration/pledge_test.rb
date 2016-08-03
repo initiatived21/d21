@@ -85,6 +85,15 @@ class PledgeTest < Minitest::Capybara::Spec
     pledge.reload.aasm_state.must_equal 'initialized'
     pledge.content.must_equal 'changedContent'
 
+    # I can't submit the pledge for approval yet since my email isn't confirmed
+    page.wont_have_content 'Click here to submit it for approval'
+    page.must_have_content 'Please confirm your email to finalize this pledge.'
+    User.any_instance.stubs(:confirmed?).returns true
+    # reload
+    visit '/'
+    visit "/de/pledges/#{pledge.id}"
+    page.wont_have_content 'Please confirm your email to finalize this pledge.'
+
     # I can submit the pledge for admin review, it is still not shown publicly
     click_button 'Click here to submit it for approval'
     pledge.reload.aasm_state.must_equal 'requested'

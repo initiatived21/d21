@@ -357,3 +357,7 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
+  devise:
+    mailer:
+      confirmation_instructions:
+        user_subject: 
