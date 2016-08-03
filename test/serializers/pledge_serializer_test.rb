@@ -8,8 +8,10 @@ describe PledgeSerializer do
       id: 1, title: 'activeTitle', content: 'activeContent', amount: 10, who: 'activeWho',
       requirement: 'activeRequirement', location: nil,
       deadline: Date.new(2000), signatures_count: 0, aasm_state: 'active',
+      created_at: pledge.created_at, image: {url: nil},
       initiator: {
         id: 1, name: 'pledgerName', organization: 'pledgerOrganiztion',
+        confirmed: true,
         avatar: {
           url: nil
         }

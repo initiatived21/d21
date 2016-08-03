@@ -32,7 +32,8 @@
       <%= react_component(
         'UserSession',
         ReactHelper.settings({
-          currentUser: current_user, authToken: form_authenticity_token
+          currentUser: ActiveModelSerializers::SerializableResource.new(current_user).as_json,
+          authToken: form_authenticity_token
         }, params, { class: 'c-session__root-element' }))
       %>
     </nav>

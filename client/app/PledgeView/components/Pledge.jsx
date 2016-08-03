@@ -34,8 +34,10 @@ export default class Pledge extends ChildComponent {
   }
 
   render() {
-    const { title, content, amount, who, requirement, location, deadline, image, signatures_count,
-      created_at, user } = this.props;
+    const {
+      title, content, amount, who, requirement, location, deadline, image,
+      signatures_count, created_at, user
+    } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
     const pledgeImage = image.url ? (<PledgeImage src={image.url} />) : null

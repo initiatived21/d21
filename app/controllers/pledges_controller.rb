@@ -20,7 +20,7 @@ class PledgesController < ApplicationController
   def show
     pledge = Pledge.find(params[:id])
     @pledge_props = {
-      pledge: pledge,
+      pledge: serialize(pledge),
       forms: {
         signPledgeForm: {
           action: signatures_path(id: params[:id], locale: I18n.locale),
@@ -44,7 +44,7 @@ class PledgesController < ApplicationController
           method: 'PATCH'
         }
       },
-      user: pledge.initiator,
+      user: serialize(pledge.initiator),
       signatures: pledge.signatures,
       updates: pledge.updates,
       comments: pledge.comments
@@ -65,8 +65,7 @@ class PledgesController < ApplicationController
       @result_count = search.unscoped_results.count
     end
 
-    @pledges =
-      ActiveModelSerializers::SerializableResource.new(@pledges).as_json
+    @pledges = serialize @pledges
 
     respond_to do |format|
       format.html do

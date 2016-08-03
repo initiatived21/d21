@@ -4,7 +4,7 @@ class PledgePolicy < ApplicationPolicy
   end
 
   def finalize?
-    @record.initiator == @user
+    @record.initiator == @user && @user.confirmed_at?
   end
 
   def update?

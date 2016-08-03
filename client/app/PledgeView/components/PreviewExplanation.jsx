@@ -9,17 +9,21 @@ export default class PreviewExplanation extends ChildComponent {
   }
 
   render() {
-    const { isDraft, activateAction } = this.props
+    const { isDraft, activateAction, userConfirmed } = this.props
 
     let statusInfo
     if (isDraft) {
-      statusInfo = (
-        <ButtonFor action={activateAction} method='PATCH'>
-          Click here to submit it for approval
-        </ButtonFor>
-      )
+      if (userConfirmed) {
+        statusInfo = (
+          <ButtonFor action={activateAction} method='PATCH'>
+            Click here to submit it for approval
+          </ButtonFor>
+        )
+      } else {
+        statusInfo = 'Please confirm your email to finalize this pledge.'
+      }
     } else {
-      statusInfo = 'It is being reviewed'
+      statusInfo = 'It is being reviewed.'
     }
 
     return (

@@ -6,6 +6,7 @@ FactoryGirl.define do
     organization { maybe FFaker::Company.name }
     email { FFaker::Internet.email }
     password 'password'
+    confirmed_at { Time.zone.now }
   end
 end
 

@@ -3,3 +3,4 @@ pledger:
   name: pledgerName
   organization: pledgerOrganiztion
   email: pledgerEmail
+  confirmed_at: 2000-01-01
