@@ -16,9 +16,10 @@ export default class PledgeForm extends ChildComponent {
   }
 
   render() {
-    const { onLinkClick, currentUser, onSaveDraftClick } = this.props
+    const { onLinkClick, currentUser, onSaveDraftClick, onSavePreviewClick } = this.props
 
     const formObject = currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
+
     const initiatorForm = currentUser ? null : this.renderInitiatorForm()
     const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
 
@@ -70,7 +71,10 @@ export default class PledgeForm extends ChildComponent {
           <div className="o-layout__item u-1/3">
             <button
               className="c-new-pledge__save-draft o-btn o-btn--small u-mb-small"
-              type="submit" name='commit' value='save_draft'
+              type="submit"
+              name='commit'
+              value='save_draft'
+              onClick={() => onSaveDraftClick(formObject)}
             >
               <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/></svg>
               {` ${this.t('.save_draft')}`}
@@ -82,7 +86,8 @@ export default class PledgeForm extends ChildComponent {
           <div className="o-layout__item u-2/3">
             <button
               className="c-new-pledge__preview o-btn o-btn--small u-mb-small"
-              type="button"
+              type="submit"
+              onClick={() => onSavePreviewClick(formObject)}
             >
               <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5t-316.5 131.5-316.5-131.5-131.5-316.5q0-121 61-225-229 117-381 353 133 205 333.5 326.5t434.5 121.5 434.5-121.5 333.5-326.5zm-720-384q0-20-14-34t-34-14q-125 0-214.5 89.5t-89.5 214.5q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69-140 230-376.5 368.5t-499.5 138.5-499.5-139-376.5-368q-20-35-20-69t20-69q140-229 376.5-368t499.5-139 499.5 139 376.5 368q20 35 20 69z" fill="#fff"/></svg>
               {' '}

@@ -1,6 +1,8 @@
 import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
 
+import redirectTo from '../../utilities/redirectTo'
+
 export const initialAjaxSubmissionState = {
   isSubmitting: {}
 }
@@ -23,11 +25,16 @@ export default function ajaxSubmissionReducer(state = initialAjaxSubmissionState
       let responseChanges = {}
       switch (response.status) {
       case 'success':
-        responseChanges[action.formObjectName] = {}
-        forIn(response.changes, (changedInstance, changedList) => {
-          responseChanges[changedList] = state[changedList] || {}
-          responseChanges[changedList][changedInstance.id] = changedInstance
-        })
+        if (typeof response.redirect_to === 'undefined') {
+          responseChanges[action.formObjectName] = {}
+          forIn(response.changes, (changedInstance, changedList) => {
+            responseChanges[changedList] = state[changedList] || {}
+            responseChanges[changedList][changedInstance.id] = changedInstance
+          })
+        }
+        else {
+          redirectTo(response.redirect_to)
+        }
       break
       case 'formErrors':
         responseChanges[action.formObjectName] = state[action.formObjectName]

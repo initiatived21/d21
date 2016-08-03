@@ -58,6 +58,8 @@ export default class JayForm {
     return {}
   }
 
+
+
   toFormData(form) {
     let formDataObject = new FormData()
 
