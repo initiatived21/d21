@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../Base/components/ChildComponent';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../Base/components/ChildComponent'
 
 // A general form helper in the general style of rails' #form_for
 //
@@ -30,8 +30,8 @@ export default class BaseForm extends ChildComponent {
   }
 
   render() {
-    const { onSubmit, children, multipart, className } = this.props;
-    const { action, authToken, method } = this.props.formData;
+    const { onSubmit, children, multipart, className, commit } = this.props
+    const { action, authToken, method } = this.props.formData
     const enctype =
       multipart ? 'multipart/form-data' : 'application/x-www-form-urlencoded'
 
@@ -55,6 +55,7 @@ export default class BaseForm extends ChildComponent {
 
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='utf8' value='&#x2713;' />
+        <input type='hidden' name='commit' value={commit} />
         {hiddenMethodField}
 
         {this.renderChildren(children)}
@@ -66,7 +67,7 @@ export default class BaseForm extends ChildComponent {
   // with model and error props
   renderChildren(children) {
     return React.Children.map(children, child => {
-      if (!child || typeof child !== 'object') { return child; }
+      if (!child || typeof child !== 'object') { return child }
 
       if (child.type.isInput) { // is our custom Input component: inject!
         const { formData, formObject } = this.props
@@ -88,16 +89,20 @@ export default class BaseForm extends ChildComponent {
           model: formData.model,
           object: formObject,
           serverErrors: errors
-        });
+        })
+      } else if (child.type.isButton) {
+        return React.cloneElement(child, {
+          object: this.props.formObject,
+        })
       } else {
         if (child.props.children) { // has further children, needs recursion
           return React.cloneElement(child, {
             children: this.renderChildren(child.props.children)
-          });
+          })
         } else { // last non-Input child, just return original
-          return child;
+          return child
         }
       }
-    });
+    })
   }
-};
+}

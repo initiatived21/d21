@@ -16,18 +16,18 @@ export default class Input extends Component {
     errors: PropTypes.array,
     as: PropTypes.string,
     className: PropTypes.string
-  };
+  }
 
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
       inlineLabel, formObjectName, className
-    } = this.props;
+    } = this.props
 
-    const modelParamName = this._modelParamName(model, submodel);
-    const modelParamId = this._modelParamId(model, submodel);
+    const modelParamName = this._modelParamName(model, submodel)
+    const modelParamId = this._modelParamId(model, submodel)
 
-    const submodelKey = submodel ? `.${submodel}` : '';
+    const submodelKey = submodel ? `.${submodel}` : ''
 
     const id = `${modelParamId}_${attribute}`
     const name = `${modelParamName}[${attribute}]`
@@ -47,7 +47,7 @@ export default class Input extends Component {
     const onChange = e => {
       this.props.onChange(
         formObjectName, attribute, submodel, $(e.target).val()
-      );
+      )
     }
             // changes => {
             //   const changesToSave =
@@ -117,7 +117,7 @@ export default class Input extends Component {
           />
     }
 
-    let errorSpan;
+    let errorSpan
     if (errors) {
       errorSpan =
         <span className='inline-errors'>
@@ -125,9 +125,9 @@ export default class Input extends Component {
         </span>
     }
 
-    let combinedClassName = `input-${attribute}`;
+    let combinedClassName = `input-${attribute}`
     if (className) {
-      combinedClassName += ` ${className}`;
+      combinedClassName += ` ${className}`
     }
 
     if (type === 'checkbox') {
@@ -156,17 +156,17 @@ export default class Input extends Component {
 
   _modelParamName(model, submodel) {
     if (submodel) {
-      return `${model}[${submodel}]`;
+      return `${model}[${submodel}]`
     } else {
-      return model;
+      return model
     }
   }
 
   _modelParamId(model, submodel) {
     if (submodel) {
-      return `${model}_${submodel}`;
+      return `${model}_${submodel}`
     } else {
-      return model;
+      return model
     }
   }
-};
+}

@@ -4,7 +4,7 @@ export default class BasePledgeFormObject extends JayForm {
   static get properties() {
     return [
       'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'image', 'description', 'tag_ids', 'commit'
+      'image', 'description', 'tag_ids'
     ]
   }
 

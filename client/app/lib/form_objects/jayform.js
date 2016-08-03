@@ -85,7 +85,7 @@ export default class JayForm {
     }
 
     // Add meta data to FormData
-    const metaFields = [ 'utf8', 'authenticity_token' ]
+    const metaFields = [ 'utf8', 'authenticity_token', 'commit' ]
     for (let metaField of metaFields) {
       formDataObject.set(metaField, (form[metaField] && form[metaField].value))
     }

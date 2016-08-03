@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
     ),
     formObject: new ownProps.object(editedStateObject),
     editedStateObject,
+    commit: (editedStateObject && editedStateObject.commit),
   }
 }
 
