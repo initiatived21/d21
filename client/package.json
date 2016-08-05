@@ -15,7 +15,7 @@
     "build:test": "npm run build:client && npm run build:server",
     "build:production": "npm run build:production:client && npm run build:production:server",
     "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts",
-    "test:lint": "eslint . --ext .js --ext .jsx --cache"
+    "test:lint": "eslint . --ext .js --ext .jsx --cache --config ../.eslintrc.json"
   },
   "dependencies": {
     "aleut.base.headings": "^1.0.3",
