@@ -292,9 +292,9 @@ en:
   react_form:
     comment:
       content:
-        label: Your question
+        label: Your question…
       response:
-        label: Your answer
+        label: Your answer…
     pledge:
       amount:
         label: How many?

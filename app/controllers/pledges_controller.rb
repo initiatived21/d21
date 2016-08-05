@@ -167,8 +167,15 @@ class PledgesController < ApplicationController
   def update_success!
     @form.save
     respond_to do |format|
-      format.json { render json: { status: 'success' } }
-      format.html { redirect_to pledge_path(@pledge, locale: I18n.locale) }
+      format.json do
+        render json: {
+          status: 'success',
+          redirect_to: commit_based_return_url,
+        }
+      end
+      format.html do
+        redirect_to commit_based_return_url
+      end
     end
   end
 
