@@ -15,15 +15,20 @@ export default class PledgeQAs extends ChildComponent {
 
     return (
       <FormFor
+        className="o-layout u-mt-small"
         object={NewQuestionFormObject}
         ajax={true}
         formData={formData}>
 
-        <Input className="c-input u-1/2" attribute='content' />
+        <Input className="c-input o-layout__item u-3/4"
+          attribute='content' inlineLabel />
 
-        <button className="o-btn o-btn--small" type="submit" disabled={isSubmitting}>
-          {this.t('.submit')}
-        </button>
+        <div className="o-layout__item u-1/4">
+          <button className="o-btn o-btn--small o-btn--full"
+            type="submit" disabled={isSubmitting}>
+            {this.t('.submit')}
+          </button>
+        </div>
       </FormFor>
     )
   }

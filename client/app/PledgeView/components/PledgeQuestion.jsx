@@ -11,7 +11,9 @@ export default class PledgeQuestion extends ChildComponent {
     const { children } = this.props;
 
     return (
-      <dt>{children}</dt>
+      <div className="u-clearfix u-mb-small">
+        <div className="c-comment__question">{children}</div>
+      </div>
     );
   }
 }

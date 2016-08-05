@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import merge from 'lodash/merge'
+import I18n from 'i18n-js'
 import PledgeSidebar from '../components/PledgeSidebar'
 
 const mapStateToProps = (state, ownProps) => {
@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
 
   let userIsInitiator
   if (currentUser && currentPledge) {
-    userIsInitiator = state.currentUser.id == currentPledge.user_id
+    userIsInitiator = currentUser.id == currentPledge.user_id
   } else {
     userIsInitiator = false
   }
@@ -25,7 +25,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

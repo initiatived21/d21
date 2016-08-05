@@ -28,7 +28,7 @@ export default class PledgeQAs extends ChildComponent {
     }
 
     return (
-      <div className='PledgeComment'>
+      <div className="c-comment">
         <PledgeQuestion>{comment.content}</PledgeQuestion>
         {answerDisplayOrForm}
       </div>

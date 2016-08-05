@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #COMMENT
+\*------------------------------------*/
+
+/**
+ * Pledge questions and answers
+ */
+
+.c-comment {
+
+}
+
+.c-comment__question, .c-comment__answer {
+  clear: both;
+  @include clearfix;
+
+  padding: $spacing--tiny $spacing--small;
+  border-radius: 5px;
+}
+
+.c-comment__question {
+  float: left;
+
+  background-color: $light-gray;
+}
+
+.c-comment__answer {
+  float: right;
+
+  color: $white;
+  background-color: $primary-color-lighter;
+}

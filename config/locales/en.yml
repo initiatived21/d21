@@ -361,7 +361,7 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
-  AnswerForm:
-    submit: Submit
   UpdateForm:
+    submit: Submit
+  AnswerForm:
     submit: Submit

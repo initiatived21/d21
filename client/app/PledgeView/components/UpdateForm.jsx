@@ -20,9 +20,9 @@ export default class UpdateForm extends ChildComponent {
 
         <h2>Neuigkeiten</h2>
 
-        <Input attribute='content' type='textarea' />
+        <Input className="c-textarea" attribute='content' type='textarea' />
 
-        <button className="o-btn" type="submit" disabled={isSubmitting}>
+        <button className="o-btn o-btn--small" type="submit" disabled={isSubmitting}>
           {this.t('.submit')}
         </button>
       </FormFor>

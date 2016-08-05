@@ -363,7 +363,7 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
-  AnswerForm:
-    submit: Absenden
   UpdateForm:
+    submit: Absenden
+  AnswerForm:
     submit: Absenden
