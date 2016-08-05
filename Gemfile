@@ -68,6 +68,10 @@ gem 'activeadmin', github: 'activeadmin'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
 ################
 ### Database ###
 ################
