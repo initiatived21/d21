@@ -1662,6 +1662,11 @@
       "from": "follow-redirects@0.0.7",
       "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-0.0.7.tgz"
     },
+    "font-awesome": {
+      "version": "4.6.3",
+      "from": "font-awesome@latest",
+      "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
+    },
     "for-in": {
       "version": "0.1.5",
       "from": "for-in@>=0.1.5 <0.2.0",
@@ -3251,6 +3256,11 @@
       "version": "15.1.0",
       "from": "react-dom@>=15.1.0 <16.0.0",
       "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.1.0.tgz"
+    },
+    "react-fontawesome": {
+      "version": "1.1.0",
+      "from": "react-fontawesome@latest",
+      "resolved": "https://registry.npmjs.org/react-fontawesome/-/react-fontawesome-1.1.0.tgz"
     },
     "react-image-crop": {
       "version": "1.0.0-rc5",

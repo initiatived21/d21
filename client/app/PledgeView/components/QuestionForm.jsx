@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
@@ -26,6 +27,8 @@ export default class PledgeQAs extends ChildComponent {
         <div className="o-layout__item u-1/4">
           <button className="o-btn o-btn--small o-btn--full"
             type="submit" disabled={isSubmitting}>
+            <FontAwesome name="paper-plane" />
+            {' '}
             {this.t('.submit')}
           </button>
         </div>
