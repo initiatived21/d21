@@ -64,13 +64,13 @@ describe('FormFor', function() {
         className: 'testDiv',
         key: 'a'
       },
-      [
-        React.DOM.span({
-          className: 'testSpan',
-          key: 'b'
-        })
-      ])
-    ];
+        [
+          React.DOM.span({
+            className: 'testSpan',
+            key: 'b'
+          })
+        ])
+    ]
 
     it('should render the children without model prop', function() {
       const wrapper = mount(React.createElement(FormFor, props, children))

@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 
 export default class GoogleplusButton extends ChildComponent {
   render() {
-    const { url, handleClick } = this.props;
+    const { url, handleClick } = this.props
 
     return (
       <li>
@@ -27,7 +27,7 @@ export default class GoogleplusButton extends ChildComponent {
           </svg>
         </a>
       </li>
-    );
+    )
   }
 }
 

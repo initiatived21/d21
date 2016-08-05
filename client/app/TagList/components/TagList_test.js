@@ -1,7 +1,7 @@
-import React         from 'react';
-import { shallow }   from 'enzyme';
-import Tag           from './Tag';
-import TagList       from './TagList';
+import React         from 'react'
+import { shallow }   from 'enzyme'
+import Tag           from './Tag'
+import TagList       from './TagList'
 
 describe('<TagList />', function () {
   const props = {
@@ -10,12 +10,12 @@ describe('<TagList />', function () {
       'Kinder',
       'Frauen'
     ]
-  };
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<TagList {...props} />);
+    const wrapper = shallow(<TagList {...props} />)
 
-    wrapper.hasClass('c-tag-list').should.be.true;
-    wrapper.find(Tag).length.should.equal(3);
-  });
-});
+    wrapper.hasClass('c-tag-list').should.be.true
+    wrapper.find(Tag).length.should.equal(3)
+  })
+})

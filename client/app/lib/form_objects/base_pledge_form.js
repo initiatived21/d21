@@ -1,4 +1,4 @@
-import JayForm from './jayform';
+import JayForm from './jayform'
 
 export default class BasePledgeFormObject extends JayForm {
   static get properties() {

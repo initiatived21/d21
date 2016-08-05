@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import values      from 'lodash/values'
+import I18n        from 'i18n-js'
 import StateFooter from '../components/StateFooter'
 
 const mapStateToProps = (state, ownProps) => {

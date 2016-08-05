@@ -28,4 +28,4 @@ describe('<StandaloneButton />', function() {
       button.hasClass('dummy').should.be.true
     })
   })
-});
+})

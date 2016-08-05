@@ -16,10 +16,10 @@ function filterPledges(pledges, filter) {
 
 export function mapStateToProps(state, ownProps) {
   return ({
-      pledges: filterPledges(state.pledges, ownProps.filter).map((pledge) => {
-        pledge.initiator = state.users[pledge.initiator]
-        return pledge
-      }
+    pledges: filterPledges(state.pledges, ownProps.filter).map((pledge) => {
+      pledge.initiator = state.users[pledge.initiator]
+      return pledge
+    }
     )
   })
 }
