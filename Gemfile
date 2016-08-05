@@ -105,6 +105,10 @@ group :development do
   # requires graphviz to generate
   # entity relationship diagrams
   gem 'rails-erd', require: false
+
+  # Deploy utilities
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
 end
 
 group :test do
