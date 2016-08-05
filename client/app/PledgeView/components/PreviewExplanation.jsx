@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import ButtonFor from '../../lib/Form/containers/ButtonFor'
 
@@ -16,9 +17,12 @@ export default class PreviewExplanation extends ChildComponent {
       if (userConfirmed) {
         statusInfo = (
           <ButtonFor
-            className="o-btn o-btn--full u-mt-small"
+            className="o-btn o-btn--small c-btn c-btn--primary u-mt-small"
             action={activateAction}
-            method='PATCH'>
+            method='PATCH'
+          >
+            <FontAwesome name="thumbs-o-up" />
+            {' '}
             Click here to submit it for approval
           </ButtonFor>
         )

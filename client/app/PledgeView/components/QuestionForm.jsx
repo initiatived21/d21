@@ -25,7 +25,7 @@ export default class PledgeQAs extends ChildComponent {
           attribute='content' inlineLabel />
 
         <div className="o-layout__item u-1/4">
-          <button className="o-btn o-btn--small o-btn--full"
+          <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}>
             <FontAwesome name="paper-plane" />
             {' '}

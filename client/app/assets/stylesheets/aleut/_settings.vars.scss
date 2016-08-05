@@ -54,9 +54,9 @@ $mid-dark-gray: rgb(45%, 45%, 45%);
 $gray: rgb(60%, 60%, 60%);
 $light-gray: rgb(85%, 85%, 85%);
 
+$gray-highlight: lighten($gray, 5%);
 
 $success-color: rgb(47%, 60%, 69%);
-
 $urgent-color: rgb(71%, 6%, 5%);
 
 
@@ -93,4 +93,6 @@ $breakpoints: (
 /**
  * Other vars here
  **/
+
+$transition-time: 250ms;
 

@@ -42,12 +42,19 @@
   height: 40px;
   width: 4em;
 
-  background-color: $primary-color;
-
   border: none;
   border-radius: 5px;
+  padding: 0;
 
-  svg {
-    fill: white;
+  background-color: $primary-color;
+
+
+  > .fa {
+    color: $white;
+    width: 20px;
+    height: 20px;
+    margin: 7px;
+
+    @include font-size(18px, 1.25);
   }
 }

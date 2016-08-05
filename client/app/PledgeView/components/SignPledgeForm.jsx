@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
@@ -60,11 +61,9 @@ export default class SignPledgeForm extends ChildComponent {
             </small>
           </p>
 
-          <button className="c-sign-pledge__submit o-btn o-btn--full" type="submit"
-                  disabled={isSubmitting}>
-            <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/>
-            </svg>
+          <button className="c-sign-pledge__submit o-btn o-btn--full c-btn c-btn--secondary"
+                  type="submit" disabled={isSubmitting}>
+            <FontAwesome name="check" />
             {` ${this.t('.sign')}`}
           </button>
 

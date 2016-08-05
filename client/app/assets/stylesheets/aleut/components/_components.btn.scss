@@ -1,15 +1,42 @@
+/*------------------------------------*\
+    #BTN
+\*------------------------------------*/
+
+/**
+ * Button component
+ *
+ * To be used with 'o-btn'
+ */
 
 .c-btn {
-  margin-top: $spacing--small;
-  margin-bottom: $spacing--small;
+  border: none;
 
-  svg {
-    width: 16px;
-    height: 16px;
-    fill: white;
+  color: $white;
+  transition: background-color $transition-time;
+
+  //.fa {
+  //  @include font-size(18px, 1.4);
+  //}
+}
+
+.c-btn--primary {
+  background-color: $primary-color;
+
+  &:hover, &:active {
+    background-color: $primary-color-highlight;
   }
 }
 
-.c-btn--center {
-  text-align: center;
+.c-btn--secondary {
+  background-color: $secondary-color;
+
+  &:hover, &:active {
+    background-color: $secondary-color-highlight;
+  }
+}
+
+.c-btn--disabled {
+  background-color: $c-btn--disabled-background;
+  border-color: $c-btn--disabled-background;
+  cursor: progress; /* or 'auto' */
 }

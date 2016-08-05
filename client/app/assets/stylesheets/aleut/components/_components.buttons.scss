@@ -1,19 +1,5 @@
-/*------------------------------------*\
-    #BUTTONS
-\*------------------------------------*/
-
-/**
- * Buttons component
- *
- * To be used with 'o-btn'
- */
 
 /**
  * 1.
  */
 
-.c-btn--disabled {
-  background-color: $c-btn--disabled-background;
-  border-color: $c-btn--disabled-background;
-  cursor: progress; /* or 'auto' */
-}

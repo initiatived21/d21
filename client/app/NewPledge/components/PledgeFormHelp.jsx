@@ -1,4 +1,5 @@
 import React, { PropTypes  } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import I18n from 'i18n-js'
 import { FAQ_PATH } from '../../lib/config'
@@ -43,9 +44,7 @@ export default class PledgeFormHelp extends ChildComponent {
           </p>
 
           <div className="c-help__faq o-media o-media--flush u-mt">
-            <svg className="o-media__img" width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1216 1344v128q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h64v-384h-64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h384q26 0 45 19t19 45v576h64q26 0 45 19t19 45zm-128-1152v192q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-192q0-26 19-45t45-19h256q26 0 45 19t19 45z" />
-            </svg>
+            <FontAwesome className="o-media__img" name="info" />
             <div className="o-media__body">
               <h3>Sie haben weitere Fragen?</h3>
               <p><a href={`/${I18n.locale}${FAQ_PATH}`}>Schauen Sie in unseren FAQ nach.</a></p>

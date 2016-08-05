@@ -2,33 +2,47 @@
  * Social media buttons
  */
 
-$social-media-button-color: rgb(60%, 60%, 60%);
-
 .c-social-media {
 }
 
 .c-social-media > li {
   display: inline-block;
 
-  border: 1px solid $social-media-button-color;
+  border: 1px solid $gray;
   border-radius: 35px;
   width: 35px;
   height: 35px;
   margin-right: 10px;
 
+  transition: border-color $transition-time;
+
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &:hover, &:active {
+    border-color: $primary-color;
+
+    .fa {
+      color: $primary-color;
+    }
   }
 }
 
 .c-social-media__button {
   display: block;
+  text-align: center;
 }
 
-.c-social-media__button > svg {
+.c-social-media__button > .fa {
   width: 20px;
   height: 20px;
   margin: 7px;
-  fill: $social-media-button-color;
+
+  @include font-size(18px, 1.15);
+
+  color: $gray;
   background-color: transparent;
+
+  transition: color $transition-time;
 }

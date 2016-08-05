@@ -1,4 +1,5 @@
 import React from 'react'
+import FontAwesome from 'react-fontawesome'
 import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 
@@ -45,7 +46,7 @@ describe('Social media button', function() {
 
         wrapper.find('li').length.should.equal(1)
         wrapper.find('a').length.should.equal(1)
-        wrapper.find('svg').length.should.equal(1)
+        wrapper.find(FontAwesome).length.should.equal(1)
       })
 
       it('should link to the correct URL', function() {

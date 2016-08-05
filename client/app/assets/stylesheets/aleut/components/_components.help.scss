@@ -36,14 +36,13 @@
 }
 
 .c-help__faq {
-  svg {
-    margin-top: 2px;
-    margin-left: -17px !important;
-    margin-right: -10px !important;
-    fill: $primary-color;
+  .fa {
+    margin-top: 3px;
+    margin-left: 0;
+    margin-right: 7px;
+    color: $primary-color;
 
-    width: 55px;
-    height: 55px;
+    @include font-size(56px, 1);
   }
 
   h3 {

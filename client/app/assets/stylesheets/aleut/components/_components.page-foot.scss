@@ -37,6 +37,10 @@ $svg-icon-border-size: 1px;
   a {
     color: $text-color;
     text-decoration: none;
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
   }
 
   nav {
@@ -53,12 +57,16 @@ $svg-icon-border-size: 1px;
 
   margin-bottom: $footer-spacing-below-icons;
 
-  svg {
+  text-align: center;
+
+  .fa {
+    @include font-size(26px, 1.25);
+
     width: $svg-size;
     height: $svg-size;
 
     margin: $svg-margin;
 
-    fill: $text-color;
+    color: $text-color;
   }
 }

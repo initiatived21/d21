@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import PledgeQuestion from './PledgeQuestion'
 import PledgeAnswer from './PledgeAnswer'
@@ -27,8 +28,10 @@ export default class AnswerForm extends ChildComponent {
           attribute='response' inlineLabel />
 
         <div className="o-layout__item u-1/4">
-          <button className="o-btn o-btn--small o-btn--full"
+          <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
             type='submit' disabled={isSubmitting}>
+            <FontAwesome name="paper-plane" />
+            {' '}
             {this.t('.submit')}
           </button>
         </div>
