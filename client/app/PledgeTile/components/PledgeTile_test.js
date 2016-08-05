@@ -1,9 +1,9 @@
-import React               from 'react';
-import { shallow }         from 'enzyme';
+import React               from 'react'
+import { shallow }         from 'enzyme'
 
-import PledgeTile from './PledgeTile';
-import PledgeTileFront from './PledgeTileFront';
-import PledgeTileBack from './PledgeTileBack';
+import PledgeTile from './PledgeTile'
+import PledgeTileFront from './PledgeTileFront'
+import PledgeTileBack from './PledgeTileBack'
 
 describe('<PledgeTile />', function () {
   const props = {
@@ -26,14 +26,14 @@ describe('<PledgeTile />', function () {
         }
       }
     }
-  };
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeTile {...props} />);
+    const wrapper = shallow(<PledgeTile {...props} />)
 
-    wrapper.hasClass('o-layout__item').should.be.true;
-    wrapper.find('article').hasClass('c-pledge-tile').should.be.true;
-    wrapper.find(PledgeTileFront).length.should.equal(1);
-    wrapper.find(PledgeTileBack).length.should.equal(1);
-  });
-});
+    wrapper.hasClass('o-layout__item').should.be.true
+    wrapper.find('article').hasClass('c-pledge-tile').should.be.true
+    wrapper.find(PledgeTileFront).length.should.equal(1)
+    wrapper.find(PledgeTileBack).length.should.equal(1)
+  })
+})

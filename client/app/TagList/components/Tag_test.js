@@ -1,12 +1,12 @@
-import React       from 'react';
-import { shallow } from 'enzyme';
-import Tag from './Tag';
+import React       from 'react'
+import { shallow } from 'enzyme'
+import Tag from './Tag'
 
 describe('<Tag />', function () {
   it('should render', function () {
-    const wrapper = shallow(<Tag>Familie</Tag>);
+    const wrapper = shallow(<Tag>Familie</Tag>)
 
-    wrapper.hasClass('c-tag-list__item').should.be.true;
-    wrapper.text().should.equal('Familie');
-  });
-});
+    wrapper.hasClass('c-tag-list__item').should.be.true
+    wrapper.text().should.equal('Familie')
+  })
+})

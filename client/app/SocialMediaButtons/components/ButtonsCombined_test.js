@@ -1,12 +1,12 @@
-import React from 'react';
-import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
+import React from 'react'
+import { shallow, mount } from 'enzyme'
+import sinon from 'sinon'
 
-import FacebookButton from './FacebookButton';
-import TwitterButton from './TwitterButton';
-import GoogleplusButton from './GoogleplusButton';
-import LinkedinButton from './LinkedinButton';
-import XingButton from './XingButton';
+import FacebookButton from './FacebookButton'
+import TwitterButton from './TwitterButton'
+import GoogleplusButton from './GoogleplusButton'
+import LinkedinButton from './LinkedinButton'
+import XingButton from './XingButton'
 
 describe('Social media button', function() {
   var tests = [
@@ -35,40 +35,40 @@ describe('Social media button', function() {
       componentName: 'XingButton',
       expectedUrl: 'https://www.xing.com/social_plugins/share?url=http%3A%2F%2Fwww.example.com'
     }
-  ];
+  ]
 
   tests.forEach(function(test) {
     describe(`<${test.componentName} />`, function() {
       it('should render', function() {
         const wrapper = shallow(React.createElement(test.component,
-          { url: '', handleClick: () => null }));
+          { url: '', handleClick: () => null }))
 
-        wrapper.find('li').length.should.equal(1);
-        wrapper.find('a').length.should.equal(1);
-        wrapper.find('svg').length.should.equal(1);
-      });
+        wrapper.find('li').length.should.equal(1)
+        wrapper.find('a').length.should.equal(1)
+        wrapper.find('svg').length.should.equal(1)
+      })
 
       it('should link to the correct URL', function() {
         const wrapper = shallow(React.createElement(test.component,
-          { url: 'http://www.example.com', handleClick: () => null }));
-        const href = wrapper.find('a').at(0).props().href;
+          { url: 'http://www.example.com', handleClick: () => null }))
+        const href = wrapper.find('a').at(0).props().href
 
         if (test.expectedUrl) {
-          href.should.equal(test.expectedUrl);
+          href.should.equal(test.expectedUrl)
         }
         else if (test.expectedUrlRegex) {
-          href.should.match(test.expectedUrlRegex);
+          href.should.match(test.expectedUrlRegex)
         }
-      });
+      })
 
       it('should call the click handler if clicked', function() {
-        const onButtonClick = sinon.spy();
+        const onButtonClick = sinon.spy()
         const wrapper = mount(React.createElement(test.component,
-          { url: '', handleClick: onButtonClick }));
+          { url: '', handleClick: onButtonClick }))
 
-        wrapper.find('a').simulate('click');
-        onButtonClick.calledOnce.should.be.true;
-      });
-    });
-  });
-});
+        wrapper.find('a').simulate('click')
+        onButtonClick.calledOnce.should.be.true
+      })
+    })
+  })
+})

@@ -32,5 +32,9 @@
             "error",
             "never"
         ]
+    },
+    "globals": {
+        "describe": false,
+        "it": false
     }
 }

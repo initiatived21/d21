@@ -1,6 +1,6 @@
-import React       from 'react';
-import { shallow } from 'enzyme';
-import PledgeQuote from './PledgeQuote';
+import React       from 'react'
+import { shallow } from 'enzyme'
+import PledgeQuote from './PledgeQuote'
 import Avatar from '../../Avatar/components/Avatar'
 
 describe('<PledgeQuote />', function () {
@@ -11,13 +11,13 @@ describe('<PledgeQuote />', function () {
     amount: 10,
     who: 'Dolmetscher',
     requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
-  };
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeQuote {...props} />);
+    const wrapper = shallow(<PledgeQuote {...props} />)
 
-    wrapper.find(Avatar).length.should.equal(1);
-    wrapper.find('div').length.should.equal(2);
-    wrapper.find('blockquote').length.should.equal(1);
-  });
-});
+    wrapper.find(Avatar).length.should.equal(1)
+    wrapper.find('div').length.should.equal(2)
+    wrapper.find('blockquote').length.should.equal(1)
+  })
+})

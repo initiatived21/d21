@@ -1,10 +1,10 @@
 // Webpack configuration for server bundle
 
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
 
-const devBuild = process.env.NODE_ENV !== 'production';
-const nodeEnv = devBuild ? 'development' : 'production';
+const devBuild = process.env.NODE_ENV !== 'production'
+const nodeEnv = devBuild ? 'development' : 'production'
 
 module.exports = {
 
@@ -40,4 +40,4 @@ module.exports = {
       { test: require.resolve('i18n-js'), loader: 'expose?I18n' },
     ],
   },
-};
+}

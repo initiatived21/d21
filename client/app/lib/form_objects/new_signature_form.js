@@ -1,4 +1,4 @@
-import JayForm from './jayform';
+import JayForm from './jayform'
 
 export default class NewSignatureFormObject extends JayForm {
   static get properties() {

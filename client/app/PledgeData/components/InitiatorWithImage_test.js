@@ -1,17 +1,17 @@
-import React           from 'react';
-import { shallow }     from 'enzyme';
-import InitiatorWithImage from './InitiatorWithImage';
+import React           from 'react'
+import { shallow }     from 'enzyme'
+import InitiatorWithImage from './InitiatorWithImage'
 
 describe('<InitiatorWithImage />', function () {
   const props = {
     imagePath: 'dummy'
-  };
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<InitiatorWithImage {...props}>Max Mustermann</InitiatorWithImage>);
+    const wrapper = shallow(<InitiatorWithImage {...props}>Max Mustermann</InitiatorWithImage>)
 
-    wrapper.hasClass('o-media').should.be.true;
-    wrapper.find('p').at(0).text().should.equal('Initiator');
-    wrapper.find('p').at(1).text().should.equal('Max Mustermann');
-  });
-});
+    wrapper.hasClass('o-media').should.be.true
+    wrapper.find('p').at(0).text().should.equal('Initiator')
+    wrapper.find('p').at(1).text().should.equal('Max Mustermann')
+  })
+})

@@ -6,4 +6,4 @@ export default (formObjectName, attribute, submodel, value) =>
     submodel,
     value
   })
-;
+

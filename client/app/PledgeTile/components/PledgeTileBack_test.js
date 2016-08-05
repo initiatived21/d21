@@ -1,9 +1,9 @@
-import React               from 'react';
-import { shallow }         from 'enzyme';
+import React               from 'react'
+import { shallow }         from 'enzyme'
 
-import PledgeTileBack      from './PledgeTileBack';
-import PledgeText          from './PledgeText';
-import SocialMediaButtons  from '../../SocialMediaButtons/components/SocialMediaButtons';
+import PledgeTileBack      from './PledgeTileBack'
+import PledgeText          from './PledgeText'
+import SocialMediaButtons  from '../../SocialMediaButtons/components/SocialMediaButtons'
 
 describe('<PledgeTileBack />', function () {
   const props = {
@@ -13,13 +13,13 @@ describe('<PledgeTileBack />', function () {
     who: 'Dolmetscher',
     requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
     path: 'http://www.example.com/pledges/1'
-  };
+  }
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeTileBack {...props} />);
+    const wrapper = shallow(<PledgeTileBack {...props} />)
 
-    wrapper.hasClass('c-pledge-tile__back').should.be.true;
-    wrapper.find(PledgeText).length.should.equal(1);
-    wrapper.find(SocialMediaButtons).length.should.equal(1);
-  });
-});
+    wrapper.hasClass('c-pledge-tile__back').should.be.true
+    wrapper.find(PledgeText).length.should.equal(1)
+    wrapper.find(SocialMediaButtons).length.should.equal(1)
+  })
+})

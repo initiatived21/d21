@@ -1,10 +1,10 @@
-import React       from 'react';
-import TestUtils   from 'react-addons-test-utils';
-import sinon       from 'sinon';
-import { mount }   from 'enzyme';
+import React       from 'react'
+import TestUtils   from 'react-addons-test-utils'
+import sinon       from 'sinon'
+import { mount }   from 'enzyme'
 
-import ElementList from './ElementList.jsx';
-import store       from '../../lib/store.js';
+import ElementList from './ElementList.jsx'
+import store       from '../../lib/store.js'
 
 describe('ElementList', function() {
   describe('with basic props', function() {
@@ -12,19 +12,19 @@ describe('ElementList', function() {
       const component = mount(React.createElement(ElementList, {
         pledges: [],
         filter: 'testFilter'
-      }));
+      }))
 
-      const container = component.find('Connect');
+      const container = component.find('Connect')
 
-      container.length.should.equal(1);
-      container.node.renderedElement.type.name.should.equal('PledgeList');
-      container.node.props.filter.should.equal('testFilter');
-    });
-  });
+      container.length.should.equal(1)
+      container.node.renderedElement.type.name.should.equal('PledgeList')
+      container.node.props.filter.should.equal('testFilter')
+    })
+  })
 
   describe('with pledges', function() {
     it('should dispatch an addEntities with normalized pledges', function() {
-      store.dispatch = sinon.spy();
+      store.dispatch = sinon.spy()
 
       mount(React.createElement(ElementList, {
         pledges: [{
@@ -35,9 +35,9 @@ describe('ElementList', function() {
         }],
 
         filter: 'testFilter'
-      }));
+      }))
 
-      store.dispatch.called.should.equal(true);
-    });
-  });
-});
+      store.dispatch.called.should.equal(true)
+    })
+  })
+})

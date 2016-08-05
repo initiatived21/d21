@@ -35,55 +35,55 @@ export default function imageInputReducer(state = initialImageInputState, action
 
   switch (action.type) {
     // At the moment we do noting here in the UI
-    case 'LOAD_IMAGE_START':
-      newState.imageInputs[id].imageState = IMAGE_STATE_LOADING
-      return newState
+  case 'LOAD_IMAGE_START':
+    newState.imageInputs[id].imageState = IMAGE_STATE_LOADING
+    return newState
 
-    case 'LOAD_IMAGE_SUCCESS':
-      const originalImage = action.image, aspect = action.aspect
-      const crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
+  case 'LOAD_IMAGE_SUCCESS':
+    const originalImage = action.image, aspect = action.aspect
+    const crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
 
-      newState.imageInputs[id] = {
-        originalImage,
-        originalImageWidth: originalImage.width,
-        originalImageHeight: originalImage.height,
-        crop,
-        imageState: IMAGE_STATE_LOADED
-      }
-      return newState
+    newState.imageInputs[id] = {
+      originalImage,
+      originalImageWidth: originalImage.width,
+      originalImageHeight: originalImage.height,
+      crop,
+      imageState: IMAGE_STATE_LOADED
+    }
+    return newState
 
-    case 'LOAD_IMAGE_FAILURE':
-      newState.imageInputs[id].imageState = IMAGE_STATE_NONE
-      return newState
+  case 'LOAD_IMAGE_FAILURE':
+    newState.imageInputs[id].imageState = IMAGE_STATE_NONE
+    return newState
 
-    case 'CHANGE_CROP':
-      newState.imageInputs[id].crop = action.crop
-      return newState
+  case 'CHANGE_CROP':
+    newState.imageInputs[id].crop = action.crop
+    return newState
 
-    case 'CROP_IMAGE':
-      newState.imageInputs[id] = {
-        croppedImageUrl: action.croppedImageUrl,
-        originalImage: null,
-        originalImageWidth: 0,
-        originalImageHeight: 0,
-        crop: {},
-        imageState: IMAGE_STATE_CROPPED
-      }
-      return newState
+  case 'CROP_IMAGE':
+    newState.imageInputs[id] = {
+      croppedImageUrl: action.croppedImageUrl,
+      originalImage: null,
+      originalImageWidth: 0,
+      originalImageHeight: 0,
+      crop: {},
+      imageState: IMAGE_STATE_CROPPED
+    }
+    return newState
 
     // Theoretical action – is not present in UI at the moment
-    case 'CLEAR_IMAGE':
-      newState.imageInputs[id] = { 
-        originalImage: null,
-        originalImageWidth: 0,
-        originalImageHeight: 0,
-        crop: {},
-        croppedImageUrl: '',
-        imageState: IMAGE_STATE_NONE
-      }
-      return newState
+  case 'CLEAR_IMAGE':
+    newState.imageInputs[id] = { 
+      originalImage: null,
+      originalImageWidth: 0,
+      originalImageHeight: 0,
+      crop: {},
+      croppedImageUrl: '',
+      imageState: IMAGE_STATE_NONE
+    }
+    return newState
 
-    default:
-      return newState
+  default:
+    return newState
   }
 }
