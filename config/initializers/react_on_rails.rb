@@ -49,7 +49,7 @@ ReactOnRails.configure do |config|
   config.logging_on_server = true
 
   # Change to true to raise exception on server if the JS code throws
-  config.raise_on_prerender_error = false
+  config.raise_on_prerender_error = Rails.env.development?
 
   # Server rendering only (not for render_component helper)
   # You can configure your pool of JS virtual machines and specify where it should load code:
@@ -75,7 +75,7 @@ ReactOnRails.configure do |config|
   config.rendering_extension = nil
 
   # The server render method - either ExecJS or NodeJS
-  config.server_render_method = "ExecJS"
+  config.server_render_method = 'ExecJS'
 
   # Client js uses assets not digested by rails.
   # For any asset matching this regex, non-digested symlink will be created
