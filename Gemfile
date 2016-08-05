@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.0.rc1'
@@ -26,7 +27,7 @@ gem 'turbolinks', '~> 5.x'
 gem 'i18n-js'
 
 # React
-gem 'react_on_rails', '6.0.4'
+gem 'react_on_rails', '6.0.5'
 
 ########################
 ### Rails extensions ###

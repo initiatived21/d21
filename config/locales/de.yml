@@ -292,9 +292,9 @@ de:
   react_form:
     comment:
       content:
-        placeholder: Ihre Frage
+        label: Ihre Frage
       response:
-        placeholder: Ihre Antwort
+        label: Ihre Antwort
     pledge:
       amount:
         label: Wie viele?
@@ -363,3 +363,7 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
+  AnswerForm:
+    submit: Absenden
+  UpdateForm:
+    submit: Absenden
