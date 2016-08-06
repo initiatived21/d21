@@ -20,6 +20,6 @@ class SignerMailer < ApplicationMailer
     @recipient = recipient
     @update = update
     @pledge = pledge
-    mail subject: t('.subject'), to: @recipient.email
+    mail(subject: t('.subject'), to: @recipient.email).deliver
   end
 end
