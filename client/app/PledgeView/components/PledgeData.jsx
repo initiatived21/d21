@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react'
+import I18n from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import Initiator from '../../PledgeData/components/Initiator'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
+import daysTill from '../../lib/utilities/daysTill'
+import { FORMAT_DATE_AND_TIME } from '../../lib/config'
 
 export default class PledgeData extends ChildComponent {
   static propTypes = {
@@ -15,7 +18,11 @@ export default class PledgeData extends ChildComponent {
   render() {
     const { initiator, amount, deadline, signatures_count } = this.props
 
+    const remainingDays = daysTill(deadline)
+    const isUrgent = remainingDays <= 5 ? true : false;
+
     const percentage = Math.round(100 / amount * signatures_count)
+    const deadlineStr = I18n.strftime(I18n.parseDate(deadline), FORMAT_DATE_AND_TIME[I18n.locale])
 
     return (
       <div className="c-pledge-data">
@@ -32,8 +39,11 @@ export default class PledgeData extends ChildComponent {
           </div>
           <div className="c-pledge-data__time o-layout__item u-1/3">
             <p className="c-pledge-data__title">{this.t('.time.title')}</p>
-            <PledgeState remainingDays={5} urgent />
-            <p className="u-mt-small"><b>{this.t('.time.closes_on')}:</b><br />{deadline}</p>
+            <PledgeState remainingDays={remainingDays} urgent={isUrgent} />
+            <p className="u-mt-small">
+              <b>{this.t('.time.closes_on')}:</b><br />
+              {deadlineStr}
+            </p>
           </div>
         </div>
       </div>

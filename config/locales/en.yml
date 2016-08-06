@@ -240,6 +240,9 @@ en:
           '1': 
           '2': 
           '3': 
+    new_question:
+      greeting: 
+      subject: 
   layouts:
     partials:
       footer:
@@ -365,3 +368,7 @@ en:
     submit: Submit
   AnswerForm:
     submit: Submit
+  signer_mailer:
+    new_pledge_update:
+      greeting: 
+      subject: 

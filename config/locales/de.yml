@@ -240,6 +240,9 @@ de:
           '1': Bewerben Sie das Versprechen in Ihren Netzwerken
           '2': Schreiben Sie regelmäßig Neuigkeiten zu Ihrem Versprechen
           '3': Antworten Sie zeitnah auf Rückfragen der Nutzer
+    new_question:
+      greeting: 
+      subject: 
   layouts:
     partials:
       footer:
@@ -367,3 +370,7 @@ de:
     submit: Absenden
   AnswerForm:
     submit: Absenden
+  signer_mailer:
+    new_pledge_update:
+      greeting: 
+      subject: 

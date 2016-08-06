@@ -5,6 +5,7 @@ import TagList              from '../../TagList/components/TagList';
 import InitiatorWithImage   from '../../PledgeData/components/InitiatorWithImage';
 import PledgeState          from '../../PledgeData/components/PledgeState';
 import ProgressBar          from '../../PledgeData/components/ProgressBar';
+import daysTill from '../../lib/utilities/daysTill'
 import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class PledgeTileFront extends ChildComponent {
@@ -18,20 +19,11 @@ export default class PledgeTileFront extends ChildComponent {
     path: PropTypes.string.isRequired
   };
 
-  // provisional version
-  // should update itself at 0:00 o'clock
-  getRemainingDays() {
-    const pledge_date = Date.parse(this.props.deadline);
-    const now = Date.now();
-
-    return Math.floor((pledge_date - now)/1000/60/60/24);
-  }
-
   render() {
     const { initiatorName, initiatorImage, title, deadline, signatures_count, signatures_total,
       path } = this.props;
 
-    const remainingDays = this.getRemainingDays();
+    const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false;
 
     const percentage = Math.round(100 / signatures_total * signatures_count);
