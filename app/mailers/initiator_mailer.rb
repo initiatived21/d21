@@ -7,4 +7,11 @@ class InitiatorMailer < ApplicationMailer
 
     mail subject: t('.subject'), to: @pledge.initiator.email
   end
+
+  def new_question comment_id
+    @comment = Comment.find(comment_id)
+    @pledge = @comment.pledge
+
+    mail subject: t('.subject'), to: @pledge.initiator.email
+  end
 end
