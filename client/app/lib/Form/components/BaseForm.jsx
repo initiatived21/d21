@@ -74,13 +74,12 @@ export default class BaseForm extends ChildComponent {
 
         let errors = undefined
         if (formData.object) {
-          if (
-            child.props.submodel &&
-              formData.object.fields[child.props.submodel].errors
-          ) {
-            errors = formData.object.fields[child.props.submodel]
-              .errors.errors[child.props.attribute]
-          } else if (formData.object.errors) {
+          if (child.props.submodel &&
+              formData.object.fields[child.props.submodel] &&
+              formData.object.fields[child.props.submodel].errors) {
+            errors = formData.object.fields[child.props.submodel].errors.errors[child.props.attribute]
+          }
+          else if (formData.object.errors) {
             errors = formData.object.errors.errors[child.props.attribute]
           }
         }

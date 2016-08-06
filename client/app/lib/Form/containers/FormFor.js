@@ -36,7 +36,8 @@ function assembleAttrsFromServer(serializedReformObject, jayformObject) {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onBlur(field) {
-    return dispatch(validationAction(field))
+    // validationAction not yet defined
+    // return dispatch(validationAction(field))
   },
 
   ensureStateObjectExistence(formObject, existingStateInstance, existingAttrs) {

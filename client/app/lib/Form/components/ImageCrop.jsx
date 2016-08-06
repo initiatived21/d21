@@ -30,7 +30,7 @@ export default class ImageCrop extends Component {
           />
         </div>
         <button
-          className="o-btn o-btn--small"
+          className="o-btn o-btn--small c-btn c-btn--primary"
           type="button"
           onClick={handleFinishCrop}
         >
