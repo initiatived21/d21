@@ -10,6 +10,7 @@ export default class PledgeTile extends ChildComponent {
   static propTypes = {
     pledge: PropTypes.shape({
       id: PropTypes.number.isRequired,
+      aasm_state: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
       amount: PropTypes.number.isRequired,
@@ -60,6 +61,7 @@ export default class PledgeTile extends ChildComponent {
           <div className="c-pledge-tile__inner o-flipper__inner">
             {stateHeader}
             <PledgeTileFront
+              state={state}
               initiatorName={initiator.name}
               initiatorImage={avatarUrl}
               title={pledge.title}

@@ -16,6 +16,7 @@ import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 export default class Pledge extends ChildComponent {
   static propTypes = {
     id: PropTypes.number.isRequired,
+    aasm_state: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
@@ -37,7 +38,7 @@ export default class Pledge extends ChildComponent {
   render() {
     const {
       title, content, amount, who, requirement, location, deadline, description, image,
-      signatures_count, created_at, user
+      aasm_state, signatures_count, created_at, user
     } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
@@ -63,6 +64,7 @@ export default class Pledge extends ChildComponent {
             requirement={requirement}
           />
           <PledgeData
+            state={aasm_state}
             initiator={initiator}
             amount={amount}
             deadline={deadline}

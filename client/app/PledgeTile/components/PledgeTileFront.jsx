@@ -10,6 +10,7 @@ import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 
 export default class PledgeTileFront extends ChildComponent {
   static propTypes = {
+    state: PropTypes.string.isRequired,
     initiatorName: PropTypes.string.isRequired,
     initiatorImage: PropTypes.string,
     title: PropTypes.string.isRequired,
@@ -20,8 +21,8 @@ export default class PledgeTileFront extends ChildComponent {
   };
 
   render() {
-    const { initiatorName, initiatorImage, title, deadline, signatures_count, signatures_total,
-      path } = this.props;
+    const { state, initiatorName, initiatorImage, title, deadline, signatures_count,
+      signatures_total, path } = this.props;
 
     const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false;
@@ -43,7 +44,7 @@ export default class PledgeTileFront extends ChildComponent {
 
           <div className="o-media o-media--small">
             <div className="o-media__img">
-              <PledgeState remainingDays={remainingDays} urgent={isUrgent} />
+              <PledgeState state={state} remainingDays={remainingDays} urgent={isUrgent} />
             </div>
             <div className="o-media__body">
               <p className="u-pt-tiny">

@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
     active: 'delete',
     successful: 'contact',
     failed: 'republish',
+    disapproved: 'delete'
   }
 
   const actionData = {

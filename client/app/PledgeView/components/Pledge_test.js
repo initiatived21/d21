@@ -14,6 +14,7 @@ import PledgeCreatedAt from './PledgeCreatedAt'
 describe('<Pledge />', function () {
   const props = {
     id: 1,
+    aasm_state: 'active',
     title: 'Bücher für Schulklassen',
     content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
     amount: 10,
