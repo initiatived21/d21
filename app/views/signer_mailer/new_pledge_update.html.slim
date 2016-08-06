@@ -1,0 +1,14 @@
+p= t('.greeting', name: @recipient.try(:name))
+
+p
+  Gibt Neuigkeiten.
+  br
+  = link_to pledge_url(id: @pledge.id, locale: :de),
+    pledge_url(id: @pledge.id, locale: :de)
+p
+  = t('application_mailer.farewell')
+  br
+  = t('application_mailer.signed')
+
+p
+  = t('application_mailer.impressum')

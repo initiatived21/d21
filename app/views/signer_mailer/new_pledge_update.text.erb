@@ -1,0 +1,9 @@
+<%= t('.greeting', name: @recipient.try(:name)) %>
+
+Gibt Neuigkeiten.
+<%= pledge_url(id: @pledge.id, locale: :de) %>
+
+<%= t('application_mailer.farewell') %>
+<%= t('application_mailer.signed') %>
+
+<%= t('application_mailer.impressum') %>

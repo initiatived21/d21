@@ -15,6 +15,7 @@ class UpdatesController < ApplicationController
 
   def validate_success!
     @form.save
+    SignerMailer.new_pledge_update(@form.model.id).deliver_later
     respond_to do |format|
       format.html do
         redirect_to pledge_path(@update.pledge, locale: I18n.locale)

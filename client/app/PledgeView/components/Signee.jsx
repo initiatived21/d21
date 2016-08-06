@@ -7,12 +7,12 @@ export default class Signee extends ChildComponent {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     img_src: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired,
+    reason: PropTypes.string,
     created_at: PropTypes.string.isRequired
   };
 
   render() {
-    const { id, name, img_src, comment, created_at } = this.props;
+    const { id, name, img_src, reason, created_at } = this.props;
 
     return (
       <li className="c-signee-list__item">
@@ -20,7 +20,7 @@ export default class Signee extends ChildComponent {
           <img className="c-signee-list__signee-img o-media__img" src={img_src} width="89" height="89" alt={name} />
           <div className="c-signee-list__signee-data o-media__body">
             <h3 className="c-signee-list__signee-name">{name}</h3>
-            <p className="c-signee-list__signee-comment">{comment}</p>
+            <p className="c-signee-list__signee-comment">{reason}</p>
             <p className="c-signee-list__signee-date">{created_at}</p>
             {/* TODO: display id */}
           </div>
