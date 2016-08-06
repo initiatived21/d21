@@ -58,10 +58,11 @@ de:
     republish: Erneut einstellen
   StateHeader:
     active: Veröffentlicht
-    failed: nicht erfolgreich
+    failed: Nicht erfolgreich
     initialized: Entwurf
     requested: Wartet auf Freigabe
     successful: Erfolgreich
+    disapproved: Abgelehnt
   TwitterButton:
     text: 'Versprechen unterzeichnen:'
     title: Über Twitter teilen
@@ -70,10 +71,17 @@ de:
   active_admin:
     sidebars:
       Zustand: Zustand
+    scopes:
+      admin: Admin
+      all: All
   activerecord:
     attributes:
       admin_user:
         email: Email
+        created_at: Created at
+        current_sign_in_at: Current Sign In At
+        id: Id
+        sign_in_count: Sign In Count
       pledge:
         aasm_state: Aasm State
         amount: Amount
@@ -95,6 +103,15 @@ de:
         updates: Updates
         user_id: User
         who: Who
+        image: Image
+        title: Title
+      active_admin/comment:
+        author_type: Author type
+        body: Body
+        created_at: Created at
+        namespace: Namespace
+        resource_type: Resource type
+        updated_at: Updated at
     models:
       admin: Admin
       admin_user: Admin Users
@@ -162,6 +179,13 @@ de:
           updated_at: 
           updates: 
           who: 
+          author_type: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          resource_type: 
+          title: 
     placeholders:
       active_admin/comment:
         show:
@@ -191,6 +215,11 @@ de:
           location: 
           requirement: 
           who: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          title: 
   helpers:
     label:
       pledge:
@@ -223,6 +252,13 @@ de:
           updated_at: 
           updates: 
           who: 
+          author_type: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          resource_type: 
+          title: 
       user:
         email: 
         password: 
@@ -379,3 +415,5 @@ de:
       one: Tag
       other: Tage
     still: noch
+  ProfileView:
+    heading: Ihr Profil

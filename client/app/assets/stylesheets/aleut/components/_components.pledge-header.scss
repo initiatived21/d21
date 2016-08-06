@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #PLEDGE HEADER
+\*------------------------------------*/
+
+/**
+ * State header for pledge tiles in the profile view
+ */
+
+.c-pledge-header {
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 3px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-top: 8px;
+
+  text-align: center;
+  color: $white;
+}
+
+.c-pledge-header--initialized, .c-pledge-header--requested {
+  background-color: $mid-dark-gray;
+}
+
+.c-pledge-header--active {
+  background-color: $tertiary-color;
+}
+
+.c-pledge-header--successful {
+  background-color: $primary-color;
+}
+
+.c-pledge-header--failed {
+  background-color: $secondary-color;
+}
+
+.c-pledge-header--disapproved {
+  background-color: $text-color;
+}

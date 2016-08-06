@@ -4,4 +4,5 @@ translations:
       "*.PledgeUpdates.*", "*.PledgeQAs.*", "*.PledgeImage.*", "*.SigneeList.*", "*.react_form.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",
-      "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.PledgeState.*"]
+      "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.PledgeState.*",
+      "*.ProfileView.*"]

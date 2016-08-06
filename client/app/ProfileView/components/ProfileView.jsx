@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
 import store from '../../lib/store'
+import I18n from 'i18n-js'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import ProfilePledgeListContainer from '../containers/ProfilePledgeListContainer'
 
@@ -18,8 +19,11 @@ export default class ProfileView extends RootComponent {
       <Provider store={store}>
         <main>
           <div className="o-wrapper">
-            <h1>Profile</h1>
+            <h1>{I18n.t('ProfileView.heading')}</h1>
+
+            <h2>Ihre Versprechen</h2>
             <ProfilePledgeListContainer />
+
           </div>
         </main>
       </Provider>

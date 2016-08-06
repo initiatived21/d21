@@ -125,3 +125,17 @@ $color-white: rgb(100%, 100%, 100%);
   right: $spacing;
   bottom: ($spacing + 45px);
 }
+
+
+/* Header */
+
+.c-pledge-tile__state-header {
+  width: 100%;
+  text-align: center;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  color: $white;
+  background-color: $success-color;
+}
