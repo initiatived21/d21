@@ -374,3 +374,8 @@ de:
     new_pledge_update:
       greeting: 
       subject: 
+  PledgeState:
+    days:
+      one: Tag
+      other: Tage
+    still: noch

@@ -14,11 +14,11 @@ export default class PledgeState extends ChildComponent {
 
     return (
       <p className={className}>
-        <span className="c-pledge-state__still">noch</span>
+        <span className="c-pledge-state__still">{this.t('.still')}</span>
         <br />
         <span className="c-pledge-state__number-of-days">{remainingDays}</span>
         <br />
-        <span className="c-pledge-state__days">Tage</span>
+        <span className="c-pledge-state__days">{this.t('.days', { count: remainingDays })}</span>
       </p>
     );
   }

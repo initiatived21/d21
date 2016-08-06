@@ -372,3 +372,8 @@ en:
     new_pledge_update:
       greeting: 
       subject: 
+  PledgeState:
+    days:
+      one: day
+      other: days
+    still: still
