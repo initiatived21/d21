@@ -24,7 +24,6 @@ module.exports = {
     // webpack.rails.config
     app: [
       'imports?I18n=i18n-js!./vendor/translations',
-      './app/HelloWorld/startup/clientRegistration',
       './app/lib/startup/clientRegistration',
     ],
   },

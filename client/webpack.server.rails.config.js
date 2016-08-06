@@ -14,7 +14,6 @@ module.exports = {
     'babel-polyfill',
     'i18n-js',
     'imports?I18n=i18n-js!./vendor/translations',
-    './app/HelloWorld/startup/serverRegistration',
     './app/lib/startup/serverRegistration',
   ],
   output: {
