@@ -20,7 +20,7 @@ export default class SigneeList extends ChildComponent {
               key={signature.id}
               id={signature.id}
               name={signature.name}
-              comment={signature.reason}
+              reason={signature.reason}
               img_src={`${DUMMY_IMAGE_PATH}/signee.jpg`}
               created_at={signature.created_at}
             />
