@@ -3,14 +3,20 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
 
 export default class PledgeDescription extends ChildComponent {
   static propTypes = {
-    children: PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
+    className: PropTypes.string
   };
 
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
+
+    let combinedClassName = 'c-pledge__description'
+    if (className) {
+      combinedClassName += ` ${className}`
+    }
 
     return (
-      <p className="c-pledge__description">
+      <p className={combinedClassName}>
         {children}
       </p>
     );

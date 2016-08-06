@@ -149,6 +149,7 @@ $o-media--responsive: true;
     Here you place your own visual styling.
 \*------------------------------------*/
 
+@import "aleut/components/components.avatar";
 @import "aleut/components/components.page-head";
 @import "aleut/components/components.primary-nav";
 @import "aleut/components/components.secondary-nav";
