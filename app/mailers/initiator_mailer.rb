@@ -12,6 +12,7 @@ class InitiatorMailer < ApplicationMailer
     @comment = Comment.find(comment_id)
     @pledge = @comment.pledge
 
-    mail subject: t('.subject'), to: @pledge.initiator.email
+    mail subject: t('.subject'), to: @pledge.initiator.email,
+         bcc: AdminUser.pluck(:email)
   end
 end
