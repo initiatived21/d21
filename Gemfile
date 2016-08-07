@@ -170,10 +170,11 @@ group :development, :test do
   # dev help
   gem 'thin' # Replace Webrick
   gem 'bullet' # Notify about n+1 queries
-  gem 'letter_opener' # emails in browser
   gem 'timecop' # time travel!
   gem 'dotenv-rails' # handle environment variables
 end
+
+gem 'letter_opener' # emails in browser - TEMP ALSO IN PRODUCTION, MOVE UP
 
 group :development, :test, :staging do
   gem 'factory_girl_rails'
