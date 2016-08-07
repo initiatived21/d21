@@ -39,8 +39,6 @@ export default class PledgeForm extends ChildComponent {
 
         <div className='c-new-pledge__pledge-data'>
 
-          <Input className="c-input" attribute="title" />
-
           <div className='PledgeForm-Sentence'>
             {this.t('.promise.part1')}
             <Input className="c-input" attribute='content' />
@@ -53,6 +51,10 @@ export default class PledgeForm extends ChildComponent {
           <Input className="c-input" attribute='location' />
           <Input className="c-input" type='date' attribute='deadline' />
 
+          <Input className="c-input" attribute="title" />
+
+          <Input className="c-textarea" attribute='description' type='textarea' />
+
           <ImageInput
             className="c-image-input--pledge-image"
             attribute="image"
@@ -62,10 +64,9 @@ export default class PledgeForm extends ChildComponent {
             scaleToY={800}
           />
 
-          <Input className="c-textarea" attribute='description' type='textarea' />
-
           <Input type='multiselect' attribute='tag_ids'
-            options={this.props.availableTags} />
+            options={this.props.availableTags}
+          />
         </div>
 
         {initiatorForm}
