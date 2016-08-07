@@ -64,5 +64,6 @@ class Pledge < ApplicationRecord
 
   # Search
   include PgSearch
-  multisearchable against: [:content, :requirement, :description, :location]
+  multisearchable against: [:content, :requirement, :description, :location],
+                  if: :active?
 end

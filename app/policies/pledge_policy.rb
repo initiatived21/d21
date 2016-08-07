@@ -1,17 +1,29 @@
 class PledgePolicy < ApplicationPolicy
+  def show?
+    user_is_initiator? ||
+      @record.active? || @record.successful? || @record.failed?
+  end
+
   def create?
     true
   end
 
   def finalize?
-    @record.initiator == @user && @user.confirmed?
+    user_is_initiator? && @user.confirmed?
   end
 
   def update?
-    @record.initiator == @user && @record.initialized?
+    user_is_initiator? && @record.initialized?
   end
 
   def destroy?
+    user_is_initiator?
+  end
+
+  private
+
+  def user_is_initiator?
     @record.initiator == @user
   end
 end
+

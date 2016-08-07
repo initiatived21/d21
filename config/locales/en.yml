@@ -58,10 +58,11 @@ en:
     republish: Republish
   StateHeader:
     active: Published
-    failed: not successful
+    failed: Not successful
     initialized: Draft
     requested: Waiting for Review
     successful: Successful
+    disapproved: Disapproved
   TwitterButton:
     text: 'Sign pledge:'
     title: Share via Twitter
@@ -70,10 +71,17 @@ en:
   active_admin:
     sidebars:
       Zustand: 
+    scopes:
+      admin: 
+      all: 
   activerecord:
     attributes:
       admin_user:
         email: 
+        created_at: 
+        current_sign_in_at: 
+        id: 
+        sign_in_count: 
       pledge:
         aasm_state: 
         amount: 
@@ -95,6 +103,15 @@ en:
         updates: 
         user_id: 
         who: 
+        image: 
+        title: 
+      active_admin/comment:
+        author_type: 
+        body: 
+        created_at: 
+        namespace: 
+        resource_type: 
+        updated_at: 
     models:
       admin: 
       admin_user: 
@@ -162,6 +179,13 @@ en:
           updated_at: 
           updates: 
           who: 
+          author_type: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          resource_type: 
+          title: 
     placeholders:
       active_admin/comment:
         show:
@@ -191,6 +215,11 @@ en:
           location: 
           requirement: 
           who: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          title: 
   helpers:
     label:
       pledge:
@@ -223,6 +252,13 @@ en:
           updated_at: 
           updates: 
           who: 
+          author_type: 
+          body: 
+          email: 
+          image: 
+          namespace: 
+          resource_type: 
+          title: 
       user:
         email: 
         password: 
@@ -240,6 +276,9 @@ en:
           '1': 
           '2': 
           '3': 
+    new_question:
+      greeting: 
+      subject: 
   layouts:
     partials:
       footer:
@@ -365,3 +404,14 @@ en:
     submit: Submit
   AnswerForm:
     submit: Submit
+  PledgeState:
+    days:
+      one: day
+      other: days
+    still: still
+  ProfileView:
+    heading: Your Profile
+  signer_mailer:
+    new_pledge_update:
+      greeting: 
+      subject: 

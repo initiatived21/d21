@@ -19,6 +19,7 @@ class PledgesController < ApplicationController
 
   def show
     pledge = Pledge.find(params[:id])
+    authorize pledge
     @pledge_props = {
       pledge: serialize(pledge),
       forms: {
