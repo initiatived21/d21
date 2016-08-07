@@ -29,6 +29,4 @@ describe('<SocialMediaButtons />', function () {
 
     wrapper.find('ul').hasClass('dummy').should.be.true
   })
-
-  it('should provide clickable buttons')
 })

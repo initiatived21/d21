@@ -16,10 +16,6 @@
 
 // For pledge tiles
 .c-initiator--with-image {
-  .c-initiator__img {
-    border-radius: 50px;
-  }
-
   .c-initiator__title {
     color: $gray;
     @include font-size(14px);

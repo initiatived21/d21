@@ -11,3 +11,10 @@ export const FACEBOOK_ACCOUNT_URL = 'https://www.facebook.com/Buntundverbindlich
 export const TWITTER_ACCOUNT_URL = 'https://twitter.com/buntverbindlich'
 
 export const FAQ_PATH = '/faq'
+
+
+/* Formatting strings */
+export const FORMAT_DATE_AND_TIME = {
+  de: '%d.%m.%Y um %-H:%M Uhr',
+  en: '%d/%m/%Y at %-I:%M %p'
+}

@@ -16,6 +16,7 @@ import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
 export default class Pledge extends ChildComponent {
   static propTypes = {
     id: PropTypes.number.isRequired,
+    aasm_state: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
@@ -23,6 +24,7 @@ export default class Pledge extends ChildComponent {
     requirement: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     deadline: PropTypes.string.isRequired,
+    description: PropTypes.string,
     image: PropTypes.object,
     signatures_count: PropTypes.number.isRequired,
     created_at: PropTypes.string.isRequired,
@@ -35,12 +37,15 @@ export default class Pledge extends ChildComponent {
 
   render() {
     const {
-      title, content, amount, who, requirement, location, deadline, image,
-      signatures_count, created_at, user
+      title, content, amount, who, requirement, location, deadline, description, image,
+      aasm_state, signatures_count, created_at, user
     } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
     const pledgeImage = image.url ? (<PledgeImage src={image.url} />) : null
+    const pledgeDescription = description ? (
+      <PledgeDescription className="u-mt">{description}</PledgeDescription>
+    ) : null
 
     return (
       <div className="o-layout__item u-2/3@l">
@@ -59,24 +64,15 @@ export default class Pledge extends ChildComponent {
             requirement={requirement}
           />
           <PledgeData
+            state={aasm_state}
             initiator={initiator}
             amount={amount}
             deadline={deadline}
             signatures_count={signatures_count}
           />
-          <SocialMediaButtons className="u-mt-small" url={DOMAIN_PROD + this.getPledgePath()} />
+          <SocialMediaButtons className="u-mt-small u-mb" url={DOMAIN_PROD + this.getPledgePath()} />
           {pledgeImage}
-          <PledgeDescription>
-            Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi
-            Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor
-            in varias reprehensiones incurreret. nam quibusdam, et iis quidem non admodum indoctis,
-            totum hoc displicet philosophari. quidam autem non tam id reprehendunt, si remissius
-            agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur.
-            erunt etiam, et ii quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant
-            in Graecis legendis operam malle consumere. postremo aliquos futuros suspicor, qui me
-            ad alias litteras vocent, genus hoc scribendi, etsi sit elegans, personae tamen et
-            dignitatis esse negent.
-          </PledgeDescription>
+          {pledgeDescription}
           <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
         </article>
       </div>

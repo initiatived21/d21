@@ -9,6 +9,7 @@ import ProgressBar         from '../../PledgeData/components/ProgressBar'
 
 describe('<PledgeTileFront />', function () {
   const props = {
+    state: 'active',
     initiatorName: 'Max Mustermann',
     title: 'Schulbücher für Willkommensklassen',
     deadline: '2016-09-30',

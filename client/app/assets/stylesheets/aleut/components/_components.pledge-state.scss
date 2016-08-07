@@ -16,7 +16,7 @@
   border: 1px solid $gray;
 }
 
-.c-pledge-state__still {
+.c-pledge-state__still, .c-pledge-state__days {
   @include font-size(15px, none);
   color: $dark-gray;
 }
@@ -29,7 +29,17 @@
   color: $urgent-color;
 }
 
-.c-pledge-state__days {
-  @include font-size(15px, none);
-  color: $dark-gray;
+.c-pledge-state__check {
+  color: $success-color;
+  @include font-size(48px, 1.4);
+}
+
+.c-pledge-state__x {
+  color: $urgent-color;
+  @include font-size(48px, 1.4);
+}
+
+.c-pledge-state__thumbs-down {
+  color: $text-color;
+  @include font-size(48px, 1.4);
 }

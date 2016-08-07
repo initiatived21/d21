@@ -29,19 +29,19 @@ export default class SocialMediaButtons extends ChildComponent {
   }
 
   render() {
-    const { url } = this.props
+    const { url, className } = this.props
     const commonProps = {
       url,
       handleClick: this.handleClick
     }
 
-    let className = 'c-social-media o-list-inline'
-    if (this.props.className) {
-      className += ` ${this.props.className}`
+    let combinedClassName = 'c-social-media o-list-inline'
+    if (className) {
+      combinedClassName += ` ${className}`
     }
 
     return (
-      <ul className={className}>
+      <ul className={combinedClassName}>
         <FacebookButton {...commonProps} />
         <TwitterButton {...commonProps} />
         <GoogleplusButton {...commonProps} />

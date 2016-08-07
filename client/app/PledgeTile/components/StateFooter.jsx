@@ -15,7 +15,10 @@ export default class StateFooter extends ChildComponent {
 
     return (
       <div className="c-pledge-tile__state-footer">
-        <ButtonFor action={href} method={method}>
+        <ButtonFor
+          className="o-btn o-btn--small c-btn c-btn--primary u-mt-small"
+          action={href}
+          method={method}>
           {this.t(`.${action}`)}
         </ButtonFor>
       </div>

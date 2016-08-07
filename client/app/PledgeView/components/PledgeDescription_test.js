@@ -13,4 +13,10 @@ describe('<PledgeDescription />', function () {
     wrapper.hasClass('c-pledge__description').should.be.true
     wrapper.text().should.equal('Dies ist die Beschreibung des Versprechens.')
   })
+
+  it('should "pass through" its className prop', function() {
+    const wrapper = shallow(<PledgeDescription className="dummy">test</PledgeDescription>)
+
+    wrapper.find('p').hasClass('dummy').should.be.true
+  })
 })

@@ -14,6 +14,7 @@ import PledgeCreatedAt from './PledgeCreatedAt'
 describe('<Pledge />', function () {
   const props = {
     id: 1,
+    aasm_state: 'active',
     title: 'Bücher für Schulklassen',
     content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
     amount: 10,
@@ -21,6 +22,7 @@ describe('<Pledge />', function () {
     requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
     location: 'Berlin',
     deadline: '2016-09-30',
+    description: 'dummy description',
     image: {
       url: 'dummy'
     },
@@ -45,5 +47,17 @@ describe('<Pledge />', function () {
     wrapper.find(PledgeImage).length.should.equal(1)
     wrapper.find(PledgeDescription).length.should.equal(1)
     wrapper.find(PledgeCreatedAt).length.should.equal(1)
+  })
+
+  it('should not render image component if image is not present', function() {
+    const wrapper = shallow(<Pledge {...props} image={{ url: null }} />)
+
+    wrapper.find(PledgeImage).length.should.equal(0)
+  })
+
+  it('should not render description component if description is not present', function() {
+    const wrapper = shallow(<Pledge {...props} description={null} />)
+
+    wrapper.find(PledgeDescription).length.should.equal(0)
   })
 })
