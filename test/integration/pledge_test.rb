@@ -19,7 +19,7 @@ class PledgeTest < Minitest::Capybara::Spec
     within('.input-amount') { page.must_have_content('must be filled') }
     within('.input-who') { page.must_have_content('must be filled') }
     within('.input-requirement') { page.must_have_content('must be filled') }
-    within('.input-location') { page.wont_have_content('must be filled') }
+    within('.input-location') { page.must_have_content('must be filled') }
     within('.input-deadline') { page.must_have_content('must be filled') }
     within('.input-description') { page.wont_have_content('must be filled') }
     within('.input-tag_ids') { page.wont_have_content('must be filled') }
@@ -40,6 +40,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[who]', with: 'integration1Who'
     fill_in 'pledge[requirement]', with: 'integration1Requirement'
     fill_in 'pledge[deadline]', with: '01-01-2222'
+    fill_in 'pledge[location]', with: 'integration1Location'
     fill_in 'pledge[initiator][name]', with: 'integration1Name'
     fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
     fill_in 'pledge[initiator][password]', with: 'integration1Password'
