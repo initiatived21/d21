@@ -14,13 +14,12 @@ class BasePledgeForm < Reform::Form
 
   # Validations
   validation :default do
-    required(:title).filled
-    required(:content).filled
-    required(:amount).filled(:int?)
-    required(:who).filled
-    required(:requirement).filled
-    required(:location)
-    required(:deadline).filled(:date?)
-    required(:description)
+    required(:title).filled(max_size?: 45)
+    required(:content).filled(max_size?: 70)
+    required(:amount).filled(:int?, gt?: 0)
+    required(:who).filled(max_size?: 50)
+    required(:requirement).filled(max_size?: 70)
+    required(:location).filled(max_size?: 30)
+    required(:deadline).filled(:date?, gt?: Date.today)
   end
 end
