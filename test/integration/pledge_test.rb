@@ -39,8 +39,8 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[amount]', with: '123'
     fill_in 'pledge[who]', with: 'integration1Who'
     fill_in 'pledge[requirement]', with: 'integration1Requirement'
-    fill_in 'pledge[deadline]', with: '01-01-2222'
     fill_in 'pledge[location]', with: 'integration1Location'
+    fill_in 'pledge[deadline]', with: '01-01-2222'
     fill_in 'pledge[initiator][name]', with: 'integration1Name'
     fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
     fill_in 'pledge[initiator][password]', with: 'integration1Password'
@@ -76,6 +76,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[amount]', with: '456'
     fill_in 'pledge[who]', with: 'changdWho'
     fill_in 'pledge[requirement]', with: 'changedRequirement'
+    fill_in 'pledge[location]', with: 'changedLocation'
     fill_in 'pledge[deadline]', with: '01-01-3333'
     click_button 'Entwurf speichern'
 

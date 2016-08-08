@@ -11,7 +11,7 @@ describe PledgeSerializer do
       amount: 10,
       who: 'activeWho',
       requirement: 'activeRequirement',
-      location: nil,
+      location: 'activeLocation',
       deadline: Date.new(2000),
       description: 'activeDescription',
       signatures_count: 0,
