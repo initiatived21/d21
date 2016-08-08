@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import values from 'lodash/values'
-import PledgeUpdates from '../components/PledgeUpdates'
+import PledgeUpdateList from '../components/PledgeUpdateList'
 
 const mapStateToProps = (state, ownProps) => {
   const updates =
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PledgeUpdates)
+)(PledgeUpdateList)

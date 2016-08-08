@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #UPDATE LIST
+\*------------------------------------*/
+
+/**
+ * List of pledge updates on the pledge view page
+ */
+
+.c-update-list {
+
+}
+
+.c-update-list__item {
+  margin-bottom: $spacing--small;
+}
+
+.c-update-list__item-text {
+  border: 1px solid $gray;
+  border-radius: 5px;
+
+  padding: $spacing--small;
+
+  color: $dark-gray;
+}
+
+.c-update-list__item-date {
+  @include font-size(14px, 1.5);
+  color: $mid-dark-gray;
+}

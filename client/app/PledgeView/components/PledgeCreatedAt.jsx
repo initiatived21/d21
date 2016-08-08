@@ -24,7 +24,7 @@ export default class PledgeCreatedAt extends ChildComponent {
     const { children } = this.props;
 
     return (
-      <p className="c-pledge__created-at">
+      <p className="c-pledge__created-at u-mt-small">
         Veröffentlicht am {this.getDateString()} um {this.getTimeString()}
       </p>
     );

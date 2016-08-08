@@ -37,8 +37,6 @@ en:
     promise:
       part1: We promise to
       part2: " if at least"
-  PledgeUpdates:
-    heading: Updates
   ReportPledgeForm:
     description: 
     report_pledge: Report pledge
@@ -415,3 +413,5 @@ en:
     new_pledge_update:
       greeting: 
       subject: 
+  PledgeUpdateList:
+    heading: Updates

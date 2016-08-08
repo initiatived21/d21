@@ -3,7 +3,7 @@ import I18n                 from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import PledgeUpdate         from './PledgeUpdate'
 
-export default class PledgeUpdates extends ChildComponent {
+export default class PledgeUpdateList extends ChildComponent {
   static propTypes = {
     updates: PropTypes.array.isRequired,
   }
@@ -12,7 +12,7 @@ export default class PledgeUpdates extends ChildComponent {
     const { updates } = this.props
 
     return (
-      <section className="o-layout__item">
+      <section className="c-update-list o-layout__item u-2/3@l">
         <h2>{this.t('.heading')}</h2>
         <ol className="o-list-bare">
           {updates.map( update =>

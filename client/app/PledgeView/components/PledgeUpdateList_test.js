@@ -2,11 +2,11 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Provider } from 'react-redux'
 
-import PledgeUpdates from './PledgeUpdates'
+import PledgeUpdateList from './PledgeUpdateList'
 
-describe('<PledgeUpdates />', function () {
+describe('<PledgeUpdateList />', function () {
   it('should render', function () {
-    const wrapper = shallow(<PledgeUpdates updates={[]} />)
+    const wrapper = shallow(<PledgeUpdateList updates={[]} />)
 
     wrapper.find('ol').length.should.equal(1)
   })

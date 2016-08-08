@@ -23,7 +23,8 @@ export default class UpdateForm extends ChildComponent {
 
         <Input className="c-textarea" attribute='content' type='textarea' />
 
-        <button className="o-btn o-btn--small" type="submit" disabled={isSubmitting}>
+        <button className="o-btn o-btn--small c-btn c-btn--primary"
+          type="submit" disabled={isSubmitting}>
           <FontAwesome name="paper-plane" />
           {' '}
           {this.t('.submit')}

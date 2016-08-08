@@ -96,7 +96,9 @@ $o-btn-radius:       5px;
 @import "~aleut.objects.buttons/objects.buttons";
 //@import "~aleut.objects.flag/objects.flag";
 
+$o-layout--small: true;
 @import "~aleut.objects.layout/objects.layout";
+
 @import "~aleut.objects.list-bare/objects.list-bare";
 //@import "~aleut.objects.list-block/objects.list-block";
 
@@ -169,6 +171,7 @@ $o-media--responsive: true;
 @import "aleut/components/components.btn";
 @import "aleut/components/components.comment";
 @import "aleut/components/components.signee-list";
+@import "aleut/components/components.update-list";
 
 /* Forms */
 @import "aleut/components/components.session";

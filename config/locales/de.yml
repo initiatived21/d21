@@ -37,8 +37,6 @@ de:
     promise:
       part1: Wir versprechen,
       part2: ", wenn mindestens"
-  PledgeUpdates:
-    heading: Neuigkeiten
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
@@ -417,3 +415,5 @@ de:
     new_pledge_update:
       greeting: 
       subject: 
+  PledgeUpdateList:
+    heading: Neuigkeiten
