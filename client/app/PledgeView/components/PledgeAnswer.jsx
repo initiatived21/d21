@@ -11,7 +11,7 @@ export default class PledgeAnswer extends ChildComponent {
     const { children } = this.props;
 
     return (
-      <div className="u-clearfix">
+      <div className="u-clearfix u-mb-small">
         <div className="c-comment__answer">{children}</div>
       </div>
     );

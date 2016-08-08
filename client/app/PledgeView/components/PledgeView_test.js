@@ -7,7 +7,7 @@ import Pledge from './Pledge'
 import PledgeSidebarContainer from '../containers/PledgeSidebarContainer'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
-import SigneeListContainer from '../containers/SigneeListContainer'
+import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 describe('<PledgeView />', function () {
   const props = {

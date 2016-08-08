@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
@@ -23,6 +24,8 @@ export default class UpdateForm extends ChildComponent {
         <Input className="c-textarea" attribute='content' type='textarea' />
 
         <button className="o-btn o-btn--small" type="submit" disabled={isSubmitting}>
+          <FontAwesome name="paper-plane" />
+          {' '}
           {this.t('.submit')}
         </button>
       </FormFor>
