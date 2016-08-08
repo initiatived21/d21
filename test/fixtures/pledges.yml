@@ -5,8 +5,8 @@ active:
   amount: 10
   who: activeWho
   requirement: activeRequirement
+  location: activeLocation
   deadline: 2000-01-01
   description: activeDescription
-  location: activeLocation
   user_id: 1
   aasm_state: active
