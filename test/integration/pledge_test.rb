@@ -19,7 +19,7 @@ class PledgeTest < Minitest::Capybara::Spec
     within('.input-amount') { page.must_have_content('must be filled') }
     within('.input-who') { page.must_have_content('must be filled') }
     within('.input-requirement') { page.must_have_content('must be filled') }
-    within('.input-location') { page.wont_have_content('must be filled') }
+    within('.input-location') { page.must_have_content('must be filled') }
     within('.input-deadline') { page.must_have_content('must be filled') }
     within('.input-description') { page.wont_have_content('must be filled') }
     within('.input-tag_ids') { page.wont_have_content('must be filled') }
@@ -39,6 +39,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[amount]', with: '123'
     fill_in 'pledge[who]', with: 'integration1Who'
     fill_in 'pledge[requirement]', with: 'integration1Requirement'
+    fill_in 'pledge[location]', with: 'integration1Location'
     fill_in 'pledge[deadline]', with: '01-01-2222'
     fill_in 'pledge[initiator][name]', with: 'integration1Name'
     fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
@@ -75,6 +76,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[amount]', with: '456'
     fill_in 'pledge[who]', with: 'changdWho'
     fill_in 'pledge[requirement]', with: 'changedRequirement'
+    fill_in 'pledge[location]', with: 'changedLocation'
     fill_in 'pledge[deadline]', with: '01-01-3333'
     click_button 'Entwurf speichern'
 
