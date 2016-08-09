@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731144701) do
+ActiveRecord::Schema.define(version: 20160809160518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 20160731144701) do
     t.integer  "signatures_count", default: 0, null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.string   "title",                        null: false
     t.string   "image"
+    t.string   "title",                        null: false
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 
@@ -94,15 +94,18 @@ ActiveRecord::Schema.define(version: 20160731144701) do
 
   create_table "signatures", force: :cascade do |t|
     t.integer  "pledge_id"
-    t.string   "name",                                      null: false
-    t.string   "email",                                     null: false
+    t.string   "name",                                         null: false
+    t.string   "email",                                        null: false
     t.string   "organization"
-    t.boolean  "contact_person",            default: false
+    t.boolean  "contact_person",               default: false
     t.string   "reason"
-    t.boolean  "anonymous",                 default: false
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.string   "aasm_state",     limit: 32
+    t.boolean  "anonymous",                    default: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.string   "aasm_state",        limit: 32
+    t.boolean  "confirmed",                    default: false
+    t.string   "confirmation_hash"
+    t.index ["pledge_id", "confirmed"], name: "index_signatures_on_pledge_id_and_confirmed", using: :btree
     t.index ["pledge_id"], name: "index_signatures_on_pledge_id", using: :btree
   end
 

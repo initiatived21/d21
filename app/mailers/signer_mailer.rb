@@ -2,6 +2,11 @@
 class SignerMailer < ApplicationMailer
   default from: 'redaktion@buntundverbindlich.de'
 
+  def signature_created signature_id
+    @signature = Signature.find(signature_id)
+    mail(subject: t('.subject'), to: @signature.email)
+  end
+
   # Prepares sending multiple update notifications, one to each signer and one
   # to each admin
   def new_pledge_update update_id

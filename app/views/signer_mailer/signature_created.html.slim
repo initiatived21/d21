@@ -1,0 +1,14 @@
+p= t('.greeting', name: @signature.name)
+
+p
+  | Bestätigung:
+  br
+  = link_to 'Hier klicken zum Bestätigen', confirm_signature_url(\
+    id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
+p
+  = t('application_mailer.farewell')
+  br
+  = t('application_mailer.signed')
+
+p
+  = t('application_mailer.impressum')

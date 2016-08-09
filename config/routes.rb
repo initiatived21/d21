@@ -30,6 +30,8 @@ Rails.application.routes.draw do
       end
     end
     resources :comments, only: [:update]
+    get '/signatures/:id/confirm/:hash', to: 'signatures#confirm',
+                                                      as: :confirm_signature
 
     # All other localized paths => localized 404
     match '*path', to: 'pages#not_found', via: :all

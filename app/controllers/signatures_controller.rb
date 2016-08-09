@@ -14,10 +14,21 @@ class SignaturesController < ApplicationController
     end
   end
 
+  def confirm
+    @signature = Signature.find(params[:id])
+    @signature.submitted_hash = params[:hash]
+    authorize @signature
+    @signature.update_column :confirmed, true
+    flash[:success] = 'Erfolgreich bestätigt'
+    redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
+  end
+
   private
 
   def create_success!
+    @form.confirmation_hash = SecureRandom.base58(24)
     @form.save
+    SignerMailer.signature_created(@form.model.id).deliver_later
     respond_to do |format|
       format.html do
         redirect_to pledge_path(@signature.pledge, locale: I18n.locale)

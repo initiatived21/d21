@@ -146,6 +146,8 @@ en:
           location: 
           requirement: 
           who: 
+          image: 
+          title: 
     labels:
       pledge:
         edit:
@@ -158,6 +160,8 @@ en:
           location: 
           requirement: 
           who: 
+          image: 
+          title: 
       q:
         index:
           aasm_state: 
@@ -204,6 +208,7 @@ en:
           location: 
           requirement: 
           who: 
+          title: 
       q:
         index:
           aasm_state: 
@@ -231,6 +236,8 @@ en:
           location: 
           requirement: 
           who: 
+          image: 
+          title: 
       q:
         index:
           aasm_state: 
@@ -415,3 +422,11 @@ en:
       subject: 
   PledgeUpdateList:
     heading: Updates
+  flash:
+    actions:
+      destroy:
+        notice: 
+      update:
+        notice: 
+  QuestionForm:
+    submit: Submit

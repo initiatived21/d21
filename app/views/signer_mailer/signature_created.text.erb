@@ -1,0 +1,11 @@
+<%= t('.greeting', name: @signature.name) %>
+
+Bestätigung:
+<%= confirm_signature_url(
+  id: @signature.id, hash: @signature.confirmation_hash, locale: :de
+) %>
+
+<%= t('application_mailer.farewell') %>
+<%= t('application_mailer.signed') %>
+
+<%= t('application_mailer.impressum') %>

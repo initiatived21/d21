@@ -1,7 +1,7 @@
 p= t('.greeting', name: @recipient.try(:name))
 
 p
-  Gibt Neuigkeiten.
+  | Gibt Neuigkeiten.
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
     pledge_url(id: @pledge.id, locale: :de)

@@ -1,7 +1,7 @@
 p= t('.greeting', name: @pledge.initiator.name)
 
 p
-  Neue Frage.
+  | Neue Frage.
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
     pledge_url(id: @pledge.id, locale: :de)
