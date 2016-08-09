@@ -29,7 +29,7 @@ export default class PledgeQAs extends ChildComponent {
     return (
       <section className="o-layout__item u-2/3">
         <h2>{this.t('.heading')}</h2>
-        <div>
+        <div className="o-layout o-layout--small">
           {comments.map( comment =>
             <PledgeQA key={comment.id} comment={comment}
               formData={answerForm}

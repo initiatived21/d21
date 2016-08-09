@@ -11,7 +11,7 @@
 }
 
 .c-comment__question, .c-comment__answer {
-  clear: both;
+  //clear: both;
   @include clearfix;
 
   padding: $spacing--tiny $spacing--small;
@@ -29,4 +29,8 @@
 
   color: $white;
   background-color: $primary-color-lighter;
+}
+
+.c-comment__avatar {
+  float: right;
 }

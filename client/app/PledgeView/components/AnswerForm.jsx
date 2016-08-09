@@ -18,16 +18,16 @@ export default class AnswerForm extends ChildComponent {
     const { formData, isSubmitting } = this.props
     return (
       <FormFor
-        className="o-layout u-mt-small"
+        className="o-layout o-layout--small u-mt-small"
         object={NewAnswerFormObject}
         ajax={true}
         method='put'
         formData={formData}>
 
-        <Input className="c-input o-layout__item u-3/4"
+        <Input className="c-input o-layout__item u-4/5"
           attribute='response' inlineLabel />
 
-        <div className="o-layout__item u-1/4">
+        <div className="o-layout__item u-1/5">
           <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
             type='submit' disabled={isSubmitting}>
             <FontAwesome name="paper-plane" />

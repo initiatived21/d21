@@ -5,7 +5,7 @@ import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 
-export default class PledgeQAs extends ChildComponent {
+export default class QuestionForm extends ChildComponent {
   static propTypes = {
     formData: PropTypes.object.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
@@ -16,15 +16,15 @@ export default class PledgeQAs extends ChildComponent {
 
     return (
       <FormFor
-        className="o-layout u-mt-small"
+        className="o-layout o-layout--small u-mt-small"
         object={NewQuestionFormObject}
         ajax={true}
         formData={formData}>
 
-        <Input className="c-input o-layout__item u-3/4"
+        <Input className="c-input o-layout__item u-4/5"
           attribute='content' inlineLabel />
 
-        <div className="o-layout__item u-1/4">
+        <div className="o-layout__item u-1/5">
           <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}>
             <FontAwesome name="paper-plane" />

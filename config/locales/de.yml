@@ -1,4 +1,6 @@
 de:
+  AnswerForm:
+    submit: Absenden
   FacebookButton:
     title: Über Facebook teilen
   GoogleplusButton:
@@ -37,6 +39,17 @@ de:
     promise:
       part1: Wir versprechen,
       part2: ", wenn mindestens"
+  PledgeState:
+    days:
+      one: Tag
+      other: Tage
+    still: noch
+  PledgeUpdateList:
+    heading: Neuigkeiten
+  ProfileView:
+    heading: Ihr Profil
+  QuestionForm:
+    submit: Absenden
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
@@ -56,28 +69,37 @@ de:
     republish: Erneut einstellen
   StateHeader:
     active: Veröffentlicht
+    disapproved: Abgelehnt
     failed: Nicht erfolgreich
     initialized: Entwurf
     requested: Wartet auf Freigabe
     successful: Erfolgreich
-    disapproved: Abgelehnt
   TwitterButton:
     text: 'Versprechen unterzeichnen:'
     title: Über Twitter teilen
+  UpdateForm:
+    submit: Absenden
   XingButton:
     title: Über Xing teilen
   active_admin:
-    sidebars:
-      Zustand: Zustand
     scopes:
       admin: Admin
       all: All
+    sidebars:
+      Zustand: Zustand
   activerecord:
     attributes:
+      active_admin/comment:
+        author_type: Author type
+        body: Body
+        created_at: Created at
+        namespace: Namespace
+        resource_type: Resource type
+        updated_at: Updated at
       admin_user:
-        email: Email
         created_at: Created at
         current_sign_in_at: Current Sign In At
+        email: Email
         id: Id
         sign_in_count: Sign In Count
       pledge:
@@ -89,6 +111,7 @@ de:
         deadline: Deadline
         description: Description
         id: Id
+        image: Image
         initiator: Initiator
         location: Location
         pg_search_document: Pg search document
@@ -97,19 +120,11 @@ de:
         signatures: Signatures
         signatures_count: Signatures Count
         tags: Tags
+        title: Title
         updated_at: Updated At
         updates: Updates
         user_id: User
         who: Who
-        image: Image
-        title: Title
-      active_admin/comment:
-        author_type: Author type
-        body: Body
-        created_at: Created at
-        namespace: Namespace
-        resource_type: Resource type
-        updated_at: Updated at
     models:
       admin: Admin
       admin_user: Admin Users
@@ -119,156 +134,176 @@ de:
     farewell: Mit besten Grüßen,
     impressum: "<Impressum>"
     signed: Ihre bunt und verbindlich Redaktion
+  devise:
+    mailer:
+      confirmation_instructions:
+        user_subject: Confirmation instructions
+  flash:
+    actions:
+      destroy:
+        notice:
+      update:
+        notice:
   formtastic:
     actions:
       pledge:
         edit:
-          update: 
+          update:
     hints:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
+          email:
+          password:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
-          image: 
-          title: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          requirement:
+          title:
+          who:
+          image:
+          title:
     labels:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
-          image: 
-          title: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          requirement:
+          title:
+          who:
+          image:
+          title:
       q:
         index:
-          aasm_state: 
-          amount: 
-          comments: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          pg_search_document: 
-          pledges_tags: 
-          requirement: 
-          signatures: 
-          tags: 
-          updated_at: 
-          updates: 
-          who: 
-          author_type: 
-          body: 
-          email: 
-          image: 
-          namespace: 
-          resource_type: 
-          title: 
+          aasm_state:
+          amount:
+          author_type:
+          body:
+          comments:
+          content:
+          created_at:
+          deadline:
+          description:
+          email:
+          image:
+          initiator:
+          location:
+          namespace:
+          pg_search_document:
+          pledges_tags:
+          requirement:
+          resource_type:
+          signatures:
+          tags:
+          title:
+          updated_at:
+          updates:
+          who:
     placeholders:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
+          email:
+          password:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          description: 
-          location: 
-          requirement: 
-          who: 
-          title: 
+          aasm_state:
+          amount:
+          content:
+          description:
+          location:
+          requirement:
+          title:
+          who:
+          title:
       q:
         index:
-          aasm_state: 
-          amount: 
-          content: 
-          description: 
-          location: 
-          requirement: 
-          who: 
-          body: 
-          email: 
-          image: 
-          namespace: 
-          title: 
+          aasm_state:
+          amount:
+          body:
+          content:
+          description:
+          email:
+          image:
+          location:
+          namespace:
+          requirement:
+          title:
+          who:
   helpers:
     label:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          requirement: 
-          who: 
-          image: 
-          title: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          requirement:
+          title:
+          who:
+          image:
+          title:
       q:
         index:
-          aasm_state: 
-          amount: 
-          comments: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          initiator: 
-          location: 
-          pg_search_document: 
-          pledges_tags: 
-          requirement: 
-          signatures: 
-          tags: 
-          updated_at: 
-          updates: 
-          who: 
-          author_type: 
-          body: 
-          email: 
-          image: 
-          namespace: 
-          resource_type: 
-          title: 
+          aasm_state:
+          amount:
+          author_type:
+          body:
+          comments:
+          content:
+          created_at:
+          deadline:
+          description:
+          email:
+          image:
+          initiator:
+          location:
+          namespace:
+          pg_search_document:
+          pledges_tags:
+          requirement:
+          resource_type:
+          signatures:
+          tags:
+          title:
+          updated_at:
+          updates:
+          who:
       user:
-        email: 
-        password: 
-        remember_me: 
+        email:
+        password:
+        remember_me:
   initiator_mailer:
+    new_question:
+      greeting:
+      subject:
     pledge_was_approved:
       faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
       greeting: Liebe/r Herr/Frau %{name}
@@ -281,9 +316,6 @@ de:
           '1': Bewerben Sie das Versprechen in Ihren Netzwerken
           '2': Schreiben Sie regelmäßig Neuigkeiten zu Ihrem Versprechen
           '3': Antworten Sie zeitnah auf Rückfragen der Nutzer
-    new_question:
-      greeting: 
-      subject: 
   layouts:
     partials:
       footer:
@@ -303,7 +335,7 @@ de:
         about_link: Über uns
         blog_link: Blog
         contact_link: Kontakt
-        en: 
+        en:
         facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: FAQ
         howitworks_link: So funktioniert's
@@ -312,7 +344,7 @@ de:
         new_pledge_link: Ich versprech's
         newsletter_link: Newsletter
         press_link: Presse
-        search_link: 
+        search_link:
         search_placeholder: z.B. nach Unternehmen suchen
         search_title: Suchen
         start_link: Start
@@ -342,13 +374,13 @@ de:
     pledge:
       amount:
         label: Wie viele?
-        placeholder: 
+        placeholder:
       content:
         label: Was?
         placeholder: z.B. eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
-        placeholder: 
+        placeholder:
       description:
         label: Mehr Infos (optional)
         placeholder: |-
@@ -359,38 +391,38 @@ de:
           label: Profilbild
         email:
           label: Ihre E-Mail
-          placeholder: 
+          placeholder:
         name:
           label: Ihr Name
-          placeholder: 
+          placeholder:
         password:
           label: Passwort
-          placeholder: 
+          placeholder:
       location:
         label: Ort
         placeholder: z.B. Bundesweit
       requirement:
         label: Was tun?
-        placeholder: 
+        placeholder:
       tag_ids:
-        label: 
+        label:
         placeholder: Themenbereiche
       title:
         label: Titel
         placeholder: z.B. Patenschaft
       who:
         label: Wer?
-        placeholder: 
+        placeholder:
     signature:
       anonymous:
         label: Namen nicht veröffentlichen
       contact_person:
         label: Ich bin Ansprechpartner
       email:
-        label: 
+        label:
         placeholder: E-Mail*
       name:
-        label: 
+        label:
         placeholder: Name*
       organization:
         placeholder: Unternehmen oder Organisation (optional)
@@ -403,32 +435,7 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
-  devise:
-    mailer:
-      confirmation_instructions:
-        user_subject: Confirmation instructions
-  UpdateForm:
-    submit: Absenden
-  AnswerForm:
-    submit: Absenden
-  PledgeState:
-    days:
-      one: Tag
-      other: Tage
-    still: noch
-  ProfileView:
-    heading: Ihr Profil
   signer_mailer:
     new_pledge_update:
-      greeting: 
-      subject: 
-  PledgeUpdateList:
-    heading: Neuigkeiten
-  flash:
-    actions:
-      destroy:
-        notice: 
-      update:
-        notice: 
-  QuestionForm:
-    submit: Absenden
+      greeting:
+      subject:
