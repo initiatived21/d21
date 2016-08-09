@@ -44,11 +44,7 @@ class PledgeTest < Minitest::Capybara::Spec
     fill_in 'pledge[initiator][name]', with: 'integration1Name'
     fill_in 'pledge[initiator][email]', with: 'integration1@email.com'
     fill_in 'pledge[initiator][password]', with: 'integration1Password'
-    click_button 'Save Draft'
-
-    page.must_have_content 'The draft was successfully saved to your profile.'
-    click_link 'Meine Daten'
-    click_link 'zum Versprechen'
+    click_button 'Zur Vorschau'
 
     page.must_have_content 'integration1Title'
     page.must_have_content 'We promise to integration1Content if at least 123'\

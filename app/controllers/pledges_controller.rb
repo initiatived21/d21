@@ -188,12 +188,13 @@ class PledgesController < ApplicationController
   end
 
   def pledge_params
-    params.require(:pledge).permit(
-      :title, :content, :amount, :who, :requirement, :location, :description,
-      :deadline, :image,
-      tag_ids: [],
-      initiator: [:name, :email, :organization, :avatar, :password]
-    )
+    # params.require(:pledge).permit(
+    #   :title, :content, :amount, :who, :requirement, :location, :description,
+    #   :deadline, :image,
+    #   tag_ids: [],
+    #   initiator: [:name, :email, :organization, :avatar, :password]
+    # )
+    params[:pledge]
   end
 
   def pledge_form_props method, path
