@@ -6,15 +6,28 @@ describe('FilteredPledgeList', function() {
       pledges: {
         1: {
           id: 1,
-          aasm_state: 'successful'
+          aasm_state: 'successful',
+          initiator: 3
         },
         5: {
           id: 5,
-          aasm_state: 'active'
+          aasm_state: 'active',
+          initiator: 3
         },
         7: {
           id: 7,
-          aasm_state: 'active'
+          aasm_state: 'active',
+          initiator: 2
+        }
+      },
+      users: {
+        2: {
+          id: 2,
+          name: 'Carl'
+        },
+        3: {
+          id: 3,
+          name: 'Max'
         }
       }
     }
@@ -22,9 +35,30 @@ describe('FilteredPledgeList', function() {
     it('sets all pledges if no filter is given', function() {
       mapStateToProps(state, {}).should.deep.equal({
         pledges: [
-          { id: 1, aasm_state: 'successful' },
-          { id: 5, aasm_state: 'active' },
-          { id: 7, aasm_state: 'active' }
+          {
+            id: 1,
+            aasm_state: 'successful',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          },
+          {
+            id: 5,
+            aasm_state: 'active',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          },
+          {
+            id: 7,
+            aasm_state: 'active',
+            initiator: {
+              id: 2,
+              name: 'Carl'
+            }
+          }
         ]
       })
     })
@@ -32,7 +66,14 @@ describe('FilteredPledgeList', function() {
     it('sets successful pledges if successful filter is given', function() {
       mapStateToProps(state, { filter: 'successful' }).should.deep.equal({
         pledges: [
-          { id: 1, aasm_state: 'successful' }
+          {
+            id: 1,
+            aasm_state: 'successful',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          }
         ]
       })
     })
@@ -40,8 +81,22 @@ describe('FilteredPledgeList', function() {
     it('sets active pledges if active filter is given', function() {
       mapStateToProps(state, { filter: 'active' }).should.deep.equal({
         pledges: [
-          { id: 5, aasm_state: 'active' },
-          { id: 7, aasm_state: 'active' }
+          {
+            id: 5,
+            aasm_state: 'active',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          },
+          {
+            id: 7,
+            aasm_state: 'active',
+            initiator: {
+              id: 2,
+              name: 'Carl'
+            }
+          }
         ]
       })
     })

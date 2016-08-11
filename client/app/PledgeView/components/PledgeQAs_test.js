@@ -12,6 +12,6 @@ describe('<PledgeQAs />', function () {
       />
     )
 
-    wrapper.find('dl').length.should.equal(1)
+    wrapper.find('div').length.should.equal(1)
   })
 })

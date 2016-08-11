@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { values } from 'lodash'
+import { values, merge } from 'lodash'
 import PledgeList from '../components/PledgeList'
 
 function filterPledges(pledges, filter) {
@@ -14,13 +14,19 @@ function filterPledges(pledges, filter) {
   })
 }
 
+function deNormalizePledges(state) {
+  const pledges = merge({}, state.pledges)
+
+  for (let key in pledges) {
+    pledges[key].initiator = state.users[pledges[key].initiator]
+  }
+
+  return pledges
+}
+
 export function mapStateToProps(state, ownProps) {
   return ({
-    pledges: filterPledges(state.pledges, ownProps.filter).map((pledge) => {
-      pledge.initiator = state.users[pledge.initiator]
-      return pledge
-    }
-    )
+    pledges: filterPledges(deNormalizePledges(state), ownProps.filter)
   })
 }
 

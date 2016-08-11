@@ -45,16 +45,18 @@ describe('FormFor', function() {
       form.node.method.toUpperCase().should.equal('POST')
     })
 
-    it('should output two hidden input tags for token and utf8', function() {
+    it('should output hidden input tags for token, utf8 and commit', function() {
       const wrapper = mount(React.createElement(FormFor, props))
 
       const inputs = wrapper.find('input')
-      inputs.length.should.equal(2)
+      inputs.length.should.equal(3)
       inputs.first().node.type.should.equal('hidden')
       inputs.first().node.name.should.equal('authenticity_token')
       inputs.first().node.value.should.equal('testAuthToken')
+      inputs.at(1).node.type.should.equal('hidden')
+      inputs.at(1).node.name.should.equal('utf8')
       inputs.last().node.type.should.equal('hidden')
-      inputs.last().node.name.should.equal('utf8')
+      inputs.last().node.name.should.equal('commit')
     })
   })
 

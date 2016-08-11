@@ -6,8 +6,10 @@ import PledgeUpdate from './PledgeUpdate'
 
 describe('<PledgeUpdate />', function () {
   const props = {
-    children: 'Die Laptops sind auf dem Weg.',
-    created_at: '2016-09-01T12:05:22.964Z'
+    update: {
+      content: 'Die Laptops sind auf dem Weg.',
+      created_at: '2016-09-01T12:05:22.964Z'
+    }
   }
 
   it('should render', function () {

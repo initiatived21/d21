@@ -1,4 +1,5 @@
 import React from 'react'
+import I18n from 'i18n-js'
 import { shallow } from 'enzyme'
 import { Provider } from 'react-redux'
 
@@ -14,6 +15,8 @@ describe('<Signee />', function () {
   }
 
   it('should render', function () {
+    I18n.locale = 'de'
+
     const wrapper = shallow(<Signee {...props} />)
 
     wrapper.find('li').length.should.equal(1)
