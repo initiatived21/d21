@@ -7,10 +7,14 @@
  */
 
 .c-comment {
-
 }
 
 .c-comment__question, .c-comment__answer {
+  position: relative;
+  min-height: $comment-avatar-size;
+}
+
+.c-comment__question-text, .c-comment__answer-text {
   //clear: both;
   @include clearfix;
 
@@ -18,19 +22,28 @@
   border-radius: 5px;
 }
 
-.c-comment__question {
-  float: left;
+.c-comment__question-text {
+  margin-left: $comment-avatar-size + $spacing--small;
 
   background-color: $light-gray;
 }
 
-.c-comment__answer {
+.c-comment__answer-text {
   float: right;
+  margin-right: $comment-avatar-size + $spacing--small;
 
   color: $white;
   background-color: $primary-color-lighter;
 }
 
-.c-comment__avatar {
-  float: right;
+.c-comment__question-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-comment__answer-avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

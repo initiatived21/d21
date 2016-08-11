@@ -1,6 +1,8 @@
 de:
   AnswerForm:
     submit: Absenden
+  CommentAvatar:
+    title: Avatar anonymer Nutzer
   FacebookButton:
     title: Über Facebook teilen
   GoogleplusButton:

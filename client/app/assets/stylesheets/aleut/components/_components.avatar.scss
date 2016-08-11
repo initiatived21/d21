@@ -19,3 +19,8 @@ img.c-avatar {
   width: 123px;
   height: 123px;
 }
+
+.c-avatar--comment {
+  width: $comment-avatar-size;
+  height: $comment-avatar-size;
+}

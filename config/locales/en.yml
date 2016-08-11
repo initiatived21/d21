@@ -1,6 +1,8 @@
 en:
   AnswerForm:
     submit: Submit
+  CommentAvatar:
+    title: Anonymous user avatar
   FacebookButton:
     title: Share via Facebook
   GoogleplusButton:
