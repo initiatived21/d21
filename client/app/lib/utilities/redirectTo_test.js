@@ -16,6 +16,6 @@ describe('redirectTo', function() {
 
     const fn = () => redirectTo(url)
 
-    fn.should.throw(Error)
+    fn.should.throw('Redirection not possible in server environment')
   })
 })

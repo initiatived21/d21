@@ -3,8 +3,8 @@
  */
 
 function redirectTo(url) {
-  if (typeof window !== 'undefined') {
-    window.location = url
+  if (typeof global.window !== 'undefined') {
+    global.window.location = url
   }
   else
   {

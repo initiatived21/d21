@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import I18n from 'i18n-js'
 
+import openWindow from '../../lib/utilities/openWindow'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import FacebookButton from './FacebookButton.jsx'
 import TwitterButton from './TwitterButton.jsx'
@@ -17,15 +18,7 @@ export default class SocialMediaButtons extends ChildComponent {
   handleClick(e) {
     e.preventDefault()
     const anchor = e.currentTarget
-    this.openWindow(anchor.href)
-  }
-
-  openWindow(url) {
-    const windowName = '_blank'
-    const windowSizeX = '600'
-    const windowSizeY = '460'
-    const windowSize = `width=${windowSizeX},height=${windowSizeY}`
-    global.window.open(url, windowName, windowSize)
+    openWindow(anchor.href)
   }
 
   render() {
