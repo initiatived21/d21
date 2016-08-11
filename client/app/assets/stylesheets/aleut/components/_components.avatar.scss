@@ -6,6 +6,16 @@
  * Avatar component, can be an image or an SVG, need to be styled differently
  */
 
+/**
+ *  1. Set border-radius only for img avatars, svg has its own border.
+ *
+ */
+
 img.c-avatar {
-  border-radius: 50px;
+  border-radius: 62px;  /* [1] */
+}
+
+.c-avatar--large {
+  width: 123px;
+  height: 123px;
 }

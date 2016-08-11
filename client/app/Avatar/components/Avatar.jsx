@@ -6,15 +6,19 @@ export default class Avatar extends ChildComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     imagePath: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    large: PropTypes.bool
   }
 
   render() {
-    const { imagePath, name, className } = this.props
+    const { imagePath, name, className, large } = this.props
 
     const avatarName = `Avatar ${name}`
 
     let combinedClassName = 'c-avatar'
+    if (large) {
+      combinedClassName += ' c-avatar--large'
+    }
     if (className) {
       combinedClassName += ` ${className}`
     }

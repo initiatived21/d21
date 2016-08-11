@@ -7,12 +7,19 @@
  */
 
 .c-pledge-data {
-  padding: $spacing--small 0;
+  border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
+
+  padding: $spacing 0;
+
+  @include font-size(15px, 1.5);
 }
 
 .c-pledge-data__title {
-  margin-bottom: $spacing--tiny;
+  margin-top: 0;
+  margin-bottom: $spacing--small;
+
   @include font-size(18px);
   text-transform: uppercase;
+  color: $text-color;
 }

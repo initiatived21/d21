@@ -25,6 +25,14 @@ describe('<Avatar />', function () {
     svg.find('title').text().should.match(/Max Mustermann/)
   })
 
+  it('should have the c-avatar--large class if large option is provided', function()
+  {
+    const wrapper = shallow(<Avatar {...props} large />)
+
+    wrapper.hasClass('c-avatar').should.be.true
+    wrapper.hasClass('c-avatar--large').should.be.true
+  })
+
   it('should "pass through" its className prop', function() {
     const wrapper = shallow(<Avatar className="dummy" {...props} />)
 

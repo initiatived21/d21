@@ -20,6 +20,7 @@ de:
     signees:
       of: von
       of_goal: vom Ziel
+      signees: Unterzeichnern
       title: Unterzeichner
     time:
       closes_on: Endet am
@@ -141,169 +142,162 @@ de:
   flash:
     actions:
       destroy:
-        notice:
+        notice: 
       update:
-        notice:
+        notice: 
   formtastic:
     actions:
       pledge:
         edit:
-          update:
+          update: 
     hints:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
     labels:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          author_type:
-          body:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          namespace:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          resource_type:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          author_type: 
+          body: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          namespace: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          resource_type: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
     placeholders:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          description:
-          location:
-          requirement:
-          title:
-          who:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          body:
-          content:
-          description:
-          email:
-          image:
-          location:
-          namespace:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          body: 
+          content: 
+          description: 
+          email: 
+          image: 
+          location: 
+          namespace: 
+          requirement: 
+          title: 
+          who: 
   helpers:
     label:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          author_type:
-          body:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          namespace:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          resource_type:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          author_type: 
+          body: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          namespace: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          resource_type: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
       user:
-        email:
-        password:
-        remember_me:
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
-      greeting:
-      subject:
+      greeting: 
+      subject: 
     pledge_was_approved:
       faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
       greeting: Liebe/r Herr/Frau %{name}
@@ -335,7 +329,7 @@ de:
         about_link: Über uns
         blog_link: Blog
         contact_link: Kontakt
-        en:
+        en: 
         facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: FAQ
         howitworks_link: So funktioniert's
@@ -344,7 +338,7 @@ de:
         new_pledge_link: Ich versprech's
         newsletter_link: Newsletter
         press_link: Presse
-        search_link:
+        search_link: 
         search_placeholder: z.B. nach Unternehmen suchen
         search_title: Suchen
         start_link: Start
@@ -374,13 +368,13 @@ de:
     pledge:
       amount:
         label: Wie viele?
-        placeholder:
+        placeholder: 
       content:
         label: Was?
         placeholder: z.B. eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
-        placeholder:
+        placeholder: 
       description:
         label: Mehr Infos (optional)
         placeholder: |-
@@ -391,38 +385,38 @@ de:
           label: Profilbild
         email:
           label: Ihre E-Mail
-          placeholder:
+          placeholder: 
         name:
           label: Ihr Name
-          placeholder:
+          placeholder: 
         password:
           label: Passwort
-          placeholder:
+          placeholder: 
       location:
         label: Ort
         placeholder: z.B. Bundesweit
       requirement:
         label: Was tun?
-        placeholder:
+        placeholder: 
       tag_ids:
-        label:
+        label: 
         placeholder: Themenbereiche
       title:
         label: Titel
         placeholder: z.B. Patenschaft
       who:
         label: Wer?
-        placeholder:
+        placeholder: 
     signature:
       anonymous:
         label: Namen nicht veröffentlichen
       contact_person:
         label: Ich bin Ansprechpartner
       email:
-        label:
+        label: 
         placeholder: E-Mail*
       name:
-        label:
+        label: 
         placeholder: Name*
       organization:
         placeholder: Unternehmen oder Organisation (optional)
@@ -437,5 +431,8 @@ de:
         label: Angemeldet bleiben
   signer_mailer:
     new_pledge_update:
-      greeting:
-      subject:
+      greeting: 
+      subject: 
+    signature_created:
+      greeting: 
+      subject: 

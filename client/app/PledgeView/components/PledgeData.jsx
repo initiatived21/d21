@@ -30,17 +30,22 @@ export default class PledgeData extends ChildComponent {
       <div className="c-pledge-data">
         <div className="o-layout">
           <div className="c-pledge-data__initiator o-layout__item u-1/3">
-            <p className="c-pledge-data__title">{this.t('.initiator.title')}</p>
+            <h2 className="c-pledge-data__title">{this.t('.initiator.title')}</h2>
             <p>{initiator}</p>
           </div>
           <div className="c-pledge-data__signees o-layout__item u-1/3">
-            <p className="c-pledge-data__title">{this.t('.signees.title')}</p>
-            <p>{signatures_count} {this.t('.signees.of')} {amount}<br />Unterzeichner</p>
+            <h2 className="c-pledge-data__title">{this.t('.signees.title')}</h2>
+            <p>
+              {signatures_count} {this.t('.signees.of')} {amount}<br />
+              {this.t('.signees.signees')}
+            </p>
             <ProgressBar percentage={percentage} />
-            <p>{percentage}&thinsp;% {this.t('.signees.of_goal')}</p>
+            <p className="u-mt-small">
+              {percentage}&thinsp;% {this.t('.signees.of_goal')}
+            </p>
           </div>
           <div className="c-pledge-data__time o-layout__item u-1/3">
-            <p className="c-pledge-data__title">{this.t('.time.title')}</p>
+            <h2 className="c-pledge-data__title">{this.t('.time.title')}</h2>
             <PledgeState state={state} remainingDays={remainingDays} urgent={isUrgent} />
             <p className="u-mt-small">
               <b>{this.t('.time.closes_on')}:</b><br />

@@ -20,6 +20,7 @@ en:
     signees:
       of: of
       of_goal: of goal
+      signees: signees
       title: Signees
     time:
       closes_on: Closes on
@@ -51,15 +52,15 @@ en:
   QuestionForm:
     submit: Submit
   ReportPledgeForm:
-    description:
+    description: 
     report_pledge: Report pledge
   SignInForm:
     submit: Sign in
   SignPledgeForm:
-    email_hint:
+    email_hint: 
     i_sign: I sign this pledge.
     sign: Sign
-    small_print:
+    small_print: 
   SigneeList:
     heading: Signees
   StateFooter:
@@ -83,239 +84,232 @@ en:
     title: Share via Xing
   active_admin:
     scopes:
-      admin:
-      all:
+      admin: 
+      all: 
     sidebars:
-      Zustand:
+      Zustand: 
   activerecord:
     attributes:
       active_admin/comment:
-        author_type:
-        body:
-        created_at:
-        namespace:
-        resource_type:
-        updated_at:
+        author_type: 
+        body: 
+        created_at: 
+        namespace: 
+        resource_type: 
+        updated_at: 
       admin_user:
-        created_at:
-        current_sign_in_at:
-        email:
-        id:
-        sign_in_count:
+        created_at: 
+        current_sign_in_at: 
+        email: 
+        id: 
+        sign_in_count: 
       pledge:
-        aasm_state:
-        amount:
-        comments:
-        content:
-        created_at:
-        deadline:
-        description:
-        id:
-        image:
-        initiator:
-        location:
-        pg_search_document:
-        pledges_tags:
-        requirement:
-        signatures:
-        signatures_count:
-        tags:
-        title:
-        updated_at:
-        updates:
-        user_id:
-        who:
+        aasm_state: 
+        amount: 
+        comments: 
+        content: 
+        created_at: 
+        deadline: 
+        description: 
+        id: 
+        image: 
+        initiator: 
+        location: 
+        pg_search_document: 
+        pledges_tags: 
+        requirement: 
+        signatures: 
+        signatures_count: 
+        tags: 
+        title: 
+        updated_at: 
+        updates: 
+        user_id: 
+        who: 
     models:
-      admin:
-      admin_user:
-      comment:
-      pledge:
+      admin: 
+      admin_user: 
+      comment: 
+      pledge: 
   application_mailer:
-    farewell:
-    impressum:
-    signed:
+    farewell: 
+    impressum: 
+    signed: 
   devise:
     mailer:
       confirmation_instructions:
-        user_subject:
+        user_subject: 
   flash:
     actions:
       destroy:
-        notice:
+        notice: 
       update:
-        notice:
+        notice: 
   formtastic:
     actions:
       pledge:
         edit:
-          update:
+          update: 
     hints:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
     labels:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          author_type:
-          body:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          namespace:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          resource_type:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          author_type: 
+          body: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          namespace: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          resource_type: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
     placeholders:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          description:
-          location:
-          requirement:
-          title:
-          who:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          body:
-          content:
-          description:
-          email:
-          image:
-          location:
-          namespace:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          body: 
+          content: 
+          description: 
+          email: 
+          image: 
+          location: 
+          namespace: 
+          requirement: 
+          title: 
+          who: 
   helpers:
     label:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
-          image:
-          title:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          author_type:
-          body:
-          comments:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          namespace:
-          pg_search_document:
-          pledges_tags:
-          requirement:
-          resource_type:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          author_type: 
+          body: 
+          comments: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          namespace: 
+          pg_search_document: 
+          pledges_tags: 
+          requirement: 
+          resource_type: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
       user:
-        email:
-        password:
-        remember_me:
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
-      greeting:
-      subject:
+      greeting: 
+      subject: 
     pledge_was_approved:
-      faq_paragraph:
-      greeting:
-      intro_paragraph:
-      outro_paragraph:
-      subject:
+      faq_paragraph: 
+      greeting: 
+      intro_paragraph: 
+      outro_paragraph: 
+      subject: 
       success_paragraph:
-        first_line:
+        first_line: 
         steps:
-          '1':
-          '2':
-          '3':
+          '1': 
+          '2': 
+          '3': 
   layouts:
     partials:
       footer:
@@ -335,7 +329,7 @@ en:
         about_link: About us
         blog_link: Blog
         contact_link: Contact
-        en:
+        en: 
         facebook_title: Bunt und Verbindlich on Facebook
         faq_link: FAQ
         howitworks_link: How it works
@@ -344,7 +338,7 @@ en:
         new_pledge_link: Make a pledge
         newsletter_link: Newsletter
         press_link: Press
-        search_link:
+        search_link: 
         search_placeholder: e.g. search for companies
         search_title: Search
         start_link: Start
@@ -374,53 +368,53 @@ en:
     pledge:
       amount:
         label: How many?
-        placeholder:
+        placeholder: 
       content:
         label: What?
         placeholder: e.g. to give a refugee family a home
       deadline:
         label: Can be signed until
-        placeholder:
+        placeholder: 
       description:
         label: More Info (optional)
-        placeholder:
+        placeholder: 
       initiator:
         avatar:
           label: Profile Image
         email:
           label: Your Email
-          placeholder:
+          placeholder: 
         name:
           label: Your Name
-          placeholder:
+          placeholder: 
         password:
           label: Password
-          placeholder:
+          placeholder: 
       location:
         label: Location
-        placeholder:
+        placeholder: 
       requirement:
         label: Do what?
-        placeholder:
+        placeholder: 
       tag_ids:
-        label:
-        placeholder:
+        label: 
+        placeholder: 
       title:
         label: Title
         placeholder: e.g. Sponsorship
       who:
         label: Who?
-        placeholder:
+        placeholder: 
     signature:
       anonymous:
         label: Don't publish my name
       contact_person:
         label: I am the contact person
       email:
-        label:
+        label: 
         placeholder: Email*
       name:
-        label:
+        label: 
         placeholder: Name*
       organization:
         placeholder: Company or Organization (optional)
@@ -435,5 +429,8 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
-      greeting:
-      subject:
+      greeting: 
+      subject: 
+    signature_created:
+      greeting: 
+      subject: 
