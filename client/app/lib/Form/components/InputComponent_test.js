@@ -14,6 +14,25 @@ describe('InputComponent', function() {
   }
 
   describe('with minimal props', function() {
+    it('should output an input tag of default type text', function() {
+      const wrapper = mount(<InputComponent {...defaultProps} />)
+
+      const input = wrapper.find('input')
+      input.length.should.equal(1)
+      input.node.type.should.equal('text')
+      input.node.id.should.equal('testModel_testAttribute')
+      input.node.name.should.equal('testModel[testAttribute]')
+    })
+
+    it('wont output any errors', function() {
+      const wrapper = mount(<InputComponent {...defaultProps} />)
+
+      const errors = wrapper.find(`.${errorClass}`)
+      errors.length.should.equal(0)
+    })
+  })
+
+  describe('labels', function() {
     it('should output a default label', function() {
       const wrapper = mount(<InputComponent {...defaultProps} />)
 
@@ -48,21 +67,11 @@ describe('InputComponent', function() {
       input.node.hasAttribute('aria-label').should.be.false
     })
 
-    it('should output an input tag of default type text', function() {
-      const wrapper = mount(<InputComponent {...defaultProps} />)
+    it('should not output a label if noLabel is set', function() {
+      const wrapper = mount(<InputComponent noLabel {...defaultProps} />)
 
-      const input = wrapper.find('input')
-      input.length.should.equal(1)
-      input.node.type.should.equal('text')
-      input.node.id.should.equal('testModel_testAttribute')
-      input.node.name.should.equal('testModel[testAttribute]')
-    })
-
-    it('wont output any errors', function() {
-      const wrapper = mount(<InputComponent {...defaultProps} />)
-
-      const errors = wrapper.find(`.${errorClass}`)
-      errors.length.should.equal(0)
+      const label = wrapper.find('label')
+      label.length.should.equal(0)
     })
   })
 

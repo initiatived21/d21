@@ -11,6 +11,7 @@ export default class Input extends Component {
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.number),
     ]).isRequired,
+    noLabel: PropTypes.bool,
     inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
@@ -21,7 +22,7 @@ export default class Input extends Component {
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
-      inlineLabel, formObjectName, className
+      noLabel, inlineLabel, formObjectName, className
     } = this.props
 
     const modelParamName = this._modelParamName(model, submodel)
@@ -56,7 +57,7 @@ export default class Input extends Component {
             // }}
 
     let labelElement
-    if (!inlineLabel) {
+    if (!inlineLabel && !noLabel) {
       labelElement = (
         <label htmlFor={id}>
           {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
