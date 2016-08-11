@@ -19,9 +19,11 @@ export default class SignInForm extends ChildComponent {
     return(
       <FormFor object={SignInFormObject} formData={formData}>
 
-        <Input className="c-input" attribute='email' inlineLabel />
-        <Input className="c-input" attribute='password' type='password' inlineLabel />
-        <Input className="c-checkbox" attribute='remember_me' type='checkbox' />
+        <Input className="c-input u-mb-small" attribute='email' inlineLabel />
+        <Input className="c-input u-mb-small" attribute='password' type='password' inlineLabel />
+
+        <Input className="c-checkbox c-checkbox--small u-mb-small" attribute='remember_me'
+          type='checkbox' />
 
         <a className="c-session__link" href="">
           Passwort vergessen?

@@ -124,6 +124,10 @@ $color-white: rgb(100%, 100%, 100%);
   left: $spacing;
   right: $spacing;
   bottom: ($spacing + 45px);
+
+  > a {
+    height: 36px;
+  }
 }
 
 

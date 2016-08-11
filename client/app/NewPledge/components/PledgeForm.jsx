@@ -6,6 +6,7 @@ import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
 import FormFor from '../../lib/Form/containers/FormFor'
+import Label from '../../lib/Form/components/Label'
 import Input from '../../lib/Form/containers/Input'
 import Button from '../../lib/Form/containers/Button'
 import ImageInput from '../../lib/Form/containers/ImageInput'
@@ -45,33 +46,57 @@ export default class PledgeForm extends ChildComponent {
             {this.t('.promise.part2')}
             <Input className="c-input" attribute='amount' type='number' />
             <Input className="c-input" attribute='who' />
-            <Input className="c-input" attribute='requirement' />
+            <Input className="c-input u-mb-small" attribute='requirement' />
           </div>
 
-          <Input className="c-input" attribute='location' />
-          <Input className="c-input" type='date' attribute='deadline' />
 
-          <Input className="c-input" attribute="title" />
+          <div className="o-layout o-layout--small">
+            <div className="o-layout__item u-1/4 u-mb-small">
+              <Label attribute="location" />
+            </div>
+            <Input className="c-input o-layout__item u-3/4 u-mb-small" attribute='location' noLabel />
 
-          <Input className="c-textarea" attribute='description' type='textarea' />
+            <div className="o-layout__item u-1/4 u-mb-small">
+              <Label attribute="deadline" />
+            </div>
+            <Input className="c-input o-layout__item u-3/4 u-mb-small" type='date' attribute='deadline'
+              noLabel />
 
-          <ImageInput
-            className="c-image-input--pledge-image"
-            attribute="image"
-            previewArea={300000}
-            aspectRatio={3/2}
-            scaleToX={1200}
-            scaleToY={800}
-          />
+            <div className="o-layout__item u-1/4 u-mb-small">
+              <Label attribute="title" />
+            </div>
+            <Input className="c-input o-layout__item u-3/4 u-mb-small" attribute="title" noLabel />
 
-          <Input type='multiselect' attribute='tag_ids'
-            options={this.props.availableTags}
-          />
+            <div className="o-layout__item u-1/4 u-mb-small">
+              <Label attribute="description" />
+            </div>
+            <Input className="c-textarea o-layout__item u-3/4 u-mb-small" attribute="description"
+              type="textarea" noLabel />
+
+            <div className="o-layout__item u-1/4 u-mb-small">
+              <Label attribute="image" />
+            </div>
+            <ImageInput
+              className="c-image-input--pledge-image o-layout__item u-3/4 u-mb-small"
+              attribute="image"
+              previewArea={300000}
+              aspectRatio={3/2}
+              scaleToX={1200}
+              scaleToY={800}
+            />
+
+            <div className="o-layout__item u-1/4">
+              <Label attribute="tag_ids" />
+            </div>
+            <Input className="c-input o-layout__item u-3/4" type='multiselect'
+              attribute='tag_ids' options={this.props.availableTags} noLabel
+            />
+          </div>
         </div>
 
         {initiatorForm}
 
-        <div className="o-layout u-mt u-mb-huge">
+        <div className="o-layout u-mt-large u-mb-huge">
           <div className="o-layout__item u-1/3">
             <Button
               className="c-new-pledge__save-draft o-btn o-btn--small c-btn c-btn--primary u-mb-small"
@@ -103,35 +128,59 @@ export default class PledgeForm extends ChildComponent {
   }
 
   renderInitiatorForm() {
+    const { onLinkClick, currentUser } = this.props
+
+    const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
+
     return (
       <div className='c-new-pledge__user-data'>
         <h2>Ihre Daten für Ihr Nutzerkonto</h2>
 
-        <p className="u-mb">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
+        <p className="u-mb-small">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
 
-        <ImageInput
-          className="c-image-input--avatar"
-          submodel="initiator"
-          attribute="avatar"
-          aspectRatio={1}
-          scaleToX={200}
-          scaleToY={200}
-        />
-        <Input className="c-input" submodel='initiator' attribute='name' />
-        <Input
-          className="c-input" submodel='initiator' attribute='email'
-          type='email'
-        />
-        <Input
-          className="c-input" submodel='initiator' attribute='password'
-          type='password'
-        />
+        {loginPrompt}
+
+        <div className="o-layout">
+          <div className="o-layout__item u-1/4 u-mb-small">
+            <Label submodel="initiator" attribute="avatar" />
+          </div>
+          <ImageInput
+            className="c-image-input--avatar o-layout__item u-3/4 u-mb-small"
+            submodel="initiator"
+            attribute="avatar"
+            aspectRatio={1}
+            scaleToX={200}
+            scaleToY={200}
+          />
+
+          <div className="o-layout__item u-1/4 u-mb-small">
+            <Label submodel="initiator" attribute="name" />
+          </div>
+          <Input className="c-input o-layout__item u-3/4 u-mb-small" submodel='initiator' attribute='name'
+            noLabel />
+
+          <div className="o-layout__item u-1/4 u-mb-small">
+            <Label submodel="initiator" attribute="email" />
+          </div>
+          <Input
+            className="c-input o-layout__item u-3/4 u-mb-small" submodel='initiator' attribute='email'
+            type='email' noLabel
+          />
+
+          <div className="o-layout__item u-1/4">
+            <Label submodel="initiator" attribute="password" />
+          </div>
+          <Input
+            className="c-input o-layout__item u-3/4" submodel='initiator' attribute='password'
+            type='password' noLabel
+          />
+        </div>
       </div>
     )
   }
   renderLoginPrompt(onLinkClick) {
     return (
-      <p>
+      <p className="u-mb-small">
         Sie haben bereits ein Nutzerkonto?
         {' '}
         <a href="#" onClick={onLinkClick}>

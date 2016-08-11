@@ -37,6 +37,8 @@
 }
 
 .c-sign-pledge__submit {
+  height: 60px;
+
   @include font-size(24px, 1.5);
   border-color: $secondary-color;
   border-radius: 5px;

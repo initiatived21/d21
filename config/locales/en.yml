@@ -380,9 +380,11 @@ en:
       description:
         label: More Info (optional)
         placeholder: 
+      image:
+        label: Image
       initiator:
         avatar:
-          label: Profile Image
+          label: Your Profile Image
         email:
           label: Your Email
           placeholder: 
@@ -399,7 +401,7 @@ en:
         label: Do what?
         placeholder: 
       tag_ids:
-        label: 
+        label: Topics
         placeholder: 
       title:
         label: Title

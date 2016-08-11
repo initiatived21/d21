@@ -24,7 +24,9 @@ function assembleTags(tags) {
 const mapDispatchToProps = dispatch => ({
   onLinkClick: function(event) {
     event.preventDefault()
+
     dispatch(toggleSessionPopup())
+    window.scrollTo(0, 0)
   },
 })
 

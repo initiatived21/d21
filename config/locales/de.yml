@@ -382,9 +382,11 @@ de:
         placeholder: |-
           Informieren Sie Ihre Unterstützer über den Hintergrund Ihres
           Versprechens und Ihre Motivation.
+      image:
+        label: Bild
       initiator:
         avatar:
-          label: Profilbild
+          label: Ihr Profilbild
         email:
           label: Ihre E-Mail
           placeholder: 
@@ -401,7 +403,7 @@ de:
         label: Was tun?
         placeholder: 
       tag_ids:
-        label: 
+        label: Themenbereiche
         placeholder: Themenbereiche
       title:
         label: Titel

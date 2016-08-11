@@ -42,18 +42,18 @@ export default class SignPledgeForm extends ChildComponent {
 
         <div className="c-sign-pledge__wrapper">
 
-          <Input className="c-input" attribute='name' />
+          <Input className="c-input u-mb-small" attribute='name' />
 
-          <Input className="c-checkbox" type="checkbox" attribute='anonymous' />
+          <Input className="c-checkbox u-mb-small" type="checkbox" attribute='anonymous' />
 
           <Input className="c-input" type="email" attribute='email' />
-          <p>{this.t('.email_hint')}</p>
+          <p className="u-mb-small">{this.t('.email_hint')}</p>
 
-          <Input className="c-input" type="text" attribute='organization' />
+          <Input className="c-input u-mb-small" type="text" attribute='organization' />
 
-          <Input className="c-checkbox" type="checkbox" attribute='contact_person' />
+          <Input className="c-checkbox u-mb-small" type="checkbox" attribute='contact_person' />
 
-          <Input className="c-textarea" type='textarea' attribute='reason' />
+          <Input className="c-textarea u-mb-small" type='textarea' attribute='reason' />
 
           <p className="c-sign-pledge__small-print u-mb">
             <small>
