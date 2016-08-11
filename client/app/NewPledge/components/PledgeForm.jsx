@@ -9,6 +9,7 @@ import FormFor from '../../lib/Form/containers/FormFor'
 import Label from '../../lib/Form/components/Label'
 import Input from '../../lib/Form/containers/Input'
 import Button from '../../lib/Form/containers/Button'
+import NumberInput from '../../lib/Form/containers/NumberInput'
 import ImageInput from '../../lib/Form/containers/ImageInput'
 
 export default class PledgeForm extends ChildComponent {
@@ -49,8 +50,9 @@ export default class PledgeForm extends ChildComponent {
             <span className="c-pledge-form__text">
               , {this.t('.promise.part2')}
             </span>
-            <Input className="c-pledge-form__input c-pledge-form__input--how-many"
-              attribute='amount' type='number' />
+            <NumberInput
+              className="c-pledge-form__input c-pledge-form__input--how-many c-number-input"
+              attribute="amount" defaultValue={10} min={1} max={10000} />
             <Input className="c-pledge-form__input c-pledge-form__input--who"
               attribute='who' />
             <Input className="c-pledge-form__input c-pledge-form__input--requirement"
