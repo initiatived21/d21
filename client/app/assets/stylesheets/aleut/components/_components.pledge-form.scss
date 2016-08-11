@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    #PLEDGE FORM
+\*------------------------------------*/
+
+/**
+ * Pledge form (actual pledge part)
+ */
+
+.c-pledge-form {
+  padding-bottom: $spacing--large;
+  border-bottom: 1px solid $gray;
+  margin-bottom: $spacing--large;
+
+  label {
+    color: $primary-color;
+  }
+}
+
+.c-pledge-form__text {
+  font-weight: bold;
+  @include font-size(24px, 28px);
+  color: $primary-color;
+}
+
+.c-pledge-form__input {
+  > input {
+    width: 100%;
+    padding: $spacing--tiny;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 40px;
+
+    &::placeholder {
+      color: $primary-color;
+      opacity: 1;
+    }
+
+    &:focus {
+      box-shadow: none;
+      background-color: $almost-white;
+    }
+  }
+}
+
+.c-pledge-form__input--what {
+  width: 25em;
+}
+
+.c-pledge-form__input--how-many {
+  width: 5em;
+}
+
+.c-pledge-form__input--who {
+  width: 15em;
+}
+
+.c-pledge-form__input--requirement {
+  width: 40em;
+}

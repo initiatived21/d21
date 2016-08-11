@@ -369,11 +369,11 @@ en:
         label: Your answer…
     pledge:
       amount:
-        label: How many?
-        placeholder: 
+        label: how many?
+        placeholder: 10
       content:
-        label: What?
-        placeholder: e.g. to give a refugee family a home
+        label: what?
+        placeholder: to give a refugee family a home
       deadline:
         label: Can be signed until
         placeholder: 
@@ -398,8 +398,8 @@ en:
         label: Location
         placeholder: 
       requirement:
-        label: Do what?
-        placeholder: 
+        label: do what?
+        placeholder: do the same.
       tag_ids:
         label: Topics
         placeholder: 
@@ -407,8 +407,8 @@ en:
         label: Title
         placeholder: e.g. Sponsorship
       who:
-        label: Who?
-        placeholder: 
+        label: who?
+        placeholder: other people
     signature:
       anonymous:
         label: Don't publish my name

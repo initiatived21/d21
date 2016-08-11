@@ -369,11 +369,11 @@ de:
         label: Ihre Antwort…
     pledge:
       amount:
-        label: Wie viele?
-        placeholder: 
+        label: wie viele?
+        placeholder: 10
       content:
-        label: Was?
-        placeholder: z.B. eine Flüchtlingsfamilie als Paten zu unterstützen
+        label: was?
+        placeholder: eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
         placeholder: 
@@ -400,8 +400,8 @@ de:
         label: Ort
         placeholder: z.B. Bundesweit
       requirement:
-        label: Was tun?
-        placeholder: 
+        label: was tun?
+        placeholder: das Gleiche tun.
       tag_ids:
         label: Themenbereiche
         placeholder: Themenbereiche
@@ -409,8 +409,8 @@ de:
         label: Titel
         placeholder: z.B. Patenschaft
       who:
-        label: Wer?
-        placeholder: 
+        label: wer?
+        placeholder: andere Personen
     signature:
       anonymous:
         label: Namen nicht veröffentlichen
