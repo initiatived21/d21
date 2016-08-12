@@ -442,6 +442,9 @@ de:
         placeholder: Unternehmen oder Organisation (optional)
       reason:
         placeholder: Ich unterstütze, weil … (optional)
+    update:
+      content:
+        label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
     user:
       email:
         label: E-Mail

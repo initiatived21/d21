@@ -433,6 +433,9 @@ en:
         placeholder: Company or Organization (optional)
       reason:
         placeholder: I'm supporting this because … (optional)
+    update:
+      content:
+        label: Send a project update to all signees.
     user:
       email:
         label: E-Mail

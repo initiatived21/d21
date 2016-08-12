@@ -15,20 +15,25 @@ export default class UpdateForm extends ChildComponent {
     const { formData, isSubmitting } = this.props
     return (
       <FormFor
+        className="c-update-form"
         object={NewUpdateFormObject}
         ajax={true}
         formData={formData}>
 
-        <h2>Neuigkeiten</h2>
+        <h2 className="c-update-form__title">
+          {this.t('.title')}
+        </h2>
 
-        <Input className="c-textarea" attribute='content' type='textarea' />
+        <div className="c-update-form__wrapper">
+          <Input className="c-textarea" attribute="content" type="textarea" inlineLabel />
 
-        <button className="o-btn o-btn--small c-btn c-btn--primary"
-          type="submit" disabled={isSubmitting}>
-          <FontAwesome name="paper-plane" />
-          {' '}
-          {this.t('.submit')}
-        </button>
+          <button className="o-btn o-btn--small c-btn c-btn--primary"
+            type="submit" disabled={isSubmitting}>
+            <FontAwesome name="paper-plane" />
+            {' '}
+            {this.t('.submit')}
+          </button>
+        </div>
       </FormFor>
     )
   }

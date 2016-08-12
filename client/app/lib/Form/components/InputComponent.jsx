@@ -73,7 +73,8 @@ export default class Input extends Component {
             id={id}
             name={name}
             value={value}
-            placeholder={placeholder}
+            placeholder={placeholderOrLabel}
+            aria-label={ariaLabel}
             onChange={onChange}
           />
         break
