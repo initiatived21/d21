@@ -37,10 +37,10 @@ describe('NewPledge', function() {
     tags: []
   }
 
-  it('should have a submit button', function() {
+  it('should have two submit buttons', function() {
     const wrapper = mount(<NewPledge {...formProps} />)
 
-    const inputs = wrapper.find('button')
+    const inputs = wrapper.find('button[type="submit"]')
     inputs.length.should.equal(2)
     inputs.first().node.type.should.equal('submit')
   })
