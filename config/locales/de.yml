@@ -82,6 +82,7 @@ de:
     title: Über Twitter teilen
   UpdateForm:
     submit: Absenden
+    title: Neuigkeiten
   XingButton:
     title: Über Xing teilen
   active_admin:
@@ -448,6 +449,9 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
+    update:
+      content:
+        label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
   signer_mailer:
     new_pledge_update:
       greeting: 
