@@ -347,12 +347,27 @@ de:
         twitter_title: Bunt und Verbindlich auf Twitter
   pages:
     faq:
-      answer1: Gelb
-      answer2: Das weiß ich nicht.
-      answer3: Was meint Ihr, eine europäische oder eine afrikanische Schwalbe?
-      question1: Was ist deine Lieblingsfarbe?
-      question2: Was ist die Hauptstadt von Assyrien?
-      question3: Was ist die Höchstgeschwindigkeit einer unbeladenen Schwalbe?
+      answer1: "bunt und verbindlich ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von bunt und verbindlich ist es, die bisherige starke Hilfsbereitschaft für Gefüchtete auch in den kommenden Jahren zu sichern und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Ehrenamtliche haben Integrationsideen oder Zeit, aber nicht die fnanziellen oder materiellen Mittel, um diese umzusetzen.\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit bunt und verbindlich wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
+      answer2: "bunt und verbindlich hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Wir werden etwas tun, wenn genügend andere Personen mithelfen“.\n\nEin Beispiel: „Wir versprechen, Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitstellen, wenn 10 Dolmetscher bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen.“\n\nJedes Versprechen wird vor Veröffentlichung von uns überprüft, ob die Inhalte nicht gegen unsere Nutzungsbedingungen verstoßen. \nDas veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.\n\nIst das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.\n\nErfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren."
+      answer3: |-
+        Sie registrieren sich, wenn Sie ein Versprechen einstellen.
+        Als Unterzeichner müssen Sie sich nicht registrieren.
+      answer4: Ja, die Nutzung ist kostenfrei.
+      answer5: |-
+        Jedes Versprechen wird von der Redaktion innerhalb von 1-3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten wieder zu sperren.
+        Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.
+      answer6: "Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen. \n\nDas ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.\n\nBei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen."
+      answer7: |-
+        Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
+
+        Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
+      question1: Was ist bunt und verbindlich?
+      question2: Wie funktioniert das?
+      question3: Wie kann ich mich registrieren?
+      question4: Ist die Nutzung kostenfei?
+      question5: Warum erscheint mein Versprechen nicht auf der Webseite?
+      question6: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
+      question7: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
