@@ -4,7 +4,7 @@ lock '3.6.0'
 set :application, 'd21'
 set :repo_url, 'git@github.com:initiatived21/d21.git'
 
-set :ssh_options, forward_agent: true
+# set :ssh_options, forward_agent: true
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, File.read('.ruby-version').strip # set ruby version from the file

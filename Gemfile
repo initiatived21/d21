@@ -116,6 +116,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
+  gem 'capistrano-npm'
 end
 
 group :test do
