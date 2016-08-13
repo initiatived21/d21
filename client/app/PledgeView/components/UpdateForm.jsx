@@ -27,7 +27,7 @@ export default class UpdateForm extends ChildComponent {
         <div className="c-update-form__wrapper">
           <Input className="c-textarea" attribute="content" type="textarea" inlineLabel />
 
-          <button className="o-btn o-btn--small c-btn c-btn--primary"
+          <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}>
             <FontAwesome name="paper-plane" />
             {' '}

@@ -56,6 +56,13 @@ de:
     signees: Unterzeichnern
   PledgeUpdateList:
     heading: Neuigkeiten
+  PreviewExplanation:
+    preview: Dies ist eine Vorschau auf Ihr Versprechen.
+    status:
+      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+      reviewed: Es wird gerade überprüft.
+      submit_for_approval: Zur Freigabe vorlegen
+    title: Versprechensvorschau
   ProfileView:
     heading: Ihr Profil
   QuestionForm:

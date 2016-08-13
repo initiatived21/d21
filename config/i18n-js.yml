@@ -6,4 +6,4 @@ translations:
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",
       "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.QuestionForm.*",
       "*.PledgeState.*", "*.ProfileView.*", "*.CommentAvatar.*", "*.PledgeLocation.*",
-      "*.PledgeTileBack.*", "*.PledgeTileFront.*"]
+      "*.PledgeTileBack.*", "*.PledgeTileFront.*", "*.PreviewExplanation.*"]

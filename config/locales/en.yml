@@ -56,6 +56,13 @@ en:
     signees: signees
   PledgeUpdateList:
     heading: Updates
+  PreviewExplanation:
+    preview: This is a preview of your pledge.
+    status:
+      confirm_email: Please confirm your email to finalize this pledge.
+      reviewed: It is being reviewed.
+      submit_for_approval: Submit for approval
+    title: Pledge preview
   ProfileView:
     heading: Your Profile
   QuestionForm:
