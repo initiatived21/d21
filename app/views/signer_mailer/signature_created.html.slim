@@ -1,10 +1,23 @@
 p= t('.greeting', name: @signature.name)
 
 p
-  | Bestätigung:
+  = t('.first_paragraph')
+
+p
+  = t('.second_paragraph')
   br
   = link_to 'Hier klicken zum Bestätigen', confirm_signature_url(\
     id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
+
+p
+  = t('.third_paragraph')
+
+p
+  = t('.fourth_paragraph')
+
+p
+  = t('.fifth_paragraph')  
+
 p
   = t('application_mailer.farewell')
   br

@@ -1,9 +1,17 @@
 <%= t('.greeting', name: @signature.name) %>
 
-Bestätigung:
+<%= t('.first_paragraph') %>
+
+<%= t('.second_paragraph') %>
 <%= confirm_signature_url(
   id: @signature.id, hash: @signature.confirmation_hash, locale: :de
 ) %>
+
+<%= t('.third_paragraph') %>
+
+<%= t('.fourth_paragraph') %>
+
+<%= t('.fifth_paragraph') %>
 
 <%= t('application_mailer.farewell') %>
 <%= t('application_mailer.signed') %>
