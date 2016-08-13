@@ -49,6 +49,11 @@ en:
       one: day
       other: days
     still: still
+  PledgeTileBack:
+    show_pledge: show pledge
+  PledgeTileFront:
+    of: of
+    signees: signees
   PledgeUpdateList:
     heading: Updates
   ProfileView:
@@ -144,6 +149,7 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
+  first_paragraph: 
   flash:
     actions:
       destroy:
@@ -301,7 +307,9 @@ en:
         remember_me: 
   initiator_mailer:
     new_question:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
     pledge_was_approved:
       faq_paragraph: 
@@ -413,7 +421,7 @@ en:
         placeholder: do the same.
       tag_ids:
         label: Topics
-        placeholder: 
+        placeholder: Please select topic
       title:
         label: Title
         placeholder: e.g. Sponsorship
@@ -452,8 +460,3 @@ en:
     signature_created:
       greeting: 
       subject: 
-  PledgeTileBack:
-    show_pledge: show pledge
-  PledgeTileFront:
-    of: of
-    signees: signees

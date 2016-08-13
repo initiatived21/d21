@@ -126,7 +126,9 @@ $o-flipper-height: $pledge-tile-height;
     Third party CSS for plugins etc.
 \*------------------------------------*/
 
-@import "~react-select/dist/react-select";
+@import "aleut/settings.react-select";  /* Customize react-select here */
+@import "~react-select/scss/default";
+
 @import "~react-image-crop/lib/ReactCrop.scss";
 
 //@import "~font-awesome/scss/font-awesome.scss";
