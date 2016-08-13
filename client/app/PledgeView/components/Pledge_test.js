@@ -61,4 +61,10 @@ describe('<Pledge />', function () {
 
     wrapper.find(PledgeDescription).length.should.equal(0)
   })
+
+  it('should not render CreatedAt component if pledge was never published', function() {
+    const wrapper = shallow(<Pledge {...props} aasm_state="initialized" />)
+
+    wrapper.find(PledgeCreatedAt).length.should.equal(0)
+  })
 })

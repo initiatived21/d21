@@ -1,14 +1,16 @@
 import React       from 'react'
 import { shallow } from 'enzyme'
 import PledgeCreatedAt from './PledgeCreatedAt'
+import I18n from 'i18n-js'
 
 describe('<PledgeCreatedAt />', function () {
   it('should render', function () {
+    I18n.locale = 'de'
+
     const wrapper = shallow(
       <PledgeCreatedAt>2016-09-01T12:05:22.964Z</PledgeCreatedAt>
     )
 
-    wrapper.hasClass('c-pledge__created-at').should.be.true
-    wrapper.text().should.equal('Veröffentlicht am 01.09.2016 um 14:05 Uhr')
+    wrapper.find('p').length.should.equal(1)
   })
 })

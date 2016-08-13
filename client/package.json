@@ -82,7 +82,6 @@
     "mirror-creator": "1.1.0",
     "node-sass": "^3.7.0",
     "normalizr": "^2.0.1",
-    "pad-number": "0.0.4",
     "postcss-loader": "^0.9.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",

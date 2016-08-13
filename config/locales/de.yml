@@ -16,6 +16,8 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+  PledgeCreatedAt:
+    published_on: Veröffentlicht am
   PledgeData:
     initiator:
       title: Initiator
