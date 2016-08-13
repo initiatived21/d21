@@ -22,28 +22,26 @@ export default class PledgeTileBack extends ChildComponent {
     const { initiatorName, initiatorImage, content, amount, who, requirement, path } = this.props;
 
     return (
-      <div className="c-pledge-tile__back o-flipper__back">
-        <div className="o-box">
-          <div className="o-block o-block--center" aria-hidden={true}>
-            <Avatar className="o-block__img" name={initiatorName} imagePath={initiatorImage} />
-            <div className="o-block__body">
-              <PledgeText
-                content={content}
-                amount={amount}
-                who={who}
-                requirement={requirement}
-              />
-            </div>
+      <div className="c-pledge-tile o-box">
+        <div className="o-block o-block--center" aria-hidden={true}>
+          <Avatar className="o-block__img" name={initiatorName} imagePath={initiatorImage} />
+          <div className="o-block__body">
+            <PledgeText
+              content={content}
+              amount={amount}
+              who={who}
+              requirement={requirement}
+            />
           </div>
-          <div className="c-pledge-tile__button">
-            <a href={path} className="o-btn o-btn--small c-btn c-btn--primary">
-              <FontAwesome name="reply" flip="horizontal" />
-              {' '}
-              zum Versprechen
-            </a>
-          </div>
-          <SocialMediaButtons url={`${DOMAIN_PROD}${path}`} />
         </div>
+        <div className="c-pledge-tile__button">
+          <a href={path} className="o-btn o-btn--small c-btn c-btn--primary">
+            <FontAwesome name="reply" flip="horizontal" />
+            {' '}
+            {this.t('.show_pledge')}
+          </a>
+        </div>
+        <SocialMediaButtons url={`${DOMAIN_PROD}${path}`} />
       </div>
     );
   }

@@ -21,7 +21,7 @@ describe('<PledgeTileFront />', function () {
   it('should render', function () {
     const wrapper = shallow(<PledgeTileFront {...props} />)
 
-    wrapper.hasClass('c-pledge-tile__front').should.be.true
+    wrapper.hasClass('c-pledge-tile').should.be.true
     wrapper.find('a').length.should.equal(1)
     wrapper.find(TagList).length.should.equal(1)
     wrapper.find(InitiatorWithImage).length.should.equal(1)

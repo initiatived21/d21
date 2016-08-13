@@ -452,3 +452,8 @@ en:
     signature_created:
       greeting: 
       subject: 
+  PledgeTileBack:
+    show_pledge: show pledge
+  PledgeTileFront:
+    of: of
+    signees: signees

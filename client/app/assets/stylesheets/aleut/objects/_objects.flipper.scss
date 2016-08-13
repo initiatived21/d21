@@ -9,6 +9,7 @@
 
 // Predefine the variables below in order to alter and enable specific features.
 $o-flipper-speed: 1s !default;
+$o-flipper-height: 400px !default;
 
 
 .o-flipper {
@@ -19,21 +20,24 @@ $o-flipper-speed: 1s !default;
   }
 }
 
+.o-flipper, .o-flipper__front, .o-flipper__back {
+  width: 100%;
+  height: $o-flipper-height;
+}
+
 .o-flipper__inner {
-  transition: transform $o-flipper-speed;
+  transition: $o-flipper-speed;
   transform-style: preserve-3d;
 
   position: relative;
 }
 
 .o-flipper__front, .o-flipper__back {
-  width: 100%;
   backface-visibility: hidden; /* hide back of pane during swap */
 
   position: absolute;
   top: 0;
   left: 0;
-  height: 400px;
 }
 
 .o-flipper__front {

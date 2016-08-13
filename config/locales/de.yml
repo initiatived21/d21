@@ -461,3 +461,8 @@ de:
     signature_created:
       greeting: 
       subject: 
+  PledgeTileBack:
+    show_pledge: zum Versprechen
+  PledgeTileFront:
+    of: von
+    signees: Unterzeichnern

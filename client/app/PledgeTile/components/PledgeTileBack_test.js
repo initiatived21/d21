@@ -18,7 +18,7 @@ describe('<PledgeTileBack />', function () {
   it('should render', function () {
     const wrapper = shallow(<PledgeTileBack {...props} />)
 
-    wrapper.hasClass('c-pledge-tile__back').should.be.true
+    wrapper.hasClass('c-pledge-tile').should.be.true
     wrapper.find(PledgeText).length.should.equal(1)
     wrapper.find(SocialMediaButtons).length.should.equal(1)
   })
