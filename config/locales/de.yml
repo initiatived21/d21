@@ -35,6 +35,8 @@ de:
     save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
+  PledgeLocation:
+    title: Ort
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
     submit: Abschicken
@@ -47,6 +49,11 @@ de:
       one: Tag
       other: Tage
     still: noch
+  PledgeTileBack:
+    show_pledge: zum Versprechen
+  PledgeTileFront:
+    of: von
+    signees: Unterzeichnern
   PledgeUpdateList:
     heading: Neuigkeiten
   ProfileView:
@@ -142,6 +149,7 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
+  first_paragraph: 
   flash:
     actions:
       destroy:
@@ -299,8 +307,10 @@ de:
         remember_me: 
   initiator_mailer:
     new_question:
-      greeting: 
-      subject: 
+      first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
+      greeting: Liebe/r Herr/Frau %{name}
+      second_paragraph: 'Zum Beantworten der Rückfrage loggen Sie sich bitte ein und rufen Ihr Versprechen auf:'
+      subject: Rückfrage zu Ihrem Versprechen
     pledge_was_approved:
       faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
       greeting: Liebe/r Herr/Frau %{name}
@@ -452,9 +462,6 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
-    update:
-      content:
-        label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
   signer_mailer:
     new_pledge_update:
       greeting: 
