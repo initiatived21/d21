@@ -4,7 +4,7 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import Initiator from '../../PledgeData/components/Initiator'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
-import daysTill from '../../lib/utilities/daysTill'
+import daysTill from '../../lib/date_and_time/daysTill'
 import { FORMAT_DATE_AND_TIME } from '../../lib/config'
 
 export default class PledgeData extends ChildComponent {

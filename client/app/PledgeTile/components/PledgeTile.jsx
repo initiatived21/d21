@@ -5,7 +5,7 @@ import PledgeTileFront      from './PledgeTileFront'
 import PledgeTileBack       from './PledgeTileBack'
 import StateHeader          from './StateHeader'
 import StateFooterContainer from '../containers/StateFooterContainer'
-import daysTill             from '../../lib/utilities/daysTill'
+import daysTill             from '../../lib/date_and_time/daysTill'
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {

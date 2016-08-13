@@ -1,7 +1,7 @@
 import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
 
-import redirectTo from '../../utilities/redirectTo'
+import redirectTo from '../../browser/redirectTo'
 
 export const initialAjaxSubmissionState = {
   isSubmitting: {}
