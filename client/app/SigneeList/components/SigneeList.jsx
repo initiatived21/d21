@@ -11,9 +11,9 @@ export default class SigneeList extends ChildComponent {
   render() {
     const { signatures } = this.props
 
-    return (
-      <section className="o-layout__item u-2/3@l">
-        <h2>{this.t('.heading')}</h2>
+    let signeeListOrText
+    if (signatures.length > 0) {
+      signeeListOrText = (
         <ol className="c-signee-list o-list-bare">
           {signatures.map( signature =>
             <Signee
@@ -26,6 +26,16 @@ export default class SigneeList extends ChildComponent {
             />
           )}
         </ol>
+      )
+    }
+    else {
+      signeeListOrText = (<p>{this.t('.no_signees')}</p>)
+    }
+
+    return (
+      <section className="o-layout__item u-2/3@l">
+        <h2>{this.t('.heading')}</h2>
+        {signeeListOrText}
       </section>
     )
   }

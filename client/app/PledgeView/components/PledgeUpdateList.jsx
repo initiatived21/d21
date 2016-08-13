@@ -13,12 +13,13 @@ export default class PledgeUpdateList extends ChildComponent {
 
     let updateListOrText
     if (updates.length > 0) {
-      updateListOrText =
-        (<ol className="o-list-bare">
+      updateListOrText = (
+        <ol className="o-list-bare">
           {updates.map( update =>
             <PledgeUpdate key={update.id} update={update} />
           )}
-        </ol>)
+        </ol>
+      )
     }
     else {
       updateListOrText = (<p>{this.t('.no_updates')}</p>)

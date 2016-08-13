@@ -80,6 +80,7 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+    no_signees: There are no signees yet.
   StateFooter:
     contact: Contact signers
     delete: Delete
