@@ -16,6 +16,8 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+  PledgeCreatedAt:
+    published_on: Veröffentlicht am
   PledgeData:
     initiator:
       title: Initiator
@@ -39,6 +41,7 @@ de:
     title: Ort
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
     submit: Abschicken
   PledgeQuote:
     promise:
@@ -56,6 +59,14 @@ de:
     signees: Unterzeichnern
   PledgeUpdateList:
     heading: Neuigkeiten
+    no_updates: Es gibt noch keine Neuigkeiten.
+  PreviewExplanation:
+    preview: Dies ist eine Vorschau auf Ihr Versprechen.
+    status:
+      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+      reviewed: Es wird gerade überprüft.
+      submit_for_approval: Zur Freigabe vorlegen
+    title: Versprechensvorschau
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -72,6 +83,7 @@ de:
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
   SigneeList:
     heading: Unterzeichner
+    no_signees: Es gibt noch keine Unterzeichner.
   StateFooter:
     contact: Unterzeichner kontaktieren
     delete: Löschen
@@ -430,7 +442,7 @@ de:
         placeholder: das Gleiche tun.
       tag_ids:
         label: Themenbereiche
-        placeholder: Themenbereiche
+        placeholder: Bitte Thema auswählen
       title:
         label: Titel
         placeholder: z.B. Patenschaft
@@ -464,8 +476,17 @@ de:
         label: Angemeldet bleiben
   signer_mailer:
     new_pledge_update:
-      greeting: 
-      subject: 
+      first_paragraph: 'Zu dem von Ihnen unterzeichneten Versprechen wurde soeben eine Neuigkeit veröffentlicht:'
+      greeting: Liebe/r Herr/Frau %{name}
+      second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
+      subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
     signature_created:
-      greeting: 
-      subject: 
+      fifth_paragraph: 'Helfen Sie mit, damit das Versprechen erfolgreich ist: Teilen Sie das Versprechen in Ihren Netzwerken und organisieren Sie weitere Unterstützer!'
+      first_paragraph: herzlichen Dank für die Nutzung unserer Plattform!
+      fourth_paragraph: |-
+        Sollten Sie Ihre Unterschrift wieder löschen wollen, nutzen Sie dazu bitte folgenden Link:
+        <Link zum Löschen der Unterschrift>
+      greeting: Liebe/r Herr/Frau %{name}
+      second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
+      subject: Bitte Emailadresse und Unterschrift bestätigen
+      third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'

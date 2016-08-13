@@ -16,6 +16,8 @@ en:
   LoggedIn:
     logged_in_as: Logged in as
     logout: Logout
+  PledgeCreatedAt:
+    published_on: Published on
   PledgeData:
     initiator:
       title: Initiator
@@ -39,6 +41,7 @@ en:
     title: Location
   PledgeQAs:
     heading: Questions and answers to the initiator
+    no_questions: There are no questions yet.
     submit: Submit
   PledgeQuote:
     promise:
@@ -56,6 +59,14 @@ en:
     signees: signees
   PledgeUpdateList:
     heading: Updates
+    no_updates: There are no updates yet.
+  PreviewExplanation:
+    preview: This is a preview of your pledge.
+    status:
+      confirm_email: Please confirm your email to finalize this pledge.
+      reviewed: It is being reviewed.
+      submit_for_approval: Submit for approval
+    title: Pledge preview
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -72,6 +83,7 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+    no_signees: There are no signees yet.
   StateFooter:
     contact: Contact signers
     delete: Delete
@@ -421,7 +433,7 @@ en:
         placeholder: do the same.
       tag_ids:
         label: Topics
-        placeholder: 
+        placeholder: Please select topic
       title:
         label: Title
         placeholder: e.g. Sponsorship
@@ -455,8 +467,15 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
     signature_created:
+      fifth_paragraph: 
+      first_paragraph: 
+      fourth_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
+      third_paragraph: 
