@@ -34,12 +34,12 @@ export default class PreviewExplanation extends ChildComponent {
     }
 
     return (
-      <div className="c-preview-explanation">
-        <h2 className="c-preview-explanation__title">
+      <div className="c-sidebar c-sidebar--tertiary">
+        <h2 className="c-sidebar__title">
           {this.t('.title')}
         </h2>
 
-        <div className="c-preview-explanation__wrapper">
+        <div className="c-sidebar__wrapper">
           {this.t('.preview')}
 
           {statusInfo}

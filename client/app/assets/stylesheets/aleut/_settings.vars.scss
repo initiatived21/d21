@@ -3,8 +3,7 @@
     Our own variables to use throughout the project.
 \*------------------------------------*/
 
-$border-radius: 3px;
-$btn-radius: $border-radius/2;
+
 $background-color: #fff;
 
 $c-btn--disabled-background: #767676;
@@ -81,8 +80,12 @@ $input-height:                     40px;
 $input-padding-horizontal:         6px;
 
 $pledge-tile-height:               400px;
-
 $comment-avatar-size:              43px;
+
+$border-radius:                    5px;
+$border-radius-large:              8px;
+
+$btn-radius: $border-radius/2;
 
 
 /**

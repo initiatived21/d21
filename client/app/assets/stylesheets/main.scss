@@ -176,6 +176,7 @@ $o-flipper-height: $pledge-tile-height;
 @import "aleut/components/components.comment";
 @import "aleut/components/components.signee-list";
 @import "aleut/components/components.update-list";
+@import "aleut/components/components.sidebar";
 
 /* Forms */
 @import "aleut/components/components.session";
@@ -184,8 +185,6 @@ $o-flipper-height: $pledge-tile-height;
 @import "aleut/components/components.checkbox";
 @import "aleut/components/components.textarea";
 @import "aleut/components/components.sign-pledge";
-@import "aleut/components/components.update-form";
-@import "aleut/components/components.preview-explanation";
 @import "aleut/components/components.report-pledge";
 @import "aleut/components/components.new-pledge";
 @import "aleut/components/components.help";
