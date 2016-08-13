@@ -16,3 +16,7 @@ input, textarea {
     box-shadow: 0 0 5px 1px $primary-color-lighter;
   }
 }
+
+label, button {
+  user-select: none;
+}

@@ -32,8 +32,10 @@ de:
       title: Zeit übrig
   PledgeForm:
     promise:
-      part1: Wir versprechen
-      part2: wenn
+      part1: "„Wir versprechen,"
+      part3: ","
+      part4: wenn
+      part8: ".“"
     save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
@@ -439,7 +441,7 @@ de:
         placeholder: z.B. Bundesweit
       requirement:
         label: was tun?
-        placeholder: das Gleiche tun.
+        placeholder: das Gleiche tun
       tag_ids:
         label: Themenbereiche
         placeholder: Bitte Thema auswählen
@@ -476,8 +478,17 @@ de:
         label: Angemeldet bleiben
   signer_mailer:
     new_pledge_update:
-      greeting: 
-      subject: 
+      first_paragraph: 'Zu dem von Ihnen unterzeichneten Versprechen wurde soeben eine Neuigkeit veröffentlicht:'
+      greeting: Liebe/r Herr/Frau %{name}
+      second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
+      subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
     signature_created:
-      greeting: 
-      subject: 
+      fifth_paragraph: 'Helfen Sie mit, damit das Versprechen erfolgreich ist: Teilen Sie das Versprechen in Ihren Netzwerken und organisieren Sie weitere Unterstützer!'
+      first_paragraph: herzlichen Dank für die Nutzung unserer Plattform!
+      fourth_paragraph: |-
+        Sollten Sie Ihre Unterschrift wieder löschen wollen, nutzen Sie dazu bitte folgenden Link:
+        <Link zum Löschen der Unterschrift>
+      greeting: Liebe/r Herr/Frau %{name}
+      second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
+      subject: Bitte Emailadresse und Unterschrift bestätigen
+      third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'

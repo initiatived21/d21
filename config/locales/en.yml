@@ -32,8 +32,10 @@ en:
       title: Time left
   PledgeForm:
     promise:
-      part1: We promise
-      part2: if
+      part1: "“We promise to"
+      part3: 
+      part4: if
+      part8: ".”"
     save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
@@ -404,7 +406,7 @@ en:
         placeholder: 10
       content:
         label: what?
-        placeholder: to give a refugee family a home
+        placeholder: give a refugee family a home
       deadline:
         label: Can be signed until
         placeholder: 
@@ -430,7 +432,7 @@ en:
         placeholder: 
       requirement:
         label: do what?
-        placeholder: do the same.
+        placeholder: do the same
       tag_ids:
         label: Topics
         placeholder: Please select topic
@@ -467,8 +469,15 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
     signature_created:
+      fifth_paragraph: 
+      first_paragraph: 
+      fourth_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
+      third_paragraph: 
