@@ -35,6 +35,8 @@ en:
     save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
+  PledgeLocation:
+    title: Location
   PledgeQAs:
     heading: Questions and answers to the initiator
     submit: Submit
@@ -443,9 +445,6 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
-    update:
-      content:
-        label: Send a project update to all signees.
   signer_mailer:
     new_pledge_update:
       greeting: 

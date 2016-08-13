@@ -40,7 +40,8 @@ describe('<Pledge />', function () {
     const wrapper = shallow(<Pledge {...props} />)
 
     wrapper.find(TagList).length.should.equal(1)
-    //wrapper.find(PledgeLocation).length.should.equal(1);
+    wrapper.find(PledgeLocation).length.should.equal(1)
+    wrapper.find('h1').length.should.equal(1)
     wrapper.find(PledgeQuote).length.should.equal(1)
     wrapper.find(PledgeData).length.should.equal(1)
     wrapper.find(SocialMediaButtons).length.should.equal(1)

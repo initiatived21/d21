@@ -51,10 +51,10 @@ export default class Pledge extends ChildComponent {
       <div className="o-layout__item u-2/3@l">
         <article className="c-pledge">
           <TagList names={['Familie', 'Unterstützung']} />
+          <PledgeLocation>{location}</PledgeLocation>
           <h1>
             {title}
           </h1>
-          {/*<PledgeLocation>{location}</PledgeLocation>*/}
           <PledgeQuote
             imagePath={user.avatar.url}
             initiatorName={initiator}

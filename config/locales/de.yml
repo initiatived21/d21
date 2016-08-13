@@ -35,6 +35,8 @@ de:
     save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
+  PledgeLocation:
+    title: Ort
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
     submit: Abschicken
@@ -452,9 +454,6 @@ de:
         label: Passwort
       remember_me:
         label: Angemeldet bleiben
-    update:
-      content:
-        label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
   signer_mailer:
     new_pledge_update:
       greeting: 
