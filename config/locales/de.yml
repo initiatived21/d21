@@ -39,6 +39,7 @@ de:
     title: Ort
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
     submit: Abschicken
   PledgeQuote:
     promise:

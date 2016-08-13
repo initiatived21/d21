@@ -39,6 +39,7 @@ en:
     title: Location
   PledgeQAs:
     heading: Questions and answers to the initiator
+    no_questions: There are no questions yet.
     submit: Submit
   PledgeQuote:
     promise:
