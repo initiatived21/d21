@@ -35,6 +35,8 @@ en:
     save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
+  PledgeLocation:
+    title: Location
   PledgeQAs:
     heading: Questions and answers to the initiator
     submit: Submit
@@ -47,6 +49,11 @@ en:
       one: day
       other: days
     still: still
+  PledgeTileBack:
+    show_pledge: show pledge
+  PledgeTileFront:
+    of: of
+    signees: signees
   PledgeUpdateList:
     heading: Updates
   ProfileView:
@@ -142,6 +149,7 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
+  first_paragraph: 
   flash:
     actions:
       destroy:
@@ -299,7 +307,9 @@ en:
         remember_me: 
   initiator_mailer:
     new_question:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
     pledge_was_approved:
       faq_paragraph: 
@@ -443,9 +453,6 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
-    update:
-      content:
-        label: Send a project update to all signees.
   signer_mailer:
     new_pledge_update:
       greeting: 
