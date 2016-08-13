@@ -56,6 +56,7 @@ en:
     signees: signees
   PledgeUpdateList:
     heading: Updates
+    no_updates: There are no updates yet.
   PreviewExplanation:
     preview: This is a preview of your pledge.
     status:
