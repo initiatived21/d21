@@ -5,6 +5,7 @@ import PledgeTileFront      from './PledgeTileFront'
 import PledgeTileBack       from './PledgeTileBack'
 import StateHeader          from './StateHeader'
 import StateFooterContainer from '../containers/StateFooterContainer'
+import daysTill             from '../../lib/date_and_time/daysTill'
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -33,22 +34,13 @@ export default class PledgeTile extends ChildComponent {
     return `/${I18n.locale}/pledges/${this.props.pledge.id}`
   }
 
-  // provisional version
-  // should update itself at 0:00 o'clock
-  getRemainingDays() {
-    const pledge_date = Date.parse(this.props.pledge.deadline)
-    const now = Date.now()
-
-    return Math.floor((pledge_date - now)/1000/60/60/24)
-  }
-
   render() {
     const { pledge, showControls } = this.props
     const initiator = pledge.initiator
     const avatarUrl = initiator.avatar.url
     const pledgePath = this.getPledgePath()
 
-    const remainingDays = this.getRemainingDays()
+    const remainingDays = daysTill(pledge.deadline)
     const isUrgent = remainingDays <= 5 ? true : false
 
     const state = pledge.aasm_state
@@ -57,31 +49,39 @@ export default class PledgeTile extends ChildComponent {
 
     return (
       <li className="o-layout__item u-1/2@m u-1/3@l u-mb">
+
         {stateHeader}
-        <article className="c-pledge-tile o-flipper">
-          <div className="c-pledge-tile__inner o-flipper__inner">
-            <PledgeTileFront
-              state={state}
-              initiatorName={initiator.name}
-              initiatorImage={avatarUrl}
-              title={pledge.title}
-              deadline={pledge.deadline}
-              signatures_count={pledge.signatures_count}
-              signatures_total={pledge.amount}
-              path={pledgePath}
-            />
-            <PledgeTileBack
-              initiatorName={initiator.name}
-              initiatorImage={avatarUrl}
-              content={pledge.content}
-              amount={pledge.amount}
-              who={pledge.who}
-              requirement={pledge.requirement}
-              path={pledgePath}
-            />
-          </div>
-        </article>
+
+        <div className="o-flipper">
+          <article className="o-flipper__inner">
+            <div className="o-flipper__front">
+              <PledgeTileFront
+                state={state}
+                initiatorName={initiator.name}
+                initiatorImage={avatarUrl}
+                title={pledge.title}
+                deadline={pledge.deadline}
+                signatures_count={pledge.signatures_count}
+                signatures_total={pledge.amount}
+                path={pledgePath}
+              />
+            </div>
+            <div className="o-flipper__back">
+              <PledgeTileBack
+                initiatorName={initiator.name}
+                initiatorImage={avatarUrl}
+                content={pledge.content}
+                amount={pledge.amount}
+                who={pledge.who}
+                requirement={pledge.requirement}
+                path={pledgePath}
+              />
+            </div>
+          </article>
+        </div>
+
         {stateFooter}
+
       </li>
     )
   }

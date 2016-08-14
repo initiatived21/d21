@@ -16,6 +16,8 @@ en:
   LoggedIn:
     logged_in_as: Logged in as
     logout: Logout
+  PledgeCreatedAt:
+    published_on: Published on
   PledgeData:
     initiator:
       title: Initiator
@@ -37,8 +39,11 @@ en:
     save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
+  PledgeLocation:
+    title: Location
   PledgeQAs:
     heading: Questions and answers to the initiator
+    no_questions: There are no questions yet.
     submit: Submit
     no_questions: There are no questions yet.
   PledgeQuote:
@@ -50,9 +55,21 @@ en:
       one: day
       other: days
     still: still
+  PledgeTileBack:
+    show_pledge: show pledge
+  PledgeTileFront:
+    of: of
+    signees: signees
   PledgeUpdateList:
     heading: Updates
     no_updates: There are no updates yet.
+  PreviewExplanation:
+    preview: This is a preview of your pledge.
+    status:
+      confirm_email: Please confirm your email to finalize this pledge.
+      reviewed: It is being reviewed.
+      submit_for_approval: Submit for approval
+    title: Pledge preview
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -147,6 +164,7 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
+  first_paragraph: 
   flash:
     actions:
       destroy:
@@ -304,7 +322,9 @@ en:
         remember_me: 
   initiator_mailer:
     new_question:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
       first_paragraph: 
       second_paragraph: 
@@ -452,32 +472,17 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
+      first_paragraph: 
       greeting: 
+      second_paragraph: 
       subject: 
       first_paragraph: 
       second_paragraph: 
     signature_created:
-      greeting: 
-      subject: 
       fifth_paragraph: 
       first_paragraph: 
       fourth_paragraph: 
+      greeting: 
       second_paragraph: 
+      subject: 
       third_paragraph: 
-  first_paragraph: 
-  PledgeCreatedAt:
-    published_on: Published on
-  PledgeLocation:
-    title: Location
-  PledgeTileBack:
-    show_pledge: show pledge
-  PledgeTileFront:
-    of: of
-    signees: signees
-  PreviewExplanation:
-    preview: This is a preview of your pledge.
-    status:
-      confirm_email: Please confirm your email to finalize this pledge.
-      reviewed: It is being reviewed.
-      submit_for_approval: Submit for approval
-    title: Pledge preview

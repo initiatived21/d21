@@ -2902,11 +2902,6 @@
       "from": "output-file-sync@>=1.1.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/output-file-sync/-/output-file-sync-1.1.1.tgz"
     },
-    "pad-number": {
-      "version": "0.0.4",
-      "from": "pad-number@0.0.4",
-      "resolved": "https://registry.npmjs.org/pad-number/-/pad-number-0.0.4.tgz"
-    },
     "pako": {
       "version": "0.2.8",
       "from": "pako@>=0.2.0 <0.3.0",

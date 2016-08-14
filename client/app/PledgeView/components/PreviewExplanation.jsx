@@ -17,29 +17,34 @@ export default class PreviewExplanation extends ChildComponent {
       if (userConfirmed) {
         statusInfo = (
           <ButtonFor
-            className="o-btn o-btn--small c-btn c-btn--primary u-mt-small"
+            className="o-btn o-btn--small o-btn--full c-btn c-btn--primary u-mt-small"
             action={activateAction}
             method='PATCH'
           >
             <FontAwesome name="thumbs-o-up" />
             {' '}
-            Click here to submit it for approval
+            {this.t('.status.submit_for_approval')}
           </ButtonFor>
         )
       } else {
-        statusInfo = 'Please confirm your email to finalize this pledge.'
+        statusInfo = this.t('.status.confirm_email')
       }
     } else {
-      statusInfo = 'It is being reviewed.'
+      statusInfo = this.t('.status.reviewed')
     }
 
     return (
-      <div className="PreviewExplanation">
-        This is a preview of your pledge.
-        {statusInfo}
+      <div className="c-sidebar c-sidebar--tertiary">
+        <h2 className="c-sidebar__title">
+          {this.t('.title')}
+        </h2>
+
+        <div className="c-sidebar__wrapper">
+          {this.t('.preview')}
+
+          {statusInfo}
+        </div>
       </div>
     )
   }
 }
-
-

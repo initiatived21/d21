@@ -7,6 +7,6 @@ describe('<PledgeLocation />', function () {
     const wrapper = shallow(<PledgeLocation>Berlin</PledgeLocation>)
 
     wrapper.hasClass('c-pledge__location').should.be.true
-    wrapper.text().should.equal('Berlin')
+    wrapper.text().should.match(/Berlin$/)
   })
 })

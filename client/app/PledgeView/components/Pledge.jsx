@@ -47,14 +47,21 @@ export default class Pledge extends ChildComponent {
       <PledgeDescription className="u-mt">{description}</PledgeDescription>
     ) : null
 
+    let pledgeCreatedAt
+    if (aasm_state === 'active' || aasm_state === 'successful' || aasm_state === 'failed') {
+      pledgeCreatedAt = (
+        <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
+      )
+    }
+
     return (
       <div className="o-layout__item u-2/3@l">
         <article className="c-pledge">
           <TagList names={['Familie', 'Unterstützung']} />
+          <PledgeLocation>{location}</PledgeLocation>
           <h1>
             {title}
           </h1>
-          {/*<PledgeLocation>{location}</PledgeLocation>*/}
           <PledgeQuote
             imagePath={user.avatar.url}
             initiatorName={initiator}
@@ -73,7 +80,7 @@ export default class Pledge extends ChildComponent {
           <SocialMediaButtons className="u-mt-small u-mb" url={DOMAIN_PROD + this.getPledgePath()} />
           {pledgeImage}
           {pledgeDescription}
-          <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
+          {pledgeCreatedAt}
         </article>
       </div>
     );

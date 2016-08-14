@@ -20,6 +20,22 @@ export default class PledgeQAs extends ChildComponent {
     } = this.props
     const { questionForm, answerForm } = forms
 
+    let commentListOrText
+    if (comments.length > 0) {
+      commentListOrText = (
+        <div className="o-layout o-layout--small">
+          {comments.map( comment =>
+            <PledgeQA key={comment.id} comment={comment}
+              formData={answerForm}
+              userCanAnswer={userCanAnswer} />
+          )}
+        </div>
+      )
+    }
+    else {
+      commentListOrText = (<p>{this.t('.no_questions')}</p>)
+    }
+
     let potentialQuestionForm
     if (userCanAskQuestions) {
       potentialQuestionForm =
@@ -29,13 +45,8 @@ export default class PledgeQAs extends ChildComponent {
     return (
       <section className="o-layout__item u-2/3">
         <h2>{this.t('.heading')}</h2>
-        <div className="o-layout o-layout--small">
-          {comments.map( comment =>
-            <PledgeQA key={comment.id} comment={comment}
-              formData={answerForm}
-              userCanAnswer={userCanAnswer} />
-          )}
-        </div>
+
+        {commentListOrText}
 
         {potentialQuestionForm}
       </section>

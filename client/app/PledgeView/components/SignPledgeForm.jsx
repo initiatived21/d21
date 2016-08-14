@@ -31,16 +31,16 @@ export default class SignPledgeForm extends ChildComponent {
 
     return (
       <FormFor
-        className="c-sign-pledge"
+        className="c-sidebar c-sidebar--secondary c-sign-pledge"
         ajax={true}
         object={NewSignatureFormObject}
         formData={formData}>
 
-        <h2 className="c-sign-pledge__title">
+        <h2 className="c-sidebar__title">
           {this.t('.i_sign')}
         </h2>
 
-        <div className="c-sign-pledge__wrapper">
+        <div className="c-sidebar__wrapper">
 
           <Input className="c-input u-mb-small" attribute='name' />
 

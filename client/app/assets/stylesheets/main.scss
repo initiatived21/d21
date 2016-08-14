@@ -116,6 +116,8 @@ $o-media--responsive: true;
 
 // Our own objects
 @import "aleut/objects/objects.wrapper";
+
+$o-flipper-height: $pledge-tile-height;
 @import "aleut/objects/objects.flipper";
 
 
@@ -124,7 +126,9 @@ $o-media--responsive: true;
     Third party CSS for plugins etc.
 \*------------------------------------*/
 
-@import "~react-select/dist/react-select";
+@import "aleut/settings.react-select";  /* Customize react-select here */
+@import "~react-select/scss/default";
+
 @import "~react-image-crop/lib/ReactCrop.scss";
 
 //@import "~font-awesome/scss/font-awesome.scss";
@@ -172,6 +176,7 @@ $o-media--responsive: true;
 @import "aleut/components/components.comment";
 @import "aleut/components/components.signee-list";
 @import "aleut/components/components.update-list";
+@import "aleut/components/components.sidebar";
 
 /* Forms */
 @import "aleut/components/components.session";
@@ -180,7 +185,6 @@ $o-media--responsive: true;
 @import "aleut/components/components.checkbox";
 @import "aleut/components/components.textarea";
 @import "aleut/components/components.sign-pledge";
-@import "aleut/components/components.update-form";
 @import "aleut/components/components.report-pledge";
 @import "aleut/components/components.new-pledge";
 @import "aleut/components/components.help";

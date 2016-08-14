@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    # Customize react-select here
+\*------------------------------------*/
+
+// control options
+$select-input-bg:                  #fff !default;
+$select-input-bg-disabled:         #f9f9f9 !default;
+$select-input-border-color:        $gray;
+$select-input-border-radius:       5px;
+$select-input-border-focus:        $primary-color-lighter;
+$select-input-border-width:        1px !default;
+$select-input-height:              $input-height;
+$select-input-internal-height:     ($select-input-height - ($select-input-border-width * 2)) !default;
+$select-input-placeholder:         $gray;
+$select-text-color:                $text-color;
+$select-link-hover-color:          $select-input-border-focus !default;
+
+$select-padding-vertical:          8px !default;
+$select-padding-horizontal:        $input-padding-horizontal;
+
+// menu options
+$select-menu-zindex:               1000 !default;
+$select-menu-max-height:           200px !default;
+
+$select-option-color:              $mid-dark-gray;
+$select-option-bg:                 $select-input-bg !default;
+$select-option-focused-color:      $select-text-color !default;
+$select-option-focused-bg:         $primary-color-almost-white;
+$select-option-selected-color:     $select-text-color !default;
+$select-option-selected-bg:        #f5faff !default; // lightest blue
+$select-option-disabled-color:     lighten($select-text-color, 60%) !default;
+
+$select-noresults-color:           lighten($select-text-color, 40%) !default;
+
+// clear "x" button
+$select-clear-size:                floor(($select-input-height / 2)) !default;
+$select-clear-color:               $gray;
+$select-clear-hover-color:         $secondary-color;
+$select-clear-width:               ($select-input-internal-height / 2) !default;
+
+// arrow indicator
+$select-arrow-color:               $gray;
+$select-arrow-color-hover:         #666 !default;
+$select-arrow-width:               5px !default;
+
+// loading indicator
+$select-loading-size:              16px !default;
+$select-loading-color:             $select-text-color !default;
+$select-loading-color-bg:          $select-input-border-color !default;
+
+// multi-select item
+$select-item-border-radius:        2px !default;
+$select-item-gutter:               5px !default;
+$select-item-padding-vertical:     2px !default;
+$select-item-padding-horizontal:   5px !default;
+$select-item-font-size:            .9em !default;
+$select-item-color:                $primary-color;
+$select-item-bg:                   $primary-color-almost-white;
+$select-item-border-color:         darken($select-item-bg, 10%) !default;
+$select-item-hover-color:          darken($select-item-color, 5%) !default; // pale blue
+$select-item-hover-bg:             darken($select-item-bg, 5%) !default;
+$select-item-disabled-color:       #333 !default;
+$select-item-disabled-bg:          #fcfcfc !default;
+$select-item-disabled-border-color: darken($select-item-disabled-bg, 10%) !default;

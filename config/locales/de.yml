@@ -16,6 +16,8 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+  PledgeCreatedAt:
+    published_on: Veröffentlicht am
   PledgeData:
     initiator:
       title: Initiator
@@ -37,8 +39,11 @@ de:
     save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
+  PledgeLocation:
+    title: Ort
   PledgeQAs:
     heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
     submit: Abschicken
     no_questions: Es gibt noch keine Fragen.
   PledgeQuote:
@@ -50,9 +55,21 @@ de:
       one: Tag
       other: Tage
     still: noch
+  PledgeTileBack:
+    show_pledge: zum Versprechen
+  PledgeTileFront:
+    of: von
+    signees: Unterzeichnern
   PledgeUpdateList:
     heading: Neuigkeiten
     no_updates: Es gibt noch keine Neuigkeiten.
+  PreviewExplanation:
+    preview: Dies ist eine Vorschau auf Ihr Versprechen.
+    status:
+      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+      reviewed: Es wird gerade überprüft.
+      submit_for_approval: Zur Freigabe vorlegen
+    title: Versprechensvorschau
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -147,6 +164,7 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
+  first_paragraph: 
   flash:
     actions:
       destroy:
@@ -304,10 +322,10 @@ de:
         remember_me: 
   initiator_mailer:
     new_question:
-      greeting: Liebe/r Herr/Frau %{name}
-      subject: Rückfrage zu Ihrem Versprechen
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
+      greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: 'Zum Beantworten der Rückfrage loggen Sie sich bitte ein und rufen Ihr Versprechen auf:'
+      subject: Rückfrage zu Ihrem Versprechen
     pledge_was_approved:
       faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
       greeting: Liebe/r Herr/Frau %{name}
@@ -461,34 +479,17 @@ de:
         label: Angemeldet bleiben
   signer_mailer:
     new_pledge_update:
-      greeting: Liebe/r Herr/Frau %{name}
-      subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
       first_paragraph: 'Zu dem von Ihnen unterzeichneten Versprechen wurde soeben eine Neuigkeit veröffentlicht:'
-      second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
-    signature_created:
       greeting: Liebe/r Herr/Frau %{name}
-      subject: Bitte Emailadresse und Unterschrift bestätigen
+      second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
+      subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
+    signature_created:
       fifth_paragraph: 'Helfen Sie mit, damit das Versprechen erfolgreich ist: Teilen Sie das Versprechen in Ihren Netzwerken und organisieren Sie weitere Unterstützer!'
       first_paragraph: herzlichen Dank für die Nutzung unserer Plattform!
       fourth_paragraph: |-
         Sollten Sie Ihre Unterschrift wieder löschen wollen, nutzen Sie dazu bitte folgenden Link:
         <Link zum Löschen der Unterschrift>
+      greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
+      subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
-  first_paragraph: 
-  PledgeCreatedAt:
-    published_on: Veröffentlicht am
-  PledgeLocation:
-    title: Ort
-  PledgeTileBack:
-    show_pledge: zum Versprechen
-  PledgeTileFront:
-    of: von
-    signees: Unterzeichnern
-  PreviewExplanation:
-    preview: Dies ist eine Vorschau auf Ihr Versprechen.
-    status:
-      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
-      reviewed: Es wird gerade überprüft.
-      submit_for_approval: Zur Freigabe vorlegen
-    title: Versprechensvorschau
