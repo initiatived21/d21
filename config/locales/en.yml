@@ -45,7 +45,6 @@ en:
     heading: Questions and answers to the initiator
     no_questions: There are no questions yet.
     submit: Submit
-    no_questions: There are no questions yet.
   PledgeQuote:
     promise:
       part1: We promise to
@@ -326,8 +325,6 @@ en:
       greeting: 
       second_paragraph: 
       subject: 
-      first_paragraph: 
-      second_paragraph: 
     pledge_was_approved:
       faq_paragraph: 
       greeting: 
@@ -476,8 +473,6 @@ en:
       greeting: 
       second_paragraph: 
       subject: 
-      first_paragraph: 
-      second_paragraph: 
     signature_created:
       fifth_paragraph: 
       first_paragraph: 
