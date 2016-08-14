@@ -53,7 +53,7 @@
     "aleut.utilities.spacing-responsive": "^1.0.1",
     "aleut.utilities.widths": "^1.0.1",
     "aleut.utilities.widths-responsive": "^1.0.1",
-    "autoprefixer": "^6.3.5",
+    "autoprefixer": "^6.4.0",
     "axios": "^0.9.1",
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
