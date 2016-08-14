@@ -8,7 +8,7 @@ export const initialAjaxSubmissionState = {
 }
 
 export default function ajaxSubmissionReducer(state = initialAjaxSubmissionState, action) {
-  const { type, error, response } = action
+  const { type, response } = action
   let newState = assign({}, state)
 
   switch (type) {
@@ -21,7 +21,6 @@ export default function ajaxSubmissionReducer(state = initialAjaxSubmissionState
     return newState
 
   case 'SUBMIT_AJAX_FORM_SUCCESS':
-    console.log('RESPONSE:', response)
     let responseChanges = {}
     switch (response.status) {
     case 'success':

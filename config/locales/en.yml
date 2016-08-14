@@ -30,14 +30,17 @@ en:
       title: Time left
   PledgeForm:
     promise:
-      part1: We promise
-      part2: if
+      part1: "“We promise to"
+      part3: 
+      part4: if
+      part8: ".”"
     save_draft: Save Draft
   PledgeImage:
     img_alt: image describing the pledge
   PledgeQAs:
     heading: Questions and answers to the initiator
     submit: Submit
+    no_questions: There are no questions yet.
   PledgeQuote:
     promise:
       part1: We promise to
@@ -49,6 +52,7 @@ en:
     still: still
   PledgeUpdateList:
     heading: Updates
+    no_updates: There are no updates yet.
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -65,6 +69,7 @@ en:
     small_print: 
   SigneeList:
     heading: Signees
+    no_signees: There are no signees yet.
   StateFooter:
     contact: Contact signers
     delete: Delete
@@ -301,6 +306,8 @@ en:
     new_question:
       greeting: 
       subject: 
+      first_paragraph: 
+      second_paragraph: 
     pledge_was_approved:
       faq_paragraph: 
       greeting: 
@@ -382,7 +389,7 @@ en:
         placeholder: 10
       content:
         label: what?
-        placeholder: to give a refugee family a home
+        placeholder: give a refugee family a home
       deadline:
         label: Can be signed until
         placeholder: 
@@ -408,10 +415,10 @@ en:
         placeholder: 
       requirement:
         label: do what?
-        placeholder: do the same.
+        placeholder: do the same
       tag_ids:
         label: Topics
-        placeholder: 
+        placeholder: Please select topic
       title:
         label: Title
         placeholder: e.g. Sponsorship
@@ -443,13 +450,34 @@ en:
         label: Password
       remember_me:
         label: Stay signed in
-    update:
-      content:
-        label: Send a project update to all signees.
   signer_mailer:
     new_pledge_update:
       greeting: 
       subject: 
+      first_paragraph: 
+      second_paragraph: 
     signature_created:
       greeting: 
       subject: 
+      fifth_paragraph: 
+      first_paragraph: 
+      fourth_paragraph: 
+      second_paragraph: 
+      third_paragraph: 
+  first_paragraph: 
+  PledgeCreatedAt:
+    published_on: Published on
+  PledgeLocation:
+    title: Location
+  PledgeTileBack:
+    show_pledge: show pledge
+  PledgeTileFront:
+    of: of
+    signees: signees
+  PreviewExplanation:
+    preview: This is a preview of your pledge.
+    status:
+      confirm_email: Please confirm your email to finalize this pledge.
+      reviewed: It is being reviewed.
+      submit_for_approval: Submit for approval
+    title: Pledge preview

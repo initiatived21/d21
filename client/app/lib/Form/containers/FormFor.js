@@ -6,7 +6,8 @@ import submitAjaxForm from '../actions/submitAjaxForm'
 import BaseForm from '../components/BaseForm'
 
 const mapStateToProps = (state, ownProps) => {
-  const editedStateObject = state[ownProps.object.name]
+  const formId = ownProps.id || ownProps.object.name
+  const editedStateObject = state[formId]
 
   return {
     existingAttrs: assembleAttrsFromServer(
@@ -14,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
     ),
     formObject: new ownProps.object(editedStateObject),
     editedStateObject,
+    formId,
     commit: (editedStateObject && editedStateObject.commit),
   }
 }
@@ -34,16 +36,17 @@ function assembleAttrsFromServer(serializedReformObject, jayformObject) {
   return attrs
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onBlur(field) {
-    // validationAction not yet defined
+const mapDispatchToProps = (dispatch) => ({
+  onBlur() {
+    // TODO: validationAction not yet defined
     // return dispatch(validationAction(field))
   },
 
-  ensureStateObjectExistence(formObject, existingStateInstance, existingAttrs) {
+  // TODO: This should not be needed
+  ensureStateObjectExistence(formId, existingStateInstance, existingAttrs) {
     if (existingStateInstance) { return }
     return dispatch(setEntity(
-      formObject.constructor.name, existingAttrs
+      formId, existingAttrs
     ))
   },
 

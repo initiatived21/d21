@@ -24,13 +24,15 @@ export default class BaseForm extends ChildComponent {
 
   componentWillMount() {
     const {
-      ensureStateObjectExistence, formObject, editedStateObject, existingAttrs
+      ensureStateObjectExistence, formId, editedStateObject, existingAttrs
     } = this.props
-    ensureStateObjectExistence(formObject, editedStateObject, existingAttrs)
+    ensureStateObjectExistence(formId, editedStateObject, existingAttrs)
   }
 
   render() {
-    const { onSubmit, children, multipart, className, commit } = this.props
+    const {
+      onSubmit, children, multipart, className, commit, formId
+    } = this.props
     const { action, authToken, method } = this.props.formData
     const enctype =
       multipart ? 'multipart/form-data' : 'application/x-www-form-urlencoded'
@@ -50,9 +52,10 @@ export default class BaseForm extends ChildComponent {
     }
 
     return(
-      <form className={combinedClassName} action={action} method={formMethod} onSubmit={onSubmit}
-        encType={enctype}>
-
+      <form
+        className={combinedClassName} action={action} method={formMethod}
+        onSubmit={onSubmit} encType={enctype} id={formId}
+      >
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='utf8' value='&#x2713;' />
         <input type='hidden' name='commit' value={commit} />
@@ -70,7 +73,7 @@ export default class BaseForm extends ChildComponent {
       if (!child || typeof child !== 'object') { return child }
 
       if (child.type.isInput) { // is our custom Input component: inject!
-        const { formData, formObject } = this.props
+        const { formData, formObject, formId } = this.props
 
         let errors = undefined
         if (formData.object) {
@@ -87,7 +90,8 @@ export default class BaseForm extends ChildComponent {
         return React.cloneElement(child, {
           model: formData.model,
           object: formObject,
-          serverErrors: errors
+          serverErrors: errors,
+          formId,
         })
       } else if (child.type.isButton) {
         return React.cloneElement(child, {

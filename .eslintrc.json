@@ -8,6 +8,7 @@
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
+            "classes": true,
             "jsx": true
         },
         "sourceType": "module"
@@ -15,6 +16,7 @@
     "plugins": [
         "react"
     ],
+    "parser": "babel-eslint",
     "rules": {
         "indent": [
             "error",
@@ -31,7 +33,8 @@
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "react/display-name": 1
     },
     "globals": {
         "describe": false,
