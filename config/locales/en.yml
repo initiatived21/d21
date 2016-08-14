@@ -46,6 +46,8 @@ en:
       part4: if
       part8: ".”"
     save_draft: Save draft
+    tooltip:
+      location: Please enter the place of the pledge, e.g. “Berlin” or “within Germany”.
   PledgeFormHelp:
     faq_link: Look into our FAQ.
     further_questions: Further questions?

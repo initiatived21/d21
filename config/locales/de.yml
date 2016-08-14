@@ -46,6 +46,8 @@ de:
       part4: wenn
       part8: ".“"
     save_draft: Entwurf speichern
+    tooltip:
+      location: Bitte geben Sie hier den Ort des Versprechens ein, z.B. „Berlin“ oder „bundesweit“.
   PledgeFormHelp:
     faq_link: Schauen Sie in unseren FAQ nach.
     further_questions: Sie haben weitere Fragen?

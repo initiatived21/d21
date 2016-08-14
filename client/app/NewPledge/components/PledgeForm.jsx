@@ -10,6 +10,7 @@ import Input from '../../lib/Form/containers/Input'
 import Button from '../../lib/Form/containers/Button'
 import NumberInput from '../../lib/Form/containers/NumberInput'
 import ImageInput from '../../lib/Form/containers/ImageInput'
+import Tooltip from '../../Tooltip/components/Tooltip'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -69,9 +70,16 @@ export default class PledgeForm extends ChildComponent {
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="location" />
             </div>
-            <Input className="c-input o-layout__item u-3/4 u-mb-small"
+            <Input className="c-input o-layout__item u-2/5 u-mb-small"
               attribute="location" noLabel />
+            <div className="o-layout__item u-1/5 u-mb-small">
+              <Tooltip>
+                {this.t('.tooltip.location')}
+              </Tooltip>
+            </div>
+          </div>
 
+          <div className="o-layout o-layout--small">
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="deadline" />
             </div>
@@ -181,6 +189,7 @@ export default class PledgeForm extends ChildComponent {
           <div className="o-layout__item u-1/4 u-mb-small">
             <Label submodel="initiator" attribute="email" />
           </div>
+
           <Input
             className="c-input o-layout__item u-3/4 u-mb-small" submodel='initiator' attribute='email'
             type='email' noLabel
