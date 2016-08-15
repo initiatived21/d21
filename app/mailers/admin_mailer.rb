@@ -5,7 +5,8 @@ class AdminMailer < ApplicationMailer
   def new_pledge pledge_id
     @pledge = Pledge.find(pledge_id)
 
-    mail subject: 'Neues Versprechen benötigt Bestätigung',
+    mail subject: 'Ein Versprechen wartet auf Freigabe',
          to: AdminUser.first.email
+
   end
 end

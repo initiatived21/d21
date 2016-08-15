@@ -1,10 +1,14 @@
 p= t('.greeting', name: @recipient.try(:name))
 
 p
-  | Gibt Neuigkeiten.
+  = t('.first_paragraph')
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
     pledge_url(id: @pledge.id, locale: :de)
+
+p
+  = t('.second_paragraph')
+
 p
   = t('application_mailer.farewell')
   br

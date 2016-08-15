@@ -1,7 +1,10 @@
 p= t('.greeting', name: @pledge.initiator.name)
 
 p
-  | Neue Frage.
+  = t('.first_paragraph')
+
+p
+  = t('.second_paragraph')
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
     pledge_url(id: @pledge.id, locale: :de)

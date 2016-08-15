@@ -1,6 +1,7 @@
 <%= t('.greeting', name: @pledge.initiator.name) %>
 
-Neue Frage.
+<%= t('.first_paragraph') %>
+<%= t('.second_paragraph') %>
 <%= pledge_url(id: @pledge.id, locale: :de) %>
 
 <%= t('application_mailer.farewell') %>
