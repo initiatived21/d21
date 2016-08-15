@@ -1,6 +1,6 @@
 ActiveAdmin.register Pledge do
   permit_params :content, :amount, :who, :requirement, :location, :deadline,
-                :description
+                :description, :signatures_count
 
   Pledge.aasm.events.each do |aasm_event|
     action = aasm_event.name
@@ -9,6 +9,17 @@ ActiveAdmin.register Pledge do
       @pledge.send("#{action}!")
       redirect_to admin_pledge_path(@pledge)
     end
+  end
+
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :deadline
+    column :signatures_count
+    column :aasm_state
+    column :created_at
+    actions
   end
 
   sidebar 'Zustand', only: :show do
