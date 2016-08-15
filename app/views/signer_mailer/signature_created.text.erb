@@ -10,6 +10,9 @@
 <%= t('.third_paragraph') %>
 
 <%= t('.fourth_paragraph') %>
+<%= destroy_signature_url(
+  id: @signature.id, hash: @signature.confirmation_hash, locale: :de
+) %>
 
 <%= t('.fifth_paragraph') %>
 
