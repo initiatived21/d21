@@ -6,6 +6,6 @@ class NewCommentForm < Reform::Form
   # Validation
 
   validation :default do
-    required(:content).filled
+    required(:content).filled(max_size?: 650)
   end
 end
