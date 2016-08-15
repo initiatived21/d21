@@ -7,22 +7,30 @@
  */
 
 .c-pledge-form {
+  position: relative;
+  height: 17rem;
+
   padding-bottom: $spacing--large;
   border-bottom: 1px solid $gray;
   margin-bottom: $spacing--large;
-
-  label {
-    color: $primary-color;
-  }
 }
 
 .c-pledge-form__text {
+  display: block;
+  position: absolute;
+
   font-weight: bold;
   @include font-size(24px, 28px);
   color: $primary-color;
 }
 
 .c-pledge-form__input {
+  position: absolute;
+
+  > label {
+    color: $primary-color;
+  }
+
   > input {
     width: 100%;
     padding: $spacing--tiny;
@@ -43,18 +51,46 @@
   }
 }
 
-.c-pledge-form__input--what {
-  width: 25em;
+.c-pledge-form__part1 {
+  top: 2rem;
+  left: 0;
 }
 
-.c-pledge-form__input--how-many {
-  width: 10em;
+.c-pledge-form__part2 {
+  top: 0;
+  left: 14.5rem;
+  right: 1.4rem;
 }
 
-.c-pledge-form__input--who {
-  width: 15em;
+.c-pledge-form__part3 {
+  top: 2rem;
+  right: 0.65rem;
 }
 
-.c-pledge-form__input--requirement {
-  width: 40em;
+.c-pledge-form__part4 {
+  top: 7rem;
+  left: 0;
+}
+
+.c-pledge-form__part5 {
+  top: 5rem;
+  left: 5rem;
+  width: 10rem;
+}
+
+.c-pledge-form__part6 {
+  top: 5rem;
+  left: 16rem;
+  right: 1.4rem;
+}
+
+.c-pledge-form__part7 {
+  top: 10rem;
+  left: 0;
+  right: 1.4rem;
+}
+
+.c-pledge-form__part8 {
+  top: 12rem;
+  right: 0;
 }

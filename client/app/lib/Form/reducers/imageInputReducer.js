@@ -1,7 +1,7 @@
 import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
 
-import calculateDefaultCrop from '../../utilities/calculate_default_crop'
+import calculateDefaultCrop from '../../image_processing/calculateDefaultCrop'
 
 export const IMAGE_STATE_NONE = 0
 export const IMAGE_STATE_LOADING = 1
@@ -73,7 +73,7 @@ export default function imageInputReducer(state = initialImageInputState, action
 
     // Theoretical action – is not present in UI at the moment
   case 'CLEAR_IMAGE':
-    newState.imageInputs[id] = { 
+    newState.imageInputs[id] = {
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,

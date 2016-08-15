@@ -15,14 +15,16 @@ export default class AnswerForm extends ChildComponent {
   }
 
   render() {
-    const { formData, isSubmitting } = this.props
+    const { formData, isSubmitting, id } = this.props
     return (
       <FormFor
         className="o-layout o-layout--small u-mt-small"
+        id={`AnswerForm${id}`}
         object={NewAnswerFormObject}
         ajax={true}
         method='put'
-        formData={formData}>
+        formData={formData}
+      >
 
         <Input className="c-input o-layout__item u-4/5"
           attribute='response' inlineLabel />

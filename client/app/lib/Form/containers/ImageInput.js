@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 
-import cropImage from '../../utilities/crop_image'
+import cropImage from '../../image_processing/cropImage'
 import loadImageAction, { changeCropAction, cropImageAction } from '../actions/imageInputActions'
 import updateAction from '../actions/updateAction'
 import ImageInputComponent from '../components/ImageInputComponent'
@@ -54,7 +54,7 @@ const mapDispatchToProps = function(dispatch, ownProps) {
     },
 
     handleChangeCrop: function(crop) {
-      dispatch(changeCropAction(id, crop))  
+      dispatch(changeCropAction(id, crop))
     },
 
     dispatch

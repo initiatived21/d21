@@ -32,8 +32,10 @@ de:
       title: Zeit übrig
   PledgeForm:
     promise:
-      part1: Wir versprechen
-      part2: wenn
+      part1: "„Wir versprechen,"
+      part3: ","
+      part4: wenn
+      part8: ".“"
     save_draft: Entwurf speichern
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
@@ -439,7 +441,7 @@ de:
         placeholder: z.B. Bundesweit
       requirement:
         label: was tun?
-        placeholder: das Gleiche tun.
+        placeholder: das Gleiche tun
       tag_ids:
         label: Themenbereiche
         placeholder: Bitte Thema auswählen

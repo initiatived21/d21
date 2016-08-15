@@ -30,49 +30,22 @@ export default class PledgeView extends RootComponent {
   render() {
     const { pledge, user, forms } = this.props
 
-    const pledgeState = pledge.aasm_state
-
-    const pledgeView = (pledgeState === 'active' || pledgeState === 'successful' ||
-      pledgeState === 'failed') ?
-      this.renderPledgeViewWithExtras() :
-      this.renderPledgeViewOnly()
-
     return (
       <Provider store={store}>
         <main>
           <div className="o-wrapper u-mb">
-            {pledgeView}
+          <div className="o-layout">
+            <Pledge {...pledge} user={user} />
+            <PledgeSidebarContainer pledge_id={pledge.id}
+              forms={forms} />
+            <PledgeUpdatesContainer pledge_id={pledge.id} />
+            <PledgeQAsContainer pledge_id={pledge.id}
+              forms={forms} />
+            <SigneeListContainer pledge_id={pledge.id} />
+          </div>
           </div>
         </main>
       </Provider>
-    )
-  }
-
-  renderPledgeViewWithExtras() {
-    const { pledge, user, forms } = this.props
-
-    return (
-      <div className="o-layout">
-        <Pledge {...pledge} user={user} />
-        <PledgeSidebarContainer pledge_id={pledge.id}
-          forms={forms} />
-        <PledgeUpdatesContainer pledge_id={pledge.id} />
-        <PledgeQAsContainer pledge_id={pledge.id}
-          forms={forms} />
-        <SigneeListContainer pledge_id={pledge.id} />
-      </div>
-    )
-  }
-
-  renderPledgeViewOnly() {
-    const { pledge, user, forms } = this.props
-
-    return (
-      <div className="o-layout">
-        <Pledge {...pledge} user={user} />
-        <PledgeSidebarContainer pledge_id={pledge.id}
-          forms={forms} />
-      </div>
     )
   }
 }

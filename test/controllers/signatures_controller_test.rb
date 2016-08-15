@@ -57,4 +57,22 @@ describe SignaturesController do
       assert_response 302
     end
   end
+
+  describe "GET 'destroy'" do
+    let(:signature) do
+      FactoryGirl.create(:signature, confirmation_hash: 'correct')
+    end
+
+    it 'should fail when given the wrong hash' do
+      assert_raises(Pundit::NotAuthorizedError) do
+        get :destroy, params: { id: signature.id, locale: :de, hash: 'false' }
+      end
+    end
+
+    it 'should succeed when given the correct hash' do
+      get :destroy, params: { id: signature.id, locale: :de, hash: 'correct' }
+      assert_response 302
+      assert_raises(ActiveRecord::RecordNotFound) { signature.reload }
+    end
+  end
 end

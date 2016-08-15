@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #SIDEBAR
+\*------------------------------------*/
+
+/**
+ * Sidebar component for pledge show view
+ */
+
+.c-sidebar {
+  margin-bottom: $spacing;
+  border: 2px solid $primary-color;
+  border-radius: $border-radius;
+}
+
+.c-sidebar__title {
+  margin-top: 0;
+  padding: $spacing--small $spacing;
+
+  font-weight: normal;
+  @include font-size(22px, 1.5);
+
+  color: $white;
+  background-color: $primary-color;
+  user-select: none;
+}
+
+.c-sidebar__wrapper {
+  margin: $spacing--small $spacing $spacing;
+}
+
+
+/**
+ * Variants
+ */
+
+.c-sidebar--secondary {
+  border-color: $secondary-color;
+
+  .c-sidebar__title {
+    background-color: $secondary-color;
+  }
+}
+
+.c-sidebar--tertiary {
+  border-color: $tertiary-color;
+
+  .c-sidebar__title {
+    background-color: $tertiary-color;
+  }
+}

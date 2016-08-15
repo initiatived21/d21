@@ -3,8 +3,7 @@
     Our own variables to use throughout the project.
 \*------------------------------------*/
 
-$border-radius: 3px;
-$btn-radius: $border-radius/2;
+
 $background-color: #fff;
 
 $c-btn--disabled-background: #767676;
@@ -15,13 +14,13 @@ $c-btn--disabled-background: #767676;
 
 $font-family-heading: Colaborate, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $main-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-$font-size-primary: 16px;
-$font-size-small: 14px;
+$font-size-primary:                16px;
+$font-size-small:                  14px;
 
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-bold: 600;
+$font-weight-light:                300;
+$font-weight-regular:              400;
+$font-weight-medium:               500;
+$font-weight-bold:                 600;
 
 /**
  * COLORS
@@ -31,33 +30,36 @@ $font-weight-bold: 600;
  * find and replace in the CSS so that the variables are correct
  */
 
-$text-color: rgb(24%, 24%, 24%);
+$text-color:                       rgb(24%, 24%, 24%);
 
-$primary-color: rgb(12%, 44%, 72%);
-$secondary-color: rgb(71%, 6%, 5%);
-$tertiary-color: rgb(95%, 57%, 0%);
+$primary-color:                    rgb(12%, 44%, 72%);
+$secondary-color:                  rgb(71%, 6%, 5%);
+$tertiary-color:                   rgb(95%, 57%, 0%);
 
-$primary-color-highlight: lighten($primary-color, 5%);
-$secondary-color-highlight: lighten($secondary-color, 5%);
-$tertiary-color-highlight: lighten($tertiary-color, 5%);
+$primary-color-highlight:          lighten($primary-color, 5%);
+$secondary-color-highlight:        lighten($secondary-color, 5%);
+$tertiary-color-highlight:         lighten($tertiary-color, 5%);
 
-$primary-color-lighter: rgb(38%, 61%, 80%);
-$secondary-color-lighter: rgb(80%, 34%, 33%);
-$tertiary-color-lighter: rgb(96%, 70%, 30%);
+$primary-color-lighter:            rgb(38%, 61%, 80%);
+$secondary-color-lighter:          rgb(80%, 34%, 33%);
+$tertiary-color-lighter:           rgb(96%, 70%, 30%);
 
-$black: rgb(0%, 0%, 0%);
-$white: rgb(100%, 100%, 100%);
-$almost-white: rgb(96%, 96%, 96%);
+$primary-color-almost-white:       rgb(230, 244, 255);
 
-$dark-gray: rgb(29%, 29%, 29%);
-$mid-dark-gray: rgb(45%, 45%, 45%);
-$gray: rgb(60%, 60%, 60%);
-$light-gray: rgb(85%, 85%, 85%);
+$black:                            rgb(0%, 0%, 0%);
+$white:                            rgb(100%, 100%, 100%);
+$almost-white:                     rgb(96%, 96%, 96%);
 
-$gray-highlight: lighten($gray, 5%);
+$dark-gray:                        rgb(29%, 29%, 29%);
+$mid-dark-gray:                    rgb(45%, 45%, 45%);
+$gray:                             rgb(60%, 60%, 60%);
+$light-gray:                       rgb(85%, 85%, 85%);
+$mid-light-gray:                   rgb(70%, 70%, 70%);
 
-$success-color: rgb(47%, 60%, 69%);
-$urgent-color: rgb(71%, 6%, 5%);
+$gray-highlight:                   lighten($gray, 5%);
+
+$success-color:                    rgb(47%, 60%, 69%);
+$urgent-color:                     rgb(71%, 6%, 5%);
 
 
 
@@ -74,7 +76,16 @@ $tag-background-color: #082;
  *
  */
 
-$comment-avatar-size: 43px;
+$input-height:                     40px;
+$input-padding-horizontal:         6px;
+
+$pledge-tile-height:               400px;
+$comment-avatar-size:              43px;
+
+$border-radius:                    5px;
+$border-radius-large:              8px;
+
+$btn-radius: $border-radius/2;
 
 
 /**
@@ -103,5 +114,5 @@ $breakpoints: (
  * Other vars here
  **/
 
-$transition-time: 250ms;
+$transition-time:                  250ms;
 

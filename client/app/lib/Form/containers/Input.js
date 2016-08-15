@@ -5,14 +5,14 @@ import updateAction from '../actions/updateAction'
 import InputComponent from '../components/InputComponent'
 
 const mapStateToProps = function(state, ownProps) {
-  const formObjectName = ownProps.object.constructor.name
+  const formId = ownProps.formId
   const attrs = ownProps.object.attributes
 
   // get saved & server provided errors, concat them together
   let errors = null
   // if (ownProps.errors) {
-  if (state[formObjectName] && state[formObjectName].errors) {
-    errors = state[formObjectName].errors[ownProps.attribute] || []
+  if (state[formId] && state[formId].errors) {
+    errors = state[formId].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
@@ -26,14 +26,14 @@ const mapStateToProps = function(state, ownProps) {
   return {
     errors,
     value,
-    formObjectName
+    formId
   }
 }
 
 const mapDispatchToProps = dispatch =>
   ({
-    onChange(formObjectName, attribute, submodel, value) {
-      return dispatch(updateAction(formObjectName, attribute, submodel, value))
+    onChange(formId, attribute, submodel, value) {
+      return dispatch(updateAction(formId, attribute, submodel, value))
     }
   })
 

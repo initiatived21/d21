@@ -11,14 +11,25 @@ export default class PledgeUpdateList extends ChildComponent {
   render() {
     const { updates } = this.props
 
-    return (
-      <section className="c-update-list o-layout__item u-2/3@l">
-        <h2>{this.t('.heading')}</h2>
+    let updateListOrText
+    if (updates.length > 0) {
+      updateListOrText = (
         <ol className="o-list-bare">
           {updates.map( update =>
             <PledgeUpdate key={update.id} update={update} />
           )}
         </ol>
+      )
+    }
+    else {
+      updateListOrText = (<p>{this.t('.no_updates')}</p>)
+    }
+
+    return (
+      <section className="c-update-list o-layout__item u-2/3@l">
+        <h2>{this.t('.heading')}</h2>
+
+        {updateListOrText}
       </section>
     )
   }

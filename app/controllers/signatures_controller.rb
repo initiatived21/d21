@@ -15,15 +15,28 @@ class SignaturesController < ApplicationController
   end
 
   def confirm
-    @signature = Signature.find(params[:id])
-    @signature.submitted_hash = params[:hash]
+    find_signature_and_set_hash
     authorize @signature
     @signature.update_column :confirmed, true
     flash[:success] = 'Erfolgreich bestätigt'
     redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
   end
 
+  def destroy
+    find_signature_and_set_hash
+    authorize @signature
+    pledge = @signature.pledge
+    @signature.destroy!
+    flash[:success] = 'Erfolgreich gelöscht'
+    redirect_to pledge_path(pledge, locale: I18n.locale)
+  end
+
   private
+
+  def find_signature_and_set_hash
+    @signature = Signature.find(params[:id])
+    @signature.submitted_hash = params[:hash]
+  end
 
   def create_success!
     @form.confirmation_hash = SecureRandom.base58(24)

@@ -6,6 +6,7 @@ export default class Input extends Component {
   static propTypes = {
     model: PropTypes.string, // required, but injection later is ok
     attribute: PropTypes.string.isRequired,
+    formId: PropTypes.string.isRequired,
     type: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.string,
@@ -16,13 +17,13 @@ export default class Input extends Component {
     submodel: PropTypes.string,
     errors: PropTypes.array,
     as: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
   }
 
   render() {
     const {
       model, attribute, type, submodel, errors, as, object, value,
-      noLabel, inlineLabel, formObjectName, className
+      noLabel, inlineLabel, className, formId
     } = this.props
 
     const modelParamName = this._modelParamName(model, submodel)
@@ -47,13 +48,13 @@ export default class Input extends Component {
 
     const onChange = e => {
       this.props.onChange(
-        formObjectName, attribute, submodel, $(e.target).val()
+        formId, attribute, submodel, $(e.target).val()
       )
     }
             // changes => {
             //   const changesToSave =
             //     changes ? changes.map(change => change.value) : null
-            //   this.props.onChange(formObjectName, attribute, changesToSave)
+            //   this.props.onChange(formId, attribute, changesToSave)
             // }}
 
     let labelElement
@@ -90,7 +91,7 @@ export default class Input extends Component {
               const changesToSave =
                 changes ? changes.map(change => change.value) : null
               this.props.onChange(
-                formObjectName, attribute, submodel, changesToSave
+                formId, attribute, submodel, changesToSave
               )
             }}
           />

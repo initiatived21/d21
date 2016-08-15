@@ -40,7 +40,8 @@ describe('<Pledge />', function () {
     const wrapper = shallow(<Pledge {...props} />)
 
     wrapper.find(TagList).length.should.equal(1)
-    //wrapper.find(PledgeLocation).length.should.equal(1);
+    wrapper.find(PledgeLocation).length.should.equal(1)
+    wrapper.find('h1').length.should.equal(1)
     wrapper.find(PledgeQuote).length.should.equal(1)
     wrapper.find(PledgeData).length.should.equal(1)
     wrapper.find(SocialMediaButtons).length.should.equal(1)
@@ -59,5 +60,11 @@ describe('<Pledge />', function () {
     const wrapper = shallow(<Pledge {...props} description={null} />)
 
     wrapper.find(PledgeDescription).length.should.equal(0)
+  })
+
+  it('should not render CreatedAt component if pledge was never published', function() {
+    const wrapper = shallow(<Pledge {...props} aasm_state="initialized" />)
+
+    wrapper.find(PledgeCreatedAt).length.should.equal(0)
   })
 })
