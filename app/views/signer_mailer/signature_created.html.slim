@@ -6,7 +6,7 @@ p
 p
   = t('.second_paragraph')
   br
-  = link_to 'Hier klicken zum Bestätigen', confirm_signature_url(\
+  = link_to t('.button_confirm_signature'), confirm_signature_url(\
     id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
 
 p
@@ -14,6 +14,9 @@ p
 
 p
   = t('.fourth_paragraph')
+  br
+  = link_to t('.button_delete_signature'), destroy_signature_url(\
+    id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
 
 p
   = t('.fifth_paragraph')  

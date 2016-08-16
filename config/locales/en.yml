@@ -474,6 +474,8 @@ en:
       second_paragraph: 
       subject: 
     signature_created:
+      button_confirm_signature: Click here to confirm
+      button_delete_signature: Delete signature
       fifth_paragraph: 
       first_paragraph: 
       fourth_paragraph: 
