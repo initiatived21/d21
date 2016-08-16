@@ -9,7 +9,7 @@ describe AdminMailer do
 
     it 'should send an email about the pledge' do
       subject.must deliver_to admin_users(:basic).email
-      subject.must have_subject 'Neues Versprechen benötigt Bestätigung'
+      subject.must have_subject 'Ein Versprechen wartet auf Freigabe'
       subject.must have_body_text '/admin/pledges/1'
     end
   end
