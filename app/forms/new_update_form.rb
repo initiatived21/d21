@@ -6,6 +6,6 @@ class NewUpdateForm < Reform::Form
   # Validation
 
   validation :default do
-    required(:content).filled
+    required(:content).filled(max_size?: 1300)
   end
 end
