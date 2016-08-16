@@ -22,6 +22,18 @@ ActiveAdmin.register_page 'Dashboard' do
         panel 'Info' do
           para "Wir haben aktuell #{Pledge.active.count} aktive Pledges auf"\
                ' der Plattform.'
+          para "Wir haben aktuell #{Pledge.requested.count} auf Freischaltung wartende Pledges auf"\
+               ' der Plattform.'
+          para "Wir haben aktuell #{Pledge.disapproved.count} abgelehnte Pledges auf"\
+               ' der Plattform.'
+          para "Wir haben aktuell #{Pledge.successful.count} beendete erfolgreiche Pledges auf"\
+               ' der Plattform.'
+          para "Wir haben aktuell #{Pledge.failed.count} beendete nicht-erfolgreiche Pledges auf"\
+               ' der Plattform.'
+          para "Wir haben aktuell #{User.count} registrierte Nutzer auf"\
+               ' der Plattform.'
+          para "Wir haben aktuell #{Signature.count} Unterschriften insgesamt auf"\
+               ' der Plattform.'
         end
       end
     end
