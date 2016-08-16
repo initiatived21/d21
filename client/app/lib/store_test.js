@@ -4,7 +4,7 @@ import { IMAGE_STATE_NONE } from './Form/reducers/imageInputReducer'
 describe('store', function() {
   const initialState = {
     pledges: {},
-    tags: [],
+    tags: {},
     ui: {
       searchResultsLoading: false,
       sessionPopupVisible: false

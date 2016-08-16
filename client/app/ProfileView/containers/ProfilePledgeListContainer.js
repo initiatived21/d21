@@ -10,6 +10,8 @@ const mapStateToProps = (state, ownProps) => {
       pledge => pledge.user_id === user.id
     ).map((pledge) => {
       pledge.initiator = user
+      pledge.tags =
+        values(state.tags).filter(tag => pledge.tags.includes(tag.id))
       return pledge
     })
 

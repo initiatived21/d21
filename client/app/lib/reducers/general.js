@@ -3,7 +3,7 @@ import assign from 'lodash/assign'
 
 export const generalInitialState = {
   pledges: {},
-  tags: [],
+  tags: {},
   ui: {
     searchResultsLoading: false,
     sessionPopupVisible: false

@@ -19,7 +19,10 @@ function deNormalizePledges(state) {
 
   for (let pledge of pledges) {
     pledge.initiator = state.users[pledge.initiator]
-    pledge.tags = state.tags.filter(tag => pledge.tags.includes(tag.id))
+    if (pledge.tags) { // TODO: Why is this `if` needed?
+      pledge.tags =
+        values(state.tags).filter(tag => pledge.tags.includes(tag.id))
+    }
   }
 
   return pledges

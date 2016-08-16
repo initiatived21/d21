@@ -185,12 +185,28 @@ en:
         reason: 
         updated_at: 
         pledge_id: 
+      comment:
+        id: 
+        content: 
+        created_at: 
+        pledge: 
+        response: 
+        updated_at: 
+      update:
+        content: 
+        created_at: 
+        pledge: 
+        updated_at: 
     models:
       admin: 
       admin_user: 
       comment: 
       pledge: 
       signature: 
+      fragenund_antworten: 
+      fragen_und_antworten: 
+      fund_a: 
+      update: 
   application_mailer:
     farewell: 
     impressum: 
@@ -306,6 +322,7 @@ en:
           confirmed: 
           contact_person: 
           reason: 
+          response: 
       user:
         edit:
           email: 
@@ -362,6 +379,7 @@ en:
           organization: 
           confirmation_hash: 
           reason: 
+          response: 
       user:
         edit:
           email: 

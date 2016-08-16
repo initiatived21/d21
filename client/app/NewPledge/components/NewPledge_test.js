@@ -34,7 +34,7 @@ describe('NewPledge', function() {
       }
     },
 
-    tags: []
+    tags: {}
   }
 
   it('should have two submit buttons', function() {

@@ -27,7 +27,8 @@ describe PledgeSerializer do
         avatar: {
           url: nil
         }
-      }
+      },
+      tags: []
     )
   end
 end

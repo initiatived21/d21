@@ -28,8 +28,9 @@ export default class Pledge extends ChildComponent {
     image: PropTypes.object,
     signatures_count: PropTypes.number.isRequired,
     created_at: PropTypes.string.isRequired,
-    user: PropTypes.object.isRequired
-  };
+    user: PropTypes.object.isRequired,
+    tags: PropTypes.array.isRequired,
+  }
 
   getPledgePath() {
     return `/${I18n.locale}/pledges/${this.props.id}`;
@@ -38,7 +39,7 @@ export default class Pledge extends ChildComponent {
   render() {
     const {
       title, content, amount, who, requirement, location, deadline, description, image,
-      aasm_state, signatures_count, created_at, user
+      aasm_state, signatures_count, created_at, user, tags
     } = this.props;
 
     const initiator = user.organization ? user.organization : user.name
@@ -57,7 +58,7 @@ export default class Pledge extends ChildComponent {
     return (
       <div className="o-layout__item u-2/3@l">
         <article className="c-pledge">
-          <TagList names={['Familie', 'Unterstützung']} />
+          <TagList tags={tags} />
           <PledgeLocation>{location}</PledgeLocation>
           <h1>
             {title}
@@ -77,12 +78,15 @@ export default class Pledge extends ChildComponent {
             deadline={deadline}
             signatures_count={signatures_count}
           />
-          <SocialMediaButtons className="u-mt-small u-mb" url={DOMAIN_PROD + this.getPledgePath()} />
+          <SocialMediaButtons
+            className="u-mt-small u-mb"
+            url={DOMAIN_PROD + this.getPledgePath()}
+          />
           {pledgeImage}
           {pledgeDescription}
           {pledgeCreatedAt}
         </article>
       </div>
-    );
+    )
   }
-};
+}

@@ -185,12 +185,28 @@ de:
         reason: Reason
         updated_at: Updated at
         pledge_id: Pledge
+      comment:
+        id: Id
+        content: Content
+        created_at: Created at
+        pledge: Pledge
+        response: Response
+        updated_at: Updated at
+      update:
+        content: Content
+        created_at: Created at
+        pledge: Pledge
+        updated_at: Updated at
     models:
       admin: Admin
       admin_user: Admin Users
       comment: Comments
       pledge: Pledge
       signature: Signature
+      fragenund_antworten: Fragenund Antwortens
+      fragen_und_antworten: Fragen Und Antwortens
+      fund_a: Fund As
+      update: Updates
   application_mailer:
     farewell: Mit besten Grüßen,
     impressum: "<Impressum>"
@@ -306,6 +322,7 @@ de:
           confirmed: 
           contact_person: 
           reason: 
+          response: 
       user:
         edit:
           email: 
@@ -362,6 +379,7 @@ de:
           organization: 
           confirmation_hash: 
           reason: 
+          response: 
       user:
         edit:
           email: 
@@ -424,6 +442,7 @@ de:
           confirmed: 
           contact_person: 
           reason: 
+          response: 
       user:
         email: 
         password: 

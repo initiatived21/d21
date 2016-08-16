@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     authorize current_user
 
     @user_props = {
-      pledges: current_user.initiated_pledges
+      pledges: serialize(current_user.initiated_pledges)
     }
   end
 end
