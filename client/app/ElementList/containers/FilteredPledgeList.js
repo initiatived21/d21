@@ -15,10 +15,11 @@ function filterPledges(pledges, filter) {
 }
 
 function deNormalizePledges(state) {
-  const pledges = merge({}, state.pledges)
+  const pledges = values(merge({}, state.pledges))
 
-  for (let key in pledges) {
-    pledges[key].initiator = state.users[pledges[key].initiator]
+  for (let pledge of pledges) {
+    pledge.initiator = state.users[pledge.initiator]
+    pledge.tags = state.tags.filter(tag => pledge.tags.includes(tag.id))
   }
 
   return pledges

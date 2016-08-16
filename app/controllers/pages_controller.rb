@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    @successful_pledges = Pledge.successful.limit(4)
+    @successful_pledges = serialize(Pledge.successful.limit(4))
   end
 
   def faq

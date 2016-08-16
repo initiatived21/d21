@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react';
-import PledgeTile           from '../../PledgeTile/components/PledgeTile';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import PledgeTile           from '../../PledgeTile/components/PledgeTile'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 
 export default class PledgeList extends ChildComponent {
   static propTypes = {
@@ -9,7 +9,7 @@ export default class PledgeList extends ChildComponent {
   }
 
   render() {
-    const { pledges, showControls } = this.props;
+    const { pledges, showControls } = this.props
 
     return (
       <ul className='o-layout'>
@@ -19,6 +19,6 @@ export default class PledgeList extends ChildComponent {
           />
         )}
       </ul>
-    );
+    )
   }
 }

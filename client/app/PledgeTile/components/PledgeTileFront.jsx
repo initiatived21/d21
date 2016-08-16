@@ -17,12 +17,15 @@ export default class PledgeTileFront extends ChildComponent {
     deadline: PropTypes.string.isRequired,
     signatures_count: PropTypes.number.isRequired,
     signatures_total: PropTypes.number.isRequired,
-    path: PropTypes.string.isRequired
+    path: PropTypes.string.isRequired,
+    tags: PropTypes.array.isRequired,
   }
 
   render() {
-    const { state, initiatorName, initiatorImage, title, deadline, signatures_count,
-      signatures_total, path } = this.props
+    const {
+      state, initiatorName, initiatorImage, title, deadline, signatures_count,
+      signatures_total, path, tags
+    } = this.props
 
     const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false
@@ -33,7 +36,7 @@ export default class PledgeTileFront extends ChildComponent {
       <div className="c-pledge-tile o-box">
         <a className="c-pledge-tile__link"
            href={path}>
-          <TagList names={['Familie', 'Frauen', 'Kinder']} />
+          <TagList tags={tags} />
           <InitiatorWithImage imagePath={initiatorImage}>
             {initiatorName}
           </InitiatorWithImage>
@@ -53,7 +56,6 @@ export default class PledgeTileFront extends ChildComponent {
               <ProgressBar percentage={percentage} urgent={isUrgent} />
             </div>
           </div>
-
         </a>
       </div>
     )

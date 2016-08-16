@@ -112,6 +112,7 @@ de:
       all: All
     sidebars:
       Zustand: Zustand
+      Filter: Filter
   activerecord:
     attributes:
       active_admin/comment:
@@ -150,11 +151,46 @@ de:
         updates: Updates
         user_id: User
         who: Who
+      user:
+        avatar: Avatar
+        confirmation_sent_at: Confirmation Sent At
+        confirmation_token: Confirmation Token
+        confirmed_at: Confirmed At
+        created_at: Created at
+        current_sign_in_at: Current Sign In At
+        current_sign_in_ip: Current Sign In Ip
+        encrypted_password: Encrypted Password
+        id: Id
+        last_sign_in_at: Last Sign In At
+        last_sign_in_ip: Last Sign In Ip
+        name: Name
+        organization: Organization
+        remember_created_at: Remember Created At
+        reset_password_sent_at: Reset Password Sent At
+        reset_password_token: Reset Password Token
+        sign_in_count: Sign In Count
+        updated_at: Updated At
+      signature:
+        id: Id
+        name: Name
+        aasm_state: Aasm state
+        anonymous: Anonymous
+        contact_person: Contact person
+        email: Email
+        organization: Organization
+        pledge: Pledge
+        confirmation_hash: Confirmation hash
+        confirmed: Confirmed
+        created_at: Created at
+        reason: Reason
+        updated_at: Updated at
+        pledge_id: Pledge
     models:
       admin: Admin
       admin_user: Admin Users
       comment: Comments
       pledge: Pledge
+      signature: Signature
   application_mailer:
     farewell: Mit besten Grüßen,
     impressum: "<Impressum>"
@@ -173,6 +209,12 @@ de:
   formtastic:
     actions:
       pledge:
+        edit:
+          update: 
+      user:
+        edit:
+          update: 
+      signature:
         edit:
           update: 
     hints:
@@ -199,6 +241,23 @@ de:
           requirement: 
           title: 
           who: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
     labels:
       pledge:
         edit:
@@ -239,6 +298,31 @@ de:
           updated_at: 
           updates: 
           who: 
+          name: 
+          organization: 
+          pledge: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
     placeholders:
       active_admin/comment:
         show:
@@ -274,6 +358,23 @@ de:
           requirement: 
           title: 
           who: 
+          name: 
+          organization: 
+          confirmation_hash: 
+          reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          confirmation_hash: 
+          email: 
+          name: 
+          organization: 
+          reason: 
   helpers:
     label:
       pledge:
@@ -315,10 +416,34 @@ de:
           updated_at: 
           updates: 
           who: 
+          name: 
+          organization: 
+          pledge: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          reason: 
       user:
         email: 
         password: 
         remember_me: 
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -492,3 +617,14 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
+  ransack:
+    predicates:
+      contains: 
+  views:
+    pagination:
+      last: 
+      next: 
+  tags:
+    names:
+      books: Bücher
+      family: Familie

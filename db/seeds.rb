@@ -21,8 +21,8 @@ corn = User.create! name: 'Frieda Freude',
 AdminUser.create! email: 'admin@admin.com', password: 'password'
 
 # Tags
-Tag.create!(name: 'family')
-Tag.create!(name: 'books')
+family = Tag.create!(name: 'family', color: 'f5b34d')
+books = Tag.create!(name: 'books', color: 'cc5754')
 
 # Draft pledge
 Pledge.create!(
@@ -33,7 +33,8 @@ Pledge.create!(
   requirement: 'ebenfalls Versprechen einstellen',
   deadline: 5.days.from_now,
   aasm_state: 'initialized',
-  initiator: micro
+  initiator: micro,
+  tags: [family, books]
 )
 
 # requested pledge
@@ -58,7 +59,8 @@ active_none = Pledge.create!(
   location: 'bundesweit',
   deadline: 7.days.from_now,
   aasm_state: 'active',
-  initiator: micro
+  initiator: micro,
+  tags: [family, books]
 )
 Comment.create!(
   pledge: active_none,
@@ -128,7 +130,8 @@ Pledge.create!(
   location: 'Hamburg',
   deadline: 3.days.ago,
   aasm_state: 'successful',
-  initiator: privat
+  initiator: privat,
+  tags: [family, books]
 )
 
 # disapproved pledge

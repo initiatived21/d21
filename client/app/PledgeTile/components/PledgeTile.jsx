@@ -26,8 +26,9 @@ export default class PledgeTile extends ChildComponent {
           url: PropTypes.string,
         }).isRequired,
       }).isRequired,
+      tags: PropTypes.array.isRequired,
     }),
-    showControls: PropTypes.bool
+    showControls: PropTypes.bool,
   }
 
   getPledgePath() {
@@ -64,6 +65,7 @@ export default class PledgeTile extends ChildComponent {
                 signatures_count={pledge.signatures_count}
                 signatures_total={pledge.amount}
                 path={pledgePath}
+                tags={pledge.tags}
               />
             </div>
             <div className="o-flipper__back">

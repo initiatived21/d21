@@ -7,4 +7,4 @@ translations:
       "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.QuestionForm.*",
       "*.PledgeState.*", "*.ProfileView.*", "*.CommentAvatar.*", "*.PledgeLocation.*",
       "*.PledgeTileBack.*", "*.PledgeTileFront.*", "*.PreviewExplanation.*",
-      "*.PledgeCreatedAt.*"]
+      "*.PledgeCreatedAt.*", "*.tags.*"]

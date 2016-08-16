@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809160518) do
+ActiveRecord::Schema.define(version: 20160816133006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "pg_trgm"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -110,9 +109,10 @@ ActiveRecord::Schema.define(version: 20160809160518) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",                 null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "color",      limit: 6
   end
 
   create_table "updates", force: :cascade do |t|

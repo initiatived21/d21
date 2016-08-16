@@ -9,9 +9,15 @@ export default class ChildComponent extends React.Component {
   constructor() {
     super()
     // comment the following for testing:
-    I18n.missingTranslation = function () { return '' }
+    // I18n.missingTranslation = function () { return '' }
   }
   t(...attrs) {
-    return I18n.t(this.constructor.name + attrs.shift(), ...attrs)
+    // Emulate lazy lookup
+    const path = attrs.shift()
+    const basePath = path[0] == '.' ? this.constructor.name : ''
+    console.log(I18n.translations)
+
+    // Forward to I18n
+    return I18n.t(basePath + path, ...attrs)
   }
 }

@@ -112,6 +112,7 @@ en:
       all: 
     sidebars:
       Zustand: 
+      Filter: 
   activerecord:
     attributes:
       active_admin/comment:
@@ -150,11 +151,46 @@ en:
         updates: 
         user_id: 
         who: 
+      user:
+        avatar: 
+        confirmation_sent_at: 
+        confirmation_token: 
+        confirmed_at: 
+        created_at: 
+        current_sign_in_at: 
+        current_sign_in_ip: 
+        encrypted_password: 
+        id: 
+        last_sign_in_at: 
+        last_sign_in_ip: 
+        name: 
+        organization: 
+        remember_created_at: 
+        reset_password_sent_at: 
+        reset_password_token: 
+        sign_in_count: 
+        updated_at: 
+      signature:
+        id: 
+        name: 
+        aasm_state: 
+        anonymous: 
+        contact_person: 
+        email: 
+        organization: 
+        pledge: 
+        confirmation_hash: 
+        confirmed: 
+        created_at: 
+        reason: 
+        updated_at: 
+        pledge_id: 
     models:
       admin: 
       admin_user: 
       comment: 
       pledge: 
+      signature: 
   application_mailer:
     farewell: 
     impressum: 
@@ -173,6 +209,12 @@ en:
   formtastic:
     actions:
       pledge:
+        edit:
+          update: 
+      user:
+        edit:
+          update: 
+      signature:
         edit:
           update: 
     hints:
@@ -199,6 +241,23 @@ en:
           requirement: 
           title: 
           who: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
     labels:
       pledge:
         edit:
@@ -239,6 +298,31 @@ en:
           updated_at: 
           updates: 
           who: 
+          name: 
+          organization: 
+          pledge: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
     placeholders:
       active_admin/comment:
         show:
@@ -274,6 +358,23 @@ en:
           requirement: 
           title: 
           who: 
+          name: 
+          organization: 
+          confirmation_hash: 
+          reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          confirmation_hash: 
+          email: 
+          name: 
+          organization: 
+          reason: 
   helpers:
     label:
       pledge:
@@ -315,10 +416,34 @@ en:
           updated_at: 
           updates: 
           who: 
+          name: 
+          organization: 
+          pledge: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          reason: 
       user:
         email: 
         password: 
         remember_me: 
+        edit:
+          email: 
+          name: 
+          organization: 
+      signature:
+        edit:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -483,3 +608,14 @@ en:
       second_paragraph: 
       subject: 
       third_paragraph: 
+  ransack:
+    predicates:
+      contains: 
+  views:
+    pagination:
+      last: 
+      next: 
+  tags:
+    names:
+      books: Books
+      family: Family
