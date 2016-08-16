@@ -65,6 +65,8 @@ gem 'rails-i18n'
 
 # Admin Backend
 gem 'activeadmin', github: 'activeadmin'
+# solves a pagination issue with active admin
+gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
