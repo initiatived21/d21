@@ -4,6 +4,8 @@
 
 body {
   font-family: $main-font-family;
+  font-weight: normal;
+  @include font-size($font-size-primary, 1.5);
   font-kerning: normal;
   font-variant-ligatures: normal;
 }
