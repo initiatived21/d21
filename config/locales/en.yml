@@ -111,8 +111,8 @@ en:
       admin: 
       all: 
     sidebars:
-      Zustand: 
       Filter: 
+      Zustand: 
   activerecord:
     attributes:
       active_admin/comment:
@@ -128,6 +128,13 @@ en:
         email: 
         id: 
         sign_in_count: 
+      comment:
+        content: 
+        created_at: 
+        id: 
+        pledge: 
+        response: 
+        updated_at: 
       pledge:
         aasm_state: 
         amount: 
@@ -151,6 +158,34 @@ en:
         updates: 
         user_id: 
         who: 
+      signature:
+        aasm_state: 
+        anonymous: 
+        confirmation_hash: 
+        confirmed: 
+        contact_person: 
+        created_at: 
+        email: 
+        id: 
+        name: 
+        organization: 
+        pledge: 
+        pledge_id: 
+        reason: 
+        updated_at: 
+      tag:
+        color: 
+        created_at: 
+        id: 
+        name: 
+        pledges: 
+        pledges_tags: 
+        updated_at: 
+      update:
+        content: 
+        created_at: 
+        pledge: 
+        updated_at: 
       user:
         avatar: 
         confirmation_sent_at: 
@@ -170,42 +205,16 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
-      signature:
-        id: 
-        name: 
-        aasm_state: 
-        anonymous: 
-        contact_person: 
-        email: 
-        organization: 
-        pledge: 
-        confirmation_hash: 
-        confirmed: 
-        created_at: 
-        reason: 
-        updated_at: 
-        pledge_id: 
-      comment:
-        id: 
-        content: 
-        created_at: 
-        pledge: 
-        response: 
-        updated_at: 
-      update:
-        content: 
-        created_at: 
-        pledge: 
-        updated_at: 
     models:
       admin: 
       admin_user: 
       comment: 
+      fragen_und_antworten: 
+      fragenund_antworten: 
+      fund_a: 
       pledge: 
       signature: 
-      fragenund_antworten: 
-      fragen_und_antworten: 
-      fund_a: 
+      tag: 
       update: 
   application_mailer:
     farewell: 
@@ -227,10 +236,10 @@ en:
       pledge:
         edit:
           update: 
-      user:
+      signature:
         edit:
           update: 
-      signature:
+      user:
         edit:
           update: 
     hints:
@@ -257,11 +266,6 @@ en:
           requirement: 
           title: 
           who: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -274,6 +278,11 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     labels:
       pledge:
         edit:
@@ -292,9 +301,14 @@ en:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -303,31 +317,23 @@ en:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -340,6 +346,11 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     placeholders:
       active_admin/comment:
         show:
@@ -366,25 +377,21 @@ en:
           aasm_state: 
           amount: 
           body: 
+          color: 
+          confirmation_hash: 
           content: 
           description: 
           email: 
           image: 
           location: 
+          name: 
           namespace: 
+          organization: 
+          reason: 
           requirement: 
+          response: 
           title: 
           who: 
-          name: 
-          organization: 
-          confirmation_hash: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -393,6 +400,11 @@ en:
           name: 
           organization: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
   helpers:
     label:
       pledge:
@@ -412,9 +424,14 @@ en:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -423,33 +440,23 @@ en:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-      user:
-        email: 
-        password: 
-        remember_me: 
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -462,6 +469,14 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -537,6 +552,9 @@ en:
       saved_draft: The draft was successfully saved to your profile.
     destroy:
       success: Pledge successfully deleted.
+  ransack:
+    predicates:
+      contains: 
   react_form:
     comment:
       content:
@@ -626,14 +644,26 @@ en:
       second_paragraph: 
       subject: 
       third_paragraph: 
-  ransack:
-    predicates:
-      contains: 
+  tags:
+    names:
+      accomodation: Accomodation
+      children: Children
+      counseling: Counseling
+      culture: culture
+      donation: Donation
+      education: Education
+      family: family
+      language: Language
+      men: Men
+      mentorship: Mentorship
+      platform: platform
+      social_life: Social Life
+      sport: Sport
+      technology: Technology
+      volunteering: Volunteering
+      women: Women
+      work: Work
   views:
     pagination:
       last: 
       next: 
-  tags:
-    names:
-      books: Books
-      family: Family

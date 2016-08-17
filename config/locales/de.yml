@@ -111,8 +111,8 @@ de:
       admin: Admin
       all: All
     sidebars:
-      Zustand: Zustand
       Filter: Filter
+      Zustand: Zustand
   activerecord:
     attributes:
       active_admin/comment:
@@ -128,6 +128,13 @@ de:
         email: Email
         id: Id
         sign_in_count: Sign In Count
+      comment:
+        content: Content
+        created_at: Created at
+        id: Id
+        pledge: Pledge
+        response: Response
+        updated_at: Updated at
       pledge:
         aasm_state: Aasm State
         amount: Amount
@@ -151,6 +158,34 @@ de:
         updates: Updates
         user_id: User
         who: Who
+      signature:
+        aasm_state: Aasm state
+        anonymous: Anonymous
+        confirmation_hash: Confirmation hash
+        confirmed: Confirmed
+        contact_person: Contact person
+        created_at: Created at
+        email: Email
+        id: Id
+        name: Name
+        organization: Organization
+        pledge: Pledge
+        pledge_id: Pledge
+        reason: Reason
+        updated_at: Updated at
+      tag:
+        color: Color
+        created_at: Created At
+        id: Id
+        name: Name
+        pledges: Pledges
+        pledges_tags: Pledges tags
+        updated_at: Updated At
+      update:
+        content: Content
+        created_at: Created at
+        pledge: Pledge
+        updated_at: Updated at
       user:
         avatar: Avatar
         confirmation_sent_at: Confirmation Sent At
@@ -170,42 +205,16 @@ de:
         reset_password_token: Reset Password Token
         sign_in_count: Sign In Count
         updated_at: Updated At
-      signature:
-        id: Id
-        name: Name
-        aasm_state: Aasm state
-        anonymous: Anonymous
-        contact_person: Contact person
-        email: Email
-        organization: Organization
-        pledge: Pledge
-        confirmation_hash: Confirmation hash
-        confirmed: Confirmed
-        created_at: Created at
-        reason: Reason
-        updated_at: Updated at
-        pledge_id: Pledge
-      comment:
-        id: Id
-        content: Content
-        created_at: Created at
-        pledge: Pledge
-        response: Response
-        updated_at: Updated at
-      update:
-        content: Content
-        created_at: Created at
-        pledge: Pledge
-        updated_at: Updated at
     models:
       admin: Admin
       admin_user: Admin Users
       comment: Comments
+      fragen_und_antworten: Fragen Und Antwortens
+      fragenund_antworten: Fragenund Antwortens
+      fund_a: Fund As
       pledge: Pledge
       signature: Signature
-      fragenund_antworten: Fragenund Antwortens
-      fragen_und_antworten: Fragen Und Antwortens
-      fund_a: Fund As
+      tag: Tag
       update: Updates
   application_mailer:
     farewell: Mit besten Grüßen,
@@ -227,10 +236,10 @@ de:
       pledge:
         edit:
           update: 
-      user:
+      signature:
         edit:
           update: 
-      signature:
+      user:
         edit:
           update: 
     hints:
@@ -257,11 +266,6 @@ de:
           requirement: 
           title: 
           who: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -274,6 +278,11 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     labels:
       pledge:
         edit:
@@ -292,9 +301,14 @@ de:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -303,31 +317,23 @@ de:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -340,6 +346,11 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     placeholders:
       active_admin/comment:
         show:
@@ -366,25 +377,21 @@ de:
           aasm_state: 
           amount: 
           body: 
+          color: 
+          confirmation_hash: 
           content: 
           description: 
           email: 
           image: 
           location: 
+          name: 
           namespace: 
+          organization: 
+          reason: 
           requirement: 
+          response: 
           title: 
           who: 
-          name: 
-          organization: 
-          confirmation_hash: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -393,6 +400,11 @@ de:
           name: 
           organization: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
   helpers:
     label:
       pledge:
@@ -412,9 +424,14 @@ de:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -423,34 +440,23 @@ de:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        email: 
-        password: 
-        remember_me: 
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -463,6 +469,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -545,6 +559,9 @@ de:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
     destroy:
       success: Versprechen erfolgreich gelöscht.
+  ransack:
+    predicates:
+      contains: 
   react_form:
     comment:
       content:
@@ -636,14 +653,26 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
-  ransack:
-    predicates:
-      contains: 
+  tags:
+    names:
+      accomodation: Unterbringung
+      children: Kinder
+      counseling: Beratung
+      culture: Kultur
+      donation: Spende
+      education: Ausbildung
+      family: Familie
+      language: Sprache
+      men: Männer
+      mentorship: Patenschaft
+      platform: Plattform
+      social_life: Teilhabe
+      sport: Sport
+      technology: Technik
+      volunteering: Ehrenamt
+      women: Frauen
+      work: Arbeit
   views:
     pagination:
       last: 
       next: 
-  tags:
-    names:
-      books: Bücher
-      family: Familie
