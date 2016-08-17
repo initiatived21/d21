@@ -3,8 +3,10 @@
     Our own variables to use throughout the project.
 \*------------------------------------*/
 
-
-$background-color: #fff;
+$text-color:                       rgb(24%, 24%, 24%);
+$background-color:                 #fff;
+$font-size:                        15px;
+$line-height:                      22.5px;
 
 $c-btn--disabled-background: #767676;
 
@@ -14,8 +16,6 @@ $c-btn--disabled-background: #767676;
 
 $font-family-heading: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $main-font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-$font-size-primary:                15px;
-$font-size-small:                  14px;
 
 $font-weight-light:                300;
 $font-weight-regular:              400;
@@ -30,7 +30,6 @@ $font-weight-bold:                 600;
  * find and replace in the CSS so that the variables are correct
  */
 
-$text-color:                       rgb(24%, 24%, 24%);
 
 $primary-color:                    rgb(12%, 44%, 72%);
 $secondary-color:                  rgb(71%, 6%, 5%);

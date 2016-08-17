@@ -6,20 +6,11 @@
  *
  */
 
-/**
- * 1.
- */
-
-$info-nav-color: rgb(23%, 23%, 23%);
-$lang-nav-color: rgb(60%, 60%, 60%);
-$lang-nav-active-color: rgb(0%, 0%, 0%);
-
 .c-secondary-nav__info {
   display: inline-block;
-  color: $info-nav-color;
 
   .c-secondary-nav__link {
-    color: $info-nav-color;
+    color: $text-color;
     padding: $spacing--tiny;
 
     text-decoration: none;
@@ -37,6 +28,8 @@ $lang-nav-active-color: rgb(0%, 0%, 0%);
   display: inline-block;
   vertical-align: top;
 
+  @include font-size(16px, 1.5);
+
   margin-left: $spacing;
 
   .c-secondary-nav__item {
@@ -50,7 +43,7 @@ $lang-nav-active-color: rgb(0%, 0%, 0%);
     display: inline-block;
     vertical-align: middle;
 
-    color: $lang-nav-color;
+    color: $gray;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -62,12 +55,12 @@ $lang-nav-active-color: rgb(0%, 0%, 0%);
     user-select: none;
 
     padding: 9px 5px 6px;
-    background-color: $lang-nav-color;
+    background-color: $gray;
     color: white;
   }
 
   .c-secondary-nav__item--active .c-secondary-nav__link {
-    background-color: $lang-nav-active-color;
+    background-color: $black;
   }
 
   .c-secondary-nav__item:first-of-type .c-secondary-nav__link {
