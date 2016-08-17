@@ -1,6 +1,8 @@
 import React, { PropTypes  } from 'react'
 import Select from 'react-select'
 import FontAwesome from 'react-fontawesome'
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
@@ -20,6 +22,10 @@ export default class PledgeForm extends ChildComponent {
     currentUser: PropTypes.object,
   }
 
+  handleChange(date) {
+    console.log(typeof date, date, date.toString())
+  }
+
   render() {
     const { onLinkClick, currentUser } = this.props
 
@@ -27,6 +33,8 @@ export default class PledgeForm extends ChildComponent {
 
     const initiatorForm = currentUser ? null : this.renderInitiatorForm()
     const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
+
+    moment.locale('de')
 
     return(
       <FormFor multipart
@@ -75,8 +83,16 @@ export default class PledgeForm extends ChildComponent {
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="deadline" />
             </div>
-            <Input className="c-input o-layout__item u-3/4 u-mb-small" type='date' attribute='deadline'
-              noLabel />
+            {/*<Input className="c-input o-layout__item u-3/4 u-mb-small" type='date' attribute='deadline'
+              noLabel />*/}
+
+            <div className="o-layout__item u-3/4 u-mb-small">
+              <DatePicker
+                className="c-input"
+                placeholderText="Klicken, um Datum auszuwählen"
+                onChange={this.handleChange}
+              />
+            </div>
 
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="title" />
