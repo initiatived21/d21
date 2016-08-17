@@ -561,6 +561,7 @@ en:
         label: Your question…
       response:
         label: Your answer…
+    date_format: DD/MM/YYYY
     pledge:
       amount:
         label: how many?
@@ -570,7 +571,7 @@ en:
         placeholder: give a refugee family a home
       deadline:
         label: Can be signed until
-        placeholder: 
+        placeholder: Please select date
       description:
         label: More Info (optional)
         placeholder: 

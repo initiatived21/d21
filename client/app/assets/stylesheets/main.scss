@@ -132,6 +132,7 @@ $o-flipper-height: $pledge-tile-height;
 @import "~react-image-crop/lib/ReactCrop.scss";
 
 @import "~react-datepicker/dist/react-datepicker";
+@import "aleut/vendor/vendor.react-datepicker";  /* Overwrites */
 
 //@import "~font-awesome/scss/font-awesome.scss";
 @import "~font-awesome/scss/variables";

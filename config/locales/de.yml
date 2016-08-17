@@ -568,6 +568,7 @@ de:
         label: Ihre Frage…
       response:
         label: Ihre Antwort…
+    date_format: DD.MM.YYYY
     pledge:
       amount:
         label: wie viele?
@@ -577,7 +578,7 @@ de:
         placeholder: eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
-        placeholder: 
+        placeholder: Bitte Datum auswählen
       description:
         label: Mehr Infos (optional)
         placeholder: |-

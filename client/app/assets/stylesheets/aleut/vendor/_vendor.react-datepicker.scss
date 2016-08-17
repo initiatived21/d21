@@ -1,18 +1,20 @@
 /*------------------------------------*\
-    #INPUT
+    #REACT-DATEPICKER OVERWRITES
 \*------------------------------------*/
 
 /**
- * Normal input component
+ * Customization
  */
 
-.c-input {
-  > input {
+.react-datepicker__input-container {
+  width: 100%;
+
+  input {
+    height: $input-height;
+    border-radius: $border-radius;
     width: 100%;
     padding: $spacing--tiny;
     border: 1px solid $gray;
-    border-radius: $border-radius;
     background-color: transparent;
-    height: $input-height;
   }
 }

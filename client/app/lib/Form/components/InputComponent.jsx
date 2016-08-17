@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import Select from 'react-select'
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
 import I18n from 'i18n-js'
 
 export default class Input extends Component {
@@ -39,6 +41,8 @@ export default class Input extends Component {
     const placeholder = I18n.t(
       `react_form.${model}${submodelKey}.${attribute}.placeholder`
     )
+
+    const dateFormat = I18n.t('react_form.date_format')
 
     let ariaLabel, placeholderOrLabel = placeholder
     if (inlineLabel) {
@@ -106,6 +110,24 @@ export default class Input extends Component {
             placeholder={placeholder}
             onChange={onChange}
           />
+        break
+
+      case 'date':
+        field =
+          <DatePicker
+            selected={value ? moment(value) : undefined}
+            placeholderText={placeholder}
+            dateFormat={dateFormat}
+            minDate={moment()}
+            maxDate={moment().add(5, 'months')}
+            locale={I18n.locale}
+            onChange={(date) => {
+              this.props.onChange(
+                formId, attribute, submodel, date.toString()
+              )
+            }}
+          />
+        break
 
       default:
         field =
