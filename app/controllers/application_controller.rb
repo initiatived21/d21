@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
   end
 
   # temporary HTTP password protection
-  secrets = Rails.application.secrets
-  http_basic_authenticate_with(
-    name: secrets.protect['user'],
-    password: secrets.protect['pwd'],
-    if: -> { Rails.env.staging? || Rails.env.production? }
-  )
+  # secrets = Rails.application.secrets
+  # http_basic_authenticate_with(
+  #   name: secrets.protect['user'],
+  #   password: secrets.protect['pwd'],
+  #   if: -> { Rails.env.staging? || Rails.env.production? }
+  # )
 
   protected
 
