@@ -45,7 +45,7 @@ export default class PledgeForm extends ChildComponent {
             <span className="c-pledge-form__part1 c-pledge-form__text">
               {this.t('.promise.part1')}
             </span>
-            <Input className="c-pledge-form__part2 c-pledge-form__input"
+            <Input className="c-input c-pledge-form__part2 c-pledge-form__input"
               attribute='content' />
             <span className="c-pledge-form__part3 c-pledge-form__text">
               {this.t('.promise.part3')}
@@ -56,9 +56,9 @@ export default class PledgeForm extends ChildComponent {
             <NumberInput
               className="c-pledge-form__part5 c-pledge-form__input c-number-input"
               attribute="amount" defaultValue={10} min={1} max={10000} />
-            <Input className="c-pledge-form__part6 c-pledge-form__input"
+            <Input className="c-input c-pledge-form__part6 c-pledge-form__input"
               attribute='who' />
-            <Input className="c-pledge-form__part7 c-pledge-form__input"
+            <Input className="c-input c-pledge-form__part7 c-pledge-form__input"
               attribute='requirement' />
             <span className="c-pledge-form__part8 c-pledge-form__text">
               {this.t('.promise.part8')}

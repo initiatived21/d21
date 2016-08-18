@@ -15,4 +15,15 @@
     background-color: transparent;
     height: $input-height;
   }
+
+  &.has-errors > input {
+    border: 2px solid $warning-color;
+    background-color: $warning-color-background;
+  }
+}
+
+// TODO: Refactor
+.inline-errors {
+  font-weight: bold;
+  color: $warning-color;
 }

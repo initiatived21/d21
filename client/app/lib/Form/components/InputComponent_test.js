@@ -10,7 +10,8 @@ describe('InputComponent', function() {
     model: 'testModel',
     attribute: 'testAttribute',
     value: '',
-    formId: 'foo'
+    formId: 'foo',
+    errors: []
   }
 
   describe('with minimal props', function() {
@@ -103,11 +104,14 @@ describe('InputComponent', function() {
 
   describe('with errors', function() {
     it('must output those errors', function() {
-      const wrapper = mount(<InputComponent errors={['foo', 'bar']} {...defaultProps} />)
+      const wrapper = mount(<InputComponent {...defaultProps} errors={['foo', 'bar']} />)
 
       const errors = wrapper.find(`.${errorClass}`)
       errors.length.should.equal(1)
       errors.first().text().should.equal('foo, bar')
+
+      const div = wrapper.find('div')
+      div.hasClass('has-errors').should.be.true
     })
   })
 

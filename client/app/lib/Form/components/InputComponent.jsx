@@ -144,7 +144,7 @@ export default class Input extends Component {
     }
 
     let errorSpan
-    if (errors) {
+    if (errors && errors.length > 0) {
       errorSpan =
         <span className='inline-errors'>
           {errors.join(', ')}
@@ -152,6 +152,9 @@ export default class Input extends Component {
     }
 
     let combinedClassName = `input-${attribute}`
+    if (errors && errors.length > 0) {
+      combinedClassName += ' has-errors'
+    }
     if (className) {
       combinedClassName += ` ${className}`
     }
