@@ -194,6 +194,7 @@ class PledgesController < ApplicationController
     #   tag_ids: [],
     #   initiator: [:name, :email, :organization, :avatar, :password]
     # )
+    params[:pledge][:tag_ids] = (params[:pledge][:tag_ids]).split(',')
     params[:pledge]
   end
 

@@ -58,40 +58,59 @@ export default class JayForm {
     return {}
   }
 
-
-
   toFormData(form) {
     let formDataObject = new FormData()
+    this.addModelPropsToFormData(formDataObject)
+    this.addSubmodelPropsToFormData(formDataObject)
+    this.addMetaFieldsToFormData(formDataObject, form)
+    this.addMethodToFormData(formDataObject, form)
+    return formDataObject
+  }
 
-    // Add stored props to FormData
-    for (let property of this.constructor.properties) {
-      formDataObject.set(
+  addModelPropsToFormData(formData) {
+    const { properties } = this.constructor
+    for (let property of properties) {
+      this.setFormDataValue(
+        formData,
         `${this.constructor.model}[${property}]`,
-        this.attributes[property] || ''
+        this.attributes[property]
       )
     }
+  }
 
-    // Add submodel props to FormData
+  addSubmodelPropsToFormData(formData) {
     const { submodelProperties } = this.constructor
     if (submodelProperties) {
       for (let submodel in submodelProperties) {
         for (let property of submodelProperties[submodel]) {
-          formDataObject.set(
+          this.setFormDataValue(
+            formData,
             `${this.constructor.model}[${submodel}][${property}]`,
-            this.attributes[submodel][property] || ''
+            this.attributes[submodel][property]
           )
         }
       }
     }
+  }
 
-    // Add meta data to FormData
+  setFormDataValue(formData, key, value) {
+    if (!value) {
+      formData.set(key, '')
+    }
+    else {
+      formData.set(key, value)
+    }
+  }
+
+  addMetaFieldsToFormData(formData, form) {
     const metaFields = [ 'utf8', 'authenticity_token', 'commit' ]
     for (let metaField of metaFields) {
-      formDataObject.set(metaField, (form[metaField] && form[metaField].value))
+      formData.set(metaField, (form[metaField] && form[metaField].value))
     }
-    const method = form._method ? form._method.value : 'POST'
-    formDataObject.set('_method', method)
+  }
 
-    return formDataObject
+  addMethodToFormData(formData, form) {
+    const method = form._method ? form._method.value : 'POST'
+    formData.set('_method', method)
   }
 }

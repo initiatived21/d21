@@ -87,8 +87,9 @@ export default class Input extends Component {
       case 'multiselect':
         field =
           <Select multi
-            name={name + '[]'}
+            name={name}
             value={value}
+            joinValues
             placeholder={placeholder}
             options={this.props.options}
             onChange={changes => {
