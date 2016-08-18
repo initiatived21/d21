@@ -4,7 +4,7 @@ import onClickOutside from 'react-onclickoutside'
 import Session from '../components/Session'
 import { toggleSessionPopup, hideSessionPopup } from '../actions/SessionActions'
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state) => ({
   isVisible: state.ui.sessionPopupVisible
 })
 
@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
     event.preventDefault()
     dispatch(toggleSessionPopup())
   },
-  onWindowClick: function(event) {
+  onWindowClick: function() {
     dispatch(hideSessionPopup())
   }
 })

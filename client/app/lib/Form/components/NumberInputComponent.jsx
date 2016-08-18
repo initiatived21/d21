@@ -49,11 +49,11 @@ export default class NumberInputComponent extends Component {
       )
     }
 
-    const onDecrease = e => {
+    const onDecrease = () => {
       this.props.onDecrease(formObjectName, attribute, submodel, value)
     }
 
-    const onIncrease = e => {
+    const onIncrease = () => {
       this.props.onIncrease(formObjectName, attribute, submodel, value)
     }
 

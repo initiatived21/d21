@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 
 import PledgeView from '../components/PledgeView'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = () => {
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  pushIncluded
+const mapDispatchToProps = () => ({
+  //pushIncluded
 })
 
 export default connect(

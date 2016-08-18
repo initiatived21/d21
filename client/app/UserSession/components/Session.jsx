@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
-import FontAwesome from 'react-fontawesome';
+import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 
-import ChildComponent from '../../lib/Base/components/ChildComponent';
-import SignInForm from './SignInForm';
-import LoggedIn from './LoggedIn';
+import ChildComponent from '../../lib/Base/components/ChildComponent'
+import SignInForm from './SignInForm'
+import LoggedIn from './LoggedIn'
 
 export default class Session extends ChildComponent {
   static propTypes = {

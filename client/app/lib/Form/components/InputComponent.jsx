@@ -18,13 +18,12 @@ export default class Input extends Component {
     inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
-    as: PropTypes.string,
     className: PropTypes.string,
   }
 
   render() {
     const {
-      model, attribute, type, submodel, errors, as, object, value,
+      model, attribute, type, submodel, errors, object, value,
       noLabel, inlineLabel, className, formId
     } = this.props
 
@@ -50,6 +49,7 @@ export default class Input extends Component {
       placeholderOrLabel = label
     }
 
+    // TODO: Remove jQuery dependency
     const onChange = e => {
       this.props.onChange(
         formId, attribute, submodel, $(e.target).val()
@@ -72,8 +72,8 @@ export default class Input extends Component {
 
     let field
     switch (type) {
-      case 'textarea':
-        field =
+    case 'textarea':
+      field =
           <textarea
             id={id}
             name={name}
@@ -82,10 +82,10 @@ export default class Input extends Component {
             aria-label={ariaLabel}
             onChange={onChange}
           />
-        break
+      break
 
-      case 'multiselect':
-        field =
+    case 'multiselect':
+      field =
           <Select multi
             name={name}
             value={value}
@@ -100,10 +100,10 @@ export default class Input extends Component {
               )
             }}
           />
-        break
+      break
 
-      case 'file': // no value
-        field =
+    case 'file': // no value
+      field =
           <input
             id={id}
             type='file'
@@ -111,10 +111,10 @@ export default class Input extends Component {
             placeholder={placeholder}
             onChange={onChange}
           />
-        break
+      break
 
-      case 'date':
-        field =
+    case 'date':
+      field =
           <DatePicker
             selected={value ? moment(value) : undefined}
             placeholderText={placeholder}
@@ -128,10 +128,10 @@ export default class Input extends Component {
               )
             }}
           />
-        break
+      break
 
-      default:
-        field =
+    default:
+      field =
           <input
             id={id}
             type={type || 'text'}

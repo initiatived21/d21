@@ -1,10 +1,7 @@
 import { connect } from 'react-redux'
-import merge from 'lodash/merge'
 import I18n from 'i18n-js'
-import { setEntity } from '../../lib/actions/entityActions'
 import { toggleSessionPopup } from '../../UserSession/actions/SessionActions'
 import PledgeForm from '../components/PledgeForm'
-import updateAction from '../../lib/Form/actions/updateAction'
 
 const mapStateToProps = function(state, ownProps) {
   return {

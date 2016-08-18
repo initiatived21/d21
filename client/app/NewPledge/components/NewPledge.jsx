@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react';
-import { Provider } from 'react-redux';
+import React, { PropTypes } from 'react'
+import { Provider } from 'react-redux'
 import store from '../../lib/store'
-import RootComponent from '../../lib/Base/components/RootComponent';
-import ActivePledgeForm from '../containers/ActivePledgeForm';
+import RootComponent from '../../lib/Base/components/RootComponent'
+import ActivePledgeForm from '../containers/ActivePledgeForm'
 import PledgeFormHelp from './PledgeFormHelp'
 
 export default class NewPledge extends RootComponent {
@@ -29,4 +29,4 @@ export default class NewPledge extends RootComponent {
       </Provider>
     )
   }
-};
+}

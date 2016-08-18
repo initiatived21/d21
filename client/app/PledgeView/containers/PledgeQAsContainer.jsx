@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import values from 'lodash/values'
 import PledgeQAs from '../components/PledgeQAs'
-import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 
 const mapStateToProps = (state, ownProps) => {
   const comments =
@@ -25,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

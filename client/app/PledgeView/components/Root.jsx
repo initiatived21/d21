@@ -14,7 +14,7 @@ export default class Root extends RootComponent {
   render() {
     return (
       <Provider store={store}>
-        <PledgeViewContainer {this.props...} />
+        <PledgeViewContainer {...this.props} />
       </Provider>
     )
   }

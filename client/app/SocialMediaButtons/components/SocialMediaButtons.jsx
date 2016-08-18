@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 
 import openWindow from '../../lib/browser/openWindow'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'

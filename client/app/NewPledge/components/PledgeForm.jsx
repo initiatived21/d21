@@ -1,5 +1,4 @@
 import React, { PropTypes  } from 'react'
-import Select from 'react-select'
 import FontAwesome from 'react-fontawesome'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
@@ -18,10 +17,6 @@ export default class PledgeForm extends ChildComponent {
     availableTags: PropTypes.array.isRequired,
     onLinkClick: PropTypes.func.isRequired,
     currentUser: PropTypes.object,
-  }
-
-  handleChange(date) {
-    console.log(typeof date, date, date.toString())
   }
 
   render() {

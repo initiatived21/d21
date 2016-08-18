@@ -1,3 +1,5 @@
+/* global process */
+
 // Run like this:
 // cd client && npm run build:dev:client
 // Note that Foreman (Procfile.dev) has also been configured to take care of this.

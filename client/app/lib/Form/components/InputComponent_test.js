@@ -1,5 +1,4 @@
 import React from 'react'
-import TestUtils from 'react-addons-test-utils'
 import { mount } from 'enzyme'
 
 import InputComponent from './InputComponent.jsx'

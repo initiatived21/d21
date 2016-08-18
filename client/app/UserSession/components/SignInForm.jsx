@@ -1,6 +1,6 @@
 import React, { PropTypes  } from 'react'
 import FontAwesome from 'react-fontawesome'
-
+import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SignInFormObject from '../../lib/form_objects/sign_in_form'
 import FormFor from '../../lib/Form/containers/FormFor'

@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class GetMoreResultsButton extends ChildComponent {
   static propTypes = {
@@ -9,16 +9,16 @@ export default class GetMoreResultsButton extends ChildComponent {
   }
 
   render() {
-    const { children, disabled, clickHandler, numResults } = this.props;
+    const { children, disabled, clickHandler, numResults } = this.props
 
-    const buttonProps = {};
+    const buttonProps = {}
     if (disabled) {
-      buttonProps['className'] = 'o-btn o-btn--small c-btn--disabled';
-      buttonProps['disabled'] = 'disabled';
+      buttonProps['className'] = 'o-btn o-btn--small c-btn--disabled'
+      buttonProps['disabled'] = 'disabled'
     }
     else {
-      buttonProps['className'] = 'o-btn o-btn--small';
-      buttonProps['onClick'] = () => clickHandler(numResults);
+      buttonProps['className'] = 'o-btn o-btn--small'
+      buttonProps['onClick'] = () => clickHandler(numResults)
     }
 
     return (

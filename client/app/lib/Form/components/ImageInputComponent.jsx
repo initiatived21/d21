@@ -41,25 +41,25 @@ export default class ImageInputComponent extends Component {
     let fileValueProps = {}
     let imagePreview = null
     switch(imageState) {
-      case IMAGE_STATE_NONE:
-        imagePreview = (
+    case IMAGE_STATE_NONE:
+      imagePreview = (
           <p className="c-image-input__text">
             Bitte wählen Sie ein Bild aus.
           </p>
         )
-        break
-      case IMAGE_STATE_LOADING:
-        imagePreview = (
+      break
+    case IMAGE_STATE_LOADING:
+      imagePreview = (
           <p className="c-image-input__text">
             <i>Lade Bild. Bitte warten…</i>
           </p>
         )
-        break
+      break
 
-      case IMAGE_STATE_LOADED:
-        const cropComponentWidth = (previewArea / originalImageHeight) *
+    case IMAGE_STATE_LOADED:
+      const cropComponentWidth = (previewArea / originalImageHeight) *
           Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
-        imagePreview = (
+      imagePreview = (
           <ImageCrop
             width={cropComponentWidth}
             src={originalImage.src}
@@ -68,21 +68,21 @@ export default class ImageInputComponent extends Component {
             handleFinishCrop={handleFinishCrop}
           />
         )
-        break
+      break
 
-      case IMAGE_STATE_CROPPED:
-        imagePreview = (
+    case IMAGE_STATE_CROPPED:
+      imagePreview = (
           <div className="c-image-input__preview">
             <img src={croppedImageUrl} />
           </div>
         )
         // Clear file input when crop is done so change is detected even if the same image is
         // selected
-        fileValueProps = { value: '' }
-        break
+      fileValueProps = { value: '' }
+      break
       
-      default:
-        imagePreview = null
+    default:
+      imagePreview = null
     }
 
     let combinedClassName = 'c-image-input'

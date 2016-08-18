@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import values from 'lodash/values'
 import PledgeList from '../../ElementList/components/PledgeList'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   const user = state.currentUser || {}
 
   const pledges =
@@ -22,7 +22,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

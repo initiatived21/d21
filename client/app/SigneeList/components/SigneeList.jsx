@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import Signee from './Signee';
-import { DUMMY_IMAGE_PATH } from '../../lib/config';
+import Signee from './Signee'
+import { DUMMY_IMAGE_PATH } from '../../lib/config'
 
 export default class SigneeList extends ChildComponent {
   static propTypes = {

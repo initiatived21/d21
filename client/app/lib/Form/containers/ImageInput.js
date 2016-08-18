@@ -42,7 +42,7 @@ const mapStateToProps = function(state, ownProps) {
 }
 
 const mapDispatchToProps = function(dispatch, ownProps) {
-  const { formObjectName, attribute, submodel, aspectRatio } = ownProps
+  const { attribute, aspectRatio } = ownProps
 
   const id = attribute  // attribute serves as id for the store
 

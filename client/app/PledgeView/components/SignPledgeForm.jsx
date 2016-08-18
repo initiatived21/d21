@@ -14,20 +14,11 @@ export default class SignPledgeForm extends ChildComponent {
       action: PropTypes.string.isRequired,
     }),
     editedSignature: PropTypes.object,
-    // existingAttrs: PropTypes.object.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
-    // object: PropTypes.object.isRequired,
   }
 
-  // componentWillMount() {
-  //   const {
-  //     editedSignature, existingAttrs, ensureStateObjectExistence, object
-  //   } = this.props
-  //   ensureStateObjectExistence(object, editedSignature, existingAttrs)
-  // }
-
   render() {
-    const { id, formData, onSubmit, object, isSubmitting } = this.props
+    const { formData, isSubmitting } = this.props
 
     return (
       <FormFor
@@ -70,6 +61,6 @@ export default class SignPledgeForm extends ChildComponent {
         </div>
 
       </FormFor>
-    );
+    )
   }
-};
+}

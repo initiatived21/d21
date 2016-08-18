@@ -1,13 +1,10 @@
-import React, { PropTypes  } from 'react'
+import React from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import I18n from 'i18n-js'
 import { FAQ_PATH } from '../../lib/config'
 
 export default class PledgeFormHelp extends ChildComponent {
-  static propTypes = {
-  }
-
   render() {
     return(
       <aside className="c-help">

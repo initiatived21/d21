@@ -1,12 +1,10 @@
 import React, { PropTypes } from 'react'
-import I18n                 from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
 import TagList              from '../../TagList/components/TagList'
 import InitiatorWithImage   from '../../PledgeData/components/InitiatorWithImage'
 import PledgeState          from '../../PledgeData/components/PledgeState'
 import ProgressBar          from '../../PledgeData/components/ProgressBar'
 import daysTill             from '../../lib/date_and_time/daysTill'
-import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config'
 
 export default class PledgeTileFront extends ChildComponent {
   static propTypes = {

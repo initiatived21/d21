@@ -1,11 +1,10 @@
-import React, { PropTypes } from 'react';
-import FontAwesome from 'react-fontawesome';
-import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent';
-import PledgeText           from './PledgeText';
-import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons';
+import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
+import ChildComponent       from '../../lib/Base/components/ChildComponent'
+import PledgeText           from './PledgeText'
+import SocialMediaButtons   from '../../SocialMediaButtons/components/SocialMediaButtons'
 import Avatar from '../../Avatar/components/Avatar'
-import { DOMAIN_PROD } from '../../lib/config';
+import { DOMAIN_PROD } from '../../lib/config'
 
 export default class PledgeTileBack extends ChildComponent {
   static propTypes = {
@@ -19,7 +18,7 @@ export default class PledgeTileBack extends ChildComponent {
   };
 
   render() {
-    const { initiatorName, initiatorImage, content, amount, who, requirement, path } = this.props;
+    const { initiatorName, initiatorImage, content, amount, who, requirement, path } = this.props
 
     return (
       <div className="c-pledge-tile o-box">
@@ -43,6 +42,6 @@ export default class PledgeTileBack extends ChildComponent {
         </div>
         <SocialMediaButtons url={`${DOMAIN_PROD}${path}`} />
       </div>
-    );
+    )
   }
-};
+}

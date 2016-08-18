@@ -19,7 +19,6 @@ export default class PledgeTile extends ChildComponent {
       requirement: PropTypes.string.isRequired,
       deadline: PropTypes.string.isRequired,
       signatures_count: PropTypes.number.isRequired,
-      aasm_state: PropTypes.string.isRequired,
       initiator: PropTypes.shape({
         name: PropTypes.string.isRequired,
         avatar: PropTypes.shape({
@@ -42,7 +41,6 @@ export default class PledgeTile extends ChildComponent {
     const pledgePath = this.getPledgePath()
 
     const remainingDays = daysTill(pledge.deadline)
-    const isUrgent = remainingDays <= 5 ? true : false
 
     const state = pledge.aasm_state
     const stateHeader = showControls ? <StateHeader state={state} /> : null

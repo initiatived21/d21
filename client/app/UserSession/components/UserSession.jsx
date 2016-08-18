@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react';
-import { Provider } from 'react-redux';
+import React, { PropTypes } from 'react'
+import { Provider } from 'react-redux'
 import store from '../../lib/store'
-import RootComponent from '../../lib/Base/components/RootComponent';
-import SessionContainer from '../containers/SessionContainer';
+import RootComponent from '../../lib/Base/components/RootComponent'
+import SessionContainer from '../containers/SessionContainer'
 
 export default class UserSession extends RootComponent {
   static propTypes = {

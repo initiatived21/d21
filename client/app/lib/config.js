@@ -1,5 +1,4 @@
 /* Configuration of client app */
-import I18n from 'i18n-js'
 
 /* Development */
 export const DUMMY_IMAGE_PATH = '/assets/images'

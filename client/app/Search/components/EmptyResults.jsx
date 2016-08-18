@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 import ElementList from '../../ElementList/components/ElementList'
 

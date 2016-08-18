@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
-import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 
 export default class PledgeText extends ChildComponent {
   static propTypes = {
@@ -11,7 +10,7 @@ export default class PledgeText extends ChildComponent {
   };
 
   render() {
-    const { content, amount, who, requirement } = this.props;
+    const { content, amount, who, requirement } = this.props
 
     return (
       <p className="c-pledge-tile__text">
@@ -19,6 +18,6 @@ export default class PledgeText extends ChildComponent {
           Wir versprechen, {content}, wenn mindestens {amount} {who} {requirement}.
         </q>
       </p>
-    );
+    )
   }
 }

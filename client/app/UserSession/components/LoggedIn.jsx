@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
-
+import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import ButtonFor from '../../lib/Form/containers/ButtonFor'
 

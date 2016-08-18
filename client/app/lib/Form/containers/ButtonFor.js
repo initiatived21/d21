@@ -1,15 +1,12 @@
 import { connect } from 'react-redux'
-import merge from 'lodash/merge'
 
-import { setEntity } from '../../actions/entityActions'
-import submitAjaxForm from '../actions/submitAjaxForm'
 import StandaloneButton from '../components/StandaloneButton'
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state) => ({
   authToken: state.authToken,
 })
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

@@ -21,7 +21,7 @@ export default class BaseForm extends ChildComponent {
       <form action={action} method='POST'>
         <input type='hidden' name='authenticity_token' value={authToken} />
         <input type='hidden' name='_method' value={method} />
-        <button className={className} type='submit'>{children}</button>
+        <button className={combinedClassName} type='submit'>{children}</button>
       </form>
     )
   }

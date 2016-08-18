@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import PledgeQuestion from './PledgeQuestion'
-import PledgeAnswer from './PledgeAnswer'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 import NewAnswerFormObject from '../../lib/form_objects/new_answer_form'

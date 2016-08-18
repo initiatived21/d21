@@ -1,3 +1,5 @@
+/* global process, __dirname */
+
 // Webpack configuration for server bundle
 
 const webpack = require('webpack')
