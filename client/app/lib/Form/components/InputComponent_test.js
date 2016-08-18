@@ -10,7 +10,8 @@ describe('InputComponent', function() {
   const defaultProps = {
     model: 'testModel',
     attribute: 'testAttribute',
-    value: ''
+    value: '',
+    formId: 'foo'
   }
 
   describe('with minimal props', function() {

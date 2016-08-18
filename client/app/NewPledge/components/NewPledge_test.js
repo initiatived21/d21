@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 
 import NewPledge from './NewPledge.jsx'
 
-describe('NewPledge', function() {
+describe('<NewPledge />', function() {
   const formProps = {
     onSubmit: function() {},
 
@@ -34,7 +34,7 @@ describe('NewPledge', function() {
       }
     },
 
-    tags: {}
+    tags: []
   }
 
   it('should have two submit buttons', function() {

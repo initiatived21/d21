@@ -33,7 +33,19 @@ describe('<Pledge />', function () {
       avatar: {
         url: ''
       }
-    }
+    },
+    tags: [
+      {
+        id: 1,
+        name: 'family',
+        color: 'C32BAA'
+      },
+      {
+        id: 2,
+        name: 'books',
+        color: 'FF11AA'
+      }
+    ]
   }
 
   it('should render', function () {

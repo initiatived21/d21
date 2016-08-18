@@ -30,7 +30,6 @@ export default class PledgeView extends RootComponent {
   render() {
     const { pledge, user, forms } = this.props
 
-    console.log(pledge)
     return (
       <Provider store={store}>
         <main>

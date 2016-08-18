@@ -5,10 +5,17 @@ import TagList       from './TagList'
 
 describe('<TagList />', function () {
   const props = {
-    names: [
-      'Familie',
-      'Kinder',
-      'Frauen'
+    tags: [
+      {
+        id: 1,
+        name: 'family',
+        color: 'C32BAA'
+      },
+      {
+        id: 2,
+        name: 'books',
+        color: 'FF11AA'
+      }
     ]
   }
 
@@ -16,6 +23,6 @@ describe('<TagList />', function () {
     const wrapper = shallow(<TagList {...props} />)
 
     wrapper.hasClass('c-tag-list').should.be.true
-    wrapper.find(Tag).length.should.equal(3)
+    wrapper.find(Tag).length.should.equal(2)
   })
 })
