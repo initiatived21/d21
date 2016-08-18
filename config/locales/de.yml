@@ -31,12 +31,32 @@ de:
       days: Tage
       title: Zeit übrig
   PledgeForm:
+    account:
+      explanation: Über Ihr Nutzerkonto verwalten Sie das Versprechen.
+      have_one: Sie haben bereits ein Nutzerkonto?
+      heading: Ihre Daten für Ihr Nutzerkonto
+      login: Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
+    draft_explanation: Speichert Entwurf in Ihrem Nutzerkonto.
+    heading: Ein Versprechen abgeben
+    preview: Zur Vorschau
+    preview_explanation: Im nächsten Schritt können Sie Ihr Versprechen noch einmal überprüfen, bevor Sie es abschicken.
     promise:
       part1: "„Wir versprechen,"
       part3: ","
       part4: wenn
       part8: ".“"
     save_draft: Entwurf speichern
+  PledgeFormHelp:
+    faq_link: Schauen Sie in unseren FAQ nach.
+    further_questions: Sie haben weitere Fragen?
+    heading: So funktioniert es…
+    step: 'Schritt {{step}}:'
+    text:
+      step1: Sie veröffentlichen Ihr Versprechen.
+      step2: Andere Akteure unterzeichnen Ihr Versprechen.
+      step3: Sammelt ein Versprechen ausreichend Unterstützer, wird es umgesetzt.
+      step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+      step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeLocation:

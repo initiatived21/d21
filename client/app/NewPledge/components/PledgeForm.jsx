@@ -34,7 +34,7 @@ export default class PledgeForm extends ChildComponent {
         object={formObject}
         formData={this.props.formData}>
 
-        <h1>Ein Versprechen abgeben</h1>
+        <h1>{this.t('.heading')}</h1>
 
         {loginPrompt}
 
@@ -119,10 +119,11 @@ export default class PledgeForm extends ChildComponent {
               commit='save_draft'
             >
               <FontAwesome name="check" />
-              {` ${this.t('.save_draft')}`}
+              {' '}
+              {this.t('.save_draft')}
             </Button>
             <p>
-              Speichert Entwurf in Ihrem Nutzerkonto.
+              {this.t('.draft_explanation')}
             </p>
           </div>
           <div className="o-layout__item u-2/3">
@@ -131,11 +132,10 @@ export default class PledgeForm extends ChildComponent {
             >
               <FontAwesome name="eye" />
               {' '}
-              Zur Vorschau
+              {this.t('.preview')}
             </Button>
             <p>
-              Im nächsten Schritt können Sie Ihr Versprechen noch einmal
-              überprüfen, bevor Sie es abschicken.
+              {this.t('.preview_explanation')}
             </p>
           </div>
         </div>
@@ -150,9 +150,12 @@ export default class PledgeForm extends ChildComponent {
 
     return (
       <div className='c-new-pledge__user-data'>
-        <h2>Ihre Daten für Ihr Nutzerkonto</h2>
+        <h2>{this.t('.account.heading')}</h2>
 
-        <p className="u-mb-small">Über Ihr Nutzerkonto verwalten Sie das Versprechen.</p>
+        <p className="u-mb-small">
+          {this.t('.account.explanation')}
+          }
+        </p>
 
         {loginPrompt}
 
@@ -197,10 +200,10 @@ export default class PledgeForm extends ChildComponent {
   renderLoginPrompt(onLinkClick) {
     return (
       <p className="u-mb-small">
-        Sie haben bereits ein Nutzerkonto?
+        {this.t('.account.have_one')}
         {' '}
         <a href="#" onClick={onLinkClick}>
-          Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
+          {this.t('.account.login')}
         </a>
       </p>
     )

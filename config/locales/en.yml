@@ -31,12 +31,32 @@ en:
       days: days
       title: Time left
   PledgeForm:
+    account:
+      explanation: Through your user account you manage the pledge.
+      have_one: You already have an account?
+      heading: Your user account data
+      login: Please login to carry over your data.
+    draft_explanation: Stores pledge draft into your account.
+    heading: Make a pledge
+    preview: Preview pledge
+    preview_explanation: During the next step you can verify your pledge before submitting it.
     promise:
-      part1: "“We promise to"
+      part1: "“We promise"
       part3: 
       part4: if
       part8: ".”"
-    save_draft: Save Draft
+    save_draft: Save draft
+  PledgeFormHelp:
+    faq_link: Look into our FAQ.
+    further_questions: Further questions?
+    heading: How it works…
+    step: 'Step {{step}}:'
+    text:
+      step1: 
+      step2: 
+      step3: 
+      step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+      step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
     img_alt: image describing the pledge
   PledgeLocation:
@@ -568,7 +588,7 @@ en:
         placeholder: 10
       content:
         label: what?
-        placeholder: give a refugee family a home
+        placeholder: to give a refugee family a home
       deadline:
         label: Can be signed until
         placeholder: Please select date
