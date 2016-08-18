@@ -27,10 +27,10 @@ export default class PreviewExplanation extends ChildComponent {
           </ButtonFor>
         )
       } else {
-        statusInfo = this.t('.status.confirm_email')
+        statusInfo = <p>{this.t('.status.confirm_email')}</p>
       }
     } else {
-      statusInfo = this.t('.status.reviewed')
+      statusInfo = <p>this.t('.status.reviewed')</p>
     }
 
     return (
@@ -40,8 +40,7 @@ export default class PreviewExplanation extends ChildComponent {
         </h2>
 
         <div className="c-sidebar__wrapper">
-          {this.t('.preview')}
-
+          <p className="u-mb-small">{this.t('.preview')}</p>
           {statusInfo}
         </div>
       </div>
