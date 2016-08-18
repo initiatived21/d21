@@ -92,28 +92,29 @@
 
       <nav class="c-primary-nav">
         <ul class="o-list-inline">
-          <li class="c-primary-nav__item c-primary-nav__item--active">
-            <span><%= t('.start_link') %></span>
+          <li>
+            <%= link_to t('.start_link'), home_path(locale: I18n.locale),
+              class: menulink_class(home_path(locale: I18n.locale)) %>
           </li><!--
-          --><li class="c-primary-nav__item">
+          --><li>
             <%= link_to t('.new_pledge_link'), new_pledge_path(locale: I18n.locale),
-              class: 'c-primary-nav__link' %>
+              class: menulink_class(new_pledge_path(locale: I18n.locale)) %>
           </li><!--
-          --><li class="c-primary-nav__item">
+          --><li>
             <%= link_to t('.howitworks_link'), howitworks_path(locale: I18n.locale),
-              class: 'c-primary-nav__link' %>
+              class: menulink_class(howitworks_path(locale: I18n.locale)) %>
           </li><!--
-          --><li class="c-primary-nav__item">
-            <%= link_to t('.about_link'), howitworks_path(locale: I18n.locale),
-              class: 'c-primary-nav__link' %>
+          --><li>
+            <%= link_to t('.about_link'), about_path(locale: I18n.locale),
+              class: menulink_class(about_path(locale: I18n.locale)) %>
           </li><!--
-          --><li class="c-primary-nav__item">
-            <%= link_to t('.press_link'), howitworks_path(locale: I18n.locale),
-              class: 'c-primary-nav__link' %>
+          --><li>
+            <%= link_to t('.press_link'), press_path(locale: I18n.locale),
+              class: menulink_class(press_path(locale: I18n.locale)) %>
           </li><!--
-          --><li class="c-primary-nav__item">
+          --><li>
             <%= link_to t('.blog_link'), 'https://blog.buntundverbindlich.de/',
-              class: 'c-primary-nav__link' %>
+              class: 'c-primary-nav__link', target: '_blank' %>
           </li>
         </ul>
       </nav>

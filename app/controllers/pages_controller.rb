@@ -29,6 +29,12 @@ class PagesController < ApplicationController
   def howitworks
   end
 
+  def about
+  end
+
+  def press
+  end
+
   def not_found
     render status: 404, formats: [:html]
   end

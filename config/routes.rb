@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get '/privacy' => 'pages#privacy', as: :privacy
     get '/contact' => 'pages#contact', as: :contact
     get '/howitworks' => 'pages#howitworks', as: :howitworks
+    get '/about' => 'pages#about', as: :about
+    get '/press' => 'pages#press', as: :press
     get '/sitemap' => 'pages#sitemap', as: :sitemap
 
     get '/users/profile' => 'users#profile', as: :profile
