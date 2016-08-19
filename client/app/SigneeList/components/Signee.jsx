@@ -30,6 +30,13 @@ export default class Signee extends ChildComponent {
     }
     else {
       nameOrAnonymous = name
+
+      if (organization) {
+        nameOrAnonymous += `, ${organization}`
+      }
+      if (contact_person) {
+        nameOrAnonymous += ` (${this.t('.contact_person')})`
+      }
     }
 
     return (

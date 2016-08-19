@@ -19,12 +19,23 @@ describe('<Signee />', function () {
     const wrapper = shallow(<Signee {...props} />)
 
     wrapper.find('li').length.should.equal(1)
-    wrapper.find('img').length.should.equal(1)
   })
 
   it('should not display the name if anonymous is set', function() {
     const wrapper = shallow(<Signee {...props} anonymous />)
 
     wrapper.text().should.not.match(/Max Mustermann/)
+  })
+
+  it('should display the organization if it is set', function() {
+    const wrapper = shallow(<Signee {...props} organization="Lenovo" />)
+
+    wrapper.text().should.match(/Lenovo/)
+  })
+
+  it('should not display the organization if anonymous is set', function() {
+    const wrapper = shallow(<Signee {...props} anonymous organization="Lenovo" />)
+
+    wrapper.text().should.not.match(/Lenovo/)
   })
 })

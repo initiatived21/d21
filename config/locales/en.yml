@@ -107,6 +107,7 @@ en:
     small_print: 
   Signee:
     anonymous: Name is known to the editors
+    contact_person: contact person
   SigneeList:
     heading: Signees
     no_signees: There are no signees yet.
