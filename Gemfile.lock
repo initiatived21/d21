@@ -447,6 +447,7 @@ GEM
       foreman
       rails (>= 3.2)
       rainbow (~> 2.1)
+    redcarpet (3.3.4)
     redis (3.3.0)
     ref (2.0.0)
     representable (3.0.0)
@@ -625,6 +626,7 @@ DEPENDENCIES
   rails_best_practices
   rake
   react_on_rails (= 6.0.5)
+  redcarpet
   redis (>= 3.0)
   reform!
   rubocop

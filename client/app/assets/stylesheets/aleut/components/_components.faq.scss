@@ -21,3 +21,14 @@
 h1 + .c-faq__question {
   margin-top: 0;
 }
+
+.c-faq__answer {
+  p {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-left: 1.5em;
+  }
+}

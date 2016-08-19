@@ -41,6 +41,8 @@ gem 'cells'
 gem 'cells-rails'
 gem 'cells-slim'
 
+gem 'redcarpet'
+
 gem 'aasm'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
