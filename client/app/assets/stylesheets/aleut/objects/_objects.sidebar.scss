@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #SIDEBAR OBJECT
+\*------------------------------------*/
+
+/**
+ * Responsive sidebar object
+ *
+ * Sidebar is positioned on the left or right at size l.
+ * Otherwise it is just displayed within the normal flow.
+ *
+ * .o-sidebar__container must appear above .o-sidebar in the hierarchy
+ * because it serves as a container for the absolutely positioned sidebar.
+ *
+ */
+
+
+.o-sidebar {
+  @include media-query(l) {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.o-sidebar--left {
+  @include media-query(l) {
+    left: 0;
+  }
+}
+
+.o-sidebar--right {
+  @include media-query(l) {
+    right: 0;
+  }
+}
+
+.o-sidebar__container {
+  position: relative;
+}
