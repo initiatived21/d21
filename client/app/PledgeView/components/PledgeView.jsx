@@ -41,7 +41,7 @@ export default class PledgeView extends RootComponent {
               <PledgeUpdatesContainer pledge_id={pledge.id} />
               <PledgeQAsContainer pledge_id={pledge.id}
                 forms={forms} />
-              <SigneeListContainer pledge_id={pledge.id} />
+              <SigneeListContainer pledge_id={pledge.id} user={user} />
             </div>
           </div>
         </main>

@@ -8,24 +8,26 @@ export default class Signee extends ChildComponent {
   static propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    email: PropTypes.string,
     img_src: PropTypes.string.isRequired,
     reason: PropTypes.string,
     created_at: PropTypes.string.isRequired,
     anonymous: PropTypes.bool,
     organization: PropTypes.string,
-    contact_person: PropTypes.bool
+    contact_person: PropTypes.bool,
+    showPrivateData: PropTypes.bool
   }
 
   render() {
-    const { id, name, img_src, reason, created_at, anonymous, organization,
-      contact_person } = this.props
+    const { id, name, email, img_src, reason, created_at, anonymous, organization,
+      contact_person, showPrivateData } = this.props
 
     const createdAtStr = I18n.strftime(
       new Date(Date.parse(created_at)), FORMAT_DATE_AND_TIME[I18n.locale]
     )
 
     let nameOrAnonymous
-    if (anonymous) {
+    if (anonymous && !showPrivateData) {
       nameOrAnonymous = this.t('.anonymous')
     }
     else {
@@ -39,6 +41,11 @@ export default class Signee extends ChildComponent {
       }
     }
 
+    let emailOrNothing
+    if (showPrivateData) {
+      emailOrNothing = email
+    }
+
     return (
       <li className="c-signee-list__item">
         <div className="o-media">
@@ -48,11 +55,12 @@ export default class Signee extends ChildComponent {
               {id}
             </span>
           </div>
-          <div className="c-signee-list__signee-data o-media__body">
+          <article className="c-signee-list__signee-data o-media__body">
             <h3 className="c-signee-list__signee-name">{nameOrAnonymous}</h3>
             <p className="c-signee-list__signee-comment">{reason}</p>
+            <p className="c-signee-list__signee-email">{emailOrNothing}</p>
             <p className="c-signee-list__signee-date">{createdAtStr}</p>
-          </div>
+          </article>
         </div>
       </li>
     )

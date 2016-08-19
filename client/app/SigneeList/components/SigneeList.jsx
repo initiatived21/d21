@@ -5,10 +5,11 @@ import Signee from './Signee'
 export default class SigneeList extends ChildComponent {
   static propTypes = {
     pledge_id: PropTypes.number.isRequired,
-    signatures: PropTypes.array.isRequired
+    signatures: PropTypes.array.isRequired,
+    showPrivateData: PropTypes.bool,
   }
   render() {
-    const { signatures } = this.props
+    const { signatures, showPrivateData } = this.props
 
     let signeeListOrText
     if (signatures.length > 0) {
@@ -19,12 +20,14 @@ export default class SigneeList extends ChildComponent {
               key={signature.id}
               id={index + 1}
               name={signature.name}
+              email={signature.email}
               reason={signature.reason}
               img_src={''}
               created_at={signature.created_at}
               anonymous={signature.anonymous}
               organization={signature.organization}
               contact_person={signature.contact_person}
+              showPrivateData={showPrivateData}
             />
           )}
         </ol>

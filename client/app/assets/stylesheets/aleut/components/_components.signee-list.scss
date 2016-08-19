@@ -57,8 +57,15 @@
   color: $primary-color;
 }
 
+.c-signee-list__signee-comment {
+  margin-bottom: $spacing--tiny;
+}
+
+.c-signee-list__signee-email {
+  color: $mid-dark-gray;
+}
+
 .c-signee-list__signee-date {
-  margin-top: $spacing--tiny;
   @include font-size(14px, 1.5);
   font-style: italic;
   color: $mid-dark-gray;
