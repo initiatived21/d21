@@ -105,6 +105,8 @@ en:
     i_sign: I sign this pledge.
     sign: Sign
     small_print: 
+  Signee:
+    anonymous: Name is known to the editors
   SigneeList:
     heading: Signees
     no_signees: There are no signees yet.

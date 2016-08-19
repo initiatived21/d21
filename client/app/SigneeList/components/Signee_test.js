@@ -21,4 +21,10 @@ describe('<Signee />', function () {
     wrapper.find('li').length.should.equal(1)
     wrapper.find('img').length.should.equal(1)
   })
+
+  it('should not display the name if anonymous is set', function() {
+    const wrapper = shallow(<Signee {...props} anonymous />)
+
+    wrapper.text().should.not.match(/Max Mustermann/)
+  })
 })

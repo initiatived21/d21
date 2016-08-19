@@ -23,6 +23,9 @@ export default class SigneeList extends ChildComponent {
               reason={signature.reason}
               img_src={`${DUMMY_IMAGE_PATH}/signee.jpg`}
               created_at={signature.created_at}
+              anonymous={signature.anonymous}
+              organization={signature.organization}
+              contact_person={signature.contact_person}
             />
           )}
         </ol>
