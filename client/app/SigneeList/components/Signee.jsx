@@ -42,12 +42,16 @@ export default class Signee extends ChildComponent {
     return (
       <li className="c-signee-list__item">
         <div className="o-media">
-          <CommentAvatar className="c-signee-list__signee-img o-media__img" large />
+          <div className="c-signee-list__signee-img o-media__img">
+            <CommentAvatar large />
+            <span className="c-signee-list__signee-id">
+              {id}
+            </span>
+          </div>
           <div className="c-signee-list__signee-data o-media__body">
             <h3 className="c-signee-list__signee-name">{nameOrAnonymous}</h3>
             <p className="c-signee-list__signee-comment">{reason}</p>
             <p className="c-signee-list__signee-date">{createdAtStr}</p>
-            {/* TODO: display id */}
           </div>
         </div>
       </li>

@@ -14,10 +14,10 @@ export default class SigneeList extends ChildComponent {
     if (signatures.length > 0) {
       signeeListOrText = (
         <ol className="c-signee-list o-list-bare">
-          {signatures.map( signature =>
+          {signatures.map( (signature, index) =>
             <Signee
               key={signature.id}
-              id={signature.id}
+              id={index + 1}
               name={signature.name}
               reason={signature.reason}
               img_src={''}

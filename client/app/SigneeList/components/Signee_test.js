@@ -6,7 +6,7 @@ import Signee from './Signee'
 
 describe('<Signee />', function () {
   const props = {
-    id: 1,
+    id: 53,
     name: 'Max Mustermann',
     img_src: '/images/max_mustermann.jpg',
     comment: 'Tolle Initiative!',
@@ -37,5 +37,11 @@ describe('<Signee />', function () {
     const wrapper = shallow(<Signee {...props} anonymous organization="Lenovo" />)
 
     wrapper.text().should.not.match(/Lenovo/)
+  })
+
+  it('should display its id or index', function() {
+    const wrapper = shallow(<Signee {...props} />)
+
+    wrapper.text().should.match(/53/)
   })
 })
