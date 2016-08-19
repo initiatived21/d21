@@ -23,4 +23,9 @@ img.c-avatar {
 .c-avatar--comment {
   width: $comment-avatar-size;
   height: $comment-avatar-size;
+
+  &.c-avatar--large {
+    width: 89px;
+    height: 89px;
+  }
 }

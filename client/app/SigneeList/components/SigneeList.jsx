@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import Signee from './Signee'
-import { DUMMY_IMAGE_PATH } from '../../lib/config'
 
 export default class SigneeList extends ChildComponent {
   static propTypes = {
@@ -21,7 +20,7 @@ export default class SigneeList extends ChildComponent {
               id={signature.id}
               name={signature.name}
               reason={signature.reason}
-              img_src={`${DUMMY_IMAGE_PATH}/signee.jpg`}
+              img_src={''}
               created_at={signature.created_at}
               anonymous={signature.anonymous}
               organization={signature.organization}

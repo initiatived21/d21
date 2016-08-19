@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import I18n                 from 'i18n-js'
 import { FORMAT_DATE_AND_TIME } from '../../lib/config'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
+import CommentAvatar from '../../Avatar/components/CommentAvatar'
 
 export default class Signee extends ChildComponent {
   static propTypes = {
@@ -34,7 +35,7 @@ export default class Signee extends ChildComponent {
     return (
       <li className="c-signee-list__item">
         <div className="o-media">
-          <img className="c-signee-list__signee-img o-media__img" src={img_src} width="89" height="89" alt={name} />
+          <CommentAvatar className="c-signee-list__signee-img o-media__img" large />
           <div className="c-signee-list__signee-data o-media__body">
             <h3 className="c-signee-list__signee-name">{nameOrAnonymous}</h3>
             <p className="c-signee-list__signee-comment">{reason}</p>
