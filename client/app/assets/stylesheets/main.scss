@@ -136,21 +136,7 @@ $o-flipper-height: $pledge-tile-height;
 @import "~react-datepicker/dist/react-datepicker";
 @import "aleut/vendor/vendor.react-datepicker";  /* Overwrites */
 
-//@import "~font-awesome/scss/font-awesome.scss";
-@import "~font-awesome/scss/variables";
-@import "~font-awesome/scss/mixins";
-//@import "~font-awesome/scss/path";
-@import "~font-awesome/scss/core";
-@import "~font-awesome/scss/larger";
-@import "~font-awesome/scss/fixed-width";
-@import "~font-awesome/scss/list";
-@import "~font-awesome/scss/bordered-pulled";
-//@import "~font-awesome/scss/animated";
-@import "~font-awesome/scss/rotated-flipped";
-//@import "~font-awesome/scss/stacked";
-@import "~font-awesome/scss/icons";
-@import "~font-awesome/scss/screen-reader";
-
+@import "aleut/vendor/fontello";
 
 
 /*------------------------------------*\

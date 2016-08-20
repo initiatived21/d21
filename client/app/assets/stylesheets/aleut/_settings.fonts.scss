@@ -5,11 +5,15 @@
 // TODO: Maybe put OpenSans back here instead of getting it from Google.
 
 
-// Get FontAwesome webfont temporarily from cdn. Real path should be
-// '~font-awesome/fonts/fontawesome-webfont.woff'
+/**
+ * Font Awesome subset
+ * Created with Fontello, http://fontello.com/
+ */
+
 @font-face {
   font-family: 'FontAwesome';
-  src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/fonts/fontawesome-webfont.woff') format('woff');
+  src: local('FontAwesome'),
+       url('../fonts/font-awesome-subset.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
