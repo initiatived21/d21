@@ -36,20 +36,6 @@ export default class PledgeFormHelp extends ChildComponent {
             {this.t('.text.step3')}
           </p>
 
-          <h3 className="c-help__subheading">
-            {this.t('.step', { step: 4 })}
-          </h3>
-          <p className="c-help__paragraph">
-            {this.t('.text.step4')}
-          </p>
-
-          <h3 className="c-help__subheading">
-            {this.t('.step', { step: 5 })}
-          </h3>
-          <p className="c-help__paragraph">
-            {this.t('.text.step5')}
-          </p>
-
           <div className="c-help__faq o-media o-media--flush u-mt">
             <FontAwesome className="o-media__img" name="info" />
             <div className="o-media__body">
