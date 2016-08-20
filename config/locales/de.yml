@@ -54,9 +54,9 @@ de:
     heading: So funktioniert es…
     step: 'Schritt {{step}}:'
     text:
-      step1: Sie veröffentlichen Ihr Versprechen.
-      step2: Andere Akteure unterzeichnen Ihr Versprechen.
-      step3: Sammelt ein Versprechen ausreichend Unterstützer, wird es umgesetzt.
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
+      step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
       step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
