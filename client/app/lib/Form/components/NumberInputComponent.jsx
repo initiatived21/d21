@@ -31,10 +31,10 @@ export default class NumberInputComponent extends Component {
     const id = `${modelParamId}_${attribute}`
     const name = `${modelParamName}[${attribute}]`
     const label = I18n.t(
-      `react_form.${model}${submodelKey}.${attribute}.label`
+      `rform.${model}${submodelKey}.${attribute}.label`
     )
     const placeholder = I18n.t(
-      `react_form.${model}${submodelKey}.${attribute}.placeholder`
+      `rform.${model}${submodelKey}.${attribute}.placeholder`
     )
 
     let ariaLabel, placeholderOrLabel = placeholder
@@ -67,7 +67,7 @@ export default class NumberInputComponent extends Component {
     if (!inlineLabel && !noLabel) {
       labelElement = (
         <label htmlFor={id}>
-          {I18n.t(`react_form.${model}${submodelKey}.${attribute}.label`)}
+          {I18n.t(`rform.${model}${submodelKey}.${attribute}.label`)}
         </label>
       )
     }

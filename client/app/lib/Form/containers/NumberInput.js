@@ -1,16 +1,15 @@
 import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
-import updateAction from '../actions/updateAction'
+import { updateAction } from 'rform'
 import NumberInputComponent from '../components/NumberInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
-  const formObjectName = ownProps.object.constructor.name
-  const attrs = ownProps.object.attributes
+  const formObjectName = ownProps.formObject.constructor.name
+  const attrs = ownProps.formObject.attributes
 
   // get saved & server provided errors, concat them together
   let errors = null
-  // if (ownProps.errors) {
   if (state[formObjectName] && state[formObjectName].errors) {
     errors = state[formObjectName].errors[ownProps.attribute] || []
   }

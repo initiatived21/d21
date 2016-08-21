@@ -47,7 +47,11 @@ en:
       part8: ".”"
     save_draft: Save draft
     tooltip:
-      location: Please enter the place of the pledge, e.g. “Berlin” or “within Germany”.
+      location: 'Where will the pledge be executed? Examples: “Berlin”, "Bavaria" or “within Germany”.'
+      deadline: 
+      image: 
+    location:
+      label: Location
   PledgeFormHelp:
     faq_link: Look into our FAQ.
     further_questions: Further questions?
@@ -105,6 +109,9 @@ en:
     i_sign: I sign this pledge.
     sign: Sign
     small_print: 
+  Signee:
+    anonymous: Name is known to the editors
+    contact_person: contact person
   SigneeList:
     heading: Signees
     no_signees: There are no signees yet.
@@ -559,7 +566,7 @@ en:
       answer5: Translation not yet available.
       answer6: Translation not yet available.
       answer7: Translation not yet available.
-      question1: What is bunt und verbindlich?
+      question1: What is *bunt und verbindlich?*
       question2: How does it work?
       question3: How can I register?
       question4: Is it free to use the platform?
@@ -577,7 +584,7 @@ en:
   ransack:
     predicates:
       contains: 
-  react_form:
+  rform:
     comment:
       content:
         label: Your question…

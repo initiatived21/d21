@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
-import ButtonFor from '../../lib/Form/containers/ButtonFor'
+import { FormButton }       from 'rform'
 
 export default class StateFooter extends ChildComponent {
   static propTypes = {
@@ -15,12 +15,12 @@ export default class StateFooter extends ChildComponent {
 
     return (
       <div className="c-pledge-tile__state-footer">
-        <ButtonFor
+        <FormButton
           className="o-btn o-btn--small c-btn c-btn--primary u-mt-small"
           action={href}
           method={method}>
           {this.t(`.${action}`)}
-        </ButtonFor>
+        </FormButton>
       </div>
     )
   }

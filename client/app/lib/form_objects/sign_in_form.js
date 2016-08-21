@@ -1,6 +1,6 @@
-import JayForm from './jayform'
+import { FormObject } from 'rform'
 
-export default class SignInFormObject extends JayForm {
+export default class SignInFormObject extends FormObject {
   static get properties() {
     return [
       'email', 'password', 'remember_me'

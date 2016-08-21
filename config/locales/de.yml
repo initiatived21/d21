@@ -47,16 +47,20 @@ de:
       part8: ".“"
     save_draft: Entwurf speichern
     tooltip:
-      location: Bitte geben Sie hier den Ort des Versprechens ein, z.B. „Berlin“ oder „bundesweit“.
+      location: 'Wo soll das Versprechen umgesetzt werden? Beispiele: bundesweit, nicht ortsgebunden, Berlin, Bayern.'
+      deadline: Ihr Versprechen ist erfolgreich, wenn es nach Ablauf des angegebenen Datums genügend Unterstützer gesammelt hat.
+      image: Die optimalen Maße sind 100px x 500px.
+    location:
+      label: Ort
   PledgeFormHelp:
     faq_link: Schauen Sie in unseren FAQ nach.
     further_questions: Sie haben weitere Fragen?
     heading: So funktioniert es…
     step: 'Schritt {{step}}:'
     text:
-      step1: Sie veröffentlichen Ihr Versprechen.
-      step2: Andere Akteure unterzeichnen Ihr Versprechen.
-      step3: Sammelt ein Versprechen ausreichend Unterstützer, wird es umgesetzt.
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
+      step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
       step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
@@ -105,6 +109,9 @@ de:
     i_sign: Ich unterzeichne dieses Versprechen.
     sign: Unterzeichnen
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
+  Signee:
+    anonymous: Name ist der Redaktion bekannt
+    contact_person: Ansprechpartner
   SigneeList:
     heading: Unterzeichner
     no_signees: Es gibt noch keine Unterzeichner.
@@ -552,7 +559,7 @@ de:
         twitter_title: Bunt und Verbindlich auf Twitter
   pages:
     faq:
-      answer1: "bunt und verbindlich ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von bunt und verbindlich ist es, die bisherige starke Hilfsbereitschaft für Gefüchtete auch in den kommenden Jahren zu sichern und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Ehrenamtliche haben Integrationsideen oder Zeit, aber nicht die fnanziellen oder materiellen Mittel, um diese umzusetzen.\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit bunt und verbindlich wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
+      answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Gefüchtete auch in den kommenden Jahren zu sichern und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen und Ehrenamtliche:  \nUnternehmen haben Sach- oder Geldspenden, aber keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Ehrenamtliche haben Integrationsideen oder Zeit, aber nicht die fnanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
       answer2: "bunt und verbindlich hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Wir werden etwas tun, wenn genügend andere Personen mithelfen“.\n\nEin Beispiel: „Wir versprechen, Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitstellen, wenn 10 Dolmetscher bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen.“\n\nJedes Versprechen wird vor Veröffentlichung von uns überprüft, ob die Inhalte nicht gegen unsere Nutzungsbedingungen verstoßen. \nDas veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.\n\nIst das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.\n\nErfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren."
       answer3: |-
         Sie registrieren sich, wenn Sie ein Versprechen einstellen.
@@ -566,7 +573,7 @@ de:
         Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
 
         Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
-      question1: Was ist bunt und verbindlich?
+      question1: Was ist *bunt und verbindlich?*
       question2: Wie funktioniert das?
       question3: Wie kann ich mich registrieren?
       question4: Ist die Nutzung kostenfei?
@@ -584,7 +591,7 @@ de:
   ransack:
     predicates:
       contains: 
-  react_form:
+  rform:
     comment:
       content:
         label: Ihre Frage…
