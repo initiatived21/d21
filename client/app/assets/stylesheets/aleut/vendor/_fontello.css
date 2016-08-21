@@ -32,6 +32,7 @@
 .fa-check:before { content: '\f00c'; } /* '' */
 .fa-times:before { content: '\f00d'; } /* '' */
 .fa-home:before { content: '\f015'; } /* '' */
+.fa-pencil:before { content: '\f040'; } /* '' */
 .fa-question-circle:before { content: '\f059'; } /* '' */
 .fa-info-circle:before { content: '\f05a'; } /* '' */
 .fa-plus:before { content: '\f067'; } /* '' */
