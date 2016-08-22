@@ -1,6 +1,6 @@
-import JayForm from './jayform'
+import { FormObject } from 'rform'
 
-export default class NewQuestionFormObject extends JayForm {
+export default class NewQuestionFormObject extends FormObject {
   static get properties() {
     return [
       'content'

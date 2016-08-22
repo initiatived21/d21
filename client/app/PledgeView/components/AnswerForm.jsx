@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
+import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import FormFor from '../../lib/Form/containers/FormFor'
-import Input from '../../lib/Form/containers/Input'
 import NewAnswerFormObject from '../../lib/form_objects/new_answer_form'
 
 export default class AnswerForm extends ChildComponent {
@@ -15,27 +14,29 @@ export default class AnswerForm extends ChildComponent {
   render() {
     const { formData, isSubmitting, id } = this.props
     return (
-      <FormFor
+      <Form
         className="o-layout o-layout--small u-mt-small"
         id={`AnswerForm${id}`}
-        object={NewAnswerFormObject}
+        formObjectClass={NewAnswerFormObject}
         ajax={true}
-        method='put'
-        formData={formData}
+        method='PUT'
+        {...formData}
       >
-
-        <Input className="c-input o-layout__item u-4/5"
-          attribute='response' inlineLabel />
+        <InputSet ariaLabelOnly
+          attribute='response' className="c-input o-layout__item u-4/5"
+        />
 
         <div className="o-layout__item u-1/5">
-          <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
-            type='submit' disabled={isSubmitting}>
+          <button
+            className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
+            type='submit' disabled={isSubmitting}
+          >
             <FontAwesome name="paper-plane" />
             {' '}
             {this.t('.submit')}
           </button>
         </div>
-      </FormFor>
+      </Form>
     )
   }
 }

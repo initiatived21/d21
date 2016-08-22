@@ -1,52 +1,53 @@
 import React, { PropTypes  } from 'react'
+import { Form, InputSet, Input, Label, Button } from 'rform'
 import FontAwesome from 'react-fontawesome'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
-import FormFor from '../../lib/Form/containers/FormFor'
-import Label from '../../lib/Form/components/Label'
-import Input from '../../lib/Form/containers/Input'
-import Button from '../../lib/Form/containers/Button'
-import NumberInput from '../../lib/Form/containers/NumberInput'
-import ImageInput from '../../lib/Form/containers/ImageInput'
+import NumberInput from '../../lib/Form/wrappers/NumberInputWrapper'
+import ImageInput from '../../lib/Form/wrappers/ImageInputWrapper'
+import SelectInput from '../../lib/Form/wrappers/SelectInputWrapper'
+import DateInput from '../../lib/Form/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
-    formData: PropTypes.object.isRequired,
+    form: PropTypes.object.isRequired,
     availableTags: PropTypes.array.isRequired,
     onLinkClick: PropTypes.func.isRequired,
     currentUser: PropTypes.object,
   }
 
   render() {
-    const { onLinkClick, currentUser } = this.props
+    const { onLinkClick, currentUser, form } = this.props
 
-    const formObject = currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
+    const formObjectClass =
+      currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
 
     const initiatorForm = currentUser ? null : this.renderInitiatorForm()
     const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
 
     return(
-      <FormFor multipart
+      <Form
+        multipart ajax
         className="c-new-pledge"
-        ajax={true}
-        object={formObject}
-        formData={this.props.formData}>
-
+        formObjectClass={formObjectClass}
+        {...form}
+      >
         <h1>{this.t('.heading')}</h1>
 
         {loginPrompt}
 
         <div className='c-new-pledge__pledge-data'>
-
           <div className='c-pledge-form'>
             <span className="c-pledge-form__part1 c-pledge-form__text">
               {this.t('.promise.part1')}
             </span>
-            <Input className="c-input c-pledge-form__part2 c-pledge-form__input"
-              attribute='content' />
+            <InputSet
+              className="c-input c-pledge-form__part2 c-pledge-form__input"
+              attribute='content'
+            />
             <span className="c-pledge-form__part3 c-pledge-form__text">
               {this.t('.promise.part3')}
             </span>
@@ -55,23 +56,29 @@ export default class PledgeForm extends ChildComponent {
             </span>
             <NumberInput
               className="c-pledge-form__part5 c-pledge-form__input c-number-input"
-              attribute="amount" defaultValue={10} min={1} max={10000} />
-            <Input className="c-input c-pledge-form__part6 c-pledge-form__input"
-              attribute='who' />
-            <Input className="c-input c-pledge-form__part7 c-pledge-form__input"
-              attribute='requirement' />
+              attribute="amount" defaultValue={10} min={1} max={10000}
+            />
+            <InputSet
+              className="c-input c-pledge-form__part6 c-pledge-form__input"
+              attribute='who'
+            />
+            <InputSet
+              className="c-input c-pledge-form__part7 c-pledge-form__input"
+              attribute='requirement'
+            />
             <span className="c-pledge-form__part8 c-pledge-form__text">
               {this.t('.promise.part8')}
             </span>
           </div>
 
-
           <div className="o-layout o-layout--small">
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="location" />
             </div>
-            <Input className="c-input o-layout__item u-2/5 u-mb-small"
-              attribute="location" noLabel />
+            <InputSet ariaLabelOnly
+              className="c-input o-layout__item u-2/5 u-mb-small"
+              attribute="location"
+            />
             <div className="o-layout__item u-1/5 u-mb-small">
               <Tooltip>
                 {this.t('.tooltip.location')}
@@ -83,20 +90,26 @@ export default class PledgeForm extends ChildComponent {
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="deadline" />
             </div>
-            <Input className="c-input o-layout__item u-3/4 u-mb-small"
-              type="date" attribute="deadline" noLabel />
-
+            <div className="c-input o-layout__item u-3/4 u-mb-small">
+              <DateInput
+                attribute="deadline"
+                placeholder={this.t('rform.pledge.deadline.placeholder')}
+              />
+            </div>
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="title" />
             </div>
-            <Input className="c-input o-layout__item u-3/4 u-mb-small" attribute="title" noLabel />
-
+            <InputSet ariaLabelOnly
+              className="c-input o-layout__item u-3/4 u-mb-small"
+              attribute="title"
+            />
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="description" />
             </div>
-            <Input className="c-textarea o-layout__item u-3/4 u-mb-small" attribute="description"
-              type="textarea" noLabel />
-
+            <InputSet ariaLabelOnly
+              className="c-textarea o-layout__item u-3/4 u-mb-small"
+              attribute="description" type="textarea"
+            />
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="image" />
             </div>
@@ -112,9 +125,14 @@ export default class PledgeForm extends ChildComponent {
             <div className="o-layout__item u-1/4">
               <Label attribute="tag_ids" />
             </div>
-            <Input className="c-input o-layout__item u-3/4" type='multiselect'
-              attribute='tag_ids' options={this.props.availableTags} noLabel
-            />
+
+            <div className="c-input o-layout__item u-3/4">
+              <SelectInput
+                attribute='tag_ids'
+                options={this.props.availableTags}
+                placeholder={this.t('rform.pledge.tag_ids.placeholder')}
+              />
+            </div>
           </div>
         </div>
 
@@ -147,7 +165,7 @@ export default class PledgeForm extends ChildComponent {
             </p>
           </div>
         </div>
-      </FormFor>
+      </Form>
     )
   }
 
@@ -183,24 +201,25 @@ export default class PledgeForm extends ChildComponent {
           <div className="o-layout__item u-1/4 u-mb-small">
             <Label submodel="initiator" attribute="name" />
           </div>
-          <Input className="c-input o-layout__item u-3/4 u-mb-small" submodel='initiator' attribute='name'
-            noLabel />
-
+          <InputSet ariaLabelOnly
+            className="c-input o-layout__item u-3/4 u-mb-small"
+            submodel='initiator' attribute='name'
+          />
           <div className="o-layout__item u-1/4 u-mb-small">
             <Label submodel="initiator" attribute="email" />
           </div>
 
-          <Input
-            className="c-input o-layout__item u-3/4 u-mb-small" submodel='initiator' attribute='email'
-            type='email' noLabel
+          <InputSet ariaLabelOnly
+            className="c-input o-layout__item u-3/4 u-mb-small"
+            submodel='initiator' attribute='email' type='email'
           />
 
           <div className="o-layout__item u-1/4">
             <Label submodel="initiator" attribute="password" />
           </div>
-          <Input
-            className="c-input o-layout__item u-3/4" submodel='initiator' attribute='password'
-            type='password' noLabel
+          <InputSet ariaLabelOnly
+            className="c-input o-layout__item u-3/4" submodel='initiator'
+            attribute='password' type='password'
           />
         </div>
       </div>

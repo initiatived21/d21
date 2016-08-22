@@ -1,18 +1,21 @@
 import merge from 'lodash/merge'
 
 import generalReducer, { generalInitialState } from './general'
-import ajaxSubmissionReducer, { initialAjaxSubmissionState }
-  from '../Form/reducers/ajaxSubmissionReducer'
-import imageInputReducer, { initialImageInputState } from '../Form/reducers/imageInputReducer'
+// import { reducer, initialState as initialFormState }
+//   from 'react-jayform'
+import { reducer as formReducer, initialState as initialFormState }
+  from 'rform'
+import imageInputReducer, { initialImageInputState }
+  from '../Form/reducers/imageInputReducer'
 
 export const initialState = merge(
   generalInitialState,
-  initialAjaxSubmissionState,
+  initialFormState,
   initialImageInputState
 )
 
 export default function combinedReducer(state = initialState, action) {
-  const reducers = [ generalReducer, ajaxSubmissionReducer, imageInputReducer ]
+  const reducers = [ generalReducer, formReducer, imageInputReducer ]
 
   let newState = state
   for (let reducer of reducers) {

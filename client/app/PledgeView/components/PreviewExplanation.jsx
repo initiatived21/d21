@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
+import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import ButtonFor from '../../lib/Form/containers/ButtonFor'
 
 export default class PreviewExplanation extends ChildComponent {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class PreviewExplanation extends ChildComponent {
     if (isDraft) {
       if (userConfirmed) {
         statusInfo = (
-          <ButtonFor
+          <FormButton
             className="o-btn o-btn--small o-btn--full c-btn c-btn--primary u-mt-small"
             action={activateAction}
             method='PATCH'
@@ -24,7 +24,7 @@ export default class PreviewExplanation extends ChildComponent {
             <FontAwesome name="thumbs-o-up" />
             {' '}
             {this.t('.status.submit_for_approval')}
-          </ButtonFor>
+          </FormButton>
         )
       } else {
         statusInfo = <p>{this.t('.status.confirm_email')}</p>
