@@ -85,6 +85,9 @@ export default class PledgeForm extends ChildComponent {
             </div>
             <Input className="c-input o-layout__item u-3/4 u-mb-small"
               type="date" attribute="deadline" noLabel />
+              <Tooltip>
+                {this.t('.tooltip.deadline')}
+              </Tooltip>
 
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="title" />
@@ -108,6 +111,9 @@ export default class PledgeForm extends ChildComponent {
               scaleToX={1200}
               scaleToY={800}
             />
+            <Tooltip>
+              {this.t('.tooltip.image')}
+            </Tooltip>
 
             <div className="o-layout__item u-1/4">
               <Label attribute="tag_ids" />
