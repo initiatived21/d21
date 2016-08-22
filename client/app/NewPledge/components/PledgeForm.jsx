@@ -71,34 +71,40 @@ export default class PledgeForm extends ChildComponent {
             </span>
           </div>
 
-          <div className="o-layout o-layout--small">
-            <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout o-layout--small u-mb-small">
+            <div className="o-layout__item u-1/4">
               <Label attribute="location" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-input o-layout__item u-2/5 u-mb-small"
+              className="c-input o-layout__item u-2/5"
               attribute="location"
             />
-            <div className="o-layout__item u-1/5 u-mb-small">
+            <div className="o-layout__item u-1/5">
               <Tooltip>
                 {this.t('.tooltip.location')}
               </Tooltip>
             </div>
           </div>
 
-          <div className="o-layout o-layout--small">
-            <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout o-layout--small u-mb-small">
+            <div className="o-layout__item u-1/4">
               <Label attribute="deadline" />
             </div>
-            <div className="c-input o-layout__item u-3/4 u-mb-small">
+            <div className="c-input o-layout__item u-2/5">
               <DateInput
                 attribute="deadline"
                 placeholder={this.t('rform.pledge.deadline.placeholder')}
               />
+            </div>
+            <div className="o-layout__item u-1/5">
               <Tooltip>
                 {this.t('.tooltip.deadline')}
               </Tooltip>
             </div>
+          </div>
+
+          <div className="o-layout o-layout--small">
+
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="title" />
             </div>
@@ -113,20 +119,26 @@ export default class PledgeForm extends ChildComponent {
               className="c-textarea o-layout__item u-3/4 u-mb-small"
               attribute="description" type="textarea"
             />
+
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="image" />
             </div>
-            <ImageInput
-              className="c-image-input--pledge-image o-layout__item u-3/4 u-mb-small"
-              attribute="image"
-              previewArea={300000}
-              aspectRatio={3/2}
-              scaleToX={1200}
-              scaleToY={800}
-            />
-            <Tooltip>
-              {this.t('.tooltip.image')}
-            </Tooltip>
+
+            <div className="o-layout__item u-3/4 u-mb-small">
+              <div className="o-marginal">
+                <ImageInput
+                  className="c-image-input--pledge-image o-marginal__content"
+                  attribute="image"
+                  previewArea={300000}
+                  aspectRatio={3/2}
+                  scaleToX={1200}
+                  scaleToY={800}
+                />
+                <Tooltip className="o-marginal__note">
+                  {this.t('.tooltip.image')}
+                </Tooltip>
+              </div>
+            </div>
 
             <div className="o-layout__item u-1/4">
               <Label attribute="tag_ids" />

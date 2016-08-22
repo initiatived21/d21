@@ -33,31 +33,39 @@ export default class SignPledgeForm extends ChildComponent {
 
         <div className="c-sidebar__wrapper">
           <InputSet className="c-input u-mb-small" attribute='name' />
-          <InputSet
-            className="c-checkbox u-mb-small"
-            type="checkbox" attribute='anonymous'
-          />
-          <Tooltip>
-            {this.t('.tooltip.anonymous')}
-          </Tooltip>
+
+          <div className="o-marginal u-mb-small">
+            <InputSet
+              className="c-checkbox o-marginal__content"
+              type="checkbox" attribute="anonymous"
+            />
+            <Tooltip className="o-marginal__note">
+              {this.t('.tooltip.anonymous')}
+            </Tooltip>
+          </div>
 
           <InputSet className="c-input" type="email" attribute='email' />
-          <p className="u-mb-small">{this.t('.email_hint')}</p>
-          <Tooltip>
-            {this.t('.tooltip.email')}
-          </Tooltip>
+
+          <div className="o-marginal u-mb-small">
+            <p className="o-marginal__content">{this.t('.email_hint')}</p>
+            <Tooltip className="o-marginal__note">
+              {this.t('.tooltip.email')}
+            </Tooltip>
+          </div>
 
           <InputSet
             className="c-input u-mb-small" type="text" attribute='organization'
           />
 
-          <InputSet
-            className="c-checkbox u-mb-small"
-            type="checkbox" attribute='contact_person'
-          />
-          <Tooltip>
-            {this.t('.tooltip.contact_person')}
-          </Tooltip>
+          <div className="o-marginal u-mb-small">
+            <InputSet
+              className="c-checkbox o-marginal__content"
+              type="checkbox" attribute="contact_person"
+            />
+            <Tooltip className="o-marginal__note">
+              {this.t('.tooltip.contact_person')}
+            </Tooltip>
+          </div>
 
           <InputSet
             className="c-textarea u-mb-small" type='textarea' attribute='reason'

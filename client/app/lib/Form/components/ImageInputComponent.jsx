@@ -1,10 +1,11 @@
-import React, { PropTypes, Component } from 'react'
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../Base/components/ChildComponent'
 
 import ImageCrop from './ImageCrop'
 import { IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED, IMAGE_STATE_CROPPED } from
   '../reducers/imageInputReducer'
 
-export default class ImageInputComponent extends Component {
+export default class ImageInputComponent extends ChildComponent {
   static propTypes = {
     model: PropTypes.string, // required, but injection later is ok
     attribute: PropTypes.string.isRequired,
@@ -44,14 +45,14 @@ export default class ImageInputComponent extends Component {
     case IMAGE_STATE_NONE:
       imagePreview = (
           <p className="c-image-input__text">
-            Bitte wählen Sie ein Bild aus.
+            {this.t('.select_image')}
           </p>
         )
       break
     case IMAGE_STATE_LOADING:
       imagePreview = (
           <p className="c-image-input__text">
-            <i>Lade Bild. Bitte warten…</i>
+            <i>{this.t('.loading_image')}</i>
           </p>
         )
       break
@@ -80,7 +81,7 @@ export default class ImageInputComponent extends Component {
         // selected
       fileValueProps = { value: '' }
       break
-      
+
     default:
       imagePreview = null
     }

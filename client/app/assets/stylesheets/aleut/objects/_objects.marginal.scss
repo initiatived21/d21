@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #MARGINAL OBJECT
+\*------------------------------------*/
+
+/**
+ * Put something on the left and a tooltip or something else on the right.
+ *
+ * <div class="o-marginal">
+ *   <p class="o-marginal__content">...</p>
+ *   <Tooltip class="o-marginal__note"></Tooltip>
+ * </div>
+ *
+ */
+
+$o-marginal-spacing: $spacing--small !default;
+
+.o-marginal {
+  display: flex;
+}
+
+.o-marginal__content {
+  flex-grow: 1;
+}
+
+.o-marginal__note {
+  margin-left: $o-marginal-spacing;
+}

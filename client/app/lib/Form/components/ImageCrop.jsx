@@ -1,7 +1,9 @@
-import React, { PropTypes, Component } from 'react'
+import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ReactCrop from 'react-image-crop'
+import ChildComponent from '../../Base/components/ChildComponent'
 
-export default class ImageCrop extends Component {
+export default class ImageCrop extends ChildComponent {
   static propTypes = {
     width: PropTypes.number.isRequired,
     src: PropTypes.string.isRequired,
@@ -29,12 +31,15 @@ export default class ImageCrop extends Component {
             onComplete={onComplete}
           />
         </div>
+        <p>{this.t('.crop_explanation')}</p>
         <button
           className="o-btn o-btn--small c-btn c-btn--primary"
           type="button"
           onClick={handleFinishCrop}
         >
-          Fertig
+          <FontAwesome name="pencil" />
+          {' '}
+          {this.t('.select_detail')}
         </button>
       </div>
     )
