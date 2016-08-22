@@ -688,7 +688,7 @@ en:
         placeholder: to give a refugee family a home
       deadline:
         label: Can be signed until
-        placeholder: Please select date
+        placeholder: "*Please select date"
       description:
         label: More Info (optional)
         placeholder: 
@@ -708,16 +708,16 @@ en:
           placeholder: 
       location:
         label: Location
-        placeholder: 
+        placeholder: "*"
       requirement:
         label: do what?
         placeholder: do the same
       tag_ids:
         label: Topics
-        placeholder: Please select topic
+        placeholder: "*Please select topic"
       title:
         label: Title
-        placeholder: e.g. Sponsorship
+        placeholder: "*e.g. Sponsorship"
       who:
         label: who?
         placeholder: other people
