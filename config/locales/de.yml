@@ -38,6 +38,8 @@ de:
       login: Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
     draft_explanation: Speichert Entwurf in Ihrem Nutzerkonto.
     heading: Ein Versprechen abgeben
+    location:
+      label: Ort
     preview: Zur Vorschau
     preview_explanation: Im nächsten Schritt können Sie Ihr Versprechen noch einmal überprüfen, bevor Sie es abschicken.
     promise:
@@ -47,11 +49,9 @@ de:
       part8: ".“"
     save_draft: Entwurf speichern
     tooltip:
-      location: 'Wo soll das Versprechen umgesetzt werden? Beispiele: bundesweit, nicht ortsgebunden, Berlin, Bayern.'
       deadline: Ihr Versprechen ist erfolgreich, wenn es nach Ablauf des angegebenen Datums genügend Unterstützer gesammelt hat.
       image: Die optimalen Maße sind 100px x 500px.
-    location:
-      label: Ort
+      location: 'Wo soll das Versprechen umgesetzt werden? Beispiele: bundesweit, nicht ortsgebunden, Berlin, Bayern.'
   PledgeFormHelp:
     faq_link: Schauen Sie in unseren FAQ nach.
     further_questions: Sie haben weitere Fragen?
@@ -253,6 +253,58 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
+  errors:
+    array?: 
+    attr?: 
+    bool?: 
+    date?: 
+    date_time?: 
+    decimal?: 
+    empty?: 
+    eql?: 
+    even?: 
+    excluded_from?:
+      arg:
+        default: 
+        range: 
+    excludes?: 
+    exclusion?: 
+    false?: 
+    filled?: muss ausgefüllt werden
+    float?: 
+    format?: 
+    gt?: muss größer als %{num} sein
+    gteq?: 
+    hash?: 
+    included_in?:
+      arg:
+        default: 
+        range: 
+    includes?: 
+    inclusion?: 
+    int?: 
+    key?: 
+    lt?: 
+    lteq?: 
+    max_size?: muss weniger als %{num} Zeichen enthalten
+    min_size?: 
+    none?: 
+    not_eql?: 
+    number?: 
+    odd?: 
+    size?:
+      arg:
+        default: 
+        range: 
+      value:
+        string:
+          arg:
+            default: 
+            range: 
+    str?: 
+    time?: 
+    true?: 
+    type?: 
   first_paragraph: 
   flash:
     actions:

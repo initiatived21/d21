@@ -5,31 +5,27 @@ import NewPledge from './NewPledge.jsx'
 
 describe('<NewPledge />', function() {
   const formProps = {
-    onSubmit: function() {},
-
-    formData: {
-      action: '/',
-      authToken: 'a',
+    form: {
+      action: '/de/pledges',
+      authToken: 'QTYw0c+kpxTdZuEcmyaZx2iW0tJ0l7LPnL9miMZfzZlQ7N+xBG8Ik0EGbTWa6utl106vsQQcH9/6nncUoaRMrw==',
+      method: 'POST',
       model: 'pledge',
-      object: {
+      seedData: {
+        errors: {
+
+        },
         fields: {
-          content:     null,
-          amount:      null,
-          who:         null,
-          requirement: null,
-          location:    null,
-          deadline:    null,
+          amount: null,
+          content: null,
+          deadline: null,
           description: null,
-          tag_ids:     [],
-          initiator: {
-            fields: {
-              name:         null,
-              organization: null,
-              avatar:       null,
-              email:        null,
-              password:     null
-            }
-          }
+          image: null,
+          initiator: null,
+          location: null,
+          requirement: null,
+          tag_ids: [],
+          title: null,
+          who: null
         }
       }
     },
