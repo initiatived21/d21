@@ -95,6 +95,9 @@ export default class PledgeForm extends ChildComponent {
                 attribute="deadline"
                 placeholder={this.t('rform.pledge.deadline.placeholder')}
               />
+              <Tooltip>
+                {this.t('.tooltip.deadline')}
+              </Tooltip>
             </div>
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="title" />
@@ -121,6 +124,9 @@ export default class PledgeForm extends ChildComponent {
               scaleToX={1200}
               scaleToY={800}
             />
+            <Tooltip>
+              {this.t('.tooltip.image')}
+            </Tooltip>
 
             <div className="o-layout__item u-1/4">
               <Label attribute="tag_ids" />
