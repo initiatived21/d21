@@ -23,7 +23,7 @@ describe('<NumberInputComponent />', function() {
     it('should "pass through" its className prop', function() {
       const wrapper = mount(<NumberInputComponent className="dummy" {...defaultProps} />)
 
-      const div = wrapper.find('div')
+      const div = wrapper.find('div').first()
       div.hasClass('dummy').should.be.true
     })
   })

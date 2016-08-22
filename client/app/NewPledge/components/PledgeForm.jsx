@@ -5,7 +5,7 @@ import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
-import NumberInput from '../../lib/Form/wrappers/NumberInputWrapper'
+import PledgeContentInputs from './PledgeContentInputs'
 import ImageInput from '../../lib/Form/wrappers/ImageInputWrapper'
 import SelectInput from '../../lib/Form/wrappers/SelectInputWrapper'
 import DateInput from '../../lib/Form/wrappers/DateInputWrapper'
@@ -40,36 +40,8 @@ export default class PledgeForm extends ChildComponent {
         {loginPrompt}
 
         <div className='c-new-pledge__pledge-data'>
-          <div className='c-pledge-form'>
-            <span className="c-pledge-form__part1 c-pledge-form__text">
-              {this.t('.promise.part1')}
-            </span>
-            <InputSet
-              className="c-input c-pledge-form__part2 c-pledge-form__input"
-              attribute='content'
-            />
-            <span className="c-pledge-form__part3 c-pledge-form__text">
-              {this.t('.promise.part3')}
-            </span>
-            <span className="c-pledge-form__part4 c-pledge-form__text">
-              {this.t('.promise.part4')}
-            </span>
-            <NumberInput
-              className="c-pledge-form__part5 c-pledge-form__input c-number-input"
-              attribute="amount" defaultValue={10} min={1} max={10000}
-            />
-            <InputSet
-              className="c-input c-pledge-form__part6 c-pledge-form__input"
-              attribute='who'
-            />
-            <InputSet
-              className="c-input c-pledge-form__part7 c-pledge-form__input"
-              attribute='requirement'
-            />
-            <span className="c-pledge-form__part8 c-pledge-form__text">
-              {this.t('.promise.part8')}
-            </span>
-          </div>
+
+          <PledgeContentInputs />
 
           <div className="o-layout o-layout--small u-mb-small">
             <div className="o-layout__item u-1/4">

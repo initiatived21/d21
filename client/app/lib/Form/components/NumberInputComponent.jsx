@@ -116,14 +116,16 @@ export default class NumberInputComponent extends Component {
     return (
       <div className={combinedClassName}>
         {labelElement}
-        <br />
-        {minusButton}
-        {' '}
-        {field}
-        {' '}
-        {plusButton}
 
-        {errorSpan}
+        <div>
+          {minusButton}
+          {' '}
+          {field}
+          {' '}
+          {plusButton}
+        </div>
+
+        {/*errorSpan*/}
       </div>
     )
   }
