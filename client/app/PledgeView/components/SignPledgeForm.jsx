@@ -4,6 +4,7 @@ import ChildComponent from '../../lib/Base/components/ChildComponent'
 import FormFor from '../../lib/Form/containers/FormFor'
 import Input from '../../lib/Form/containers/Input'
 import NewSignatureFormObject from '../../lib/form_objects/new_signature_form'
+import Tooltip from '../../Tooltip/components/Tooltip'
 
 import { PROJECT_NAME } from '../../lib/config'
 
@@ -36,13 +37,22 @@ export default class SignPledgeForm extends ChildComponent {
           <Input className="c-input u-mb-small" attribute='name' />
 
           <Input className="c-checkbox u-mb-small" type="checkbox" attribute='anonymous' />
+          <Tooltip>
+            {this.t('.tooltip.anonymous')}
+          </Tooltip>
 
           <Input className="c-input" type="email" attribute='email' />
           <p className="u-mb-small">{this.t('.email_hint')}</p>
+          <Tooltip>
+            {this.t('.tooltip.email')}
+          </Tooltip>
 
           <Input className="c-input u-mb-small" type="text" attribute='organization' />
 
           <Input className="c-checkbox u-mb-small" type="checkbox" attribute='contact_person' />
+          <Tooltip>
+            {this.t('.tooltip.contact_person')}
+          </Tooltip>
 
           <Input className="c-textarea u-mb-small" type='textarea' attribute='reason' />
 
