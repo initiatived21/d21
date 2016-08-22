@@ -88,13 +88,33 @@ en:
   PledgeUpdateList:
     heading: Updates
     no_updates: There are no updates yet.
+  PreviewDraft:
+    edit_pledge: Edit pledge
+    explanation: Your pledge will be reviewed by our editorial staff and published within one to three weekdays. You can manage your pledge through your user account.
+    legal:
+      part1: 'By submitting you agree to our '
+      part2: " and our "
+      part3: "."
+      privacy: privacy statement
+      terms: terms
+    submit_pledge: Submit pledge
   PreviewExplanation:
-    preview: This is a preview of your pledge.
-    status:
-      confirm_email: Please confirm your email to finalize this pledge.
-      reviewed: It is being reviewed.
-      submit_for_approval: Submit for approval
     title: Pledge preview
+  PreviewRequested:
+    explanation: You have successfully submitted your pledge!
+    improve_success:
+      post_updates: Regularly post updates concerning your project.
+      social_media: Promote the pledge through your social media channels.
+      title: 'How to make your pledge successful:'
+    next_steps:
+      editorial_staff: Your pledge is being reviewed by our editorial staff and will be published within one to three weekdays.
+      part1: 'You can manage your pledge through '
+      part2: "."
+      question: What's next?
+      user_account: your user account
+  PreviewUnconfirmed:
+    confirm_email: Please confirm your email to finalize this pledge.
+    edit_pledge: Edit pledge
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -628,6 +648,12 @@ en:
     home:
       recommended: Recommended by the editors
       successful: Successful promises
+  paths:
+    edit_pledge: "/en/pledges/{{pledge}}/edit"
+    faq: "/en/faq"
+    privacy: "/en/privacy"
+    terms: "/en/terms"
+    user_profile: "/en/users/profile"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.

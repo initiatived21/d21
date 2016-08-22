@@ -11,7 +11,7 @@ export default class LoggedIn extends ChildComponent {
 
   render() {
     const { currentUser } = this.props
-    const profileHref = `/${I18n.locale}/users/profile`
+    const profileHref = I18n.t('paths.user_profile')
 
     return(
       <div>

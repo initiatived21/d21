@@ -180,7 +180,6 @@ export default class PledgeForm extends ChildComponent {
 
         <p className="u-mb-small">
           {this.t('.account.explanation')}
-          }
         </p>
 
         {loginPrompt}

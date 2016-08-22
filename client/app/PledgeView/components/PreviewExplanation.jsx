@@ -1,50 +1,32 @@
 import React, { PropTypes } from 'react'
+import I18n from 'i18n-js'
 import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import { termsPath, privacyPath } from '../../lib/browser/paths'
+import PreviewDraft from './PreviewDraft'
+import PreviewUnconfirmed from './PreviewUnconfirmed'
+import PreviewRequested from './PreviewRequested'
 
 export default class PreviewExplanation extends ChildComponent {
   static propTypes = {
+    pledgeId: PropTypes.number.isRequired,
     isDraft: PropTypes.bool.isRequired,
     activateAction: PropTypes.string.isRequired,
+    userConfirmed: PropTypes.bool
   }
 
   render() {
-    const { isDraft, activateAction, userConfirmed } = this.props
+    const { pledgeId, isDraft, activateAction, userConfirmed } = this.props
 
     let statusInfo
     if (isDraft) {
       if (userConfirmed) {
-        statusInfo = (
-          <div>
-            <p>Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei
-            Werktagen veröffentlicht. Sie können Ihr Versprechen in Ihrem Nutzerkonto verwalten.</p>
-            <p>Mit dem Abschicken stimmen Sie unseren <a href={termsPath()}>AGB</a> und
-            der <a href={privacyPath()}>Datenschutzerklärung</a> zu.</p>
-
-            <a className="o-btn c-btn c-btn--tertiary u-mt-small" href="">
-              <FontAwesome name="pencil" />
-              {' '}
-              Bearbeiten
-            </a>
-
-            <FormButton
-              className="o-btn o-btn--full c-btn c-btn--primary u-mt-small"
-              action={activateAction}
-              method='PATCH'
-            >
-              <FontAwesome name="thumbs-o-up" />
-              {' '}
-              {this.t('.status.submit_for_approval')}
-            </FormButton>
-          </div>
-        )
+        statusInfo = <PreviewDraft pledgeId={pledgeId} activateAction={activateAction} />
       } else {
-        statusInfo = <p>{this.t('.status.confirm_email')}</p>
+        statusInfo = <PreviewUnconfirmed pledgeId={pledgeId} />
       }
     } else {
-      statusInfo = <p>this.t('.status.reviewed')</p>
+      statusInfo = <PreviewRequested />
     }
 
     return (
@@ -54,7 +36,6 @@ export default class PreviewExplanation extends ChildComponent {
         </h2>
 
         <div className="c-sidebar__wrapper">
-          <p className="u-mb-small">{this.t('.preview')}</p>
           {statusInfo}
         </div>
       </div>

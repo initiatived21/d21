@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Form, Input } from 'rform'
+import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import NewUpdateFormObject from '../../lib/form_objects/new_update_form'

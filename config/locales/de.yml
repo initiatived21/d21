@@ -88,13 +88,33 @@ de:
   PledgeUpdateList:
     heading: Neuigkeiten
     no_updates: Es gibt noch keine Neuigkeiten.
+  PreviewDraft:
+    edit_pledge: Versprechen bearbeiten
+    explanation: Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Werktagen veröffentlicht. Sie können Ihr Versprechen in Ihrem Nutzerkonto verwalten.
+    legal:
+      part1: 'Mit dem Abschicken stimmen Sie unseren '
+      part2: " und der "
+      part3: " zu."
+      privacy: Datenschutzerklärung
+      terms: AGB
+    submit_pledge: Versprechen abschicken
   PreviewExplanation:
-    preview: Dies ist eine Vorschau auf Ihr Versprechen.
-    status:
-      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
-      reviewed: Es wird gerade überprüft.
-      submit_for_approval: Zur Freigabe vorlegen
     title: Versprechensvorschau
+  PreviewRequested:
+    explanation: Sie haben Ihr Versprechen erfolgreich abgeschickt!
+    improve_success:
+      post_updates: Schreiben Sie regelmäßig Neuigkeiten zu Ihrem Projekt.
+      social_media: Bewerben Sie das Versprechen in Ihren Sozialen Netzwerken.
+      title: 'So machen Sie Ihr Versprechen erfolgreich:'
+    next_steps:
+      editorial_staff: Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Tagen veröffentlicht.
+      part1: 'Sie können Ihr Versprechen in '
+      part2: " verwalten."
+      question: Wie geht es weiter?
+      user_account: Ihrem Nutzerkonto
+  PreviewUnconfirmed:
+    confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+    edit_pledge: Versprechen bearbeiten
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -635,6 +655,12 @@ de:
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+  paths:
+    edit_pledge: "/de/pledges/{{pledge}}/edit"
+    faq: "/de/faq"
+    privacy: "/de/privacy"
+    terms: "/de/terms"
+    user_profile: "/de/users/profile"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.

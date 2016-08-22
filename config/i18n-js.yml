@@ -3,10 +3,11 @@ translations:
     only: ["*.layouts.*", "*.pages.*", "*.LoggedIn.*", "*.PledgeForm.*", "*.PledgeFormHelp.*",
       "*.PledgeQuote.*", "*.PledgeFeatures.*",
       "*.PledgeUpdateList.*", "*.PledgeQAs.*", "*.PledgeImage.*", "*.SigneeList.*", "*.Signee.*",
-      "*.rform.*",
+      "*.rform.*", "*.paths.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",
       "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.QuestionForm.*",
       "*.PledgeState.*", "*.ProfileView.*", "*.CommentAvatar.*", "*.PledgeLocation.*",
       "*.PledgeTileBack.*", "*.PledgeTileFront.*", "*.PreviewExplanation.*",
+      "*.PreviewDraft.*", "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
       "*.PledgeCreatedAt.*", "*.tags.*"]
