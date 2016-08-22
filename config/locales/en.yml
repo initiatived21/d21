@@ -38,6 +38,8 @@ en:
       login: Please login to carry over your data.
     draft_explanation: Stores pledge draft into your account.
     heading: Make a pledge
+    location:
+      label: Location
     preview: Preview pledge
     preview_explanation: During the next step you can verify your pledge before submitting it.
     promise:
@@ -47,7 +49,9 @@ en:
       part8: ".”"
     save_draft: Save draft
     tooltip:
-      location: Please enter the place of the pledge, e.g. “Berlin” or “within Germany”.
+      deadline: 
+      image: 
+      location: 
   PledgeFormHelp:
     faq_link: Look into our FAQ.
     further_questions: Further questions?
@@ -84,13 +88,33 @@ en:
   PledgeUpdateList:
     heading: Updates
     no_updates: There are no updates yet.
+  PreviewDraft:
+    edit_pledge: Edit pledge
+    explanation: Your pledge will be reviewed by our editorial staff and published within one to three weekdays. You can manage your pledge through your user account.
+    legal:
+      part1: 'By submitting you agree to our '
+      part2: " and our "
+      part3: "."
+      privacy: privacy statement
+      terms: terms
+    submit_pledge: Submit pledge
   PreviewExplanation:
-    preview: This is a preview of your pledge.
-    status:
-      confirm_email: Please confirm your email to finalize this pledge.
-      reviewed: It is being reviewed.
-      submit_for_approval: Submit for approval
     title: Pledge preview
+  PreviewRequested:
+    explanation: You have successfully submitted your pledge!
+    improve_success:
+      post_updates: Regularly post updates concerning your project.
+      social_media: Promote the pledge through your social media channels.
+      title: 'How to make your pledge successful:'
+    next_steps:
+      editorial_staff: Your pledge is being reviewed by our editorial staff and will be published within one to three weekdays.
+      part1: 'You can manage your pledge through '
+      part2: "."
+      question: What's next?
+      user_account: your user account
+  PreviewUnconfirmed:
+    confirm_email: Please confirm your email to finalize this pledge.
+    edit_pledge: Edit pledge
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -105,6 +129,10 @@ en:
     i_sign: I sign this pledge.
     sign: Sign
     small_print: 
+    tooltip:
+      anonymous: 
+      contact_person: 
+      email: 
   Signee:
     anonymous: Name is known to the editors
     contact_person: contact person
@@ -249,6 +277,58 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
+  errors:
+    array?: must be an array
+    attr?: is missing
+    bool?: must be boolean
+    date?: must be a date
+    date_time?: must be a date time
+    decimal?: must be a decimal
+    empty?: must be empty
+    eql?: must be equal to %{left}
+    even?: must be even
+    excluded_from?:
+      arg:
+        default: 'must not be one of: %{list}'
+        range: 'must not be one of: %{list_left} - %{list_right}'
+    excludes?: must not include %{value}
+    exclusion?: 'must not be one of: %{list}'
+    false?: must be false
+    filled?: should be filled
+    float?: must be a float
+    format?: is in invalid format
+    gt?: must be greater than %{num}
+    gteq?: must be greater than or equal to %{num}
+    hash?: must be a hash
+    included_in?:
+      arg:
+        default: 'must be one of: %{list}'
+        range: 'must be one of: %{list_left} - %{list_right}'
+    includes?: must include %{value}
+    inclusion?: 'must be one of: %{list}'
+    int?: must be an integer
+    key?: is missing
+    lt?: must be less than %{num}
+    lteq?: must be less than or equal to %{num}
+    max_size?: size cannot be greater than %{num}
+    min_size?: size cannot be less than %{num}
+    none?: cannot be defined
+    not_eql?: must not be equal to %{left}
+    number?: must be a number
+    odd?: must be odd
+    size?:
+      arg:
+        default: size must be %{size}
+        range: size must be within %{size_left} - %{size_right}
+      value:
+        string:
+          arg:
+            default: length must be %{size}
+            range: length must be within %{size_left} - %{size_right}
+    str?: must be a string
+    time?: must be a time
+    true?: must be true
+    type?: must be %{type}
   first_paragraph: 
   flash:
     actions:
@@ -572,6 +652,12 @@ en:
     home:
       recommended: Recommended by the editors
       successful: Successful promises
+  paths:
+    edit_pledge: "/en/pledges/{{pledge}}/edit"
+    faq: "/en/faq"
+    privacy: "/en/privacy"
+    terms: "/en/terms"
+    user_profile: "/en/users/profile"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
@@ -580,7 +666,7 @@ en:
   ransack:
     predicates:
       contains: 
-  react_form:
+  rform:
     comment:
       content:
         label: Your question…
