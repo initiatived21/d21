@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
+import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import FormFor from '../../lib/Form/containers/FormFor'
-import Input from '../../lib/Form/containers/Input'
 import NewSignatureFormObject from '../../lib/form_objects/new_signature_form'
 import Tooltip from '../../Tooltip/components/Tooltip'
 
@@ -22,39 +21,47 @@ export default class SignPledgeForm extends ChildComponent {
     const { formData, isSubmitting } = this.props
 
     return (
-      <FormFor
+      <Form
         className="c-sidebar c-sidebar--secondary c-sign-pledge"
         ajax={true}
-        object={NewSignatureFormObject}
-        formData={formData}>
-
+        formObjectClass={NewSignatureFormObject}
+        {...formData}
+      >
         <h2 className="c-sidebar__title">
           {this.t('.i_sign')}
         </h2>
 
         <div className="c-sidebar__wrapper">
-
-          <Input className="c-input u-mb-small" attribute='name' />
-
-          <Input className="c-checkbox u-mb-small" type="checkbox" attribute='anonymous' />
+          <InputSet className="c-input u-mb-small" attribute='name' />
+          <InputSet
+            className="c-checkbox u-mb-small"
+            type="checkbox" attribute='anonymous'
+          />
           <Tooltip>
             {this.t('.tooltip.anonymous')}
           </Tooltip>
 
-          <Input className="c-input" type="email" attribute='email' />
+          <InputSet className="c-input" type="email" attribute='email' />
           <p className="u-mb-small">{this.t('.email_hint')}</p>
           <Tooltip>
             {this.t('.tooltip.email')}
           </Tooltip>
 
-          <Input className="c-input u-mb-small" type="text" attribute='organization' />
+          <InputSet
+            className="c-input u-mb-small" type="text" attribute='organization'
+          />
 
-          <Input className="c-checkbox u-mb-small" type="checkbox" attribute='contact_person' />
+          <InputSet
+            className="c-checkbox u-mb-small"
+            type="checkbox" attribute='contact_person'
+          />
           <Tooltip>
             {this.t('.tooltip.contact_person')}
           </Tooltip>
 
-          <Input className="c-textarea u-mb-small" type='textarea' attribute='reason' />
+          <InputSet
+            className="c-textarea u-mb-small" type='textarea' attribute='reason'
+          />
 
           <p className="c-sign-pledge__small-print u-mb">
             <small>
@@ -62,15 +69,15 @@ export default class SignPledgeForm extends ChildComponent {
             </small>
           </p>
 
-          <button className="c-sign-pledge__submit o-btn o-btn--full c-btn c-btn--secondary"
-                  type="submit" disabled={isSubmitting}>
+          <button
+            className="c-sign-pledge__submit o-btn o-btn--full c-btn c-btn--secondary"
+            type="submit" disabled={isSubmitting}
+          >
             <FontAwesome name="check" />
             {` ${this.t('.sign')}`}
           </button>
-
         </div>
-
-      </FormFor>
+      </Form>
     )
   }
 }

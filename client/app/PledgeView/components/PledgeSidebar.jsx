@@ -32,8 +32,8 @@ export default class PledgeSidebar extends ChildComponent {
     if (isPreview) {
       sidebarField = (
         <PreviewExplanation
-          isDraft={isDraft} activateAction={activateAction}
-          userConfirmed={userConfirmed} />
+          pledgeId={pledge_id} isDraft={isDraft}
+          activateAction={activateAction} userConfirmed={userConfirmed} />
       )
     } else if (userIsInitiator) {
       sidebarField = <UpdateFormContainer formData={updateForm} />

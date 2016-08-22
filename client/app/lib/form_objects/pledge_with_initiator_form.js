@@ -1,6 +1,6 @@
-import JayForm from './jayform'
+import { FormObject } from 'rform'
 
-export default class PledgeWithInitiatorFormObject extends JayForm {
+export default class PledgeWithInitiatorFormObject extends FormObject {
   static get properties() {
     return [
       'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',

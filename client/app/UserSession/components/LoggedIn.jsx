@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
+import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import ButtonFor from '../../lib/Form/containers/ButtonFor'
 
 export default class LoggedIn extends ChildComponent {
   static propTypes = {
@@ -11,7 +11,7 @@ export default class LoggedIn extends ChildComponent {
 
   render() {
     const { currentUser } = this.props
-    const profileHref = `/${I18n.locale}/users/profile`
+    const profileHref = I18n.t('paths.user_profile')
 
     return(
       <div>
@@ -39,7 +39,7 @@ export default class LoggedIn extends ChildComponent {
           </ul>
         </nav>
 
-        <ButtonFor
+        <FormButton
           className="c-session__submit o-btn o-btn--full c-btn c-btn--primary u-mt"
           action='/users/sign_out'
           method='DELETE'
@@ -47,7 +47,7 @@ export default class LoggedIn extends ChildComponent {
           <FontAwesome name="sign-out" />
           {' '}
           {this.t('.logout')}
-        </ButtonFor>
+        </FormButton>
       </div>
     )
   }

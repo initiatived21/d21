@@ -1,15 +1,16 @@
 import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
+import { updateAction } from 'rform'
 
 import cropImage from '../../image_processing/cropImage'
-import loadImageAction, { changeCropAction, cropImageAction } from '../actions/imageInputActions'
-import updateAction from '../actions/updateAction'
+import loadImageAction, { changeCropAction, cropImageAction }
+  from '../actions/imageInputActions'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
-  const formObjectName = ownProps.object.constructor.name
-  const attrs = ownProps.object.attributes
+  const formObjectName = ownProps.formObject.constructor.name
+  const attrs = ownProps.formObject.attributes
 
   let errors = null
 
