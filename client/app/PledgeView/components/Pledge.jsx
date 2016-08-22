@@ -56,7 +56,7 @@ export default class Pledge extends ChildComponent {
     }
 
     return (
-      <div className="o-layout__item u-2/3@l">
+      <div className="u-2/3@l u-pr-small@l">
         <article className="c-pledge">
           <TagList tags={tags} />
           <PledgeLocation>{location}</PledgeLocation>

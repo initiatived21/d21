@@ -5,11 +5,12 @@ export default class CommentAvatar extends ChildComponent {
   static propTypes = {
     name: PropTypes.string,
     imagePath: PropTypes.string,
-    className: PropTypes.string
+    large: PropTypes.bool,
+    className: PropTypes.string,
   }
 
   render() {
-    const { imagePath, name, className } = this.props
+    const { imagePath, name, large, className } = this.props
 
     let avatarName
     if (name) {
@@ -20,6 +21,9 @@ export default class CommentAvatar extends ChildComponent {
     }
 
     let combinedClassName = 'c-avatar c-avatar--comment'
+    if (large) {
+      combinedClassName += ' c-avatar--large'
+    }
     if (className) {
       combinedClassName += ` ${className}`
     }

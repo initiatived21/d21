@@ -25,7 +25,7 @@ export default class PledgeUpdateList extends ChildComponent {
     }
 
     return (
-      <section className="c-update-list o-layout__item u-2/3@l">
+      <section className="c-update-list u-2/3@l u-pr-small@l">
         <h2>{this.t('.heading')}</h2>
 
         {updateListOrText}

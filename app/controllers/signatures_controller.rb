@@ -6,6 +6,7 @@ class SignaturesController < ApplicationController
     @signature = Signature.new
     @signature.pledge_id = params['id']
     authorize @signature
+
     @form = NewSignatureForm.new(@signature)
     if @form.validate(signature_params)
       create_success!
@@ -67,7 +68,7 @@ class SignaturesController < ApplicationController
 
   def signature_params
     params.require(:signature).permit(
-      :name, :email, :anonymous, :reason, :contact_person
+      :name, :email, :anonymous, :reason, :organization, :contact_person
     )
   end
 end

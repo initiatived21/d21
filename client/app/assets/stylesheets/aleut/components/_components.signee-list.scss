@@ -25,8 +25,29 @@
 }
 
 .c-signee-list__signee-img {
+  position: relative;
+  width: $avatar-size + 25px;
+
   margin-top: $spacing--tiny;
-  border-radius: 50px;
+}
+
+.c-signee-list__signee-id {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 42px;
+  height: 42px;
+  border: 1px solid $tertiary-color;
+  border-radius: 25px;
+
+  color: $tertiary-color;
+  background-color: $white;
+
+  text-align: center;
+  font-weight: bold;
+  @include font-size(20px, 2);
 }
 
 .c-signee-list__signee-name {
@@ -36,9 +57,16 @@
   color: $primary-color;
 }
 
+.c-signee-list__signee-comment {
+  margin-bottom: $spacing--tiny;
+}
+
+.c-signee-list__signee-email {
+  color: $mid-dark-gray;
+}
+
 .c-signee-list__signee-date {
-  margin-top: $spacing--tiny;
   @include font-size(14px, 1.5);
   font-style: italic;
-  color: $gray;
+  color: $mid-dark-gray;
 }

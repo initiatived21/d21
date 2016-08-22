@@ -6,31 +6,12 @@
  *
  */
 
-/**
- * 1.
- */
-
-
-$footer-background-color: rgb(95%, 95%, 95%);
-$footer-separator-color: rgb(95%, 57%, 0%);
-
-$footer-separator-thickness: 2px;
-$footer-spacing-top: 80px;
-$footer-spacing-bottom: 42px;
-$footer-spacing-below-icons: 34px;
-
-$svg-size: 32px;
-$svg-margin: 8px;
-
-$svg-icon-size: 50px;
-$svg-icon-border-size: 1px;
-
 .c-page-foot {
-  background-color: $footer-background-color;
+  background-color: $almost-white;
 
-  border-top: $footer-separator-thickness solid $footer-separator-color;
-  padding-top: $footer-spacing-top;
-  padding-bottom: $footer-spacing-bottom;
+  border-top: 2px solid $tertiary-color;
+  padding-top: 80px;
+  padding-bottom: 42px;
 
   color: $text-color;
 
@@ -49,23 +30,21 @@ $svg-icon-border-size: 1px;
 }
 
 .c-page-foot__icon {
-  width: $svg-icon-size;
-  height: $svg-icon-size;
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  border: $svg-icon-border-size solid;
-  border-radius: $svg-icon-size/2;
+  border: 1px solid;
+  border-radius: 25px;
 
-  margin-bottom: $footer-spacing-below-icons;
+  margin-bottom: 34px;
 
   text-align: center;
 
   .fa {
-    @include font-size(26px, 1.25);
+    @include font-size(26px, 1.8);
 
-    width: $svg-size;
-    height: $svg-size;
-
-    margin: $svg-margin;
+    width: 32px;
+    height: 32px;
 
     color: $text-color;
   }

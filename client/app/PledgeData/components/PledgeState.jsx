@@ -33,7 +33,7 @@ export default class PledgeState extends ChildComponent {
     case 'disapproved':
       stateElement = (
         <p className={`${className} c-pledge-state--disapproved`}>
-          <FontAwesome className="c-pledge-state__thumbs-down" name="thumbs-down" />
+          <FontAwesome className="c-pledge-state__thumbs-down" name="thumbs-o-down" />
         </p>
       )
       break
