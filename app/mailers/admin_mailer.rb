@@ -4,7 +4,6 @@ class AdminMailer < ApplicationMailer
     @pledge = Pledge.find(pledge_id)
 
     mail subject: 'Ein Versprechen wartet auf Freigabe',
-         to: AdminUser.first.email
-
+         to: 'redaktion@buntundverbindlich.de'
   end
 end
