@@ -7,14 +7,23 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :avatar
     property :email
     property :password
-    property :password_confirmation
+    property :password_confirmation, virtual: true
 
     validation :default do
+      configure do
+        def correct?(str)
+          str == form.password
+        end
+      end
+
       required(:name).filled
       required(:avatar)
       required(:email).filled
-      required(:password).filled
-      required(:password_confirmation).filled
+
+      key(:password, &:filled?) # :password required.
+      key(:confirm_password) do |str|
+        str.filled? & str.correct?
+      end
     end
   end
 
