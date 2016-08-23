@@ -7,12 +7,14 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :avatar
     property :email
     property :password
+    property :password_confirmation
 
     validation :default do
       required(:name).filled
-      required(:organization)
+      required(:avatar)
       required(:email).filled
       required(:password).filled
+      required(:password_confirmation).filled
     end
   end
 
