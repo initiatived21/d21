@@ -1,6 +1,7 @@
 import React, { PropTypes  } from 'react'
 import { Form, InputSet, Input, Label, Button } from 'rform'
 import FontAwesome from 'react-fontawesome'
+import MediaQuery from 'react-responsive'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
@@ -10,6 +11,7 @@ import ImageInput from '../../Inputs/wrappers/ImageInputWrapper'
 import SelectInput from '../../Inputs/wrappers/SelectInputWrapper'
 import DateInput from '../../Inputs/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
+import PledgeFormHelp from './PledgeFormHelp'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -42,6 +44,15 @@ export default class PledgeForm extends ChildComponent {
         <div className='c-new-pledge__pledge-data'>
 
           <PledgeContentInputs />
+
+          <div className="o-sidebar o-sidebar--right u-1/3@l u-pl-small@l">
+            <MediaQuery maxWidth={991}>
+              <PledgeFormHelp controls />
+            </MediaQuery>
+            <MediaQuery minWidth={992}>
+              <PledgeFormHelp />
+            </MediaQuery>
+          </div>
 
           <div className="o-layout o-layout--small u-mb-small">
             <div className="o-layout__item u-1/4">
