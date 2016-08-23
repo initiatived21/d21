@@ -699,13 +699,18 @@ en:
           label: Your Profile Image
         email:
           label: Your Email
-          placeholder: 
+          placeholder: "*"
         name:
           label: Your Name
-          placeholder: 
+          placeholder: "*"
         password:
           label: Password
-          placeholder: 
+          placeholder: "*"
+        organization:
+          label: Your company / your organization
+        password_confirmation:
+          label: Confirm password
+          placeholder: "*"
       location:
         label: Location
         placeholder: "*"

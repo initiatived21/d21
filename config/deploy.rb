@@ -13,7 +13,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
@@ -62,32 +62,4 @@ namespace :deploy do
   after :publishing, :restart
 
   after :finishing, 'deploy:cleanup'
-end
-
-namespace :rails do
-  desc 'Open the rails console on each of the remote servers'
-  task :console do
-    on roles(:console), primary: true do |host|
-      rails_env = fetch(:stage)
-      within current_path do
-        execute_interactively "~/.rbenv/bin/rbenv exec bundle exec rails console #{rails_env}", host
-      end
-    end
-  end
-
-  desc 'Open the rails dbconsole on each of the remote servers'
-  task :dbconsole do
-    on roles(:db), primary: true do |host|
-      rails_env = fetch(:stage)
-      within current_path do
-        execute_interactively "~/.rbenv/bin/rbenv exec bundle exec rails dbconsole #{rails_env}", host
-      end
-    end
-  end
-
-  def execute_interactively(command, host)
-    command_string = "ssh -l #{host.user} #{host} -p 22 -t 'cd #{deploy_to}/current && #{command}'"
-    puts command_string
-    exec command_string
-  end
 end

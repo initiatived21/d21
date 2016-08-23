@@ -708,13 +708,18 @@ de:
           label: Ihr Profilbild
         email:
           label: Ihre E-Mail
-          placeholder: 
+          placeholder: "*"
         name:
           label: Ihr Name
-          placeholder: 
+          placeholder: "*"
         password:
           label: Passwort
-          placeholder: 
+          placeholder: "*"
+        organization:
+          label: Ihr Unternehmen / Ihre Organisation
+        password_confirmation:
+          label: Passwort wiederholen
+          placeholder: "*"
       location:
         label: Ort
         placeholder: "*z.B. Bundesweit"
