@@ -1,7 +1,5 @@
 # Contains mailings to the signers of a pledge
 class SignerMailer < ApplicationMailer
-  default from: 'redaktion@buntundverbindlich.de'
-
   def signature_created signature_id
     @signature = Signature.find(signature_id)
     mail(subject: t('.subject'), to: @signature.email)
