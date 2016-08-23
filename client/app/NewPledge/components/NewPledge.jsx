@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
+import MediaQuery from 'react-responsive'
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import ActivePledgeForm from '../containers/ActivePledgeForm'
@@ -22,7 +23,12 @@ export default class NewPledge extends RootComponent {
                 tags={this.props.tags} />
             </div>
             <div className="o-layout__item u-1/3@l">
-              <PledgeFormHelp />
+              <MediaQuery maxWidth={991}>
+                <PledgeFormHelp controls />
+              </MediaQuery>
+              <MediaQuery minWidth={992}>
+                <PledgeFormHelp />
+              </MediaQuery>
             </div>
           </div>
         </div>

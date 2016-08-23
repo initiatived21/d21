@@ -19,6 +19,8 @@
 }
 
 .c-help__title {
+  position: relative;
+
   margin-top: 0;
   padding: $spacing--small $spacing;
   @include font-size(22px, 1.5);
@@ -28,6 +30,15 @@
 
   user-select: none;
 }
+
+.c-help__chevron {
+  display: none;
+
+  position: absolute;
+  top: $spacing--small;
+  right: $spacing;
+}
+
 
 .c-help__wrapper {
   margin: $spacing--small $spacing $spacing;
@@ -57,5 +68,24 @@
 
   a {
     color: $text-color;
+  }
+}
+
+.c-help--controls {
+  .c-help__title {
+    cursor: pointer;
+  }
+
+  .c-help__chevron {
+    display: block;
+  }
+}
+
+.c-help--closed {
+  .c-help__title {
+    margin-bottom: 0;
+  }
+  .c-help__wrapper {
+    display: none;
   }
 }
