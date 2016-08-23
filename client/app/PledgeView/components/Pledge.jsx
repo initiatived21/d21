@@ -1,17 +1,17 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
-import I18n from 'i18n-js';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../lib/Base/components/ChildComponent'
+import I18n from 'i18n-js'
 
-import TagList from '../../TagList/components/TagList';
-import PledgeLocation from './PledgeLocation';
-import PledgeQuote from './PledgeQuote';
-import PledgeData from './PledgeData';
-import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons';
-import PledgeImage from './PledgeImage';
-import PledgeDescription from './PledgeDescription';
-import PledgeCreatedAt from './PledgeCreatedAt';
+import TagList from '../../TagList/components/TagList'
+import PledgeLocation from './PledgeLocation'
+import PledgeQuote from './PledgeQuote'
+import PledgeData from './PledgeData'
+import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons'
+import PledgeImage from './PledgeImage'
+import PledgeDescription from './PledgeDescription'
+import PledgeCreatedAt from './PledgeCreatedAt'
 
-import { DOMAIN_PROD, DUMMY_IMAGE_PATH } from '../../lib/config';
+import { DOMAIN_PROD } from '../../lib/config'
 
 export default class Pledge extends ChildComponent {
   static propTypes = {
@@ -33,14 +33,14 @@ export default class Pledge extends ChildComponent {
   }
 
   getPledgePath() {
-    return `/${I18n.locale}/pledges/${this.props.id}`;
+    return `/${I18n.locale}/pledges/${this.props.id}`
   }
 
   render() {
     const {
       title, content, amount, who, requirement, location, deadline, description, image,
       aasm_state, signatures_count, created_at, user, tags
-    } = this.props;
+    } = this.props
 
     const initiator = user.organization ? user.organization : user.name
     const pledgeImage = image.url ? (<PledgeImage src={image.url} />) : null
@@ -56,7 +56,7 @@ export default class Pledge extends ChildComponent {
     }
 
     return (
-      <div className="o-layout__item u-2/3@l">
+      <div className="u-2/3@l u-pr-small@l">
         <article className="c-pledge">
           <TagList tags={tags} />
           <PledgeLocation>{location}</PledgeLocation>

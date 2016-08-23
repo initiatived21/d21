@@ -8,12 +8,25 @@ const mapStateToProps = (state, ownProps) => {
       signature.pledge_id === ownProps.pledge_id && signature.confirmed
     )
 
+  const currentPledge = state.pledges[ownProps.pledge_id]
+  const currentUser = state.currentUser
+
+  let userIsInitiator
+  if (currentUser && currentPledge) {
+    userIsInitiator = currentUser.id == currentPledge.user_id
+  } else {
+    userIsInitiator = false
+  }
+
+  const isSuccessful = currentPledge.aasm_state === 'successful'
+
   return {
-    signatures
+    signatures,
+    showPrivateData: userIsInitiator && isSuccessful
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

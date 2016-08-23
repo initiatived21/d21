@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
 import store from '../../lib/store'
-import normalize from '../../lib/normalization'
-import { addEntities } from '../../lib/actions/entityActions'
 
 import RootComponent from '../../lib/Base/components/RootComponent'
 import EmptyResults from './EmptyResults'
@@ -21,7 +19,7 @@ export default class Search extends RootComponent {
   }
 
   render() {
-    const { locale, pledges, query, resultCount } = this.props
+    const { pledges, query, resultCount } = this.props
 
     let resultView = undefined
     if (pledges.length == 0) {

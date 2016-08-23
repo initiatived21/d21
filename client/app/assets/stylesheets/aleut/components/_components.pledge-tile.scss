@@ -73,12 +73,6 @@
   text-align: center;
 }
 
-.c-pledge-tile__days {
-  color: #c00;
-  @include font-size(20px);
-  font-family: $font-family-heading;
-  font-weight: $font-weight-medium;
-}
 
 
 /* Absolute positioning of other components inside of pledge tiles */

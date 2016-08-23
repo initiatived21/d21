@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #REACT-DATEPICKER OVERWRITES
+\*------------------------------------*/
+
+/**
+ * Customization
+ */
+
+.react-datepicker__input-container {
+  width: 100%;
+
+  input {
+    height: $input-height;
+    border-radius: $border-radius;
+    width: 100%;
+    padding: $spacing--tiny;
+    border: 1px solid $gray;
+    background-color: transparent;
+  }
+}

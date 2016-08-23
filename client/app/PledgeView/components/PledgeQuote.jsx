@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
-import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import Avatar from '../../Avatar/components/Avatar'
 
 export default class PledgeQuote extends ChildComponent {
@@ -14,7 +13,7 @@ export default class PledgeQuote extends ChildComponent {
   };
 
   render() {
-    const { imagePath, initiatorName, content, amount, who, requirement } = this.props;
+    const { imagePath, initiatorName, content, amount, who, requirement } = this.props
 
     return (
       <div className="c-pledge-view__text o-media o-media--small o-media__responsive u-mt u-mb">
@@ -25,6 +24,6 @@ export default class PledgeQuote extends ChildComponent {
           </blockquote>
         </div>
       </div>
-    );
+    )
   }
 }

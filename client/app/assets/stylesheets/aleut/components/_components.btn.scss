@@ -14,7 +14,15 @@
   color: $white;
   transition: background-color $transition-time;
 
-  height: 40px;
+  height: $input-height;
+
+  @include font-size(16px, 1);
+
+  a {
+    color: $white;
+  }
+
+  user-select: none;
 
   //.fa {
   //  @include font-size(18px, 1.4);
@@ -34,6 +42,14 @@
 
   &:hover, &:active {
     background-color: $secondary-color-highlight;
+  }
+}
+
+.c-btn--tertiary {
+  background-color: $tertiary-color;
+
+  &:hover, &:active {
+    background-color: $tertiary-color-highlight;
   }
 }
 

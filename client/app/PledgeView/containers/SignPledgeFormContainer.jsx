@@ -5,12 +5,12 @@ import { connect } from 'react-redux'
 // import submitSignPledgeForm from '../actions/submitSignPledgeForm'
 import SignPledgeForm from '../components/SignPledgeForm'
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state) => ({
   // existingAttrs: merge({}, ownProps.formData.object),
   isSubmitting: state.isSubmitting.NewSignatureFormObject || false,
 })
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
   // ensureStateObjectExistence(formObject, existingStateInstance, existingAttrs) {
   //   if (existingStateInstance) { return }
   //   return dispatch(setEntity(

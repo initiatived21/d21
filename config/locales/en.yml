@@ -7,6 +7,12 @@ en:
     title: Share via Facebook
   GoogleplusButton:
     title: Share via Google+
+  ImageCrop:
+    crop_explanation: You can crop the image now.
+    select_detail: Select detail
+  ImageInputComponent:
+    loading_image: Loading image. Please wait…
+    select_image: Please select an image.
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -31,12 +37,38 @@ en:
       days: days
       title: Time left
   PledgeForm:
+    account:
+      explanation: Through your user account you manage the pledge.
+      have_one: You already have an account?
+      heading: Your user account data
+      login: Please login to carry over your data.
+    draft_explanation: Stores pledge draft into your account.
+    heading: Make a pledge
+    location:
+      label: Location
+    preview: Preview pledge
+    preview_explanation: During the next step you can verify your pledge before submitting it.
     promise:
-      part1: "“We promise to"
+      part1: "“We promise"
       part3: 
       part4: if
       part8: ".”"
-    save_draft: Save Draft
+    save_draft: Save draft
+    tooltip:
+      deadline: 
+      image: 
+      location: 
+  PledgeFormHelp:
+    faq_link: Look into our FAQ.
+    further_questions: Further questions?
+    heading: How it works…
+    step: 'Step {{step}}:'
+    text:
+      step1: 
+      step2: 
+      step3: 
+      step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+      step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
     img_alt: image describing the pledge
   PledgeLocation:
@@ -62,13 +94,33 @@ en:
   PledgeUpdateList:
     heading: Updates
     no_updates: There are no updates yet.
+  PreviewDraft:
+    edit_pledge: Edit pledge
+    explanation: Your pledge will be reviewed by our editorial staff and published within one to three weekdays. You can manage your pledge through your user account.
+    legal:
+      part1: 'By submitting you agree to our '
+      part2: " and our "
+      part3: "."
+      privacy: privacy statement
+      terms: terms
+    submit_pledge: Submit pledge
   PreviewExplanation:
-    preview: This is a preview of your pledge.
-    status:
-      confirm_email: Please confirm your email to finalize this pledge.
-      reviewed: It is being reviewed.
-      submit_for_approval: Submit for approval
     title: Pledge preview
+  PreviewRequested:
+    explanation: You have successfully submitted your pledge!
+    improve_success:
+      post_updates: Regularly post updates concerning your project.
+      social_media: Promote the pledge through your social media channels.
+      title: 'How to make your pledge successful:'
+    next_steps:
+      editorial_staff: Your pledge is being reviewed by our editorial staff and will be published within one to three weekdays.
+      part1: 'You can manage your pledge through '
+      part2: "."
+      question: What's next?
+      user_account: your user account
+  PreviewUnconfirmed:
+    confirm_email: Please confirm your email to finalize this pledge.
+    edit_pledge: Edit pledge
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -83,6 +135,13 @@ en:
     i_sign: I sign this pledge.
     sign: Sign
     small_print: 
+    tooltip:
+      anonymous: 
+      contact_person: 
+      email: 
+  Signee:
+    anonymous: Name is known to the editors
+    contact_person: contact person
   SigneeList:
     heading: Signees
     no_signees: There are no signees yet.
@@ -111,8 +170,8 @@ en:
       admin: 
       all: 
     sidebars:
-      Zustand: 
       Filter: 
+      Zustand: 
   activerecord:
     attributes:
       active_admin/comment:
@@ -128,6 +187,13 @@ en:
         email: 
         id: 
         sign_in_count: 
+      comment:
+        content: 
+        created_at: 
+        id: 
+        pledge: 
+        response: 
+        updated_at: 
       pledge:
         aasm_state: 
         amount: 
@@ -151,6 +217,34 @@ en:
         updates: 
         user_id: 
         who: 
+      signature:
+        aasm_state: 
+        anonymous: 
+        confirmation_hash: 
+        confirmed: 
+        contact_person: 
+        created_at: 
+        email: 
+        id: 
+        name: 
+        organization: 
+        pledge: 
+        pledge_id: 
+        reason: 
+        updated_at: 
+      tag:
+        color: 
+        created_at: 
+        id: 
+        name: 
+        pledges: 
+        pledges_tags: 
+        updated_at: 
+      update:
+        content: 
+        created_at: 
+        pledge: 
+        updated_at: 
       user:
         avatar: 
         confirmation_sent_at: 
@@ -170,42 +264,16 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
-      signature:
-        id: 
-        name: 
-        aasm_state: 
-        anonymous: 
-        contact_person: 
-        email: 
-        organization: 
-        pledge: 
-        confirmation_hash: 
-        confirmed: 
-        created_at: 
-        reason: 
-        updated_at: 
-        pledge_id: 
-      comment:
-        id: 
-        content: 
-        created_at: 
-        pledge: 
-        response: 
-        updated_at: 
-      update:
-        content: 
-        created_at: 
-        pledge: 
-        updated_at: 
     models:
       admin: 
       admin_user: 
       comment: 
+      fragen_und_antworten: 
+      fragenund_antworten: 
+      fund_a: 
       pledge: 
       signature: 
-      fragenund_antworten: 
-      fragen_und_antworten: 
-      fund_a: 
+      tag: 
       update: 
   application_mailer:
     farewell: 
@@ -215,6 +283,58 @@ en:
     mailer:
       confirmation_instructions:
         user_subject: 
+  errors:
+    array?: must be an array
+    attr?: is missing
+    bool?: must be boolean
+    date?: must be a date
+    date_time?: must be a date time
+    decimal?: must be a decimal
+    empty?: must be empty
+    eql?: must be equal to %{left}
+    even?: must be even
+    excluded_from?:
+      arg:
+        default: 'must not be one of: %{list}'
+        range: 'must not be one of: %{list_left} - %{list_right}'
+    excludes?: must not include %{value}
+    exclusion?: 'must not be one of: %{list}'
+    false?: must be false
+    filled?: should be filled
+    float?: must be a float
+    format?: is in invalid format
+    gt?: must be greater than %{num}
+    gteq?: must be greater than or equal to %{num}
+    hash?: must be a hash
+    included_in?:
+      arg:
+        default: 'must be one of: %{list}'
+        range: 'must be one of: %{list_left} - %{list_right}'
+    includes?: must include %{value}
+    inclusion?: 'must be one of: %{list}'
+    int?: must be an integer
+    key?: is missing
+    lt?: must be less than %{num}
+    lteq?: must be less than or equal to %{num}
+    max_size?: size cannot be greater than %{num}
+    min_size?: size cannot be less than %{num}
+    none?: cannot be defined
+    not_eql?: must not be equal to %{left}
+    number?: must be a number
+    odd?: must be odd
+    size?:
+      arg:
+        default: size must be %{size}
+        range: size must be within %{size_left} - %{size_right}
+      value:
+        string:
+          arg:
+            default: length must be %{size}
+            range: length must be within %{size_left} - %{size_right}
+    str?: must be a string
+    time?: must be a time
+    true?: must be true
+    type?: must be %{type}
   first_paragraph: 
   flash:
     actions:
@@ -227,10 +347,10 @@ en:
       pledge:
         edit:
           update: 
-      user:
+      signature:
         edit:
           update: 
-      signature:
+      user:
         edit:
           update: 
     hints:
@@ -257,11 +377,6 @@ en:
           requirement: 
           title: 
           who: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -274,6 +389,11 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     labels:
       pledge:
         edit:
@@ -292,9 +412,14 @@ en:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -303,31 +428,23 @@ en:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -340,6 +457,11 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     placeholders:
       active_admin/comment:
         show:
@@ -366,25 +488,21 @@ en:
           aasm_state: 
           amount: 
           body: 
+          color: 
+          confirmation_hash: 
           content: 
           description: 
           email: 
           image: 
           location: 
+          name: 
           namespace: 
+          organization: 
+          reason: 
           requirement: 
+          response: 
           title: 
           who: 
-          name: 
-          organization: 
-          confirmation_hash: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -393,6 +511,11 @@ en:
           name: 
           organization: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
   helpers:
     label:
       pledge:
@@ -412,9 +535,14 @@ en:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -423,33 +551,23 @@ en:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-      user:
-        email: 
-        password: 
-        remember_me: 
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -462,6 +580,14 @@ en:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -522,7 +648,7 @@ en:
       answer5: Translation not yet available.
       answer6: Translation not yet available.
       answer7: Translation not yet available.
-      question1: What is bunt und verbindlich?
+      question1: What is *bunt und verbindlich?*
       question2: How does it work?
       question3: How can I register?
       question4: Is it free to use the platform?
@@ -532,27 +658,37 @@ en:
     home:
       recommended: Recommended by the editors
       successful: Successful promises
+  paths:
+    edit_pledge: "/en/pledges/{{pledge}}/edit"
+    faq: "/en/faq"
+    privacy: "/en/privacy"
+    terms: "/en/terms"
+    user_profile: "/en/users/profile"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
     destroy:
       success: Pledge successfully deleted.
-  react_form:
+  ransack:
+    predicates:
+      contains: 
+  rform:
     comment:
       content:
         label: Your question…
       response:
         label: Your answer…
+    date_format: DD/MM/YYYY
     pledge:
       amount:
         label: how many?
         placeholder: 10
       content:
         label: what?
-        placeholder: give a refugee family a home
+        placeholder: to give a refugee family a home
       deadline:
         label: Can be signed until
-        placeholder: 
+        placeholder: "*Please select date"
       description:
         label: More Info (optional)
         placeholder: 
@@ -572,16 +708,16 @@ en:
           placeholder: 
       location:
         label: Location
-        placeholder: 
+        placeholder: "*"
       requirement:
         label: do what?
         placeholder: do the same
       tag_ids:
         label: Topics
-        placeholder: Please select topic
+        placeholder: "*Please select topic"
       title:
         label: Title
-        placeholder: e.g. Sponsorship
+        placeholder: "*e.g. Sponsorship"
       who:
         label: who?
         placeholder: other people
@@ -626,14 +762,26 @@ en:
       second_paragraph: 
       subject: 
       third_paragraph: 
-  ransack:
-    predicates:
-      contains: 
+  tags:
+    names:
+      accomodation: Accomodation
+      children: Children
+      counseling: Counseling
+      culture: culture
+      donation: Donation
+      education: Education
+      family: family
+      language: Language
+      men: Men
+      mentorship: Mentorship
+      platform: platform
+      social_life: Social Life
+      sport: Sport
+      technology: Technology
+      volunteering: Volunteering
+      women: Women
+      work: Work
   views:
     pagination:
       last: 
       next: 
-  tags:
-    names:
-      books: Books
-      family: Family

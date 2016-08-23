@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Provider } from 'react-redux'
 
 import CommentAvatar from '../../Avatar/components/CommentAvatar'
 import PledgeAnswer from './PledgeAnswer'

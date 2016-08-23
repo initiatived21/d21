@@ -57,6 +57,20 @@ describe PagesController do
     end
   end
 
+  describe "GET 'howitworks'" do
+    it 'should work' do
+      get :about, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
+  describe "GET 'howitworks'" do
+    it 'should work' do
+      get :press, params: { locale: 'de' }
+      assert_response :success
+    end
+  end
+
   describe "GET 'not_found'" do
     it 'should work and return 404' do
       get :not_found, params: { locale: 'de' }

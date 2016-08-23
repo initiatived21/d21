@@ -7,6 +7,12 @@ de:
     title: Über Facebook teilen
   GoogleplusButton:
     title: Über Google+ teilen
+  ImageCrop:
+    crop_explanation: Sie können das Bild jetzt beschneiden.
+    select_detail: Ausschnitt wählen
+  ImageInputComponent:
+    loading_image: Lade Bild. Bitte warten…
+    select_image: Bitte wählen Sie ein Bild aus.
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -31,12 +37,38 @@ de:
       days: Tage
       title: Zeit übrig
   PledgeForm:
+    account:
+      explanation: Über Ihr Nutzerkonto verwalten Sie das Versprechen.
+      have_one: Sie haben bereits ein Nutzerkonto?
+      heading: Ihre Daten für Ihr Nutzerkonto
+      login: Bitte loggen Sie sich ein, um Ihre Daten zu übernehmen.
+    draft_explanation: Speichert Entwurf in Ihrem Nutzerkonto.
+    heading: Ein Versprechen abgeben
+    location:
+      label: Ort
+    preview: Zur Vorschau
+    preview_explanation: Im nächsten Schritt können Sie Ihr Versprechen noch einmal überprüfen, bevor Sie es abschicken.
     promise:
       part1: "„Wir versprechen,"
       part3: ","
       part4: wenn
       part8: ".“"
     save_draft: Entwurf speichern
+    tooltip:
+      deadline: Ihr Versprechen ist erfolgreich, wenn es nach Ablauf des angegebenen Datums genügend Unterstützer gesammelt hat.
+      image: Optimal ist ein Bild im Querformat mit einer Breite von mindestens 1.200 Pixeln.
+      location: 'Wo soll das Versprechen umgesetzt werden? Beispiele: bundesweit, nicht ortsgebunden, Berlin, Bayern'
+  PledgeFormHelp:
+    faq_link: Schauen Sie in unseren FAQ nach.
+    further_questions: Sie haben weitere Fragen?
+    heading: So funktioniert es…
+    step: 'Schritt {{step}}:'
+    text:
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
+      step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
+      step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+      step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeLocation:
@@ -62,13 +94,33 @@ de:
   PledgeUpdateList:
     heading: Neuigkeiten
     no_updates: Es gibt noch keine Neuigkeiten.
+  PreviewDraft:
+    edit_pledge: Versprechen bearbeiten
+    explanation: Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Werktagen veröffentlicht. Sie können Ihr Versprechen in Ihrem Nutzerkonto verwalten.
+    legal:
+      part1: 'Mit dem Abschicken stimmen Sie unseren '
+      part2: " und der "
+      part3: " zu."
+      privacy: Datenschutzerklärung
+      terms: AGB
+    submit_pledge: Versprechen abschicken
   PreviewExplanation:
-    preview: Dies ist eine Vorschau auf Ihr Versprechen.
-    status:
-      confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
-      reviewed: Es wird gerade überprüft.
-      submit_for_approval: Zur Freigabe vorlegen
     title: Versprechensvorschau
+  PreviewRequested:
+    explanation: Sie haben Ihr Versprechen erfolgreich abgeschickt!
+    improve_success:
+      post_updates: Schreiben Sie regelmäßig Neuigkeiten zu Ihrem Projekt.
+      social_media: Bewerben Sie das Versprechen in Ihren Sozialen Netzwerken.
+      title: 'So machen Sie Ihr Versprechen erfolgreich:'
+    next_steps:
+      editorial_staff: Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Tagen veröffentlicht.
+      part1: 'Sie können Ihr Versprechen in '
+      part2: " verwalten."
+      question: Wie geht es weiter?
+      user_account: Ihrem Nutzerkonto
+  PreviewUnconfirmed:
+    confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+    edit_pledge: Versprechen bearbeiten
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -83,6 +135,13 @@ de:
     i_sign: Ich unterzeichne dieses Versprechen.
     sign: Unterzeichnen
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
+    tooltip:
+      anonymous: Ihr Klarname wird in der Unterschriftenliste nicht angezeigt. Der Initiator des Versprechens erhält Ihre Daten nur dann, wenn das Versprechen erfolgreich ist, um mit Ihnen Kontakt aufzunehmen.
+      contact_person: Wenn mehrere Unterzeichner dieselbe Organisation vertreten, hilft diese Angabe dem Initiator, den richtigen Ansprechpartner zu wählen.
+      email: Ihre Email wird in der Unterschriftenliste nicht angezeigt. Der Initiator des Versprechens erhält Ihre Daten nur dann, wenn das Versprechen erfolgreich ist, um mit Ihnen Kontakt aufzunehmen.
+  Signee:
+    anonymous: Name ist der Redaktion bekannt
+    contact_person: Ansprechpartner
   SigneeList:
     heading: Unterzeichner
     no_signees: Es gibt noch keine Unterzeichner.
@@ -111,8 +170,8 @@ de:
       admin: Admin
       all: All
     sidebars:
-      Zustand: Zustand
       Filter: Filter
+      Zustand: Zustand
   activerecord:
     attributes:
       active_admin/comment:
@@ -128,6 +187,13 @@ de:
         email: Email
         id: Id
         sign_in_count: Sign In Count
+      comment:
+        content: Content
+        created_at: Created at
+        id: Id
+        pledge: Pledge
+        response: Response
+        updated_at: Updated at
       pledge:
         aasm_state: Aasm State
         amount: Amount
@@ -151,6 +217,34 @@ de:
         updates: Updates
         user_id: User
         who: Who
+      signature:
+        aasm_state: Aasm state
+        anonymous: Anonymous
+        confirmation_hash: Confirmation hash
+        confirmed: Confirmed
+        contact_person: Contact person
+        created_at: Created at
+        email: Email
+        id: Id
+        name: Name
+        organization: Organization
+        pledge: Pledge
+        pledge_id: Pledge
+        reason: Reason
+        updated_at: Updated at
+      tag:
+        color: Color
+        created_at: Created At
+        id: Id
+        name: Name
+        pledges: Pledges
+        pledges_tags: Pledges tags
+        updated_at: Updated At
+      update:
+        content: Content
+        created_at: Created at
+        pledge: Pledge
+        updated_at: Updated at
       user:
         avatar: Avatar
         confirmation_sent_at: Confirmation Sent At
@@ -170,42 +264,16 @@ de:
         reset_password_token: Reset Password Token
         sign_in_count: Sign In Count
         updated_at: Updated At
-      signature:
-        id: Id
-        name: Name
-        aasm_state: Aasm state
-        anonymous: Anonymous
-        contact_person: Contact person
-        email: Email
-        organization: Organization
-        pledge: Pledge
-        confirmation_hash: Confirmation hash
-        confirmed: Confirmed
-        created_at: Created at
-        reason: Reason
-        updated_at: Updated at
-        pledge_id: Pledge
-      comment:
-        id: Id
-        content: Content
-        created_at: Created at
-        pledge: Pledge
-        response: Response
-        updated_at: Updated at
-      update:
-        content: Content
-        created_at: Created at
-        pledge: Pledge
-        updated_at: Updated at
     models:
       admin: Admin
       admin_user: Admin Users
       comment: Comments
+      fragen_und_antworten: Fragen Und Antwortens
+      fragenund_antworten: Fragenund Antwortens
+      fund_a: Fund As
       pledge: Pledge
       signature: Signature
-      fragenund_antworten: Fragenund Antwortens
-      fragen_und_antworten: Fragen Und Antwortens
-      fund_a: Fund As
+      tag: Tag
       update: Updates
   application_mailer:
     farewell: Mit besten Grüßen,
@@ -215,6 +283,58 @@ de:
     mailer:
       confirmation_instructions:
         user_subject: Confirmation instructions
+  errors:
+    array?: 
+    attr?: 
+    bool?: 
+    date?: 
+    date_time?: 
+    decimal?: 
+    empty?: 
+    eql?: 
+    even?: 
+    excluded_from?:
+      arg:
+        default: 
+        range: 
+    excludes?: 
+    exclusion?: 
+    false?: 
+    filled?: muss ausgefüllt werden
+    float?: 
+    format?: 
+    gt?: muss größer als %{num} sein
+    gteq?: 
+    hash?: 
+    included_in?:
+      arg:
+        default: 
+        range: 
+    includes?: 
+    inclusion?: 
+    int?: 
+    key?: 
+    lt?: 
+    lteq?: 
+    max_size?: muss weniger als %{num} Zeichen enthalten
+    min_size?: 
+    none?: 
+    not_eql?: 
+    number?: 
+    odd?: 
+    size?:
+      arg:
+        default: 
+        range: 
+      value:
+        string:
+          arg:
+            default: 
+            range: 
+    str?: 
+    time?: 
+    true?: 
+    type?: 
   first_paragraph: 
   flash:
     actions:
@@ -227,10 +347,10 @@ de:
       pledge:
         edit:
           update: 
-      user:
+      signature:
         edit:
           update: 
-      signature:
+      user:
         edit:
           update: 
     hints:
@@ -257,11 +377,6 @@ de:
           requirement: 
           title: 
           who: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -274,6 +389,11 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     labels:
       pledge:
         edit:
@@ -292,9 +412,14 @@ de:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -303,31 +428,23 @@ de:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -340,6 +457,11 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
     placeholders:
       active_admin/comment:
         show:
@@ -366,25 +488,21 @@ de:
           aasm_state: 
           amount: 
           body: 
+          color: 
+          confirmation_hash: 
           content: 
           description: 
           email: 
           image: 
           location: 
+          name: 
           namespace: 
+          organization: 
+          reason: 
           requirement: 
+          response: 
           title: 
           who: 
-          name: 
-          organization: 
-          confirmation_hash: 
-          reason: 
-          response: 
-      user:
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -393,6 +511,11 @@ de:
           name: 
           organization: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
   helpers:
     label:
       pledge:
@@ -412,9 +535,14 @@ de:
         index:
           aasm_state: 
           amount: 
+          anonymous: 
           author_type: 
           body: 
+          color: 
           comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
           content: 
           created_at: 
           deadline: 
@@ -423,34 +551,23 @@ de:
           image: 
           initiator: 
           location: 
+          name: 
           namespace: 
+          organization: 
           pg_search_document: 
+          pledge: 
+          pledges: 
           pledges_tags: 
+          reason: 
           requirement: 
           resource_type: 
+          response: 
           signatures: 
           tags: 
           title: 
           updated_at: 
           updates: 
           who: 
-          name: 
-          organization: 
-          pledge: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          reason: 
-          response: 
-      user:
-        email: 
-        password: 
-        remember_me: 
-        edit:
-          email: 
-          name: 
-          organization: 
       signature:
         edit:
           aasm_state: 
@@ -463,6 +580,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      user:
+        edit:
+          email: 
+          name: 
+          organization: 
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -516,7 +641,7 @@ de:
         twitter_title: Bunt und Verbindlich auf Twitter
   pages:
     faq:
-      answer1: "bunt und verbindlich ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von bunt und verbindlich ist es, die bisherige starke Hilfsbereitschaft für Gefüchtete auch in den kommenden Jahren zu sichern und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Ehrenamtliche haben Integrationsideen oder Zeit, aber nicht die fnanziellen oder materiellen Mittel, um diese umzusetzen.\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit bunt und verbindlich wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
+      answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Gefüchtete auch in den kommenden Jahren zu sichern und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen und Ehrenamtliche:  \nUnternehmen haben Sach- oder Geldspenden, aber keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Ehrenamtliche haben Integrationsideen oder Zeit, aber nicht die fnanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
       answer2: "bunt und verbindlich hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Wir werden etwas tun, wenn genügend andere Personen mithelfen“.\n\nEin Beispiel: „Wir versprechen, Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitstellen, wenn 10 Dolmetscher bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen.“\n\nJedes Versprechen wird vor Veröffentlichung von uns überprüft, ob die Inhalte nicht gegen unsere Nutzungsbedingungen verstoßen. \nDas veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.\n\nIst das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.\n\nErfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren."
       answer3: |-
         Sie registrieren sich, wenn Sie ein Versprechen einstellen.
@@ -530,7 +655,7 @@ de:
         Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
 
         Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
-      question1: Was ist bunt und verbindlich?
+      question1: Was ist *bunt und verbindlich?*
       question2: Wie funktioniert das?
       question3: Wie kann ich mich registrieren?
       question4: Ist die Nutzung kostenfei?
@@ -540,17 +665,27 @@ de:
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+  paths:
+    edit_pledge: "/de/pledges/{{pledge}}/edit"
+    faq: "/de/faq"
+    privacy: "/de/privacy"
+    terms: "/de/terms"
+    user_profile: "/de/users/profile"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
     destroy:
       success: Versprechen erfolgreich gelöscht.
-  react_form:
+  ransack:
+    predicates:
+      contains: 
+  rform:
     comment:
       content:
         label: Ihre Frage…
       response:
         label: Ihre Antwort…
+    date_format: DD.MM.YYYY
     pledge:
       amount:
         label: wie viele?
@@ -560,7 +695,7 @@ de:
         placeholder: eine Flüchtlingsfamilie als Paten zu unterstützen
       deadline:
         label: Kann unterzeichnet werden bis
-        placeholder: 
+        placeholder: "*Bitte Datum auswählen"
       description:
         label: Mehr Infos (optional)
         placeholder: |-
@@ -582,16 +717,16 @@ de:
           placeholder: 
       location:
         label: Ort
-        placeholder: z.B. Bundesweit
+        placeholder: "*z.B. Bundesweit"
       requirement:
         label: was tun?
         placeholder: das Gleiche tun
       tag_ids:
         label: Themenbereiche
-        placeholder: Bitte Thema auswählen
+        placeholder: "*Bitte Thema auswählen"
       title:
         label: Titel
-        placeholder: z.B. Patenschaft
+        placeholder: "*z.B. Patenschaft"
       who:
         label: wer?
         placeholder: andere Personen
@@ -636,14 +771,26 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
-  ransack:
-    predicates:
-      contains: 
+  tags:
+    names:
+      accomodation: Unterbringung
+      children: Kinder
+      counseling: Beratung
+      culture: Kultur
+      donation: Spende
+      education: Ausbildung
+      family: Familie
+      language: Sprache
+      men: Männer
+      mentorship: Patenschaft
+      platform: Plattform
+      social_life: Teilhabe
+      sport: Sport
+      technology: Technik
+      volunteering: Ehrenamt
+      women: Frauen
+      work: Arbeit
   views:
     pagination:
       last: 
       next: 
-  tags:
-    names:
-      books: Bücher
-      family: Familie

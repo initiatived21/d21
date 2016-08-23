@@ -1,10 +1,11 @@
-import React, { PropTypes, Component } from 'react'
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../Base/components/ChildComponent'
 
 import ImageCrop from './ImageCrop'
 import { IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED, IMAGE_STATE_CROPPED } from
   '../reducers/imageInputReducer'
 
-export default class ImageInputComponent extends Component {
+export default class ImageInputComponent extends ChildComponent {
   static propTypes = {
     model: PropTypes.string, // required, but injection later is ok
     attribute: PropTypes.string.isRequired,
@@ -41,25 +42,25 @@ export default class ImageInputComponent extends Component {
     let fileValueProps = {}
     let imagePreview = null
     switch(imageState) {
-      case IMAGE_STATE_NONE:
-        imagePreview = (
+    case IMAGE_STATE_NONE:
+      imagePreview = (
           <p className="c-image-input__text">
-            Bitte wählen Sie ein Bild aus.
+            {this.t('.select_image')}
           </p>
         )
-        break
-      case IMAGE_STATE_LOADING:
-        imagePreview = (
+      break
+    case IMAGE_STATE_LOADING:
+      imagePreview = (
           <p className="c-image-input__text">
-            <i>Lade Bild. Bitte warten…</i>
+            <i>{this.t('.loading_image')}</i>
           </p>
         )
-        break
+      break
 
-      case IMAGE_STATE_LOADED:
-        const cropComponentWidth = (previewArea / originalImageHeight) *
+    case IMAGE_STATE_LOADED:
+      const cropComponentWidth = (previewArea / originalImageHeight) *
           Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
-        imagePreview = (
+      imagePreview = (
           <ImageCrop
             width={cropComponentWidth}
             src={originalImage.src}
@@ -68,21 +69,21 @@ export default class ImageInputComponent extends Component {
             handleFinishCrop={handleFinishCrop}
           />
         )
-        break
+      break
 
-      case IMAGE_STATE_CROPPED:
-        imagePreview = (
+    case IMAGE_STATE_CROPPED:
+      imagePreview = (
           <div className="c-image-input__preview">
             <img src={croppedImageUrl} />
           </div>
         )
         // Clear file input when crop is done so change is detected even if the same image is
         // selected
-        fileValueProps = { value: '' }
-        break
-      
-      default:
-        imagePreview = null
+      fileValueProps = { value: '' }
+      break
+
+    default:
+      imagePreview = null
     }
 
     let combinedClassName = 'c-image-input'

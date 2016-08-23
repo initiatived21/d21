@@ -30,20 +30,19 @@ export default class PledgeView extends RootComponent {
   render() {
     const { pledge, user, forms } = this.props
 
-    console.log(pledge)
     return (
       <Provider store={store}>
         <main>
-          <div className="o-wrapper u-mb">
-          <div className="o-layout">
-            <Pledge {...pledge} user={user} />
-            <PledgeSidebarContainer pledge_id={pledge.id}
-              forms={forms} />
-            <PledgeUpdatesContainer pledge_id={pledge.id} />
-            <PledgeQAsContainer pledge_id={pledge.id}
-              forms={forms} />
-            <SigneeListContainer pledge_id={pledge.id} />
-          </div>
+          <div className="o-wrapper u-mb-large">
+            <div className="o-sidebar__container">
+              <Pledge {...pledge} user={user} />
+              <PledgeSidebarContainer pledge_id={pledge.id}
+                forms={forms} />
+              <PledgeUpdatesContainer pledge_id={pledge.id} />
+              <PledgeQAsContainer pledge_id={pledge.id}
+                forms={forms} />
+              <SigneeListContainer pledge_id={pledge.id} user={user} />
+            </div>
           </div>
         </main>
       </Provider>

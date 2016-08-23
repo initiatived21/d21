@@ -7,9 +7,6 @@
  */
 
 .c-pledge-form {
-  position: relative;
-  height: 17rem;
-
   padding-bottom: $spacing--large;
   border-bottom: 1px solid $gray;
   margin-bottom: $spacing--large;
@@ -17,7 +14,6 @@
 
 .c-pledge-form__text {
   display: block;
-  position: absolute;
 
   font-weight: bold;
   @include font-size(24px, 28px);
@@ -25,10 +21,8 @@
 }
 
 .c-pledge-form__input {
-  position: absolute;
-
   > label {
-    color: $primary-color;
+    color: $mid-dark-gray;
   }
 
   > input {
@@ -37,7 +31,7 @@
     border: 1px solid $primary-color;
     border-radius: 5px;
     background-color: transparent;
-    height: 40px;
+    height: $input-height;
 
     &::placeholder {
       color: $primary-color;
@@ -51,46 +45,74 @@
   }
 }
 
-.c-pledge-form__part1 {
-  top: 2rem;
-  left: 0;
+.c-pledge-form__group1 {
+  display: flex;
+  margin-bottom: $spacing--small;
+}
+
+.c-pledge-form__group1-1 {
+  padding-top: 1.65rem;
+  min-width: 15.5rem;
+}
+
+.c-pledge-form__group1-2 {
+  flex-grow: 1;
+  display: flex;
 }
 
 .c-pledge-form__part2 {
-  top: 0;
-  left: 14.5rem;
-  right: 1.4rem;
+  flex-grow: 1;
 }
 
 .c-pledge-form__part3 {
-  top: 2rem;
-  right: 0.65rem;
+  margin-left: 0.2rem;
+  min-width: 1.2rem;
+  max-width: 1.2rem;
+  padding-top: 1.65rem;
+  text-align: left;
+}
+
+
+.c-pledge-form__group2 {
+  display: flex;
+  margin-bottom: $spacing--small;
+}
+
+.c-pledge-form__group2-1 {
+  display: flex;
+}
+
+.c-pledge-form__group2-2 {
+  flex-grow: 1;
 }
 
 .c-pledge-form__part4 {
-  top: 7rem;
-  left: 0;
+  padding-top: 1.65rem;
+  min-width: 5.5rem;
 }
 
 .c-pledge-form__part5 {
-  top: 5rem;
-  left: 5rem;
-  width: 10rem;
+  min-width: 10rem;
+  max-width: 10rem;
 }
 
 .c-pledge-form__part6 {
-  top: 5rem;
-  left: 16rem;
-  right: 1.4rem;
+  margin-left: 1rem;
+  margin-right: 1.4rem;
+}
+
+.c-pledge-form__group3 {
+  display: flex;
 }
 
 .c-pledge-form__part7 {
-  top: 10rem;
-  left: 0;
-  right: 1.4rem;
+  flex-grow: 1;
 }
 
 .c-pledge-form__part8 {
-  top: 12rem;
-  right: 0;
+  margin-left: 0.2rem;
+  min-width: 1.2rem;
+  max-width: 1.2rem;
+  padding-top: 1.65rem;
+  text-align: left;
 }

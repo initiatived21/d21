@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 
 export default class PledgeDescription extends ChildComponent {
   static propTypes = {
@@ -8,7 +8,7 @@ export default class PledgeDescription extends ChildComponent {
   };
 
   render() {
-    const { children, className } = this.props;
+    const { children, className } = this.props
 
     let combinedClassName = 'c-pledge__description'
     if (className) {
@@ -19,6 +19,6 @@ export default class PledgeDescription extends ChildComponent {
       <p className={combinedClassName}>
         {children}
       </p>
-    );
+    )
   }
 }

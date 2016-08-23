@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
 import UpdateForm from '../components/UpdateForm'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isSubmitting: state.isSubmitting.NewUpdateFormObject
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

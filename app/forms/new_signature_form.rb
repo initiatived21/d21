@@ -5,6 +5,7 @@ class NewSignatureForm < Reform::Form
   property :email
   property :reason
   property :anonymous
+  property :organization
   property :contact_person
 
   property :confirmation_hash

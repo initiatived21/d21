@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
+import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import FormFor from '../../lib/Form/containers/FormFor'
-import Input from '../../lib/Form/containers/Input'
 import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 
 export default class QuestionForm extends ChildComponent {
@@ -15,14 +14,16 @@ export default class QuestionForm extends ChildComponent {
     const { formData, isSubmitting } = this.props
 
     return (
-      <FormFor
+      <Form
         className="o-layout o-layout--small u-mt-small"
-        object={NewQuestionFormObject}
+        formObjectClass={NewQuestionFormObject}
         ajax={true}
-        formData={formData}>
+        {...formData}>
 
-        <Input className="c-input o-layout__item u-4/5"
-          attribute='content' inlineLabel />
+        <InputSet ariaLabelOnly
+          className="c-input o-layout__item u-4/5"
+          attribute='content'
+        />
 
         <div className="o-layout__item u-1/5">
           <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
@@ -32,7 +33,7 @@ export default class QuestionForm extends ChildComponent {
             {this.t('.submit')}
           </button>
         </div>
-      </FormFor>
+      </Form>
     )
   }
 }

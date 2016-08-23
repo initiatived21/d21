@@ -1,0 +1,59 @@
+.fa:before {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Copy FontAwesome class */
+.fa-flip-horizontal:before {
+  transform: scale(-1, 1);
+}
+
+.fa-search:before { content: '\f002'; } /* '' */
+.fa-star:before { content: '\f005'; } /* '' */
+.fa-user:before { content: '\f007'; } /* '' */
+.fa-check:before { content: '\f00c'; } /* '' */
+.fa-times:before { content: '\f00d'; } /* '' */
+.fa-home:before { content: '\f015'; } /* '' */
+.fa-pencil:before { content: '\f040'; } /* '' */
+.fa-question-circle:before { content: '\f059'; } /* '' */
+.fa-info-circle:before { content: '\f05a'; } /* '' */
+.fa-plus:before { content: '\f067'; } /* '' */
+.fa-minus:before { content: '\f068'; } /* '' */
+.fa-eye:before { content: '\f06e'; } /* '' */
+.fa-exclamation-triangle:before { content: '\f071'; } /* '' */
+.fa-chevron-up:before { content: '\f077'; } /* '' */
+.fa-chevron-down:before { content: '\f078'; } /* '' */
+.fa-thumbs-o-up:before { content: '\f087'; } /* '' */
+.fa-thumbs-o-down:before { content: '\f088'; } /* '' */
+.fa-sign-out:before { content: '\f08b'; } /* '' */
+.fa-sign-in:before { content: '\f090'; } /* '' */
+.fa-twitter:before { content: '\f099'; } /* '' */
+.fa-facebook:before { content: '\f09a'; } /* '' */
+.fa-users:before { content: '\f0c0'; } /* '' */
+.fa-bars:before { content: '\f0c9'; } /* '' */
+.fa-google-plus:before { content: '\f0d5'; } /* '' */
+.fa-linkedin:before { content: '\f0e1'; } /* '' */
+.fa-file-text-o:before { content: '\f0f6'; } /* '' */
+.fa-reply:before { content: '\f112'; } /* '' */
+.fa-question:before { content: '\f128'; } /* '' */
+.fa-info:before { content: '\f129'; } /* '' */
+.fa-xing:before { content: '\f168'; } /* '' */
+.fa-paper-plane:before { content: '\f1d8'; } /* '' */

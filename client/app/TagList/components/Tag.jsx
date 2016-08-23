@@ -3,21 +3,19 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 
 export default class Tag extends ChildComponent {
   static propTypes = {
-    tag: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
-    }),
+    name: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
   }
 
   render() {
-    const { tag } = this.props
+    const { name, color } = this.props
 
     return (
       <li
         className="c-tag-list__item"
-        style={{backgroundColor: `#${tag.color}`}}
+        style={{backgroundColor: `#${color}`}}
       >
-        {this.t(`tags.names.${tag.name}`)}
+        {this.t(`tags.names.${name}`)}
       </li>
     )
   }

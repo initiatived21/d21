@@ -22,6 +22,7 @@
 }
 
 .c-pledge-state__number-of-days {
+  font-weight: bold;
   @include font-size(40px, none);
 }
 

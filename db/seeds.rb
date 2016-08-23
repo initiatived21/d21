@@ -22,7 +22,23 @@ AdminUser.create! email: 'admin@admin.com', password: 'password'
 
 # Tags
 family = Tag.create!(name: 'family', color: 'f5b34d')
-books = Tag.create!(name: 'books', color: 'cc5754')
+children = Tag.create!(name: 'children', color: 'cc5754')
+women = Tag.create!(name: 'women', color: 'cc5754')
+men = Tag.create!(name: 'men', color: 'cc5754')
+sport = Tag.create!(name: 'sport', color: 'cc5754')
+culture = Tag.create!(name: 'culture', color: 'cc5754')
+language = Tag.create!(name: 'language', color: 'cc5754')
+education = Tag.create!(name: 'education', color: 'cc5754')
+work = Tag.create!(name: 'work', color: 'cc5754')
+counseling = Tag.create!(name: 'counseling', color: 'cc5754')
+donation = Tag.create!(name: 'donation', color: 'cc5754')
+accomodation = Tag.create!(name: 'accomodation', color: 'cc5754')
+volunteering = Tag.create!(name: 'volunteering', color: 'cc5754')
+platform = Tag.create!(name: 'platform', color: 'cc5754')
+mentorship = Tag.create!(name: 'mentorship', color: 'cc5754')
+social_life = Tag.create!(name: 'social life', color: 'cc5754')
+technology = Tag.create!(name: 'technology', color: 'cc5754')
+
 
 # Draft pledge
 Pledge.create!(
@@ -34,7 +50,7 @@ Pledge.create!(
   deadline: 5.days.from_now,
   aasm_state: 'initialized',
   initiator: micro,
-  tags: [family, books]
+  tags: [family, language]
 )
 
 # requested pledge
@@ -60,7 +76,7 @@ active_none = Pledge.create!(
   deadline: 7.days.from_now,
   aasm_state: 'active',
   initiator: micro,
-  tags: [family, books]
+  tags: [family, language]
 )
 Comment.create!(
   pledge: active_none,
@@ -131,7 +147,7 @@ Pledge.create!(
   deadline: 3.days.ago,
   aasm_state: 'successful',
   initiator: privat,
-  tags: [family, books]
+  tags: [family, language]
 )
 
 # disapproved pledge

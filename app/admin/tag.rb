@@ -1,0 +1,4 @@
+ActiveAdmin.register Tag do
+permit_params :name, :color
+
+end

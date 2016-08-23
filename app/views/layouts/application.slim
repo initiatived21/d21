@@ -10,6 +10,8 @@ html lang=I18n.locale
     = action_cable_meta_tag
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"
+
     - unless params['nojs'] == '1'
       = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
 

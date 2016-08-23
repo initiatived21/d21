@@ -1,11 +1,11 @@
-import React, { PropTypes } from 'react';
-import ChildComponent from '../../lib/Base/components/ChildComponent';
-import SearchResults from './SearchResults';
-import GetMoreResultsButton from './GetMoreResultsButton';
+import React, { PropTypes } from 'react'
+import ChildComponent from '../../lib/Base/components/ChildComponent'
+import SearchResults from './SearchResults'
+import GetMoreResultsButton from './GetMoreResultsButton'
 
 export default class PaginatedSearchResults extends ChildComponent {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   static propTypes = {
@@ -13,9 +13,9 @@ export default class PaginatedSearchResults extends ChildComponent {
   }
 
   render() {
-    const { results, query, resultCount, isLoading, onButtonClick } = this.props;
+    const { results, query, resultCount, isLoading, onButtonClick } = this.props
 
-    const showMoreButton = resultCount > results.length;
+    const showMoreButton = resultCount > results.length
 
     return (
       <div>

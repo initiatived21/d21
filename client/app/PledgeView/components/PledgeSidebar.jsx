@@ -32,8 +32,8 @@ export default class PledgeSidebar extends ChildComponent {
     if (isPreview) {
       sidebarField = (
         <PreviewExplanation
-          isDraft={isDraft} activateAction={activateAction}
-          userConfirmed={userConfirmed} />
+          pledgeId={pledge_id} isDraft={isDraft}
+          activateAction={activateAction} userConfirmed={userConfirmed} />
       )
     } else if (userIsInitiator) {
       sidebarField = <UpdateFormContainer formData={updateForm} />
@@ -43,7 +43,7 @@ export default class PledgeSidebar extends ChildComponent {
     }
 
     return (
-      <div className="o-layout__item u-1/2@m u-1/3@l">
+      <div className="o-sidebar o-sidebar--right u-1/3@l u-pl-small@l">
         {sidebarField}
         {renderReportForm ? <ReportPledgeForm id={pledge_id} /> : null}
       </div>

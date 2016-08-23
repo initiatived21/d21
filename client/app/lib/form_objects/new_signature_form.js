@@ -1,6 +1,6 @@
-import JayForm from './jayform'
+import { FormObject } from 'rform'
 
-export default class NewSignatureFormObject extends JayForm {
+export default class NewSignatureFormObject extends FormObject {
   static get properties() {
     return [
       'name', 'anonymous', 'reason', 'email', 'organization', 'contact_person'

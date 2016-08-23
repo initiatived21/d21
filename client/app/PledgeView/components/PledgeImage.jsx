@@ -1,14 +1,13 @@
-import React, { PropTypes } from 'react';
-import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 
 export default class PledgeImage extends ChildComponent {
   static propTypes = {
     src: PropTypes.string.isRequired
-  };
+  }
 
   render() {
-    const { src } = this.props;
+    const { src } = this.props
 
     return (
       <img
@@ -16,6 +15,6 @@ export default class PledgeImage extends ChildComponent {
         src={src}
         alt={this.t('.img_alt')}
       />
-    );
+    )
   }
 }

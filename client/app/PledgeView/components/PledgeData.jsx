@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import I18n from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
-import Initiator from '../../PledgeData/components/Initiator'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
 import daysTill from '../../lib/date_and_time/daysTill'

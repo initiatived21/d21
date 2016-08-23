@@ -15,7 +15,19 @@ describe('<PledgeTileFront />', function () {
     deadline: '2016-09-30',
     signatures_total: 10,
     signatures_count: 5,
-    path: 'http://www.example.com/pledges/1'
+    path: 'http://www.example.com/pledges/1',
+    tags: [
+      {
+        id: 1,
+        name: 'family',
+        color: 'C32BAA'
+      },
+      {
+        id: 2,
+        name: 'books',
+        color: 'FF11AA'
+      }
+    ]
   }
 
   it('should render', function () {

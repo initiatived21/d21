@@ -11,8 +11,19 @@
     width: 100%;
     padding: $spacing--tiny;
     border: 1px solid $gray;
-    border-radius: 5px;
+    border-radius: $border-radius;
     background-color: transparent;
-    height: 40px;
+    height: $input-height;
   }
+
+  &.has-errors > input {
+    border: 2px solid $warning-color;
+    background-color: $warning-color-background;
+  }
+}
+
+// TODO: Refactor
+.inline-errors {
+  font-weight: bold;
+  color: $warning-color;
 }

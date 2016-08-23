@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #FAQ
+\*------------------------------------*/
+
+/**
+ * FAQ component
+ */
+
+.c-faq {
+  margin-bottom: $spacing--large;
+
+  @include font-size(16px, 1.5);
+}
+
+.c-faq__question {
+  margin-top: $spacing;
+
+  font-weight: bold;
+}
+
+h1 + .c-faq__question {
+  margin-top: 0;
+}
+
+.c-faq__answer {
+  p {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-left: 1.5em;
+  }
+}

@@ -137,7 +137,7 @@ class PledgesController < ApplicationController
       format.json do
         render(json: {
           status: 'success',
-          redirect_to: commit_based_return_url,
+          redirect: commit_based_return_url,
           changes: { pledge: @form.model }
         })
       end
@@ -171,7 +171,7 @@ class PledgesController < ApplicationController
       format.json do
         render json: {
           status: 'success',
-          redirect_to: commit_based_return_url,
+          redirect: commit_based_return_url,
         }
       end
       format.html do
@@ -194,16 +194,17 @@ class PledgesController < ApplicationController
     #   tag_ids: [],
     #   initiator: [:name, :email, :organization, :avatar, :password]
     # )
+    params[:pledge][:tag_ids] = (params[:pledge][:tag_ids]).split(',')
     params[:pledge]
   end
 
   def pledge_form_props method, path
     {
-      formData: {
+      form: {
         action: path,
         authToken: form_authenticity_token,
         model: 'pledge',
-        object: @form.as_json,
+        seedData: @form.as_json,
         method: method
       },
       tags: Tag.all

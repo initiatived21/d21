@@ -3,8 +3,10 @@
     Our own variables to use throughout the project.
 \*------------------------------------*/
 
-
-$background-color: #fff;
+$text-color:                       rgb(24%, 24%, 24%);
+$background-color:                 #fff;
+$font-size:                        15px;
+$line-height:                      22.5px;
 
 $c-btn--disabled-background: #767676;
 
@@ -12,10 +14,8 @@ $c-btn--disabled-background: #767676;
  * Font family values taken from https://www.sitepoint.com/eight-definitive-font-stacks/
  */
 
-$font-family-heading: Colaborate, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-$main-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-$font-size-primary:                16px;
-$font-size-small:                  14px;
+$font-family-heading: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+$main-font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 
 $font-weight-light:                300;
 $font-weight-regular:              400;
@@ -30,7 +30,6 @@ $font-weight-bold:                 600;
  * find and replace in the CSS so that the variables are correct
  */
 
-$text-color:                       rgb(24%, 24%, 24%);
 
 $primary-color:                    rgb(12%, 44%, 72%);
 $secondary-color:                  rgb(71%, 6%, 5%);
@@ -61,6 +60,9 @@ $gray-highlight:                   lighten($gray, 5%);
 $success-color:                    rgb(47%, 60%, 69%);
 $urgent-color:                     rgb(71%, 6%, 5%);
 
+$warning-color:                    rgb(182,15,12);
+$warning-color-background:         rgba(182,15,12,0.05);
+
 
 
 //$gray: #767676; //wcag-color for text on white background
@@ -80,6 +82,7 @@ $input-height:                     40px;
 $input-padding-horizontal:         6px;
 
 $pledge-tile-height:               400px;
+$avatar-size:                      89px;
 $comment-avatar-size:              43px;
 
 $border-radius:                    5px;

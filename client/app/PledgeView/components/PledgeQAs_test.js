@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Provider } from 'react-redux'
 import PledgeQAs from './PledgeQAs'
 
 describe('<PledgeQAs />', function () {

@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
-import I18n                 from 'i18n-js';
-import ChildComponent       from '../../lib/Base/components/ChildComponent.js';
+import React, { PropTypes } from 'react'
+import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import Avatar from '../../Avatar/components/Avatar'
 
 export default class InitiatorWithImage extends ChildComponent {
@@ -10,7 +9,7 @@ export default class InitiatorWithImage extends ChildComponent {
   };
 
   render() {
-    const { children, imagePath } = this.props;
+    const { children, imagePath } = this.props
 
     return (
       <div className="c-initiator c-initiator--with-image o-media u-mt u-mb-small">
@@ -20,6 +19,6 @@ export default class InitiatorWithImage extends ChildComponent {
           <p className="c-initiator__name">{children}</p>
         </div>
       </div>
-    );
+    )
   }
 }

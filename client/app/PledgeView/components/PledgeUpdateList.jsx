@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import I18n                 from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import PledgeUpdate         from './PledgeUpdate'
 
@@ -26,7 +25,7 @@ export default class PledgeUpdateList extends ChildComponent {
     }
 
     return (
-      <section className="c-update-list o-layout__item u-2/3@l">
+      <section className="c-update-list u-2/3@l u-pr-small@l">
         <h2>{this.t('.heading')}</h2>
 
         {updateListOrText}

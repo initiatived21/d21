@@ -1,5 +1,4 @@
 import React     from 'react'
-import TestUtils from 'react-addons-test-utils'
 import { shallow } from 'enzyme'
 
 import PledgeList from './PledgeList'
@@ -45,7 +44,19 @@ describe('<PledgeList />', function() {
                 url: 'dummy'
               }
             }
-          }
+          },
+          tags: [
+            {
+              id: 1,
+              name: 'family',
+              color: 'C32BAA'
+            },
+            {
+              id: 2,
+              name: 'books',
+              color: 'FF11AA'
+            }
+          ]
         },
 
         {
@@ -65,7 +76,8 @@ describe('<PledgeList />', function() {
                 url: 'dummy'
               }
             }
-          }
+          },
+          tags: []
         },
 
         {
@@ -85,7 +97,8 @@ describe('<PledgeList />', function() {
                 url: 'dummy'
               }
             }
-          }
+          },
+          tags: []
         }
       ]
     }

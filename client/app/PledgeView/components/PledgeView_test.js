@@ -22,7 +22,19 @@ describe('<PledgeView />', function () {
       deadline: '2016-09-30',
       signatures_count: 5,
       created_at: '2016-09-01T12:45:22.964Z',
-      aasm_state: 'active'
+      aasm_state: 'active',
+      tags: [
+        {
+          id: 1,
+          name: 'family',
+          color: 'C32BAA'
+        },
+        {
+          id: 2,
+          name: 'books',
+          color: 'FF11AA'
+        }
+      ]
     },
 
     forms: {

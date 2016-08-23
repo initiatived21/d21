@@ -1,5 +1,4 @@
 /* Configuration of client app */
-import I18n from 'i18n-js'
 
 /* Development */
 export const DUMMY_IMAGE_PATH = '/assets/images'
@@ -11,6 +10,8 @@ export const FACEBOOK_ACCOUNT_URL = 'https://www.facebook.com/Buntundverbindlich
 export const TWITTER_ACCOUNT_URL = 'https://twitter.com/buntverbindlich'
 
 export const FAQ_PATH = '/faq'
+export const TERMS_PATH = '/terms'
+export const PRIVACY_PATH = '/privacy'
 
 
 /* Formatting strings */
