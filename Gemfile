@@ -129,6 +129,7 @@ group :test do
   gem 'rake'
   gem 'database_cleaner'
   gem 'minitest-around'
+  gem 'rails-controller-testing'
   # gem 'colorize' # use this when RBP quits using `colored`
   gem 'fakeredis'
   gem 'fakeweb', '~> 1.3'
