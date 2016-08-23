@@ -46,7 +46,7 @@ class PledgesController < ApplicationController
         }
       },
       user: serialize(pledge.initiator),
-      signatures: pledge.signatures.confirmed,
+      signatures: serialize(pledge.signatures.confirmed),
       updates: pledge.updates,
       comments: pledge.comments
     }
