@@ -216,7 +216,7 @@ export default class PledgeForm extends ChildComponent {
   }
   renderLoginPrompt(onLinkClick) {
     return (
-      <p className="u-mb-small">
+      <p className="u-mb">
         {this.t('.account.have_one')}
         {' '}
         <a href="#" onClick={onLinkClick}>

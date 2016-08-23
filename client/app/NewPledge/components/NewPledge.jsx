@@ -16,12 +16,12 @@ export default class NewPledge extends RootComponent {
       <Provider store={store}>
         <div className="o-wrapper">
           <div className="o-layout">
-            <div className="o-layout__item u-1/2@m u-2/3@l">
+            <div className="o-layout__item u-2/3@l">
               <ActivePledgeForm
                 form={this.props.form}
                 tags={this.props.tags} />
             </div>
-            <div className="o-layout__item u-1/2@m u-1/3@l">
+            <div className="o-layout__item u-1/3@l">
               <PledgeFormHelp />
             </div>
           </div>
