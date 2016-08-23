@@ -9,7 +9,7 @@ export default class ChildComponent extends React.Component {
   constructor() {
     super()
     // comment the following for testing:
-    // I18n.missingTranslation = function () { return '' }
+    I18n.missingTranslation = function () { return '' }
   }
   t(...attrs) {
     // Emulate lazy lookup

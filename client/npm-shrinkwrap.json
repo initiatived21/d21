@@ -4108,9 +4108,9 @@
       "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-1.0.1.tgz"
     },
     "rform": {
-      "version": "0.1.3",
+      "version": "0.1.4",
       "from": "rform@latest",
-      "resolved": "https://registry.npmjs.org/rform/-/rform-0.1.3.tgz"
+      "resolved": "https://registry.npmjs.org/rform/-/rform-0.1.4.tgz"
     },
     "right-align": {
       "version": "0.1.3",
