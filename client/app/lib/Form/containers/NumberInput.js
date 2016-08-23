@@ -8,6 +8,8 @@ const mapStateToProps = function(state, ownProps) {
   const formObjectName = ownProps.formObject.constructor.name
   const attrs = ownProps.formObject.attributes
 
+  console.log('attributes', attrs)
+
   // get saved & server provided errors, concat them together
   let errors = null
   if (state[formObjectName] && state[formObjectName].errors) {

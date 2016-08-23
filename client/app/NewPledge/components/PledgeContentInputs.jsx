@@ -40,7 +40,7 @@ export default class PledgeForm extends ChildComponent {
             </span>
             <NumberInput
               className="c-pledge-form__part5 c-pledge-form__input c-number-input"
-              attribute="amount" defaultValue={10} min={1} max={10000}
+              attribute="amount" min={1} max={10000}
             />
           </div>
 

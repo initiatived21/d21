@@ -28,11 +28,18 @@ export default class PledgeForm extends ChildComponent {
     const initiatorForm = currentUser ? null : this.renderInitiatorForm()
     const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
 
+    const seedData = {
+      fields: {
+        amount: 5
+      }
+    }
+
     return(
       <Form
         multipart ajax
         className="c-new-pledge"
         formObjectClass={formObjectClass}
+        seedData={seedData}
         {...form}
       >
         <h1>{this.t('.heading')}</h1>
