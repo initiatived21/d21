@@ -172,6 +172,12 @@ en:
     sidebars:
       Filter: 
       Zustand: 
+  activemodel:
+    attributes:
+      base_pledge:
+        title: 
+    models:
+      base_pledge: 
   activerecord:
     attributes:
       active_admin/comment:
@@ -703,11 +709,11 @@ en:
         name:
           label: Your Name
           placeholder: "*"
+        organization:
+          label: Your company / your organization
         password:
           label: Password
           placeholder: "*"
-        organization:
-          label: Your company / your organization
         password_confirmation:
           label: Confirm password
           placeholder: "*"
@@ -780,12 +786,12 @@ en:
       men: Men
       mentorship: Mentorship
       platform: platform
+      social life: Social Life
       sport: Sport
       technology: Technology
       volunteering: Volunteering
       women: Women
       work: Work
-      social life: Social Life
   views:
     pagination:
       last: 

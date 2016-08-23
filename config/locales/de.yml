@@ -119,7 +119,7 @@ de:
       question: Wie geht es weiter?
       user_account: Ihrem Nutzerkonto
   PreviewUnconfirmed:
-    confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+    confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
     edit_pledge: Versprechen bearbeiten
   ProfileView:
     heading: Ihr Profil
@@ -172,6 +172,12 @@ de:
     sidebars:
       Filter: Filter
       Zustand: Zustand
+  activemodel:
+    attributes:
+      base_pledge:
+        title: Title
+    models:
+      base_pledge: Base pledge
   activerecord:
     attributes:
       active_admin/comment:
@@ -722,11 +728,11 @@ de:
         name:
           label: Ihr Name
           placeholder: "*"
+        organization:
+          label: Ihr Unternehmen / Ihre Organisation
         password:
           label: Passwort
           placeholder: "*"
-        organization:
-          label: Ihr Unternehmen / Ihre Organisation
         password_confirmation:
           label: Passwort wiederholen
           placeholder: "*"
@@ -799,12 +805,12 @@ de:
       men: Männer
       mentorship: Patenschaft
       platform: Plattform
+      social life: Teilhabe
       sport: Sport
       technology: Technik
       volunteering: Ehrenamt
       women: Frauen
       work: Arbeit
-      social life: Teilhabe
   views:
     pagination:
       last: 
