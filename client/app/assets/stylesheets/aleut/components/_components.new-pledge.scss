@@ -7,7 +7,12 @@
  */
 
 .c-new-pledge {
-  margin-bottom: $spacing;
+  margin-top: 36px;
+  margin-bottom: $spacing--large;
+
+  h1 {
+    margin-top: 0;
+  }
 
   a {
     color: $text-color;

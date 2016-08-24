@@ -139,7 +139,7 @@ export default class PledgeForm extends ChildComponent {
 
         {initiatorForm}
 
-        <div className="o-layout u-mt-large u-mb-huge">
+        <div className="o-layout u-mt-large">
           <div className="o-layout__item u-1/3@m">
             <Button
               className="c-new-pledge__save-draft o-btn o-btn--small c-btn c-btn--primary u-mb-small"
