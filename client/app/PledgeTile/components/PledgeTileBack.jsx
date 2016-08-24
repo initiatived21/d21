@@ -34,7 +34,7 @@ export default class PledgeTileBack extends ChildComponent {
           </div>
         </div>
         <div className="c-pledge-tile__button">
-          <a href={path} className="o-btn o-btn--small c-btn c-btn--primary">
+          <a href={path} className="o-btn c-btn c-btn--primary">
             <FontAwesome name="reply" flip="horizontal" />
             {' '}
             {this.t('.show_pledge')}
