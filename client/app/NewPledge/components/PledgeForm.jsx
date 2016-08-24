@@ -48,7 +48,7 @@ export default class PledgeForm extends ChildComponent {
               <Label attribute="location" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-input o-layout__item u-2/5"
+              wrapperClassName="c-input o-layout__item u-2/5"
               attribute="location"
             />
             <div className="o-layout__item u-1/5">
@@ -81,14 +81,14 @@ export default class PledgeForm extends ChildComponent {
               <Label attribute="title" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-input o-layout__item u-3/4 u-mb-small"
+              wrapperClassName="c-input o-layout__item u-3/4 u-mb-small"
               attribute="title"
             />
             <div className="o-layout__item u-1/4 u-mb-small">
               <Label attribute="description" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-textarea o-layout__item u-3/4 u-mb-small"
+              wrapperClassName="c-textarea o-layout__item u-3/4 u-mb-small"
               attribute="description" type="textarea"
             />
 
@@ -191,7 +191,7 @@ export default class PledgeForm extends ChildComponent {
             <Label submodel="initiator" attribute="name" />
           </div>
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4 u-mb-small"
+            wrapperClassName="c-input o-layout__item u-3/4 u-mb-small"
             submodel='initiator' attribute='name'
           />
           <div className="o-layout__item u-1/4 u-mb-small">
@@ -199,7 +199,7 @@ export default class PledgeForm extends ChildComponent {
           </div>
 
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4 u-mb-small"
+            wrapperClassName="c-input o-layout__item u-3/4 u-mb-small"
             submodel='initiator' attribute='email' type='email'
           />
 
@@ -207,7 +207,7 @@ export default class PledgeForm extends ChildComponent {
             <Label submodel="initiator" attribute="password" />
           </div>
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4" submodel='initiator'
+            wrapperClassName="c-input o-layout__item u-3/4" submodel='initiator'
             attribute='password' type='password'
           />
         </div>

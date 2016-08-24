@@ -32,11 +32,11 @@ export default class SignPledgeForm extends ChildComponent {
         </h2>
 
         <div className="c-sidebar__wrapper">
-          <InputSet className="c-input u-mb-small" attribute='name' />
+          <InputSet wrapperClassName="c-input u-mb-small" attribute='name' />
 
           <div className="o-marginal u-mb-small">
             <InputSet
-              className="c-checkbox o-marginal__content"
+              wrapperClassName="c-checkbox o-marginal__content"
               type="checkbox" attribute="anonymous" labelAfterInput
             />
             <Tooltip className="o-marginal__note">
@@ -44,7 +44,7 @@ export default class SignPledgeForm extends ChildComponent {
             </Tooltip>
           </div>
 
-          <InputSet className="c-input" type="email" attribute='email' />
+          <InputSet wrapperClassName="c-input" type="email" attribute='email' />
 
           <div className="o-marginal u-mb-small">
             <p className="o-marginal__content">{this.t('.email_hint')}</p>
@@ -54,12 +54,12 @@ export default class SignPledgeForm extends ChildComponent {
           </div>
 
           <InputSet
-            className="c-input u-mb-small" type="text" attribute="organization"
+            wrapperClassName="c-input u-mb-small" type="text" attribute="organization"
           />
 
           <div className="o-marginal u-mb-small">
             <InputSet
-              className="c-checkbox o-marginal__content"
+              wrapperClassName="c-checkbox o-marginal__content"
               type="checkbox" attribute="contact_person" labelAfterInput
             />
             <Tooltip className="o-marginal__note">
@@ -68,7 +68,7 @@ export default class SignPledgeForm extends ChildComponent {
           </div>
 
           <InputSet
-            className="c-textarea u-mb-small" type='textarea' attribute='reason'
+            wrapperClassName="c-textarea u-mb-small" type='textarea' attribute='reason'
           />
 
           <p className="c-sign-pledge__small-print u-mb">

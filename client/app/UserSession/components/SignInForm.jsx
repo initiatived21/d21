@@ -18,13 +18,13 @@ export default class SignInForm extends ChildComponent {
     return(
       <Form {...formData} formObjectClass={SignInFormObject}>
         <InputSet ariaLabelOnly
-          className="c-input u-mb-small" attribute='email'
+          wrapperClassName="c-input u-mb-small" attribute='email'
         />
         <InputSet ariaLabelOnly
-          className="c-input u-mb-small" attribute='password' type='password'
+          wrapperClassName="c-input u-mb-small" attribute='password' type='password'
         />
         <InputSet labelAfterInput
-          className="c-checkbox c-checkbox--small u-mb-small"
+          wrapperClassName="c-checkbox c-checkbox--small u-mb-small"
           attribute='remember_me' type='checkbox'
         />
 
