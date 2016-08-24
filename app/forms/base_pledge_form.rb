@@ -3,7 +3,7 @@ class BasePledgeForm < Reform::Form
 
   property :title
   property :content
-  property :amount
+  property :amount, prepopulator: -> (options) { self.amount = 3 }
   property :who
   property :requirement
   property :location

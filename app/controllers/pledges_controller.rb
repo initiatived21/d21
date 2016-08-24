@@ -124,6 +124,7 @@ class PledgesController < ApplicationController
       @pledge = Pledge.new(initiator: User.new)
       @form = PledgeWithInitiatorForm.new(@pledge)
     end
+    @form.prepopulate!
   end
 
   def set_edit_form
