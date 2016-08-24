@@ -37,7 +37,7 @@ export default class SignPledgeForm extends ChildComponent {
           <div className="o-marginal u-mb-small">
             <InputSet
               className="c-checkbox o-marginal__content"
-              type="checkbox" attribute="anonymous"
+              type="checkbox" attribute="anonymous" labelAfterInput
             />
             <Tooltip className="o-marginal__note">
               {this.t('.tooltip.anonymous')}
@@ -54,13 +54,13 @@ export default class SignPledgeForm extends ChildComponent {
           </div>
 
           <InputSet
-            className="c-input u-mb-small" type="text" attribute='organization'
+            className="c-input u-mb-small" type="text" attribute="organization"
           />
 
           <div className="o-marginal u-mb-small">
             <InputSet
               className="c-checkbox o-marginal__content"
-              type="checkbox" attribute="contact_person"
+              type="checkbox" attribute="contact_person" labelAfterInput
             />
             <Tooltip className="o-marginal__note">
               {this.t('.tooltip.contact_person')}
