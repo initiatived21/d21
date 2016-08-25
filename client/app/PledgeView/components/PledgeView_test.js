@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import PledgeView from './PledgeView'
 import Pledge from './Pledge'
-import PledgeSidebarContainer from '../containers/PledgeSidebarContainer'
+import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
 import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
 import PledgeQAsContainer from '../containers/PledgeQAsContainer'
 import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
