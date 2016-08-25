@@ -37,7 +37,7 @@ export default class ImageCrop extends ChildComponent {
           type="button"
           onClick={handleFinishCrop}
         >
-          <FontAwesome name="pencil" />
+          <FontAwesome name="crop" />
           {' '}
           {this.t('.select_detail')}
         </button>

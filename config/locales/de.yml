@@ -684,6 +684,7 @@ de:
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
+    pledge: "/de/pledges/{{pledge}}"
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
