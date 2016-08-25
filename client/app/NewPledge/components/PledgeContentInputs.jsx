@@ -2,7 +2,7 @@ import React, { PropTypes  } from 'react'
 import { Form, InputSet, Input, Label, Button } from 'rform'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import NumberInput from '../../lib/Form/wrappers/NumberInputWrapper'
+import NumberInput from '../../Inputs/wrappers/NumberInputWrapper'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {

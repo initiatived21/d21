@@ -6,7 +6,7 @@ import generalReducer, { generalInitialState } from './general'
 import { reducer as formReducer, initialState as initialFormState }
   from 'rform'
 import imageInputReducer, { initialImageInputState }
-  from '../Form/reducers/imageInputReducer'
+  from '../../Inputs/reducers/imageInputReducer'
 
 export const initialState = merge(
   generalInitialState,

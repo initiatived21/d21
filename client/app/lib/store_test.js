@@ -1,5 +1,5 @@
 import store from './store.js'
-import { IMAGE_STATE_NONE } from './Form/reducers/imageInputReducer'
+import { IMAGE_STATE_NONE } from '../Inputs/reducers/imageInputReducer'
 
 describe('store', function() {
   const initialState = {

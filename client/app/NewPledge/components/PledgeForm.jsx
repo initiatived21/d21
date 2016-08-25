@@ -6,9 +6,9 @@ import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
 import PledgeContentInputs from './PledgeContentInputs'
-import ImageInput from '../../lib/Form/wrappers/ImageInputWrapper'
-import SelectInput from '../../lib/Form/wrappers/SelectInputWrapper'
-import DateInput from '../../lib/Form/wrappers/DateInputWrapper'
+import ImageInput from '../../Inputs/wrappers/ImageInputWrapper'
+import SelectInput from '../../Inputs/wrappers/SelectInputWrapper'
+import DateInput from '../../Inputs/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
 
 export default class PledgeForm extends ChildComponent {

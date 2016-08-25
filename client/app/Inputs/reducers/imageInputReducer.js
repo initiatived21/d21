@@ -1,7 +1,7 @@
 import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
 
-import calculateDefaultCrop from '../../image_processing/calculateDefaultCrop'
+import calculateDefaultCrop from '../../lib/image_processing/calculateDefaultCrop'
 
 export const IMAGE_STATE_NONE = 0
 export const IMAGE_STATE_LOADING = 1
