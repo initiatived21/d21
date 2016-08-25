@@ -5,7 +5,8 @@
 /**
  * Tooltip for form help texts
  *
- * 1. Try to position in the middle of the question mark.
+ * 1. For Internet Explorer
+ * 2. Try to position in the middle of the question mark.
  */
 
 .c-tooltip {
@@ -16,13 +17,17 @@
   width: 1.5rem;
 }
 
-.c-tooltip__anchor > span {
-  @include font-size(25px, 1.0);
+.c-tooltip__anchor {
+  text-decoration: none;  /* [1] */
 
-  color: $gray;
+  > span {
+    @include font-size(25px, 1.0);
 
-  &:hover, &:active {
-    color: $gray-highlight;
+    color: $gray;
+
+    &:hover, &:active {
+      color: $gray-highlight;
+    }
   }
 }
 
@@ -30,7 +35,7 @@
   display: none;
 
   position: absolute;
-  left: -5.3rem;  /* [1] */
+  left: -5.3rem;  /* [2] */
   bottom: 45px;
 
   z-index: 3;
