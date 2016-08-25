@@ -17,12 +17,13 @@ export default class PledgeTileFront extends ChildComponent {
     signatures_total: PropTypes.number.isRequired,
     path: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
+    className: PropTypes.string
   }
 
   render() {
     const {
       state, initiatorName, initiatorImage, title, deadline, signatures_count,
-      signatures_total, path, tags
+      signatures_total, path, tags, className
     } = this.props
 
     const remainingDays = daysTill(deadline)
@@ -30,8 +31,10 @@ export default class PledgeTileFront extends ChildComponent {
 
     const percentage = Math.round(100 / signatures_total * signatures_count)
 
+    const combinedClassName = ['c-pledge-tile o-box', className].join(' ')
+
     return (
-      <div className="c-pledge-tile o-box">
+      <div className={combinedClassName}>
         <a className="c-pledge-tile__link"
            href={path}>
           <TagList tags={tags} />

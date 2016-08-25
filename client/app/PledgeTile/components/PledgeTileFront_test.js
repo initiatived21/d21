@@ -40,4 +40,10 @@ describe('<PledgeTileFront />', function () {
     wrapper.find(PledgeState).length.should.equal(1)
     wrapper.find(ProgressBar).length.should.equal(1)
   })
+
+  it('should "pass through" its className prop', function() {
+    const wrapper = shallow(<PledgeTileFront {...props} className="dummy" />)
+
+    wrapper.hasClass('dummy').should.be.true
+  })
 })

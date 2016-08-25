@@ -46,6 +46,11 @@ export default class PledgeTile extends ChildComponent {
     const stateHeader = showControls ? <StateHeader state={state} /> : null
     const stateFooter = showControls ? <StateFooterContainer pledge={pledge} /> : null
 
+    let className
+    if (showControls) {
+      className = 'c-pledge-tile--with-controls'
+    }
+
     return (
       <li className="o-layout__item u-1/2@m u-1/3@l u-mb">
 
@@ -55,6 +60,7 @@ export default class PledgeTile extends ChildComponent {
           <article className="o-flipper__inner">
             <div className="o-flipper__front">
               <PledgeTileFront
+                className={className}
                 state={state}
                 initiatorName={initiator.name}
                 initiatorImage={avatarUrl}
@@ -68,6 +74,7 @@ export default class PledgeTile extends ChildComponent {
             </div>
             <div className="o-flipper__back">
               <PledgeTileBack
+                className={className}
                 initiatorName={initiator.name}
                 initiatorImage={avatarUrl}
                 content={pledge.content}

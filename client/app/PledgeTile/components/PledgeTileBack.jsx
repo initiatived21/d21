@@ -14,14 +14,18 @@ export default class PledgeTileBack extends ChildComponent {
     amount: PropTypes.number.isRequired,
     who: PropTypes.string.isRequired,
     requirement: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired
+    path: PropTypes.string.isRequired,
+    className: PropTypes.string
   };
 
   render() {
-    const { initiatorName, initiatorImage, content, amount, who, requirement, path } = this.props
+    const { initiatorName, initiatorImage, content, amount, who, requirement, path,
+      className } = this.props
+
+    const combinedClassName = ['c-pledge-tile o-box', className].join(' ')
 
     return (
-      <div className="c-pledge-tile o-box">
+      <div className={combinedClassName}>
         <div className="o-block o-block--center" aria-hidden={true}>
           <Avatar className="o-block__img" name={initiatorName} imagePath={initiatorImage} />
           <div className="o-block__body">
