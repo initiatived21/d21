@@ -4,8 +4,8 @@ import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import Pledge from './Pledge'
 import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
-import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
-import PledgeQAsContainer from '../containers/PledgeQAsContainer'
+import PledgeUpdatesContainer from '../../UpdateList/containers/PledgeUpdatesContainer'
+import PledgeQAsContainer from '../../CommentList/containers/PledgeQAsContainer'
 import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 export default class PledgeView extends RootComponent {
