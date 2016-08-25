@@ -17,7 +17,7 @@ export default class LoggedIn extends ChildComponent {
       <div>
         <p>
           <b>
-            Willkommen,<br />
+            {this.t('.welcome')}<br />
             { currentUser.name }
           </b>
         </p>
@@ -28,12 +28,12 @@ export default class LoggedIn extends ChildComponent {
           <ul className="o-list-bare">
             <li className="u-mb-small">
               <a className="c-session__link" href={profileHref}>
-                Meine Daten
+                {this.t('.my_data')}
               </a>
             </li>
             <li>
               <a className="c-session__link" href={profileHref}>
-                Meine Versprechen
+                {this.t('.my_pledges')}
               </a>
             </li>
           </ul>

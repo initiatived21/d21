@@ -21,7 +21,10 @@ en:
     title: Share via LinkedIn
   LoggedIn:
     logged_in_as: Logged in as
-    logout: Logout
+    logout: Sign out
+    my_data: My profile data
+    my_pledges: My pledges
+    welcome: Welcome,
   PledgeCommentList:
     heading: Questions and answers to the initiator
     no_questions: There are no questions yet.
@@ -128,7 +131,13 @@ en:
   ReportPledgeForm:
     description: 
     report_pledge: Report pledge
+  Session:
+    my_account: My account
+    sign_in: Login
   SignInForm:
+    forgot_password: Forgot password?
+    no_account: No account yet?
+    sign_up_link: Create a pledge and sign up
     submit: Sign in
   SignPledgeForm:
     email_hint: 
@@ -667,6 +676,7 @@ en:
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
+    new_pledge: "/en/pledges/new"
     pledge: "/en/pledges/{{pledge}}"
     privacy: "/en/privacy"
     terms: "/en/terms"
@@ -753,9 +763,11 @@ en:
         label: Send a project update to all signees.
     user:
       email:
-        label: E-Mail
+        label: Email
+        placeholder: Email
       password:
         label: Password
+        placeholder: Password
       remember_me:
         label: Stay signed in
   signer_mailer:

@@ -22,6 +22,9 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+    my_data: Meine Daten
+    my_pledges: Meine Versprechen
+    welcome: Willkommen,
   PledgeCommentList:
     heading: Fragen und Antworten an den Initiator
     no_questions: Es gibt noch keine Fragen.
@@ -128,7 +131,13 @@ de:
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
+  Session:
+    my_account: Mein Konto
+    sign_in: Login
   SignInForm:
+    forgot_password: Passwort vergessen?
+    no_account: Noch kein Konto?
+    sign_up_link: Versprechen anlegen und registrieren
     submit: Anmelden
   SignPledgeForm:
     email_hint: Ihre E-Mail wird nicht veröffentlicht.
@@ -684,6 +693,7 @@ de:
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
+    new_pledge: "/de/pledges/new"
     pledge: "/de/pledges/{{pledge}}"
     privacy: "/de/privacy"
     terms: "/de/terms"
@@ -773,8 +783,10 @@ de:
     user:
       email:
         label: E-Mail
+        placeholder: E-Mail
       password:
         label: Passwort
+        placeholder: Passwort
       remember_me:
         label: Angemeldet bleiben
   signer_mailer:
