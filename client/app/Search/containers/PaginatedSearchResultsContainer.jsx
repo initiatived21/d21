@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { values } from 'lodash'
-
 import normalize from '../../lib/normalization'
+import deNormalizePledges from '../../lib/state/deNormalizePledges'
 import PaginatedSearchResults from '../components/PaginatedSearchResults'
 import { addEntities } from '../../lib/actions/entityActions'
 import setSearchResultsLoadingState from '../actions/setSearchResultsLoadingState'
@@ -24,19 +24,11 @@ const fetchMoreResults = function(dispatch, query, offset, limit) {
 }
 
 const mapStateToProps = function(state, ownProps) {
-  const results = values(state.pledges).map((pledge) => {
-    if (typeof pledge.initiator === 'number') {
-      // Denormalize
-      pledge.initiator = state.users[pledge.initiator]
-    }
-    return pledge
-  })
-
   return {
-    results,
+    results: deNormalizePledges(state),
     query: ownProps.query,
     resultCount: ownProps.total,
-    isLoading: state.ui.searchResultsLoading
+    isLoading: state.ui.searchResultsLoading,
   }
 }
 

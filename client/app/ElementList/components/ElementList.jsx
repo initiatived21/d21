@@ -13,10 +13,8 @@ export default class ElementList extends RootComponent {
     filter:  PropTypes.string.isRequired
   };
 
-  componentWillMount() {
-    // Put received pledges into store
-    const normalizedPledges = normalize('pledges', this.props.pledges)
-    return store.dispatch(addEntities(normalizedPledges.entities))
+  get objectsToForwardToState() {
+    return ['pledges']
   }
 
   render() {
