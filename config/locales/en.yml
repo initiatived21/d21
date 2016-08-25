@@ -22,6 +22,10 @@ en:
   LoggedIn:
     logged_in_as: Logged in as
     logout: Logout
+  PledgeCommentList:
+    heading: Questions and answers to the initiator
+    no_questions: There are no questions yet.
+    submit: Submit
   PledgeCreatedAt:
     published_on: Published on
   PledgeData:
@@ -73,10 +77,6 @@ en:
     img_alt: image describing the pledge
   PledgeLocation:
     title: Location
-  PledgeQAs:
-    heading: Questions and answers to the initiator
-    no_questions: There are no questions yet.
-    submit: Submit
   PledgeQuote:
     promise:
       part1: We promise to

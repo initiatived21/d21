@@ -5,8 +5,8 @@ import { Provider } from 'react-redux'
 import PledgeView from './PledgeView'
 import Pledge from './Pledge'
 import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
-import PledgeUpdatesContainer from '../../UpdateList/containers/PledgeUpdatesContainer'
-import PledgeQAsContainer from '../../CommentList/containers/PledgeQAsContainer'
+import PledgeUpdateListContainer from '../../UpdateList/containers/PledgeUpdateListContainer'
+import PledgeCommentListContainer from '../../CommentList/containers/PledgeCommentListContainer'
 import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 describe('<PledgeView />', function () {
@@ -83,8 +83,8 @@ describe('<PledgeView />', function () {
     wrapper.find('main').length.should.equal(1)
     wrapper.find(Pledge).length.should.equal(1)
     wrapper.find(PledgeSidebarContainer).length.should.equal(1)
-    wrapper.find(PledgeUpdatesContainer).length.should.equal(1)
-    wrapper.find(PledgeQAsContainer).length.should.equal(1)
+    wrapper.find(PledgeUpdateListContainer).length.should.equal(1)
+    wrapper.find(PledgeCommentListContainer).length.should.equal(1)
     wrapper.find(SigneeListContainer).length.should.equal(1)
   })
 })

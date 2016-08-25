@@ -4,8 +4,8 @@ import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import Pledge from './Pledge'
 import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
-import PledgeUpdatesContainer from '../../UpdateList/containers/PledgeUpdatesContainer'
-import PledgeQAsContainer from '../../CommentList/containers/PledgeQAsContainer'
+import PledgeUpdateListContainer from '../../UpdateList/containers/PledgeUpdateListContainer'
+import PledgeCommentListContainer from '../../CommentList/containers/PledgeCommentListContainer'
 import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 export default class PledgeView extends RootComponent {
@@ -38,8 +38,8 @@ export default class PledgeView extends RootComponent {
               <Pledge {...pledge} user={user} />
               <PledgeSidebarContainer pledge_id={pledge.id}
                 forms={forms} />
-              <PledgeUpdatesContainer pledge_id={pledge.id} />
-              <PledgeQAsContainer pledge_id={pledge.id}
+              <PledgeUpdateListContainer pledge_id={pledge.id} />
+              <PledgeCommentListContainer pledge_id={pledge.id}
                 forms={forms} />
               <SigneeListContainer pledge_id={pledge.id} user={user} />
             </div>

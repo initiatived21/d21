@@ -22,6 +22,10 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+  PledgeCommentList:
+    heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
+    submit: Abschicken
   PledgeCreatedAt:
     published_on: Veröffentlicht am
   PledgeData:
@@ -73,10 +77,6 @@ de:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeLocation:
     title: Ort
-  PledgeQAs:
-    heading: Fragen und Antworten an den Initiator
-    no_questions: Es gibt noch keine Fragen.
-    submit: Abschicken
   PledgeQuote:
     promise:
       part1: Wir versprechen,

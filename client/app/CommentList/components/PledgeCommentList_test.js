@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import PledgeQAs from './PledgeQAs'
+import PledgeCommentList from './PledgeCommentList'
 
-describe('<PledgeQAs />', function () {
+describe('<PledgeCommentList />', function () {
   const props = {
     comments: [
       {
@@ -25,13 +25,13 @@ describe('<PledgeQAs />', function () {
   }
 
   it('should render', function () {
-    const wrapper = shallow(<PledgeQAs {...props} />)
+    const wrapper = shallow(<PledgeCommentList {...props} />)
 
     wrapper.find('div').length.should.equal(1)
   })
 
   it('should render a text message if there are no comments yet', function () {
-    const wrapper = shallow(<PledgeQAs {...props} comments={[]} />)
+    const wrapper = shallow(<PledgeCommentList {...props} comments={[]} />)
 
     wrapper.find('p').length.should.equal(1)
   })

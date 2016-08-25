@@ -4,7 +4,7 @@ import PledgeQuestion from './PledgeQuestion'
 import PledgeAnswer from './PledgeAnswer'
 import AnswerFormContainer from '../containers/AnswerFormContainer'
 
-export default class PledgeQAs extends ChildComponent {
+export default class PledgeComment extends ChildComponent {
   static propTypes = {
     comment: PropTypes.shape({
       id: PropTypes.number.isRequired,
