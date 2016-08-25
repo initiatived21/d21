@@ -14,14 +14,14 @@
     margin-top: 0;
   }
 
-  a {
-    color: $text-color;
-    text-decoration: underline;
-  }
-
   label {
     display: inline-block;
   }
+}
+
+.c-new-pledge__link {
+  color: $text-color;
+  text-decoration: underline;
 }
 
 .c-new-pledge__pledge-data {

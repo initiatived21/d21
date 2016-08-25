@@ -230,7 +230,7 @@ export default class PledgeForm extends ChildComponent {
       <p className="u-mb">
         {this.t('.account.have_one')}
         {' '}
-        <a href="#" onClick={onLinkClick}>
+        <a className="c-new-pledge__link" href="#" onClick={onLinkClick}>
           {this.t('.account.login')}
         </a>
       </p>
