@@ -26,25 +26,31 @@
 
   @include media-query(m) {
     padding-top: 0;
-    height: 400px;
+    height: 450px;
+  }
+}
+
+.c-masthead__copy {
+  position: absolute;
+  bottom: 0;
+  right: $spacing;
+  width: 34em;
+
+  padding: $spacing--small $spacing $spacing;
+
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+
+  background-color: rgba(255, 255, 255, 0.87);
+
+  @include media-query(s) {
+    display: none;
   }
 }
 
 .c-masthead__title {
-  position: absolute;
-  bottom: 50px;
-  right: 25px;
+  margin-top: 5px;
 
-  color: $white;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-
-  @include font-size(30px, 1.25);
-
-  @include media-query(m) {
-    @include font-size(48px, 1.25);
-  }
-
-  @include media-query(l) {
-    @include font-size(64px, 1.25);
-  }
+  @include font-size(24px, 1.5);
+  color: $primary-color;
 }
