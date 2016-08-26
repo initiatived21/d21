@@ -206,8 +206,9 @@ class PledgesController < ApplicationController
         authToken: form_authenticity_token,
         model: 'pledge',
         seedData: @form.as_json,
-        method: method
+        method: method,
       },
+      id: params['id'],
       tags: Tag.all
     }
   end

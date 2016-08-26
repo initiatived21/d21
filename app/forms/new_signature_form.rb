@@ -1,7 +1,5 @@
-
 class NewSignatureForm < Reform::Form
   include Reform::Form::Dry::Validations
-
 
   property :name
   property :email

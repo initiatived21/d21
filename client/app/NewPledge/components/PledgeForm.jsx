@@ -22,7 +22,7 @@ export default class PledgeForm extends ChildComponent {
   }
 
   render() {
-    const { onLinkClick, currentUser, form } = this.props
+    const { onLinkClick, currentUser, form, id } = this.props
 
     const formObjectClass =
       currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
@@ -35,6 +35,7 @@ export default class PledgeForm extends ChildComponent {
         multipart ajax
         className="c-new-pledge"
         formObjectClass={formObjectClass}
+        id={`PledgeForm${id}`}
         {...form}
       >
         <h1>{this.t('.heading')}</h1>
