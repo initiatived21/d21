@@ -3,9 +3,9 @@ import { Provider } from 'react-redux'
 import store from '../../lib/store'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import Pledge from './Pledge'
-import PledgeSidebarContainer from '../containers/PledgeSidebarContainer'
-import PledgeUpdatesContainer from '../containers/PledgeUpdatesContainer'
-import PledgeQAsContainer from '../containers/PledgeQAsContainer'
+import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
+import PledgeUpdateListContainer from '../../UpdateList/containers/PledgeUpdateListContainer'
+import PledgeCommentListContainer from '../../CommentList/containers/PledgeCommentListContainer'
 import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 export default class PledgeView extends RootComponent {
@@ -33,13 +33,13 @@ export default class PledgeView extends RootComponent {
     return (
       <Provider store={store}>
         <main>
-          <div className="o-wrapper u-mb-large">
+          <div className="o-wrapper u-mt u-mb-large">
             <div className="o-sidebar__container">
               <Pledge {...pledge} user={user} />
               <PledgeSidebarContainer pledge_id={pledge.id}
                 forms={forms} />
-              <PledgeUpdatesContainer pledge_id={pledge.id} />
-              <PledgeQAsContainer pledge_id={pledge.id}
+              <PledgeUpdateListContainer pledge_id={pledge.id} />
+              <PledgeCommentListContainer pledge_id={pledge.id}
                 forms={forms} />
               <SigneeListContainer pledge_id={pledge.id} user={user} />
             </div>

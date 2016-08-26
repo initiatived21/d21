@@ -90,6 +90,7 @@
     "react-on-rails": "6.0.4",
     "react-onclickoutside": "^5.3.2",
     "react-redux": "^4.4.1",
+    "react-responsive": "^1.1.4",
     "react-select": "^1.0.0-beta13",
     "redux": "^3.3.1",
     "redux-promise": "^0.5.3",

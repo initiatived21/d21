@@ -1,5 +1,12 @@
+/*------------------------------------*\
+    #SOCIAL MEDIA
+\*------------------------------------*/
+
 /*
  * Social media buttons
+ *
+ * 1. For Internet Explorer
+ *
  */
 
 .c-social-media {
@@ -32,6 +39,7 @@
 .c-social-media__button {
   display: block;
   text-align: center;
+  text-decoration: none;  /* [1] */
 }
 
 .c-social-media__button > .fa {

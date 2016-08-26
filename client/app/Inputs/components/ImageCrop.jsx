@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import ReactCrop from 'react-image-crop'
-import ChildComponent from '../../Base/components/ChildComponent'
+import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class ImageCrop extends ChildComponent {
   static propTypes = {
@@ -37,7 +37,7 @@ export default class ImageCrop extends ChildComponent {
           type="button"
           onClick={handleFinishCrop}
         >
-          <FontAwesome name="pencil" />
+          <FontAwesome name="crop" />
           {' '}
           {this.t('.select_detail')}
         </button>

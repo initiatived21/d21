@@ -25,6 +25,10 @@ de:
     my_data: Meine Daten
     my_pledges: Meine Versprechen
     welcome: Willkommen,
+  PledgeCommentList:
+    heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
+    submit: Abschicken
   PledgeCreatedAt:
     published_on: Veröffentlicht am
   PledgeData:
@@ -127,7 +131,13 @@ de:
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
+  Session:
+    my_account: Mein Konto
+    sign_in: Login
   SignInForm:
+    forgot_password: Passwort vergessen?
+    no_account: Noch kein Konto?
+    sign_up_link: Versprechen anlegen und registrieren
     submit: Anmelden
     forgot_password: Passwort vergessen?
     no_account: Noch kein Konto?
@@ -174,6 +184,12 @@ de:
     sidebars:
       Filter: Filter
       Zustand: Zustand
+  activemodel:
+    attributes:
+      base_pledge:
+        title: Title
+    models:
+      base_pledge: Base pledge
   activerecord:
     attributes:
       active_admin/comment:
@@ -341,6 +357,8 @@ de:
   first_paragraph: 
   flash:
     actions:
+      create:
+        notice: 
       destroy:
         notice: 
       update:
@@ -355,6 +373,11 @@ de:
       signature:
         edit:
           update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
       user:
         edit:
           update: 
@@ -399,6 +422,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -475,6 +506,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -537,6 +576,13 @@ de:
           name: 
           organization: 
           reason: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -613,6 +659,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -720,6 +774,8 @@ de:
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
+    new_pledge: "/de/pledges/new"
+    pledge: "/de/pledges/{{pledge}}"
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
@@ -766,11 +822,11 @@ de:
         name:
           label: Ihr Name
           placeholder: "*"
+        organization:
+          label: Ihr Unternehmen / Ihre Organisation
         password:
           label: Passwort
           placeholder: "*"
-        organization:
-          label: Ihr Unternehmen / Ihre Organisation
         password_confirmation:
           label: Passwort wiederholen
           placeholder: "*"
@@ -844,16 +900,16 @@ de:
       language: Sprache
       men: Männer
       mentorship: Patenschaft
+      money: Geld
       platform: Plattform
+      programming: Programmieren
+      social life: Teilhabe
       sport: Sport
       technology: Technik
+      training: Ausbildung
       volunteering: Ehrenamt
       women: Frauen
       work: Arbeit
-      social life: Teilhabe
-      money: Geld
-      programming: Programmieren
-      training: Ausbildung
       youth: Jugendliche
   views:
     pagination:

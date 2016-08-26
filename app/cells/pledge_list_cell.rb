@@ -16,18 +16,12 @@ class PledgeListCell < Cell::ViewModel
   def props
     {
       locale: I18n.locale,
-      pledges: serialized_elements,
+      pledges: model,
       filter: options[:filter]
     }
   end
 
   def params
     options[:params] || {}
-  end
-
-  def serialized_elements
-    model.map do |element|
-      ActiveModelSerializers::SerializableResource.new(element).as_json
-    end
   end
 end

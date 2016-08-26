@@ -6,40 +6,29 @@ const mapStateToProps = (state, ownProps) => {
   const pledge = ownProps.pledge
   const aasm_state = pledge.aasm_state
 
-  const stateActions = {
-    initialized: 'edit',
-    requested: 'delete',
-    active: 'delete',
-    successful: 'contact',
-    failed: 'republish',
-    disapproved: 'delete'
-  }
+  let showEditButton, showDeleteButton
 
-  const actionData = {
-    edit: {
-      method: 'GET',
-      href: `/${I18n.locale}/pledges/${pledge.id}/edit`,
-    },
-    delete: {
-      method: 'DELETE',
-      href: `/${I18n.locale}/pledges/${pledge.id}`,
-    },
-    contact: {
-      method: 'GET',
-      href: `/${I18n.locale}/pledge/contact`,
-    },
-    republish: {
-      method: 'GET',
-      href: `/${I18n.locale}/pledge/republish`,
-    },
+  switch(aasm_state) {
+  case 'initialized':
+    showEditButton = true
+    showDeleteButton = true
+    break
+  case 'requested':
+    showDeleteButton = true
+    break
+  case 'active':
+    showDeleteButton = true
+    break
+  case 'successful':
+  case 'failed':
+  case 'disapproved':
+  default:
   }
-
-  const action = stateActions[aasm_state]
 
   return {
-    action,
-    href: actionData[action].href,
-    method: actionData[action].method,
+    pledgeId: pledge.id,
+    showEditButton,
+    showDeleteButton,
   }
 }
 

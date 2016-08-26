@@ -31,6 +31,7 @@
 .fa-user:before { content: '\f007'; } /* '' */
 .fa-check:before { content: '\f00c'; } /* '' */
 .fa-times:before { content: '\f00d'; } /* '' */
+.fa-trash-o:before { content: '\f014'; } /* '' */
 .fa-home:before { content: '\f015'; } /* '' */
 .fa-pencil:before { content: '\f040'; } /* '' */
 .fa-question-circle:before { content: '\f059'; } /* '' */
@@ -53,6 +54,7 @@
 .fa-linkedin:before { content: '\f0e1'; } /* '' */
 .fa-file-text-o:before { content: '\f0f6'; } /* '' */
 .fa-reply:before { content: '\f112'; } /* '' */
+.fa-crop:before { content: '\f125'; } /* '' */
 .fa-question:before { content: '\f128'; } /* '' */
 .fa-info:before { content: '\f129'; } /* '' */
 .fa-xing:before { content: '\f168'; } /* '' */

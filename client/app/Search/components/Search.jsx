@@ -32,7 +32,7 @@ export default class Search extends RootComponent {
     return (
       <Provider store={store}>
         <section>
-          <div className='o-wrapper'>
+          <div className="o-wrapper u-mb">
             {resultView}
           </div>
         </section>

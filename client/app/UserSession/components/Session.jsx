@@ -28,7 +28,7 @@ export default class Session extends ChildComponent {
           className="c-session__toggle o-btn o-btn--small c-btn c-btn--primary">
           <FontAwesome name="user" />
           {' '}
-          Mein Konto
+          {this.t('.my_account')}
         </a>
       )
     }
@@ -38,7 +38,7 @@ export default class Session extends ChildComponent {
           className="c-session__toggle o-btn o-btn--small c-btn c-btn--primary">
           <FontAwesome name="sign-in" />
           {' '}
-          Login
+          {this.t('.sign_in')}
         </a>
       )
     }

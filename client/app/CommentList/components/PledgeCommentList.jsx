@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
-import PledgeQA from './PledgeQA'
+import PledgeComment from './PledgeComment'
 import QuestionForm from './QuestionForm'
 
-export default class PledgeQAs extends ChildComponent {
+export default class PledgeCommentList extends ChildComponent {
   static propTypes = {
     comments: PropTypes.array.isRequired,
     forms: PropTypes.shape({
@@ -25,7 +25,7 @@ export default class PledgeQAs extends ChildComponent {
       commentListOrText = (
         <div className="o-layout o-layout--small">
           {comments.map( comment =>
-            <PledgeQA key={comment.id} comment={comment}
+            <PledgeComment key={comment.id} comment={comment}
               formData={answerForm}
               userCanAnswer={userCanAnswer} />
           )}

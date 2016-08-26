@@ -8,36 +8,36 @@
 
 .c-checkbox {
   label {
-      display: inline-block;
-      cursor: pointer;
-      position: relative;
-      padding-left: 35px;
-      user-select: none;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+    user-select: none;
   }
 
   label:before {
-      content:"";
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      position: absolute;
-      left: 0;
-      top: -1px;
-      border: 1px solid $gray;
-      border-radius: 20px;
+    content:"";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    border: 1px solid $gray;
+    border-radius: 20px;
   }
 
   input[type=checkbox] {
-      display: none;
+    display: none;
   }
 
-  input[type=checkbox]:checked + label:before {
-      font-family: FontAwesome;
-      content: "\f00c";
-      font-size: 18px;
-      color: $primary-color;
-      text-align: center;
-      line-height: 25px;
+  span.checked + label:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    font-size: 18px;
+    color: $primary-color;
+    text-align: center;
+    line-height: 25px;
   }
 }
 
@@ -47,13 +47,13 @@
   }
 
   label:before {
-      width: 22px;
-      height: 22px;
-      top: -3px;
+    width: 22px;
+    height: 22px;
+    top: -3px;
   }
 
-  input[type=checkbox]:checked + label:before {
-      font-size: 15px;
-      line-height: 21px;
+  span.checked + label:before {
+    font-size: 15px;
+    line-height: 21px;
   }
 }

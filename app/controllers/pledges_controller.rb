@@ -10,6 +10,7 @@ class PledgesController < ApplicationController
 
   def create
     authorize @form.model
+
     if @form.validate(pledge_params)
       create_success!
     else
@@ -123,6 +124,7 @@ class PledgesController < ApplicationController
       @pledge = Pledge.new(initiator: User.new)
       @form = PledgeWithInitiatorForm.new(@pledge)
     end
+    @form.prepopulate!
   end
 
   def set_edit_form
@@ -188,14 +190,13 @@ class PledgesController < ApplicationController
   end
 
   def pledge_params
-    # params.require(:pledge).permit(
-    #   :title, :content, :amount, :who, :requirement, :location, :description,
-    #   :deadline, :image,
-    #   tag_ids: [],
-    #   initiator: [:name, :email, :organization, :avatar, :password]
-    # )
-    params[:pledge][:tag_ids] = (params[:pledge][:tag_ids]).split(',')
-    params[:pledge]
+    pledge_params = params[:pledge]
+
+    if pledge_params[:tag_ids]
+      pledge_params[:tag_ids] = pledge_params[:tag_ids].split(',')
+    end
+
+    pledge_params
   end
 
   def pledge_form_props method, path

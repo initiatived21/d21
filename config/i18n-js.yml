@@ -2,7 +2,8 @@ translations:
   - file: "client/vendor/translations.js"
     only: ["*.layouts.*", "*.pages.*", "*.LoggedIn.*", "*.PledgeForm.*", "*.PledgeFormHelp.*",
       "*.PledgeQuote.*", "*.PledgeFeatures.*", "*.ImageInputComponent.*", "*.ImageCrop.*",
-      "*.PledgeUpdateList.*", "*.PledgeQAs.*", "*.PledgeImage.*", "*.SigneeList.*", "*.Signee.*",
+      "*.PledgeUpdateList.*", "*.PledgeCommentList.*", "*.PledgeImage.*", "*.SigneeList.*",
+      "*.Signee.*", "*.SignInForm.*", "*.Session.*",
       "*.rform.*", "*.paths.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",

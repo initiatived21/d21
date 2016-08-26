@@ -13,5 +13,7 @@ module D21
     # -- all .rb files in that directory are automatically loaded.
 
     # config.middleware.use I18n::JS::Middleware # I18n-js
+
+    config.logger = Logger.new(STDOUT)
   end
 end

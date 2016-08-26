@@ -4,19 +4,34 @@
 
 /**
  * Provides a two-faced card that is 3d-rotated on mouse-over
+ * Should be compatible with IE10 and IE11.
+ *
+ * https://davidwalsh.name/css-flip
+ *
+ * 1. entire container, keeps perspective
+ * 2. Flip the pane when hovered.
+ * 3. Hide back of pane during swap.
+ * 4. for Firefox 31
  */
 
+/**
+ * Variables
+ * Predefine the variables below in order to alter and enable specific features.
+ */
 
-// Predefine the variables below in order to alter and enable specific features.
 $o-flipper-speed: 1s !default;
 $o-flipper-height: 400px !default;
 
 
 .o-flipper {
-  perspective: 1000px; /* entire container, keeps perspective */
+  perspective: 1000px;  /* [1] */
+  transform-style: preserve-3d;
 
-  &:hover .o-flipper__inner {
-    transform: rotateY(180deg); /* flip the pane when hovered */
+  &:hover .o-flipper__front {
+    transform: rotateY(180deg);  /* [2] */
+  }
+  &:hover .o-flipper__back {
+    transform: rotateY(0deg);  /* [2] */
   }
 }
 
@@ -33,7 +48,9 @@ $o-flipper-height: 400px !default;
 }
 
 .o-flipper__front, .o-flipper__back {
-  backface-visibility: hidden; /* hide back of pane during swap */
+  backface-visibility: hidden;  /* [3] */
+  transition: $o-flipper-speed;
+  transform-style: preserve-3d;
 
   position: absolute;
   top: 0;
@@ -42,9 +59,9 @@ $o-flipper-height: 400px !default;
 
 .o-flipper__front {
   z-index: 2;
-  transform: rotateY(0deg); /* for Firefox 31 */
+  transform: rotateY(0deg);  /* [4] */
 }
 
 .o-flipper__back {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }

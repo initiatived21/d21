@@ -13,13 +13,18 @@
 
 .c-pledge-tile {
   border: 1px solid $mid-light-gray;
-  border-radius: 8px;
+  border-radius: $border-radius-large;
   background-color: $white;
 
   height: $pledge-tile-height;
 
   position: relative;
   width: 100%;
+}
+
+.c-pledge-tile--with-controls {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .c-pledge-tile__title {
@@ -116,4 +121,13 @@
 
   color: $white;
   background-color: $success-color;
+}
+
+
+/* Footer */
+
+.c-pledge-tile__state-footer {
+  form {
+    display: inline-block;
+  }
 }

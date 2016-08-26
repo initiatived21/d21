@@ -1,4 +1,4 @@
-import loadImageFromFile from '../../image_processing/loadImageFromFile'
+import loadImageFromFile from '../../lib/image_processing/loadImageFromFile'
 
 export const changeCropAction = function(id, crop) {
   return {

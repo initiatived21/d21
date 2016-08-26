@@ -22,4 +22,10 @@ describe('<PledgeTileBack />', function () {
     wrapper.find(PledgeText).length.should.equal(1)
     wrapper.find(SocialMediaButtons).length.should.equal(1)
   })
+
+  it('should "pass through" its className prop', function() {
+    const wrapper = shallow(<PledgeTileBack {...props} className="dummy" />)
+
+    wrapper.hasClass('dummy').should.be.true
+  })
 })

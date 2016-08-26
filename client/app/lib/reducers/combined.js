@@ -1,14 +1,13 @@
 import merge from 'lodash/merge'
 
 import generalReducer, { generalInitialState } from './general'
-// import { reducer, initialState as initialFormState }
-//   from 'react-jayform'
 import { reducer as formReducer, initialState as initialFormState }
   from 'rform'
 import imageInputReducer, { initialImageInputState }
-  from '../Form/reducers/imageInputReducer'
+  from '../../Inputs/reducers/imageInputReducer'
 
 export const initialState = merge(
+  {},
   generalInitialState,
   initialFormState,
   initialImageInputState
@@ -21,5 +20,6 @@ export default function combinedReducer(state = initialState, action) {
   for (let reducer of reducers) {
     newState = reducer(newState, action)
   }
+
   return newState
 }

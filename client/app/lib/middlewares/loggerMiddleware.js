@@ -12,7 +12,7 @@ export default function logger({ getState }) {
 
     const immutableState = getState()
 
-    console.log('state after dispatch', JSON.stringify(immutableState))
+    console.log('state after dispatch', immutableState)
 
     // This will likely be the action itself, unless
     // a middleware further in chain changed it.

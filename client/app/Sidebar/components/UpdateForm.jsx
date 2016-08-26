@@ -25,7 +25,7 @@ export default class UpdateForm extends ChildComponent {
 
         <div className="c-sidebar__wrapper">
           <InputSet ariaLabelOnly
-            className="c-textarea" attribute="content" type="textarea"
+            wrapperClassName="c-textarea" attribute="content" type="textarea"
           />
 
           <button

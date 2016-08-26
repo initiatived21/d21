@@ -13,23 +13,21 @@ export default class SignInForm extends ChildComponent {
   render() {
     const { formData } = this.props
 
-    const newPledgePath = `/${I18n.locale}/pledges/new`
-
     return(
       <Form {...formData} formObjectClass={SignInFormObject}>
         <InputSet ariaLabelOnly
-          className="c-input u-mb-small" attribute='email'
+          wrapperClassName="c-input u-mb-small" attribute='email'
         />
         <InputSet ariaLabelOnly
-          className="c-input u-mb-small" attribute='password' type='password'
+          wrapperClassName="c-input u-mb-small" attribute='password' type='password'
         />
         <InputSet labelAfterInput
-          className="c-checkbox c-checkbox--small u-mb-small"
+          wrapperClassName="c-checkbox c-checkbox--small u-mb-small"
           attribute='remember_me' type='checkbox'
         />
 
         <a className="c-session__link" href="">
-          Passwort vergessen?
+          {this.t('.forgot_password')}
         </a>
 
         <button
@@ -38,14 +36,13 @@ export default class SignInForm extends ChildComponent {
         >
           <FontAwesome name="sign-in" />
           {' '}
-          Anmelden
           {this.t('.submit')}
         </button>
 
         <p>
-          Noch kein Konto?
-          <a className="c-session__link" href={newPledgePath}>
-            Pledge anlegen und registrieren
+          {this.t('.no_account')}
+          <a className="c-session__link" href={I18n.t('paths.new_pledge')}>
+            {this.t('.sign_up_link')}
           </a>
         </p>
       </Form>

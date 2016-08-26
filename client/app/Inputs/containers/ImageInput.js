@@ -3,7 +3,7 @@ import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 import { updateAction } from 'rform'
 
-import cropImage from '../../image_processing/cropImage'
+import cropImage from '../../lib/image_processing/cropImage'
 import loadImageAction, { changeCropAction, cropImageAction }
   from '../actions/imageInputActions'
 import ImageInputComponent from '../components/ImageInputComponent'

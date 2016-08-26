@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import values from 'lodash/values'
-import PledgeQAs from '../components/PledgeQAs'
+import PledgeCommentList from '../components/PledgeCommentList'
 
 const mapStateToProps = (state, ownProps) => {
   const comments =
@@ -30,4 +30,4 @@ const mapDispatchToProps = () => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PledgeQAs)
+)(PledgeCommentList)

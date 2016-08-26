@@ -67,6 +67,13 @@ describe PledgesController do
         assert_response 200
       end
     end
+
+    describe 'when getting comma-separated tags params' do
+      it 'will split them into an array' do
+        post :create, params: { locale: 'de', pledge: { tag_ids: '1,2,3' } }
+        assert([1, 2, 3], assigns(:form).tag_ids)
+      end
+    end
   end
 
   describe 'PATCH finalize' do

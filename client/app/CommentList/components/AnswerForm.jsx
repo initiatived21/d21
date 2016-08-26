@@ -23,7 +23,7 @@ export default class AnswerForm extends ChildComponent {
         {...formData}
       >
         <InputSet ariaLabelOnly
-          attribute='response' className="c-input o-layout__item u-4/5"
+          attribute='response' wrapperClassName="c-input o-layout__item u-4/5"
         />
 
         <div className="o-layout__item u-1/5">

@@ -1,15 +1,17 @@
 import React, { PropTypes  } from 'react'
 import { Form, InputSet, Input, Label, Button } from 'rform'
 import FontAwesome from 'react-fontawesome'
+import MediaQuery from 'react-responsive'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
 import PledgeWithInitiatorFormObject from '../../lib/form_objects/pledge_with_initiator_form'
 import PledgeContentInputs from './PledgeContentInputs'
-import ImageInput from '../../lib/Form/wrappers/ImageInputWrapper'
-import SelectInput from '../../lib/Form/wrappers/SelectInputWrapper'
-import DateInput from '../../lib/Form/wrappers/DateInputWrapper'
+import ImageInput from '../../Inputs/wrappers/ImageInputWrapper'
+import SelectInput from '../../Inputs/wrappers/SelectInputWrapper'
+import DateInput from '../../Inputs/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
+import PledgeFormHelp from './PledgeFormHelp'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -43,15 +45,24 @@ export default class PledgeForm extends ChildComponent {
 
           <PledgeContentInputs />
 
+          <div className="o-sidebar o-sidebar--right u-1/3@l u-pl-small@l">
+            <MediaQuery maxWidth={991}>
+              <PledgeFormHelp controls />
+            </MediaQuery>
+            <MediaQuery minWidth={992}>
+              <PledgeFormHelp />
+            </MediaQuery>
+          </div>
+
           <div className="o-layout o-layout--small u-mb-small">
-            <div className="o-layout__item u-1/4">
+            <div className="o-layout__item u-1/4@m">
               <Label attribute="location" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-input o-layout__item u-2/5"
+              wrapperClassName="c-input o-layout__item u-2/5@m"
               attribute="location"
             />
-            <div className="o-layout__item u-1/5">
+            <div className="o-layout__item u-1/5@m">
               <Tooltip>
                 {this.t('.tooltip.location')}
               </Tooltip>
@@ -59,16 +70,16 @@ export default class PledgeForm extends ChildComponent {
           </div>
 
           <div className="o-layout o-layout--small u-mb-small">
-            <div className="o-layout__item u-1/4">
+            <div className="o-layout__item u-1/4@m">
               <Label attribute="deadline" />
             </div>
-            <div className="c-input o-layout__item u-2/5">
+            <div className="c-input o-layout__item u-2/5@m">
               <DateInput
                 attribute="deadline"
                 placeholder={this.t('rform.pledge.deadline.placeholder')}
               />
             </div>
-            <div className="o-layout__item u-1/5">
+            <div className="o-layout__item u-1/5@m">
               <Tooltip>
                 {this.t('.tooltip.deadline')}
               </Tooltip>
@@ -77,18 +88,18 @@ export default class PledgeForm extends ChildComponent {
 
           <div className="o-layout o-layout--small">
 
-            <div className="o-layout__item u-1/4 u-mb-small">
+            <div className="o-layout__item u-1/4@m u-mb-small">
               <Label attribute="title" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-input o-layout__item u-3/4 u-mb-small"
+              wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
               attribute="title"
             />
-            <div className="o-layout__item u-1/4 u-mb-small">
+            <div className="o-layout__item u-1/4@m u-mb-small">
               <Label attribute="description" />
             </div>
             <InputSet ariaLabelOnly
-              className="c-textarea o-layout__item u-3/4 u-mb-small"
+              wrapperClassName="c-textarea o-layout__item u-3/4@m u-mb-small"
               attribute="description" type="textarea"
             />
 
@@ -112,11 +123,11 @@ export default class PledgeForm extends ChildComponent {
               </div>
             </div>
 
-            <div className="o-layout__item u-1/4">
+            <div className="o-layout__item u-1/4@m">
               <Label attribute="tag_ids" />
             </div>
 
-            <div className="c-input o-layout__item u-3/4">
+            <div className="c-input o-layout__item u-3/4@m">
               <SelectInput
                 attribute='tag_ids'
                 options={this.props.availableTags}
@@ -128,8 +139,8 @@ export default class PledgeForm extends ChildComponent {
 
         {initiatorForm}
 
-        <div className="o-layout u-mt-large u-mb-huge">
-          <div className="o-layout__item u-1/3">
+        <div className="o-layout u-mt-large">
+          <div className="o-layout__item u-1/3@m">
             <Button
               className="c-new-pledge__save-draft o-btn o-btn--small c-btn c-btn--primary u-mb-small"
               commit='save_draft'
@@ -142,7 +153,7 @@ export default class PledgeForm extends ChildComponent {
               {this.t('.draft_explanation')}
             </p>
           </div>
-          <div className="o-layout__item u-2/3">
+          <div className="o-layout__item u-2/3@m">
             <Button
               className="c-new-pledge__preview o-btn o-btn--small c-btn c-btn--secondary u-mb-small"
             >
@@ -175,11 +186,11 @@ export default class PledgeForm extends ChildComponent {
         {loginPrompt}
 
         <div className="o-layout">
-          <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout__item u-1/4@m u-mb-small">
             <Label submodel="initiator" attribute="avatar" />
           </div>
           <ImageInput
-            className="c-image-input--avatar o-layout__item u-3/4 u-mb-small"
+            className="c-image-input--avatar o-layout__item u-3/4@m u-mb-small"
             submodel="initiator"
             attribute="avatar"
             aspectRatio={1}
@@ -187,27 +198,27 @@ export default class PledgeForm extends ChildComponent {
             scaleToY={200}
           />
 
-          <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout__item u-1/4@m u-mb-small">
             <Label submodel="initiator" attribute="name" />
           </div>
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4 u-mb-small"
+            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
             submodel='initiator' attribute='name'
           />
-          <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout__item u-1/4@m u-mb-small">
             <Label submodel="initiator" attribute="email" />
           </div>
 
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4 u-mb-small"
+            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
             submodel='initiator' attribute='email' type='email'
           />
 
-          <div className="o-layout__item u-1/4">
+          <div className="o-layout__item u-1/4@m">
             <Label submodel="initiator" attribute="password" />
           </div>
           <InputSet ariaLabelOnly
-            className="c-input o-layout__item u-3/4" submodel='initiator'
+            wrapperClassName="c-input o-layout__item u-3/4@m" submodel='initiator'
             attribute='password' type='password'
           />
         </div>
@@ -216,10 +227,10 @@ export default class PledgeForm extends ChildComponent {
   }
   renderLoginPrompt(onLinkClick) {
     return (
-      <p className="u-mb-small">
+      <p className="u-mb">
         {this.t('.account.have_one')}
         {' '}
-        <a href="#" onClick={onLinkClick}>
+        <a className="c-new-pledge__link" href="#" onClick={onLinkClick}>
           {this.t('.account.login')}
         </a>
       </p>

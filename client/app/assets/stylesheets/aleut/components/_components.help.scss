@@ -4,17 +4,23 @@
 
 /**
  * Help box on new pledge form page
+ *
+ * 1. Align help box with top of h1 heading
  */
 
 .c-help {
-  color: $text-color;
-  border: 1px solid $primary-color-lighter;
-  border-radius: 5px;
+  margin-top: 13px;  /* [1] */
   margin-bottom: $spacing;
 
+  border: 1px solid $primary-color-lighter;
+  border-radius: $border-radius;
+
+  color: $text-color;
 }
 
 .c-help__title {
+  position: relative;
+
   margin-top: 0;
   padding: $spacing--small $spacing;
   @include font-size(22px, 1.5);
@@ -24,6 +30,15 @@
 
   user-select: none;
 }
+
+.c-help__chevron {
+  display: none;
+
+  position: absolute;
+  top: $spacing--small;
+  right: $spacing;
+}
+
 
 .c-help__wrapper {
   margin: $spacing--small $spacing $spacing;
@@ -53,5 +68,24 @@
 
   a {
     color: $text-color;
+  }
+}
+
+.c-help--controls {
+  .c-help__title {
+    cursor: pointer;
+  }
+
+  .c-help__chevron {
+    display: block;
+  }
+}
+
+.c-help--closed {
+  .c-help__title {
+    margin-bottom: 0;
+  }
+  .c-help__wrapper {
+    display: none;
   }
 }
