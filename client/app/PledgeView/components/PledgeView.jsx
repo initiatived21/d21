@@ -33,7 +33,7 @@ export default class PledgeView extends RootComponent {
     return (
       <Provider store={store}>
         <main>
-          <div className="o-wrapper u-mb-large">
+          <div className="o-wrapper u-mt u-mb-large">
             <div className="o-sidebar__container">
               <Pledge {...pledge} user={user} />
               <PledgeSidebarContainer pledge_id={pledge.id}
