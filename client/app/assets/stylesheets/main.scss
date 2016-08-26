@@ -147,6 +147,7 @@ $o-flipper-height: $pledge-tile-height;
     Here you place your own visual styling.
 \*------------------------------------*/
 
+@import "aleut/components/components.masthead";
 @import "aleut/components/components.avatar";
 @import "aleut/components/components.faq";
 @import "aleut/components/components.page-head";
