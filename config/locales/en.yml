@@ -83,7 +83,7 @@ en:
   PledgeQuote:
     promise:
       part1: We promise to
-      part2: if
+      part2: " if"
   PledgeState:
     days:
       one: day
