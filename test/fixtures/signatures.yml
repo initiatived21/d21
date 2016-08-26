@@ -4,6 +4,6 @@ basic:
   reason: 'basicSignatureReason'
   name: 'basicSignatureName'
   email: 'basicSignatureEmail@example.org'
-  anonymous: true
+  anonymous: false
   organization: 'Monsanto'
   contact_person: true
