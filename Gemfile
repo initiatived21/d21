@@ -71,9 +71,9 @@ gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :production, :staging do
-  gem 'rails_12factor'
-end
+# group :production, :staging do
+#   gem 'rails_12factor'
+# end
 
 ################
 ### Database ###
@@ -116,6 +116,7 @@ group :development do
   gem 'capistrano', '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rails-console'
+  gem 'capistrano-rails-tail-log'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
