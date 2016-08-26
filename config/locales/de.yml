@@ -143,9 +143,6 @@ de:
     no_account: Noch kein Konto?
     sign_up_link: Versprechen anlegen und registrieren
     submit: Anmelden
-    forgot_password: Passwort vergessen?
-    no_account: Noch kein Konto?
-    sign_up_link: Versprechen anlegen und registrieren
   SignPledgeForm:
     email_hint: Ihre E-Mail wird nicht veröffentlicht.
     i_sign: Ich unterzeichne dieses Versprechen.
@@ -306,44 +303,44 @@ de:
       confirmation_instructions:
         user_subject: Confirmation instructions
   errors:
-    array?: 
-    attr?: 
-    bool?: 
-    date?: 
-    date_time?: 
-    decimal?: 
-    empty?: 
-    eql?: 
-    even?: 
+    array?: must be an array
+    attr?: is missing
+    bool?: must be boolean
+    date?: must be a date
+    date_time?: must be a date time
+    decimal?: must be a decimal
+    empty?: must be empty
+    eql?: must be equal to %{left}
+    even?: must be even
     excluded_from?:
       arg:
-        default: 
-        range: 
-    excludes?: 
-    exclusion?: 
-    false?: 
+        default: 'must not be one of: %{list}'
+        range: 'must not be one of: %{list_left} - %{list_right}'
+    excludes?: must not include %{value}
+    exclusion?: 'must not be one of: %{list}'
+    false?: must be false
     filled?: muss ausgefüllt werden
-    float?: 
-    format?: 
+    float?: must be a float
+    format?: is in invalid format
     gt?: muss größer als %{num} sein
-    gteq?: 
-    hash?: 
+    gteq?: must be greater than or equal to %{num}
+    hash?: must be a hash
     included_in?:
       arg:
-        default: 
-        range: 
-    includes?: 
-    inclusion?: 
-    int?: 
-    key?: 
-    lt?: 
-    lteq?: 
+        default: 'must be one of: %{list}'
+        range: 'must be one of: %{list_left} - %{list_right}'
+    includes?: must include %{value}
+    inclusion?: 'must be one of: %{list}'
+    int?: must be an integer
+    key?: is missing
+    lt?: must be less than %{num}
+    lteq?: must be less than or equal to %{num}
     max_size?: muss weniger als %{num} Zeichen enthalten
-    min_size?: 
-    none?: 
-    not_eql?: 
-    number?: 
-    odd?: 
+    min_size?: size cannot be less than %{num}
+    none?: cannot be defined
+    not_eql?: must not be equal to %{left}
+    number?: must be a number
+    odd?: must be odd
     size?:
       arg:
         default: size must be %{size}
@@ -353,10 +350,10 @@ de:
           arg:
             default: length must be %{size}
             range: length must be within %{size_left} - %{size_right}
-    str?: 
-    time?: 
-    true?: 
-    type?: 
+    str?: must be a string
+    time?: must be a time
+    true?: must be true
+    type?: must be %{type}
     unique?: ist bereits vergeben
   first_paragraph: 
   flash:
@@ -366,8 +363,6 @@ de:
       destroy:
         notice: 
       update:
-        notice: 
-      create:
         notice: 
   formtastic:
     actions:
@@ -385,11 +380,6 @@ de:
       user:
         edit:
           update: 
-      tag:
-        edit:
-          update: 
-        new:
-          create: 
     hints:
       active_admin/comment:
         show:
@@ -439,14 +429,6 @@ de:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
     labels:
       pledge:
         edit:
@@ -523,14 +505,6 @@ de:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
     placeholders:
       active_admin/comment:
         show:
@@ -592,13 +566,6 @@ de:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          name: 
-        new:
-          color: 
-          name: 
   helpers:
     label:
       pledge:
@@ -679,14 +646,6 @@ de:
         email: 
         password: 
         remember_me: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -772,10 +731,12 @@ de:
       question6: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question7: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
+      masthead:
+        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        title: Headline Info
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
-      newest: Neueste Versprechen
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
@@ -784,8 +745,6 @@ de:
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
-    new_pledge: "/de/pledges/new"
-    pledge: "/de/pledges/{{pledge}}"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
@@ -920,10 +879,3 @@ de:
     pagination:
       last: 
       next: 
-  PledgeCommentList:
-    heading: Fragen und Antworten an den Initiator
-    no_questions: Es gibt noch keine Fragen.
-    submit: Abschicken
-  Session:
-    my_account: Mein Konto
-    sign_in: Login

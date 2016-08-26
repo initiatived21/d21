@@ -1,11 +1,13 @@
 section.c-masthead
   div.o-wrapper
     div.c-masthead__copy
-      h2.c-masthead__title Headline Info
-      p Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      h2.c-masthead__title
+        = t '.masthead.title'
+      p
+      = t '.masthead.text'
 
-section
-  div.c-pledge-list.o-wrapper.u-mt-large.u-mb
+section.c-pledge-list
+  div.o-wrapper.u-mt-large.u-mb
     header.c-pledge-list__header
       h2.c-pledge-list__title
         span.fa.fa-star>
