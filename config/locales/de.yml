@@ -83,7 +83,7 @@ de:
   PledgeQuote:
     promise:
       part1: Wir versprechen,
-      part2: ", wenn mindestens"
+      part2: ", wenn"
   PledgeState:
     days:
       one: Tag
@@ -353,6 +353,8 @@ de:
   first_paragraph: 
   flash:
     actions:
+      create:
+        notice: 
       destroy:
         notice: 
       update:
@@ -365,6 +367,11 @@ de:
       signature:
         edit:
           update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
       user:
         edit:
           update: 
@@ -404,6 +411,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -472,6 +487,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -526,6 +549,13 @@ de:
           name: 
           organization: 
           reason: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -595,6 +625,14 @@ de:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -812,18 +850,22 @@ de:
       counseling: Beratung
       culture: Kultur
       donation: Spende
-      education: Ausbildung
+      education: Bildung
       family: Familie
       language: Sprache
       men: Männer
       mentorship: Patenschaft
+      money: Geld
       platform: Plattform
+      programming: Programmieren
       social life: Teilhabe
       sport: Sport
       technology: Technik
+      training: Ausbildung
       volunteering: Ehrenamt
       women: Frauen
       work: Arbeit
+      youth: Jugendliche
   views:
     pagination:
       last: 

@@ -83,7 +83,7 @@ en:
   PledgeQuote:
     promise:
       part1: We promise to
-      part2: " if at least"
+      part2: if
   PledgeState:
     days:
       one: day
@@ -353,6 +353,8 @@ en:
   first_paragraph: 
   flash:
     actions:
+      create:
+        notice: 
       destroy:
         notice: 
       update:
@@ -365,6 +367,11 @@ en:
       signature:
         edit:
           update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
       user:
         edit:
           update: 
@@ -404,6 +411,14 @@ en:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -472,6 +487,14 @@ en:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -526,6 +549,13 @@ en:
           name: 
           organization: 
           reason: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -595,6 +625,14 @@ en:
           organization: 
           pledge: 
           reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
           email: 
@@ -798,13 +836,17 @@ en:
       language: Language
       men: Men
       mentorship: Mentorship
+      money: Money
       platform: platform
+      programming: Programming
       social life: Social Life
       sport: Sport
       technology: Technology
+      training: Training
       volunteering: Volunteering
       women: Women
       work: Work
+      youth: Youth
   views:
     pagination:
       last: 
