@@ -21,7 +21,10 @@ en:
     title: Share via LinkedIn
   LoggedIn:
     logged_in_as: Logged in as
-    logout: Logout
+    logout: Sign out
+    my_data: My profile data
+    my_pledges: My pledges
+    welcome: Welcome,
   PledgeCreatedAt:
     published_on: Published on
   PledgeData:
@@ -73,14 +76,10 @@ en:
     img_alt: image describing the pledge
   PledgeLocation:
     title: Location
-  PledgeQAs:
-    heading: Questions and answers to the initiator
-    no_questions: There are no questions yet.
-    submit: Submit
   PledgeQuote:
     promise:
       part1: We promise to
-      part2: " if at least"
+      part2: " if"
   PledgeState:
     days:
       one: day
@@ -130,6 +129,9 @@ en:
     report_pledge: Report pledge
   SignInForm:
     submit: Sign in
+    forgot_password: Forgot password?
+    no_account: No account yet?
+    sign_up_link: Create a pledge and sign up
   SignPledgeForm:
     email_hint: 
     i_sign: I sign this pledge.
@@ -335,12 +337,15 @@ en:
     time?: must be a time
     true?: must be true
     type?: must be %{type}
+    unique?: has already been used
   first_paragraph: 
   flash:
     actions:
       destroy:
         notice: 
       update:
+        notice: 
+      create:
         notice: 
   formtastic:
     actions:
@@ -353,6 +358,11 @@ en:
       user:
         edit:
           update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
     hints:
       active_admin/comment:
         show:
@@ -394,6 +404,14 @@ en:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
     labels:
       pledge:
         edit:
@@ -462,6 +480,14 @@ en:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
     placeholders:
       active_admin/comment:
         show:
@@ -516,6 +542,13 @@ en:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
   helpers:
     label:
       pledge:
@@ -588,6 +621,14 @@ en:
         email: 
         password: 
         remember_me: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -658,12 +699,15 @@ en:
     home:
       recommended: Recommended by the editors
       successful: Successful promises
+      newest: Newest pledges
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
     privacy: "/en/privacy"
     terms: "/en/terms"
     user_profile: "/en/users/profile"
+    new_pledge: "/en/pledges/new"
+    pledge: "/en/pledges/{{pledge}}"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
@@ -746,9 +790,11 @@ en:
         label: Send a project update to all signees.
     user:
       email:
-        label: E-Mail
+        label: Email
+        placeholder: Email
       password:
         label: Password
+        placeholder: Password
       remember_me:
         label: Stay signed in
   signer_mailer:
@@ -786,7 +832,18 @@ en:
       women: Women
       work: Work
       social life: Social Life
+      money: Money
+      programming: Programming
+      training: Training
+      youth: Youth
   views:
     pagination:
       last: 
       next: 
+  PledgeCommentList:
+    heading: Questions and answers to the initiator
+    no_questions: There are no questions yet.
+    submit: Submit
+  Session:
+    my_account: My account
+    sign_in: Login

@@ -33,10 +33,15 @@ gem 'react_on_rails', '6.0.5'
 ### Rails extensions ###
 ########################
 
+# Auth
+gem 'devise'
+gem 'devise-i18n'
+gem 'pundit'
+gem 'rails-i18n'
+
 gem 'slim-rails'
-# gem 'dry-validation' # more explicit validations
-gem 'dry-validation', github: 'dry-rb/dry-validation'
-gem 'reform', github: 'apotonick/reform', branch: '2-2' # Form objects
+gem 'dry-validation' # more explicit validations
+gem 'reform' # Form objects
 gem 'cells'
 gem 'cells-rails'
 gem 'cells-slim'
@@ -57,13 +62,6 @@ gem 'redis', '>= 3.0'
 gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'mini_magick'
-
-# Auth
-gem 'devise'
-gem 'devise-i18n'
-gem 'pundit'
-
-gem 'rails-i18n'
 
 # Admin Backend
 gem 'activeadmin', github: 'activeadmin'

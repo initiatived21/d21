@@ -1,5 +1,7 @@
+
 class NewSignatureForm < Reform::Form
   include Reform::Form::Dry::Validations
+
 
   property :name
   property :email
@@ -13,9 +15,16 @@ class NewSignatureForm < Reform::Form
   # Validation
 
   validation :default do
-    required(:name) { size?(2..32) }
-    required(:email) { size?(2..32) }
+    configure do
+      config.messages = :i18n
 
-    validates_uniqueness_of :email, scope: :pledge_id
+      def unique?(field_value)
+        scope_value = options[:form].model.pledge_id
+        Signature.where(email: field_value, pledge_id: scope_value).count == 0
+      end
+    end
+
+    required(:name) { size?(2..32) }
+    required(:email).filled(:unique?, size?: 2..32)
   end
 end

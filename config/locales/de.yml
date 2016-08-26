@@ -22,6 +22,9 @@ de:
   LoggedIn:
     logged_in_as: Angemeldet als
     logout: Abmelden
+    my_data: Meine Daten
+    my_pledges: Meine Versprechen
+    welcome: Willkommen,
   PledgeCreatedAt:
     published_on: Veröffentlicht am
   PledgeData:
@@ -73,14 +76,10 @@ de:
     img_alt: Bild, welches das Versprechen beschreibt
   PledgeLocation:
     title: Ort
-  PledgeQAs:
-    heading: Fragen und Antworten an den Initiator
-    no_questions: Es gibt noch keine Fragen.
-    submit: Abschicken
   PledgeQuote:
     promise:
       part1: Wir versprechen,
-      part2: ", wenn mindestens"
+      part2: ", wenn"
   PledgeState:
     days:
       one: Tag
@@ -119,7 +118,7 @@ de:
       question: Wie geht es weiter?
       user_account: Ihrem Nutzerkonto
   PreviewUnconfirmed:
-    confirm_email: Bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+    confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
     edit_pledge: Versprechen bearbeiten
   ProfileView:
     heading: Ihr Profil
@@ -130,6 +129,9 @@ de:
     report_pledge: Versprechen melden
   SignInForm:
     submit: Anmelden
+    forgot_password: Passwort vergessen?
+    no_account: Noch kein Konto?
+    sign_up_link: Versprechen anlegen und registrieren
   SignPledgeForm:
     email_hint: Ihre E-Mail wird nicht veröffentlicht.
     i_sign: Ich unterzeichne dieses Versprechen.
@@ -324,23 +326,26 @@ de:
     odd?: 
     size?:
       arg:
-        default: 
-        range: 
+        default: size must be %{size}
+        range: size must be within %{size_left} - %{size_right}
       value:
         string:
           arg:
-            default: 
-            range: 
+            default: length must be %{size}
+            range: length must be within %{size_left} - %{size_right}
     str?: 
     time?: 
     true?: 
     type?: 
+    unique?: ist bereits vergeben
   first_paragraph: 
   flash:
     actions:
       destroy:
         notice: 
       update:
+        notice: 
+      create:
         notice: 
   formtastic:
     actions:
@@ -353,6 +358,11 @@ de:
       user:
         edit:
           update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
     hints:
       active_admin/comment:
         show:
@@ -394,6 +404,14 @@ de:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
     labels:
       pledge:
         edit:
@@ -462,6 +480,14 @@ de:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
     placeholders:
       active_admin/comment:
         show:
@@ -516,6 +542,13 @@ de:
           email: 
           name: 
           organization: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
   helpers:
     label:
       pledge:
@@ -588,6 +621,14 @@ de:
         email: 
         password: 
         remember_me: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -675,12 +716,15 @@ de:
     home:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+      newest: Neueste Versprechen
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
+    new_pledge: "/de/pledges/new"
+    pledge: "/de/pledges/{{pledge}}"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
@@ -766,8 +810,10 @@ de:
     user:
       email:
         label: E-Mail
+        placeholder: E-Mail
       password:
         label: Passwort
+        placeholder: Passwort
       remember_me:
         label: Angemeldet bleiben
   signer_mailer:
@@ -793,7 +839,7 @@ de:
       counseling: Beratung
       culture: Kultur
       donation: Spende
-      education: Ausbildung
+      education: Bildung
       family: Familie
       language: Sprache
       men: Männer
@@ -805,7 +851,18 @@ de:
       women: Frauen
       work: Arbeit
       social life: Teilhabe
+      money: Geld
+      programming: Programmieren
+      training: Ausbildung
+      youth: Jugendliche
   views:
     pagination:
       last: 
       next: 
+  PledgeCommentList:
+    heading: Fragen und Antworten an den Initiator
+    no_questions: Es gibt noch keine Fragen.
+    submit: Abschicken
+  Session:
+    my_account: Mein Konto
+    sign_in: Login
