@@ -84,6 +84,10 @@ en:
     promise:
       part1: We promise to
       part2: " if"
+  PledgeSignedMessage:
+    email: Please confirm your signature through the email that we have just sent you. Your signature will not be valid without confirmation.
+    explanation: You have signed this pledge.
+    title: Pledge signed
   PledgeState:
     days:
       one: day
@@ -751,6 +755,7 @@ en:
       question6: Why can`t I update my pledge?
       question7: How can I contact my supporters?
     home:
+      newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
       newest: Newest pledges

@@ -3,7 +3,7 @@ translations:
     only: ["*.layouts.*", "*.pages.*", "*.LoggedIn.*", "*.PledgeForm.*", "*.PledgeFormHelp.*",
       "*.PledgeQuote.*", "*.PledgeFeatures.*", "*.ImageInputComponent.*", "*.ImageCrop.*",
       "*.PledgeUpdateList.*", "*.PledgeCommentList.*", "*.PledgeImage.*", "*.SigneeList.*",
-      "*.Signee.*", "*.SignInForm.*", "*.Session.*",
+      "*.Signee.*", "*.SignInForm.*", "*.Session.*", "*.PledgeSignedMessage.*",
       "*.rform.*", "*.paths.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",

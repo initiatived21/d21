@@ -4,6 +4,7 @@ import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import NewSignatureFormObject from '../../lib/form_objects/new_signature_form'
 import Tooltip from '../../Tooltip/components/Tooltip'
+import PledgeSignedMessage from './PledgeSignedMessage'
 
 import { PROJECT_NAME } from '../../lib/config'
 
@@ -13,18 +14,20 @@ export default class SignPledgeForm extends ChildComponent {
     formData: PropTypes.shape({
       action: PropTypes.string.isRequired,
     }),
-    editedSignature: PropTypes.object,
+    onResponse: PropTypes.func.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
+    isAlreadySigned: PropTypes.bool.isRequired
   }
 
   render() {
-    const { formData, isSubmitting } = this.props
+    const { formData, isSubmitting, onResponse, isAlreadySigned } = this.props
 
-    return (
+    return isAlreadySigned ? <PledgeSignedMessage /> : (
       <Form
         className="c-sidebar c-sidebar--secondary c-sign-pledge"
         ajax={true}
         formObjectClass={NewSignatureFormObject}
+        afterResponse={onResponse}
         {...formData}
       >
         <h2 className="c-sidebar__title">

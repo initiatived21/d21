@@ -1,32 +1,35 @@
 import { connect } from 'react-redux'
-// import merge from 'lodash/merge'
-
-// import { setEntity } from '../../lib/actions/entityActions'
-// import submitSignPledgeForm from '../actions/submitSignPledgeForm'
 import SignPledgeForm from '../components/SignPledgeForm'
+import signPledgeAction from '../actions/signPledgeAction'
 
-const mapStateToProps = (state) => ({
-  // existingAttrs: merge({}, ownProps.formData.object),
+const mapStateToProps = (state, ownProps) => ({
   isSubmitting: state.isSubmitting.NewSignatureFormObject || false,
+  isAlreadySigned: state.pledgesSigned.includes(ownProps.id)
 })
 
-const mapDispatchToProps = () => ({
-  // ensureStateObjectExistence(formObject, existingStateInstance, existingAttrs) {
-  //   if (existingStateInstance) { return }
-  //   return dispatch(setEntity(
-  //     formObject.constructor.name, existingAttrs
-  //   ))
-  // },
-  //
-  // onSubmit(event) {
-  //   event.preventDefault()
-  //   const data = ownProps.object.toFormData()
-  //   dispatch(submitSignPledgeForm(ownProps.formData.action, data))
-  //   return false
-  // },
+const mapDispatchToProps = (dispatch) => ({
+  dispatch
 })
+
+const mergeProps = function(stateProps, dispatchProps, ownProps) {
+  const { id } = ownProps
+  const { dispatch } = dispatchProps
+
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...ownProps,
+
+    onResponse: function(response) {
+      if (response.status === 'success') {
+        dispatch(signPledgeAction(id))
+      }
+    }
+  }
+}
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(SignPledgeForm)

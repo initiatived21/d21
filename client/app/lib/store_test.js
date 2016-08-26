@@ -4,6 +4,7 @@ import { IMAGE_STATE_NONE } from '../Inputs/reducers/imageInputReducer'
 describe('store', function() {
   const initialState = {
     pledges: {},
+    pledgesSigned: [],
     tags: {},
     ui: {
       searchResultsLoading: false,
@@ -34,6 +35,3 @@ describe('store', function() {
     store.getState().should.deep.equal(initialState)
   })
 })
-
-
-

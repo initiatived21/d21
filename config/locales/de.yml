@@ -84,6 +84,10 @@ de:
     promise:
       part1: Wir versprechen,
       part2: ", wenn"
+  PledgeSignedMessage:
+    email: Bitte bestätigen Sie Ihre Unterschrift über die E-Mail, die wir Ihnen gerade geschickt haben. Erst dann ist Ihre Unterschrift gültig.
+    explanation: Sie haben dieses Versprechen unterzeichnet.
+    title: Versprechen unterzeichnet
   PledgeState:
     days:
       one: Tag
@@ -768,6 +772,7 @@ de:
       question6: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question7: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
+      newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
       newest: Neueste Versprechen
