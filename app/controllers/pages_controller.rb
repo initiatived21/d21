@@ -5,7 +5,8 @@ class PagesController < ApplicationController
   end
 
   def home
-    @successful_pledges = serialize(Pledge.successful.limit(4))
+    query = Pledge.where(aasm_state: 'active').order(created_at: :desc).limit(12)
+    @newest_pledges = serialize(query)
   end
 
   def faq

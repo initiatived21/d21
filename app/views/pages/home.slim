@@ -1,17 +1,11 @@
 section.c-masthead
   div.o-wrapper
     div.c-masthead__copy
-      h1.c-masthead__title Headline Info
+      h2.c-masthead__title Headline Info
       p Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
 
 section
   .o-wrapper
     h2
-      = t '.recommended'
-    p TODO: Needs recommendation feature
-
-section
-  .o-wrapper
-    h2
-      = t '.successful'
-    == cell :pledge_list, @successful_pledges, filter: :successful, params: params
+      = t '.newest'
+    == cell :pledge_list, @newest_pledges, filter: :active, params: params
