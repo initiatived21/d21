@@ -5,7 +5,9 @@ section.c-masthead
       p Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
 
 section
-  .o-wrapper
-    h2
-      = t '.newest'
+  div.c-pledge-list.o-wrapper.u-mt-large.u-mb
+    header.c-pledge-list__header
+      h2.c-pledge-list__title
+        span.fa.fa-star>
+        = t '.newest'
     == cell :pledge_list, @newest_pledges, filter: :active, params: params
