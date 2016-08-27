@@ -26,6 +26,8 @@ export default class ProfileView extends RootComponent {
             <h2>Ihre Daten</h2>
             <ProfileUserForm formConfig={this.props.editForm} />
 
+            <hr className="c-ruler" />
+
             <h2>Ihre Versprechen</h2>
             <ProfilePledgeListContainer />
           </div>

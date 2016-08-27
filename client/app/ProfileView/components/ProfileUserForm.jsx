@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Form, Button } from 'rform'
+import FontAwesome from 'react-fontawesome'
 import I18n from 'i18n-js'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
@@ -14,11 +15,15 @@ export default class ProfileUserForm extends ChildComponent {
 
     return (
       <Form ajax
-        model='user' formObjectClass={UserFormObject}
+        className="u-2/3@l"
+        model='user'
+        formObjectClass={UserFormObject}
         {...formConfig}
       >
         <UserForm labelContent={I18n.t('rform.user.new_password.label')} />
-        <Button>
+        <Button className="o-btn c-btn c-btn--primary u-mt">
+          <FontAwesome name="check" />
+          {' '}
           {this.t('.button')}
         </Button>
       </Form>

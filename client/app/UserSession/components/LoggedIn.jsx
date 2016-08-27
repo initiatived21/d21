@@ -22,7 +22,7 @@ export default class LoggedIn extends ChildComponent {
           </b>
         </p>
 
-        <hr className="u-mt u-mb" />
+        <hr className="c-ruler" />
 
         <nav>
           <ul className="o-list-bare">

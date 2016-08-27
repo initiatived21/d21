@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #RULER
+\*------------------------------------*/
+
+/**
+ * Simple ruler component, to be used with hr elements
+ */
+
+.c-ruler {
+  margin: $spacing 0;
+  border: none;
+  border-top: 1px solid $gray;
+}
