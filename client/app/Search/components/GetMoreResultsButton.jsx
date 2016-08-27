@@ -13,11 +13,11 @@ export default class GetMoreResultsButton extends ChildComponent {
 
     const buttonProps = {}
     if (disabled) {
-      buttonProps['className'] = 'o-btn o-btn--small c-btn--disabled'
+      buttonProps['className'] = 'o-btn c-btn c-btn--disabled u-mb'
       buttonProps['disabled'] = 'disabled'
     }
     else {
-      buttonProps['className'] = 'o-btn o-btn--small'
+      buttonProps['className'] = 'o-btn c-btn c-btn--primary u-mb'
       buttonProps['onClick'] = () => clickHandler(numResults)
     }
 

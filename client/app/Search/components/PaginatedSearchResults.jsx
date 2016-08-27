@@ -4,12 +4,12 @@ import SearchResults from './SearchResults'
 import GetMoreResultsButton from './GetMoreResultsButton'
 
 export default class PaginatedSearchResults extends ChildComponent {
-  constructor(props) {
-    super(props)
-  }
-
   static propTypes = {
-    results: PropTypes.arrayOf(PropTypes.object).isRequired
+    results: PropTypes.arrayOf(PropTypes.object).isRequired,
+    query: PropTypes.string.isRequired,
+    resultCount: PropTypes.number.isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    onButtonClick: PropTypes.func.isRequired
   }
 
   render() {
@@ -24,7 +24,7 @@ export default class PaginatedSearchResults extends ChildComponent {
         <SearchResults results={results} />
         { showMoreButton ?
           <GetMoreResultsButton disabled={isLoading} numResults={results.length} clickHandler={onButtonClick} >
-            Mehr anzeigen…
+            {this.t('.show_more')}
           </GetMoreResultsButton>
           : null }
       </div>

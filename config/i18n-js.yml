@@ -4,11 +4,11 @@ translations:
       "*.PledgeQuote.*", "*.PledgeFeatures.*", "*.ImageInputComponent.*", "*.ImageCrop.*",
       "*.PledgeUpdateList.*", "*.PledgeCommentList.*", "*.PledgeImage.*", "*.SigneeList.*",
       "*.Signee.*", "*.SignInForm.*", "*.Session.*", "*.PledgeSignedMessage.*",
-      "*.rform.*", "*.paths.*",
+      "*.PaginatedSearchResults.*", "*.PledgeCreatedAt.*",
       "*.ReportPledgeForm.*", "*.SignPledgeForm.*", "*.FacebookButton.*", "*.TwitterButton.*",
       "*.GoogleplusButton.*", "*.LinkedinButton.*", "*.XingButton.*", "*.StateHeader.*",
       "*.StateFooter.*", "*.PledgeData.*", "*.UpdateForm.*", "*.AnswerForm.*", "*.QuestionForm.*",
       "*.PledgeState.*", "*.ProfileView.*", "*.CommentAvatar.*", "*.PledgeLocation.*",
       "*.PledgeTileBack.*", "*.PledgeTileFront.*", "*.PreviewExplanation.*",
       "*.PreviewDraft.*", "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
-      "*.PledgeCreatedAt.*", "*.tags.*"]
+      "*.rform.*", "*.paths.*", "*.tags.*"]

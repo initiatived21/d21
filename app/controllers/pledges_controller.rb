@@ -58,11 +58,13 @@ class PledgesController < ApplicationController
 
     if search.empty?
       @pledges = Pledge.active.limit(4)
+      @query = ''
       @result_ids = []
       @result_count = 0
     else
       search.run
       @pledges = search.solved_results
+      @query = search.query
       @result_ids = search.results.ids
       @result_count = search.unscoped_results.count
     end
@@ -74,7 +76,7 @@ class PledgesController < ApplicationController
       end
       format.json do
         render json: {
-          status: 'success', query: search.query, pledges: @pledges,
+          status: 'success', query: @query, pledges: @pledges,
           resultIds: @result_ids, resultCount: @result_count
         }
       end

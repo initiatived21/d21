@@ -25,6 +25,8 @@ en:
     my_data: My profile data
     my_pledges: My pledges
     welcome: Welcome,
+  PaginatedSearchResults:
+    show_more: Show more…
   PledgeCommentList:
     heading: Questions and answers to the initiator
     no_questions: There are no questions yet.
@@ -306,6 +308,7 @@ en:
     array?: must be an array
     attr?: is missing
     bool?: must be boolean
+    correct?: must match password
     date?: must be a date
     date_time?: must be a date time
     decimal?: must be a decimal
@@ -354,7 +357,7 @@ en:
     time?: must be a time
     true?: must be true
     type?: must be %{type}
-    unique?: has already been used
+    unique?: must not have been already used
   first_paragraph: 
   flash:
     actions:
@@ -720,10 +723,6 @@ en:
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
-      newest: Newest pledges
-      masthead:
-        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-        title: Headline Info
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
@@ -864,7 +863,3 @@ en:
     pagination:
       last: 
       next: 
-  PledgeSignedMessage:
-    email: Please confirm your signature through the email that we have just sent you. Your signature will not be valid without confirmation.
-    explanation: You have signed this pledge.
-    title: Pledge signed

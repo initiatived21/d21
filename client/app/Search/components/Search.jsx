@@ -11,7 +11,9 @@ export default class Search extends RootComponent {
     locale: PropTypes.string.isRequired,
     pledges: PropTypes.arrayOf(
       PropTypes.object
-    ).isRequired
+    ).isRequired,
+    query: PropTypes.string.isRequired,
+    resultCount: PropTypes.number.isRequired
   }
 
   get objectsToForwardToState() {
@@ -21,8 +23,8 @@ export default class Search extends RootComponent {
   render() {
     const { pledges, query, resultCount } = this.props
 
-    let resultView = undefined
-    if (pledges.length == 0) {
+    let resultView
+    if (pledges.length === 0) {
       resultView = <EmptyResults pledges={pledges} />
     } else {
       resultView =
