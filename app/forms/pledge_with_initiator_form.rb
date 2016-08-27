@@ -9,11 +9,17 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :password
 
     validation :default do
-      configure { config.messages = :i18n }
+      configure do
+        config.messages = :i18n
+
+        def unique?(field_value)
+          User.where(email: field_value).count == 0
+        end
+      end
 
       required(:name).filled
       required(:organization)
-      required(:email).filled
+      required(:email).filled(:unique?)
       required(:password).filled
     end
   end
