@@ -14,7 +14,7 @@ class PledgeWithInitiatorForm < BasePledgeForm
         config.messages = :i18n
 
         def correct?(str)
-          str == form.password
+          str == options[:form].password
         end
 
         def unique?(field_value)
@@ -27,7 +27,7 @@ class PledgeWithInitiatorForm < BasePledgeForm
       required(:email).filled(:unique?)
 
       required(:password).filled(:str?)
-      required(:confirm_password).filled(:str?, :correct?)
+      required(:password_confirmation).filled(:str?, :correct?)
     end
   end
 

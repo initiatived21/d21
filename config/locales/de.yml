@@ -355,7 +355,7 @@ de:
     time?: must be a time
     true?: must be true
     type?: must be %{type}
-    unique?: ist bereits vergeben
+    unique?: darf noch nicht benutzt worden sein
   first_paragraph: 
   flash:
     actions:
@@ -880,3 +880,5 @@ de:
     pagination:
       last: 
       next: 
+  PaginatedSearchResults:
+    show_more: Mehr anzeigen…

@@ -11,6 +11,7 @@ import ImageInput from '../../Inputs/wrappers/ImageInputWrapper'
 import SelectInput from '../../Inputs/wrappers/SelectInputWrapper'
 import DateInput from '../../Inputs/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
+import UserForm from '../../UserForm/components/UserForm'
 import PledgeFormHelp from './PledgeFormHelp'
 
 export default class PledgeForm extends ChildComponent {
@@ -189,59 +190,7 @@ export default class PledgeForm extends ChildComponent {
 
         {loginPrompt}
 
-        <div className="o-layout">
-          <div className="o-layout__item u-1/4@m u-mb-small">
-            <Label submodel="initiator" attribute="name" />
-          </div>
-          <InputSet ariaLabelOnly
-            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
-            submodel="initiator" attribute="name"
-          />
-
-          <div className="o-layout__item u-1/4@m u-mb-small">
-            <Label submodel="initiator" attribute="organization" />
-          </div>
-          <InputSet ariaLabelOnly
-            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
-            submodel="initiator" attribute="organization"
-          />
-
-          <div className="o-layout__item u-1/4@m u-mb-small">
-            <Label submodel="initiator" attribute="avatar" />
-          </div>
-          <ImageInput
-            className="c-image-input--avatar o-layout__item u-3/4@m u-mb-small"
-            submodel="initiator"
-            attribute="avatar"
-            aspectRatio={1}
-            scaleToX={200}
-            scaleToY={200}
-          />
-
-          <div className="o-layout__item u-1/4@m u-mb-small">
-            <Label submodel="initiator" attribute="email" />
-          </div>
-          <InputSet ariaLabelOnly
-            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
-            submodel="initiator" attribute="email" type="email"
-          />
-
-          <div className="o-layout__item u-1/4@m u-mb-small">
-            <Label submodel="initiator" attribute="password" />
-          </div>
-          <InputSet ariaLabelOnly
-            wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small" submodel="initiator"
-            attribute="password" type="password"
-          />
-
-          <div className="o-layout__item u-1/4@m">
-            <Label submodel="initiator" attribute="password_confirmation" />
-          </div>
-          <InputSet ariaLabelOnly
-            wrapperClassName="c-input o-layout__item u-3/4@m" submodel="initiator"
-            attribute="password_confirmation" type="password"
-          />
-        </div>
+        <UserForm asSubmodel='initiator' />
       </div>
     )
   }
