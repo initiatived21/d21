@@ -1,5 +1,5 @@
 import React, { PropTypes  } from 'react'
-import { Form, InputSet, Input, Label, Button } from 'rform'
+import { Form, InputSet, Input, Label, Button, Errors } from 'rform'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import NumberInput from '../../Inputs/wrappers/NumberInputWrapper'
@@ -42,6 +42,7 @@ export default class PledgeForm extends ChildComponent {
               className="c-pledge-form__part5 c-pledge-form__input c-number-input"
               attribute="amount" min={1} max={10000}
             />
+            <Errors attribute='amount' />
           </div>
 
           <div className="c-pledge-form__group2-2">

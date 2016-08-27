@@ -20,7 +20,7 @@ export default class NumberInputComponent extends Component {
   render() {
     const {
       model, attribute, submodel, errors, object, value, min, max,
-      noLabel, inlineLabel, formObjectName, className
+      noLabel, inlineLabel, formId, className
     } = this.props
 
     const modelParamName = this._modelParamName(model, submodel)
@@ -45,21 +45,21 @@ export default class NumberInputComponent extends Component {
 
     const onChange = e => {
       this.props.onChange(
-        formObjectName, attribute, submodel, $(e.target).val()
+        formId, attribute, submodel, $(e.target).val()
       )
     }
 
     const onDecrease = () => {
-      this.props.onDecrease(formObjectName, attribute, submodel, value)
+      this.props.onDecrease(formId, attribute, submodel, value)
     }
 
     const onIncrease = () => {
-      this.props.onIncrease(formObjectName, attribute, submodel, value)
+      this.props.onIncrease(formId, attribute, submodel, value)
     }
 
     const onBlur = e => {
       this.props.onBlur(
-        formObjectName, attribute, submodel, $(e.target).val()
+        formId, attribute, submodel, $(e.target).val()
       )
     }
 

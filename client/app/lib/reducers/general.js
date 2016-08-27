@@ -4,9 +4,10 @@ import assign from 'lodash/assign'
 export const generalInitialState = {
   pledges: {},
   tags: {},
+  pledgesSigned: [],
   ui: {
     searchResultsLoading: false,
-    sessionPopupVisible: false
+    sessionPopupVisible: false,
   }
 }
 
@@ -21,6 +22,12 @@ export default function generalReducer(state = generalInitialState, action) {
     const entityBasePath =
       (action.entityType) ? newState[action.entityType] : newState
     entityBasePath[action.entityId] = action.entity
+    return newState
+
+  case 'SIGN_PLEDGE':
+    if (!newState.pledgesSigned.includes(action.id)) {
+      newState.pledgesSigned.push(action.id)
+    }
     return newState
 
   case 'SET_SEARCH_RESULTS_LOADING_STATE':

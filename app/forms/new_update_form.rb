@@ -6,6 +6,8 @@ class NewUpdateForm < Reform::Form
   # Validation
 
   validation :default do
+    configure { config.messages = :i18n }
+
     required(:content).filled(max_size?: 1300)
   end
 end

@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #PLEDGE LIST
+\*------------------------------------*/
+
+/**
+ * Pledge list for home page, search page etc.
+ */
+
+
+.c-pledge-list {
+}
+
+.c-pledge-list__header {
+  margin-bottom: $spacing;
+  border-bottom: 2px solid $mid-dark-gray;
+}
+
+.c-pledge-list__title {
+  display: inline-block;
+
+  margin: 0;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: $spacing--tiny $spacing--small;
+
+  @include font-size(20px, 1.5);
+
+  color: $white;
+  background-color: $mid-dark-gray;
+
+  > .fa {
+    margin-right: 0.15em;
+  }
+}

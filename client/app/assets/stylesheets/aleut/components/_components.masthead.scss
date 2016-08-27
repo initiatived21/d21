@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    #MASTHEAD
+\*------------------------------------*/
+
+/**
+ * Masthead component for home page
+ */
+
+.c-masthead {
+  background: url('../images/masthead.jpg') center center;
+  background-size: cover;
+
+  @include media-query(m) {
+    background-image: url('../images/masthead-medium.jpg');
+  }
+
+  @include media-query(l) {
+    background-image: url('../images/masthead-large.jpg');
+  }
+}
+
+.c-masthead > .o-wrapper {
+  position: relative;
+
+  padding-top: 56.25%;
+
+  @include media-query(m) {
+    padding-top: 0;
+    height: 450px;
+  }
+}
+
+.c-masthead__copy {
+  position: absolute;
+  bottom: 0;
+  right: $spacing;
+  width: 34em;
+
+  padding: $spacing--small $spacing $spacing;
+
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+
+  background-color: rgba(255, 255, 255, 0.87);
+
+  @include media-query(s) {
+    display: none;
+  }
+}
+
+.c-masthead__title {
+  margin-top: 5px;
+
+  @include font-size(24px, 1.5);
+  color: $primary-color;
+}

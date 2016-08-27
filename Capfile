@@ -22,6 +22,7 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/rails/console'
+require 'capistrano/rails_tail_log'
 require 'capistrano/passenger'
 
 require 'capistrano/console'

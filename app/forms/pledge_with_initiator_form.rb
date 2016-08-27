@@ -11,19 +11,23 @@ class PledgeWithInitiatorForm < BasePledgeForm
 
     validation :default do
       configure do
+        config.messages = :i18n
+
         def correct?(str)
           str == form.password
+        end
+
+        def unique?(field_value)
+          User.where(email: field_value).count == 0
         end
       end
 
       required(:name).filled
       required(:avatar)
-      required(:email).filled
+      required(:email).filled(:unique?)
 
-      key(:password, &:filled?) # :password required.
-      key(:confirm_password) do |str|
-        str.filled? & str.correct?
-      end
+      required(:password).filled(:str?)
+      required(:confirm_password).filled(:str?, :correct?)
     end
   end
 

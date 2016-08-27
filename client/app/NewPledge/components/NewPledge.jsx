@@ -8,7 +8,8 @@ export default class NewPledge extends RootComponent {
   static propTypes = {
     form: PropTypes.object.isRequired,
     tags: PropTypes.array.isRequired,
-  };
+    id: PropTypes.number,
+  }
 
   render() {
     return (
@@ -18,9 +19,10 @@ export default class NewPledge extends RootComponent {
             <div className="u-2/3@l u-pr-small@l">
               <ActivePledgeForm
                 form={this.props.form}
-                tags={this.props.tags} />
+                tags={this.props.tags}
+                id={this.props.id}
+              />
             </div>
-
           </div>
         </div>
       </Provider>

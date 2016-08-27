@@ -6,6 +6,8 @@ class EditCommentForm < Reform::Form
   # Validation
 
   validation :default do
+    configure { config.messages = :i18n }
+
     required(:response).filled(max_size?: 650)
   end
 end

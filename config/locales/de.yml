@@ -83,7 +83,11 @@ de:
   PledgeQuote:
     promise:
       part1: Wir versprechen,
-      part2: ", wenn mindestens"
+      part2: ", wenn"
+  PledgeSignedMessage:
+    email: Bitte bestätigen Sie Ihre Unterschrift über die E-Mail, die wir Ihnen gerade geschickt haben. Erst dann ist Ihre Unterschrift gültig.
+    explanation: Sie haben dieses Versprechen unterzeichnet.
+    title: Versprechen unterzeichnet
   PledgeState:
     days:
       one: Tag
@@ -299,310 +303,350 @@ de:
       confirmation_instructions:
         user_subject: Confirmation instructions
   errors:
-    array?:
-    attr?:
-    bool?:
-    date?:
-    date_time?:
-    decimal?:
-    empty?:
-    eql?:
-    even?:
+    array?: must be an array
+    attr?: is missing
+    bool?: must be boolean
+    correct?: muss mit Passwort übereinstimmen
+    date?: must be a date
+    date_time?: must be a date time
+    decimal?: must be a decimal
+    empty?: must be empty
+    eql?: must be equal to %{left}
+    even?: must be even
     excluded_from?:
       arg:
-        default:
-        range:
-    excludes?:
-    exclusion?:
-    false?:
+        default: 'must not be one of: %{list}'
+        range: 'must not be one of: %{list_left} - %{list_right}'
+    excludes?: must not include %{value}
+    exclusion?: 'must not be one of: %{list}'
+    false?: must be false
     filled?: muss ausgefüllt werden
-    float?:
-    format?:
+    float?: must be a float
+    format?: is in invalid format
     gt?: muss größer als %{num} sein
-    gteq?:
-    hash?:
+    gteq?: must be greater than or equal to %{num}
+    hash?: must be a hash
     included_in?:
       arg:
-        default:
-        range:
-    includes?:
-    inclusion?:
-    int?:
-    key?:
-    lt?:
-    lteq?:
+        default: 'must be one of: %{list}'
+        range: 'must be one of: %{list_left} - %{list_right}'
+    includes?: must include %{value}
+    inclusion?: 'must be one of: %{list}'
+    int?: must be an integer
+    key?: is missing
+    lt?: must be less than %{num}
+    lteq?: must be less than or equal to %{num}
     max_size?: muss weniger als %{num} Zeichen enthalten
-    min_size?:
-    none?:
-    not_eql?:
-    number?:
-    odd?:
+    min_size?: size cannot be less than %{num}
+    none?: cannot be defined
+    not_eql?: must not be equal to %{left}
+    number?: must be a number
+    odd?: must be odd
     size?:
       arg:
-        default:
-        range:
+        default: size must be %{size}
+        range: size must be within %{size_left} - %{size_right}
       value:
         string:
           arg:
-            default:
-            range:
-    str?:
-    time?:
-    true?:
-    type?:
-  first_paragraph:
+            default: length must be %{size}
+            range: length must be within %{size_left} - %{size_right}
+    str?: must be a string
+    time?: must be a time
+    true?: must be true
+    type?: must be %{type}
+    unique?: ist bereits vergeben
+  first_paragraph: 
   flash:
     actions:
+      create:
+        notice: 
       destroy:
-        notice:
+        notice: 
       update:
-        notice:
+        notice: 
   formtastic:
     actions:
       pledge:
         edit:
-          update:
+          update: 
       signature:
         edit:
-          update:
+          update: 
+      tag:
+        edit:
+          update: 
+        new:
+          create: 
       user:
         edit:
-          update:
+          update: 
     hints:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       signature:
         edit:
-          aasm_state:
-          anonymous:
-          confirmation_hash:
-          confirmed:
-          contact_person:
-          email:
-          name:
-          organization:
-          pledge:
-          reason:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
-          email:
-          name:
-          organization:
+          email: 
+          name: 
+          organization: 
     labels:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          anonymous:
-          author_type:
-          body:
-          color:
-          comments:
-          confirmation_hash:
-          confirmed:
-          contact_person:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          name:
-          namespace:
-          organization:
-          pg_search_document:
-          pledge:
-          pledges:
-          pledges_tags:
-          reason:
-          requirement:
-          resource_type:
-          response:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          anonymous: 
+          author_type: 
+          body: 
+          color: 
+          comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          name: 
+          namespace: 
+          organization: 
+          pg_search_document: 
+          pledge: 
+          pledges: 
+          pledges_tags: 
+          reason: 
+          requirement: 
+          resource_type: 
+          response: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
       signature:
         edit:
-          aasm_state:
-          anonymous:
-          confirmation_hash:
-          confirmed:
-          contact_person:
-          email:
-          name:
-          organization:
-          pledge:
-          reason:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
-          email:
-          name:
-          organization:
+          email: 
+          name: 
+          organization: 
     placeholders:
       active_admin/comment:
         show:
-          body:
+          body: 
       admin_user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          description:
-          location:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          body:
-          color:
-          confirmation_hash:
-          content:
-          description:
-          email:
-          image:
-          location:
-          name:
-          namespace:
-          organization:
-          reason:
-          requirement:
-          response:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          body: 
+          color: 
+          confirmation_hash: 
+          content: 
+          description: 
+          email: 
+          image: 
+          location: 
+          name: 
+          namespace: 
+          organization: 
+          reason: 
+          requirement: 
+          response: 
+          title: 
+          who: 
       signature:
         edit:
-          aasm_state:
-          confirmation_hash:
-          email:
-          name:
-          organization:
-          reason:
+          aasm_state: 
+          confirmation_hash: 
+          email: 
+          name: 
+          organization: 
+          reason: 
+      tag:
+        edit:
+          color: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
-          email:
-          name:
-          organization:
+          email: 
+          name: 
+          organization: 
   helpers:
     label:
       pledge:
         edit:
-          aasm_state:
-          amount:
-          content:
-          deadline:
-          description:
-          image:
-          initiator:
-          location:
-          requirement:
-          title:
-          who:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
-          aasm_state:
-          amount:
-          anonymous:
-          author_type:
-          body:
-          color:
-          comments:
-          confirmation_hash:
-          confirmed:
-          contact_person:
-          content:
-          created_at:
-          deadline:
-          description:
-          email:
-          image:
-          initiator:
-          location:
-          name:
-          namespace:
-          organization:
-          pg_search_document:
-          pledge:
-          pledges:
-          pledges_tags:
-          reason:
-          requirement:
-          resource_type:
-          response:
-          signatures:
-          tags:
-          title:
-          updated_at:
-          updates:
-          who:
+          aasm_state: 
+          amount: 
+          anonymous: 
+          author_type: 
+          body: 
+          color: 
+          comments: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          content: 
+          created_at: 
+          deadline: 
+          description: 
+          email: 
+          image: 
+          initiator: 
+          location: 
+          name: 
+          namespace: 
+          organization: 
+          pg_search_document: 
+          pledge: 
+          pledges: 
+          pledges_tags: 
+          reason: 
+          requirement: 
+          resource_type: 
+          response: 
+          signatures: 
+          tags: 
+          title: 
+          updated_at: 
+          updates: 
+          who: 
       signature:
         edit:
-          aasm_state:
-          anonymous:
-          confirmation_hash:
-          confirmed:
-          contact_person:
-          email:
-          name:
-          organization:
-          pledge:
-          reason:
+          aasm_state: 
+          anonymous: 
+          confirmation_hash: 
+          confirmed: 
+          contact_person: 
+          email: 
+          name: 
+          organization: 
+          pledge: 
+          reason: 
+      tag:
+        edit:
+          color: 
+          created_at: 
+          name: 
+        new:
+          color: 
+          name: 
       user:
         edit:
-          email:
-          name:
-          organization:
-        email:
-        password:
-        remember_me:
+          email: 
+          name: 
+          organization: 
+        email: 
+        password: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -640,7 +684,7 @@ de:
         about_link: Über uns
         blog_link: Blog
         contact_link: Kontakt
-        en:
+        en: 
         facebook_title: Bunt und Verbindlich auf Facebook
         faq_link: FAQ
         howitworks_link: So funktioniert's
@@ -649,7 +693,7 @@ de:
         new_pledge_link: Ich versprech's
         newsletter_link: Newsletter
         press_link: Presse
-        search_link:
+        search_link: 
         search_placeholder: z.B. nach Unternehmen suchen
         search_title: Suchen
         start_link: Start
@@ -688,6 +732,10 @@ de:
       question6: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question7: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
+      masthead:
+        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        title: Headline Info
+      newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
   paths:
@@ -705,7 +753,7 @@ de:
       success: Versprechen erfolgreich gelöscht.
   ransack:
     predicates:
-      contains:
+      contains: 
   rform:
     comment:
       content:
@@ -768,10 +816,10 @@ de:
       contact_person:
         label: Ich bin Ansprechpartner
       email:
-        label:
+        label: 
         placeholder: E-Mail*
       name:
-        label:
+        label: 
         placeholder: Name*
       organization:
         placeholder: Unternehmen oder Organisation (optional)
@@ -812,19 +860,23 @@ de:
       counseling: Beratung
       culture: Kultur
       donation: Spende
-      education: Ausbildung
+      education: Bildung
       family: Familie
       language: Sprache
       men: Männer
       mentorship: Patenschaft
+      money: Geld
       platform: Plattform
+      programming: Programmieren
       social life: Teilhabe
       sport: Sport
       technology: Technik
+      training: Ausbildung
       volunteering: Ehrenamt
       women: Frauen
       work: Arbeit
+      youth: Jugendliche
   views:
     pagination:
-      last:
-      next:
+      last: 
+      next: 

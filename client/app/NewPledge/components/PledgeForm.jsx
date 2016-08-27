@@ -1,5 +1,5 @@
 import React, { PropTypes  } from 'react'
-import { Form, InputSet, Input, Label, Button } from 'rform'
+import { Form, InputSet, Input, Label, Button, Errors } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import MediaQuery from 'react-responsive'
 
@@ -22,7 +22,7 @@ export default class PledgeForm extends ChildComponent {
   }
 
   render() {
-    const { onLinkClick, currentUser, form } = this.props
+    const { onLinkClick, currentUser, form, id } = this.props
 
     const formObjectClass =
       currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
@@ -35,6 +35,7 @@ export default class PledgeForm extends ChildComponent {
         multipart ajax
         className="c-new-pledge"
         formObjectClass={formObjectClass}
+        id={`PledgeForm${id}`}
         {...form}
       >
         <h1>{this.t('.heading')}</h1>
@@ -78,6 +79,7 @@ export default class PledgeForm extends ChildComponent {
                 attribute="deadline"
                 placeholder={this.t('rform.pledge.deadline.placeholder')}
               />
+              <Errors attribute='deadline' />
             </div>
             <div className="o-layout__item u-1/5@m">
               <Tooltip>
@@ -120,6 +122,7 @@ export default class PledgeForm extends ChildComponent {
                 <Tooltip className="o-marginal__note">
                   {this.t('.tooltip.image')}
                 </Tooltip>
+                <Errors attribute='image' />
               </div>
             </div>
 
@@ -133,6 +136,7 @@ export default class PledgeForm extends ChildComponent {
                 options={this.props.availableTags}
                 placeholder={this.t('rform.pledge.tag_ids.placeholder')}
               />
+              <Errors attribute='tag_ids' />
             </div>
           </div>
         </div>

@@ -1,16 +1,15 @@
-section
-  .o-wrapper
-    h2
-      | (Banner)
+section.c-masthead
+  div.o-wrapper
+    div.c-masthead__copy
+      h2.c-masthead__title
+        = t '.masthead.title'
+      p
+      = t '.masthead.text'
 
-section
-  .o-wrapper
-    h2
-      = t '.recommended'
-    p TODO: Needs recommendation feature
-
-section
-  .o-wrapper
-    h2
-      = t '.successful'
-    == cell :pledge_list, @successful_pledges, filter: :successful, params: params
+section.c-pledge-list
+  div.o-wrapper.u-mt-large.u-mb
+    header.c-pledge-list__header
+      h2.c-pledge-list__title
+        span.fa.fa-star>
+        = t '.newest'
+    == cell :pledge_list, @newest_pledges, filter: :active, params: params

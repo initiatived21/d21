@@ -5,14 +5,14 @@ import SignPledgeForm from './SignPledgeForm'
 describe('<SignPledgeForm />', function () {
   const props = {
     id: 1,
-
     formData: {
       action: '/',
       authToken: 'a',
       model: 'signature'
     },
-    editedSignature: {},
+    onResponse: () => {},
     isSubmitting: false,
+    isAlreadySigned: false,
   }
 
   it('should render', function () {

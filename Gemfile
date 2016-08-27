@@ -33,10 +33,15 @@ gem 'react_on_rails', '6.0.5'
 ### Rails extensions ###
 ########################
 
+# Auth
+gem 'devise'
+gem 'devise-i18n'
+gem 'pundit'
+gem 'rails-i18n'
+
 gem 'slim-rails'
-# gem 'dry-validation' # more explicit validations
-gem 'dry-validation', github: 'dry-rb/dry-validation'
-gem 'reform', github: 'apotonick/reform', branch: '2-2' # Form objects
+gem 'dry-validation' # more explicit validations
+gem 'reform' # Form objects
 gem 'cells'
 gem 'cells-rails'
 gem 'cells-slim'
@@ -58,13 +63,6 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'mini_magick'
 
-# Auth
-gem 'devise'
-gem 'devise-i18n'
-gem 'pundit'
-
-gem 'rails-i18n'
-
 # Admin Backend
 gem 'activeadmin', github: 'activeadmin'
 # solves a pagination issue with active admin
@@ -73,9 +71,9 @@ gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :production, :staging do
-  gem 'rails_12factor'
-end
+# group :production, :staging do
+#   gem 'rails_12factor'
+# end
 
 ################
 ### Database ###
@@ -118,6 +116,7 @@ group :development do
   gem 'capistrano', '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rails-console'
+  gem 'capistrano-rails-tail-log'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
