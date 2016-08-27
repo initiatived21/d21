@@ -1,4 +1,3 @@
 ActiveAdmin.register Update do
-permit_params :content
-
+  permit_params :content
 end
