@@ -5,6 +5,7 @@ import deNormalizePledges from '../../lib/state/deNormalizePledges'
 import PaginatedSearchResults from '../components/PaginatedSearchResults'
 import { addEntities } from '../../lib/actions/entityActions'
 import setSearchResultsLoadingState from '../actions/setSearchResultsLoadingState'
+import { NUM_RESULTS_PAGINATION } from '../../lib/config'
 
 const fetchMoreResults = function(dispatch, query, offset, limit) {
   if (!query) { query = '' }
@@ -37,7 +38,7 @@ const mapDispatchToProps = function(dispatch, ownProps) {
     onButtonClick: (offset) => {
       dispatch(setSearchResultsLoadingState(true))
 
-      fetchMoreResults(dispatch, ownProps.query, offset, 1)
+      fetchMoreResults(dispatch, ownProps.query, offset, NUM_RESULTS_PAGINATION)
     }
   }
 }

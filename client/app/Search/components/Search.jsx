@@ -24,7 +24,7 @@ export default class Search extends RootComponent {
     const { pledges, query, resultCount } = this.props
 
     let resultView
-    if (pledges.length === 0) {
+    if (query === '') {
       resultView = <EmptyResults pledges={pledges} />
     } else {
       resultView =

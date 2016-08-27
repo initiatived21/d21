@@ -57,7 +57,7 @@ class PledgesController < ApplicationController
     search = Search.new(params)
 
     if search.empty?
-      @pledges = Pledge.active.limit(4)
+      @pledges = Pledge.where(aasm_state: 'active').order(created_at: :desc).limit(12)
       @query = ''
       @result_ids = []
       @result_count = 0

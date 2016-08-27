@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-
 import ElementList from '../../ElementList/components/ElementList'
 
 export default class EmptyResults extends ChildComponent {
@@ -11,31 +11,16 @@ export default class EmptyResults extends ChildComponent {
   render() {
     return (
       <div>
-        <section>
-          <div>
-            <h2>
-              Von der Redaktion empfohlen
+        <h1>Versprechensübersicht</h1>
+        <section className="c-pledge-list">
+          <header className="c-pledge-list__header">
+            <h2 className="c-pledge-list__title">
+              <FontAwesome name="star" />
+              {' '}
+              Neueste Versprechen
             </h2>
-            <p>TODO: Needs recommendation feature </p>
-          </div>
-        </section>
-
-        <section>
-          <div>
-            <h2>
-              Beliebteste Versprechen
-            </h2>
-            <p>TODO: Needs popularity scope</p>
-          </div>
-        </section>
-
-        <section>
-          <div>
-            <h2>
-               Neueste Versprechen
-            </h2>
-            <ElementList pledges={this.props.pledges} filter='active' />
-          </div>
+          </header>
+          <ElementList pledges={this.props.pledges} filter="active" />
         </section>
       </div>
     )

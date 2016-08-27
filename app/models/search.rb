@@ -27,7 +27,7 @@ class Search
       ends = range.split('..').map(&:to_i)
       [ends[0], (ends[1] - ends[0] + 1)]
     else
-      [0, 1]
+      [0, 3]
     end
   end
 end

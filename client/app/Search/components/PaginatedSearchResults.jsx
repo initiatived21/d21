@@ -17,10 +17,17 @@ export default class PaginatedSearchResults extends ChildComponent {
 
     const showMoreButton = resultCount > results.length
 
+    let resultTitle
+    if (resultCount > 0) {
+      resultTitle = <h1>{resultCount} Suchergebnisse für <i>{query}</i></h1>
+    }
+    else {
+      resultTitle = <h1>Für <i>{query}</i> gibt es keine Suchergebnisse</h1>
+    }
+
     return (
       <div>
-        <p>Suchbegriff: {query}</p>
-        <p>Treffer: {results.length} von {resultCount}</p>
+        {resultTitle}
         <SearchResults results={results} />
         { showMoreButton ?
           <GetMoreResultsButton disabled={isLoading} numResults={results.length} clickHandler={onButtonClick} >
