@@ -1,12 +1,14 @@
 import { connect } from 'react-redux'
 import I18n from 'i18n-js'
 import { toggleSessionPopup } from '../../UserSession/actions/SessionActions'
+import { setEntity } from '../../lib/actions/entityActions'
 import PledgeForm from '../components/PledgeForm'
 
 const mapStateToProps = function(state, ownProps) {
   return {
     availableTags: assembleTags(ownProps.tags),
     currentUser: state.currentUser,
+    formId: ['PledgeForm', ownProps.id].join('-'),
   }
 }
 
@@ -26,9 +28,25 @@ const mapDispatchToProps = dispatch => ({
     dispatch(toggleSessionPopup())
     window.scrollTo(0, 0)
   },
+
+  dispatch
 })
+
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({
+  ...stateProps,
+  ...dispatchProps,
+  ...ownProps,
+
+  afterResponse: json => {
+    if (json.status =='success') {
+      dispatchProps.dispatch(setEntity(stateProps.formId, {}))
+    }
+  }
+})
+
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(PledgeForm)

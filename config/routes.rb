@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       end
     end
     resources :comments, only: [:update]
+    resources :users, only: [:update]
     get '/signatures/:id/confirm/:hash', to: 'signatures#confirm',
                                          as: :confirm_signature
     get '/signatures/:id/delete/:hash',  to: 'signatures#destroy',

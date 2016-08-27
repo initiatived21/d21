@@ -7,10 +7,11 @@ import ChildComponent from '../../lib/Base/components/ChildComponent'
 export default class UserForm extends ChildComponent {
   static propTypes = {
     asSubmodel: PropTypes.string,
+    labelContent: PropTypes.string.isRequired,
   }
 
   render() {
-    const { asSubmodel } = this.props
+    const { asSubmodel, labelContent } = this.props
 
     return(
       <div className="o-layout">
@@ -51,7 +52,10 @@ export default class UserForm extends ChildComponent {
         />
 
         <div className="o-layout__item u-1/4@m u-mb-small">
-          <Label submodel={asSubmodel} attribute="password" />
+          <Label
+            submodel={asSubmodel} attribute="password"
+            content={labelContent}
+          />
         </div>
         <InputSet ariaLabelOnly
           wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"

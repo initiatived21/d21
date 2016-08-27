@@ -11,4 +11,4 @@ translations:
       "*.PledgeState.*", "*.ProfileView.*", "*.CommentAvatar.*", "*.PledgeLocation.*",
       "*.PledgeTileBack.*", "*.PledgeTileFront.*", "*.PreviewExplanation.*",
       "*.PreviewDraft.*", "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
-      "*.PledgeCreatedAt.*", "*.tags.*"]
+      "*.PledgeCreatedAt.*", "*.ProfileUserForm.*", "*.tags.*"]

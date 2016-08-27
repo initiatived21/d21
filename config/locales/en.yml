@@ -25,6 +25,8 @@ en:
     my_data: My profile data
     my_pledges: My pledges
     welcome: Welcome,
+  PaginatedSearchResults:
+    show_more: Show more…
   PledgeCommentList:
     heading: Questions and answers to the initiator
     no_questions: There are no questions yet.
@@ -128,6 +130,8 @@ en:
   PreviewUnconfirmed:
     confirm_email: Please confirm your email to finalize this pledge.
     edit_pledge: Edit pledge
+  ProfileUserForm:
+    button: Submit
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -647,6 +651,7 @@ en:
         email: 
         password: 
         remember_me: 
+        password_confirmation: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -810,12 +815,24 @@ en:
       content:
         label: Send a project update to all signees.
     user:
+      avatar:
+        label: Your Profile Picture
       email:
         label: Email
         placeholder: Email
+      name:
+        label: Your Name
+        placeholder: "*"
+      new_password:
+        label: New Password
+      organization:
+        label: Your Company / Your Organization
+        placeholder: 
       password:
         label: Password
         placeholder: Password
+      password_confirmation:
+        label: Repeat New Password
       remember_me:
         label: Stay signed in
   signer_mailer:
@@ -861,5 +878,3 @@ en:
     pagination:
       last: 
       next: 
-  PaginatedSearchResults:
-    show_more: Show more…

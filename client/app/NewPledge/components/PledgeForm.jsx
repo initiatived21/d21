@@ -23,7 +23,9 @@ export default class PledgeForm extends ChildComponent {
   }
 
   render() {
-    const { onLinkClick, currentUser, form, id } = this.props
+    const {
+      onLinkClick, currentUser, form, id, afterResponse, formId
+    } = this.props
 
     const formObjectClass =
       currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
@@ -36,8 +38,9 @@ export default class PledgeForm extends ChildComponent {
         multipart ajax
         className="c-new-pledge"
         formObjectClass={formObjectClass}
-        id={`PledgeForm${id}`}
+        id={formId}
         {...form}
+        afterResponse={afterResponse}
       >
         <h1>{this.t('.heading')}</h1>
 
@@ -190,7 +193,10 @@ export default class PledgeForm extends ChildComponent {
 
         {loginPrompt}
 
-        <UserForm asSubmodel='initiator' />
+        <UserForm
+          asSubmodel='initiator'
+          labelContent={I18n.t('rform.initiator.password.label')}
+        />
       </div>
     )
   }

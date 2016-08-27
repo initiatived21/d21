@@ -3,7 +3,9 @@ import { Provider } from 'react-redux'
 import store from '../../lib/store'
 import I18n from 'i18n-js'
 import RootComponent from '../../lib/Base/components/RootComponent'
-import ProfilePledgeListContainer from '../containers/ProfilePledgeListContainer'
+import ProfileUserForm from '../containers/ProfileUserForm'
+import ProfilePledgeListContainer
+  from '../containers/ProfilePledgeListContainer'
 
 export default class ProfileView extends RootComponent {
   static propTypes = {
@@ -21,9 +23,11 @@ export default class ProfileView extends RootComponent {
           <div className="o-wrapper u-mb">
             <h1>{I18n.t('ProfileView.heading')}</h1>
 
+            <h2>Ihre Daten</h2>
+            <ProfileUserForm formConfig={this.props.editForm} />
+
             <h2>Ihre Versprechen</h2>
             <ProfilePledgeListContainer />
-
           </div>
         </main>
       </Provider>

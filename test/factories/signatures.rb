@@ -8,6 +8,7 @@ FactoryGirl.define do
     contact_person { maybe true }
     anonymous { maybe true }
     reason { maybe FFaker::Lorem.sentence }
+    confirmed true
 
     pledge
   end
