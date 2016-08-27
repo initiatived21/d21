@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import ElementList from '../../ElementList/components/ElementList'
+import ElementList from '../../ElementList/containers/FilteredPledgeList'
 
 export default class EmptyResults extends ChildComponent {
   static propTypes = {
