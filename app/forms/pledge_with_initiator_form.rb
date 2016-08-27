@@ -9,6 +9,8 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :password
 
     validation :default do
+      configure { config.messages = :i18n }
+
       required(:name).filled
       required(:organization)
       required(:email).filled

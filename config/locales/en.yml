@@ -139,9 +139,6 @@ en:
     no_account: No account yet?
     sign_up_link: Create a pledge and sign up
     submit: Sign in
-    forgot_password: Forgot password?
-    no_account: No account yet?
-    sign_up_link: Create a pledge and sign up
   SignPledgeForm:
     email_hint: 
     i_sign: I sign this pledge.
@@ -363,8 +360,6 @@ en:
         notice: 
       update:
         notice: 
-      create:
-        notice: 
   formtastic:
     actions:
       pledge:
@@ -381,11 +376,6 @@ en:
       user:
         edit:
           update: 
-      tag:
-        edit:
-          update: 
-        new:
-          create: 
     hints:
       active_admin/comment:
         show:
@@ -435,14 +425,6 @@ en:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
     labels:
       pledge:
         edit:
@@ -519,14 +501,6 @@ en:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
     placeholders:
       active_admin/comment:
         show:
@@ -588,13 +562,6 @@ en:
           email: 
           name: 
           organization: 
-      tag:
-        edit:
-          color: 
-          name: 
-        new:
-          color: 
-          name: 
   helpers:
     label:
       pledge:
@@ -675,14 +642,6 @@ en:
         email: 
         password: 
         remember_me: 
-      tag:
-        edit:
-          color: 
-          created_at: 
-          name: 
-        new:
-          color: 
-          name: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -754,6 +713,9 @@ en:
       recommended: Recommended by the editors
       successful: Successful promises
       newest: Newest pledges
+      masthead:
+        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        title: Headline Info
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
@@ -762,8 +724,6 @@ en:
     privacy: "/en/privacy"
     terms: "/en/terms"
     user_profile: "/en/users/profile"
-    new_pledge: "/en/pledges/new"
-    pledge: "/en/pledges/{{pledge}}"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
@@ -896,10 +856,7 @@ en:
     pagination:
       last: 
       next: 
-  PledgeCommentList:
-    heading: Questions and answers to the initiator
-    no_questions: There are no questions yet.
-    submit: Submit
-  Session:
-    my_account: My account
-    sign_in: Login
+  PledgeSignedMessage:
+    email: Please confirm your signature through the email that we have just sent you. Your signature will not be valid without confirmation.
+    explanation: You have signed this pledge.
+    title: Pledge signed
