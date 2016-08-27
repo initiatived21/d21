@@ -737,6 +737,10 @@ de:
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+      newest: Neueste Versprechen
+      masthead:
+        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        title: Headline Info
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
@@ -879,3 +883,7 @@ de:
     pagination:
       last: 
       next: 
+  PledgeSignedMessage:
+    email: Bitte bestätigen Sie Ihre Unterschrift über die E-Mail, die wir Ihnen gerade geschickt haben. Erst dann ist Ihre Unterschrift gültig.
+    explanation: Sie haben dieses Versprechen unterzeichnet.
+    title: Versprechen unterzeichnet

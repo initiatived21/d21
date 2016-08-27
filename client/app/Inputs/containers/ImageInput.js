@@ -9,13 +9,13 @@ import loadImageAction, { changeCropAction, cropImageAction }
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
-  const formObjectName = ownProps.formObject.constructor.name
+  const formId = ownProps.formId
   const attrs = ownProps.formObject.attributes
 
   let errors = null
 
-  if (state[formObjectName] && state[formObjectName].errors) {
-    errors = state[formObjectName].errors[ownProps.attribute] || []
+  if (state[formId] && state[formId].errors) {
+    errors = state[formId].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
@@ -26,8 +26,10 @@ const mapStateToProps = function(state, ownProps) {
     value = attrs[ownProps.attribute] || ''
   }
 
-  const {imageState, originalImage, originalImageWidth, originalImageHeight, crop,
-    croppedImageUrl} = state.imageInputs[ownProps.attribute]
+  const {
+    imageState, originalImage, originalImageWidth, originalImageHeight, crop,
+    croppedImageUrl
+  } = state.imageInputs[ownProps.attribute]
 
   return {
     imageState,
@@ -38,7 +40,6 @@ const mapStateToProps = function(state, ownProps) {
     croppedImageUrl,
     errors,
     value,
-    formObjectName
   }
 }
 
@@ -63,8 +64,8 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 }
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {
-  const { formObjectName, originalImage, crop } = stateProps
-  const { attribute, submodel, scaleToX, scaleToY } = ownProps
+  const { originalImage, crop } = stateProps
+  const { formId, attribute, submodel, scaleToX, scaleToY } = ownProps
   const { dispatch } = dispatchProps
 
   const id = attribute  // attribute serves as id for the store
@@ -83,7 +84,7 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
       )
 
       dispatch(cropImageAction(id, croppedImageUrl, scaleToX, scaleToY))
-      dispatch(updateAction(formObjectName, attribute, submodel, croppedImageUrl))
+      dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
     }
   }
 }

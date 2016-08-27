@@ -5,13 +5,13 @@ import { updateAction } from 'rform'
 import NumberInputComponent from '../components/NumberInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
-  const formObjectName = ownProps.formObject.constructor.name
+  const formId = ownProps.formId
   const attrs = ownProps.formObject.attributes
 
   // get saved & server provided errors, concat them together
   let errors = null
-  if (state[formObjectName] && state[formObjectName].errors) {
-    errors = state[formObjectName].errors[ownProps.attribute] || []
+  if (state[formId] && state[formId].errors) {
+    errors = state[formId].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
@@ -33,7 +33,6 @@ const mapStateToProps = function(state, ownProps) {
   return {
     errors,
     value,
-    formObjectName
   }
 }
 
@@ -41,24 +40,24 @@ const mapDispatchToProps = function(dispatch, ownProps) {
   const { min, max } = ownProps
 
   return {
-    onChange: function(formObjectName, attribute, submodel, value) {
-      dispatch(updateAction(formObjectName, attribute, submodel, value))
+    onChange: function(formId, attribute, submodel, value) {
+      dispatch(updateAction(formId, attribute, submodel, value))
     },
-    onDecrease: function(formObjectName, attribute, submodel, value) {
+    onDecrease: function(formId, attribute, submodel, value) {
       let newValue = parseInt(value)
       if (newValue > min) {
         newValue--
       }
-      dispatch(updateAction(formObjectName, attribute, submodel, newValue))
+      dispatch(updateAction(formId, attribute, submodel, newValue))
     },
-    onIncrease: function(formObjectName, attribute, submodel, value) {
+    onIncrease: function(formId, attribute, submodel, value) {
       let newValue = parseInt(value)
       if (newValue < max) {
         newValue++
       }
-      dispatch(updateAction(formObjectName, attribute, submodel, newValue))
+      dispatch(updateAction(formId, attribute, submodel, newValue))
     },
-    onBlur: function(formObjectName, attribute, submodel, value) {
+    onBlur: function(formId, attribute, submodel, value) {
       let newValue = parseInt(value)
       if (newValue > max) {
         newValue = max
@@ -66,7 +65,7 @@ const mapDispatchToProps = function(dispatch, ownProps) {
       if (newValue < min) {
         newValue = min
       }
-      dispatch(updateAction(formObjectName, attribute, submodel, newValue))
+      dispatch(updateAction(formId, attribute, submodel, newValue))
     }
   }
 }

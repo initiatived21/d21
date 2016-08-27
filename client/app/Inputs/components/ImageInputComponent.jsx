@@ -36,8 +36,10 @@ export default class ImageInputComponent extends ChildComponent {
 
   render() {
     const {
-      imageState, originalImage, originalImageWidth, originalImageHeight, crop, croppedImageUrl,
-      previewArea, handleFileSelect, handleChangeCrop, handleFinishCrop, className } = this.props
+      imageState, originalImage, originalImageWidth, originalImageHeight, crop,
+      croppedImageUrl, previewArea, handleFileSelect, handleChangeCrop,
+      handleFinishCrop, className
+    } = this.props
 
     let fileValueProps = {}
     let imagePreview = null

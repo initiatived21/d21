@@ -720,6 +720,10 @@ en:
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
+      newest: Newest pledges
+      masthead:
+        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        title: Headline Info
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
@@ -860,3 +864,7 @@ en:
     pagination:
       last: 
       next: 
+  PledgeSignedMessage:
+    email: Please confirm your signature through the email that we have just sent you. Your signature will not be valid without confirmation.
+    explanation: You have signed this pledge.
+    title: Pledge signed
