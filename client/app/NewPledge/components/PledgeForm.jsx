@@ -1,5 +1,5 @@
 import React, { PropTypes  } from 'react'
-import { Form, InputSet, Input, Label, Button } from 'rform'
+import { Form, InputSet, Input, Label, Button, Errors } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import MediaQuery from 'react-responsive'
 
@@ -79,6 +79,7 @@ export default class PledgeForm extends ChildComponent {
                 attribute="deadline"
                 placeholder={this.t('rform.pledge.deadline.placeholder')}
               />
+              <Errors attribute='deadline' />
             </div>
             <div className="o-layout__item u-1/5@m">
               <Tooltip>
@@ -121,6 +122,7 @@ export default class PledgeForm extends ChildComponent {
                 <Tooltip className="o-marginal__note">
                   {this.t('.tooltip.image')}
                 </Tooltip>
+                <Errors attribute='image' />
               </div>
             </div>
 
@@ -134,6 +136,7 @@ export default class PledgeForm extends ChildComponent {
                 options={this.props.availableTags}
                 placeholder={this.t('rform.pledge.tag_ids.placeholder')}
               />
+              <Errors attribute='tag_ids' />
             </div>
           </div>
         </div>

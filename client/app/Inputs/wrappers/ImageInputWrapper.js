@@ -5,6 +5,7 @@ export default class ImageInputWrapper extends Component {
   static contextTypes = {
     formObject: PropTypes.object,
     model: PropTypes.string,
+    formId: PropTypes.string,
   }
 
   render() {
