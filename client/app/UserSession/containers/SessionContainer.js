@@ -13,8 +13,17 @@ const mapDispatchToProps = dispatch => ({
     event.preventDefault()
     dispatch(toggleSessionPopup())
   },
+  dispatch
+})
+
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({
+  ...stateProps,
+  ...dispatchProps,
+  ...ownProps,
+
   onWindowClick: function() {
-    dispatch(hideSessionPopup())
+    if (!stateProps.isVisible) return true
+    dispatchProps.dispatch(hideSessionPopup())
   }
 })
 
@@ -22,5 +31,6 @@ const OnClickOutsideWrappedComponent = onClickOutside(Session)
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(OnClickOutsideWrappedComponent)

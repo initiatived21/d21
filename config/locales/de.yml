@@ -130,6 +130,8 @@ de:
   PreviewUnconfirmed:
     confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
     edit_pledge: Versprechen bearbeiten
+  ProfileUserForm:
+    button: Aktualisieren
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -649,6 +651,7 @@ de:
         email: 
         password: 
         remember_me: 
+        password_confirmation: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -831,12 +834,24 @@ de:
       content:
         label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
     user:
+      avatar:
+        label: Ihr Profilbild
       email:
         label: E-Mail
         placeholder: E-Mail
+      name:
+        label: Ihr Name
+        placeholder: "*"
+      new_password:
+        label: Neues Passwort
+      organization:
+        label: Ihr Unternehmen / Ihre Organisation
+        placeholder: 
       password:
         label: Passwort
         placeholder: Passwort
+      password_confirmation:
+        label: Neues Passwort wiederholen
       remember_me:
         label: Angemeldet bleiben
   signer_mailer:

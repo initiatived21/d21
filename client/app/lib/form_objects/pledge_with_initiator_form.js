@@ -19,7 +19,7 @@ export default class PledgeWithInitiatorFormObject extends FormObject {
   static get submodelProperties() {
     return {
       initiator: [
-        'name', 'email', 'password', 'avatar'
+        'name', 'organization', 'email', 'password', 'password_confirmation', 'avatar'
       ]
     }
   }

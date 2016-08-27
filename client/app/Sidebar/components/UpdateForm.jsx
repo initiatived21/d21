@@ -11,12 +11,18 @@ export default class UpdateForm extends ChildComponent {
   }
 
   render() {
-    const { formData, isSubmitting } = this.props
+    const {
+      formData, isSubmitting, afterResponse, wasSubmitted
+    } = this.props
+
+    if (wasSubmitted) return null // TODO: or maybe display a success message
+
     return (
       <Form
         className="c-sidebar"
         formObjectClass={NewUpdateFormObject}
         ajax={true}
+        afterResponse={afterResponse}
         {...formData}
       >
         <h2 className="c-sidebar__title">

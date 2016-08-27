@@ -12,7 +12,9 @@ class PledgeTest < Minitest::Capybara::Spec
     Pledge.active.count.must_equal 1
 
     # Try to submit the form without entering data
-    click_button 'Save Draft'
+    click_button 'Save draft'
+
+    save_and_open_page
 
     within('.input-title') { page.must_have_content('must be filled') }
     within('.input-content') { page.must_have_content('must be filled') }

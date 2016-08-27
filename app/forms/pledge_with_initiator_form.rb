@@ -7,10 +7,15 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :avatar
     property :email
     property :password
+    property :password_confirmation, virtual: true
 
     validation :default do
       configure do
         config.messages = :i18n
+
+        def correct?(str)
+          str == options[:form].password
+        end
 
         def unique?(field_value)
           User.where(email: field_value).count == 0
@@ -18,9 +23,11 @@ class PledgeWithInitiatorForm < BasePledgeForm
       end
 
       required(:name).filled
-      required(:organization)
+      required(:avatar)
       required(:email).filled(:unique?)
-      required(:password).filled
+
+      required(:password).filled(:str?)
+      required(:password_confirmation).filled(:str?, :correct?)
     end
   end
 
