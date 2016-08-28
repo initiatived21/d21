@@ -650,8 +650,8 @@ en:
           organization: 
         email: 
         password: 
-        remember_me: 
         password_confirmation: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: 
