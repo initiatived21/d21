@@ -7,7 +7,7 @@ describe Search do
   describe 'methods' do
     describe '#parse_range' do
       it 'must return default values when there is no range' do
-        subject.send(:parse_range, nil).must_equal [0, 1]
+        subject.send(:parse_range, nil).must_equal [0, 3]
       end
 
       it 'must return the parsed range parameters' do

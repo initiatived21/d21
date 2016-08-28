@@ -4,7 +4,7 @@ describe SignaturesController do
   describe "POST 'create'" do
     describe 'when sending valid params' do
       let(:signature_params) do
-        signatures(:basic).attributes
+        signatures(:basic).attributes.merge email: 'foo@example.org'
       end
 
       it 'should save, send a mail and generate a hash' do

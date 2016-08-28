@@ -31,7 +31,11 @@ describe PledgesController do
     describe 'when sending valid params' do
       let(:pledge_params) do
         pledges(:active).attributes.merge(
-          initiator: users(:pledger).attributes.merge(password: 'abc'),
+          initiator: users(:pledger).attributes.merge(
+            'email' => 'foo@example.org',
+            'password' => 'abc',
+            'password_confirmation' => 'abc'
+          ),
           deadline: '3333-03-03'
         )
       end
