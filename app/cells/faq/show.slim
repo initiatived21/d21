@@ -1,5 +1,7 @@
 h1 FAQ
 
 - question_answer_sets.each do |question, answer|
-  div[class="c-faq__question u-2/3@l"] = question
-  div[class="c-faq__answer u-2/3@l"] = answer
+  div[class="c-faq__question u-2/3@l"]
+    == question
+  div[class="c-faq__answer u-2/3@l"]
+    == answer
