@@ -5,6 +5,7 @@ import PledgeView from '../../PledgeView/components/PledgeView'
 import ProfileView from '../../ProfileView/components/ProfileView'
 import Search from '../../Search/components/Search'
 import UserSession from '../../UserSession/components/UserSession'
+import Flash from '../../Flash/components/Flash'
 
 // Lets Webpack generate the main css file that gets picked up by Sprockets
 require('../../assets/stylesheets/main.scss')
@@ -19,4 +20,5 @@ ReactOnRails.register({
   ProfileView,
   Search,
   UserSession,
+  Flash
 })

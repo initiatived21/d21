@@ -1,5 +1,3 @@
-div
-  div.c-flash.o-wrapper
-    - flash.each do |type, content|
-      p class="flash #{type}"
-        = content
+- flash.each do |type, content|
+  = react_component 'Flash',
+    ReactHelper.settings({ content: content, type: type }, params)
