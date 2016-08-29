@@ -8,12 +8,10 @@
 
 .c-flash {
   position: fixed;
-  width: 20em;
+  width: 30rem;
   left: 50%;
-  margin-left: -10em;
-  height: 5em;
-  top: 50%;
-  margin-top: -2.5em;
+  margin-left: -15rem;
+  top: 42.5%;
 
   z-index: 99;
 
@@ -21,32 +19,57 @@
   border-radius: $border-radius-large;
   padding: $spacing;
 
-  @include font-size(20px, 1.5);
+  text-align: center;
+
   color: $white;
   user-select: none;
 
   opacity: 0.95;
+  transition: opacity $transition-time;
+
+  @include media-query(s) {
+    width: 20rem;
+  }
+}
+
+.c-flash__inner {
+  display: inline-block;
+
+  text-align: left;
 }
 
 .c-flash__icon {
   @include font-size(48px, 1);
+
+  @include media-query(s) {
+    @include font-size(24px, 1);
+  }
 }
 
 .c-flash__content {
+  @include font-size(20px, 1.5);
+
+  @include media-query(s) {
+    @include font-size(15px, 1.5);
+  }
 }
 
 .c-flash--notice {
-  background-color: $primary-color-lighter;
+  background-color: $flash-notice-color;
 }
 
 .c-flash--alert {
-  background-color: $secondary-color-lighter;
+  background-color: $flash-alert-color;
 }
 
 .c-flash--error {
-  background-color: $tertiary-color-lighter;
+  background-color: $flash-error-color;
 }
 
 .c-flash--hidden {
+  opacity: 0.05;
+}
+
+.c-flash--removed {
   display: none;
 }

@@ -10,31 +10,57 @@ export default class Flash extends RootComponent {
 
   constructor(props) {
     super(props)
-    this.state = { hidden: false }
+    this.state = {
+      isHidden: true,
+      isRemoved: false
+    }
   }
 
   componentDidMount() {
     const self = this
+    const duration = this.props.type === 'notice' ? 2500 : 5000
 
     setTimeout(function() {
       self.setState({
-        hidden: false
+        isHidden: false
       })
-    }, 3000)
+      setTimeout(function() {
+        self.setState({
+          isHidden: true
+        })
+        setTimeout(function() {
+          self.setState({
+            isRemoved: true
+          })
+        }, 250)
+      }, duration)
+    }, 50)
   }
 
   render() {
     const { content, type } = this.props
-    const { hidden } = this.state
+    const { isHidden, isRemoved } = this.state
 
     let className = `c-flash c-flash--${type}`
-    if (hidden) { className += ' c-flash--hidden' }
+    if (isHidden) { className += ' c-flash--hidden' }
+    if (isRemoved) { className += ' c-flash--removed' }
+
+    let awesomeName
+    switch(type) {
+    case 'notice':
+      awesomeName = 'check'
+      break
+    case 'alert':
+    case 'error':
+    default:
+      awesomeName = 'exclamation-triangle'
+    }
 
     return (
       <div className={className}>
-        <div className="o-flag">
+        <div className="c-flash__inner o-flag">
           <div className="o-flag__img">
-            <FontAwesome className="c-flash__icon" name="check" />
+            <FontAwesome className="c-flash__icon" name={awesomeName} />
           </div>
           <div className="o-flag__body">
             <p className="c-flash__content">

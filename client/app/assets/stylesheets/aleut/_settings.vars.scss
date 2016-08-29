@@ -57,6 +57,11 @@ $mid-light-gray:                   rgb(70%, 70%, 70%);
 
 $gray-highlight:                   lighten($gray, 5%);
 
+$flash-notice-color:               rgb(83, 175, 87);
+$flash-alert-color:                rgb(174, 175, 83);
+$flash-error-color:                rgb(175, 83, 83);
+
+// TODO: Think over these colors:
 $success-color:                    rgb(47%, 60%, 69%);
 $urgent-color:                     rgb(71%, 6%, 5%);
 
