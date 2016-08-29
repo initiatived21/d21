@@ -305,7 +305,13 @@ de:
   devise:
     mailer:
       confirmation_instructions:
-        user_subject: Confirmation instructions
+        confirm_link: Bestätigungslink
+        greeting: Liebe/r %{email}
+        paragraph1: herzlichen Dank für die Nutzung unserer Plattform!
+        paragraph2: 'Bitte bestätigen Sie im nächsten Schritt Ihre Emailadresse über diesen Link:'
+        paragraph3: Wir werden Ihr Versprechen prüfen und auf der Plattform freischalten. Sie erhalten dazu eine Benachrichtigung.
+        paragraph4: Zusätzlich können Sie den Status Ihres Versprechens in Ihrem Profil einsehen.
+        user_subject: Registrierung abschliessen
   errors:
     array?: must be an array
     attr?: is missing
