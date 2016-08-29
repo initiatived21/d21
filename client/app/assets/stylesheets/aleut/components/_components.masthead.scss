@@ -7,15 +7,15 @@
  */
 
 .c-masthead {
-  background: url('../images/masthead.jpg') center center;
+  background: url('/images/masthead.jpg') center center;
   background-size: cover;
 
   @include media-query(m) {
-    background-image: url('../images/masthead-medium.jpg');
+    background-image: url('/images/masthead-medium.jpg');
   }
 
   @include media-query(l) {
-    background-image: url('../images/masthead-large.jpg');
+    background-image: url('/images/masthead-large.jpg');
   }
 }
 
