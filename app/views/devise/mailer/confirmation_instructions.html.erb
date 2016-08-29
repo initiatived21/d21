@@ -1,5 +1,15 @@
-<p>Welcome <%= @email %>!</p>
+<p><%= t('.greeting', email: @email) %></p>
 
-<p>You can confirm your account email through the link below:</p>
+<p><%= t('.paragraph1') %></p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= t('.paragraph2') %></p>
+
+<p><%= link_to t('.confirm_link'), confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p><%= t('.paragraph3') %></p>
+
+<p><%= t('.paragraph4') %></p>
+
+<p><%= t('application_mailer.signed') %></p>
+
+<p><%= t('application_mailer.impressum') %></p>
