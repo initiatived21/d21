@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
+import { TRANSITION_TIME, FLASH_DISPLAY_TIME } from '../../lib/config'
 import RootComponent from '../../lib/Base/components/RootComponent'
 
 export default class Flash extends RootComponent {
@@ -18,7 +19,7 @@ export default class Flash extends RootComponent {
 
   componentDidMount() {
     const self = this
-    const duration = this.props.type === 'notice' ? 2500 : 5000
+    const duration = this.props.type === 'notice' ? FLASH_DISPLAY_TIME : FLASH_DISPLAY_TIME * 2
 
     setTimeout(function() {
       self.setState({
@@ -32,7 +33,7 @@ export default class Flash extends RootComponent {
           self.setState({
             isRemoved: true
           })
-        }, 250)
+        }, TRANSITION_TIME)
       }, duration)
     }, 50)
   }
@@ -58,15 +59,11 @@ export default class Flash extends RootComponent {
 
     return (
       <div className={className}>
-        <div className="c-flash__inner o-flag">
-          <div className="o-flag__img">
-            <FontAwesome className="c-flash__icon" name={awesomeName} />
-          </div>
-          <div className="o-flag__body">
-            <p className="c-flash__content">
-              {content}
-            </p>
-          </div>
+        <div className="c-flash__inner">
+          <FontAwesome className="c-flash__icon" name={awesomeName} />
+          <p className="c-flash__content">
+            {content}
+          </p>
         </div>
       </div>
     )

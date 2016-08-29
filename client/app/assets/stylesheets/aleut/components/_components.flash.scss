@@ -4,49 +4,52 @@
 
 /**
  * Component for flash messages
+ *
+ * 1. Make the containing div and the flash itself click-through.
  */
 
 .c-flash {
-  position: fixed;
-  width: 30rem;
-  left: 50%;
-  margin-left: -15rem;
-  top: 42.5%;
+  display: flex;
+  justify-content: center;
 
+  position: fixed;
+  left: 0.25em;
+  right: 0.25em;
+  top: 42.5%;
   z-index: 99;
+
+  pointer-events: none;  /* [1] */
+}
+
+.c-flash__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   box-shadow: $box-shadow;
   border-radius: $border-radius-large;
   padding: $spacing;
-
-  text-align: center;
 
   color: $white;
   user-select: none;
 
   opacity: 0.95;
   transition: opacity $transition-time;
-
-  @include media-query(s) {
-    width: 20rem;
-  }
-}
-
-.c-flash__inner {
-  display: inline-block;
-
-  text-align: left;
 }
 
 .c-flash__icon {
   @include font-size(48px, 1);
+  margin-right: $spacing;
 
   @include media-query(s) {
     @include font-size(24px, 1);
+    margin-right: $spacing--small;
   }
 }
 
 .c-flash__content {
+  display: inline;
+
   @include font-size(20px, 1.5);
 
   @include media-query(s) {
@@ -54,19 +57,19 @@
   }
 }
 
-.c-flash--notice {
+.c-flash--notice > .c-flash__inner {
   background-color: $flash-notice-color;
 }
 
-.c-flash--alert {
+.c-flash--alert > .c-flash__inner {
   background-color: $flash-alert-color;
 }
 
-.c-flash--error {
+.c-flash--error > .c-flash__inner {
   background-color: $flash-error-color;
 }
 
-.c-flash--hidden {
+.c-flash--hidden > .c-flash__inner {
   opacity: 0.05;
 }
 
