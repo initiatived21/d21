@@ -349,12 +349,12 @@ de:
     size?:
       arg:
         default: size must be %{size}
-        range: size must be within %{size_left} - %{size_right}
+        range: muss %{size_left} - %{size_right} Zeichen enthalten
       value:
         string:
           arg:
             default: length must be %{size}
-            range: length must be within %{size_left} - %{size_right}
+            range: muss %{size_left} - %{size_right} Zeichen lang sein
     str?: must be a string
     time?: must be a time
     true?: must be true
@@ -650,8 +650,8 @@ de:
           organization: 
         email: 
         password: 
-        remember_me: 
         password_confirmation: 
+        remember_me: 
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
