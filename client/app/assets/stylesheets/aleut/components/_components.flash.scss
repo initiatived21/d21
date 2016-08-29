@@ -8,23 +8,16 @@
 
 .c-flash {
   position: fixed;
-  top: $spacing;
-  left: 0;
-  right: 0;
+  width: 20em;
+  left: 50%;
+  margin-left: -10em;
+  height: 5em;
+  top: 50%;
+  margin-top: -2.5em;
+
   z-index: 99;
 
-  text-align: center;
-}
-
-.c-flash--notice {
-
-}
-
-.c-flash__content {
-  display: inline-block;
-
-  margin-left: $spacing;
-  margin-right: $spacing;
+  box-shadow: $box-shadow;
   border-radius: $border-radius-large;
   padding: $spacing;
 
@@ -32,18 +25,25 @@
   color: $white;
   user-select: none;
 
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
-.c-flash--notice .c-flash__content {
+.c-flash__icon {
+  @include font-size(48px, 1);
+}
+
+.c-flash__content {
+}
+
+.c-flash--notice {
   background-color: $primary-color-lighter;
 }
 
-.c-flash--alert .c-flash__content {
+.c-flash--alert {
   background-color: $secondary-color-lighter;
 }
 
-.c-flash--error .c-flash__content {
+.c-flash--error {
   background-color: $tertiary-color-lighter;
 }
 

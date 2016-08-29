@@ -42,7 +42,7 @@
 
   width: 12rem;
   border-radius: $border-radius;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: $box-shadow;
 
   background-color: $white;
 }

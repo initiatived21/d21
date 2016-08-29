@@ -73,7 +73,7 @@
 
   border-radius: 5px;
   background-color: $white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: $box-shadow;
 }
 
 .c-session__window--hidden {

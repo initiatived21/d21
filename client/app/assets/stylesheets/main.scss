@@ -94,7 +94,7 @@ $o-btn-color:        white;
 $o-btn-background:   $primary-color;
 $o-btn-radius:       5px;
 @import "~aleut.objects.buttons/objects.buttons";
-//@import "~aleut.objects.flag/objects.flag";
+@import "~aleut.objects.flag/objects.flag";
 
 $o-layout--small: true;
 @import "~aleut.objects.layout/objects.layout";

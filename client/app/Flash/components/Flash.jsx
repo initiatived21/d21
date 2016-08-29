@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import RootComponent from '../../lib/Base/components/RootComponent'
 
 export default class Flash extends RootComponent {
@@ -17,7 +18,7 @@ export default class Flash extends RootComponent {
 
     setTimeout(function() {
       self.setState({
-        hidden: true
+        hidden: false
       })
     }, 3000)
   }
@@ -31,10 +32,15 @@ export default class Flash extends RootComponent {
 
     return (
       <div className={className}>
-        <div className="o-wrapper">
-          <p className="c-flash__content">
-            {content}
-          </p>
+        <div className="o-flag">
+          <div className="o-flag__img">
+            <FontAwesome className="c-flash__icon" name="check" />
+          </div>
+          <div className="o-flag__body">
+            <p className="c-flash__content">
+              {content}
+            </p>
+          </div>
         </div>
       </div>
     )
