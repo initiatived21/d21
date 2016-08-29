@@ -7,7 +7,7 @@
  */
 
 .c-masthead {
-  background: url('/images/masthead.jpg') center center;
+  background: url('/images/masthead.jpg') center center rgb(229, 212, 168);
   background-size: cover;
 
   @include media-query(m) {
