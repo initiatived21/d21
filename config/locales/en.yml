@@ -305,7 +305,13 @@ en:
   devise:
     mailer:
       confirmation_instructions:
-        user_subject: 
+        confirm_link: 
+        greeting: 
+        paragraph1: 
+        paragraph2: 
+        paragraph3: 
+        paragraph4: 
+        user_subject: Confirmation instructions
   errors:
     array?: must be an array
     attr?: is missing
