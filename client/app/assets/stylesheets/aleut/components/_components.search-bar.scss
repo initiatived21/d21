@@ -11,6 +11,10 @@
   margin-right: $spacing--small;
 
   display: inline-block;
+
+  @include media-query(s) {
+    display: none;
+  }
 }
 
 .c-search-bar__form {

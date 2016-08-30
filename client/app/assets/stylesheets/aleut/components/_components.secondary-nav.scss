@@ -21,6 +21,10 @@
 
     user-select: none;
   }
+
+  @include media-query(s) {
+    display: none;
+  }
 }
 
 

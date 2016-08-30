@@ -5,6 +5,7 @@ import PledgeView from '../../PledgeView/components/PledgeView'
 import ProfileView from '../../ProfileView/components/ProfileView'
 import Search from '../../Search/components/Search'
 import UserSession from '../../UserSession/components/UserSession'
+import Menu from '../../Menu/components/Menu'
 import Flash from '../../Flash/components/Flash'
 
 ReactOnRails.register({
@@ -14,5 +15,6 @@ ReactOnRails.register({
   ProfileView,
   Search,
   UserSession,
+  Menu,
   Flash
 })

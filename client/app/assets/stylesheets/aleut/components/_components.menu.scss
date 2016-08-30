@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    #MENU
+\*------------------------------------*/
+
+/**
+ * Responsive ('burger') slide menu
+ */
+
+$menu-width: 250px;
+
+.c-menu__root-element {
+  display: block;
+  float: left;
+}
+
+.c-menu {
+  display: block;
+
+  > div {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: $menu-width * -1;
+    width: $menu-width;
+    height: 100%;
+
+    //font-weight: bold;
+    @include font-size(18px, 1.5);
+
+    background-color: $primary-color;
+    box-shadow: $box-shadow;
+
+    transition: transform ease $transition-time;
+
+    &.visible {
+      transform: translate3d($menu-width, 0, 0);
+    }
+  }
+}
+
+.c-menu__button {
+  @include font-size(30px, 1);
+  color: $primary-color;
+}
+
+.c-menu__close {
+  display: block;
+  @include font-size(30px, 1);
+  color: $white;
+  text-align: left;
+}
+
+.c-menu__item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+  border-bottom: solid 1px $primary-color-lighter;
+  cursor: pointer;
+
+  background-color: $primary-color;
+  transition: background-color ease 50ms;
+  text-decoration: none;
+
+  color: $white;
+
+  transition: transform ease 50ms;
+
+  &:hover {
+    background-color: $primary-color-highlight;
+
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+.c-menu__item--active {
+  background-color: $tertiary-color;
+
+  &:hover {
+    background-color: $tertiary-color-highlight;
+  }
+}

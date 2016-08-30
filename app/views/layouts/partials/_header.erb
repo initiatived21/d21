@@ -2,6 +2,11 @@
   <div class="o-wrapper">
 
     <nav class="c-secondary-nav u-tr">
+      <%= react_component(
+        'Menu',
+        ReactHelper.settings({}, params, { class: 'c-menu__root-element' }))
+      %>
+
       <ul class="c-secondary-nav__info o-list-inline o-list-inline--delimited">
         <li class="c-secondary-nav__item">
           <%= link_to t('.contact_link'), contact_path(locale: I18n.locale),
@@ -12,7 +17,7 @@
             class: 'c-secondary-nav__link' %>
         </li><!--
         --><li class="c-secondary-nav__item">
-          <%= link_to t('.newsletter_link'), 'http://seu1.cleverreach.com/f/66295-182181', :target => "_blank",  
+          <%= link_to t('.newsletter_link'), 'http://seu1.cleverreach.com/f/66295-182181', :target => "_blank",
             class: 'c-secondary-nav__link' %>
         </li>
       </ul>
@@ -66,7 +71,7 @@
         </svg>
       </a>
 
-      <div class="c-search-bar u-mt u-fr">
+      <div class="c-search-bar u-mt@m u-fr">
         <ul class="c-search-bar__social-media c-social-media">
           <li>
             <a class="c-social-media__button" href="https://www.facebook.com/Buntundverbindlichde-895164520594209/" title="<%= t('.facebook_title') %>">

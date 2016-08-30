@@ -11,7 +11,10 @@
   border-bottom: 1px solid $primary-color;
 }
 
-.c-page-head__logo {
+.c-page-head__logo > svg {
+  @include media-query(s) {
+    width: 300px;
+  }
 }
 
 .c-page-head__main {
