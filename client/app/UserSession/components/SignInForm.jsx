@@ -26,7 +26,7 @@ export default class SignInForm extends ChildComponent {
           attribute='remember_me' type='checkbox'
         />
 
-        <a className="c-session__link" href="">
+        <a className="c-session__link" href={I18n.t('paths.new_password')}>
           {this.t('.forgot_password')}
         </a>
 

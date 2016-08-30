@@ -312,6 +312,8 @@ de:
         paragraph3: Wir werden Ihr Versprechen prüfen und auf der Plattform freischalten. Sie erhalten dazu eine Benachrichtigung.
         paragraph4: Zusätzlich können Sie den Status Ihres Versprechens in Ihrem Profil einsehen.
         user_subject: Registrierung abschliessen
+      reset_password_instructions:
+        user_subject: Reset password instructions
   errors:
     array?: must be an array
     attr?: is missing
@@ -658,6 +660,9 @@ de:
         password: 
         password_confirmation: 
         remember_me: 
+    submit:
+      user:
+        create: Create Benutzer
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -752,6 +757,7 @@ de:
   paths:
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
+    new_password: "/de/users/password/new"
     new_pledge: "/de/pledges/new"
     pledge: "/de/pledges/{{pledge}}"
     privacy: "/de/privacy"

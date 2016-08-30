@@ -312,6 +312,8 @@ en:
         paragraph3: 
         paragraph4: 
         user_subject: Confirmation instructions
+      reset_password_instructions:
+        user_subject: 
   errors:
     array?: must be an array
     attr?: is missing
@@ -658,6 +660,9 @@ en:
         password: 
         password_confirmation: 
         remember_me: 
+    submit:
+      user:
+        create: 
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -735,6 +740,7 @@ en:
   paths:
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
+    new_password: "/en/users/password/new"
     new_pledge: "/en/pledges/new"
     pledge: "/en/pledges/{{pledge}}"
     privacy: "/en/privacy"
