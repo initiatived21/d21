@@ -738,6 +738,8 @@ en:
       recommended: Recommended by the editors
       successful: Successful promises
   paths:
+    create_session: "/en/users/sign_in"
+    destroy_session: "/en/users/sign_out"
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
     new_password: "/en/users/password/new"

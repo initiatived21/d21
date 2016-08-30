@@ -755,6 +755,8 @@ de:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
   paths:
+    create_session: "/de/users/sign_in"
+    destroy_session: "/de/users/sign_out"
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
     new_password: "/de/users/password/new"

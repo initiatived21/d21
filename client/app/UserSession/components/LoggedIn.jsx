@@ -41,8 +41,8 @@ export default class LoggedIn extends ChildComponent {
 
         <FormButton
           className="c-session__submit o-btn o-btn--full c-btn c-btn--primary u-mt"
-          action='/users/sign_out'
-          method='DELETE'
+          action={I18n.t('paths.destroy_session')}
+          method="DELETE"
         >
           <FontAwesome name="sign-out" />
           {' '}
