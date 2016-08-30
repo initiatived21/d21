@@ -7,7 +7,32 @@ import { addEntities } from '../../lib/actions/entityActions'
 import setSearchResultsLoadingState from '../actions/setSearchResultsLoadingState'
 import { NUM_RESULTS_PAGINATION } from '../../lib/config'
 
-const fetchMoreResults = function(dispatch, query, offset, limit) {
+const mapStateToProps = function(state, ownProps) {
+  return {
+    results: filterResults(deNormalizePledges(state), ownProps.resultIds),
+    query: ownProps.query,
+    resultCount: ownProps.total,
+    isLoading: state.ui.searchResultsLoading,
+  }
+}
+
+function filterResults(pledges, resultIds) {
+  return pledges.filter(function(pledge) {
+    return resultIds.includes(pledge.id)
+  })
+}
+
+const mapDispatchToProps = function(dispatch, ownProps) {
+  return {
+    onButtonClick: (offset) => {
+      dispatch(setSearchResultsLoadingState(true))
+
+      fetchMoreResults(dispatch, ownProps.query, offset, NUM_RESULTS_PAGINATION)
+    }
+  }
+}
+
+function fetchMoreResults (dispatch, query, offset, limit) {
   if (!query) { query = '' }
 
   // Ajax request
@@ -22,25 +47,6 @@ const fetchMoreResults = function(dispatch, query, offset, limit) {
     }).catch(function(ex) {
       console.error('parsing failed', ex)
     })
-}
-
-const mapStateToProps = function(state, ownProps) {
-  return {
-    results: deNormalizePledges(state),
-    query: ownProps.query,
-    resultCount: ownProps.total,
-    isLoading: state.ui.searchResultsLoading,
-  }
-}
-
-const mapDispatchToProps = function(dispatch, ownProps) {
-  return {
-    onButtonClick: (offset) => {
-      dispatch(setSearchResultsLoadingState(true))
-
-      fetchMoreResults(dispatch, ownProps.query, offset, NUM_RESULTS_PAGINATION)
-    }
-  }
 }
 
 export default connect(
