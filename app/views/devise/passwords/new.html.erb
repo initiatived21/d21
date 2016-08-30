@@ -1,6 +1,6 @@
 <main class="c-devise-form">
   <div class="o-wrapper">
-    <h1 class="c-devise-form__title">Forgot your password?</h1>
+    <h1 class="c-devise-form__title"><%= t('.heading') %></h1>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
@@ -13,7 +13,7 @@
       <div class="u-mt u-mb">
         <%= f.button class: 'o-btn c-btn c-btn--primary' do %>
           <span class="fa fa-paper-plane"></span>
-          Send me reset password instructions
+          <%= t('.send_instructions') %>
         <% end %>
       </div>
     <% end %>

@@ -303,6 +303,11 @@ en:
     impressum: 
     signed: 
   devise:
+    confirmations:
+      new:
+        heading: Resend confirmation instructions
+        resend_instructions: Resend confirmation instructions
+        send_instructions: 
     mailer:
       confirmation_instructions:
         confirm_link: 
@@ -314,6 +319,26 @@ en:
         user_subject: Confirmation instructions
       reset_password_instructions:
         user_subject: 
+    passwords:
+      edit:
+        change_password: Change my password
+        characters_minimum: characters minimum
+        confirm_new_password: Confirm new password
+        heading: Change your password
+        new_password: New password
+      new:
+        heading: Forgot your password?
+        send_instructions: Send me reset password instructions
+    sessions:
+      new:
+        heading: Sign in
+        sign_in: Sign in
+    shared:
+      links:
+        confirmation_instructions: Didn't receive confirmation instructions?
+        forgot_password: Forgot your password?
+        sign_in: Sign in
+        sign_up: Create a pledge and sign up
   errors:
     array?: must be an array
     attr?: is missing
@@ -662,7 +687,7 @@ en:
         remember_me: 
     submit:
       user:
-        create: 
+        create: Create User
   initiator_mailer:
     new_question:
       first_paragraph: 

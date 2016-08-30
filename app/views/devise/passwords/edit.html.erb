@@ -1,28 +1,28 @@
 <main class="c-devise-form">
   <div class="o-wrapper">
-    <h1 class="c-devise-form__title">Change your password</h1>
+    <h1 class="c-devise-form__title"><%= t('.heading') %></h1>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
       <%= f.hidden_field :reset_password_token %>
 
       <div class="c-input u-1/2@m u-1/3@l u-mb-small">
-        <%= f.label :password, "New password" %><br />
+        <%= f.label :password, t('.new_password') %><br />
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+          <em>(<%= @minimum_password_length %> <%= t('.characters_minimum') %>)</em><br />
         <% end %>
         <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
       </div>
 
       <div class="c-input u-1/2@m u-1/3@l u-mb-small">
-        <%= f.label :password_confirmation, "Confirm new password" %><br />
+        <%= f.label :password_confirmation, t('.confirm_new_password') %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
       <div class="u-mt u-mb">
         <%= f.button class: 'o-btn c-btn c-btn--primary' do %>
           <span class="fa fa-pencil"></span>
-          Change my password
+          <%= t('.change_password') %>
         <% end %>
       </div>
     <% end %>
