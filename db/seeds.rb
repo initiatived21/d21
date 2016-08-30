@@ -100,7 +100,8 @@ active_few = Pledge.create!(
   location: 'Berlin',
   deadline: 8.days.from_now,
   aasm_state: 'active',
-  initiator: corn
+  initiator: corn,
+  recommended: true
 )
 FactoryGirl.create :signature, pledge: active_few
 
@@ -132,7 +133,8 @@ Pledge.create!(
   location: 'Augsburg',
   deadline: 2.days.ago,
   aasm_state: 'failed',
-  initiator: privat
+  initiator: privat,
+  recommended: true # Still not shown
 )
 
 # successful pledge
@@ -147,7 +149,8 @@ Pledge.create!(
   deadline: 3.days.ago,
   aasm_state: 'successful',
   initiator: privat,
-  tags: [family, language]
+  tags: [family, language],
+  recommended: true
 )
 
 # disapproved pledge

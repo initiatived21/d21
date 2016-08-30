@@ -5,8 +5,14 @@ class PagesController < ApplicationController
   end
 
   def home
-    query = Pledge.where(aasm_state: 'active').order(created_at: :desc).limit(12)
-    @newest_pledges = serialize(query)
+    newest_query =
+      Pledge.where(aasm_state: 'active').order(created_at: :desc).limit(12)
+    @newest_pledges = serialize(newest_query)
+
+    recommended_query =
+      Pledge.where(aasm_state: %w(active successful), recommended: true)
+        .order(updated_at: :desc).limit(3)
+    @recommended_pledges = serialize(recommended_query)
   end
 
   def faq

@@ -15,13 +15,16 @@ function sortPledges(pledges) {
 }
 
 function filterPledges(pledges, filter) {
-  if (typeof filter === 'undefined') {
+  switch (filter) {
+  case 'active':
+    return pledges.filter(pledge => (pledge.aasm_state === filter))
+
+  case 'recommended':
+    return pledges.filter(pledge => pledge[filter])
+
+  default:
     return pledges
   }
-
-  return pledges.filter( (pledge) => {
-    return (pledge.aasm_state === filter)
-  })
 }
 
 export function mapDispatchToProps() {

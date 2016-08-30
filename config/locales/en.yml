@@ -241,6 +241,7 @@ en:
         user_id: 
         who: 
         report_count: 
+        recommended: 
       signature:
         aasm_state: 
         anonymous: 
@@ -443,6 +444,7 @@ en:
           requirement: 
           title: 
           who: 
+          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -482,6 +484,7 @@ en:
           requirement: 
           title: 
           who: 
+          recommended: 
       q:
         index:
           aasm_state: 
@@ -519,6 +522,7 @@ en:
           updated_at: 
           updates: 
           who: 
+          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -620,6 +624,7 @@ en:
           requirement: 
           title: 
           who: 
+          recommended: 
       q:
         index:
           aasm_state: 
@@ -657,6 +662,7 @@ en:
           updated_at: 
           updates: 
           who: 
+          recommended: 
       signature:
         edit:
           aasm_state: 

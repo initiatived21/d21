@@ -11,5 +11,13 @@ section.c-pledge-list
     header.c-pledge-list__header
       h2.c-pledge-list__title
         span.fa.fa-star>
+        = t '.recommended'
+    == cell :pledge_list, @recommended_pledges, filter: :recommended,
+                                                params: params
+
+  div.o-wrapper.u-mt-large.u-mb
+    header.c-pledge-list__header
+      h2.c-pledge-list__title
+        span.fa.fa-star>
         = t '.newest'
     == cell :pledge_list, @newest_pledges, filter: :active, params: params
