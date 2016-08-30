@@ -780,6 +780,9 @@ de:
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
+    not_found:
+      content: Tut uns leid, die angefragte Seite existiert leider nicht oder du hast keine Berechtigung dafür.
+      heading: Seite nicht gefunden
   paths:
     create_session: "/de/users/sign_in"
     destroy_session: "/de/users/sign_out"

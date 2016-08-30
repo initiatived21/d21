@@ -43,18 +43,21 @@ describe SignaturesController do
 
   describe "GET 'confirm'" do
     let(:signature) do
-      FactoryGirl.create(:signature, confirmation_hash: 'correct')
+      FactoryGirl.create(
+        :signature, confirmed: false, confirmation_hash: 'correct'
+      )
     end
 
     it 'should fail when given the wrong hash' do
-      assert_raises(Pundit::NotAuthorizedError) do
-        get :confirm, params: { id: signature.id, locale: :de, hash: 'false' }
-      end
+      get :confirm, params: { id: signature.id, locale: :de, hash: 'false' }
+      assert_response 404
+      signature.reload.confirmed.must_equal false
     end
 
     it 'should succeed when given the correct hash' do
       get :confirm, params: { id: signature.id, locale: :de, hash: 'correct' }
       assert_response 302
+      signature.reload.confirmed.must_equal true
     end
   end
 
@@ -64,9 +67,9 @@ describe SignaturesController do
     end
 
     it 'should fail when given the wrong hash' do
-      assert_raises(Pundit::NotAuthorizedError) do
-        get :destroy, params: { id: signature.id, locale: :de, hash: 'false' }
-      end
+      get :destroy, params: { id: signature.id, locale: :de, hash: 'false' }
+      assert_response 404
+      signature.reload # doesn't throw ActiveRecord::NotFound
     end
 
     it 'should succeed when given the correct hash' do

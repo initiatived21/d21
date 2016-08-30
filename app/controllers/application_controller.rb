@@ -22,6 +22,14 @@ class ApplicationController < ActionController::Base
   #   if: -> { Rails.env.staging? || Rails.env.production? }
   # )
 
+  # Standard Error Rescues
+  rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  rescue_from Pundit::NotAuthorizedError, with: :not_found
+
+  def not_found
+    render '/pages/not_found', status: 404
+  end
+
   protected
 
   def serialize object
