@@ -304,6 +304,11 @@ en:
     impressum: 
     signed: 
   devise:
+    confirmations:
+      new:
+        heading: Resend confirmation instructions
+        resend_instructions: Resend confirmation instructions
+        send_instructions: 
     mailer:
       confirmation_instructions:
         confirm_link: 
@@ -315,15 +320,6 @@ en:
         user_subject: Confirmation instructions
       reset_password_instructions:
         user_subject: 
-    sessions:
-      new:
-        sign_in: Sign in
-        heading: Sign in
-    confirmations:
-      new:
-        heading: Resend confirmation instructions
-        resend_instructions: Resend confirmation instructions
-        send_instructions: 
     passwords:
       edit:
         change_password: Change my password
@@ -334,6 +330,10 @@ en:
       new:
         heading: Forgot your password?
         send_instructions: Send me reset password instructions
+    sessions:
+      new:
+        heading: Sign in
+        sign_in: Sign in
     shared:
       links:
         confirmation_instructions: Didn't receive confirmation instructions?
@@ -764,8 +764,11 @@ en:
       recommended: Recommended by the editors
       successful: Successful promises
   paths:
+    create_session: "/en/users/sign_in"
+    destroy_session: "/en/users/sign_out"
     edit_pledge: "/en/pledges/{{pledge}}/edit"
     faq: "/en/faq"
+    new_password: "/en/users/password/new"
     new_pledge: "/en/pledges/new"
     pledge: "/en/pledges/{{pledge}}"
     privacy: "/en/privacy"

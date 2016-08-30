@@ -19,7 +19,8 @@ export default class Flash extends RootComponent {
 
   componentDidMount() {
     const self = this
-    const duration = this.props.type === 'notice' ? FLASH_DISPLAY_TIME : FLASH_DISPLAY_TIME * 2
+    const duration = (this.props.type === 'notice' || this.props.type === 'success') ?
+      FLASH_DISPLAY_TIME : FLASH_DISPLAY_TIME * 2
 
     setTimeout(function() {
       self.setState({
@@ -49,6 +50,7 @@ export default class Flash extends RootComponent {
     let awesomeName
     switch(type) {
     case 'notice':
+    case 'success':
       awesomeName = 'check'
       break
     case 'alert':

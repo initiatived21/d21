@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
 
   root to: 'pages#locale_forward'
 
   scope ':locale', locale: /de|en/ do
+    devise_for :users
+
     get '/404' => 'pages#not_found'
 
     # Pages

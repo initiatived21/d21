@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
-
+import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SignInForm from './SignInForm'
 import LoggedIn from './LoggedIn'
@@ -48,7 +48,8 @@ export default class Session extends ChildComponent {
       loggedInOrOutComponent = <LoggedIn currentUser={currentUser} />
     }
     else {
-      loggedInOrOutComponent = <SignInForm formData={{ action: '/users/sign_in', model: 'user' }} />
+      loggedInOrOutComponent = <SignInForm formData={{ action: I18n.t('paths.create_session'),
+        model: 'user' }} />
     }
 
     const className = `c-session__window${ isVisible ? '' : ' c-session__window--hidden'}`

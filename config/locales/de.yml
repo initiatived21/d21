@@ -304,6 +304,11 @@ de:
     impressum: "<Impressum>"
     signed: Ihre bunt und verbindlich Redaktion
   devise:
+    confirmations:
+      new:
+        heading: Anleitung zur Bestätigung senden
+        resend_instructions: Anleitung erneut senden
+        send_instructions: 
     mailer:
       confirmation_instructions:
         confirm_link: Bestätigungslink
@@ -315,15 +320,6 @@ de:
         user_subject: Registrierung abschliessen
       reset_password_instructions:
         user_subject: Reset password instructions
-    sessions:
-      new:
-        sign_in: Anmelden
-        heading: Anmelden
-    confirmations:
-      new:
-        heading: Anleitung zur Bestätigung senden
-        resend_instructions: Anleitung erneut senden
-        send_instructions: 
     passwords:
       edit:
         change_password: Mein Passwort ändern
@@ -334,6 +330,10 @@ de:
       new:
         heading: Passwort vergessen?
         send_instructions: Anleitung zum Zurücksetzen senden
+    sessions:
+      new:
+        heading: Anmelden
+        sign_in: Anmelden
     shared:
       links:
         confirmation_instructions: Anleitung zur Bestätigung nicht erhalten?
@@ -781,8 +781,11 @@ de:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
   paths:
+    create_session: "/de/users/sign_in"
+    destroy_session: "/de/users/sign_out"
     edit_pledge: "/de/pledges/{{pledge}}/edit"
     faq: "/de/faq"
+    new_password: "/de/users/password/new"
     new_pledge: "/de/pledges/new"
     pledge: "/de/pledges/{{pledge}}"
     privacy: "/de/privacy"

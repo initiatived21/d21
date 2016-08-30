@@ -33,6 +33,7 @@
   color: $white;
   user-select: none;
 
+  background-color: $mid-dark-gray;
   opacity: 0.95;
   transition: opacity $transition-time;
 }
@@ -57,7 +58,8 @@
   }
 }
 
-.c-flash--notice > .c-flash__inner {
+.c-flash--notice > .c-flash__inner,
+.c-flash--success > .c-flash__inner {
   background-color: $flash-notice-color;
 }
 
