@@ -791,9 +791,6 @@ de:
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
-    create_session: "/de/users/sign_in"
-    destroy_session: "/de/users/sign_out"
-    new_password: "/de/users/password/new"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.

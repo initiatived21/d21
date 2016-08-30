@@ -20,7 +20,7 @@ class Pledge < ApplicationRecord
     state :successful # Pledge is past deadline and has sufficient signatures
     state :failed # Pledge is past deadline but did not receive sufficient signatures
 
-    state :disapproved # Admin did not approve requested pledge
+    state :disapproved # Admin did not approve requested pledge or changed their mind
 
     ### Transitions ###
 
@@ -34,6 +34,7 @@ class Pledge < ApplicationRecord
 
     event :disapprove do
       transitions from: :requested, to: :disapproved
+      transitions from: :active, to: :disapproved
     end
 
     event :finish, guard: :past_deadline? do

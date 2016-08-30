@@ -774,9 +774,6 @@ en:
     privacy: "/en/privacy"
     terms: "/en/terms"
     user_profile: "/en/users/profile"
-    create_session: "/en/users/sign_in"
-    destroy_session: "/en/users/sign_out"
-    new_password: "/en/users/password/new"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
