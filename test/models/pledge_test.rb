@@ -76,14 +76,14 @@ describe Pledge do
       let(:pledge) { Pledge.new(aasm_state: :requested) }
       let(:event) { pledge.aasm.events.find { |e| e.name == :disapprove } }
 
-      it 'must only have one transition' do
-        event.transitions.size.must_equal 1
+      it 'must have two transition' do
+        event.transitions.size.must_equal 2
       end
 
-      it 'must only transition from requested' do
+      it 'must transition from requested and active' do
         event.transitions_from_state?(:initialized).must_equal false
         event.transitions_from_state?(:requested).must_equal true
-        event.transitions_from_state?(:active).must_equal false
+        event.transitions_from_state?(:active).must_equal true
         event.transitions_from_state?(:successful).must_equal false
         event.transitions_from_state?(:failed).must_equal false
         event.transitions_from_state?(:disapproved).must_equal false
