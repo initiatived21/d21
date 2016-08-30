@@ -29,6 +29,7 @@ Rails.application.routes.draw do
         resources :signatures, only: [:create]
         resources :comments, only: [:create]
         resources :updates, only: [:create]
+        resources :reports, only: [:create]
       end
     end
     resources :comments, only: [:update]

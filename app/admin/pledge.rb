@@ -17,6 +17,7 @@ ActiveAdmin.register Pledge do
     column :title
     column :deadline
     column :signatures_count
+    column :report_count
     column :aasm_state
     column :created_at
     actions

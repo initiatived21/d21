@@ -240,6 +240,7 @@ de:
         updates: Updates
         user_id: User
         who: Who
+        report_count: Report Count
       signature:
         aasm_state: Aasm state
         anonymous: Anonymous
@@ -312,6 +313,33 @@ de:
         paragraph3: Wir werden Ihr Versprechen prüfen und auf der Plattform freischalten. Sie erhalten dazu eine Benachrichtigung.
         paragraph4: Zusätzlich können Sie den Status Ihres Versprechens in Ihrem Profil einsehen.
         user_subject: Registrierung abschliessen
+      reset_password_instructions:
+        user_subject: Reset password instructions
+    sessions:
+      new:
+        sign_in: Anmelden
+        heading: Anmelden
+    confirmations:
+      new:
+        heading: Anleitung zur Bestätigung senden
+        resend_instructions: Anleitung erneut senden
+        send_instructions: 
+    passwords:
+      edit:
+        change_password: Mein Passwort ändern
+        characters_minimum: Zeichen mindestens
+        confirm_new_password: Neues Passwort bestätigen
+        heading: Ändern Sie Ihr Passwort
+        new_password: Neues Passwort
+      new:
+        heading: Passwort vergessen?
+        send_instructions: Anleitung zum Zurücksetzen senden
+    shared:
+      links:
+        confirmation_instructions: Anleitung zur Bestätigung nicht erhalten?
+        forgot_password: Passwort vergessen?
+        sign_in: Anmelden
+        sign_up: Versprechen anlegen und registrieren
   errors:
     array?: must be an array
     attr?: is missing
@@ -658,6 +686,9 @@ de:
         password: 
         password_confirmation: 
         remember_me: 
+    submit:
+      user:
+        create: Create Benutzer
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
@@ -757,6 +788,9 @@ de:
     privacy: "/de/privacy"
     terms: "/de/terms"
     user_profile: "/de/users/profile"
+    create_session: "/de/users/sign_in"
+    destroy_session: "/de/users/sign_out"
+    new_password: "/de/users/password/new"
   pledges:
     create:
       saved_draft: Der Entwurf erfolgreich in Ihrem Profil abgespeichert.
@@ -903,3 +937,6 @@ de:
     pagination:
       last: 
       next: 
+  reports:
+    create:
+      success: Versprechen wurde an die Redaktion gemeldet.

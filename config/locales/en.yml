@@ -240,6 +240,7 @@ en:
         updates: 
         user_id: 
         who: 
+        report_count: 
       signature:
         aasm_state: 
         anonymous: 
@@ -312,6 +313,33 @@ en:
         paragraph3: 
         paragraph4: 
         user_subject: Confirmation instructions
+      reset_password_instructions:
+        user_subject: 
+    sessions:
+      new:
+        sign_in: Sign in
+        heading: Sign in
+    confirmations:
+      new:
+        heading: Resend confirmation instructions
+        resend_instructions: Resend confirmation instructions
+        send_instructions: 
+    passwords:
+      edit:
+        change_password: Change my password
+        characters_minimum: characters minimum
+        confirm_new_password: Confirm new password
+        heading: Change your password
+        new_password: New password
+      new:
+        heading: Forgot your password?
+        send_instructions: Send me reset password instructions
+    shared:
+      links:
+        confirmation_instructions: Didn't receive confirmation instructions?
+        forgot_password: Forgot your password?
+        sign_in: Sign in
+        sign_up: Create a pledge and sign up
   errors:
     array?: must be an array
     attr?: is missing
@@ -658,6 +686,9 @@ en:
         password: 
         password_confirmation: 
         remember_me: 
+    submit:
+      user:
+        create: Create User
   initiator_mailer:
     new_question:
       first_paragraph: 
@@ -740,6 +771,9 @@ en:
     privacy: "/en/privacy"
     terms: "/en/terms"
     user_profile: "/en/users/profile"
+    create_session: "/en/users/sign_in"
+    destroy_session: "/en/users/sign_out"
+    new_password: "/en/users/password/new"
   pledges:
     create:
       saved_draft: The draft was successfully saved to your profile.
@@ -884,3 +918,6 @@ en:
     pagination:
       last: 
       next: 
+  reports:
+    create:
+      success: The Pledge was reported.

@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
+import { FormButton } from 'rform'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
@@ -15,10 +16,14 @@ export default class ReportPledgeForm extends ChildComponent {
       <aside className="c-report-pledge o-box">
         <p>{this.t('.description')}</p>
 
-        <a className="c-report-pledge__button o-btn o-btn--small u-mt-small" href="">
+        <FormButton
+          className="c-report-pledge__button o-btn o-btn--small u-mt-small"
+          action={`/${I18n.locale}/pledges/${id}/reports`}
+          method='POST'
+        >
           <FontAwesome name="exclamation-triangle" />
           {` ${this.t('.report_pledge')}`}
-        </a>
+        </FormButton>
       </aside>
     )
   }
