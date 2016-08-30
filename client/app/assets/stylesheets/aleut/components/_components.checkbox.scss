@@ -4,6 +4,9 @@
 
 /**
  * Checkbox input component
+ *
+ * Works for rform checkboxes, which set the 'checked' class to a span, and
+ * for Devise checkboxes which have no span.
  */
 
 .c-checkbox {
@@ -31,7 +34,7 @@
     display: none;
   }
 
-  span.checked + label:before {
+  span.checked + label:before, input[type=checkbox]:checked + label:before {
     font-family: FontAwesome;
     content: "\f00c";
     font-size: 18px;
@@ -52,7 +55,7 @@
     top: -3px;
   }
 
-  span.checked + label:before {
+  span.checked + label:before, input[type=checkbox]:checked + label:before {
     font-size: 15px;
     line-height: 21px;
   }
