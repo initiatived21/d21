@@ -7,6 +7,8 @@ en:
     title: Share via Facebook
   GoogleplusButton:
     title: Share via Google+
+  HeaderLogo:
+    title: Bunt und Verbindlich. Integration platform
   ImageCrop:
     crop_explanation: You can crop the image now.
     select_detail: Select detail
@@ -130,6 +132,13 @@ en:
   PreviewUnconfirmed:
     confirm_email: Please confirm your email to finalize this pledge.
     edit_pledge: Edit pledge
+  PrimaryNav:
+    about_link: About us
+    blog_link: Blog
+    howitworks_link: How it works
+    new_pledge_link: Make a pledge
+    press_link: Press
+    start_link: Start
   ProfileUserForm:
     button: Submit
   ProfileView:
@@ -139,6 +148,15 @@ en:
   ReportPledgeForm:
     description: 
     report_pledge: Report pledge
+  SearchBar:
+    facebook_title: Bunt und Verbindlich on Facebook
+    search_placeholder: e.g. search for companies
+    search_title: Search
+    twitter_title: Bunt und Verbindlich on Twitter
+  SecondaryNav:
+    contact_link: Contact
+    faq_link: FAQ
+    newsletter_link: Newsletter
   Session:
     my_account: My account
     sign_in: Login
@@ -231,6 +249,8 @@ en:
         location: 
         pg_search_document: 
         pledges_tags: 
+        recommended: 
+        report_count: 
         requirement: 
         signatures: 
         signatures_count: 
@@ -240,8 +260,6 @@ en:
         updates: 
         user_id: 
         who: 
-        report_count: 
-        recommended: 
       signature:
         aasm_state: 
         anonymous: 
@@ -441,10 +459,10 @@ en:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -481,10 +499,10 @@ en:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       q:
         index:
           aasm_state: 
@@ -513,6 +531,7 @@ en:
           pledges: 
           pledges_tags: 
           reason: 
+          recommended: 
           requirement: 
           resource_type: 
           response: 
@@ -522,7 +541,6 @@ en:
           updated_at: 
           updates: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -621,10 +639,10 @@ en:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       q:
         index:
           aasm_state: 
@@ -653,6 +671,7 @@ en:
           pledges: 
           pledges_tags: 
           reason: 
+          recommended: 
           requirement: 
           resource_type: 
           response: 
@@ -662,7 +681,6 @@ en:
           updated_at: 
           updates: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -729,23 +747,17 @@ en:
         terms_link: Terms
         twitter_title: Bunt und Verbindlich on Twitter
       header:
-        about_link: About us
-        blog_link: Blog
-        contact_link: Contact
-        en: 
-        facebook_title: Bunt und Verbindlich on Facebook
-        faq_link: FAQ
-        howitworks_link: How it works
+        about_link: 
+        blog_link: 
+        contact_link: 
+        faq_link: 
+        howitworks_link: 
         login: Login
-        logo_title: Bunt und Verbindlich. Integration platform
-        new_pledge_link: Make a pledge
-        newsletter_link: Newsletter
-        press_link: Press
+        new_pledge_link: 
+        newsletter_link: 
+        press_link: 
         search_link: 
-        search_placeholder: e.g. search for companies
-        search_title: Search
-        start_link: Start
-        twitter_title: Bunt und Verbindlich on Twitter
+        start_link: 
   pages:
     faq:
       answer1: Translation not yet available.
@@ -791,6 +803,9 @@ en:
   ransack:
     predicates:
       contains: 
+  reports:
+    create:
+      success: The Pledge was reported.
   rform:
     comment:
       content:
@@ -927,6 +942,3 @@ en:
     pagination:
       last: 
       next: 
-  reports:
-    create:
-      success: The Pledge was reported.

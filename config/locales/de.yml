@@ -7,6 +7,8 @@ de:
     title: Über Facebook teilen
   GoogleplusButton:
     title: Über Google+ teilen
+  HeaderLogo:
+    title: Bunt und Verbindlich. Plattform für Integration
   ImageCrop:
     crop_explanation: Sie können das Bild jetzt beschneiden.
     select_detail: Ausschnitt wählen
@@ -73,7 +75,7 @@ de:
     heading: So funktioniert es…
     step: 'Schritt {{step}}:'
     text:
-      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“ Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
       step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
       step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
@@ -130,6 +132,13 @@ de:
   PreviewUnconfirmed:
     confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
     edit_pledge: Versprechen bearbeiten
+  PrimaryNav:
+    about_link: Über uns
+    blog_link: Blog
+    howitworks_link: So funktioniert's
+    new_pledge_link: Ich versprech's
+    press_link: Presse
+    start_link: Start
   ProfileUserForm:
     button: Aktualisieren
   ProfileView:
@@ -139,6 +148,15 @@ de:
   ReportPledgeForm:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
+  SearchBar:
+    facebook_title: Bunt und Verbindlich auf Facebook
+    search_placeholder: nach Schlagwörtern suchen
+    search_title: Suchen
+    twitter_title: Bunt und Verbindlich auf Twitter
+  SecondaryNav:
+    contact_link: Kontakt
+    faq_link: FAQ
+    newsletter_link: Newsletter
   Session:
     my_account: Mein Konto
     sign_in: Login
@@ -231,6 +249,8 @@ de:
         location: Location
         pg_search_document: Pg search document
         pledges_tags: Pledges tags
+        recommended: Recommended
+        report_count: Report Count
         requirement: Requirement
         signatures: Signatures
         signatures_count: Signatures Count
@@ -240,8 +260,6 @@ de:
         updates: Updates
         user_id: User
         who: Who
-        report_count: Report Count
-        recommended: Recommended
       signature:
         aasm_state: Aasm state
         anonymous: Anonymous
@@ -441,10 +459,10 @@ de:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -481,10 +499,10 @@ de:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       q:
         index:
           aasm_state: 
@@ -513,6 +531,7 @@ de:
           pledges: 
           pledges_tags: 
           reason: 
+          recommended: 
           requirement: 
           resource_type: 
           response: 
@@ -522,7 +541,6 @@ de:
           updated_at: 
           updates: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -621,10 +639,10 @@ de:
           image: 
           initiator: 
           location: 
+          recommended: 
           requirement: 
           title: 
           who: 
-          recommended: 
       q:
         index:
           aasm_state: 
@@ -653,6 +671,7 @@ de:
           pledges: 
           pledges_tags: 
           reason: 
+          recommended: 
           requirement: 
           resource_type: 
           response: 
@@ -662,7 +681,6 @@ de:
           updated_at: 
           updates: 
           who: 
-          recommended: 
       signature:
         edit:
           aasm_state: 
@@ -729,23 +747,17 @@ de:
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
       header:
-        about_link: Über uns
-        blog_link: Blog
-        contact_link: Kontakt
-        en: 
-        facebook_title: Bunt und Verbindlich auf Facebook
-        faq_link: FAQ
-        howitworks_link: So funktioniert's
+        about_link: 
+        blog_link: 
+        contact_link: 
+        faq_link: 
+        howitworks_link: 
         login: Anmelden
-        logo_title: Bunt und Verbindlich. Plattform für Integration
-        new_pledge_link: Ich versprech's
-        newsletter_link: Newsletter
-        press_link: Presse
+        new_pledge_link: 
+        newsletter_link: 
+        press_link: 
         search_link: 
-        search_placeholder: z.B. nach Unternehmen suchen
-        search_title: Suchen
-        start_link: Start
-        twitter_title: Bunt und Verbindlich auf Twitter
+        start_link: 
   pages:
     faq:
       answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
@@ -787,7 +799,7 @@ de:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
     not_found:
-      content: Tut uns leid, die angefragte Seite existiert leider nicht oder du hast keine Berechtigung dafür.
+      content: Tut uns leid, die angefragte Seite existiert leider nicht oder Sie haben keine Berechtigung dafür.
       heading: Seite nicht gefunden
   paths:
     create_session: "/de/users/sign_in"
@@ -808,6 +820,9 @@ de:
   ransack:
     predicates:
       contains: 
+  reports:
+    create:
+      success: Versprechen wurde an die Redaktion gemeldet.
   rform:
     comment:
       content:
@@ -946,6 +961,3 @@ de:
     pagination:
       last: 
       next: 
-  reports:
-    create:
-      success: Versprechen wurde an die Redaktion gemeldet.

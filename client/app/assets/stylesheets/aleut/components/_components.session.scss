@@ -18,11 +18,6 @@
   position: relative;  /* [3] */
 }
 
-// We need this element temporarily
-.c-session__root-element {
-  display: inline-block;
-}
-
 .c-session__triangle {
   position: absolute;
   top: -18px;

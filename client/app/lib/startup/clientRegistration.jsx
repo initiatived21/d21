@@ -4,9 +4,8 @@ import NewPledge from '../../NewPledge/components/NewPledge'
 import PledgeView from '../../PledgeView/components/PledgeView'
 import ProfileView from '../../ProfileView/components/ProfileView'
 import Search from '../../Search/components/Search'
-import UserSession from '../../UserSession/components/UserSession'
-import Menu from '../../Menu/components/Menu'
 import Flash from '../../Flash/components/Flash'
+import PageHeader from '../../PageHeader/components/PageHeader'
 
 // Lets Webpack generate the main css file that gets picked up by Sprockets
 require('../../assets/stylesheets/main.scss')
@@ -20,7 +19,6 @@ ReactOnRails.register({
   PledgeView,
   ProfileView,
   Search,
-  UserSession,
-  Menu,
-  Flash
+  Flash,
+  PageHeader
 })
