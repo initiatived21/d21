@@ -65,7 +65,7 @@ class PledgesController < ApplicationController
       search.run
       @pledges = search.solved_results
       @query = search.query
-      @result_ids = search.results.ids
+      @result_ids = search.solved_results.map &:id
       @result_count = search.unscoped_results.count
     end
 

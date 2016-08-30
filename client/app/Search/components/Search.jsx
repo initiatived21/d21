@@ -13,7 +13,8 @@ export default class Search extends RootComponent {
       PropTypes.object
     ).isRequired,
     query: PropTypes.string.isRequired,
-    resultCount: PropTypes.number.isRequired
+    resultCount: PropTypes.number.isRequired,
+    resultIds: PropTypes.array.isRequired
   }
 
   get objectsToForwardToState() {
@@ -21,14 +22,14 @@ export default class Search extends RootComponent {
   }
 
   render() {
-    const { pledges, query, resultCount } = this.props
+    const { pledges, query, resultCount, resultIds } = this.props
 
     let resultView
     if (query === '') {
       resultView = <EmptyResults pledges={pledges} />
     } else {
       resultView =
-        <PaginatedSearchResultsContainer total={resultCount} query={query} />
+        <PaginatedSearchResultsContainer total={resultCount} resultIds={resultIds} query={query} />
     }
 
     return (
