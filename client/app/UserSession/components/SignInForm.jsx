@@ -1,9 +1,9 @@
 import React, { PropTypes  } from 'react'
 import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
-import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SignInFormObject from '../../lib/form_objects/sign_in_form'
+import localPath from '../../lib/browser/localPath'
 
 export default class SignInForm extends ChildComponent {
   static propTypes = {
@@ -26,7 +26,7 @@ export default class SignInForm extends ChildComponent {
           attribute='remember_me' type='checkbox'
         />
 
-        <a className="c-session__link" href={I18n.t('paths.new_password')}>
+        <a className="c-session__link" href={localPath('/users/password/new')}>
           {this.t('.forgot_password')}
         </a>
 
@@ -41,7 +41,7 @@ export default class SignInForm extends ChildComponent {
 
         <p>
           {this.t('.no_account')}
-          <a className="c-session__link" href={I18n.t('paths.new_pledge')}>
+          <a className="c-session__link" href={localPath('/pledges/new')}>
             {this.t('.sign_up_link')}
           </a>
         </p>
