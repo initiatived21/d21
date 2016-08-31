@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import FontAwesome          from 'react-fontawesome'
 import { FormButton }       from 'rform'
-import I18n                 from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
+import localPath            from '../../lib/browser/localPath'
 
 export default class StateFooter extends ChildComponent {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class StateFooter extends ChildComponent {
 
     const editButton = showEditButton ? (
       <a className="o-btn c-btn c-btn--tertiary u-mt-small"
-        href={I18n.t('paths.edit_pledge', { pledge: pledgeId })}>
+        href={localPath(`/pledges/${pledgeId}/edit`)}>
         <FontAwesome name="pencil" />
         {' '}
         {this.t('.edit')}
@@ -26,7 +26,7 @@ export default class StateFooter extends ChildComponent {
     const deleteButton = showDeleteButton ? (
       <FormButton
         className="o-btn c-btn c-btn--secondary u-mt-small"
-        action={I18n.t('paths.pledge', { pledge: pledgeId })}
+        action={localPath(`/pledges/${pledgeId}`)}
         method="DELETE">
         <FontAwesome name="trash-o" />
         {' '}
@@ -43,3 +43,4 @@ export default class StateFooter extends ChildComponent {
     )
   }
 }
+

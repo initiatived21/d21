@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import localPath from '../../lib/browser/localPath'
 
 export default class PreviewRequested extends ChildComponent {
   static propTypes = {
@@ -17,7 +17,7 @@ export default class PreviewRequested extends ChildComponent {
         <p>{this.t('.next_steps.editorial_staff')}</p>
         <p>
           {this.t('.next_steps.part1')}
-          <a href={I18n.t('paths.user_profile')}>
+          <a href={localPath('/users/profile')}>
             {this.t('.next_steps.user_account')}
           </a>
           {this.t('.next_steps.part2')}

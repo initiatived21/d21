@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import localPath from '../../lib/browser/localPath'
 
 export default class PreviewUnconfirmed extends ChildComponent {
   static propTypes = {
@@ -17,7 +17,7 @@ export default class PreviewUnconfirmed extends ChildComponent {
         <p>{this.t('.confirm_email')}</p>
 
         <a className="o-btn c-btn c-btn--tertiary u-mt-small"
-          href={I18n.t('paths.edit_pledge', { pledge: pledgeId })}>
+          href={localPath(`/pledges/${pledgeId}/edit`)}>
           <FontAwesome name="pencil" />
           {' '}
           {this.t('.edit_pledge')}
@@ -26,3 +26,4 @@ export default class PreviewUnconfirmed extends ChildComponent {
     )
   }
 }
+

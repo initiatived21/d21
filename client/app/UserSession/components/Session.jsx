@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
-import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SignInForm from './SignInForm'
 import LoggedIn from './LoggedIn'
+import localPath from '../../lib/browser/localPath'
 
 export default class Session extends ChildComponent {
   static propTypes = {
@@ -48,7 +48,7 @@ export default class Session extends ChildComponent {
       loggedInOrOutComponent = <LoggedIn currentUser={currentUser} />
     }
     else {
-      loggedInOrOutComponent = <SignInForm formData={{ action: I18n.t('paths.create_session'),
+      loggedInOrOutComponent = <SignInForm formData={{ action: localPath('/users/sign_in'),
         model: 'user' }} />
     }
 

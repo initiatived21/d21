@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import { FormButton } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import localPath from '../../lib/browser/localPath'
 
 export default class PreviewDraft extends ChildComponent {
   static propTypes = {
@@ -20,14 +20,14 @@ export default class PreviewDraft extends ChildComponent {
         </p>
         <p>
           {this.t('.legal.part1')}
-          <a href={I18n.t('paths.terms')}>{this.t('.legal.terms')}</a>
+          <a href={localPath('/terms')}>{this.t('.legal.terms')}</a>
           {this.t('.legal.part2')}
-          <a href={I18n.t('paths.privacy')}>{this.t('.legal.privacy')}</a>
+          <a href={localPath('/privacy')}>{this.t('.legal.privacy')}</a>
           {this.t('.legal.part3')}
         </p>
 
         <a className="o-btn c-btn c-btn--tertiary u-mt-small"
-          href={I18n.t('paths.edit_pledge', { pledge: pledgeId })}>
+          href={localPath(`/pledges/${pledgeId}/edit`)}>
           <FontAwesome name="pencil" />
           {' '}
           {this.t('.edit_pledge')}
