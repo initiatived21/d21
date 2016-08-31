@@ -192,6 +192,8 @@ en:
   StateFooter:
     contact: Contact signers
     delete: Delete
+    delete_confirmation: Are you sure to delete this pledge?
+    delete_confirmation_active: This pledge is already published. Are you sure to delete it?
     edit: Edit
     republish: Republish
   StateHeader:
@@ -347,17 +349,17 @@ en:
         paragraph3: 
         paragraph4: 
         user_subject: Confirmation instructions
+      password_change:
+        greeting: 
+        paragraph1: We're contacting you to notify you that your password has been changed.
       reset_password_instructions:
-        user_subject: Reset password instructions
         edit_password_link: Change my password
         greeting: 
         paragraph1: Someone has requested a link to change your password. You can do this through the link below.
         paragraph2: |-
           If you didn't request this, please ignore this email.
           Your password won't change until you access the link above and create a new one.
-      password_change:
-        greeting: 
-        paragraph1: We're contacting you to notify you that your password has been changed.
+        user_subject: Reset password instructions
       unlock_instructions:
         greeting: 
         paragraph1: |-

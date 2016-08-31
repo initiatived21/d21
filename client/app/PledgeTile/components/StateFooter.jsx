@@ -9,10 +9,11 @@ export default class StateFooter extends ChildComponent {
     pledgeId: PropTypes.number.isRequired,
     showEditButton: PropTypes.bool,
     showDeleteButton: PropTypes.bool,
+    deleteConfirmationMessage: PropTypes.string,
   }
 
   render() {
-    const { pledgeId, showEditButton, showDeleteButton } = this.props
+    const { pledgeId, showEditButton, showDeleteButton, deleteConfirmationMessage } = this.props
 
     const editButton = showEditButton ? (
       <a className="o-btn c-btn c-btn--tertiary u-mt-small"
@@ -27,7 +28,9 @@ export default class StateFooter extends ChildComponent {
       <FormButton
         className="o-btn c-btn c-btn--secondary u-mt-small"
         action={localPath(`/pledges/${pledgeId}`)}
-        method="DELETE">
+        method="DELETE"
+        confirm={deleteConfirmationMessage}
+        >
         <FontAwesome name="trash-o" />
         {' '}
         {this.t('.delete')}

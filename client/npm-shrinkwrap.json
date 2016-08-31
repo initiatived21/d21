@@ -4130,9 +4130,9 @@
       "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-1.0.1.tgz"
     },
     "rform": {
-      "version": "0.2.2",
-      "from": "rform@0.2.2",
-      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.2.tgz",
+      "version": "0.2.3",
+      "from": "rform@0.2.3",
+      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.3.tgz",
       "dependencies": {
         "lodash": {
           "version": "4.15.0",
