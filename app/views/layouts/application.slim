@@ -11,6 +11,7 @@ html lang=I18n.locale
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"
+    link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"
 
     - unless params['nojs'] == '1'
       = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
@@ -18,7 +19,7 @@ html lang=I18n.locale
       javascript:
         I18n.locale = '#{I18n.locale}';
 
-    = render 'layouts/partials/google_analytics'  
+    = render 'layouts/partials/google_analytics'
 
   body
     = render '/layouts/partials/header'
