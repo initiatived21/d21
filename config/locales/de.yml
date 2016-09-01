@@ -27,6 +27,14 @@ de:
     my_data: Meine Daten
     my_pledges: Meine Versprechen
     welcome: Willkommen,
+  Menu:
+    items:
+      about: Über uns
+      blog: Blog
+      howitworks: So funktioniert's
+      new_pledge: Ich versprech's
+      press: Press
+      start: Start
   PaginatedSearchResults:
     show_more: Mehr anzeigen…
   PledgeCommentList:
@@ -149,10 +157,8 @@ de:
     description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
   SearchBar:
-    facebook_title: Bunt und Verbindlich auf Facebook
     search_placeholder: nach Schlagwörtern suchen
     search_title: Suchen
-    twitter_title: Bunt und Verbindlich auf Twitter
   SecondaryNav:
     contact_link: Kontakt
     faq_link: FAQ
@@ -180,6 +186,9 @@ de:
   SigneeList:
     heading: Unterzeichner
     no_signees: Es gibt noch keine Unterzeichner.
+  SocialMediaIcons:
+    facebook_title: Bunt und Verbindlich auf Facebook
+    twitter_title: Bunt und Verbindlich auf Twitter
   StateFooter:
     contact: Unterzeichner kontaktieren
     delete: Löschen
@@ -233,6 +242,7 @@ de:
         created_at: Created at
         id: Id
         pledge: Pledge
+        pledge_id: Pledge
         response: Response
         updated_at: Updated at
       pledge:
@@ -424,6 +434,9 @@ de:
         notice: 
   formtastic:
     actions:
+      comment:
+        edit:
+          update: 
       pledge:
         edit:
           update: 
@@ -449,6 +462,11 @@ de:
         new:
           email: 
           password: 
+      comment:
+        edit:
+          content: 
+          pledge: 
+          response: 
       pledge:
         edit:
           aasm_state: 
@@ -489,6 +507,11 @@ de:
           name: 
           organization: 
     labels:
+      comment:
+        edit:
+          content: 
+          pledge: 
+          response: 
       pledge:
         edit:
           aasm_state: 
@@ -577,6 +600,10 @@ de:
         new:
           email: 
           password: 
+      comment:
+        edit:
+          content: 
+          response: 
       pledge:
         edit:
           aasm_state: 
@@ -629,6 +656,11 @@ de:
           organization: 
   helpers:
     label:
+      comment:
+        edit:
+          content: 
+          pledge: 
+          response: 
       pledge:
         edit:
           aasm_state: 
@@ -750,14 +782,19 @@ de:
         about_link: 
         blog_link: 
         contact_link: 
+        facebook_title: 
         faq_link: 
         howitworks_link: 
         login: Anmelden
+        logo_title: 
         new_pledge_link: 
         newsletter_link: 
         press_link: 
         search_link: 
+        search_placeholder: 
+        search_title: 
         start_link: 
+        twitter_title: 
   pages:
     faq:
       answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."

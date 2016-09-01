@@ -6,36 +6,36 @@
  *
  */
 
-.c-search-bar__social-media {
-  margin-top: 2px;
-  margin-right: $spacing--small;
+.c-search-bar {
+  display: flex;
 
-  display: inline-block;
-
-  @include media-query(s) {
-    display: none;
+  @include media-query(m) {
+    display: block;
+    float: right;
+    margin-top: $spacing;
   }
 }
 
-.c-search-bar__form {
-  display: inline-block;
-
-  vertical-align: top;
-}
-
 .c-search-bar__input {
-  border: 1px solid #999;
-  border-radius: 5px;
+  flex-grow: 1;
+
+  margin-right: $spacing--tiny;
+
+  border: 1px solid $gray;
+  border-radius: $border-radius;
 
   padding-left: $spacing--small;
   padding-right: $spacing--small;
 
-  width: 20em;
-  height: 40px;
-
   vertical-align: top;
 
+  height: $input-height;
+
   background-color: transparent;
+
+  @include media-query(m) {
+    width: 20em;
+  }
 }
 
 .c-search-bar__submit {
@@ -43,6 +43,6 @@
 
   &.c-btn > .fa {
     margin-right: 0;
-    @include font-size(18px, 1);
+    @include font-size(20px, 1);
   }
 }

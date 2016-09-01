@@ -5,7 +5,7 @@ import localPath from '../../lib/browser/localPath'
 export default class HeaderLogo extends ChildComponent {
   render() {
     return (
-      <a className="c-page-head__logo u-fl" href={localPath('/')}>
+      <a className="c-page-head__logo" href={localPath('/')}>
         <svg xmlns="http://www.w3.org/2000/svg" width="417" height="76" viewBox="0 0 417 76" xmlnsXlink="http://www.w3.org/1999/xlink">
           <title>{this.t('.title')}</title>
           <defs>

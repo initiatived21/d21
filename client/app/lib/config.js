@@ -27,3 +27,6 @@ export const NUM_RESULTS_PAGINATION = 3
 /* UI Behaviour, related to CSS */
 export const TRANSITION_TIME = 250
 export const FLASH_DISPLAY_TIME = 2500
+
+export const BREAKPOINT_M = 720
+export const BREAKPOINT_L = 992

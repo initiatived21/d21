@@ -13,7 +13,7 @@
  */
 
 .c-session {
-  display: inline-block;
+  float: left;
 
   position: relative;  /* [3] */
 }
@@ -29,25 +29,11 @@
 .c-session__toggle {
   display: inline-block;
 
-  @include font-size(16px, 1.5);
-  background-color: $primary-color;
-
-  height: 40px;
-
-  margin-left: $spacing;
-
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 
-  > svg {
-    width: 20px;
-    height: 20px;
-    vertical-align: -4px;
-
-    fill: $white;
-  }
+  padding-left: 14px;
+  padding-right: 14px;
 
   user-select: none;
 }

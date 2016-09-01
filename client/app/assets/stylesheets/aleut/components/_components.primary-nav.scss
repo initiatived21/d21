@@ -7,13 +7,9 @@
  */
 
 .c-primary-nav {
+  clear: both;
+
   @include font-size(19px, 1.5);
-
-  margin-top: $spacing;
-
-  @include media-query(s) {
-    display: none;
-  }
 }
 
 .c-primary-nav__link {

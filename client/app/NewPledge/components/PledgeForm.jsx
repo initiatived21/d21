@@ -13,6 +13,7 @@ import DateInput from '../../Inputs/wrappers/DateInputWrapper'
 import Tooltip from '../../Tooltip/components/Tooltip'
 import UserForm from '../../UserForm/components/UserForm'
 import PledgeFormHelp from './PledgeFormHelp'
+import { BREAKPOINT_L } from '../../lib/config'
 
 export default class PledgeForm extends ChildComponent {
   static propTypes = {
@@ -51,10 +52,10 @@ export default class PledgeForm extends ChildComponent {
           <PledgeContentInputs />
 
           <div className="o-sidebar o-sidebar--right u-1/3@l u-pl-small@l">
-            <MediaQuery maxWidth={991}>
+            <MediaQuery maxWidth={BREAKPOINT_L - 1}>
               <PledgeFormHelp controls />
             </MediaQuery>
-            <MediaQuery minWidth={992}>
+            <MediaQuery minWidth={BREAKPOINT_L}>
               <PledgeFormHelp />
             </MediaQuery>
           </div>

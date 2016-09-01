@@ -25,7 +25,7 @@ export default class Session extends ChildComponent {
     if (currentUser) {
       button = (
         <a href="#" onClick={onLoginClick}
-          className="c-session__toggle o-btn o-btn--small c-btn c-btn--primary">
+          className="c-session__toggle o-btn c-btn c-btn--primary">
           <FontAwesome name="user" />
           {' '}
           {this.t('.my_account')}
@@ -35,7 +35,7 @@ export default class Session extends ChildComponent {
     else {
       button = (
         <a href="#" onClick={onLoginClick}
-          className="c-session__toggle o-btn o-btn--small c-btn c-btn--primary">
+          className="c-session__toggle o-btn c-btn c-btn--primary">
           <FontAwesome name="sign-in" />
           {' '}
           {this.t('.sign_in')}

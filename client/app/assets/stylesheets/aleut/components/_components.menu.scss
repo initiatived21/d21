@@ -8,21 +8,19 @@
 
 $menu-width: 250px;
 
-.c-menu__root-element {
-  display: block;
-  float: left;
-}
-
 .c-menu {
   display: block;
+  float: left;
 
   > div {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     top: 0;
     left: $menu-width * -1;
     width: $menu-width;
     height: 100%;
+
+    padding-top: 48px;
 
     //font-weight: bold;
     @include font-size(18px, 1.5);
@@ -38,16 +36,31 @@ $menu-width: 250px;
   }
 }
 
-.c-menu__button {
-  @include font-size(30px, 1);
-  color: $primary-color;
+.c-menu__button.c-btn {
+  display: inline-block;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 5px 10px;
+
+  @include font-size(24px, 1);
+
+  > span {
+    margin-right: 0;
+  }
 }
 
 .c-menu__close {
+  position: absolute;
+  top: -6px;
+  left: 12px;
+
+  padding: 10px;
+
   display: block;
-  @include font-size(30px, 1);
+
+  @include font-size(24px, 1);
   color: $white;
-  text-align: left;
 }
 
 .c-menu__item {
@@ -66,17 +79,11 @@ $menu-width: 250px;
 
   transition: transform ease 50ms;
 
-  &:hover {
-    background-color: $primary-color-highlight;
-
+  &:hover, &:active {
     transform: translate3d(5px, 0, 0);
   }
 }
 
 .c-menu__item--active {
   background-color: $tertiary-color;
-
-  &:hover {
-    background-color: $tertiary-color-highlight;
-  }
 }

@@ -15,7 +15,7 @@ export default class SecondaryNav extends ChildComponent {
     const { authToken, currentUser } = this.props
 
     return (
-      <nav className="c-secondary-nav u-tr">
+      <nav className="c-secondary-nav">
         <ul className="c-secondary-nav__info o-list-inline o-list-inline--delimited">
           <li className="c-secondary-nav__item">
             <a className="c-secondary-nav__link" href={localPath('/contact')}>

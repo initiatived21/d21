@@ -7,16 +7,38 @@
  */
 
 .c-page-head {
-  padding-bottom: 1px;
-  border-bottom: 1px solid $primary-color;
-}
+  padding-bottom: $spacing--small;
 
-.c-page-head__logo > svg {
-  @include media-query(s) {
-    width: 300px;
+  @include media-query(m) {
+    padding-bottom: 1px;
+    border-bottom: 1px solid $primary-color;
   }
 }
 
-.c-page-head__main {
-  @include clearfix;
+.c-page-head__logo {
+  clear: both;
+
+  margin-bottom: $spacing--small;
+
+  display: block;
+
+  width: 100%;
+  max-width: 417px;
+
+  @include media-query(m) {
+    float: left;
+    margin-bottom: $spacing;
+  }
+
+  > svg {
+    width: 100%;
+  }
+}
+
+.c-page-head__social-media {
+  display: block;
+  float: right;
+
+  margin-top: $spacing + 3px;
+  margin-right: $spacing--small;
 }

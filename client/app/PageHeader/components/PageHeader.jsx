@@ -1,11 +1,15 @@
 import React, { PropTypes } from 'react'
 import RootComponent from '../../lib/Base/components/RootComponent'
 import { Provider } from 'react-redux'
+import MediaQuery from 'react-responsive'
 import store from '../../lib/store'
 import PrimaryNav from './PrimaryNav'
 import SecondaryNav from './SecondaryNav'
 import HeaderLogo from './HeaderLogo'
+import SocialMediaIcons from './SocialMediaIcons'
 import SearchBar from './SearchBar'
+import Menu from './Menu'
+import { BREAKPOINT_M } from '../../lib/config'
 
 export default class PageHeader extends RootComponent {
   static propTypes = {
@@ -29,14 +33,18 @@ export default class PageHeader extends RootComponent {
     return (
       <Provider store={store}>
         <div className="o-wrapper">
+          <MediaQuery maxWidth={BREAKPOINT_M - 1}>
+            <Menu controller={controller} action={action} />
+          </MediaQuery>
           <SecondaryNav authToken={authToken} currentUser={currentUser} />
-
-          <div className="c-page-head__main">
-            <HeaderLogo />
-            <SearchBar />
-          </div>
-
-          <PrimaryNav controller={controller} action={action} />
+          <HeaderLogo />
+          <SearchBar />
+          <MediaQuery minWidth={BREAKPOINT_M}>
+            <SocialMediaIcons />
+          </MediaQuery>
+          <MediaQuery minWidth={BREAKPOINT_M}>
+            <PrimaryNav controller={controller} action={action} />
+          </MediaQuery>
         </div>
       </Provider>
     )

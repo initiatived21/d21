@@ -15,4 +15,5 @@ translations:
       "*.PledgeTileFront.*", "*.PreviewExplanation.*", "*.PreviewDraft.*",
       "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
+      "*.Menu.*", "*.SocialMediaIcons.*",
       "*.rform.*", "*.paths.*", "*.tags.*"]
