@@ -347,8 +347,19 @@ de:
         paragraph3: Wir werden Ihr Versprechen prüfen und auf der Plattform freischalten. Sie erhalten dazu eine Benachrichtigung.
         paragraph4: Zusätzlich können Sie den Status Ihres Versprechens in Ihrem Profil einsehen.
         user_subject: Registrierung abschliessen
+      password_change:
+        greeting: Liebe/r %{email}
+        paragraph1: Wir teilen Ihnen mit, dass Ihr Passwort erfolgreich geändert wurde.
       reset_password_instructions:
-        user_subject: Reset password instructions
+        edit_password_link: Neues Passwort erstellen
+        greeting: Liebe/r %{email}
+        paragraph1: 'Sie haben ein neues Passwort angefordert. Um ein neues Passwort zu erstellen, folgen Sie bitte folgendem Link:'
+        paragraph2: Wenn Sie diese Email nicht angefordert haben, können Sie sie ignorieren. Ihr Passwort wird nicht geändert, solange Sie nicht den obigen Link benutzen.
+        user_subject: Neues Passwort erstellen
+      unlock_instructions:
+        greeting: Liebe/r %{email}
+        paragraph1: 'Ihr Nutzerkonto wurde gesperrt, da es zu viele Versuche gab, sich einzuloggen. Klicken Sie auf den folgenden Link, um Ihr Konto wieder zu entsperren:'
+        unlock_link: Mein Konto entsperren
     passwords:
       edit:
         change_password: Mein Passwort ändern
