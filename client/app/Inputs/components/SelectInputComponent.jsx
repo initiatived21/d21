@@ -13,7 +13,6 @@ export default class SelectInputComponent extends Component {
     options: PropTypes.array.isRequired,
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    formObject: PropTypes.object.isRequired,
   }
 
   render() {

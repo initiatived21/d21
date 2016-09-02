@@ -6,8 +6,7 @@ export default class NumberInputComponent extends Component {
   static propTypes = {
     model: PropTypes.string, // required, but injection later is ok
     attribute: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
-    defaultValue: PropTypes.number.isRequired,
+    value: PropTypes.number,
     min: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
     noLabel: PropTypes.bool,

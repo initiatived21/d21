@@ -2,8 +2,10 @@ import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 import ImageCrop from './ImageCrop'
-import { IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED, IMAGE_STATE_CROPPED } from
-  '../reducers/imageInputReducer'
+import {
+  IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
+  IMAGE_STATE_CROPPED
+} from '../reducers/imageInputReducer'
 
 export default class ImageInputComponent extends ChildComponent {
   static propTypes = {

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
+import isNil from 'lodash/isNil'
 import { updateAction } from 'rform'
 import NumberInputComponent from '../components/NumberInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
   const formId = ownProps.formId
-  const attrs = ownProps.formObject.attributes
 
   // get saved & server provided errors, concat them together
   let errors = null
@@ -15,20 +15,31 @@ const mapStateToProps = function(state, ownProps) {
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
-  let value = null
-  const { defaultValue } = ownProps
-
-  if (ownProps.submodel && attrs[ownProps.submodel]) {
-    value = attrs[ownProps.submodel][ownProps.attribute]
-    if (value === null) {
-      value = defaultValue
-    }
-  } else {
-    value = attrs[ownProps.attribute]
-    if (value === null) {
-      value = defaultValue
-    }
+  let value = ownProps.defaultValue
+  const attrs = state[ownProps.formId]
+  if (
+    attrs && ownProps.submodel && attrs[ownProps.submodel] &&
+    !isNil(attrs[ownProps.submodel][ownProps.attribute])
+  ) {
+    value = Number(attrs[ownProps.submodel][ownProps.attribute])
+  } else if (attrs && !isNil(attrs[ownProps.attribute])) {
+    value = Number(attrs[ownProps.attribute])
   }
+
+  // let value = null
+  // const { defaultValue } = ownProps
+  //
+  // if (attrs && ownProps.submodel && attrs[ownProps.submodel]) {
+  //   value = attrs[ownProps.submodel][ownProps.attribute]
+  //   if (value === null) {
+  //     value = defaultValue
+  //   }
+  // } else if (attrs) {
+  //   value = attrs[ownProps.attribute]
+  //   if (value === null) {
+  //     value = defaultValue
+  //   }
+  // }
 
   return {
     errors,

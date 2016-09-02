@@ -141,8 +141,8 @@ class PledgesController < ApplicationController
       format.json do
         render(json: {
           status: 'success',
-          redirect: commit_based_return_url,
-          changes: { pledge: @form.model }
+          changes: { pledge: @form.model },
+          meta: {redirect: commit_based_return_url}
         })
       end
       format.html do
@@ -175,7 +175,7 @@ class PledgesController < ApplicationController
       format.json do
         render json: {
           status: 'success',
-          redirect: commit_based_return_url,
+          meta: {redirect: commit_based_return_url}
         }
       end
       format.html do
