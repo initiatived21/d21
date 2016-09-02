@@ -348,7 +348,23 @@ en:
         paragraph4: 
         user_subject: Confirmation instructions
       reset_password_instructions:
-        user_subject: 
+        user_subject: Reset password instructions
+        edit_password_link: Change my password
+        greeting: 
+        paragraph1: Someone has requested a link to change your password. You can do this through the link below.
+        paragraph2: |-
+          If you didn't request this, please ignore this email.
+          Your password won't change until you access the link above and create a new one.
+      password_change:
+        greeting: 
+        paragraph1: We're contacting you to notify you that your password has been changed.
+      unlock_instructions:
+        greeting: 
+        paragraph1: |-
+          Your account has been locked due to an excessive number of unsuccessful sign in attempts.
+
+          Click the link below to unlock your account:
+        unlock_link: Unlock my account
     passwords:
       edit:
         change_password: Change my password

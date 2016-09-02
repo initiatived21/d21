@@ -10,4 +10,8 @@ export default class NewAnswerFormObject extends FormObject {
   static get model() {
     return 'comment'
   }
+
+  validation() {
+    this.required('response').filled({'max_size?': 650})
+  }
 }

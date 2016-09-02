@@ -11,4 +11,9 @@ export default class UserFormObject extends FormObject {
   static get model() {
     return 'user'
   }
+
+  validation() {
+    this.required('name').filled()
+    this.required('email').filled()
+  }
 }

@@ -10,4 +10,8 @@ export default class NewUpdateFormObject extends FormObject {
   static get model() {
     return 'update'
   }
+
+  validation() {
+    this.required('content').filled({'max_size?': 1300})
+  }
 }

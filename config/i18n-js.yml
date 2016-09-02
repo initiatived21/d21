@@ -16,4 +16,4 @@ translations:
       "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
       "*.Menu.*", "*.SocialMediaIcons.*",
-      "*.rform.*", "*.paths.*", "*.tags.*"]
+      "*.rform.*", "*.paths.*", "*.tags.*", "*.errors.*"]

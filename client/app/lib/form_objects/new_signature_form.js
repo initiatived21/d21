@@ -10,4 +10,9 @@ export default class NewSignatureFormObject extends FormObject {
   static get model() {
     return 'signature'
   }
+
+  validation() {
+    this.required('name').filled({'size?': [2, 32]})
+    this.required('email').filled({'size?': [2, 32]})
+  }
 }

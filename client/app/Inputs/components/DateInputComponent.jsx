@@ -19,7 +19,7 @@ export default class SelectInputComponent extends Component {
   render() {
     const {
       selected, name, onChange, placeholder, minDate, maxDate, locale,
-      dateFormat
+      dateFormat, onBlur,
     } = this.props
 
     return (
@@ -32,6 +32,7 @@ export default class SelectInputComponent extends Component {
         maxDate={maxDate}
         locale={locale}
         onChange={onChange}
+        onBlur={onBlur}
       />
     )
   }

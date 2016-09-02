@@ -36,7 +36,7 @@ export default class PledgeForm extends ChildComponent {
 
     return(
       <Form
-        multipart ajax
+        multipart ajax requireValid
         className="c-new-pledge"
         formObjectClass={formObjectClass}
         id={formId}
