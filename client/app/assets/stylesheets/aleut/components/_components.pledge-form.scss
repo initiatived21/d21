@@ -51,7 +51,13 @@
 
 .c-pledge-form__group1 {
   display: flex;
+  flex-direction: column;
+
   margin-bottom: $spacing--small;
+
+  @include media-query(m) {
+    flex-direction: row;
+  }
 }
 
 .c-pledge-form__group1-1 {
@@ -79,7 +85,13 @@
 
 .c-pledge-form__group2 {
   display: flex;
+  flex-direction: column;
+
   margin-bottom: $spacing--small;
+
+  @include media-query(m) {
+    flex-direction: row;
+  }
 }
 
 .c-pledge-form__group2-1 {
@@ -101,8 +113,11 @@
 }
 
 .c-pledge-form__part6 {
-  margin-left: 1rem;
   margin-right: 1.4rem;
+
+  @include media-query(m) {
+    margin-left: 1rem;
+  }
 }
 
 .c-pledge-form__group3 {
