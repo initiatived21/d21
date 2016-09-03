@@ -83,10 +83,10 @@ describe PledgesController do
   describe 'PATCH finalize' do
     it 'must call finalize! on the pledge with the given id' do
       sign_in users(:pledger)
-      spyPledge = Pledge.new(initiator: users(:pledger), id: 99)
-      Pledge.stubs(:find).with('99').returns spyPledge
-      Pledge.stubs(:find).with(99).returns spyPledge
-      spyPledge.expects(:finalize!)
+      spy_pledge = Pledge.new(initiator: users(:pledger), id: 99)
+      Pledge.stubs(:find).with('99').returns spy_pledge
+      Pledge.stubs(:find).with(99).returns spy_pledge
+      spy_pledge.expects(:finalize!)
 
       patch :finalize, params: { locale: 'de', id: '99' }
       assert_response 302

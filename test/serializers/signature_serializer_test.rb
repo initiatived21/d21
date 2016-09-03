@@ -14,7 +14,7 @@ describe SignatureSerializer do
       anonymous: false,
       reason: 'basicSignatureReason',
       name: 'basicSignatureName',
-      email: 'basicSignatureEmail@example.org',
+      email: 'basicSignatureEmail@example.org'
     )
   end
 end

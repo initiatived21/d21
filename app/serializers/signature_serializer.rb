@@ -4,7 +4,5 @@ class SignatureSerializer < ActiveModel::Serializer
 
   attribute :name, unless: :anonymous?
 
-  def anonymous?
-    object.anonymous?
-  end
+  delegate :anonymous?, to: :object
 end

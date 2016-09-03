@@ -139,11 +139,13 @@ class PledgesController < ApplicationController
     sign_in @form.model.initiator unless current_user
     respond_to do |format|
       format.json do
-        render(json: {
-          status: 'success',
-          changes: { pledge: @form.model },
-          meta: {redirect: commit_based_return_url}
-        })
+        render(
+          json: {
+            status: 'success',
+            changes: { pledge: @form.model },
+            meta: { redirect: commit_based_return_url }
+          }
+        )
       end
       format.html do
         if params[:commit] == 'save_draft'
@@ -156,7 +158,14 @@ class PledgesController < ApplicationController
 
   def create_failed!
     respond_to do |format|
-      format.json { render json: { status: 'formErrors', errors: @form.errors.messages } }
+      format.json do
+        render(
+          json: {
+            status: 'formErrors',
+            errors: @form.errors.messages
+          }
+        )
+      end
       format.html { new }
     end
   end
@@ -175,7 +184,7 @@ class PledgesController < ApplicationController
       format.json do
         render json: {
           status: 'success',
-          meta: {redirect: commit_based_return_url}
+          meta: { redirect: commit_based_return_url }
         }
       end
       format.html do
@@ -208,7 +217,7 @@ class PledgesController < ApplicationController
         authToken: form_authenticity_token,
         model: 'pledge',
         seedData: @form.as_json,
-        method: method,
+        method: method
       },
       id: params['id'],
       tags: Tag.all

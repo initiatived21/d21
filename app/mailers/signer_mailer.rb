@@ -43,14 +43,14 @@ class SignerMailer < ApplicationMailer
 
   def single_pledge_successful recipient, pledge
     @recipient = recipient
-    @pledge = Pledge.find(pledge_id)
+    @pledge = pledge
 
     mail(subject: t('.subject'), to: @recipient.email).deliver
   end
 
   def single_pledge_failed recipient, pledge
     @recipient = recipient
-    @pledge = Pledge.find(pledge_id)
+    @pledge = pledge
 
     mail(subject: t('.subject'), to: @recipient.email).deliver
   end

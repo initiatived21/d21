@@ -50,5 +50,4 @@ class FinishPledgeTest < ActiveSupport::TestCase
     end
     past_but_inactive.reload.aasm_state.must_equal 'failed'
   end
-
 end

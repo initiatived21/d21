@@ -26,4 +26,3 @@ class PledgePolicy < ApplicationPolicy
     @record.initiator == @user
   end
 end
-

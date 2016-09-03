@@ -54,15 +54,16 @@ describe CommentsController do
       it 'should save and redirect for HTML' do
         Comment.any_instance.expects(:save)
         patch :update,
-          params: { locale: 'de', id: comment.id, comment: comment_params }
+              params: { locale: 'de', id: comment.id, comment: comment_params }
         assert_response 302
         assert_redirected_to '/de/pledges/1'
       end
 
       it 'should save and render for JSON' do
         Comment.any_instance.expects(:save)
-        patch :update, format: :json,
-          params: { locale: 'de', id: comment.id, comment: comment_params }
+        patch :update,
+              format: :json,
+              params: { locale: 'de', id: comment.id, comment: comment_params }
         assert_response 200
       end
     end
@@ -71,15 +72,16 @@ describe CommentsController do
       it 'wont save and redirect for HTML' do
         Comment.any_instance.expects(:save).never
         patch :update,
-          params: { locale: 'de', id: comment.id, comment: { foo: 'bar' } }
+              params: { locale: 'de', id: comment.id, comment: { foo: 'bar' } }
         assert_response 302
         assert_redirected_to '/de/pledges/1'
       end
 
       it 'wont save and render for JSON' do
         Comment.any_instance.expects(:save).never
-        patch :update, format: :json,
-          params: { locale: 'de', id: comment.id, comment: { foo: 'bar' } }
+        patch :update,
+              format: :json,
+              params: { locale: 'de', id: comment.id, comment: { foo: 'bar' } }
         assert_response 200
       end
     end

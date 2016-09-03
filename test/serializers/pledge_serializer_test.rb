@@ -17,7 +17,7 @@ describe PledgeSerializer do
       signatures_count: 0,
       aasm_state: 'active',
       created_at: pledge.created_at,
-      image: {url: nil},
+      image: { url: nil },
       user_id: 1,
       recommended: false,
       initiator: {

@@ -3,7 +3,7 @@ class BasePledgeForm < Reform::Form
 
   property :title
   property :content
-  property :amount, prepopulator: -> (options) { self.amount = 3 }
+  property :amount, prepopulator: -> (_options) { self.amount = 3 }
   property :who
   property :requirement
   property :location
@@ -22,6 +22,6 @@ class BasePledgeForm < Reform::Form
     required(:who).filled(max_size?: 65)
     required(:requirement).filled(max_size?: 95)
     required(:location).filled(max_size?: 50)
-    required(:deadline).filled(:date?, gt?: Date.today)
+    required(:deadline).filled(:date?, gt?: Time.zone.today)
   end
 end
