@@ -13,7 +13,7 @@ class FaqCell < Cell::ViewModel
     i = 1
     set = {}
 
-    while translation = translations[:"question#{i}"]
+    while (translation = translations[:"question#{i}"])
       set[markdown.render(translation)] = markdown.render(translations[:"answer#{i}"])
       i += 1
     end

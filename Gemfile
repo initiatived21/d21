@@ -66,7 +66,7 @@ gem 'mini_magick'
 # Admin Backend
 gem 'activeadmin', github: 'activeadmin'
 # solves a pagination issue with active admin
-gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
+gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'
 
 # Worker
 gem 'sidekiq'
