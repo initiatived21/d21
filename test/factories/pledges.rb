@@ -15,5 +15,9 @@ FactoryGirl.define do
     trait :active do
       aasm_state 'active'
     end
+
+    trait :failed do
+      aasm_state 'failed'
+    end
   end
 end

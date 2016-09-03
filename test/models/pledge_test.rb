@@ -162,9 +162,9 @@ describe Pledge do
           pledge.past_deadline?.must_equal true
         end
 
-        it 'should be true when deadline is exactly current date' do
+        it 'should be false when deadline is exactly current date' do
           pledge.deadline = Time.zone.now.to_date
-          pledge.past_deadline?.must_equal true
+          pledge.past_deadline?.must_equal false
         end
 
         it 'should be false when deadline is after current date' do

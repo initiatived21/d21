@@ -1,0 +1,4 @@
+finish_pledges_job:
+  cron: "0 2 * * * Europe/Berlin" # every day at 02:00
+  class: "FinishPledgesWorker"
+  queue: default

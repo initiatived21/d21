@@ -1,0 +1,12 @@
+p= t('.greeting', name: @pledge.initiator.name)
+
+p
+  | TODO: Dein Versprechen war erfolgreich.
+
+p
+  = t('application_mailer.farewell')
+  br
+  = t('application_mailer.signed')
+
+p
+  = t('application_mailer.impressum')

@@ -1,0 +1,12 @@
+p= t('.greeting', name: @recipient.try(:name))
+
+p
+  | TODO: Das von dir unterzeichnete Versprechen war nicht erfolgreich.
+
+p
+  = t('application_mailer.farewell')
+  br
+  = t('application_mailer.signed')
+
+p
+  = t('application_mailer.impressum')

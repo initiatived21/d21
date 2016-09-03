@@ -47,6 +47,13 @@ Rails.application.routes.draw do
   # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'
 
+  # Sidekiq Web UI
+  require 'sidekiq/web'
+  require 'sidekiq/cron/web'
+  authenticate :admin_user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   # Unlocalized unknown paths are forwarded to the German 404
   match '*path', to: 'pages#not_found', via: :all
 end

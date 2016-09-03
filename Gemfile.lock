@@ -323,6 +323,7 @@ GEM
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.12.0)
+    mustermann (1.0.0.beta2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
@@ -369,10 +370,11 @@ GEM
       activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (2.0.0.rc1)
-      json
+    rack (2.0.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
+    rack-protection (2.0.0.beta2)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.rc1)
@@ -441,6 +443,8 @@ GEM
       rainbow (~> 2.1)
     redcarpet (3.3.4)
     redis (3.3.0)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     ref (2.0.0)
     reform (2.2.1)
       disposable (>= 0.3.0, < 0.4.0)
@@ -464,6 +468,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-graphviz (1.2.2)
     ruby-progressbar (1.8.1)
+    rufus-scheduler (3.2.2)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -479,11 +484,24 @@ GEM
     shoulda-context (1.2.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    sidekiq (4.1.2)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      redis (~> 3.2, >= 3.2.1)
+    sidekiq-cron (0.4.3)
+      redis-namespace (>= 1.5.2)
+      rufus-scheduler (>= 2.0.24)
+      sidekiq (>= 4.0.0)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    sinatra (2.0.0.beta2)
+      mustermann (= 1.0.0.beta2)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0.beta2)
+      tilt (~> 2.0)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -630,7 +648,10 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   shoulda
+  sidekiq
+  sidekiq-cron
   simplecov
+  sinatra (>= 2.0.0.beta2)
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)

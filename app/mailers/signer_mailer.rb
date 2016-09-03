@@ -17,12 +17,41 @@ class SignerMailer < ApplicationMailer
     end
   end
 
+  def pledge_successful pledge_id
+    pledge = Pledge.find(pledge_id)
+    pledge.signatures.all.each do |recipient|
+      single_pledge_successful recipient, pledge
+    end
+  end
+
+  def pledge_failed pledge_id
+    pledge = Pledge.find(pledge_id)
+    pledge.signatures.all.each do |recipient|
+      single_pledge_failed recipient, pledge
+    end
+  end
+
   private
 
   def single_new_pledge_update recipient, update, pledge
     @recipient = recipient
     @update = update
     @pledge = pledge
+
+    mail(subject: t('.subject'), to: @recipient.email).deliver
+  end
+
+  def single_pledge_successful recipient, pledge
+    @recipient = recipient
+    @pledge = Pledge.find(pledge_id)
+
+    mail(subject: t('.subject'), to: @recipient.email).deliver
+  end
+
+  def single_pledge_failed recipient, pledge
+    @recipient = recipient
+    @pledge = Pledge.find(pledge_id)
+
     mail(subject: t('.subject'), to: @recipient.email).deliver
   end
 end

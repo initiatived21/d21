@@ -17,8 +17,10 @@ class Pledge < ApplicationRecord
     state :requested # User wants to activate pledge and requests admin approval
     state :active # Admin has approved, pledge is public
 
-    state :successful # Pledge is past deadline and has sufficient signatures
-    state :failed # Pledge is past deadline but did not receive sufficient signatures
+    state :successful, # Pledge is past deadline and has sufficient signatures
+          after_enter: :successful_enter_side_effects!
+    state :failed, # Pledge is past deadline but did not receive sufficient signatures
+          after_enter: :failed_enter_side_effects!
 
     state :disapproved # Admin did not approve requested pledge or changed their mind
 
@@ -48,7 +50,7 @@ class Pledge < ApplicationRecord
   mount_base64_uploader :image, PledgeImageUploader, file_name: 'pledge_image'
 
   def past_deadline?
-    deadline <= Time.zone.now.to_date
+    deadline < Date.current
   end
 
   def sufficient_signatures?
@@ -61,6 +63,16 @@ class Pledge < ApplicationRecord
 
     # Send new pledge over ActionCable
     PledgeRelayJob.perform_later(self)
+  end
+
+  def successful_enter_side_effects!
+    InitiatorMailer.pledge_successful(id).deliver_later
+    SignerMailer.pledge_successful(id).deliver_later
+  end
+
+  def failed_enter_side_effects!
+    InitiatorMailer.pledge_failed(id).deliver_later
+    SignerMailer.pledge_failed(id).deliver_later
   end
 
   # Search

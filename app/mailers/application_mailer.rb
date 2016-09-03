@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'redaktion@buntundverbindlich.de'
+  SYSTEM_MAIL = 'redaktion@buntundverbindlich.de'
+  default from: SYSTEM_MAIL
   layout 'mailer'
 end

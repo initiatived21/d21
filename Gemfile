@@ -68,8 +68,10 @@ gem 'activeadmin', github: 'activeadmin'
 # solves a pagination issue with active admin
 gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Worker
+gem 'sidekiq'
+gem 'sidekiq-cron'
+gem 'sinatra', '>= 2.0.0.beta2', require: false # for sidekiq web ui
 
 # group :production, :staging do
 #   gem 'rails_12factor'
