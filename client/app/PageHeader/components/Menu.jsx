@@ -25,9 +25,12 @@ class Menu extends ChildComponent {
   handleClick(event) {
     event.preventDefault()
 
-    this.setState({
-      isVisible: !this.state.isVisible
-    })
+    const el = document.getElementById('site-wrapper')
+    el.classList.toggle('show-nav')
+
+    //this.setState({
+    //  isVisible: !this.state.isVisible
+    //})
   }
 
   handleClickOutside() {
@@ -35,6 +38,9 @@ class Menu extends ChildComponent {
   }
 
   hide() {
+    const el = document.getElementById('site-wrapper')
+    el.classList.remove('show-nav')
+
     this.setState({
       isVisible: false
     })

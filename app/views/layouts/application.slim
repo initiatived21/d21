@@ -22,7 +22,16 @@ html lang=I18n.locale
     = render 'layouts/partials/google_analytics'
 
   body
-    = render '/layouts/partials/header'
-    = render '/layouts/partials/flash'
-    = yield
-    = render '/layouts/partials/footer'
+    div.site-wrapper#site-wrapper
+      div.site-canvas
+        div.site-menu
+          h2 My Menu
+          p Put any HTML you want here.
+          ul
+            li Free to scroll up and down
+            li But not left and write
+        div.site-main
+          = render '/layouts/partials/header'
+          = render '/layouts/partials/flash'
+          = yield
+          = render '/layouts/partials/footer'
