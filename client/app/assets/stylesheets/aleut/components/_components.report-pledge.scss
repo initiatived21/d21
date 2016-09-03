@@ -7,20 +7,18 @@
  */
 
 .c-report-pledge {
-  margin-bottom: $spacing;
-
   border: 1px solid $gray;
-  border-radius: 5px;
+  border-radius: $border-radius;
 
   background-color: $almost-white;
+
+  @include media-query(s) {
+    margin-bottom: $spacing;
+  }
 }
 
 .c-report-pledge__button {
-  border: none;
-  border-radius: 5px;
-
   background-color: $gray;
-  transition: background-color $transition-time;
 
   &:hover, &:active {
     background-color: $gray-highlight;

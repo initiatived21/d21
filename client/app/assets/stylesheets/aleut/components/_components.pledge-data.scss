@@ -7,23 +7,42 @@
  */
 
 .c-pledge-data {
-  border-top: 1px solid $light-gray;
+  margin-bottom: $spacing--small;
   border-bottom: 1px solid $light-gray;
-
-  padding: $spacing 0;
+  padding-bottom: $spacing;
 
   @include font-size(15px, 1.5);
+
+  @include media-query(s) {
+    padding-bottom: $spacing--small;
+  }
+}
+
+.c-pledge-data__initiator,
+.c-pledge-data__signees {
+  @include media-query(s) {
+    margin-bottom: $spacing--small;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: $spacing--small;
+  }
 }
 
 .c-pledge-data__title {
-  margin-top: 0;
   margin-bottom: $spacing--small;
 
-  @include font-size(18px);
+  @include font-size(14px);
+
   text-transform: uppercase;
-  color: $text-color;
+  color: $mid-dark-gray;
+
+  @include media-query(m) {
+    @include font-size(18px);
+    color: $text-color;
+  }
 }
 
 .c-pledge-data .c-progress-bar {
-  margin-top: 28px;
+  @include media-query(m) {
+    margin-top: 28px;
+  }
 }

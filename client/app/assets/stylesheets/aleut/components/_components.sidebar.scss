@@ -10,6 +10,10 @@
   margin-bottom: $spacing;
   border: 2px solid $primary-color;
   border-radius: $border-radius;
+
+  @include media-query(l) {
+    margin-top: 92px;
+  }
 }
 
 .c-sidebar__title {

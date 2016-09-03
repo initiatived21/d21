@@ -48,7 +48,7 @@ export default class Signee extends ChildComponent {
 
     return (
       <li className="c-signee-list__item">
-        <div className="o-media">
+        <div className="o-media o-media--small">
           <div className="c-signee-list__signee-img o-media__img">
             <CommentAvatar large />
             <span className="c-signee-list__signee-id">
@@ -59,7 +59,7 @@ export default class Signee extends ChildComponent {
             <h3 className="c-signee-list__signee-name">{nameOrAnonymous}</h3>
             <p className="c-signee-list__signee-comment">{reason}</p>
             <p className="c-signee-list__signee-email">{emailOrNothing}</p>
-            <p className="c-signee-list__signee-date">{createdAtStr}</p>
+            <p className="c-signee-list__signee-date"><time>{createdAtStr}</time></p>
           </article>
         </div>
       </li>

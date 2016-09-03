@@ -17,7 +17,7 @@ export default class ReportPledgeForm extends ChildComponent {
         <p>{this.t('.description')}</p>
 
         <FormButton
-          className="c-report-pledge__button o-btn o-btn--small u-mt-small"
+          className="c-report-pledge__button o-btn c-btn u-mt-small"
           action={`/${I18n.locale}/pledges/${id}/reports`}
           method='POST'
         >

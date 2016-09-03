@@ -796,23 +796,6 @@ en:
         sitemap_link: Sitemap
         terms_link: Terms
         twitter_title: Bunt und Verbindlich on Twitter
-      header:
-        about_link: 
-        blog_link: 
-        contact_link: 
-        facebook_title: 
-        faq_link: 
-        howitworks_link: 
-        login: Login
-        logo_title: 
-        new_pledge_link: 
-        newsletter_link: 
-        press_link: 
-        search_link: 
-        search_placeholder: 
-        search_title: 
-        start_link: 
-        twitter_title: 
   pages:
     faq:
       answer1: Translation not yet available.

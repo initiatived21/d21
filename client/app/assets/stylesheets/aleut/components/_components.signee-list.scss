@@ -16,8 +16,8 @@
 
 .c-signee-list__signee-data {
   border-top: 1px solid $light-gray;
-  padding-left: $spacing--tiny;
-  padding-right: $spacing--tiny;
+
+  padding: $spacing--tiny;
 }
 
 .c-signee-list__item:last-of-type .c-signee-list__signee-data {
@@ -29,6 +29,15 @@
   width: $avatar-size + 25px;
 
   margin-top: $spacing--tiny;
+
+  @include media-query(s) {
+    width: 48px + 13px;
+
+    > .c-avatar {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 .c-signee-list__signee-id {
@@ -48,10 +57,16 @@
   text-align: center;
   font-weight: bold;
   @include font-size(20px, 2);
+
+  @include media-query(s) {
+    width: 24px;
+    height: 24px;
+
+    @include font-size(12px, 2);
+  }
 }
 
 .c-signee-list__signee-name {
-  margin-top: $spacing--tiny;
   margin-bottom: $spacing--tiny;
   @include font-size(20px, 1.5);
   color: $primary-color;

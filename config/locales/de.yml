@@ -154,7 +154,7 @@ de:
   QuestionForm:
     submit: Absenden
   ReportPledgeForm:
-    description: Dir ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melde es an unsere Redaktion, und wir überprüfen die Seite.
+    description: Ihnen ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melden Sie es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
   SearchBar:
     search_placeholder: nach Schlagwörtern suchen
@@ -791,23 +791,6 @@ de:
         sitemap_link: Sitemap
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
-      header:
-        about_link: 
-        blog_link: 
-        contact_link: 
-        facebook_title: 
-        faq_link: 
-        howitworks_link: 
-        login: Anmelden
-        logo_title: 
-        new_pledge_link: 
-        newsletter_link: 
-        press_link: 
-        search_link: 
-        search_placeholder: 
-        search_title: 
-        start_link: 
-        twitter_title: 
   pages:
     faq:
       answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."

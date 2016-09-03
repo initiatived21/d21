@@ -6,30 +6,43 @@
  * A component for pledge views
  */
 
-$pledge-view-gray: rgb(60%, 60%, 60%);
-$pledge-view-black: rgb(0%, 0%, 0%);
-$pledge-view-border-color: rgb(70%, 70%, 70%);
-
-$color-white: rgb(100%, 100%, 100%);
-
-.c-pledge-view {
-
+.c-pledge {
+  margin-bottom: $spacing;
 }
 
-.c-pledge-view__text {
-  img {
-    @include media-query(s) {
-      width: 48px;
-      height: 48px;
-    }
+.c-pledge__title {
+  margin-top: $spacing;
+}
+
+.c-pledge__quote {
+  margin-bottom: $spacing--small;
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: $spacing;
+
+  @include media-query(m) {
+    margin-bottom: $spacing;
+  }
+}
+
+.c-pledge__quote > .c-avatar {
+  @include media-query(s) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.c-pledge__text {
+  @include font-size(18px, 1.5);
+  color: $black;
+
+  @include media-query(m) {
+    @include font-size(21px, 1.5);
   }
 }
 
 .c-pledge__created-at {
+  margin-bottom: $spacing;
+
   font-style: italic;
 }
 
-.c-pledge-view__quote {
-  @include font-size(21px, 1.5);
-  color: $black;
-}

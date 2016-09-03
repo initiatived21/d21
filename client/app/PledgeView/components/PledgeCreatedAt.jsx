@@ -16,7 +16,7 @@ export default class PledgeCreatedAt extends ChildComponent {
     )
 
     return (
-      <p className="c-pledge__created-at u-mt-small">
+      <p className="c-pledge__created-at">
         {this.t('.published_on')}
         {' '}
         {createdAtStr}

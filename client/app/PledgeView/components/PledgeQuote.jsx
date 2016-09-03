@@ -16,10 +16,10 @@ export default class PledgeQuote extends ChildComponent {
     const { imagePath, initiatorName, content, amount, who, requirement } = this.props
 
     return (
-      <div className="c-pledge-view__text o-media o-media--small o-media__responsive u-mt u-mb">
+      <div className="c-pledge__quote o-media o-media--small">
         <Avatar className="o-media__img" name={initiatorName} imagePath={imagePath} large />
         <div className="o-media__body">
-          <blockquote className="c-pledge-view__quote">
+          <blockquote className="c-pledge__text">
             {this.t('.promise.part1')} {content}{this.t('.promise.part2')} {amount} {who} {requirement}.
           </blockquote>
         </div>

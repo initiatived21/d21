@@ -60,7 +60,7 @@ export default class Pledge extends ChildComponent {
         <article className="c-pledge">
           <TagList tags={tags} />
           <PledgeLocation>{location}</PledgeLocation>
-          <h1>
+          <h1 className="c-pledge__title">
             {title}
           </h1>
           <PledgeQuote
@@ -79,7 +79,7 @@ export default class Pledge extends ChildComponent {
             signatures_count={signatures_count}
           />
           <SocialMediaButtons
-            className="u-mt-small u-mb"
+            className="u-mb"
             url={DOMAIN_PROD + this.getPledgePath()}
           />
           {pledgeImage}
