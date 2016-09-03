@@ -19,6 +19,7 @@ describe PledgeSerializer do
       created_at: pledge.created_at,
       image: {url: nil},
       user_id: 1,
+      recommended: false,
       initiator: {
         id: 1,
         name: 'pledgerName',
