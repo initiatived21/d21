@@ -7,7 +7,7 @@
  */
 
 .c-new-pledge {
-  margin-top: 36px;
+  margin-top: $spacing;
   margin-bottom: $spacing--large;
 
   h1 {
@@ -16,6 +16,10 @@
 
   label {
     display: inline-block;
+  }
+
+  @include media-query(m) {
+    margin-top: 36px;
   }
 }
 

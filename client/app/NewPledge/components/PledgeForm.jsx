@@ -60,61 +60,64 @@ export default class PledgeForm extends ChildComponent {
             </MediaQuery>
           </div>
 
-          <div className="o-layout o-layout--small u-mb-small">
-            <div className="o-layout__item u-1/4@m">
+          <div className="o-layout o-layout--small u-mb">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="location" />
             </div>
-            <InputSet ariaLabelOnly
-              wrapperClassName="c-input o-layout__item u-2/5@m"
-              attribute="location"
-            />
-            <div className="o-layout__item u-1/5@m">
-              <Tooltip>
-                {this.t('.tooltip.location')}
-              </Tooltip>
+            <div className="c-input o-layout__item u-2/5@m">
+              <div className="o-marginal">
+                <Input className="o-marginal__content" attribute="location" />
+                <Tooltip className="o-marginal__note">
+                  {this.t('.tooltip.location')}
+                </Tooltip>
+              </div>
+              <Errors attribute="location" />
             </div>
           </div>
 
-          <div className="o-layout o-layout--small u-mb-small">
-            <div className="o-layout__item u-1/4@m">
+          <div className="o-layout o-layout--small u-mb">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="deadline" />
             </div>
             <div className="c-input o-layout__item u-2/5@m">
-              <DateInput
-                attribute="deadline"
-                placeholder={this.t('rform.pledge.deadline.placeholder')}
-              />
+              <div className="o-marginal">
+                <DateInput className="o-marginal__content"
+                  attribute="deadline"
+                  placeholder={this.t('rform.pledge.deadline.placeholder')}
+                />
+                <Tooltip className="o-marginal__note">
+                  {this.t('.tooltip.deadline')}
+                </Tooltip>
+              </div>
               <Errors attribute='deadline' />
-            </div>
-            <div className="o-layout__item u-1/5@m">
-              <Tooltip>
-                {this.t('.tooltip.deadline')}
-              </Tooltip>
             </div>
           </div>
 
-          <div className="o-layout o-layout--small">
-
-            <div className="o-layout__item u-1/4@m u-mb-small">
+          <div className="o-layout o-layout--small u-mb">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="title" />
             </div>
             <InputSet ariaLabelOnly
-              wrapperClassName="c-input o-layout__item u-3/4@m u-mb-small"
+              wrapperClassName="c-input o-layout__item u-3/4@m"
               attribute="title"
             />
-            <div className="o-layout__item u-1/4@m u-mb-small">
+          </div>
+
+          <div className="o-layout o-layout--small u-mb">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="description" />
             </div>
             <InputSet ariaLabelOnly
-              wrapperClassName="c-textarea o-layout__item u-3/4@m u-mb-small"
+              wrapperClassName="c-textarea o-layout__item u-3/4@m"
               attribute="description" type="textarea"
             />
+          </div>
 
-            <div className="o-layout__item u-1/4 u-mb-small">
+          <div className="o-layout o-layout--small u-mb">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="image" />
             </div>
-
-            <div className="o-layout__item u-3/4 u-mb-small">
+            <div className="o-layout__item u-3/4@m">
               <div className="o-marginal">
                 <ImageInput
                   className="c-image-input--pledge-image o-marginal__content"
@@ -130,12 +133,13 @@ export default class PledgeForm extends ChildComponent {
                 <Errors attribute='image' />
               </div>
             </div>
+          </div>
 
-            <div className="o-layout__item u-1/4@m">
+          <div className="o-layout o-layout--small">
+            <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="tag_ids" />
             </div>
-
-            <div className="c-input o-layout__item u-3/4@m">
+            <div className="o-layout__item u-3/4@m">
               <SelectInput
                 attribute='tag_ids'
                 options={this.props.availableTags}
@@ -149,7 +153,7 @@ export default class PledgeForm extends ChildComponent {
         {initiatorForm}
 
         <div className="o-layout u-mt-large">
-          <div className="o-layout__item u-1/3@m">
+          <div className="o-layout__item u-1/3@m u-mb@s">
             <Button
               className="c-new-pledge__save-draft o-btn o-btn--small c-btn c-btn--primary u-mb-small"
               commit='save_draft'

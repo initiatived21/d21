@@ -7,7 +7,7 @@
  */
 
 .c-input {
-  > input {
+  input {
     width: 100%;
     padding: $spacing--tiny;
     border: 1px solid $gray;
@@ -16,7 +16,7 @@
     height: $input-height;
   }
 
-  &.has-errors > input {
+  &.has-errors input {
     border: 2px solid $warning-color;
     background-color: $warning-color-background;
   }

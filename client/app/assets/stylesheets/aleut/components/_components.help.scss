@@ -9,13 +9,17 @@
  */
 
 .c-help {
-  margin-top: 13px;  /* [1] */
+  margin-top: $spacing;
   margin-bottom: $spacing;
 
   border: 1px solid $primary-color-lighter;
   border-radius: $border-radius;
 
   color: $text-color;
+
+  @include media-query(l) {
+    margin-top: 13px;  /* [1] */
+  }
 }
 
 .c-help__title {
