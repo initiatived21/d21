@@ -40,9 +40,12 @@
   }
 }
 
+.c-pledge__description {
+  margin-bottom: $spacing;
+}
+
 .c-pledge__created-at {
   margin-bottom: $spacing;
 
   font-style: italic;
 }
-

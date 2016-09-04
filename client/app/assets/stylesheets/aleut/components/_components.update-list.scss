@@ -8,20 +8,23 @@
 
 .c-update-list {
   margin-bottom: $spacing;
-
 }
 
 .c-update-list__item {
-  margin-bottom: $spacing--small;
+  margin-bottom: $spacing;
 }
 
 .c-update-list__item-text {
   border: 1px solid $gray;
-  border-radius: 5px;
+  border-radius: $border-radius;
 
   padding: $spacing--small;
 
   color: $dark-gray;
+
+  @include media-query(s) {
+    margin-bottom: $spacing--small;
+  }
 }
 
 .c-update-list__item-date {

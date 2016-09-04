@@ -167,7 +167,7 @@ $o-flipper-height: $pledge-tile-height;
 @import "aleut/components/components.pledge-state";
 @import "aleut/components/components.progress-bar";
 @import "aleut/components/components.pledge-tile";
-@import "aleut/components/components.pledge-view";
+@import "aleut/components/components.pledge";
 @import "aleut/components/components.sign-pledge";
 @import "aleut/components/components.social-media";
 @import "aleut/components/components.btn";
@@ -214,6 +214,7 @@ $u-p-large:                       true;
 @import "~aleut.utilities.spacing/utilities.spacing";
 
 $u-m-responsive:                  true;
+$u-m-responsive-small:            true;
 $u-p-responsive-small:            true;
 @import "~aleut.utilities.spacing-responsive/utilities.spacing-responsive";
 @import "~aleut.utilities.widths/utilities.widths";

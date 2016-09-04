@@ -47,3 +47,11 @@
   top: 0;
   right: 0;
 }
+
+.c-comment__answer-form {
+  margin-bottom: $spacing--small;
+}
+
+.c-comment:last-of-type > .c-comment__answer-form {
+  margin-bottom: 0;
+}

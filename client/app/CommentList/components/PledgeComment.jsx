@@ -28,8 +28,10 @@ export default class PledgeComment extends ChildComponent {
     }
 
     return (
-      <div className="c-comment o-layout__item u-4/5">
-        <PledgeQuestion>{comment.content}</PledgeQuestion>
+      <div className="c-comment">
+        <div className="o-layout__item u-4/5@m">
+          <PledgeQuestion>{comment.content}</PledgeQuestion>
+        </div>
         {answerDisplayOrForm}
       </div>
     )

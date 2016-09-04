@@ -15,18 +15,18 @@ export default class QuestionForm extends ChildComponent {
 
     return (
       <Form
-        className="o-layout o-layout--small u-mt-small"
+        className="c-comment__question-form o-layout o-layout--small"
         formObjectClass={NewQuestionFormObject}
         ajax={true}
         {...formData}>
 
         <InputSet ariaLabelOnly
-          wrapperClassName="c-input o-layout__item u-4/5"
+          wrapperClassName="c-input o-layout__item u-4/5@m u-mb-small@s"
           attribute='content'
         />
 
-        <div className="o-layout__item u-1/5">
-          <button className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
+        <div className="o-layout__item u-1/5@m">
+          <button className="o-btn c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}>
             <FontAwesome name="paper-plane" />
             {' '}

@@ -31,11 +31,11 @@ export default class UpdateForm extends ChildComponent {
 
         <div className="c-sidebar__wrapper">
           <InputSet ariaLabelOnly
-            wrapperClassName="c-textarea" attribute="content" type="textarea"
+            wrapperClassName="c-textarea u-mb-small" attribute="content" type="textarea"
           />
 
           <button
-            className="o-btn o-btn--small o-btn--full c-btn c-btn--primary"
+            className="o-btn o-btn--full c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}
           >
             <FontAwesome name="paper-plane" />

@@ -860,8 +860,10 @@ de:
     comment:
       content:
         label: Ihre Frage…
+        placeholder: Ihre Frage…
       response:
         label: Ihre Antwort…
+        placeholder: Ihre Antwort…
     date_format: DD.MM.YYYY
     pledge:
       amount:
@@ -930,6 +932,7 @@ de:
     update:
       content:
         label: Versenden Sie eine Neuigkeit an alle Unterzeichner.
+        placeholder: Versenden Sie eine Neuigkeit an alle Unterzeichner.
     user:
       avatar:
         label: Ihr Profilbild

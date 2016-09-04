@@ -21,12 +21,12 @@ export default class PledgeUpdate extends ChildComponent {
 
     return (
       <li className="c-update-list__item o-layout o-layout--small">
-        <div className="o-layout__item u-4/5">
+        <div className="o-layout__item u-4/5@m">
           <p className="c-update-list__item-text">
             {content}
           </p>
         </div>
-        <div className="o-layout__item u-1/5">
+        <div className="o-layout__item u-1/5@m">
           <p className="c-update-list__item-date">
             <i>{createdAtStr}</i>
           </p>

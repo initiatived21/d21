@@ -10,8 +10,8 @@
   background-color: $almost-white;
 
   border-top: 2px solid $tertiary-color;
-  padding-top: 80px;
-  padding-bottom: 42px;
+  padding-top: 30px;
+  padding-bottom: 39px - $spacing;
 
   color: $text-color;
 
@@ -26,6 +26,11 @@
 
   nav {
     margin-bottom: $spacing;
+  }
+
+  @include media-query(m) {
+    padding-top: 80px;
+    padding-bottom: 42px;
   }
 }
 

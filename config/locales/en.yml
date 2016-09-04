@@ -848,8 +848,10 @@ en:
     comment:
       content:
         label: Your question…
+        placeholder: Your question…
       response:
         label: Your answer…
+        placeholder: Your answer…
     date_format: DD/MM/YYYY
     pledge:
       amount:
@@ -916,6 +918,7 @@ en:
     update:
       content:
         label: Send a project update to all signees.
+        placeholder: Send a project update to all signees.
     user:
       avatar:
         label: Your Profile Picture
