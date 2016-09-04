@@ -23,7 +23,7 @@ export default class PledgeCommentList extends ChildComponent {
     let commentListOrText
     if (comments.length > 0) {
       commentListOrText = (
-        <div className="o-layout o-layout--small">
+        <div>
           {comments.map( comment =>
             <PledgeComment key={comment.id} comment={comment}
               formData={answerForm}

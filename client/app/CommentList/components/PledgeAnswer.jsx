@@ -11,12 +11,10 @@ export default class PledgeAnswer extends ChildComponent {
     const { children } = this.props
 
     return (
-      <div className="o-layout__item u-4/5@m">
-        <div className="c-comment__answer u-clearfix u-mb-small">
-          <CommentAvatar className="c-comment__answer-avatar" />
-          <p className="c-comment__answer-text">{children}</p>
-        </div>
-      </div>
+      <article className="c-comment__answer u-4/5@m">
+        <CommentAvatar className="c-comment__answer-avatar" />
+        <p className="c-comment__answer-text">{children}</p>
+      </article>
     )
   }
 }

@@ -10,6 +10,7 @@
 }
 
 .c-comment__question, .c-comment__answer {
+  margin-bottom: $spacing--small;
   position: relative;
   min-height: $comment-avatar-size;
 }
@@ -54,4 +55,10 @@
 
 .c-comment:last-of-type > .c-comment__answer-form {
   margin-bottom: 0;
+}
+
+.c-comment__submit {
+  @include media-query(m) {
+    width: 100%;
+  }
 }

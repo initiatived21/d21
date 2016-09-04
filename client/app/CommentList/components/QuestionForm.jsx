@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import { Form, InputSet } from 'rform'
-import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 
@@ -26,10 +25,8 @@ export default class QuestionForm extends ChildComponent {
         />
 
         <div className="o-layout__item u-1/5@m">
-          <button className="o-btn c-btn c-btn--primary"
+          <button className="c-comment__submit o-btn c-btn c-btn--primary"
             type="submit" disabled={isSubmitting}>
-            <FontAwesome name="paper-plane" />
-            {' '}
             {this.t('.submit')}
           </button>
         </div>
