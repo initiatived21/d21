@@ -27,16 +27,6 @@ export default class PageHeader extends RootComponent {
     return ['currentUser', 'authToken']
   }
 
-  handleLeftSwipe(e) {
-    const el = document.getElementById('site-wrapper')
-    el.classList.remove('show-nav')
-  }
-
-  handleRightSwipe(e) {
-    const el = document.getElementById('site-wrapper')
-    el.classList.add('show-nav')
-  }
-
   render() {
     const { controller, action, authToken, currentUser } = this.props
 
