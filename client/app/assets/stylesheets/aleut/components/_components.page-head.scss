@@ -37,16 +37,21 @@
   display: block;
 
   width: 100%;
-  max-width: 417px;
+  max-width: 350px;
 
   @include media-query(m) {
     float: left;
     margin-bottom: $spacing;
   }
 
-  > svg {
-    width: 100%;
+  @include media-query(l) {
+    width: 417px;
+    max-width: 417px;
   }
+}
+
+.c-page-head__logo > svg {
+  width: 100%;
 }
 
 .c-page-head__social-media {

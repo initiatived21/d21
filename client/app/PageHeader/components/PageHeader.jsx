@@ -9,7 +9,7 @@ import HeaderLogo from './HeaderLogo'
 import SocialMediaIcons from './SocialMediaIcons'
 import SearchBar from './SearchBar'
 import MenuButton from './MenuButton'
-import { BREAKPOINT_M } from '../../lib/config'
+import { BREAKPOINT_M, BREAKPOINT_L } from '../../lib/config'
 
 export default class PageHeader extends RootComponent {
   static propTypes = {
@@ -39,7 +39,7 @@ export default class PageHeader extends RootComponent {
           <SecondaryNav authToken={authToken} currentUser={currentUser} />
           <HeaderLogo />
           <SearchBar />
-          <MediaQuery minWidth={BREAKPOINT_M}>
+          <MediaQuery minWidth={BREAKPOINT_L}>
             <SocialMediaIcons />
           </MediaQuery>
           <MediaQuery minWidth={BREAKPOINT_M}>

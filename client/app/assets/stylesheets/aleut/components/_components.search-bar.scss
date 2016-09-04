@@ -17,6 +17,7 @@
 }
 
 .c-search-bar__input {
+  width: 10em;
   flex-grow: 1;
 
   margin-right: $spacing--tiny;
@@ -34,6 +35,10 @@
   background-color: transparent;
 
   @include media-query(m) {
+    width: 15em;
+  }
+
+  @include media-query(l) {
     width: 20em;
   }
 }

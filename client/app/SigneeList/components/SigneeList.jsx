@@ -38,7 +38,7 @@ export default class SigneeList extends ChildComponent {
     }
 
     return (
-      <section className="u-2/3@l u-pr-small@l">
+      <section className="">
         <h2>{this.t('.heading')}</h2>
         {signeeListOrText}
       </section>

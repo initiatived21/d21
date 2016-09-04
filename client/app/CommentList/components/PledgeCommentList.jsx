@@ -43,7 +43,7 @@ export default class PledgeCommentList extends ChildComponent {
     }
 
     return (
-      <section className="u-2/3@l u-pr-small@l u-mb">
+      <section className="u-mb">
         <h2>{this.t('.heading')}</h2>
 
         {commentListOrText}
