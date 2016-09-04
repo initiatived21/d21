@@ -6,6 +6,7 @@ import ProfileView from '../../ProfileView/components/ProfileView'
 import Search from '../../Search/components/Search'
 import Flash from '../../Flash/components/Flash'
 import PageHeader from '../../PageHeader/components/PageHeader'
+import OffCanvasMenu from '../../OffCanvasMenu/components/OffCanvasMenu'
 
 // Lets Webpack generate the main css file that gets picked up by Sprockets
 require('../../assets/stylesheets/main.scss')
@@ -20,5 +21,6 @@ ReactOnRails.register({
   ProfileView,
   Search,
   Flash,
-  PageHeader
+  PageHeader,
+  OffCanvasMenu
 })

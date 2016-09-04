@@ -27,7 +27,7 @@ de:
     my_data: Meine Daten
     my_pledges: Meine Versprechen
     welcome: Willkommen,
-  Menu:
+  OffCanvasMenu:
     items:
       about: Über uns
       blog: Blog

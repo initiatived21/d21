@@ -8,9 +8,8 @@ import SecondaryNav from './SecondaryNav'
 import HeaderLogo from './HeaderLogo'
 import SocialMediaIcons from './SocialMediaIcons'
 import SearchBar from './SearchBar'
-import Menu from './Menu'
+import MenuButton from './MenuButton'
 import { BREAKPOINT_M } from '../../lib/config'
-import Swipeable from 'react-swipeable'
 
 export default class PageHeader extends RootComponent {
   static propTypes = {
@@ -44,12 +43,8 @@ export default class PageHeader extends RootComponent {
     return (
       <Provider store={store}>
         <div className="o-wrapper">
-        <Swipeable
-          onSwipedLeft={this.handleLeftSwipe}
-          onSwipedRight={this.handleRightSwipe}
-          delta={50}>
           <MediaQuery maxWidth={BREAKPOINT_M - 1}>
-            <Menu controller={controller} action={action} />
+            <MenuButton />
           </MediaQuery>
           <SecondaryNav authToken={authToken} currentUser={currentUser} />
           <HeaderLogo />
@@ -60,7 +55,6 @@ export default class PageHeader extends RootComponent {
           <MediaQuery minWidth={BREAKPOINT_M}>
             <PrimaryNav controller={controller} action={action} />
           </MediaQuery>
-        </Swipeable>
         </div>
       </Provider>
     )

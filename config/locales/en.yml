@@ -27,7 +27,7 @@ en:
     my_data: My profile data
     my_pledges: My pledges
     welcome: Welcome,
-  Menu:
+  OffCanvasMenu:
     items:
       about: About us
       blog: Blog

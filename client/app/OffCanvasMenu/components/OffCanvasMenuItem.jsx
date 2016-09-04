@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
-import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 
-export default class MenuItem extends ChildComponent {
+export default class OffCanvasMenuItem extends React.Component {
   static propTypes = {
     href: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired,
@@ -13,16 +12,18 @@ export default class MenuItem extends ChildComponent {
   render() {
     const { href, children, handleClick, external, active } = this.props
 
-    let className='c-menu__item'
+    let className='c-off-canvas-menu__item'
     if (active) {
-      className += ' c-menu__item--active'
+      className += ' c-off-canvas-menu__item--active'
     }
 
     return (
-      <a className={className} href={href} onClick={handleClick}
-        target={ external ? '_blank' : null }>
-        {children}
-      </a>
+      <li className={className}>
+        <a className="c-off-canvas-menu__link" href={href} onClick={handleClick}
+          target={ external ? '_blank' : null }>
+          {children}
+        </a>
+      </li>
     )
   }
 }

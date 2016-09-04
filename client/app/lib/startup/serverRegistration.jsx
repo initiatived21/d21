@@ -6,6 +6,7 @@ import ProfileView from '../../ProfileView/components/ProfileView'
 import Search from '../../Search/components/Search'
 import Flash from '../../Flash/components/Flash'
 import PageHeader from '../../PageHeader/components/PageHeader'
+import OffCanvasMenu from '../../OffCanvasMenu/components/OffCanvasMenu'
 
 ReactOnRails.register({
   ElementList,
@@ -14,5 +15,6 @@ ReactOnRails.register({
   ProfileView,
   Search,
   Flash,
-  PageHeader
+  PageHeader,
+  OffCanvasMenu
 })
