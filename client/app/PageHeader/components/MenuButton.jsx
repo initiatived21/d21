@@ -1,8 +1,27 @@
 import React from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import swipeDetect from '../../lib/browser/swipeDetect'
 
 export default class MenuButton extends React.Component {
+  componentDidMount() {
+    // Swipe functionality to show/hide off canvas menu
+    const siteWrapperElement = document.getElementById('site-wrapper')
+
+    swipeDetect(siteWrapperElement, function(direction) {
+      switch(direction) {
+      case 'left':
+        siteWrapperElement.classList.remove('show-nav')
+        break
+      case 'right':
+        siteWrapperElement.classList.add('show-nav')
+        break
+      default:
+        break
+      }
+    })
+  }
+
   handleClick(event) {
     event.preventDefault()
 
