@@ -19,7 +19,7 @@ export default class ProfileUserForm extends ChildComponent {
     let formSentMessage
     if (userFormSent) {
       formSentMessage = (
-        <p className="u-mt"><i>Ihre Daten wurden erfolgreich aktualisiert.</i></p>
+        <p className="u-mt"><i>{this.t('.form_sent')}</i></p>
       )
     }
 

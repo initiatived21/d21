@@ -149,6 +149,7 @@ de:
     start_link: Start
   ProfileUserForm:
     button: Aktualisieren
+    form_sent: Ihre Daten wurden erfolgreich aktualisiert.
   ProfileView:
     heading: Ihr Profil
   QuestionForm:
@@ -949,7 +950,7 @@ de:
         placeholder: 
       password:
         label: Passwort
-        placeholder: 
+        placeholder: Passwort
       password_confirmation:
         label: Neues Passwort wiederholen
       remember_me:

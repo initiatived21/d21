@@ -149,6 +149,7 @@ en:
     start_link: Start
   ProfileUserForm:
     button: Submit
+    form_sent: Your data has been updated.
   ProfileView:
     heading: Your Profile
   QuestionForm:
@@ -935,7 +936,7 @@ en:
         placeholder: 
       password:
         label: Password
-        placeholder: 
+        placeholder: Password
       password_confirmation:
         label: Repeat New Password
       remember_me:
