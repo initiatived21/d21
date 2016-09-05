@@ -3,6 +3,7 @@ import { updateAction, getName } from 'rform'
 import moment from 'moment'
 import I18n from 'i18n-js'
 import DateInputComponent from '../components/DateInputComponent'
+import momentToString from '../../lib/date_and_time/momentToString'
 
 const mapStateToProps = function(state, ownProps) {
 
@@ -21,7 +22,7 @@ const mapStateToProps = function(state, ownProps) {
     locale: I18n.locale,
     selected: value ? moment(value) : undefined,
     minDate: moment(),
-    maxDate: moment().add(5, 'months'),
+    maxDate: moment().add(3, 'years'),
     dateFormat: I18n.t('rform.date_format'),
     formState: attrs,
   }
@@ -37,10 +38,12 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...ownProps,
 
   onChange(date) {
+    console.log(date.toString())
+
     dispatchProps.dispatch(
       updateAction(
         ownProps.formId, ownProps.attribute, ownProps.submodel,
-        date.toISOString().substring(0,10)
+        momentToString(date)
       )
     )
   },
