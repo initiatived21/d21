@@ -1,7 +1,17 @@
 p= t('.greeting', name: @pledge.initiator.name)
 
 p
-  | TODO: Dein Versprechen war nicht erfolgreich.
+  = t('.paragraph1')
+  br
+  = link_to pledge_url(id: @pledge.id, locale: :de),
+    pledge_url(id: @pledge.id, locale: :de)
+
+p
+  = t('.paragraph2')
+  ul
+    li = t('.paragraph3')    
+    li = t('.paragraph4')
+    li = t('.paragraph5')
 
 p
   = t('application_mailer.farewell')
