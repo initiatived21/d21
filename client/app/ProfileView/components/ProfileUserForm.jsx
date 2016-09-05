@@ -8,19 +8,31 @@ import UserForm from '../../UserForm/components/UserForm'
 import UserFormObject from '../../lib/form_objects/user_form'
 
 export default class ProfileUserForm extends ChildComponent {
+  static props = {
+    afterResponse: PropTypes.func.isRequired,
+    userFormSent: PropTypes.bool
+  }
+
   render() {
-    const {
-      formConfig
-    } = this.props
+    const { formConfig, afterResponse, userFormSent } = this.props
+
+    let formSentMessage
+    if (userFormSent) {
+      formSentMessage = (
+        <p className="u-mt"><i>Ihre Daten wurden erfolgreich aktualisiert.</i></p>
+      )
+    }
 
     return (
       <Form ajax
         className="u-2/3@l"
         model='user'
         formObjectClass={UserFormObject}
+        afterResponse={afterResponse}
         {...formConfig}
       >
         <UserForm labelContent={I18n.t('rform.user.new_password.label')} />
+        {formSentMessage}
         <Button className="o-btn c-btn c-btn--primary u-mt">
           <FontAwesome name="check" />
           {' '}

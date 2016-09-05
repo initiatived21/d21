@@ -5,6 +5,7 @@ export const generalInitialState = {
   pledges: {},
   tags: {},
   pledgesSigned: [],
+  userFormSent: false,
   ui: {
     searchResultsLoading: false,
     sessionPopupVisible: false,
@@ -28,6 +29,10 @@ export default function generalReducer(state = generalInitialState, action) {
     if (!newState.pledgesSigned.includes(action.id)) {
       newState.pledgesSigned.push(action.id)
     }
+    return newState
+
+  case 'SEND_USER_FORM':
+    newState.userFormSent = true
     return newState
 
   case 'SET_SEARCH_RESULTS_LOADING_STATE':
