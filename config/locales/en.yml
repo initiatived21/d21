@@ -770,6 +770,24 @@ en:
       greeting: 
       second_paragraph: 
       subject: 
+    pledge_failed:
+      greeting: 
+      link: 
+      paragraph1: 
+      paragraph2: 
+      paragraph3: 
+      paragraph4: 
+      paragraph5: 
+      subject: 
+    pledge_successful:
+      greeting: 
+      link: 
+      paragraph1: 
+      paragraph2: 
+      paragraph3: 
+      paragraph4: 
+      paragraph5: 
+      subject: 
     pledge_was_approved:
       faq_paragraph: 
       greeting: 
@@ -946,6 +964,24 @@ en:
       first_paragraph: 
       greeting: 
       second_paragraph: 
+      subject: 
+    pledge_failed:
+      greeting: 
+      link: 
+      paragraph1: 
+      paragraph2: 
+      paragraph3: 
+      paragraph4: 
+      paragraph5: 
+      subject: 
+    pledge_successful:
+      greeting: 
+      link: 
+      paragraph1: 
+      paragraph2: 
+      paragraph3: 
+      paragraph4: 
+      paragraph5: 
       subject: 
     signature_created:
       button_confirm_signature: Click here to confirm
