@@ -27,6 +27,20 @@
   }
 }
 
+.c-pledge-data__time {
+  @include media-query(m) {
+    margin-top: $spacing--small;
+    border-top: 1px solid $light-gray;
+    padding-top: $spacing--small;
+  }
+
+  @include media-query(l) {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
 .c-pledge-data__title {
   margin-bottom: $spacing--small;
 
@@ -44,5 +58,23 @@
 .c-pledge-data .c-progress-bar {
   @include media-query(m) {
     margin-top: 28px;
+  }
+}
+
+.c-pledge-data__time-wrapper {
+  display: flex;
+  align-items: center;
+
+  @include media-query(l) {
+    display: block;
+  }
+}
+
+.c-pledge-data .c-pledge-state {
+  margin-right: $spacing;
+
+  @include media-query(l) {
+    margin-right: 0;
+    margin-bottom: $spacing--small;
   }
 }

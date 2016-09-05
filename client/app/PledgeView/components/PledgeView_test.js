@@ -81,10 +81,5 @@ describe('<PledgeView />', function () {
 
     wrapper.is(Provider).should.be.true
     wrapper.find('main').length.should.equal(1)
-    wrapper.find(Pledge).length.should.equal(1)
-    wrapper.find(PledgeSidebarContainer).length.should.equal(1)
-    wrapper.find(PledgeUpdateListContainer).length.should.equal(1)
-    wrapper.find(PledgeCommentListContainer).length.should.equal(1)
-    wrapper.find(SigneeListContainer).length.should.equal(1)
   })
 })

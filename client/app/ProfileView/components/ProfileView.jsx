@@ -20,7 +20,7 @@ export default class ProfileView extends RootComponent {
     return (
       <Provider store={store}>
         <main>
-          <div className="o-wrapper u-mb">
+          <div className="o-wrapper u-mt u-mb">
             <h1>{I18n.t('ProfileView.heading')}</h1>
 
             <h2>Ihre Daten</h2>

@@ -120,7 +120,7 @@ $o-media--responsive: true;
 $o-flipper-height: $pledge-tile-height;
 @import "aleut/objects/objects.flipper";
 
-@import "aleut/objects/objects.sidebar";
+//@import "aleut/objects/objects.sidebar";
 @import "aleut/objects/objects.marginal";
 
 
@@ -217,6 +217,15 @@ $u-m-responsive:                  true;
 $u-m-responsive-small:            true;
 $u-p-responsive-small:            true;
 @import "~aleut.utilities.spacing-responsive/utilities.spacing-responsive";
+
+$widths-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    9
+);
 @import "~aleut.utilities.widths/utilities.widths";
 @import "~aleut.utilities.widths-responsive/utilities.widths-responsive";
 @import "aleut/utilities.helpers";

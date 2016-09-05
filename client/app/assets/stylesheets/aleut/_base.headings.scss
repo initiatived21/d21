@@ -19,10 +19,15 @@ h3, h4, h5, h6 {
 
 h1 {
   font-weight: normal;
-  @include font-size(36px, 1.5);
 
-  @include media-query(s) {
-    @include font-size(24px, 1.5);
+  @include font-size(24px, 1.5);
+
+  @include media-query(m) {
+    @include font-size(30px, 1.5);
+  }
+
+  @include media-query(l) {
+    @include font-size(36px, 1.5);
   }
 }
 

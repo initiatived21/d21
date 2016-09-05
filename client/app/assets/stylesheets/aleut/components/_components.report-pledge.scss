@@ -7,13 +7,15 @@
  */
 
 .c-report-pledge {
+  margin-bottom: $spacing;
+
   border: 1px solid $gray;
   border-radius: $border-radius;
 
   background-color: $almost-white;
 
-  @include media-query(s) {
-    margin-bottom: $spacing;
+  @include media-query(l) {
+    margin-bottom: 0;
   }
 }
 

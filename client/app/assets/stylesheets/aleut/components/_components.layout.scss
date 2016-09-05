@@ -1,12 +1,12 @@
 /*------------------------------------*\
-    #PLEDGE VIEW
+    #LAYOUT
 \*------------------------------------*/
 
 /**
- * A component for pledge views
+ * Special widths for responsive components in a grid.
  */
 
-.c-pledge {
+.c-layout {
   margin-bottom: $spacing;
 }
 
@@ -35,7 +35,7 @@
   @include font-size(18px, 1.5);
   color: $black;
 
-  @include media-query(l) {
+  @include media-query(m) {
     @include font-size(21px, 1.5);
   }
 }

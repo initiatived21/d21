@@ -935,7 +935,7 @@ en:
         placeholder: 
       password:
         label: Password
-        placeholder: Password
+        placeholder: 
       password_confirmation:
         label: Repeat New Password
       remember_me:

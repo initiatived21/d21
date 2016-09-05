@@ -51,10 +51,10 @@ export default class PledgeView extends RootComponent {
             {/* Layout M */}
             <MediaQuery minWidth={BREAKPOINT_M} maxWidth={BREAKPOINT_L - 1}>
               <div className="o-layout">
-                <div className="o-layout__item u-1/2">
+                <div className="o-layout__item u-5/9">
                   <Pledge {...pledge} user={user} />
                 </div>
-                <div className="o-layout__item u-1/2">
+                <div className="o-layout__item u-4/9">
                   <PledgeSidebarContainer pledge_id={pledge.id}
                     forms={forms} />
                 </div>

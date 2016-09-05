@@ -10,22 +10,12 @@
 }
 
 .c-sign-pledge__submit {
-  height: 60px;
+  height: 50px;
+  @include font-size(22px, 1.25);
 
-  @include font-size(24px, 1.5);
-  border-color: $secondary-color;
-  border-radius: 5px;
-  background-color: $secondary-color;
-
-  svg {
-    width: 32px;
-    height: 32px;
-    vertical-align: -7px;
-  }
-
-  &:hover, &:active {
-    background-color: $secondary-color-highlight;
-    border-color: $secondary-color-highlight;
+  @include media-query(m) {
+    height: 60px;
+    @include font-size(24px, 1.5);
   }
 }
 
