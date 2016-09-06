@@ -4049,11 +4049,6 @@
       "from": "redux@3.3.1",
       "resolved": "https://registry.npmjs.org/redux/-/redux-3.3.1.tgz"
     },
-    "redux-mock-store": {
-      "version": "1.1.4",
-      "from": "redux-mock-store@latest",
-      "resolved": "https://registry.npmjs.org/redux-mock-store/-/redux-mock-store-1.1.4.tgz"
-    },
     "redux-promise": {
       "version": "0.5.3",
       "from": "redux-promise@>=0.5.3 <0.6.0",
