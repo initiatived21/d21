@@ -38,13 +38,12 @@ export default function generalReducer(state = generalInitialState, action) {
     newState.flashMessages[id] = {
       id,
       type: action.flashType,
-      text: action.text,
-      removed: false
+      text: action.text
     }
     return newState
 
   case types.REMOVE_FLASH_MESSAGE:
-    newState.flashMessages[action.id].removed = true
+    delete newState.flashMessages[action.id]
     return newState
 
   case 'SET_SEARCH_RESULTS_LOADING_STATE':

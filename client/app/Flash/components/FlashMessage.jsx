@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
+import { FLASH_DISPLAY_TIME } from '../../lib/config'
 
 export default class FlashMessage extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    removed: PropTypes.bool.isRequired,
     onExpire: PropTypes.func.isRequired,
   }
 
@@ -20,14 +20,13 @@ export default class FlashMessage extends React.Component {
 
     setTimeout(function() {
       onExpire()
-    }, 5000)
+    }, FLASH_DISPLAY_TIME)
   }
 
   render() {
-    const { id, type, text, removed } = this.props
+    const { id, type, text } = this.props
 
-    let className = `c-flash-list__item c-flash-list__item--${type}`
-    if (removed) { className += ' c-flash-list__item--removed' }
+    const className = `c-flash-list__item c-flash-list__item--${type}`
 
     let awesomeName
     switch(type) {

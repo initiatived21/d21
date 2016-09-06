@@ -3923,6 +3923,11 @@
       "from": "https://registry.npmjs.org/react/-/react-15.1.0.tgz",
       "resolved": "https://registry.npmjs.org/react/-/react-15.1.0.tgz"
     },
+    "react-addons-css-transition-group": {
+      "version": "15.1.0",
+      "from": "react-addons-css-transition-group@15.1.0",
+      "resolved": "https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-15.1.0.tgz"
+    },
     "react-addons-test-utils": {
       "version": "15.1.0",
       "from": "react-addons-test-utils@>=15.0.2 <16.0.0",
