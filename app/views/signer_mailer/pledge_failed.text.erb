@@ -1,6 +1,13 @@
 <%= t('.greeting', name: @recipient.try(:name)) %>
 
-TODO: Das von dir unterzeichnete Versprechen war nicht erfolgreich.
+<%= t('.paragraph1') %>
+
+<%= t('.paragraph2') %>
+<%= pledge_url(id: @pledge.id, locale: :de) %>
+
+<%= t('.paragraph3') %>
+* <% t('.paragraph4') %>
+* <% t('.paragraph5') %>
 
 <%= t('application_mailer.farewell') %>
 <%= t('application_mailer.signed') %>
