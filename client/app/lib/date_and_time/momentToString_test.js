@@ -1,5 +1,4 @@
 import moment from 'moment'
-import sinon from 'sinon'
 import momentToString from './momentToString'
 
 describe('momentToString', function() {
