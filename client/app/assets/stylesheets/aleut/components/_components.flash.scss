@@ -8,50 +8,10 @@
  * 1. Make the containing div and the flash itself click-through.
  */
 
-.c-flash__icon {
-  @include font-size(48px, 1);
-  margin-right: $spacing;
-
-  @include media-query(s) {
-    @include font-size(24px, 1);
-    margin-right: $spacing--small;
-  }
-}
-
-.c-flash__content {
-  display: inline;
-
-  @include font-size(20px, 1.5);
-
-  @include media-query(s) {
-    @include font-size(15px, 1.5);
-  }
-}
-
-.c-flash--notice > .c-flash__inner,
-.c-flash--success > .c-flash__inner {
-  background-color: $flash-notice-color;
-}
-
-.c-flash--alert > .c-flash__inner {
-  background-color: $flash-alert-color;
-}
-
-.c-flash--error > .c-flash__inner {
-  background-color: $flash-error-color;
-}
-
-.c-flash--hidden > .c-flash__inner {
-  opacity: 0.05;
-}
-
-
-
-
 .c-flash-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
   position: fixed;
   left: 0.25em;
@@ -64,7 +24,6 @@
 
 .c-flash-list__item {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   box-shadow: $box-shadow;
@@ -85,6 +44,41 @@
   }
 }
 
+.c-flash-list__item--notice,
+.c-flash-list__item--success {
+  background-color: $flash-notice-color;
+}
+
+.c-flash-list__item--alert {
+  background-color: $flash-alert-color;
+}
+
+.c-flash-list__item--error {
+  background-color: $flash-error-color;
+}
+
+.c-flash-list__item--hidden {
+  opacity: 0.05;
+}
+
 .c-flash-list__item--removed {
   display: none;
+}
+
+.c-flash-list__icon {
+  @include font-size(48px, 1);
+  margin-right: $spacing;
+
+  @include media-query(s) {
+    @include font-size(24px, 1);
+    margin-right: $spacing--small;
+  }
+}
+
+.c-flash-list__text {
+  @include font-size(20px, 1.5);
+
+  @include media-query(s) {
+    @include font-size(15px, 1.5);
+  }
 }
