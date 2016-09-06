@@ -8,36 +8,6 @@
  * 1. Make the containing div and the flash itself click-through.
  */
 
-.c-flash {
-  display: flex;
-  justify-content: center;
-
-  position: fixed;
-  left: 0.25em;
-  right: 0.25em;
-  top: 42.5%;
-  z-index: 99;
-
-  pointer-events: none;  /* [1] */
-}
-
-.c-flash__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: $box-shadow;
-  border-radius: $border-radius-large;
-  padding: $spacing;
-
-  color: $white;
-  user-select: none;
-
-  background-color: $mid-dark-gray;
-  opacity: 0.95;
-  transition: opacity $transition-time;
-}
-
 .c-flash__icon {
   @include font-size(48px, 1);
   margin-right: $spacing;
@@ -75,6 +45,46 @@
   opacity: 0.05;
 }
 
-.c-flash--removed {
+
+
+
+.c-flash-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: fixed;
+  left: 0.25em;
+  right: 0.25em;
+  top: 42.5%;
+  z-index: 99;
+
+  pointer-events: none;  /* [1] */
+}
+
+.c-flash-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-large;
+  padding: $spacing;
+
+  color: $white;
+  user-select: none;
+
+  background-color: $mid-dark-gray;
+  opacity: 0.95;
+  transition: opacity $transition-time;
+
+  margin-bottom: $spacing--small;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.c-flash-list__item--removed {
   display: none;
 }

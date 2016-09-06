@@ -38,8 +38,6 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...ownProps,
 
   onChange(date) {
-    console.log(date.toString())
-
     dispatchProps.dispatch(
       updateAction(
         ownProps.formId, ownProps.attribute, ownProps.submodel,

@@ -6,6 +6,7 @@ describe('store', function() {
     pledges: {},
     pledgesSigned: [],
     userFormSent: false,
+    flashMessages: {},
     tags: {},
     ui: {
       searchResultsLoading: false,

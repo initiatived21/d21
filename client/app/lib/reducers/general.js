@@ -1,3 +1,4 @@
+import * as types from '../constants/actionTypes'
 import merge from 'lodash/merge'
 import assign from 'lodash/assign'
 
@@ -6,6 +7,7 @@ export const generalInitialState = {
   tags: {},
   pledgesSigned: [],
   userFormSent: false,
+  flashMessages: {},
   ui: {
     searchResultsLoading: false,
     sessionPopupVisible: false,
@@ -14,6 +16,7 @@ export const generalInitialState = {
 
 export default function generalReducer(state = generalInitialState, action) {
   let newState = merge({}, state)
+  let id
 
   switch (action.type) {
   case 'ADD_ENTITIES':
@@ -33,6 +36,20 @@ export default function generalReducer(state = generalInitialState, action) {
 
   case 'SEND_USER_FORM':
     newState.userFormSent = true
+    return newState
+
+  case types.ADD_FLASH_MESSAGE:
+    id = Date.now().toString()
+    newState.flashMessages[id] = {
+      id,
+      type: action.flashType,
+      text: action.text,
+      removed: false
+    }
+    return newState
+
+  case types.REMOVE_FLASH_MESSAGE:
+    newState.flashMessages[action.id].removed = true
     return newState
 
   case 'SET_SEARCH_RESULTS_LOADING_STATE':

@@ -23,12 +23,12 @@ html lang=I18n.locale
 
   body
     div.site-wrapper#site-wrapper
+      = render '/layouts/partials/flash'
       div.site-canvas#site-canvas
         = react_component 'OffCanvasMenu',
           ReactHelper.settings({ controller: controller_name, action: action_name },
           params, { class: 'c-off-canvas-menu' })
 
         = render '/layouts/partials/header'
-        = render '/layouts/partials/flash'
         = yield
         = render '/layouts/partials/footer'
