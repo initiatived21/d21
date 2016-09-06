@@ -1,24 +1,22 @@
 import { connect } from 'react-redux'
+import I18n from 'i18n-js'
 import ProfileUserForm from '../components/ProfileUserForm'
-import sendUserFormAction from '../actions/sendUserFormAction'
 import { addFlashMessageAction } from '../../Flash/actions/flashActions'
 import { setEntity } from '../../lib/actions/entityActions'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return {
-    userFormSent: state.userFormSent
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
   afterResponse: function(response) {
     if (response.status === 'success') {
-      dispatch(sendUserFormAction())
-
+      // Update user data in state
       const user = response.changes.current_user
       dispatch(setEntity(user.id, user, 'users'))
 
-      dispatch(addFlashMessageAction('notice', 'Ihre Daten werden jetzt gelöscht.'))
+      dispatch(addFlashMessageAction('success', I18n.t('ProfileUserForm.form_sent')))
     }
   }
 })

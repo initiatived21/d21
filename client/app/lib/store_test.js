@@ -5,7 +5,6 @@ describe('store', function() {
   const initialState = {
     pledges: {},
     pledgesSigned: [],
-    userFormSent: false,
     flashMessages: {},
     tags: {},
     ui: {
