@@ -1,6 +1,6 @@
 import assign from 'lodash/assign'
 import forIn from 'lodash/forIn'
-
+import * as types from '../../lib/constants/actionTypes'
 import calculateDefaultCrop from '../../lib/image_processing/calculateDefaultCrop'
 
 export const IMAGE_STATE_NONE = 0
@@ -35,11 +35,11 @@ export default function imageInputReducer(state = initialImageInputState, action
 
   switch (action.type) {
     // At the moment we do noting here in the UI
-  case 'LOAD_IMAGE_START':
+  case types.LOAD_IMAGE_START:
     newState.imageInputs[id].imageState = IMAGE_STATE_LOADING
     return newState
 
-  case 'LOAD_IMAGE_SUCCESS':
+  case types.LOAD_IMAGE_SUCCESS:
     const originalImage = action.image, aspect = action.aspect
     const crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
 
@@ -52,15 +52,15 @@ export default function imageInputReducer(state = initialImageInputState, action
     }
     return newState
 
-  case 'LOAD_IMAGE_FAILURE':
+  case types.LOAD_IMAGE_FAILURE:
     newState.imageInputs[id].imageState = IMAGE_STATE_NONE
     return newState
 
-  case 'CHANGE_CROP':
+  case types.CHANGE_CROP:
     newState.imageInputs[id].crop = action.crop
     return newState
 
-  case 'CROP_IMAGE':
+  case types.CROP_IMAGE:
     newState.imageInputs[id] = {
       croppedImageUrl: action.croppedImageUrl,
       originalImage: null,
@@ -72,7 +72,7 @@ export default function imageInputReducer(state = initialImageInputState, action
     return newState
 
     // Theoretical action – is not present in UI at the moment
-  case 'CLEAR_IMAGE':
+  case types.CLEAR_IMAGE:
     newState.imageInputs[id] = {
       originalImage: null,
       originalImageWidth: 0,
