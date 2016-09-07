@@ -209,8 +209,12 @@ en:
     text: 'Sign pledge:'
     title: Share via Twitter
   UpdateForm:
+    sent_message: You have posted an update for this pledge.
     submit: Submit
     title: Updates
+  UpdateSentMessage:
+    explanation: You habe submitted your update successfully.
+    title: Update submitted
   XingButton:
     title: Share via Xing
   active_admin:

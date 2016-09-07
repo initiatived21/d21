@@ -1,4 +1,6 @@
 import { connect } from 'react-redux'
+import I18n from 'i18n-js'
+import { addFlashMessageAction } from '../../Flash/actions/flashActions'
 import { setEntity } from '../../lib/actions/entityActions'
 import UpdateForm from '../components/UpdateForm'
 
@@ -11,7 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   afterResponse: json => {
-    if (json.status =='success') {
+    if (json.status === 'success') {
+      dispatch(addFlashMessageAction('success', I18n.t('UpdateForm.sent_message')))
       dispatch(setEntity('updateSubmitted', true, 'ui'))
     }
   }

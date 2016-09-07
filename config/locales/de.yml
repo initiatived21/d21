@@ -209,8 +209,12 @@ de:
     text: 'Versprechen unterzeichnen:'
     title: Über Twitter teilen
   UpdateForm:
+    sent_message: Sie haben eine Neuigkeit zu diesem Versprechen veröffentlicht.
     submit: Absenden
     title: Neuigkeiten
+  UpdateSentMessage:
+    explanation: Sie haben Ihre Neuigkeit erfolgreich abgeschickt.
+    title: Neuigkeit abgeschickt
   XingButton:
     title: Über Xing teilen
   active_admin:

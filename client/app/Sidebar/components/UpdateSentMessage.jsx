@@ -1,10 +1,7 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
-export default class PledgeSignedMessage extends ChildComponent {
-  static propTypes = {
-  }
-
+export default class UpdateSentMessage extends ChildComponent {
   render() {
     return (
       <div className="c-sidebar c-sidebar--tertiary">
@@ -14,9 +11,6 @@ export default class PledgeSignedMessage extends ChildComponent {
         <div className="c-sidebar__wrapper">
           <p className="u-mb-small">
             {this.t('.explanation')}
-          </p>
-          <p>
-            {this.t('.email')}
           </p>
         </div>
       </div>

@@ -13,7 +13,7 @@ translations:
       "*.QuestionForm.*", "*.PledgeState.*", "*.ProfileView.*",
       "*.CommentAvatar.*", "*.PledgeLocation.*", "*.PledgeTileBack.*",
       "*.PledgeTileFront.*", "*.PreviewExplanation.*", "*.PreviewDraft.*",
-      "*.PreviewUnconfirmed.*", "*.PreviewRequested.*",
+      "*.PreviewUnconfirmed.*", "*.PreviewRequested.*", "*.UpdateSentMessage.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
       "*.OffCanvasMenu.*", "*.SocialMediaIcons.*",
       "*.rform.*", "*.paths.*", "*.tags.*", "*.errors.*"]

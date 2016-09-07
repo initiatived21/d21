@@ -3,6 +3,7 @@ import { Form, InputSet } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import NewUpdateFormObject from '../../lib/form_objects/new_update_form'
+import UpdateSentMessage from './UpdateSentMessage'
 
 export default class UpdateForm extends ChildComponent {
   static propTypes = {
@@ -15,7 +16,7 @@ export default class UpdateForm extends ChildComponent {
       formData, isSubmitting, afterResponse, wasSubmitted
     } = this.props
 
-    if (wasSubmitted) return null // TODO: or maybe display a success message
+    if (wasSubmitted) return (<UpdateSentMessage />)
 
     return (
       <Form
