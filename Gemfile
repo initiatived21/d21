@@ -123,6 +123,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
   gem 'capistrano-npm'
+  gem 'capistrano-sidekiq'
 end
 
 group :test do
