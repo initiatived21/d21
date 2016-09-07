@@ -176,6 +176,7 @@ en:
     email_hint: 
     i_sign: I sign this pledge.
     sign: Sign
+    signed_message: You have successfully signed this pledge.
     small_print: 
     tooltip:
       anonymous: 
