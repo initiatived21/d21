@@ -17,10 +17,11 @@ function sortPledges(pledges) {
 function filterPledges(pledges, filter) {
   switch (filter) {
   case 'active':
+  case 'successful':
     return pledges.filter(pledge => (pledge.aasm_state === filter))
 
   case 'recommended':
-    return pledges.filter(pledge => pledge[filter])
+    return pledges.filter(pledge => pledge.recommended)
 
   default:
     return pledges

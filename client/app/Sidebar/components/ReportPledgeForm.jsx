@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import { FormButton } from 'rform'
-
+import localPath from '../../lib/browser/localPath'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class ReportPledgeForm extends ChildComponent {
@@ -18,7 +18,7 @@ export default class ReportPledgeForm extends ChildComponent {
 
         <FormButton
           className="c-report-pledge__button o-btn c-btn u-mt-small"
-          action={`/${I18n.locale}/pledges/${id}/reports`}
+          action={localPath(`/pledges/${id}/reports`)}
           method='POST'
         >
           <FontAwesome name="exclamation-triangle" />
