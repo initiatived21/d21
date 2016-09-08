@@ -26,17 +26,19 @@ export default class PledgeTileBack extends ChildComponent {
 
     return (
       <div className={combinedClassName}>
-        <div className="o-block o-block--center" aria-hidden={true}>
-          <Avatar className="o-block__img" name={initiatorName} imagePath={initiatorImage} />
-          <div className="o-block__body">
-            <PledgeText
-              content={content}
-              amount={amount}
-              who={who}
-              requirement={requirement}
-            />
+        <a className="c-pledge-tile__link" href={path}>
+          <div className="o-block o-block--center" aria-hidden={true}>
+            <Avatar className="o-block__img" name={initiatorName} imagePath={initiatorImage} />
+            <div className="o-block__body">
+              <PledgeText
+                content={content}
+                amount={amount}
+                who={who}
+                requirement={requirement}
+              />
+            </div>
           </div>
-        </div>
+        </a>
         <div className="c-pledge-tile__button">
           <a href={path} className="o-btn c-btn c-btn--primary">
             <FontAwesome name="reply" flip="horizontal" />
