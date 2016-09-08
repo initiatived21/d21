@@ -23,3 +23,5 @@ export const FLASH_DISPLAY_TIME = 3000
 
 export const BREAKPOINT_M = 688
 export const BREAKPOINT_L = 992
+
+export const TOOLTIP_WIDTH = 180

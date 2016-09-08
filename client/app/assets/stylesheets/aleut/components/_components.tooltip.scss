@@ -7,6 +7,7 @@
  *
  * 1. For Internet Explorer
  * 2. Try to position in the middle of the question mark.
+ * 3. Guess the top position for left tooltips.
  */
 
 .c-tooltip {
@@ -40,18 +41,25 @@
 
   z-index: 3;
 
-  width: 12rem;
+  width: $tooltip-width;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
   background-color: $white;
 }
 
+.c-tooltip--left > .c-tooltip__text {
+  left: auto;
+  right: 43px;
+  bottom: auto;
+  top: -60px;  /* [3] */
+}
+
 .c-tooltip__triangle {
   display: none;
 
   position: absolute;
-  left: -7px;  /* [1] */
+  left: -7px;  /* [2] */
   bottom: 28px;
 
   z-index: 2;
@@ -59,6 +67,14 @@
   width: 36px;
 
   fill: $primary-color;
+}
+
+.c-tooltip--left > .c-tooltip__triangle {
+  transform: rotate(270deg);
+
+  left: auto;
+  right: 18px;
+  bottom: 3px;
 }
 
 .c-tooltip--open {
