@@ -75,10 +75,14 @@ class Pledge < ApplicationRecord
     SignerMailer.pledge_failed(id).deliver_later
   end
 
+  def searchable?
+    active? || successful? || failed?
+  end
+
   # Search
   include PgSearch
   multisearchable(
     against: [:title, :content, :requirement, :description, :location],
-    if: :active?
+    if: :searchable?
   )
 end
