@@ -3,7 +3,7 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
 import daysTill from '../../lib/date_and_time/daysTill'
-import formatDate from '../../lib/date_and_time/formatDate'
+import formatDateAndTime from '../../lib/date_and_time/formatDateAndTime'
 
 export default class PledgeData extends ChildComponent {
   static propTypes = {
@@ -20,7 +20,25 @@ export default class PledgeData extends ChildComponent {
     const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false
     const percentage = Math.round(100 / amount * signatures_count)
-    const deadlineStr = formatDate(deadline)
+
+    const d = new Date(Date.parse(deadline))
+    d.setHours(23)
+    d.setMinutes(59)
+    const deadlineStr = formatDateAndTime(d.toString())
+
+    const deadlinePassed = (new Date(Date.now())) > d
+
+    let stateTitle
+    switch(state) {
+    case 'successful':
+      stateTitle = this.t('.time.title_successful')
+      break
+    case 'failed':
+      stateTitle = this.t('.time.title_failed')
+      break
+    default:
+      stateTitle = this.t('.time.title_default')
+    }
 
     return (
       <div className="c-pledge-data">
@@ -41,12 +59,12 @@ export default class PledgeData extends ChildComponent {
             </p>
           </div>
           <div className="c-pledge-data__time o-layout__item u-1/3@l">
-            <h2 className="c-pledge-data__title">{this.t('.time.title')}</h2>
+            <h2 className="c-pledge-data__title">{stateTitle}</h2>
             <div className="c-pledge-data__time-wrapper">
               <PledgeState state={state} remainingDays={remainingDays} urgent={isUrgent} />
               <p className="c-pledge-data__deadline">
-                <b>{this.t('.time.closes_on')}:</b><br />
-                {deadlineStr} {this.t('.time.at_1159pm')}
+                <b>{deadlinePassed ? this.t('.time.closed_on') : this.t('.time.closes_on')}:</b><br />
+                {deadlineStr}
               </p>
             </div>
           </div>

@@ -53,10 +53,12 @@ de:
       signees: Unterzeichnern
       title: Unterzeichner
     time:
-      at_1159pm: um 23:59 Uhr
+      closed_on: Endete am
       closes_on: Endet am
       days: Tage
-      title: Zeit übrig
+      title_default: Zeit übrig
+      title_failed: Gescheitert
+      title_successful: Erfolgreich
   PledgeForm:
     account:
       explanation: Über Ihr Nutzerkonto verwalten Sie das Versprechen.

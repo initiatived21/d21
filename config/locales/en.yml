@@ -53,10 +53,12 @@ en:
       signees: signees
       title: Signees
     time:
-      at_1159pm: at 11:59 PM
+      closed_on: Closed on
       closes_on: Closes on
       days: days
-      title: Time left
+      title_default: Time left
+      title_failed: Failed
+      title_successful: Successful
   PledgeForm:
     account:
       explanation: Through your user account you manage the pledge.
