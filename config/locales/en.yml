@@ -52,6 +52,7 @@ en:
       signees: signees
       title: Signees
     time:
+      at_1159pm: at 11:59 PM
       closes_on: Closes on
       days: days
       title: Time left

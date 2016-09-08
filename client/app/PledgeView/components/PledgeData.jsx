@@ -3,7 +3,7 @@ import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
 import daysTill from '../../lib/date_and_time/daysTill'
-import formatDateAndTime from '../../lib/date_and_time/formatDateAndTime'
+import formatDate from '../../lib/date_and_time/formatDate'
 
 export default class PledgeData extends ChildComponent {
   static propTypes = {
@@ -20,7 +20,7 @@ export default class PledgeData extends ChildComponent {
     const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false
     const percentage = Math.round(100 / amount * signatures_count)
-    const deadlineStr = formatDateAndTime(deadline)
+    const deadlineStr = formatDate(deadline)
 
     return (
       <div className="c-pledge-data">
@@ -46,7 +46,7 @@ export default class PledgeData extends ChildComponent {
               <PledgeState state={state} remainingDays={remainingDays} urgent={isUrgent} />
               <p className="c-pledge-data__deadline">
                 <b>{this.t('.time.closes_on')}:</b><br />
-                {deadlineStr}
+                {deadlineStr} {this.t('.time.at_1159pm')}
               </p>
             </div>
           </div>
