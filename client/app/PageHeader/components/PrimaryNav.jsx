@@ -22,6 +22,9 @@ export default class PrimaryNav extends ChildComponent {
           <PrimaryNavItem active={currentPage === 'pledges#new'} href={localPath('/pledges/new')}>
             {this.t('.new_pledge_link')}
           </PrimaryNavItem>
+          <PrimaryNavItem active={currentPage === 'pledges#index'} href={localPath('/pledges')}>
+            {this.t('.all_pledges_link')}
+          </PrimaryNavItem>
           <PrimaryNavItem active={currentPage === 'pages#howitworks'} href={localPath('/howitworks')}>
             {this.t('.howitworks_link')}
           </PrimaryNavItem>

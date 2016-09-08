@@ -30,6 +30,7 @@ en:
   OffCanvasMenu:
     items:
       about: About us
+      all_pledges: All pledges
       blog: Blog
       howitworks: How it works
       new_pledge: Make a pledge
@@ -143,6 +144,7 @@ en:
     edit_pledge: Edit pledge
   PrimaryNav:
     about_link: About us
+    all_pledges_link: All pledges
     blog_link: Blog
     howitworks_link: How it works
     new_pledge_link: Make a pledge

@@ -30,6 +30,7 @@ de:
   OffCanvasMenu:
     items:
       about: Über uns
+      all_pledges: Alle Versprechen
       blog: Blog
       howitworks: So funktioniert's
       new_pledge: Ich versprech's
@@ -143,6 +144,7 @@ de:
     edit_pledge: Versprechen bearbeiten
   PrimaryNav:
     about_link: Über uns
+    all_pledges_link: Alle Versprechen
     blog_link: Blog
     howitworks_link: So funktioniert's
     new_pledge_link: Ich versprech's

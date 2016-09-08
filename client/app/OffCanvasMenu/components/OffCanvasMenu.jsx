@@ -39,6 +39,10 @@ class OffCanvasMenu extends ChildComponent {
           handleClick={this.hide}>
           {this.t('.items.new_pledge')}
         </OffCanvasMenuItem>
+        <OffCanvasMenuItem href={localPath('/pledges')} active={currentPage === 'pledges#index'}
+          handleClick={this.hide}>
+          {this.t('.items.all_pledges')}
+        </OffCanvasMenuItem>
         <OffCanvasMenuItem href={localPath('/howitworks')} active={currentPage === 'pages#howitworks'}
           handleClick={this.hide}>
           {this.t('.items.howitworks')}
