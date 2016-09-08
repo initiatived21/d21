@@ -15,5 +15,7 @@ module D21
     # config.middleware.use I18n::JS::Middleware # I18n-js
 
     config.logger = Logger.new(STDOUT)
+
+    config.time_zone = 'Berlin'
   end
 end
