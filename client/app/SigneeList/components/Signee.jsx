@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
-import I18n                 from 'i18n-js'
-import { FORMAT_DATE_AND_TIME } from '../../lib/config'
+import formatDateAndTime from '../../lib/date_and_time/formatDateAndTime'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import CommentAvatar from '../../Avatar/components/CommentAvatar'
 
@@ -22,9 +21,7 @@ export default class Signee extends ChildComponent {
     const { id, name, email, img_src, reason, created_at, anonymous, organization,
       contact_person, showPrivateData } = this.props
 
-    const createdAtStr = I18n.strftime(
-      new Date(Date.parse(created_at)), FORMAT_DATE_AND_TIME[I18n.locale]
-    )
+    const createdAtStr = formatDateAndTime(created_at)
 
     let nameOrAnonymous
     if (anonymous && !showPrivateData) {

@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent.js'
 import ProgressBar from '../../PledgeData/components/ProgressBar'
 import PledgeState from '../../PledgeData/components/PledgeState'
 import daysTill from '../../lib/date_and_time/daysTill'
-import { FORMAT_DATE_AND_TIME } from '../../lib/config'
+import formatDateAndTime from '../../lib/date_and_time/formatDateAndTime'
 
 export default class PledgeData extends ChildComponent {
   static propTypes = {
@@ -20,10 +19,8 @@ export default class PledgeData extends ChildComponent {
 
     const remainingDays = daysTill(deadline)
     const isUrgent = remainingDays <= 5 ? true : false
-
     const percentage = Math.round(100 / amount * signatures_count)
-
-    const deadlineStr = I18n.strftime(new Date(Date.parse(deadline)), FORMAT_DATE_AND_TIME[I18n.locale])
+    const deadlineStr = formatDateAndTime(deadline)
 
     return (
       <div className="c-pledge-data">

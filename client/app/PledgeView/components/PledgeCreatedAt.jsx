@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
-import { FORMAT_DATE_AND_TIME } from '../../lib/config'
+import formatDateAndTime from '../../lib/date_and_time/formatDateAndTime'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 
 export default class PledgeCreatedAt extends ChildComponent {
@@ -10,10 +9,7 @@ export default class PledgeCreatedAt extends ChildComponent {
 
   render() {
     const { children } = this.props
-
-    const createdAtStr = I18n.strftime(
-      new Date(Date.parse(children)), FORMAT_DATE_AND_TIME[I18n.locale]
-    )
+    const createdAtStr = formatDateAndTime(children)
 
     return (
       <p className="c-pledge__created-at">
