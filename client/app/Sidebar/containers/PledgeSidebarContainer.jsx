@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     isPreview: ['initialized', 'requested'].includes(currentPledge.aasm_state),
-    isDraft: (currentPledge.aasm_state == 'initialized'),
+    isDraft: currentPledge.aasm_state === 'initialized',
+    showSignForm: currentPledge.aasm_state === 'active',
     userConfirmed: !!(currentUser && currentUser.confirmed),
     activateAction: `/${I18n.locale}/pledges/${currentPledge.id}/finalize`,
     userIsInitiator,

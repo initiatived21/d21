@@ -23,6 +23,7 @@ describe('<PledgeSidebar />', function () {
     },
     isPreview: false,
     isDraft: false,
+    showSignForm: true,
     activateAction: '/',
     userIsInitiator: false,
     userConfirmed: false,

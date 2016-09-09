@@ -15,6 +15,7 @@ export default class PledgeSidebar extends ChildComponent {
     }),
     isPreview: PropTypes.bool.isRequired,
     isDraft: PropTypes.bool.isRequired,
+    showSignForm: PropTypes.bool.isRequired,
     userConfirmed: PropTypes.bool.isRequired,
     activateAction: PropTypes.string.isRequired,
     userIsInitiator: PropTypes.bool.isRequired,
@@ -25,7 +26,8 @@ export default class PledgeSidebar extends ChildComponent {
   render() {
     const {
       pledge_id, forms, signPledgeFormObject, isPreview, userIsInitiator,
-      isDraft, activateAction, userConfirmed, renderReportForm, className
+      isDraft, activateAction, userConfirmed, renderReportForm, className,
+      showSignForm
     } = this.props
     const { signPledgeForm, updateForm } = forms
 
@@ -38,7 +40,7 @@ export default class PledgeSidebar extends ChildComponent {
       )
     } else if (userIsInitiator) {
       sidebarField = <UpdateFormContainer formData={updateForm} />
-    } else {
+    } else if (showSignForm) {
       sidebarField =
         <SignPledgeFormContainer id={pledge_id} formData={signPledgeForm} />
     }
