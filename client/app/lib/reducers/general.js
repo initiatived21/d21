@@ -5,6 +5,7 @@ import assign from 'lodash/assign'
 export const generalInitialState = {
   pledges: {},
   tags: {},
+  searchResults: [],
   pledgesSigned: [],
   flashMessages: {},
   ui: {
@@ -46,8 +47,12 @@ export default function generalReducer(state = generalInitialState, action) {
     delete newState.flashMessages[action.id]
     return newState
 
-  case 'SET_SEARCH_RESULTS_LOADING_STATE':
+  case types.SET_SEARCH_LOADING_STATE:
     return merge(newState, { ui: { searchResultsLoading: action.state } })
+
+  case types.ADD_SEARCH_RESULTS:
+    newState.searchResults = newState.searchResults.concat(action.resultIds)
+    return newState
 
   case 'TOGGLE_SESSION_POPUP':
     return merge(newState, { ui: { sessionPopupVisible: !state.ui.sessionPopupVisible }})

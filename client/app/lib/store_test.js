@@ -4,6 +4,7 @@ import { IMAGE_STATE_NONE } from '../Inputs/reducers/imageInputReducer'
 describe('store', function() {
   const initialState = {
     pledges: {},
+    searchResults: [],
     pledgesSigned: [],
     flashMessages: {},
     tags: {},

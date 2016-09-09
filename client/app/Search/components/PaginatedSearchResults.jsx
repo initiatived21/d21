@@ -26,7 +26,7 @@ export default class PaginatedSearchResults extends ChildComponent {
     }
 
     if (query === '') {
-      resultTitle = <h1>{resultCount} Versprechen insgesamt</h1>
+      resultTitle = <h1>Insgesamt {resultCount} Versprechen</h1>
     }
 
     return (
