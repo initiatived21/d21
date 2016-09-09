@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   const user = state.currentUser || {}
 
   return {
-    pledges: filterUserPledges(deNormalizePledges(state), user),
+    pledges: filterUserPledges(deNormalizePledges(state.entities), user),
     showControls: true
   }
 }

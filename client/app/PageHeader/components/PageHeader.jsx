@@ -10,6 +10,7 @@ import SocialMediaIcons from './SocialMediaIcons'
 import SearchBar from './SearchBar'
 import MenuButton from './MenuButton'
 import { BREAKPOINT_M, BREAKPOINT_L } from '../../lib/config'
+import { setCurrentUser, setAuthToken } from '../../UserSession/actions/sessionActions'
 
 export default class PageHeader extends RootComponent {
   static propTypes = {
@@ -23,8 +24,11 @@ export default class PageHeader extends RootComponent {
     return ['currentUser']
   }
 
-  get objectsToForwardToStateUnnormalized() {
-    return ['currentUser', 'authToken']
+  componentDidMount() {
+    if (this.props.currentUser) {
+      store.dispatch(setCurrentUser(this.props.currentUser.id))
+    }
+    store.dispatch(setAuthToken(this.props.authToken))
   }
 
   render() {

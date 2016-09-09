@@ -1,25 +1,24 @@
-import merge from 'lodash/merge'
+import { combineReducers } from 'redux'
+import { reducer as forms, initialState as initialFormState } from 'rform'
+import entities from './entities'
+import flashMessages from './flashMessages'
+import searchLoadingState from './searchLoadingState'
+import searchResults from './searchResults'
+import sessionPopup from './sessionPopup'
+import signedPledges from './signedPledges'
+import imageInputs from './imageInputs'
+import currentUser from './currentUser'
+import authToken from './authToken'
 
-import generalReducer, { generalInitialState } from './general'
-import { reducer as formReducer, initialState as initialFormState }
-  from 'rform'
-import imageInputReducer, { initialImageInputState }
-  from '../../Inputs/reducers/imageInputReducer'
-
-export const initialState = merge(
-  {},
-  generalInitialState,
-  initialFormState,
-  initialImageInputState
-)
-
-export default function combinedReducer(state = initialState, action) {
-  const reducers = [ generalReducer, formReducer, imageInputReducer ]
-
-  let newState = state
-  for (let reducer of reducers) {
-    newState = reducer(newState, action)
-  }
-
-  return newState
-}
+export default combineReducers({
+  entities,
+  flashMessages,
+  searchLoadingState,
+  searchResults,
+  sessionPopup,
+  signedPledges,
+  imageInputs,
+  currentUser,
+  authToken,
+  forms,
+})

@@ -8,44 +8,43 @@ export const IMAGE_STATE_LOADING = 1
 export const IMAGE_STATE_LOADED = 2
 export const IMAGE_STATE_CROPPED = 3
 
-export const initialImageInputState = {
-  imageInputs: {
-    avatar: {
-      imageState: IMAGE_STATE_NONE,
-      originalImage: null,
-      originalImageWidth: 0,
-      originalImageHeight: 0,
-      filename: null,
-      crop: {},
-      croppedImageUrl: ''
-    },
-    image: {
-      imageState: IMAGE_STATE_NONE,
-      originalImage: null,
-      originalImageWidth: 0,
-      originalImageHeight: 0,
-      filename: null,
-      crop: {},
-      croppedImageUrl: ''
-    }
+const initialState = {
+  avatar: {
+    imageState: IMAGE_STATE_NONE,
+    originalImage: null,
+    originalImageWidth: 0,
+    originalImageHeight: 0,
+    filename: null,
+    crop: {},
+    croppedImageUrl: '',
+  },
+  image: {
+    imageState: IMAGE_STATE_NONE,
+    originalImage: null,
+    originalImageWidth: 0,
+    originalImageHeight: 0,
+    filename: null,
+    crop: {},
+    croppedImageUrl: '',
   }
 }
 
-export default function imageInputReducer(state = initialImageInputState, action) {
-  const newState = assign({}, state)
+export default function imageInputs(state = initialState, action) {
+  let newState
   const id = action.id
 
   switch (action.type) {
-    // At the moment we do noting here in the UI
   case types.LOAD_IMAGE_START:
-    newState.imageInputs[id].imageState = IMAGE_STATE_LOADING
+    newState = assign({}, state)
+    newState[id].imageState = IMAGE_STATE_LOADING
     return newState
 
   case types.LOAD_IMAGE_SUCCESS:
+    newState = assign({}, state)
     const originalImage = action.image, aspect = action.aspect
     const crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
 
-    newState.imageInputs[id] = {
+    newState[id] = {
       originalImage,
       originalImageWidth: originalImage.width,
       originalImageHeight: originalImage.height,
@@ -56,15 +55,18 @@ export default function imageInputReducer(state = initialImageInputState, action
     return newState
 
   case types.LOAD_IMAGE_FAILURE:
-    newState.imageInputs[id].imageState = IMAGE_STATE_NONE
+    newState = assign({}, state)
+    newState[id].imageState = IMAGE_STATE_NONE
     return newState
 
   case types.CHANGE_CROP:
-    newState.imageInputs[id].crop = action.crop
+    newState = assign({}, state)
+    newState[id].crop = action.crop
     return newState
 
   case types.CROP_IMAGE:
-    newState.imageInputs[id] = {
+    newState = assign({}, state)
+    newState[id] = {
       croppedImageUrl: action.croppedImageUrl,
       originalImage: null,
       originalImageWidth: 0,
@@ -76,7 +78,8 @@ export default function imageInputReducer(state = initialImageInputState, action
     return newState
 
   case types.CLEAR_IMAGE:
-    newState.imageInputs[id] = {
+    newState = assign({}, state)
+    newState[id] = {
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
@@ -88,6 +91,6 @@ export default function imageInputReducer(state = initialImageInputState, action
     return newState
 
   default:
-    return newState
+    return state
   }
 }

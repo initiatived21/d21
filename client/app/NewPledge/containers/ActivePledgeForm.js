@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import I18n from 'i18n-js'
-import { toggleSessionPopup } from '../../UserSession/actions/SessionActions'
+import { toggleSessionPopup } from '../../UserSession/actions/sessionActions'
 import { setEntity } from '../../lib/actions/entityActions'
 import PledgeForm from '../components/PledgeForm'
 

@@ -4,16 +4,16 @@ import SigneeList from '../components/SigneeList'
 
 const mapStateToProps = (state, ownProps) => {
   const signatures =
-    values(state.signatures).filter(signature =>
+    values(state.entities.signatures).filter(signature =>
       signature.pledge_id === ownProps.pledge_id && signature.confirmed
     )
 
-  const currentPledge = state.pledges[ownProps.pledge_id]
+  const currentPledge = state.entities.pledges[ownProps.pledge_id]
   const currentUser = state.currentUser
 
   let userIsInitiator
-  if (currentUser && currentPledge) {
-    userIsInitiator = currentUser.id == currentPledge.user_id
+  if (currentUser !== null && currentPledge) {
+    userIsInitiator = currentUser === currentPledge.user_id
   } else {
     userIsInitiator = false
   }

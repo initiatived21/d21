@@ -7,7 +7,7 @@ import ImageCrop from './ImageCrop'
 import {
   IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
   IMAGE_STATE_CROPPED
-} from '../reducers/imageInputReducer'
+} from '../../lib/reducers/imageInputs'
 
 export default class ImageInputComponent extends ChildComponent {
   static propTypes = {

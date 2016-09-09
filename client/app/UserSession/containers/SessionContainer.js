@@ -2,10 +2,10 @@ import { connect } from 'react-redux'
 import onClickOutside from 'react-onclickoutside'
 
 import Session from '../components/Session'
-import { toggleSessionPopup, hideSessionPopup } from '../actions/SessionActions'
+import { toggleSessionPopup, hideSessionPopup } from '../actions/sessionActions'
 
 const mapStateToProps = (state) => ({
-  isVisible: state.ui.sessionPopupVisible
+  isVisible: state.sessionPopup
 })
 
 const mapDispatchToProps = dispatch => ({

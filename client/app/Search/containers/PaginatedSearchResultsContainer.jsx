@@ -10,9 +10,9 @@ import localPath from '../../lib/browser/localPath'
 
 const mapStateToProps = function(state, ownProps) {
   return {
-    results: filterResults(deNormalizePledges(state), state.searchResults),
+    results: filterResults(deNormalizePledges(state.entities), state.searchResults),
     query: ownProps.query,
-    isLoading: state.ui.searchResultsLoading,
+    isLoading: state.searchLoadingState,
   }
 }
 

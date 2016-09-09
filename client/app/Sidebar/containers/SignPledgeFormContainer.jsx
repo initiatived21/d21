@@ -5,8 +5,8 @@ import { addFlashMessageAction } from '../../Flash/actions/flashActions'
 import signPledgeAction from '../actions/signPledgeAction'
 
 const mapStateToProps = (state, ownProps) => ({
-  isSubmitting: state.isSubmitting.NewSignatureFormObject || false,
-  isAlreadySigned: state.pledgesSigned.includes(ownProps.id)
+  isSubmitting: state.forms.isSubmitting.NewSignatureFormObject || false,
+  isAlreadySigned: state.signedPledges.includes(ownProps.id)
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -3,12 +3,12 @@ import I18n from 'i18n-js'
 import PledgeSidebar from '../components/PledgeSidebar'
 
 const mapStateToProps = (state, ownProps) => {
-  const currentPledge = state.pledges[ownProps.pledge_id]
+  const currentPledge = state.entities.pledges[ownProps.pledge_id]
   const currentUser = state.currentUser
 
   let userIsInitiator
-  if (currentUser && currentPledge) {
-    userIsInitiator = currentUser.id == currentPledge.user_id
+  if (currentUser !== null && currentPledge) {
+    userIsInitiator = currentUser === currentPledge.user_id
   } else {
     userIsInitiator = false
   }
