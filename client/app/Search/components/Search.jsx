@@ -24,19 +24,15 @@ export default class Search extends RootComponent {
   render() {
     const { pledges, query, resultCount, resultIds } = this.props
 
-    let resultView
-    if (query === '') {
-      resultView = <EmptyResults pledges={pledges} />
-    } else {
-      resultView =
-        <PaginatedSearchResultsContainer total={resultCount} resultIds={resultIds} query={query} />
-    }
-
     return (
       <Provider store={store}>
         <section>
           <div className="o-wrapper u-mb">
-            {resultView}
+            <PaginatedSearchResultsContainer
+              total={resultCount}
+              resultIds={resultIds}
+              query={query}
+            />
           </div>
         </section>
       </Provider>

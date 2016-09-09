@@ -56,18 +56,11 @@ class PledgesController < ApplicationController
   def index
     search = Search.new(params)
 
-    if search.empty?
-      @pledges = Pledge.where(aasm_state: 'active').order(created_at: :desc).limit(12)
-      @query = ''
-      @result_ids = []
-      @result_count = 0
-    else
-      search.run
-      @pledges = search.solved_results
-      @query = search.query
-      @result_ids = search.solved_results.map(&:id)
-      @result_count = search.unscoped_results.count
-    end
+    search.run
+    @pledges = search.solved_results
+    @query = search.query || ''
+    @result_ids = search.solved_results.map(&:id)
+    @result_count = search.unscoped_results.count
 
     @pledges = serialize @pledges
 

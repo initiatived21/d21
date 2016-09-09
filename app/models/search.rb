@@ -7,7 +7,14 @@ class Search
   end
 
   def run
-    @unscoped_results = PgSearch.multisearch(@query)
+    if empty?
+      @unscoped_results = Pledge
+        .where(aasm_state: ['active', 'successful', 'failed'])
+        .order(deadline: :desc)
+    else
+      @unscoped_results = PgSearch.multisearch(@query)
+    end
+
     @results = @unscoped_results.offset(@offset).limit(@limit)
   end
 
@@ -17,7 +24,11 @@ class Search
 
   # Return a result set of original models, not PgSearch::Document
   def solved_results
-    results.map(&:searchable)
+    if empty?
+      @results
+    else
+      results.map(&:searchable)
+    end
   end
 
   private

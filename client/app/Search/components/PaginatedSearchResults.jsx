@@ -25,6 +25,10 @@ export default class PaginatedSearchResults extends ChildComponent {
       resultTitle = <h1>Für <i>{query}</i> gibt es keine Suchergebnisse</h1>
     }
 
+    if (query === '') {
+      resultTitle = <h1>{resultCount} Versprechen insgesamt</h1>
+    }
+
     return (
       <div>
         {resultTitle}
