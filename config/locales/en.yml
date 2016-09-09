@@ -37,6 +37,11 @@ en:
       press: Press
       start: Start
   PaginatedSearchResults:
+    no_results_for: No search results for
+    pledges_total: "{{num_pledges}} pledges total"
+    results_for:
+      one: search result for
+      other: search results for
     show_more: Show more…
   PledgeCommentList:
     heading: Questions and answers to the initiator
@@ -248,8 +253,15 @@ en:
         created_at: 
         current_sign_in_at: 
         email: 
+        encrypted_password: 
+        failed_attempts: 
         id: 
+        locked_at: 
+        password: 
+        password_confirmation: 
         sign_in_count: 
+        unlock_token: 
+        updated_at: 
       comment:
         content: 
         created_at: 
@@ -463,6 +475,9 @@ en:
         notice: 
   formtastic:
     actions:
+      admin_user:
+        new:
+          create: 
       comment:
         edit:
           update: 
@@ -491,6 +506,7 @@ en:
         new:
           email: 
           password: 
+          password_confirmation: 
       comment:
         edit:
           content: 
@@ -536,6 +552,11 @@ en:
           name: 
           organization: 
     labels:
+      admin_user:
+        new:
+          email: 
+          password: 
+          password_confirmation: 
       comment:
         edit:
           content: 
@@ -629,6 +650,7 @@ en:
         new:
           email: 
           password: 
+          password_confirmation: 
       comment:
         edit:
           content: 
@@ -685,6 +707,11 @@ en:
           organization: 
   helpers:
     label:
+      admin_user:
+        new:
+          email: 
+          password: 
+          password_confirmation: 
       comment:
         edit:
           content: 

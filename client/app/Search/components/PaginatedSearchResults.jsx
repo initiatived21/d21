@@ -19,14 +19,16 @@ export default class PaginatedSearchResults extends ChildComponent {
 
     let resultTitle
     if (resultCount > 0) {
-      resultTitle = <h1>{resultCount} Suchergebnisse für <i>{query}</i></h1>
+      resultTitle = <h1>
+        {resultCount} {this.t('.results_for', { count: resultCount })} <i>{query}</i>
+      </h1>
     }
     else {
-      resultTitle = <h1>Für <i>{query}</i> gibt es keine Suchergebnisse</h1>
+      resultTitle = <h1>{this.t('.no_results_for')} <i>{query}</i></h1>
     }
 
     if (query === '') {
-      resultTitle = <h1>Insgesamt {resultCount} Versprechen</h1>
+      resultTitle = <h1>{this.t('.pledges_total', { num_pledges: resultCount })}</h1>
     }
 
     return (
