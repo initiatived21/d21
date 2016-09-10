@@ -1,7 +1,13 @@
 import { ADD_ENTITIES, SET_ENTITY } from '../constants/actionTypes'
 import merge from 'lodash/merge'
 
-export default function generalReducer(state = { pledges: {}, tags: {}, users: {} }, action) {
+const initialState = {
+  pledges: {},
+  tags: {},
+  users: {}
+}
+
+export default function generalReducer(state = initialState, action) {
   let newState
 
   switch (action.type) {

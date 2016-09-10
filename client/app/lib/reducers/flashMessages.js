@@ -1,5 +1,5 @@
 import { ADD_FLASH_MESSAGE, REMOVE_FLASH_MESSAGE } from '../constants/actionTypes'
-import { assign, set, omit } from 'lodash'
+import { assign, omit } from 'lodash'
 
 export default function flashMessages(state = {}, action) {
   let id, newState

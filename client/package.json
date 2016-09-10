@@ -14,7 +14,7 @@
     "build:production:server": "NODE_ENV=production webpack --config webpack.server.rails.config.js",
     "build:test": "npm run build:client && npm run build:server",
     "build:production": "npm run build:production:client && npm run build:production:server",
-    "test": "istanbul cover _mocha -- --growl --reporter dot --opts ./mocha.opts",
+    "test": "istanbul cover _mocha -- --growl --reporter spec --opts ./mocha.opts",
     "test:lint": "eslint . --ext .js --ext .jsx --cache --config ../.eslintrc.json"
   },
   "dependencies": {

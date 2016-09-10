@@ -8,6 +8,8 @@ import store       from '../../lib/store.js'
 describe('ElementList', function() {
   describe('with basic props', function() {
     it('should output a PledgeList', function() {
+      store.dispatch = sinon.stub()
+
       const component = mount(React.createElement(ElementList, {
         pledges: [],
         filter: 'testFilter'
