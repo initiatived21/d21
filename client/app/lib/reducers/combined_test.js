@@ -25,4 +25,12 @@ describe('combined reducer', function() {
       foos: {1: 'a', 2: 'b', 3: 'c'}
     })
   })
+
+  it('performance test', function() {
+    console.time('hello')
+    for (let i = 0; i < 10000; i++) {
+      reducer(undefined, 'foo').should.eql(store.getState())
+    }
+    console.timeEnd('hello')
+  })
 })

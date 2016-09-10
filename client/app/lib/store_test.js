@@ -3,16 +3,21 @@ import { IMAGE_STATE_NONE } from './reducers/imageInputs'
 
 describe('store', function() {
   const initialState = {
-    pledges: {},
-    searchResults: [],
-    pledgesSigned: [],
-    flashMessages: {},
-    tags: {},
-    ui: {
-      searchResultsLoading: false,
-      sessionPopupVisible: false
+    entities: {
+      pledges: {},
+      tags: {},
+      users: {},
     },
-    isSubmitting: {},
+    authToken: null,
+    currentUser: null,
+    searchResults: [],
+    signedPledges: [],
+    flashMessages: {},
+    searchLoadingState: false,
+    sessionPopup: false,
+    forms: {
+      isSubmitting: {}
+    },
     imageInputs: {
       avatar: {
         crop: {},
@@ -36,6 +41,6 @@ describe('store', function() {
   }
 
   it('should have an empty initial state', function() {
-    store.getState().should.deep.equal(initialState)
+    store.getState().should.eql(initialState)
   })
 })
