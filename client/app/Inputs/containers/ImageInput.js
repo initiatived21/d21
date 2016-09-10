@@ -6,7 +6,7 @@ import { updateAction } from 'rform'
 import cropImage from '../../lib/image_processing/cropImage'
 import loadImageAction, { changeCropAction, cropImageAction, clearImageAction }
   from '../actions/imageInputActions'
-import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInputs'
+import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInput'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
