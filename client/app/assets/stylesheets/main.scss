@@ -147,6 +147,7 @@ $o-flipper-height: $pledge-tile-height;
     Here you place your own visual styling.
 \*------------------------------------*/
 
+@import "aleut/components/components.base-layout";
 @import "aleut/components/components.off-canvas-menu";
 @import "aleut/components/components.flash";
 @import "aleut/components/components.ruler";
@@ -178,7 +179,6 @@ $o-flipper-height: $pledge-tile-height;
 @import "aleut/components/components.preview";
 
 /* Forms */
-@import "aleut/components/components.devise-form";
 @import "aleut/components/components.session";
 @import "aleut/components/components.input";
 @import "aleut/components/components.number-input";

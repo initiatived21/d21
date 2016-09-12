@@ -1,6 +1,6 @@
-<main class="c-devise-form">
+<main class="c-base-layout__main">
   <div class="o-wrapper">
-    <h1 class="c-devise-form__title"><%= t('.heading') %></h1>
+    <h1><%= t('.heading') %></h1>
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>

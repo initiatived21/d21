@@ -7,9 +7,6 @@
  */
 
 .c-new-pledge {
-  margin-top: $spacing;
-  margin-bottom: $spacing--large;
-
   h1 {
     margin-top: 0;
   }
@@ -18,9 +15,6 @@
     display: inline-block;
   }
 
-  @include media-query(m) {
-    margin-top: 36px;
-  }
 }
 
 .c-new-pledge__link {

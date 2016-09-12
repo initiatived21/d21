@@ -34,56 +34,54 @@ export default class PledgeView extends RootComponent {
 
     return (
       <Provider store={store}>
-        <main className="u-pt u-pb-large">
-          <div className="o-wrapper">
+        <div className="o-wrapper">
 
-            {/* Layout S */}
-            <MediaQuery maxWidth={BREAKPOINT_M - 1}>
-              <Pledge {...pledge} user={user} />
-              <PledgeSidebarContainer pledge_id={pledge.id}
-                forms={forms} />
-              <PledgeUpdateListContainer pledge_id={pledge.id} />
-              <PledgeCommentListContainer pledge_id={pledge.id}
-                forms={forms} />
-              <SigneeListContainer pledge_id={pledge.id} user={user} />
-            </MediaQuery>
+          {/* Layout S */}
+          <MediaQuery maxWidth={BREAKPOINT_M - 1}>
+            <Pledge {...pledge} user={user} />
+            <PledgeSidebarContainer pledge_id={pledge.id}
+              forms={forms} />
+            <PledgeUpdateListContainer pledge_id={pledge.id} />
+            <PledgeCommentListContainer pledge_id={pledge.id}
+              forms={forms} />
+            <SigneeListContainer pledge_id={pledge.id} user={user} />
+          </MediaQuery>
 
-            {/* Layout M */}
-            <MediaQuery minWidth={BREAKPOINT_M} maxWidth={BREAKPOINT_L - 1}>
-              <div className="o-layout">
-                <div className="o-layout__item u-5/9">
-                  <Pledge {...pledge} user={user} />
-                </div>
-                <div className="o-layout__item u-4/9">
-                  <PledgeSidebarContainer pledge_id={pledge.id}
-                    forms={forms} />
-                </div>
+          {/* Layout M */}
+          <MediaQuery minWidth={BREAKPOINT_M} maxWidth={BREAKPOINT_L - 1}>
+            <div className="o-layout">
+              <div className="o-layout__item u-5/9">
+                <Pledge {...pledge} user={user} />
               </div>
-              <PledgeUpdateListContainer pledge_id={pledge.id} />
-              <PledgeCommentListContainer pledge_id={pledge.id}
+              <div className="o-layout__item u-4/9">
+                <PledgeSidebarContainer pledge_id={pledge.id}
                   forms={forms} />
-              <SigneeListContainer pledge_id={pledge.id} user={user} />
-            </MediaQuery>
-
-            {/* Layout L */}
-            <MediaQuery minWidth={BREAKPOINT_L}>
-              <div className="o-layout">
-                <div className="o-layout__item u-2/3">
-                  <Pledge {...pledge} user={user} />
-                  <PledgeUpdateListContainer pledge_id={pledge.id} />
-                  <PledgeCommentListContainer pledge_id={pledge.id}
-                    forms={forms} />
-                  <SigneeListContainer pledge_id={pledge.id} user={user} />
-                </div>
-                <div className="o-layout__item u-1/3">
-                  <PledgeSidebarContainer pledge_id={pledge.id}
-                    forms={forms} />
-                </div>
               </div>
-            </MediaQuery>
+            </div>
+            <PledgeUpdateListContainer pledge_id={pledge.id} />
+            <PledgeCommentListContainer pledge_id={pledge.id}
+                forms={forms} />
+            <SigneeListContainer pledge_id={pledge.id} user={user} />
+          </MediaQuery>
 
-          </div>
-        </main>
+          {/* Layout L */}
+          <MediaQuery minWidth={BREAKPOINT_L}>
+            <div className="o-layout">
+              <div className="o-layout__item u-2/3">
+                <Pledge {...pledge} user={user} />
+                <PledgeUpdateListContainer pledge_id={pledge.id} />
+                <PledgeCommentListContainer pledge_id={pledge.id}
+                  forms={forms} />
+                <SigneeListContainer pledge_id={pledge.id} user={user} />
+              </div>
+              <div className="o-layout__item u-1/3">
+                <PledgeSidebarContainer pledge_id={pledge.id}
+                  forms={forms} />
+              </div>
+            </div>
+          </MediaQuery>
+
+        </div>
       </Provider>
     )
   }

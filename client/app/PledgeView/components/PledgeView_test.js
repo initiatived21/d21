@@ -80,6 +80,6 @@ describe('<PledgeView />', function () {
     const wrapper = shallow(<PledgeView {...props} />)
 
     wrapper.is(Provider).should.be.true
-    wrapper.find('main').length.should.equal(1)
+    wrapper.find('.o-wrapper').length.should.equal(1)
   })
 })

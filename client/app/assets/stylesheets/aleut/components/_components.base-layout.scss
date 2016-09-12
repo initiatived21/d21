@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #BASE LAYOUT
+\*------------------------------------*/
+
+/**
+ * Base layout component
+ *
+ * 1. Sticky footer
+ */
+
+.c-base-layout {
+  display: flex;  /* [1] */
+  flex-direction: column;  /* [1] */
+  min-height: 100vh;  /* [1] */
+}
+
+.c-base-layout__main {
+  flex-grow: 1;  /* [1] */
+
+  padding-top: $spacing;
+  padding-bottom: $spacing--large;
+
+  @include media-query(m) {
+    padding-top: $spacing + $spacing--small;
+  }
+}

@@ -34,15 +34,13 @@ export default class Search extends RootComponent {
 
     return (
       <Provider store={store}>
-        <section>
-          <div className="o-wrapper u-mb">
-            <PaginatedSearchResultsContainer
-              total={resultCount}
-              resultIds={resultIds}
-              query={query}
-            />
-          </div>
-        </section>
+        <div className="o-wrapper">
+          <PaginatedSearchResultsContainer
+            total={resultCount}
+            resultIds={resultIds}
+            query={query}
+          />
+        </div>
       </Provider>
     )
   }

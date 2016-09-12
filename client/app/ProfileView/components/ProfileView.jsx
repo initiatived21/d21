@@ -19,19 +19,17 @@ export default class ProfileView extends RootComponent {
   render() {
     return (
       <Provider store={store}>
-        <main>
-          <div className="o-wrapper u-mt u-mb">
-            <h1>{I18n.t('ProfileView.heading')}</h1>
+        <div className="o-wrapper">
+          <h1>{I18n.t('ProfileView.heading')}</h1>
 
-            <h2>Ihre Daten</h2>
-            <ProfileUserForm formConfig={this.props.editForm} />
+          <h2>Ihre Daten</h2>
+          <ProfileUserForm formConfig={this.props.editForm} />
 
-            <hr className="c-ruler" />
+          <hr className="c-ruler" />
 
-            <h2>Ihre Versprechen</h2>
-            <ProfilePledgeListContainer />
-          </div>
-        </main>
+          <h2>Ihre Versprechen</h2>
+          <ProfilePledgeListContainer />
+        </div>
       </Provider>
     )
   }

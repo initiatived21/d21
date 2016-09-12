@@ -6,8 +6,8 @@ section.c-masthead
       p
       = t '.masthead.text'
 
-section.c-pledge-list
-  div.o-wrapper.u-mt-large.u-mb
+section.c-pledge-list.c-base-layout__main
+  div.o-wrapper.u-mt.u-mb
     header.c-pledge-list__header
       h2.c-pledge-list__title
         span.fa.fa-thumbs-o-up>
@@ -15,7 +15,7 @@ section.c-pledge-list
     == cell :pledge_list, @recommended_pledges, filter: :recommended,
                                                 params: params
 
-  div.o-wrapper.u-mt-large.u-mb
+  div.o-wrapper
     header.c-pledge-list__header
       h2.c-pledge-list__title
         span.fa.fa-star>

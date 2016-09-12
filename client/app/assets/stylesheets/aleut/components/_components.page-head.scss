@@ -7,8 +7,6 @@
  */
 
 .c-page-head {
-  padding-bottom: $spacing--small;
-
   @include media-query(m) {
     padding-bottom: 1px;
     border-bottom: 1px solid $primary-color;
