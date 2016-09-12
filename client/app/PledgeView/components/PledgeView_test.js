@@ -3,11 +3,6 @@ import { shallow } from 'enzyme'
 import { Provider } from 'react-redux'
 
 import PledgeView from './PledgeView'
-import Pledge from './Pledge'
-import PledgeSidebarContainer from '../../Sidebar/containers/PledgeSidebarContainer'
-import PledgeUpdateListContainer from '../../UpdateList/containers/PledgeUpdateListContainer'
-import PledgeCommentListContainer from '../../CommentList/containers/PledgeCommentListContainer'
-import SigneeListContainer from '../../SigneeList/containers/SigneeListContainer'
 
 describe('<PledgeView />', function () {
   const props = {

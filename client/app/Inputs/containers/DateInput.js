@@ -46,7 +46,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
     )
   },
 
-  onBlur(_event) {
+  onBlur() {
     const { attribute, formObjectClass, submodel, formId } = ownProps
     const { formState } = stateProps
 

@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

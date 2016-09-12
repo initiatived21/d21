@@ -18,7 +18,7 @@ export default class NumberInputComponent extends Component {
 
   render() {
     const {
-      model, attribute, submodel, errors, object, value, min, max,
+      model, attribute, submodel, errors, value, min, max,
       noLabel, inlineLabel, formId, className
     } = this.props
 

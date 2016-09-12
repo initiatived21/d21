@@ -16,7 +16,7 @@ export default class PledgeCommentList extends ChildComponent {
 
   render() {
     const {
-      comments, object, forms, isSubmitting, userCanAskQuestions, userCanAnswer
+      comments, forms, isSubmitting, userCanAskQuestions, userCanAnswer
     } = this.props
     const { questionForm, answerForm } = forms
 

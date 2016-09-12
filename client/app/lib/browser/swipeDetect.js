@@ -16,19 +16,19 @@
  *
  */
 
-export default function swipeDetect(el, callback){
+export default function swipeDetect(el, callback) {
   var touchsurface = el,
-  swipedir,
-  startX,
-  startY,
-  distX,
-  distY,
-  threshold = 150, //required min distance traveled to be considered swipe
-  restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-  allowedTime = 300, // maximum time allowed to travel that distance
-  elapsedTime,
-  startTime,
-  handleswipe = callback || function(swipedir){}
+    swipedir,
+    startX,
+    startY,
+    distX,
+    distY,
+    threshold = 150, //required min distance traveled to be considered swipe
+    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 300, // maximum time allowed to travel that distance
+    elapsedTime,
+    startTime,
+    handleswipe = callback || function(swipedir){}
 
   touchsurface.addEventListener('touchstart', function(e){
     var touchobj = e.changedTouches[0]

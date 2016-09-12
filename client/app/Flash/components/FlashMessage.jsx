@@ -4,7 +4,6 @@ import { FLASH_DISPLAY_TIME } from '../../lib/config'
 
 export default class FlashMessage extends React.Component {
   static propTypes = {
-    id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     onExpire: PropTypes.func.isRequired,
@@ -24,7 +23,7 @@ export default class FlashMessage extends React.Component {
   }
 
   render() {
-    const { id, type, text } = this.props
+    const { type, text } = this.props
 
     const className = `c-flash-list__item c-flash-list__item--${type}`
 

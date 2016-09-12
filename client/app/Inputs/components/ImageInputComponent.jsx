@@ -43,8 +43,10 @@ export default class ImageInputComponent extends ChildComponent {
       handleFinishCrop, className
     } = this.props
 
-    let fileValueProps = {}
-    let imagePreview = null
+    let fileValueProps = {},
+      imagePreview = null,
+      cropComponentWidth
+
     switch(imageState) {
     case IMAGE_STATE_NONE:
       imagePreview = (
@@ -62,7 +64,7 @@ export default class ImageInputComponent extends ChildComponent {
       break
 
     case IMAGE_STATE_LOADED:
-      const cropComponentWidth = (previewArea / originalImageHeight) *
+      cropComponentWidth = (previewArea / originalImageHeight) *
           Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
       imagePreview = (
           <ImageCrop

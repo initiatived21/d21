@@ -8,6 +8,7 @@ export default class SelectInputComponent extends Component {
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func.isRequired,
     formObject: PropTypes.object.isRequired,
     selected: PropTypes.object,
     minDate: PropTypes.object.isRequired,
