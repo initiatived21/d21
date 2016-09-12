@@ -868,8 +868,9 @@ de:
       answer5: |-
         Jedes Versprechen wird von der Redaktion innerhalb von 1-3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten nicht zu veröffentlichen.
         Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.
-      answer6: "Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen. \n\nDas ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.\n\nBei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen."
-      answer7: |-
+      answer6: Klicken Sie unten im Versprechensformular auf den "Zur Vorschau" Button. Wenn Ihnen die Vorschau zusagt, und Sie das Versprechen nicht weiter bearbeiten wollen, können Sie oben rechts das Versprechen an die Redaktion verschicken. Bitte beachten Sie, dass danach eine Änderung am Versprechen nicht mehr möglich ist.
+      answer7: "Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen. \n\nDas ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.\n\nBei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen."
+      answer8: |-
         Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
 
         Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
@@ -878,8 +879,9 @@ de:
       question3: Wie kann ich mich registrieren?
       question4: Ist die Nutzung kostenfei?
       question5: Warum erscheint mein Versprechen nicht auf der Webseite?
-      question6: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
-      question7: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
+      question6: Wie schicke ich ein Versprechen zum Freischalten an die Redaktion?
+      question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
+      question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
       masthead:
         text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.

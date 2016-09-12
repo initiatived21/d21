@@ -861,6 +861,7 @@ en:
       answer5: Translation not yet available.
       answer6: Translation not yet available.
       answer7: Translation not yet available.
+      answer8: 
       question1: What is *bunt und verbindlich?*
       question2: How does it work?
       question3: How can I register?
@@ -868,6 +869,7 @@ en:
       question5: Why does my pledge not appear on the website?
       question6: Why can`t I update my pledge?
       question7: How can I contact my supporters?
+      question8: 
     home:
       masthead:
         text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
