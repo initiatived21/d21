@@ -177,18 +177,28 @@ describe Pledge do
         let(:pledge) { Pledge.new(amount: 2) }
 
         it 'should be true when signature count is greater than amount' do
-          pledge.signatures_count = 3
+          pledge.stubs(:signatures_count).returns(3)
           pledge.sufficient_signatures?.must_equal true
         end
 
         it 'should be true when signature count is exactly amount' do
-          pledge.signatures_count = 2
+          pledge.stubs(:signatures_count).returns(2)
           pledge.sufficient_signatures?.must_equal true
         end
 
         it 'should be false when signature count is lower than amount' do
-          pledge.signatures_count = 1
+          pledge.stubs(:signatures_count).returns(1)
           pledge.sufficient_signatures?.must_equal false
+        end
+      end
+
+      describe '#signatures_count' do
+        it 'should only count confirmed signatures' do
+          signature = FactoryGirl.create(:signature, :unconfirmed)
+          pledge = signature.pledge
+          pledge.signatures << signatures(:basic)
+          pledge.signatures_count.must_equal 1
+          pledge.signatures.count.must_equal 2
         end
       end
     end

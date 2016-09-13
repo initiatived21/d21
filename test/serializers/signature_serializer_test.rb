@@ -7,7 +7,7 @@ describe SignatureSerializer do
     json.must_equal(
       id: 1,
       organization: 'Monsanto',
-      confirmed: false,
+      confirmed: true,
       pledge_id: 1,
       contact_person: true,
       created_at: signature.created_at,

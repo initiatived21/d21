@@ -11,6 +11,10 @@ FactoryGirl.define do
     confirmed true
 
     pledge
+
+    trait :unconfirmed do
+      confirmed false
+    end
   end
 end
 

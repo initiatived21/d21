@@ -46,11 +46,12 @@ class Pledge < ApplicationRecord
     end
   end
 
-  # CarrierWave Image Uploader
-  mount_base64_uploader :image, PledgeImageUploader, file_name: 'pledge_image'
-
   def past_deadline?
     deadline < Date.current
+  end
+
+  def signatures_count
+    signatures.confirmed.count
   end
 
   def sufficient_signatures?
@@ -85,4 +86,7 @@ class Pledge < ApplicationRecord
     against: [:title, :content, :requirement, :description, :location],
     if: :searchable?
   )
+
+  # CarrierWave Image Uploader
+  mount_base64_uploader :image, PledgeImageUploader, file_name: 'pledge_image'
 end

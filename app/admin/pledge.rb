@@ -1,6 +1,6 @@
 ActiveAdmin.register Pledge do
   permit_params :content, :amount, :who, :requirement, :location, :deadline,
-                :description, :title, :signatures_count, :recommended
+                :description, :title, :recommended
 
   Pledge.aasm.events.each do |aasm_event|
     action = aasm_event.name
@@ -16,7 +16,6 @@ ActiveAdmin.register Pledge do
     id_column
     column :title
     column :deadline
-    column :signatures_count
     column :report_count
     column :aasm_state
     column :recommended

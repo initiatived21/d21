@@ -7,3 +7,4 @@ basic:
   anonymous: false
   organization: 'Monsanto'
   contact_person: true
+  confirmed: true

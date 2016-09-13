@@ -14,7 +14,7 @@ describe PledgeSerializer do
       location: 'activeLocation',
       deadline: Date.new(2000),
       description: 'activeDescription',
-      signatures_count: 0,
+      signatures_count: 1,
       aasm_state: 'active',
       created_at: pledge.created_at,
       image: { url: nil },

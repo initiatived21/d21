@@ -87,6 +87,7 @@ Comment.create!(
   pledge: active_none,
   content: 'Warum bekomme ich keine Antwort?'
 )
+FactoryGirl.create :signature, :unconfirmed, pledge: active_none
 
 # active pledge with a few signatures
 active_few = Pledge.create!(

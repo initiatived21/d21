@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830174727) do
+ActiveRecord::Schema.define(version: 20160913123312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,22 +61,21 @@ ActiveRecord::Schema.define(version: 20160830174727) do
   end
 
   create_table "pledges", force: :cascade do |t|
-    t.string   "content",                          null: false
-    t.integer  "amount",                           null: false
-    t.string   "who",                              null: false
-    t.string   "requirement",                      null: false
+    t.string   "content",                      null: false
+    t.integer  "amount",                       null: false
+    t.string   "who",                          null: false
+    t.string   "requirement",                  null: false
     t.string   "location"
-    t.date     "deadline",                         null: false
+    t.date     "deadline",                     null: false
     t.text     "description"
-    t.string   "aasm_state",                       null: false
-    t.integer  "user_id",                          null: false
-    t.integer  "signatures_count", default: 0,     null: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.string   "aasm_state",                   null: false
+    t.integer  "user_id",                      null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "image"
-    t.string   "title",                            null: false
-    t.integer  "report_count",     default: 0,     null: false
-    t.boolean  "recommended",      default: false, null: false
+    t.string   "title",                        null: false
+    t.integer  "report_count", default: 0,     null: false
+    t.boolean  "recommended",  default: false, null: false
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 
