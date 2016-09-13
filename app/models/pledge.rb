@@ -32,6 +32,7 @@ class Pledge < ApplicationRecord
 
     event :activate, success: :after_activate_success do
       transitions from: :requested, to: :active
+      transitions from: :disapproved, to: :active
     end
 
     event :disapprove do
