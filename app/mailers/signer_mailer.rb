@@ -10,7 +10,7 @@ class SignerMailer < ApplicationMailer
   def new_pledge_update update_id
     update = Update.find(update_id)
     pledge = update.pledge
-    signatures = pledge.signatures.all
+    signatures = pledge.signatures.confirmed.all
 
     (signatures + AdminUser.all).each do |recipient|
       single_new_pledge_update recipient, update, pledge
@@ -19,14 +19,14 @@ class SignerMailer < ApplicationMailer
 
   def pledge_successful pledge_id
     pledge = Pledge.find(pledge_id)
-    pledge.signatures.all.each do |recipient|
+    pledge.signatures.confirmed.all.each do |recipient|
       single_pledge_successful recipient, pledge
     end
   end
 
   def pledge_failed pledge_id
     pledge = Pledge.find(pledge_id)
-    pledge.signatures.all.each do |recipient|
+    pledge.signatures.confirmed.all.each do |recipient|
       single_pledge_failed recipient, pledge
     end
   end
