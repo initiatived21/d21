@@ -38,6 +38,10 @@ side code can be found in `/client/`, including javascript tests. The JS
 test suite is run after a successful run of the server-side test suite, as well
 as a couple of additional checks: brakeman, rails-best-practices, and rubocop.
 
+For the JavaScript enabled Ruby tests PhantomJS needs to be installed on the
+system. For that, install it with your system's package manager or download it
+from the [PhantomJS website](http://phantomjs.org/download.html).
+
 To just run the frontend tests, change into the `/client` directory and type
 `npm test`. To run the JavaScript linter, type `npm run test:lint`.
 

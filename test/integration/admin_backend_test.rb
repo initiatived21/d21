@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 
-class AdminBackendTest < Minitest::Capybara::Spec
+class AdminBackendTest < AcceptanceTest
   include Warden::Test::Helpers
 
   let(:admin) { AdminUser.first }

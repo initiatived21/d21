@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 
-class SearchTest < Minitest::Capybara::Spec
+class SearchTest < AcceptanceTest
   it 'should find partial matches' do
     FactoryGirl.create :pg_search_document, content: 'searchable'
     FactoryGirl.create :pg_search_document, content: 'will not be found'
