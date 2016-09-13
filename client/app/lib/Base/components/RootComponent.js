@@ -35,15 +35,10 @@ export default class RootComponent extends React.Component {
     return []
   }
 
-  get objectsToForwardToStateUnnormalized() {
-    return []
-  }
-
   pushServerProvidedObjectsToState() {
     let pushableObject = {}
 
-    if (this.objectsToForwardToState.length > 0 ||
-        this.objectsToForwardToStateUnnormalized.length > 0) {
+    if (this.objectsToForwardToState.length > 0) {
 
       for (let objectName of this.objectsToForwardToState) {
         if (!this.props[objectName]) { continue }
@@ -52,10 +47,6 @@ export default class RootComponent extends React.Component {
           pushableObject,
           normalized(objectName, this.props[objectName]).entities
         )
-      }
-
-      for (let objectName of this.objectsToForwardToStateUnnormalized) {
-        pushableObject[objectName] = this.props[objectName]
       }
 
       store.dispatch(addEntities(pushableObject))

@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     )
 
   const currentPledge = state.entities.pledges[ownProps.pledge_id]
+
   let userCanAskQuestions
   if (state.currentUser !== null && currentPledge) {
     userCanAskQuestions = state.currentUser !== currentPledge.user_id

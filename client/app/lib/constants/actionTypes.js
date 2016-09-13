@@ -25,6 +25,9 @@ export const SET_SEARCH_LOADING_STATE    = 'SET_SEARCH_LOADING_STATE'
 /* Signed pledges */
 export const SIGN_PLEDGE                 = 'SIGN_PLEDGE'
 
+/* Submitted updates */
+export const SUBMIT_UPDATE               = 'SUBMIT_UPDATE'
+
 /* Session */
 export const TOGGLE_SESSION_POPUP        = 'TOGGLE_SESSION_POPUP'
 export const HIDE_SESSION_POPUP          = 'HIDE_SESSION_POPUP'

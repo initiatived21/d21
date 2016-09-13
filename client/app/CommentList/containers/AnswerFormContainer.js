@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     formData,
-    isSubmitting: state.isSubmitting.NewAnswerFormObject
+    isSubmitting: state.forms.isSubmitting.NewAnswerFormObject
   }
 }
 

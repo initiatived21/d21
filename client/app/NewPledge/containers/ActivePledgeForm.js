@@ -38,7 +38,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...ownProps,
 
   afterResponse: json => {
-    if (json.status =='success') {
+    if (json.status === 'success') {
       dispatchProps.dispatch(setEntity(stateProps.formId, {}))
     }
   }

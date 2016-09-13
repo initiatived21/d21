@@ -6,7 +6,7 @@ import UpdateForm from '../components/UpdateForm'
 
 const mapStateToProps = (state) => {
   return {
-    isSubmitting: state.isSubmitting.NewUpdateFormObject,
+    isSubmitting: state.forms.isSubmitting.NewUpdateFormObject,
     wasSubmitted: state.ui.updateSubmitted,
   }
 }

@@ -7,7 +7,7 @@ import momentToString from '../../lib/date_and_time/momentToString'
 
 const mapStateToProps = function(state, ownProps) {
 
-  const attrs = state[ownProps.formId]
+  const attrs = state.forms[ownProps.formId]
   let value = ''
   if (attrs && ownProps.submodel && attrs[ownProps.submodel]) {
     value = attrs[ownProps.submodel][ownProps.attribute] || ''
