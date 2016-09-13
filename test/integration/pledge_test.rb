@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 
 class PledgeTest < AcceptanceTest
-  it 'should open a pledge view', :js => true do
+  it 'should open a pledge view', js: true do
     visit "/de/pledges/#{Pledge.first.id}"
 
     page.must_have_content 'activeContent'
