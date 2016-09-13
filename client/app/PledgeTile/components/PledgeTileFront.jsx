@@ -27,7 +27,11 @@ export default class PledgeTileFront extends ChildComponent {
     } = this.props
 
     const remainingDays = daysTill(deadline)
-    const isUrgent = remainingDays <= 5 ? true : false
+
+    let isUrgent
+    if (state === 'active' && remainingDays <= 5) {
+      isUrgent = true
+    }
 
     const percentage = Math.round(100 / signatures_total * signatures_count)
 
