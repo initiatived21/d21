@@ -3,9 +3,8 @@ import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 import { updateAction } from 'rform'
 
-import cropImage from '../../lib/image_processing/cropImage'
-import loadImageAction, { changeCropAction, cropImageAction, clearImageAction }
-  from '../actions/imageInputActions'
+import cropImageFunction from '../../lib/image_processing/cropImage'
+import loadImage, { changeCrop, cropImage, clearImage } from '../actions/imageInputActions'
 import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInput'
 import ImageInputComponent from '../components/ImageInputComponent'
 
@@ -59,19 +58,19 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 
   return {
     handleChangeCrop: function(crop) {
-      dispatch(changeCropAction(id, crop))
+      dispatch(changeCrop(id, crop))
     },
     onDropFile(files) {
       const file = files[0]
-      dispatch(loadImageAction(id, file, aspectRatio))
+      dispatch(loadImage(id, file, aspectRatio))
     },
     onCancelClick(event) {
       event.preventDefault()
-      dispatch(clearImageAction(id))
+      dispatch(clearImage(id))
     },
     onRemoveFileClick(event) {
       event.preventDefault()
-      dispatch(clearImageAction(id))
+      dispatch(clearImage(id))
     },
     dispatch,
   }
@@ -90,14 +89,14 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     ...ownProps,
 
     handleFinishCrop: function() {
-      const croppedImageUrl = cropImage(
+      const croppedImageUrl = cropImageFunction(
         originalImage,
         crop,
         scaleToX,
         scaleToY
       )
 
-      dispatch(cropImageAction(id, croppedImageUrl, scaleToX, scaleToY))
+      dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
     }
   }

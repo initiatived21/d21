@@ -9,6 +9,7 @@ export default class UpdateForm extends ChildComponent {
   static propTypes = {
     formData: PropTypes.object.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
+    afterResponse: PropTypes.func.isRequired,
   }
 
   render() {

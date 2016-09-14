@@ -39,7 +39,7 @@ export default class PledgeSidebar extends ChildComponent {
           activateAction={activateAction} userConfirmed={userConfirmed} />
       )
     } else if (userIsInitiator) {
-      sidebarField = <UpdateFormContainer formData={updateForm} />
+      sidebarField = <UpdateFormContainer id={pledge_id} formData={updateForm} />
     } else if (showSignForm) {
       sidebarField =
         <SignPledgeFormContainer id={pledge_id} formData={signPledgeForm} />
