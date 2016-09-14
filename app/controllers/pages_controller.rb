@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @newest_pledges = serialize(newest_query)
 
     recommended_query =
-      Pledge.where(aasm_state: %w(active successful), recommended: true)
+      Pledge.where(aasm_state: %w(active successful failed), recommended: true)
             .order(updated_at: :desc).limit(3)
     @recommended_pledges = serialize(recommended_query)
   end

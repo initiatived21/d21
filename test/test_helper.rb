@@ -20,9 +20,21 @@ require 'minitest/spec'
 require 'minitest/mock'
 require 'minitest-matchers'
 require 'minitest/hell'
+require 'minitest/metadata'
 require 'pry-rescue/minitest' if ENV['RESCUE']
 # require 'sidekiq/testing'
 # require 'fakeredis'
+
+
+# Poltergeist/PhantomJS
+require 'capybara/poltergeist'
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app,
+    js_errors: false,
+    phantomjs_logger: File.open("#{Rails.root}/log/test_phantomjs.log", "a")
+  )
+end
+Capybara.javascript_driver = :poltergeist
 
 
 # Inclusions: First matchers, then modules, then helpers.
@@ -92,17 +104,24 @@ class MiniTest::Spec
   # Add more helper methods to be used by all tests here...
 end
 
-class MiniTest::Capybara::Spec
-  before :each do
+class AcceptanceTest < MiniTest::Capybara::Spec
+  include MiniTest::Metadata
+
+  before do
+    if metadata[:js] == true
+      Capybara.current_driver = Capybara.javascript_driver
+    end
+
     DatabaseCleaner.start
   end
 
-  after :each do
+  after do
+    Capybara.current_driver = Capybara.default_driver
+
     DatabaseCleaner.clean
 
     $suite_passing = false if failure
   end
-
   # Add more helper methods to be used by all tests here...
 end
 

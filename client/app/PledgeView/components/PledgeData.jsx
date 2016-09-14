@@ -18,7 +18,12 @@ export default class PledgeData extends ChildComponent {
     const { state, initiator, amount, deadline, signatures_count } = this.props
 
     const remainingDays = daysTill(deadline)
-    const isUrgent = remainingDays <= 5 ? true : false
+
+    let isUrgent
+    if (state === 'active' && remainingDays <= 5) {
+      isUrgent = true
+    }
+
     const percentage = Math.round(100 / amount * signatures_count)
 
     const d = new Date(Date.parse(deadline))

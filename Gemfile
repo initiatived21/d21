@@ -137,6 +137,7 @@ group :test do
   gem 'fakeweb', '~> 1.3'
   gem 'webmock'
   gem 'pry-rescue'
+  gem 'minitest-metadata', :require => false
 
   # testing emails
   gem 'email_spec'
