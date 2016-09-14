@@ -801,6 +801,7 @@ en:
     submit:
       user:
         create: Create User
+        update: 
   initiator_mailer:
     new_question:
       first_paragraph: 

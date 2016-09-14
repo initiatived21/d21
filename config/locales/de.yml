@@ -796,6 +796,7 @@ de:
     submit:
       user:
         create: Create Benutzer
+        update: Update Benutzer
   initiator_mailer:
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
