@@ -13,6 +13,9 @@ const mapDispatchToProps = dispatch => ({
     event.preventDefault()
     dispatch(toggleSessionPopup())
   },
+  onProfileLinkClick: function() {
+    dispatch(hideSessionPopup())
+  },
   dispatch
 })
 

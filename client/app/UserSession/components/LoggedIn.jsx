@@ -6,12 +6,12 @@ import localPath from '../../lib/browser/localPath'
 
 export default class LoggedIn extends ChildComponent {
   static propTypes = {
-    currentUser: PropTypes.object.isRequired
+    currentUser: PropTypes.object.isRequired,
+    onLinkClick: PropTypes.func.isRequired
   }
 
   render() {
-    const { currentUser } = this.props
-    const profileHref = localPath('/users/profile')
+    const { currentUser, onLinkClick } = this.props
 
     return(
       <div>
@@ -27,12 +27,16 @@ export default class LoggedIn extends ChildComponent {
         <nav>
           <ul className="o-list-bare">
             <li className="u-mb-small">
-              <a className="c-session__link" href={profileHref}>
+              <a className="c-session__link" href={localPath('/users/profile')}
+                onClick={onLinkClick}
+                >
                 {this.t('.my_data')}
               </a>
             </li>
             <li>
-              <a className="c-session__link" href={profileHref}>
+              <a className="c-session__link" href={localPath('/users/profile#your_pledges')}
+                onClick={onLinkClick}
+                >
                 {this.t('.my_pledges')}
               </a>
             </li>

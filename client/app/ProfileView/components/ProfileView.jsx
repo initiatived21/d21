@@ -27,7 +27,7 @@ export default class ProfileView extends RootComponent {
 
           <hr className="c-ruler" />
 
-          <h2>Ihre Versprechen</h2>
+          <h2 id="your_pledges">Ihre Versprechen</h2>
           <ProfilePledgeListContainer />
         </div>
       </Provider>

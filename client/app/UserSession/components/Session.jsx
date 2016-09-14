@@ -11,6 +11,7 @@ export default class Session extends ChildComponent {
     authToken: PropTypes.string.isRequired,
     onLoginClick: PropTypes.func.isRequired,
     onWindowClick: PropTypes.func.isRequired,
+    onProfileLinkClick: PropTypes.func.isRequired,
     isVisible: PropTypes.bool
   }
 
@@ -19,7 +20,7 @@ export default class Session extends ChildComponent {
   }
 
   render() {
-    const { currentUser, onLoginClick, isVisible } = this.props
+    const { currentUser, onLoginClick, isVisible, onProfileLinkClick } = this.props
 
     let button
     if (currentUser) {
@@ -45,7 +46,7 @@ export default class Session extends ChildComponent {
 
     let loggedInOrOutComponent
     if (currentUser) {
-      loggedInOrOutComponent = <LoggedIn currentUser={currentUser} />
+      loggedInOrOutComponent = <LoggedIn currentUser={currentUser} onLinkClick={onProfileLinkClick} />
     }
     else {
       loggedInOrOutComponent = <SignInForm formData={{ action: localPath('/users/sign_in'),
