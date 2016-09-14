@@ -6,7 +6,7 @@ function daysTill(dateStr) {
   const date = Date.parse(dateStr),
     now = Date.now()
 
-  let days = Math.floor((date - now) / 1000 / 60 / 60 / 24)
+  let days = Math.ceil((date - now) / 1000 / 60 / 60 / 24)
   if (days < 0) {
     days = 0
   }
