@@ -139,7 +139,7 @@ Pledge.create!(
 )
 
 # successful pledge
-Pledge.create!(
+successful = Pledge.create!(
   title: 'Fahrradfahren lernen',
   content: 'zehn Frauen und Kindern aus Flüchtlingsfamilien Fahrradfahren'\
            ' beizubringen',
@@ -153,6 +153,9 @@ Pledge.create!(
   tags: [family, language],
   recommended: true
 )
+10.times do
+  FactoryGirl.create :signature, pledge: successful
+end
 
 # disapproved pledge
 Pledge.create!(

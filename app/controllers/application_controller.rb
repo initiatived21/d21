@@ -37,6 +37,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def serialize object
-    ActiveModelSerializers::SerializableResource.new(object).as_json
+    ActiveModelSerializers::SerializableResource.new(
+      object, scope: current_user
+    ).as_json
   end
 end

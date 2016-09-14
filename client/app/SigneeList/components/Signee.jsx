@@ -18,30 +18,11 @@ export default class Signee extends ChildComponent {
   }
 
   render() {
-    const { id, name, email, img_src, reason, created_at, anonymous, organization,
-      contact_person, showPrivateData } = this.props
+    const {
+      id, reason, created_at
+    } = this.props
 
     const createdAtStr = formatDateAndTime(created_at)
-
-    let nameOrAnonymous
-    if (anonymous && !showPrivateData) {
-      nameOrAnonymous = this.t('.anonymous')
-    }
-    else {
-      nameOrAnonymous = name
-
-      if (organization) {
-        nameOrAnonymous += `, ${organization}`
-      }
-      if (contact_person) {
-        nameOrAnonymous += ` (${this.t('.contact_person')})`
-      }
-    }
-
-    let emailOrNothing
-    if (showPrivateData) {
-      emailOrNothing = email
-    }
 
     return (
       <li className="c-signee-list__item">
@@ -53,13 +34,45 @@ export default class Signee extends ChildComponent {
             </span>
           </div>
           <article className="c-signee-list__signee-data o-media__body">
-            <h3 className="c-signee-list__signee-name">{nameOrAnonymous}</h3>
+            <h3 className="c-signee-list__signee-name">
+              {this._nameOrAnonymous}
+            </h3>
             <p className="c-signee-list__signee-comment">{reason}</p>
-            <p className="c-signee-list__signee-email">{emailOrNothing}</p>
-            <p className="c-signee-list__signee-date"><time>{createdAtStr}</time></p>
+            <p className="c-signee-list__signee-email">
+              {this._emailOrNothing}
+            </p>
+            <p className="c-signee-list__signee-date">
+              <time>{createdAtStr}</time>
+            </p>
           </article>
         </div>
       </li>
     )
+  }
+
+  get _nameOrAnonymous() {
+    let string
+    if (this.props.anonymous && !this.props.showPrivateData) {
+      string = this.t('.anonymous')
+    }
+    else {
+      string = this.props.name
+
+      if (this.props.organization) {
+        string += `, ${this.props.organization}`
+      }
+      if (this.props.contact_person) {
+        string += ` (${this.t('.contact_person')})`
+      }
+    }
+    return string
+  }
+
+  get _emailOrNothing() {
+    let string
+    if (this.props.showPrivateData) {
+      string = this.props.email
+    }
+    return string
   }
 }
