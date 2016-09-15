@@ -18,14 +18,15 @@ export default class Search extends RootComponent {
 
   constructor(props) {
     super(props)
-    this.componentDidMount = this.componentDidMount.bind(this)
+    this.componentWillMount = this.componentWillMount.bind(this)
   }
 
   get objectsToForwardToState() {
     return ['pledges']
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    super.componentWillMount()
     store.dispatch(addSearchResults(this.props.resultIds))
   }
 
@@ -36,7 +37,7 @@ export default class Search extends RootComponent {
       <Provider store={store}>
         <div className="o-wrapper">
           <PaginatedSearchResultsContainer
-            total={resultCount}
+            resultCount={resultCount}
             resultIds={resultIds}
             query={query}
           />

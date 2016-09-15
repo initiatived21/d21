@@ -7,7 +7,7 @@ class PledgeTest < AcceptanceTest
     page.must_have_content 'activeContent'
   end
 
-  it 'should be possible to create a pledge' do
+  it 'should be possible to create a pledge', js: true do
     skip 'TODO: Implement JS test and/or make non-js creation work'
 
     visit '/en/pledges/new'

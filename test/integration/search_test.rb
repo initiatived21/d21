@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 
 class SearchTest < AcceptanceTest
-  it 'should find partial matches' do
+  it 'should find partial matches', js: true do
     FactoryGirl.create :pg_search_document, content: 'searchable'
     FactoryGirl.create :pg_search_document, content: 'will not be found'
     visit '/'

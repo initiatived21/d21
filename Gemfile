@@ -141,6 +141,8 @@ group :test do
 
   # testing emails
   gem 'email_spec'
+
+  gem 'capybara-webkit'
 end
 
 group :development, :test do
@@ -165,7 +167,6 @@ group :development, :test do
   gem 'launchy' # save_and_open_page
   gem 'shoulda'
   gem 'mocha'
-  gem 'poltergeist'
 
   # test suite additions
   gem 'rails_best_practices'

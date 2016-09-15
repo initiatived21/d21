@@ -3,6 +3,7 @@ require_relative '../test_helper'
 class AdminBackendTest < AcceptanceTest
   include Warden::Test::Helpers
 
+
   let(:admin) { AdminUser.first }
 
   describe 'as a logged out visitor' do
@@ -18,7 +19,7 @@ class AdminBackendTest < AcceptanceTest
   describe 'as a logged in admin' do
     before { login_as admin }
 
-    it 'must show the dashboard immediately' do
+    it 'must show the dashboard immediately', js: true do
       visit '/admin'
 
       page.must_have_content 'Übersicht'

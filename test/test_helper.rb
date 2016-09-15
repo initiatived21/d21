@@ -26,15 +26,12 @@ require 'pry-rescue/minitest' if ENV['RESCUE']
 # require 'fakeredis'
 
 
-# Poltergeist/PhantomJS
-require 'capybara/poltergeist'
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app,
-    js_errors: false,
-    phantomjs_logger: File.open("#{Rails.root}/log/test_phantomjs.log", "a")
-  )
+# Capybara Webkit driver
+Capybara::Webkit.configure do |config|
+  # config.debug = true
+  config.allow_url("fonts.googleapis.com")
 end
-Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :webkit
 
 
 # Inclusions: First matchers, then modules, then helpers.
@@ -68,6 +65,23 @@ Minitest.after_run do
     rubocop
   end
 end
+
+
+# Share the active-record connection between rake_test and webkit
+
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+
+  def self.connection
+    @@shared_connection || retrieve_connection
+  end
+end
+ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
+
+
+DatabaseCleaner.strategy = :transaction
+
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -107,24 +121,22 @@ end
 class AcceptanceTest < MiniTest::Capybara::Spec
   include MiniTest::Metadata
 
-  before do
+  before :each do
     if metadata[:js] == true
       Capybara.current_driver = Capybara.javascript_driver
     end
-
-    DatabaseCleaner.start
   end
 
-  after do
+  after :each do
     Capybara.current_driver = Capybara.default_driver
 
-    DatabaseCleaner.clean
-
     $suite_passing = false if failure
+  end
+
+  around do |tests|
+    DatabaseCleaner.cleaning(&tests)
   end
   # Add more helper methods to be used by all tests here...
 end
 
 $suite_passing = true
-
-DatabaseCleaner.strategy = :transaction

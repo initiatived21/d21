@@ -12,7 +12,6 @@ const mapStateToProps = function(state, ownProps) {
   return {
     results: filterResults(deNormalizePledges(state), state.searchResults),
     query: ownProps.query,
-    resultCount: ownProps.total,
     isLoading: state.ui.searchResultsLoading,
   }
 }
