@@ -10,6 +10,7 @@ import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaB
 import PledgeImage from './PledgeImage'
 import PledgeDescription from './PledgeDescription'
 import PledgeCreatedAt from './PledgeCreatedAt'
+import localPath from '../../lib/browser/localPath'
 
 import { DOMAIN_PROD } from '../../lib/config'
 
@@ -32,17 +33,13 @@ export default class Pledge extends ChildComponent {
     tags: PropTypes.array.isRequired,
   }
 
-  getPledgePath() {
-    return `/${I18n.locale}/pledges/${this.props.id}`
-  }
-
   render() {
     const {
       title, content, amount, who, requirement, location, deadline, description, image,
       aasm_state, signatures_count, created_at, user, tags
     } = this.props
 
-    const initiator = user.organization ? user.organization : user.name
+    const initiator = user.organization || user.name
     const pledgeImage = image.url ? (<PledgeImage src={image.url} />) : null
     const pledgeDescription = description ? (
       <PledgeDescription className="u-mt">{description}</PledgeDescription>
@@ -80,7 +77,7 @@ export default class Pledge extends ChildComponent {
           />
           <SocialMediaButtons
             className="u-mb"
-            url={DOMAIN_PROD + this.getPledgePath()}
+            url={DOMAIN_PROD + localPath(`/pledges/${this.props.id}`)}
           />
           {pledgeImage}
           {pledgeDescription}

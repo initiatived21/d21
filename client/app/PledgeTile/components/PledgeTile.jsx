@@ -6,6 +6,7 @@ import PledgeTileBack       from './PledgeTileBack'
 import StateHeader          from './StateHeader'
 import StateFooterContainer from '../containers/StateFooterContainer'
 import daysTill             from '../../lib/date_and_time/daysTill'
+import localPath            from '../../lib/browser/localPath'
 
 export default class PledgeTile extends ChildComponent {
   static propTypes = {
@@ -30,15 +31,12 @@ export default class PledgeTile extends ChildComponent {
     showControls: PropTypes.bool,
   }
 
-  getPledgePath() {
-    return `/${I18n.locale}/pledges/${this.props.pledge.id}`
-  }
-
   render() {
     const { pledge, showControls } = this.props
     const initiator = pledge.initiator
+    const initiatorName = initiator.organization || initiator.name
     const avatarUrl = initiator.avatar.url
-    const pledgePath = this.getPledgePath()
+    const pledgePath = localPath(`/pledges/${pledge.id}`)
 
     const remainingDays = daysTill(pledge.deadline)
 
@@ -62,7 +60,7 @@ export default class PledgeTile extends ChildComponent {
               <PledgeTileFront
                 className={className}
                 state={state}
-                initiatorName={initiator.name}
+                initiatorName={initiatorName}
                 initiatorImage={avatarUrl}
                 title={pledge.title}
                 deadline={pledge.deadline}
@@ -75,7 +73,7 @@ export default class PledgeTile extends ChildComponent {
             <div className="o-flipper__back">
               <PledgeTileBack
                 className={className}
-                initiatorName={initiator.name}
+                initiatorName={initiatorName}
                 initiatorImage={avatarUrl}
                 content={pledge.content}
                 amount={pledge.amount}
