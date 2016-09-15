@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import DatePicker from 'react-datepicker'
 
-export default class SelectInputComponent extends Component {
+export default class DateInputComponent extends Component {
   static propTypes = {
     model: PropTypes.string.isRequired,
     attribute: PropTypes.string.isRequired,

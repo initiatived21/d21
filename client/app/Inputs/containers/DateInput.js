@@ -21,7 +21,7 @@ const mapStateToProps = function(state, ownProps) {
     name,
     locale: I18n.locale,
     selected: value ? moment(value) : undefined,
-    minDate: moment(),
+    minDate: moment().add(1, 'day'),
     maxDate: moment().add(3, 'years'),
     dateFormat: I18n.t('rform.date_format'),
     formState: attrs,
