@@ -186,7 +186,7 @@ en:
     email_hint: 
     i_sign: I sign this pledge.
     sign: Sign
-    signed_message: You have successfully signed this pledge.
+    signed_message: Thank you! Please check your email account in order to confirm your signature.
     small_print: 
     tooltip:
       anonymous: 

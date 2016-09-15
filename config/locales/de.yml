@@ -186,7 +186,7 @@ de:
     email_hint: Ihre E-Mail wird nicht veröffentlicht.
     i_sign: Ich unterzeichne dieses Versprechen.
     sign: Unterzeichnen
-    signed_message: Sie haben das Versprechen erfolgreich unterzeichnet.
+    signed_message: Vielen Dank! Bitte überprüfen Sie Ihr E-Mail-Postfach, um Ihre Unterschrift zu bestätigen.
     small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
     tooltip:
       anonymous: Ihr Klarname wird in der Unterschriftenliste nicht angezeigt. Der Initiator des Versprechens erhält Ihre Daten nur dann, wenn das Versprechen erfolgreich ist, um mit Ihnen Kontakt aufzunehmen.
