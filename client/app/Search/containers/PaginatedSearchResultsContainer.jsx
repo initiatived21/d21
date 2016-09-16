@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import { values } from 'lodash'
 import normalize from '../../lib/normalization'
 import deNormalizePledges from '../../lib/state/deNormalizePledges'
 import PaginatedSearchResults from '../components/PaginatedSearchResults'
@@ -45,8 +44,6 @@ function fetchMoreResults (dispatch, query, offset, limit) {
       const normalizedPledges = normalize('pledges', pledges)
       dispatch(addEntities(normalizedPledges.entities))
       dispatch(addSearchResults(json.resultIds))
-    }).catch(function(ex) {
-      console.error('parsing failed', ex)
     })
 }
 

@@ -1,13 +1,8 @@
-import React, { PropTypes } from 'react'
-import { FormButton } from 'rform'
-import FontAwesome from 'react-fontawesome'
+import React from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import localPath from '../../lib/browser/localPath'
 
 export default class PreviewRequested extends ChildComponent {
-  static propTypes = {
-  }
-
   render() {
     return (
       <div className="c-preview c-preview--requested">

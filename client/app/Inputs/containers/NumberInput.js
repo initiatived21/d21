@@ -26,21 +26,6 @@ const mapStateToProps = function(state, ownProps) {
     value = Number(attrs[ownProps.attribute])
   }
 
-  // let value = null
-  // const { defaultValue } = ownProps
-  //
-  // if (attrs && ownProps.submodel && attrs[ownProps.submodel]) {
-  //   value = attrs[ownProps.submodel][ownProps.attribute]
-  //   if (value === null) {
-  //     value = defaultValue
-  //   }
-  // } else if (attrs) {
-  //   value = attrs[ownProps.attribute]
-  //   if (value === null) {
-  //     value = defaultValue
-  //   }
-  // }
-
   return {
     errors,
     value,

@@ -1,10 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class PledgeSignedMessage extends ChildComponent {
-  static propTypes = {
-  }
-
   render() {
     return (
       <div className="c-sidebar c-sidebar--tertiary">

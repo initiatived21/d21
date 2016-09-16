@@ -25,7 +25,7 @@ export default class PledgeSidebar extends ChildComponent {
 
   render() {
     const {
-      pledge_id, forms, signPledgeFormObject, isPreview, userIsInitiator,
+      pledge_id, forms, isPreview, userIsInitiator,
       isDraft, activateAction, userConfirmed, renderReportForm, className,
       showSignForm
     } = this.props

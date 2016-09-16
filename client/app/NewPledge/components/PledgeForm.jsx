@@ -2,6 +2,7 @@ import React, { PropTypes  } from 'react'
 import { Form, InputSet, Input, Label, Button, Errors } from 'rform'
 import FontAwesome from 'react-fontawesome'
 import MediaQuery from 'react-responsive'
+import I18n from 'i18n-js'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import BasePledgeFormObject from '../../lib/form_objects/base_pledge_form'
@@ -25,7 +26,7 @@ export default class PledgeForm extends ChildComponent {
 
   render() {
     const {
-      onLinkClick, currentUser, form, id, afterResponse, formId
+      onLinkClick, currentUser, form, afterResponse, formId
     } = this.props
 
     const formObjectClass =

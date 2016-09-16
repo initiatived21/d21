@@ -12,6 +12,10 @@ import normalized from '../../normalization'
 import { addEntities } from '../../actions/entityActions'
 
 export default class RootComponent extends React.Component {
+  static propTypes = {
+    locale: React.PropTypes.string.isRequired
+  }
+
   constructor(props) {
     I18n.locale = props.locale
 
@@ -20,7 +24,7 @@ export default class RootComponent extends React.Component {
       document.documentElement.lang = props.locale
     }
 
-    return super(props)
+    super(props)
   }
 
   componentWillMount() {

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import localPath from '../../lib/browser/localPath'
 

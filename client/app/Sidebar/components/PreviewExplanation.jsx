@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react'
-import { FormButton } from 'rform'
-import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import PreviewDraft from './PreviewDraft'
 import PreviewUnconfirmed from './PreviewUnconfirmed'

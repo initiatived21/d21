@@ -13,7 +13,12 @@ export default class NumberInputComponent extends Component {
     inlineLabel: PropTypes.bool,
     submodel: PropTypes.string,
     errors: PropTypes.array,
-    className: PropTypes.string
+    className: PropTypes.string,
+    formId: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func.isRequired,
+    onIncrease: PropTypes.func.isRequired,
+    onDecrease: PropTypes.func.isRequired
   }
 
   render() {

@@ -1,3 +1,5 @@
+/* eslint no-console: 0 */
+
 require('babel-register')()
 
 // JSDOM setup
@@ -18,7 +20,7 @@ global.navigator = {
   userAgent: 'node.js'
 }
 
-documentRef = document
+global.documentRef = document
 
 // chai setup
 var chai = require('chai')

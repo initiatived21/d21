@@ -31,7 +31,7 @@ export default class Search extends RootComponent {
   }
 
   render() {
-    const { pledges, query, resultCount, resultIds } = this.props
+    const { query, resultCount, resultIds } = this.props
 
     return (
       <Provider store={store}>

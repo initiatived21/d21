@@ -1,5 +1,5 @@
 /* eslint no-console: 0 */
-export default store => next => action => {
+export default () => next => action => {
   let redirect = action.redirect || (action.meta && action.meta.redirect)
   if ( !redirect || typeof global.window == 'undefined' ) {
     return next(action)

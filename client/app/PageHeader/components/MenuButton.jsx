@@ -1,6 +1,5 @@
 import React from 'react'
 import FontAwesome from 'react-fontawesome'
-import ChildComponent from '../../lib/Base/components/ChildComponent'
 import swipeDetect from '../../lib/browser/swipeDetect'
 
 export default class MenuButton extends React.Component {

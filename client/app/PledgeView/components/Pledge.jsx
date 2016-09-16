@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import I18n from 'i18n-js'
-
 import TagList from '../../TagList/components/TagList'
 import PledgeLocation from './PledgeLocation'
 import PledgeQuote from './PledgeQuote'
@@ -11,7 +9,6 @@ import PledgeImage from './PledgeImage'
 import PledgeDescription from './PledgeDescription'
 import PledgeCreatedAt from './PledgeCreatedAt'
 import localPath from '../../lib/browser/localPath'
-
 import { DOMAIN_PROD } from '../../lib/config'
 
 export default class Pledge extends ChildComponent {

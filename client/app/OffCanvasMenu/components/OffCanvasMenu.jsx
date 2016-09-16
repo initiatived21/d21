@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import FontAwesome          from 'react-fontawesome'
 import onClickOutside       from 'react-onclickoutside'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
 import OffCanvasMenuItem    from './OffCanvasMenuItem'

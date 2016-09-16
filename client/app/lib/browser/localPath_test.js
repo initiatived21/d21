@@ -1,4 +1,3 @@
-import sinon from 'sinon'
 import localPath from './localPath'
 import I18n from 'i18n-js'
 

@@ -1,13 +1,10 @@
-import React, { PropTypes  } from 'react'
-import { Form, InputSet, Input, Label, Button, Errors } from 'rform'
+import React from 'react'
+import { InputSet, Errors } from 'rform'
 
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import NumberInput from '../../Inputs/wrappers/NumberInputWrapper'
 
 export default class PledgeForm extends ChildComponent {
-  static propTypes = {
-  }
-
   render() {
     return (
       <div className='c-pledge-form'>

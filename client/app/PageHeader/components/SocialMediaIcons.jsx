@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import FontAwesome from 'react-fontawesome'
 import { FACEBOOK_ACCOUNT_URL, TWITTER_ACCOUNT_URL } from '../../lib/config'

@@ -10,7 +10,12 @@ describe('<NumberInputComponent />', function() {
     value: 1,
     defaultValue: 1,
     min: 1,
-    max: 15
+    max: 15,
+    formId: 'test',
+    onChange: () => null,
+    onBlur: () => null,
+    onIncrease: () => null,
+    onDecrease: () => null
   }
 
   describe('with a className prop', function() {

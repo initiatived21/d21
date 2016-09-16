@@ -1,6 +1,5 @@
 import * as types from '../constants/actionTypes'
 import merge from 'lodash/merge'
-import assign from 'lodash/assign'
 
 export const generalInitialState = {
   pledges: {},

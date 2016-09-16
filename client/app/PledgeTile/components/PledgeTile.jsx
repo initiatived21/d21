@@ -1,11 +1,9 @@
 import React, { PropTypes } from 'react'
-import I18n                 from 'i18n-js'
 import ChildComponent       from '../../lib/Base/components/ChildComponent'
 import PledgeTileFront      from './PledgeTileFront'
 import PledgeTileBack       from './PledgeTileBack'
 import StateHeader          from './StateHeader'
 import StateFooterContainer from '../containers/StateFooterContainer'
-import daysTill             from '../../lib/date_and_time/daysTill'
 import localPath            from '../../lib/browser/localPath'
 
 export default class PledgeTile extends ChildComponent {
@@ -37,9 +35,6 @@ export default class PledgeTile extends ChildComponent {
     const initiatorName = initiator.organization || initiator.name
     const avatarUrl = initiator.avatar.url
     const pledgePath = localPath(`/pledges/${pledge.id}`)
-
-    const remainingDays = daysTill(pledge.deadline)
-
     const state = pledge.aasm_state
     const stateHeader = showControls ? <StateHeader state={state} /> : null
     const stateFooter = showControls ? <StateFooterContainer pledge={pledge} /> : null

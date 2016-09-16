@@ -55,7 +55,7 @@ const Schemas = new function() {
 
 export default function normalized(schemaName, data) {
   if (!Schemas[schemaName]) {
-    console.error(`No normalization schema for ${schemaName}`)
+    throw new Error(`No normalization schema for ${schemaName}`)
   }
   return normalize(data, Schemas[schemaName])
 }
