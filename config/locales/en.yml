@@ -878,6 +878,18 @@ en:
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
+    howitworks:
+      header: 
+      p1: 
+      p2: 
+      p3: 
+      p4: 
+      p5: 
+      p6: 
+      q1: 
+      q2: 
+      q3: 
+      q4: 
     not_found:
       content: Sorry, the requested page was either not found or you don't have the necessary rights to view it.
       heading: Page not found
