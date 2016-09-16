@@ -880,12 +880,13 @@ en:
       successful: Successful promises
     howitworks:
       header: 
-      p1: 
+      p1_html: 
       p2: 
-      p3: 
-      p4: 
-      p5: 
-      p6: 
+      p2_html: 
+      p3_html: 
+      p4_html: 
+      p5_html: 
+      p6_html: 
       q1: 
       q2: 
       q3: 

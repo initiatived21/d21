@@ -892,22 +892,35 @@ de:
       successful: Erfolgreiche Versprechen
     howitworks:
       header: So funktioniert`s
-      p1: Bei *bunt und verbindlich* können sich alle Unternehmen, Initiativen, Organisationen, Vereine und Privatpersonen engagieren, die gern einen Beitrag zur Integration von geflüchteten Menschen leisten wollen. Dieser Beitrag kann entweder eine Sach-, Geld- oder Zeitspende sein oder das Angebot einer Dienstleistung.
-      p2: |-
-        Es gibt zwei Möglichkeiten sich bei *bunt und verbindlich* einzubringen:
-
-        Durch das Einstellen eines Versprechens:
-
-        Sie können selbst ein Versprechen formulieren und auf bunt und verbindlich einstellen. Der Vielfalt der Versprechen ist keine Grenze gesetzt. Sie können die Fähigkeiten, Ressourcen und Erfahrungen einbringen, die Ihnen zur Verfügung stehen. Es kann sich dabei um das Angebot konkreter Materialien oder Gegenstände, um die Erbringung einer Dienstleistung oder um eine Zeitspende handeln.
-        Die Logik der Plattform basiert auf dem Prinzip: Ich mache X aber nur, wenn jemand mit Y hilft. So kann zum Beispiel ein Unternehmen Tablets spenden, diese Spende aber daran knüpfen, dass sich jemand bereit erklärt, diese Tablets für den Sprachunterricht mit Geflüchteten einzusetzen.
-
-        Durch das Unterzeichnen eines Versprechens:
-
+      p1_html: Bei <em>bunt und verbindlich</em> können sich alle Unternehmen, Initiativen, Organisationen, Vereine und Privatpersonen engagieren, die gern einen Beitrag zur Integration von geflüchteten Menschen leisten wollen. Dieser Beitrag kann entweder eine Sach-, Geld- oder Zeitspende sein oder das Angebot einer Dienstleistung.
+      p2: 
+      p2_html: |-
+        Es gibt zwei Möglichkeiten sich bei <em>bunt und verbindlich</em> einzubringen:<br />
+        <br />
+        Durch das Einstellen eines Versprechens:<br />
+        Sie können selbst ein Versprechen formulieren und auf bunt und verbindlich einstellen. Der Vielfalt der Versprechen ist keine Grenze gesetzt. Sie können die Fähigkeiten, Ressourcen und Erfahrungen einbringen, die Ihnen zur Verfügung stehen. Es kann sich dabei um das Angebot konkreter Materialien oder Gegenstände, um die Erbringung einer Dienstleistung oder um eine Zeitspende handeln.<br />
+        Die Logik der Plattform basiert auf dem Prinzip: Ich mache X aber nur, wenn jemand mit Y hilft. So kann zum Beispiel ein Unternehmen Tablets spenden, diese Spende aber daran knüpfen, dass sich jemand bereit erklärt, diese Tablets für den Sprachunterricht mit Geflüchteten einzusetzen.<br />
+        <br />
+        Durch das Unterzeichnen eines Versprechens:<br />
         Alternativ zur Erstellung eines eigenen Versprechens kann man ein oder mehrere Versprechen anderer Initiatoren unterzeichnen. Auf jeder Versprechenskachel wird angezeigt, wie viele Unterstützer noch für das jeweilige Versprechen benötigt werden. Wenn die Anzahl der gesuchten Unterzeichner erreicht ist, wird das Versprechen automatisch geschlossen und der Kontakt zwischen dem Initiator und den Unterzeichnern hergestellt. Die Umsetzung des Versprechens erfolgt dann in Absprache zwischen Initiator und Unterzeichnern.
-      p3: 'Unter dem Menüpunkt „Ich versprech`s“ befindet sich eine Eingabemaske, in die der Nutzer ein Versprechen eingeben kann. Hier werden alle wichtigen Details zum Versprechen abgefragt:'
-      p4: "Was: Was genau möchten Sie anbieten (Geldspende, Sachspende, Zeitspende, Dienstleistung)?\nWie viele: Wie viele Menschen sollen Ihr Versprechen unterzeichnen?\nWer: Wer soll Ihr Angebot konkret unterstützen (ehrenamtliche Helfer, Initiativen, Unternehmen etc.)\nWas tun: Welche Leistung soll konkret als Zusatz zu Ihrem eigenen Angebot erbracht werden?\nOrt: Hier können Sie entscheiden, ob Ihr Angebot auf einen bestimmten oder auf mehrere Orte beschränkt ist oder bundesweit umgesetzt werden kann. \nDatum: Durch die Auswahl eines Datums können Sie festlegen, bis wann Ihr Versprechen unterzeichnet werden kann. Sie können die Laufzeit Ihres Angebotes frei wählen. \nTitel: Bitte wählen Sie einen Titel für Ihr Angebot. Dieser erscheint auf der Vorderseite der Versprechenskachel. Der Titel ist das Erste, was andere Nutzer von Ihrem Versprechen sehen. Er sollte also möglichst informativ sein und neugierig machen.\nMehr Infos: Hier können Sie Informationen zu Ihrem Unternehmen und zusätzliche Details zum Versprechen einstellen. Sie können erläutern, welche Zielsetzungen Sie mit Ihrem Versprechen verfolgen, warum Sie sich engagieren und was Sie sich von den Unterzeichnern Ihres Versprechens wünschen.\nBild: Sie können optional ein Bild hochladen, welches Sie gern auf der Seite Ihres Versprechens zeigen möchten. Das kann beispielsweise ein Bild Ihres Unternehmens oder Ihrer Initiative sein.\nThemenbereiche: Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).\nNutzerkonto: Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.\n"
-      p5: "Alle Versprechen können im Nachhinein bearbeitet werden, so lange sie noch nicht veröffentlicht sind. Unter dem Menupunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. \n\nErst nachdem die Versprechen von Ihnen an die Redaktion zur Freigabe geschickt wurden, können sie nicht mehr verändert werden. Da die Unterzeichner eines Versprechens einen konkreten Wortlaut unterschreiben, ist eine Veränderung der Versprechen nach deren Veröffentlichung nicht mehr möglich. Rechtschreibfehler und kleine Korrekturen können durch die Redaktion des *bunt und verbindlich* Teams umgesetzt werden. Bitte senden Sie dazu eine Mail an *redaktion@buntundverbindlich.de*."
-      p6: Nachdem sie Ihr Versprechen fertig erstellt haben, können Sie es zur *bunt und verbindlich* Redaktion schicken, damit diese Ihr Versprechen veröffentlicht. Alle Versprechen werden innerhalb von 1-3 Werktage nach Beantragung durch den Initiator freigeschaltet.
+      p3_html: 'Unter dem Menüpunkt „Ich versprech`s“ befindet sich eine Eingabemaske, in die der Nutzer ein Versprechen eingeben kann. Hier werden alle wichtigen Details zum Versprechen abgefragt:'
+      p4_html: |-
+        <b>Was:</b> Was genau möchten Sie anbieten (Geldspende, Sachspende, Zeitspende, Dienstleistung)?<br />
+        <b>Wie viele:</b> Wie viele Menschen sollen Ihr Versprechen unterzeichnen?<br />
+        <b>Wer:</b> Wer soll Ihr Angebot konkret unterstützen (ehrenamtliche Helfer, Initiativen, Unternehmen etc.)<br />
+        <b>Was tun:</b> Welche Leistung soll konkret als Zusatz zu Ihrem eigenen Angebot erbracht werden?<br />
+        <b>Ort:</b> Hier können Sie entscheiden, ob Ihr Angebot auf einen bestimmten oder auf mehrere Orte beschränkt ist oder bundesweit umgesetzt werden kann.<br />
+        <b>Datum:</b> Durch die Auswahl eines Datums können Sie festlegen, bis wann Ihr Versprechen unterzeichnet werden kann. Sie können die Laufzeit Ihres Angebotes frei wählen.<br />
+        <b>Titel:</b> Bitte wählen Sie einen Titel für Ihr Angebot. Dieser erscheint auf der Vorderseite der Versprechenskachel. Der Titel ist das Erste, was andere Nutzer von Ihrem Versprechen sehen. Er sollte also möglichst informativ sein und neugierig machen.<br />
+        <b>Mehr Infos:</b> Hier können Sie Informationen zu Ihrem Unternehmen und zusätzliche Details zum Versprechen einstellen. Sie können erläutern, welche Zielsetzungen Sie mit Ihrem Versprechen verfolgen, warum Sie sich engagieren und was Sie sich von den Unterzeichnern Ihres Versprechens wünschen.<br />
+        <b>Bild:</b> Sie können optional ein Bild hochladen, welches Sie gern auf der Seite Ihres Versprechens zeigen möchten. Das kann beispielsweise ein Bild Ihres Unternehmens oder Ihrer Initiative sein.<br />
+        <b>Themenbereiche:</b> Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).<br />
+        <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.<br />
+      p5_html: |-
+        Alle Versprechen können im Nachhinein bearbeitet werden, so lange sie noch nicht veröffentlicht sind. Unter dem Menupunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
+        <br />
+        Erst nachdem die Versprechen von Ihnen an die Redaktion zur Freigabe geschickt wurden, können sie nicht mehr verändert werden. Da die Unterzeichner eines Versprechens einen konkreten Wortlaut unterschreiben, ist eine Veränderung der Versprechen nach deren Veröffentlichung nicht mehr möglich. Rechtschreibfehler und kleine Korrekturen können durch die Redaktion des <em>bunt und verbindlich</em> Teams umgesetzt werden. Bitte senden Sie dazu eine Mail an <em>redaktion@buntundverbindlich.de.</em>
+      p6_html: Nachdem sie Ihr Versprechen fertig erstellt haben, können Sie es zur <em>bunt und verbindlich</em> Redaktion schicken, damit diese Ihr Versprechen veröffentlicht. Alle Versprechen werden innerhalb von 1–3 Werktage nach Beantragung durch den Initiator freigeschaltet.
       q1: Wie kann man konkret helfen?
       q2: Wie funktioniert das Einstellen eines Versprechens?
       q3: Wie kann ich meine Versprechen bearbeiten?

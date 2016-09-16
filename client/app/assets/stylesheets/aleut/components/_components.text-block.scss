@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #TEXT BLOCK
+\*------------------------------------*/
+
+/**
+ * Text block component for all text pages (how it works, about etc.)
+ */
+
+.c-text-block {
+  margin-bottom: $spacing;
+
+  @include font-size(16px, 1.5);
+
+  @include media-query(l) {
+    width: 66.667%;
+  }
+}
+
+.c-text-block--question {
+  margin-top: $spacing--large;
+
+  font-weight: bold;
+}
