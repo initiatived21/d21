@@ -9,20 +9,18 @@ export default class GetMoreResultsButton extends ChildComponent {
   }
 
   render() {
-    const { children, disabled, clickHandler, numResults } = this.props
+    const { children, disabled, clickHandler } = this.props
 
-    const buttonProps = {}
+    let className = 'o-btn c-btn'
     if (disabled) {
-      buttonProps['className'] = 'o-btn c-btn c-btn--disabled'
-      buttonProps['disabled'] = 'disabled'
+      className += ' c-btn--disabled'
     }
     else {
-      buttonProps['className'] = 'o-btn c-btn c-btn--primary'
-      buttonProps['onClick'] = () => clickHandler(numResults)
+      className += ' c-btn--primary'
     }
 
     return (
-      <button type="submit" {...buttonProps} >
+      <button type="submit" className={className} disabled={disabled} onClick={clickHandler} >
         {children}
       </button>
     )

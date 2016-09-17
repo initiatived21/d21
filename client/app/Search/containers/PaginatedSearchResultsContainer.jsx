@@ -23,11 +23,7 @@ function filterResults(pledges, resultIds) {
 
 const mapDispatchToProps = function(dispatch, ownProps) {
   return {
-    onButtonClick: (offset) => {
-      dispatch(setSearchLoadingState(true))
-
-      fetchMoreResults(dispatch, ownProps.query, offset, NUM_RESULTS_PAGINATION)
-    }
+    dispatch
   }
 }
 
@@ -47,7 +43,25 @@ function fetchMoreResults (dispatch, query, offset, limit) {
     })
 }
 
+const mergeProps = function(stateProps, dispatchProps, ownProps) {
+  const { results } = stateProps
+  const { dispatch } = dispatchProps
+
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...ownProps,
+
+    onButtonClick: () => {
+      dispatch(setSearchLoadingState(true))
+
+      fetchMoreResults(dispatch, ownProps.query, results.length, NUM_RESULTS_PAGINATION)
+    },
+  }
+}
+
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(PaginatedSearchResults)
