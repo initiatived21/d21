@@ -16,10 +16,10 @@ module.exports = {
 
     // See use of 'vendor' in the CommonsChunkPlugin inclusion below.
     vendor: [
-      'babel-polyfill',
+      'es6-promise',
+      'whatwg-fetch',
       'jquery',
-      'i18n-js',
-      // './vendor/i18n/i18n',
+      'i18n-js'
     ],
 
     // This will contain the app entry points defined by webpack.hot.config and
@@ -57,11 +57,6 @@ module.exports = {
       // Passing Infinity just creates the commons chunk, but moves no modules into it.
       // In other words, we only put what's in the vendor entry definition in vendor-bundle.js
       minChunks: Infinity,
-    }),
-
-    new webpack.ProvidePlugin({
-      'Promise': 'es6-promise',
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ],
   module: {
