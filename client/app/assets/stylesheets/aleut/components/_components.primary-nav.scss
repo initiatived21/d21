@@ -12,6 +12,10 @@
   @include font-size(19px, 1.5);
 }
 
+.c-primary-nav__item {
+  vertical-align: bottom;
+}
+
 .c-primary-nav__link {
   display: inline-block;
   text-decoration: none;
@@ -20,17 +24,19 @@
   color: $primary-color;
   background-color: $white;
 
+  vertical-align: bottom;
+
   &:hover {
     text-decoration: underline;
   }
 
   user-select: none;
+}
 
-  &.c-primary-nav__link--active {
-    background-color: $primary-color;
-    color: $white;
+.c-primary-nav__item--active > .c-primary-nav__link {
+  background-color: $primary-color;
+  color: $white;
 
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-  }
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
 }
