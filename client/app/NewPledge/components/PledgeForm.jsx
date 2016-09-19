@@ -116,7 +116,8 @@ export default class PledgeForm extends ChildComponent {
             <div className="o-layout__item u-3/4@m">
               <div className="o-marginal">
                 <ImageInput
-                  className="c-image-input--pledge-image o-marginal__content"
+                  type="pledge-image"
+                  className="o-marginal__content"
                   attribute="image"
                   previewArea={300000}
                   aspectRatio={3/2}

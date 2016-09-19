@@ -71,7 +71,6 @@ export default function imageInputReducer(state = initialImageInputState, action
     }
     return newState
 
-    // Theoretical action – is not present in UI at the moment
   case types.CLEAR_IMAGE:
     newState.imageInputs[id] = {
       originalImage: null,

@@ -16,9 +16,8 @@ export default class ImageDropzone extends ChildComponent {
     const { onDropFile } = this.props
 
     return (
-      <Dropzone className="c-dropzone"
-        activeClassName="c-dropzone--active"
-        onDrop={onDropFile} multiple={false}>
+      <Dropzone className="c-dropzone" activeClassName="c-dropzone--active"
+        onDrop={onDropFile} multiple={false} accept="image/*">
         <div className="c-dropzone__inner">
           <FontAwesome className="c-dropzone__icon c-dropzone__image-icon" name="file-image-o" />
           <FontAwesome className="c-dropzone__icon c-dropzone__pointer-icon" name="mouse-pointer" />

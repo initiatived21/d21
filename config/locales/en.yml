@@ -3,6 +3,9 @@ en:
     submit: Submit
   CommentAvatar:
     title: Anonymous user avatar
+  EmptyPreview:
+    loading: Loading…
+    preview: Preview
   FacebookButton:
     title: Share via Facebook
   GoogleplusButton:
@@ -12,9 +15,7 @@ en:
   ImageCrop:
     crop_explanation: You can crop the image now.
     select_detail: Select detail
-  ImagePreview:
-    loading_image: Loading image. Please wait…
-    select_image: Please select an image.
+    cancel: Cancel
   Initiator:
     title: Initiator
   InitiatorWithImage:

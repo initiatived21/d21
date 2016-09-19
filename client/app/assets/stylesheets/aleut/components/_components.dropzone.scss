@@ -16,9 +16,11 @@
 .c-dropzone__inner {
   position: relative;
 
+  height: 77px;
+
   border: 2px dotted $gray;
   border-radius: $border-radius;
-  padding: 5px;
+  padding: 12px 5px;
 
   text-align: center;
 }
@@ -43,8 +45,24 @@
 .c-dropzone__plus-icon {
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 28px;
 
   @include font-size(18px, 1);
   color: $gray;
+}
+
+.c-dropzone--active {
+  border-color: $primary-color;
+
+  .c-dropzone__inner {
+    border-color: $primary-color;
+  }
+
+  .c-dropzone__image-icon {
+    color: $primary-color-lighter;
+  }
+
+  .c-dropzone__pointer-icon, .c-dropzone__plus-icon {
+    color: $primary-color;
+  }
 }

@@ -16,6 +16,7 @@ export default class ImageInputComponent extends ChildComponent {
     submodel: PropTypes.string,
     errors: PropTypes.array,
     className: PropTypes.string,
+    type: PropTypes.string.isRequired,
 
     imageState: PropTypes.number,
     originalImage: PropTypes.object,
@@ -27,6 +28,7 @@ export default class ImageInputComponent extends ChildComponent {
     onDropFile: PropTypes.func.isRequired,
     handleChangeCrop: PropTypes.func.isRequired,
     handleFinishCrop: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired,
 
     aspectRatio: PropTypes.number.isRequired,
     scaleToX: PropTypes.number.isRequired,
@@ -42,15 +44,13 @@ export default class ImageInputComponent extends ChildComponent {
     const {
       imageState, originalImage, originalImageWidth, originalImageHeight, crop,
       croppedImageUrl, previewArea, onDropFile, handleChangeCrop, handleFinishCrop,
-      className
+      onCancelClick, className, type
     } = this.props
 
     let modalElement
-    console.log(imageState)
     if (imageState === IMAGE_STATE_LOADED) {
-      console.log('hello')
       const cropComponentWidth = (previewArea / originalImageHeight) *
-          Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
+        Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
       modalElement = (
         <ImageCrop
           width={cropComponentWidth}
@@ -58,6 +58,7 @@ export default class ImageInputComponent extends ChildComponent {
           crop={crop}
           onComplete={handleChangeCrop}
           handleFinishCrop={handleFinishCrop}
+          onCancelClick={onCancelClick}
         />
       )
     } else {
@@ -68,6 +69,7 @@ export default class ImageInputComponent extends ChildComponent {
           </div>
           <div className="o-layout__item u-1/2@m">
             <ImagePreview
+              type={type}
               url={croppedImageUrl}
               loading={imageState === IMAGE_STATE_LOADING ? true : false}
             />

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
+import EmptyPreview from './EmptyPreview'
 import {
   IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
   IMAGE_STATE_CROPPED
@@ -8,36 +9,27 @@ import {
 
 export default class ImagePreview extends ChildComponent {
   static propTypes = {
+    type: PropTypes.string.isRequired,
     url: PropTypes.string,
     loading: PropTypes.bool
   }
 
   render() {
-    const { url, loading } = this.props
+    const { type, url, loading } = this.props
 
-    let preview
-    if (loading) {
-      preview = (
-        <p className="c-image-input__text">
-          <i>{this.t('.loading_image')}</i>
-        </p>
-      )
+    const className = `c-image-preview c-image-preview--${type}`
+
+    let modalElement
+    if (url) {
+      modalElement = <img src={url} />
     } else {
-      if (url) {
-        preview = (
-          <div className="c-image-input__preview">
-            <img src={url} />
-          </div>
-        )
-      } else {
-        preview = (
-          <p className="c-image-input__text">
-            {this.t('.select_image')}
-          </p>
-        )
-      }
+      modalElement = <EmptyPreview type={type} loading={loading} />
     }
 
-    return preview
+    return (
+      <div className={className}>
+        {modalElement}
+      </div>
+    )
   }
 }

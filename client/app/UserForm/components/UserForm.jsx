@@ -40,7 +40,8 @@ export default class UserForm extends ChildComponent {
             <Label submodel={asSubmodel} attribute="avatar" />
           </div>
           <ImageInput
-            className="c-image-input--avatar o-layout__item u-3/4@m"
+            type="avatar"
+            className="o-layout__item u-3/4@m"
             submodel={asSubmodel}
             attribute="avatar"
             aspectRatio={1}

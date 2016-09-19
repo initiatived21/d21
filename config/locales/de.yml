@@ -3,6 +3,9 @@ de:
     submit: Absenden
   CommentAvatar:
     title: Avatar anonymer Nutzer
+  EmptyPreview:
+    loading: Lade…
+    preview: Vorschau
   FacebookButton:
     title: Über Facebook teilen
   GoogleplusButton:
@@ -12,9 +15,7 @@ de:
   ImageCrop:
     crop_explanation: Sie können das Bild jetzt beschneiden.
     select_detail: Ausschnitt wählen
-  ImagePreview:
-    loading_image: Lade Bild. Bitte warten…
-    select_image: Bitte wählen Sie ein Bild aus.
+    cancel: Abbrechen
   Initiator:
     title: Initiator
   InitiatorWithImage:
