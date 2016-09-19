@@ -31,7 +31,7 @@ export default class ImageCrop extends ChildComponent {
             onComplete={onComplete}
           />
         </div>
-        <p>{this.t('.crop_explanation')}</p>
+        <p className="u-mb-small">{this.t('.crop_explanation')}</p>
         <button
           className="o-btn o-btn--small c-btn c-btn--primary"
           type="button"

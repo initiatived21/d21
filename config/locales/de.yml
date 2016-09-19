@@ -12,7 +12,7 @@ de:
   ImageCrop:
     crop_explanation: Sie können das Bild jetzt beschneiden.
     select_detail: Ausschnitt wählen
-  ImageInputComponent:
+  ImagePreview:
     loading_image: Lade Bild. Bitte warten…
     select_image: Bitte wählen Sie ein Bild aus.
   Initiator:

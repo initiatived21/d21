@@ -356,6 +356,11 @@
       "from": "async-foreach@>=0.1.3 <0.2.0",
       "resolved": "https://registry.npmjs.org/async-foreach/-/async-foreach-0.1.3.tgz"
     },
+    "attr-accept": {
+      "version": "1.0.3",
+      "from": "attr-accept@>=1.0.3 <2.0.0",
+      "resolved": "https://registry.npmjs.org/attr-accept/-/attr-accept-1.0.3.tgz"
+    },
     "autoprefixer": {
       "version": "6.4.0",
       "from": "autoprefixer@6.4.0",
@@ -3957,6 +3962,11 @@
       "from": "react-dom@>=15.1.0 <16.0.0",
       "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.1.0.tgz"
     },
+    "react-dropzone": {
+      "version": "3.6.0",
+      "from": "react-dropzone@>=3.6.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/react-dropzone/-/react-dropzone-3.6.0.tgz"
+    },
     "react-fontawesome": {
       "version": "1.1.0",
       "from": "react-fontawesome@latest",
@@ -4689,6 +4699,11 @@
           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.4.4.tgz"
         }
       }
+    },
+    "whatwg-fetch": {
+      "version": "1.0.0",
+      "from": "whatwg-fetch@>=0.10.0",
+      "resolved": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz"
     },
     "whatwg-url": {
       "version": "3.0.0",

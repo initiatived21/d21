@@ -86,6 +86,7 @@
     "react-addons-css-transition-group": "^15.1.0",
     "react-datepicker": "^0.29.0",
     "react-dom": "^15.1.0",
+    "react-dropzone": "^3.6.0",
     "react-fontawesome": "^1.1.0",
     "react-image-crop": "^1.0.0-rc5",
     "react-on-rails": "6.0.4",

@@ -12,7 +12,7 @@ en:
   ImageCrop:
     crop_explanation: You can crop the image now.
     select_detail: Select detail
-  ImageInputComponent:
+  ImagePreview:
     loading_image: Loading image. Please wait…
     select_image: Please select an image.
   Initiator:

@@ -57,16 +57,13 @@ const mapDispatchToProps = function(dispatch, ownProps) {
   const id = attribute  // attribute serves as id for the store
 
   return {
-    handleFileSelect(e) {
-      e.preventDefault()
-      const file = e.target.files[0]
-      dispatch(loadImageAction(id, file, aspectRatio))
-    },
-
     handleChangeCrop: function(crop) {
       dispatch(changeCropAction(id, crop))
     },
-
+    onDropFile(files) {
+      const file = files[0]
+      dispatch(loadImageAction(id, file, aspectRatio))
+    },
     dispatch
   }
 }
