@@ -1,8 +1,8 @@
+import cloneDeep from 'lodash/cloneDeep'
 import deNormalizePledges from './deNormalizePledges'
-import { merge } from 'lodash'
 
 describe('deNormalizePledges', function() {
-  const state = {
+  const state = () => ({
     pledges: {
       1: {
         id: 1,
@@ -31,7 +31,7 @@ describe('deNormalizePledges', function() {
         id: 2
       }
     }
-  }
+  })
 
   it('should denormalize the pledges and return them in an array', function() {
     const expectedOutcome = [
@@ -62,14 +62,15 @@ describe('deNormalizePledges', function() {
       }
     ]
 
-    deNormalizePledges(state).should.eql(expectedOutcome)
+    deNormalizePledges(state()).should.eql(expectedOutcome)
   })
 
-  it('should not mutate the original state', function() {
-    const copyOfState = merge({}, state)
+  it('should not mutate the original state()', function() {
+    const _state = state()
+    const copyOfState = cloneDeep(_state)
 
-    deNormalizePledges(state)
+    deNormalizePledges(_state)
 
-    state.should.eql(copyOfState)
+    _state.should.eql(copyOfState)
   })
 })

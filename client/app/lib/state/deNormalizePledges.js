@@ -4,7 +4,9 @@
  *
  */
 
-import { values, merge } from 'lodash'
+import values from 'lodash/values'
+import merge from 'lodash/merge'
+import includes from 'lodash/includes'
 
 export default function deNormalizePledges(state) {
   const pledges = values(merge({}, state.pledges))
@@ -13,7 +15,7 @@ export default function deNormalizePledges(state) {
     pledge.initiator = state.users[pledge.initiator]
     if (pledge.tags) { // TODO: Why is this `if` needed?
       pledge.tags =
-        values(state.tags).filter(tag => pledge.tags.includes(tag.id))
+        values(state.tags).filter(tag => includes(pledge.tags, tag.id))
     }
   }
 
