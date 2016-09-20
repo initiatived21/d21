@@ -29,8 +29,8 @@ const mapStateToProps = function(state, ownProps) {
   }
 
   let {
-    imageState, originalImage, originalImageWidth, originalImageHeight, crop,
-    croppedImageUrl
+    imageState, originalImage, originalImageWidth, originalImageHeight, filename,
+    crop, croppedImageUrl
   } = state.imageInputs[ownProps.attribute]
 
   if (!croppedImageUrl && attrs && attrs.image && attrs.image.image && attrs.image.image.url) {
@@ -44,6 +44,7 @@ const mapStateToProps = function(state, ownProps) {
     originalImage,
     originalImageWidth,
     originalImageHeight,
+    filename,
     crop,
     croppedImageUrl,
     errors,
@@ -68,7 +69,11 @@ const mapDispatchToProps = function(dispatch, ownProps) {
       event.preventDefault()
       dispatch(clearImageAction(id))
     },
-    dispatch
+    onRemoveFileClick(event) {
+      event.preventDefault()
+      dispatch(clearImageAction(id))
+    },
+    dispatch,
   }
 }
 

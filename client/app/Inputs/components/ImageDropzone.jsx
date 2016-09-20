@@ -9,21 +9,42 @@ import {
 
 export default class ImageDropzone extends ChildComponent {
   static propTypes = {
-    onDropFile: PropTypes.func.isRequired
+    onDropFile: PropTypes.func.isRequired,
+    onRemoveFileClick: PropTypes.func.isRequired,
+    filename: PropTypes.string
   }
 
   render() {
-    const { onDropFile } = this.props
+    const { onDropFile, onRemoveFileClick, filename } = this.props
 
-    return (
-      <Dropzone className="c-dropzone" activeClassName="c-dropzone--active"
-        onDrop={onDropFile} multiple={false} accept="image/*">
-        <div className="c-dropzone__inner">
-          <FontAwesome className="c-dropzone__icon c-dropzone__image-icon" name="file-image-o" />
-          <FontAwesome className="c-dropzone__icon c-dropzone__pointer-icon" name="mouse-pointer" />
-          <FontAwesome className="c-dropzone__icon c-dropzone__plus-icon" name="plus" />
+    let modalElement
+    if (filename) {
+      modalElement = (
+        <div className="c-dropzone c-dropzone--loaded">
+          <div className="c-dropzone__inner">
+            <p className="c-dropzone__filename">
+              {filename}
+            </p>
+            <a href="#" onClick={onRemoveFileClick} className="c-dropzone__remove-button"
+              title={this.t('.dismiss_image')}>
+              <FontAwesome className="c-dropzone__remove-icon" name="times-circle" />
+            </a>
+          </div>
         </div>
-      </Dropzone>
-    )
+      )
+    } else {
+      modalElement = (
+        <Dropzone className="c-dropzone" activeClassName="c-dropzone--active"
+          onDrop={onDropFile} multiple={false} accept="image/*" disablePreview>
+          <div className="c-dropzone__inner">
+            <FontAwesome className="c-dropzone__image-icon" name="file-image-o" />
+            <FontAwesome className="c-dropzone__pointer-icon" name="mouse-pointer" />
+            <FontAwesome className="c-dropzone__plus-icon" name="plus" />
+          </div>
+        </Dropzone>
+      )
+    }
+
+    return modalElement
   }
 }

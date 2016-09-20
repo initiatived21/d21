@@ -22,6 +22,7 @@ export default class ImageInputComponent extends ChildComponent {
     originalImage: PropTypes.object,
     originalImageWidth: PropTypes.number,
     originalImageHeight: PropTypes.number,
+    filename: PropTypes.string,
     crop: PropTypes.object,
     croppedImageUrl: PropTypes.string,
 
@@ -29,6 +30,7 @@ export default class ImageInputComponent extends ChildComponent {
     handleChangeCrop: PropTypes.func.isRequired,
     handleFinishCrop: PropTypes.func.isRequired,
     onCancelClick: PropTypes.func.isRequired,
+    onRemoveFileClick: PropTypes.func.isRequired,
 
     aspectRatio: PropTypes.number.isRequired,
     scaleToX: PropTypes.number.isRequired,
@@ -42,9 +44,9 @@ export default class ImageInputComponent extends ChildComponent {
 
   render() {
     const {
-      imageState, originalImage, originalImageWidth, originalImageHeight, crop,
-      croppedImageUrl, previewArea, onDropFile, handleChangeCrop, handleFinishCrop,
-      onCancelClick, className, type
+      imageState, originalImage, originalImageWidth, originalImageHeight, filename,
+      crop, croppedImageUrl, previewArea, onDropFile, handleChangeCrop,
+      handleFinishCrop, onCancelClick, onRemoveFileClick, className, type
     } = this.props
 
     let modalElement
@@ -65,7 +67,8 @@ export default class ImageInputComponent extends ChildComponent {
       modalElement = (
         <div className="o-layout">
           <div className="o-layout__item u-1/2@m">
-            <ImageDropzone onDropFile={onDropFile} />
+            <ImageDropzone onDropFile={onDropFile} onRemoveFileClick={onRemoveFileClick}
+              filename={filename} />
           </div>
           <div className="o-layout__item u-1/2@m">
             <ImagePreview

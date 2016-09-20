@@ -13,9 +13,11 @@ de:
   HeaderLogo:
     title: Bunt und Verbindlich. Plattform für Integration
   ImageCrop:
+    cancel: Abbrechen
     crop_explanation: Sie können das Bild jetzt beschneiden.
     select_detail: Ausschnitt wählen
-    cancel: Abbrechen
+  ImageDropzone:
+    dismiss_image: Bild verwerfen
   Initiator:
     title: Initiator
   InitiatorWithImage:

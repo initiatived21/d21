@@ -41,12 +41,13 @@ export const loadImageFailureAction = function(id, error) {
   }
 }
 
-export const loadImageSuccessAction = function(id, image, aspect) {
+export const loadImageSuccessAction = function(id, image, aspect, filename) {
   return {
     type: types.LOAD_IMAGE_SUCCESS,
     id,
     image,
-    aspect
+    aspect,
+    filename
   }
 }
 
@@ -56,7 +57,7 @@ export const loadImageAction = function(id, file, aspect) {
     dispatch(loadImageStartAction(id))
 
     loadImageFromFile(file, function(image) {
-      dispatch(loadImageSuccessAction(id, image, aspect))
+      dispatch(loadImageSuccessAction(id, image, aspect, file.name))
     })
   }
 }

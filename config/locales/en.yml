@@ -13,9 +13,11 @@ en:
   HeaderLogo:
     title: Bunt und Verbindlich. Integration platform
   ImageCrop:
+    cancel: Cancel
     crop_explanation: You can crop the image now.
     select_detail: Select detail
-    cancel: Cancel
+  ImageDropzone:
+    dismiss_image: Dismiss image
   Initiator:
     title: Initiator
   InitiatorWithImage:

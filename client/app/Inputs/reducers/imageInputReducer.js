@@ -15,6 +15,7 @@ export const initialImageInputState = {
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
+      filename: null,
       crop: {},
       croppedImageUrl: ''
     },
@@ -23,6 +24,7 @@ export const initialImageInputState = {
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
+      filename: null,
       crop: {},
       croppedImageUrl: ''
     }
@@ -47,6 +49,7 @@ export default function imageInputReducer(state = initialImageInputState, action
       originalImage,
       originalImageWidth: originalImage.width,
       originalImageHeight: originalImage.height,
+      filename: action.filename,
       crop,
       imageState: IMAGE_STATE_LOADED
     }
@@ -66,6 +69,7 @@ export default function imageInputReducer(state = initialImageInputState, action
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
+      filename: newState.imageInputs[id].filename,
       crop: {},
       imageState: IMAGE_STATE_CROPPED
     }
@@ -76,6 +80,7 @@ export default function imageInputReducer(state = initialImageInputState, action
       originalImage: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
+      filename: null,
       crop: {},
       croppedImageUrl: '',
       imageState: IMAGE_STATE_NONE

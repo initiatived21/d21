@@ -6,6 +6,9 @@
  * Dropzone component
  */
 
+
+/* Unloaded state */
+
 .c-dropzone {
   border: 1px solid $gray;
   border-radius: $border-radius;
@@ -65,4 +68,34 @@
   .c-dropzone__pointer-icon, .c-dropzone__plus-icon {
     color: $primary-color;
   }
+}
+
+
+/* Loaded state */
+
+.c-dropzone--loaded > .c-dropzone__inner {
+  display: flex;
+  align-items: center;
+  //align-content: center;
+  justify-content: center;
+
+  border: none;
+}
+
+.c-dropzone__filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-dropzone__remove-button {
+  width: 32px;
+  height: 32px;
+
+  @include font-size(20px, 1.85);
+  text-align: center;
+}
+
+.c-dropzone__remove-icon {
+  color: $warning-color;
 }
