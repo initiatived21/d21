@@ -16,6 +16,7 @@ module.exports = {
 
     // See use of 'vendor' in the CommonsChunkPlugin inclusion below.
     vendor: [
+      'isomorphic-fetch',
       'babel-polyfill',
       'jquery',
       'i18n-js',
@@ -57,10 +58,6 @@ module.exports = {
       // Passing Infinity just creates the commons chunk, but moves no modules into it.
       // In other words, we only put what's in the vendor entry definition in vendor-bundle.js
       minChunks: Infinity,
-    }),
-
-    new webpack.ProvidePlugin({
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ],
   module: {

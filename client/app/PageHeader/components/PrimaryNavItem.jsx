@@ -12,12 +12,12 @@ export default class PrimaryNavItem extends ChildComponent {
   render() {
     const { href, children, active, external } = this.props
 
-    let className = 'c-primary-nav__link'
-    if (active) { className += ' c-primary-nav__link--active' }
+    let className = 'c-primary-nav__item'
+    if (active) { className += ' c-primary-nav__item--active' }
 
     return (
-      <li>
-        <a className={className} href={href} target={external ? '_blank' : null}>
+      <li className={className}>
+        <a className="c-primary-nav__link" href={href} target={external ? '_blank' : null}>
           {children}
         </a>
       </li>

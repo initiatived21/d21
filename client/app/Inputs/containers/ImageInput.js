@@ -4,7 +4,7 @@ import compact from 'lodash/compact'
 import { updateAction } from 'rform'
 
 import cropImage from '../../lib/image_processing/cropImage'
-import loadImageAction, { changeCropAction, cropImageAction }
+import loadImageAction, { changeCropAction, cropImageAction, clearImageAction }
   from '../actions/imageInputActions'
 import { IMAGE_STATE_CROPPED } from '../reducers/imageInputReducer'
 import ImageInputComponent from '../components/ImageInputComponent'
@@ -57,16 +57,17 @@ const mapDispatchToProps = function(dispatch, ownProps) {
   const id = attribute  // attribute serves as id for the store
 
   return {
-    handleFileSelect(e) {
-      e.preventDefault()
-      const file = e.target.files[0]
-      dispatch(loadImageAction(id, file, aspectRatio))
-    },
-
     handleChangeCrop: function(crop) {
       dispatch(changeCropAction(id, crop))
     },
-
+    onDropFile(files) {
+      const file = files[0]
+      dispatch(loadImageAction(id, file, aspectRatio))
+    },
+    onCancelClick(event) {
+      event.preventDefault()
+      dispatch(clearImageAction(id))
+    },
     dispatch
   }
 }

@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-
+import ImageDropzone from './ImageDropzone'
+import ImagePreview from './ImagePreview'
 import ImageCrop from './ImageCrop'
 import {
   IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
@@ -14,6 +16,7 @@ export default class ImageInputComponent extends ChildComponent {
     submodel: PropTypes.string,
     errors: PropTypes.array,
     className: PropTypes.string,
+    type: PropTypes.string.isRequired,
 
     imageState: PropTypes.number,
     originalImage: PropTypes.object,
@@ -22,9 +25,10 @@ export default class ImageInputComponent extends ChildComponent {
     crop: PropTypes.object,
     croppedImageUrl: PropTypes.string,
 
-    handleFileSelect: PropTypes.func.isRequired,
+    onDropFile: PropTypes.func.isRequired,
     handleChangeCrop: PropTypes.func.isRequired,
     handleFinishCrop: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired,
 
     aspectRatio: PropTypes.number.isRequired,
     scaleToX: PropTypes.number.isRequired,
@@ -39,57 +43,39 @@ export default class ImageInputComponent extends ChildComponent {
   render() {
     const {
       imageState, originalImage, originalImageWidth, originalImageHeight, crop,
-      croppedImageUrl, previewArea, handleFileSelect, handleChangeCrop,
-      handleFinishCrop, className
+      croppedImageUrl, previewArea, onDropFile, handleChangeCrop, handleFinishCrop,
+      onCancelClick, className, type
     } = this.props
 
-    let fileValueProps = {},
-      imagePreview = null,
-      cropComponentWidth
-
-    switch(imageState) {
-    case IMAGE_STATE_NONE:
-      imagePreview = (
-          <p className="c-image-input__text">
-            {this.t('.select_image')}
-          </p>
-        )
-      break
-    case IMAGE_STATE_LOADING:
-      imagePreview = (
-          <p className="c-image-input__text">
-            <i>{this.t('.loading_image')}</i>
-          </p>
-        )
-      break
-
-    case IMAGE_STATE_LOADED:
-      cropComponentWidth = (previewArea / originalImageHeight) *
-          Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
-      imagePreview = (
-          <ImageCrop
-            width={cropComponentWidth}
-            src={originalImage.src}
-            crop={crop}
-            onComplete={handleChangeCrop}
-            handleFinishCrop={handleFinishCrop}
-          />
-        )
-      break
-
-    case IMAGE_STATE_CROPPED:
-      imagePreview = (
-          <div className="c-image-input__preview">
-            <img src={croppedImageUrl} />
+    let modalElement
+    if (imageState === IMAGE_STATE_LOADED) {
+      const cropComponentWidth = (previewArea / originalImageHeight) *
+        Math.sqrt((originalImageWidth * originalImageHeight) / previewArea)
+      modalElement = (
+        <ImageCrop
+          width={cropComponentWidth}
+          src={originalImage.src}
+          crop={crop}
+          onComplete={handleChangeCrop}
+          handleFinishCrop={handleFinishCrop}
+          onCancelClick={onCancelClick}
+        />
+      )
+    } else {
+      modalElement = (
+        <div className="o-layout">
+          <div className="o-layout__item u-1/2@m">
+            <ImageDropzone onDropFile={onDropFile} />
           </div>
-        )
-        // Clear file input when crop is done so change is detected even if the same image is
-        // selected
-      fileValueProps = { value: '' }
-      break
-
-    default:
-      imagePreview = null
+          <div className="o-layout__item u-1/2@m">
+            <ImagePreview
+              type={type}
+              url={croppedImageUrl}
+              loading={imageState === IMAGE_STATE_LOADING ? true : false}
+            />
+          </div>
+        </div>
+      )
     }
 
     let combinedClassName = 'c-image-input'
@@ -99,14 +85,7 @@ export default class ImageInputComponent extends ChildComponent {
 
     return (
       <div className={combinedClassName}>
-        <input
-          className="u-mb-small"
-          type="file"
-          accept="image/*"
-          onChange={handleFileSelect}
-          {...fileValueProps}
-        />
-        {imagePreview}
+        {modalElement}
       </div>
     )
   }

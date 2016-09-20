@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #IMAGE PREVIEW
+\*------------------------------------*/
+
+/**
+ * Image preview component
+ */
+
+.c-image-preview {
+
+}
+
+.c-image-preview--avatar {
+  img {
+    width: $avatar-size;
+    border-radius: $avatar-size / 2;
+  }
+}
+
+.c-image-preview--pledge-image > .c-image-preview__placeholder {
+  border: 2px dotted $gray;
+
+  justify-content: center;
+}
+
+.c-image-preview__placeholder {
+  display: flex;
+  align-items: center;
+
+  height: $avatar-size;
+}
+
+.c-image-preview__empty-avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border: 2px solid $gray;
+  border-radius: $avatar-size / 2;
+
+  margin-right: $spacing--small;
+
+  @include font-size(60px, 1.3);
+  color: $gray;
+  text-align: center;
+}
+
+.c-image-preview__text {
+  color: $gray;
+}

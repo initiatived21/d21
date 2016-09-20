@@ -36,7 +36,7 @@ export default class PaginatedSearchResults extends ChildComponent {
         {resultTitle}
         <SearchResults results={results} />
         { showMoreButton ?
-          <GetMoreResultsButton disabled={isLoading} numResults={results.length} clickHandler={onButtonClick} >
+          <GetMoreResultsButton disabled={isLoading} clickHandler={onButtonClick} >
             {this.t('.show_more')}
           </GetMoreResultsButton>
           : null }

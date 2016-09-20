@@ -9,11 +9,12 @@ export default class ImageCrop extends ChildComponent {
     src: PropTypes.string.isRequired,
     crop: PropTypes.object.isRequired,
     onComplete: PropTypes.func.isRequired,
-    handleFinishCrop: PropTypes.func.isRequired
+    handleFinishCrop: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired
   }
 
   render() {
-    const { width, src, crop, onComplete, handleFinishCrop } = this.props
+    const { width, src, crop, onComplete, handleFinishCrop, onCancelClick } = this.props
 
     return (
       <div className="c-image-input__crop-tool" >
@@ -31,15 +32,24 @@ export default class ImageCrop extends ChildComponent {
             onComplete={onComplete}
           />
         </div>
-        <p>{this.t('.crop_explanation')}</p>
+        <p className="u-mb-small">{this.t('.crop_explanation')}</p>
+
         <button
-          className="o-btn o-btn--small c-btn c-btn--primary"
-          type="button"
+          className="o-btn c-btn c-btn--primary" type="button"
           onClick={handleFinishCrop}
         >
           <FontAwesome name="crop" />
           {' '}
           {this.t('.select_detail')}
+        </button>
+        {' '}
+        <button
+          className="o-btn c-btn c-btn--secondary" type="button"
+          onClick={onCancelClick}
+        >
+          <FontAwesome name="trash-o" />
+          {' '}
+          {this.t('.cancel')}
         </button>
       </div>
     )

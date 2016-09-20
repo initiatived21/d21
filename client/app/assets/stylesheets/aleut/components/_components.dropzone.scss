@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    #DROPZONE
+\*------------------------------------*/
+
+/**
+ * Dropzone component
+ */
+
+.c-dropzone {
+  border: 1px solid $gray;
+  border-radius: $border-radius;
+
+  padding: 5px;
+}
+
+.c-dropzone__inner {
+  position: relative;
+
+  height: 77px;
+
+  border: 2px dotted $gray;
+  border-radius: $border-radius;
+  padding: 12px 5px;
+
+  text-align: center;
+}
+
+.c-dropzone__image-icon {
+  @include font-size(48px, 1);
+
+  color: $mid-light-gray;
+}
+
+.c-dropzone__pointer-icon {
+  @include font-size(28px, 1);
+
+  position: relative;
+  right: 10px;
+  bottom: 2px;
+
+  color: $gray;
+  text-shadow: -1px -1px 1px $white;
+}
+
+.c-dropzone__plus-icon {
+  position: absolute;
+  right: 10px;
+  top: 28px;
+
+  @include font-size(18px, 1);
+  color: $gray;
+}
+
+.c-dropzone--active {
+  border-color: $primary-color;
+
+  .c-dropzone__inner {
+    border-color: $primary-color;
+  }
+
+  .c-dropzone__image-icon {
+    color: $primary-color-lighter;
+  }
+
+  .c-dropzone__pointer-icon, .c-dropzone__plus-icon {
+    color: $primary-color;
+  }
+}
