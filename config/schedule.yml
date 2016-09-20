@@ -2,3 +2,7 @@ finish_pledges_job:
   cron: "1 0 * * * Europe/Berlin" # every day at 00:01
   class: "FinishPledgesWorker"
   queue: default
+remind_updates_job:
+  cron: "0 9 * * * Europe/Berlin" # every day at 09:00
+  class: "RemindUpdatesWorker"
+  queue: default

@@ -24,4 +24,10 @@ class InitiatorMailer < ApplicationMailer
 
     mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
   end
+
+  def needs_successful_update pledge_id
+    @pledge = Pledge.find(pledge_id)
+
+    mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
+  end
 end

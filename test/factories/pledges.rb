@@ -18,6 +18,21 @@ FactoryGirl.define do
 
     trait :failed do
       aasm_state 'failed'
+      deadline { Date.current - rand(1..10).days }
+    end
+
+    trait :successful do
+      aasm_state 'successful'
+      deadline { Date.current - rand(1..10).days }
+
+      amount 1
+
+      after :create do |pledge, evaluator|
+        evaluator.amount.times do
+          FactoryGirl.create :signature, pledge: pledge,
+                                         created_at: evaluator.deadline - 1.day
+        end
+      end
     end
   end
 end
