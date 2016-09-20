@@ -17,6 +17,7 @@ describe('store', function() {
       avatar: {
         crop: {},
         croppedImageUrl: '',
+        filename: null,
         imageState: IMAGE_STATE_NONE,
         originalImage: null,
         originalImageHeight: 0,
@@ -25,6 +26,7 @@ describe('store', function() {
       image: {
         crop: {},
         croppedImageUrl: '',
+        filename: null,
         imageState: IMAGE_STATE_NONE,
         originalImage: null,
         originalImageHeight: 0,
