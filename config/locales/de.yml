@@ -95,7 +95,7 @@ de:
     heading: So funktioniert es…
     step: 'Schritt {{step}}:'
     text:
-      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“ Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn 3 Ehrenamtliche diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“ Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
       step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
       step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
@@ -358,7 +358,29 @@ de:
       update: Updates
   application_mailer:
     farewell: Mit besten Grüßen,
-    impressum: "<Impressum>"
+    impressum: |-
+      <p><strong>Impressum</strong></p>
+
+      <p>Inhaberin der Domain www.buntundverbindlich.de ist die</p>
+
+      <p><strong>Initiative D21 e.V.</strong><br />
+      Anschrift: Reinhardtstraße 38, 10117 Berlin<br />
+      Vereinsregister- Nr. 19386 Nz<br />
+      AG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />
+      Telefon 030 90177-0, Fax 030 90177-447</p>
+
+      <p><strong>Verantwortlich</strong><br />
+      Lena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />
+      Telefon: 030 5268722-50, Telefax: 030 5268722-60<br />
+      kontakt@initiatived21.de</p>
+
+      <p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />
+      Sabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />
+      Telefon: 030 5268722-55, Telefax: 030 5268722-60<br />
+      sabrina.dietrich@initiatived21.de</p>
+
+      <p><strong>Vertretungsberechtigung</strong><br />
+      Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
     signed: Ihre bunt und verbindlich Redaktion
   devise:
     confirmations:
@@ -852,6 +874,15 @@ de:
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
   pages:
+    contact:
+      header: Kontakt
+      text_html: |-
+        <b>Anschrift:</b><br />
+        Initiative D21 e.V.<br />
+        Reinhardtstraße 38, 10117 Berlin<br />
+        Tel. +49 30 5268722-50<br />
+        Fax +49 30 5268722-60<br />
+        Mail: <a href="mailto:redaktion@buntundverbindlich.de">redaktion@buntundverbindlich.de</a>
     faq:
       answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
       answer2: |-
@@ -928,6 +959,7 @@ de:
       q2: Wie funktioniert das Einstellen eines Versprechens?
       q3: Wie kann ich meine Versprechen bearbeiten?
       q4: Wie wird mein Versprechen veröffentlicht?
+    impressum: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p>\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p>\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p>\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>"
     not_found:
       content: Tut uns leid, die angefragte Seite existiert leider nicht oder Sie haben keine Berechtigung dafür.
       heading: Seite nicht gefunden
@@ -1112,5 +1144,3 @@ de:
     pagination:
       last: 
       next: 
-  ImageDropzone:
-    dismiss_image: Bild verwerfen
