@@ -4154,7 +4154,7 @@
     "rform": {
       "version": "0.2.6",
       "from": "rform@0.2.6",
-      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.5.tgz",
+      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.6.tgz",
       "dependencies": {
         "lodash": {
           "version": "4.15.0",
