@@ -4,6 +4,8 @@
 
 /**
  * Dropzone component
+ *
+ * 1. For IE11
  */
 
 
@@ -94,6 +96,7 @@
 
   @include font-size(20px, 1.85);
   text-align: center;
+  text-decoration: none;  /* [1] */
 }
 
 .c-dropzone__remove-icon {
