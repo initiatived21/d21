@@ -38,10 +38,10 @@ side code can be found in `/client/`, including javascript tests. The JS
 test suite is run after a successful run of the server-side test suite, as well
 as a couple of additional checks: brakeman, rails-best-practices, and rubocop.
 
-For the JavaScript enabled Ruby tests Qt5 needs to be installed on the system.
-Please refer to the
-[capybara-webkit wiki](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
-for installations instructions.
+We use Selenium for the JavaScript enabled Ruby tests. For this, Firefox needs to
+be installed on your system. Due to API changes in Firefox 48, the tests will only
+work with a version of Firefox <= 47. Please downgrade your Firefox
+browser if you are using Firefox >= 48 at the moment.
 
 To just run the frontend tests, change into the `/client` directory and type
 `npm test`. To run the JavaScript linter, type `npm run test:lint`.
