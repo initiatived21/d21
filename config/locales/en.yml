@@ -358,7 +358,29 @@ en:
       update: 
   application_mailer:
     farewell: 
-    impressum: 
+    impressum: |-
+      <p><strong>Impressum</strong></p>
+
+      <p>Inhaberin der Domain www.buntundverbindlich.de ist die</p>
+
+      <p><strong>Initiative D21 e.V.</strong><br />
+      Anschrift: Reinhardtstraße 38, 10117 Berlin<br />
+      Vereinsregister- Nr. 19386 Nz<br />
+      AG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />
+      Telefon 030 90177-0, Fax 030 90177-447</p>
+
+      <p><strong>Verantwortlich</strong><br />
+      Lena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />
+      Telefon: 030 5268722-50, Telefax: 030 5268722-60<br />
+      kontakt@initiatived21.de</p>
+
+      <p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />
+      Sabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />
+      Telefon: 030 5268722-55, Telefax: 030 5268722-60<br />
+      sabrina.dietrich@initiatived21.de</p>
+
+      <p><strong>Vertretungsberechtigung</strong><br />
+      Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
     signed: 
   devise:
     confirmations:
@@ -894,6 +916,7 @@ en:
       q2: 
       q3: 
       q4: 
+    impressum: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p>\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p>\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p>\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>"
     not_found:
       content: Sorry, the requested page was either not found or you don't have the necessary rights to view it.
       heading: Page not found
@@ -1076,5 +1099,3 @@ en:
     pagination:
       last: 
       next: 
-  ImageDropzone:
-    dismiss_image: Dismiss image
