@@ -15,7 +15,7 @@ function calculateDefaultCrop(imgWidth, imgHeight, aspectRatio) {
   }
   else {
     cropWidth = 100
-    cropHeight = (100 / imgHeight) * imgWidth * aspectRatio
+    cropHeight = (100 / imgHeight) * imgWidth / aspectRatio
     cropX = 0
     cropY = (100 - cropHeight) / 2
   }
