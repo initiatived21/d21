@@ -166,7 +166,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'mocha'
 
-  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
 
   # test suite additions
   gem 'rails_best_practices'

@@ -25,13 +25,7 @@ require 'pry-rescue/minitest' if ENV['RESCUE']
 # require 'sidekiq/testing'
 # require 'fakeredis'
 
-
-# Capybara Webkit driver
-Capybara::Webkit.configure do |config|
-  # config.debug = true
-  config.allow_url("fonts.googleapis.com")
-end
-Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :selenium
 
 
 # Inclusions: First matchers, then modules, then helpers.
