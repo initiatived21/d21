@@ -4,20 +4,35 @@
  *  Used for image crop tool
  */
 
-function calculateDefaultCrop(imgWidth, imgHeight, aspectRatio) {
+function calculateDefaultCrop(imgWidth, imgHeight, cropAspectRatio) {
   let cropWidth, cropHeight, cropX, cropY
+  const imageAspectRatio = imgWidth / imgHeight
 
   if (imgWidth > imgHeight) {
-    cropWidth = (100 / imgWidth) * imgHeight * aspectRatio
-    cropHeight = 100
-    cropX = (100 - cropWidth) / 2
-    cropY = 0
+    if (imageAspectRatio > cropAspectRatio) {
+      cropWidth = (100 / imgWidth) * imgHeight * cropAspectRatio
+      cropHeight = 100
+      cropX = (100 - cropWidth) / 2
+      cropY = 0
+    } else {
+      cropWidth = 100
+      cropHeight = (100 / imgHeight) * imgWidth / cropAspectRatio
+      cropX = 0
+      cropY = (100 - cropHeight) / 2
+    }
   }
   else {
-    cropWidth = 100
-    cropHeight = (100 / imgHeight) * imgWidth / aspectRatio
-    cropX = 0
-    cropY = (100 - cropHeight) / 2
+    if (imageAspectRatio > cropAspectRatio) {
+      cropWidth = 100
+      cropHeight = (100 / imgHeight) * imgWidth * cropAspectRatio
+      cropX = 0
+      cropY = (100 - cropHeight) / 2
+    } else {
+      cropWidth = 100
+      cropHeight = (100 / imgHeight) * imgWidth / cropAspectRatio
+      cropX = 0
+      cropY = (100 - cropHeight) / 2
+    }
   }
 
   return {
@@ -25,7 +40,7 @@ function calculateDefaultCrop(imgWidth, imgHeight, aspectRatio) {
     y: cropY,
     width: cropWidth,
     height: cropHeight,
-    aspect: aspectRatio
+    aspect: cropAspectRatio
   }
 }
 
