@@ -19,7 +19,6 @@ Rails.application.routes.draw do
     get '/howitworks' => 'pages#howitworks', as: :howitworks
     get '/about' => 'pages#about', as: :about
     get '/press' => 'pages#press', as: :press
-    get '/sitemap' => 'pages#sitemap', as: :sitemap
 
     get '/users/profile' => 'users#profile', as: :profile
 

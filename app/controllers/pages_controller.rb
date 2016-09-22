@@ -27,9 +27,6 @@ class PagesController < ApplicationController
   def privacy
   end
 
-  def sitemap
-  end
-
   def contact
   end
 

@@ -43,13 +43,6 @@ describe PagesController do
     end
   end
 
-  describe "GET 'sitemap'" do
-    it 'should work' do
-      get :sitemap, params: { locale: 'de' }
-      assert_response :success
-    end
-  end
-
   describe "GET 'howitworks'" do
     it 'should work' do
       get :howitworks, params: { locale: 'de' }
