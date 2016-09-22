@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>Entschuldigung, ein Fehler ist aufgetreten. (500)</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background-color: rgb(96%, 96%, 96%);
+    color: rgb(24%, 24%, 24%);
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -23,17 +25,16 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
+    border-top: rgb(71%, 6%, 5%) solid 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     background-color: white;
     padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
   h1 {
     font-size: 100%;
-    color: #730E15;
+    color: rgb(71%, 6%, 5%);
     line-height: 1.5em;
   }
 
@@ -45,11 +46,10 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: none;
+    color: rgb(24%, 24%, 24%);
   }
   </style>
 </head>
@@ -58,9 +58,11 @@
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>Entschuldigung, ein Fehler ist aufgetreten.</h1>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>
+      Das Team von <i>bunt und verbindlich</i> arbeitet vermutlich bereits an einer Lösung.
+    </p>
   </div>
 </body>
 </html>
