@@ -829,6 +829,11 @@ en:
         create: Create User
         update: 
   initiator_mailer:
+    needs_successful_update:
+      greeting: 
+      link: 
+      p1: 
+      subject: 
     new_question:
       first_paragraph: 
       greeting: 

@@ -824,6 +824,11 @@ de:
         create: Create Benutzer
         update: Update Benutzer
   initiator_mailer:
+    needs_successful_update:
+      greeting: Liebe/r Herr/Frau %{name}
+      link: Ihr Versprechen
+      p1: Ihr Versprechen hat vor zwei Wochen erfolgreich geendet. Wir möchten Sie daran erinnern, einen Abschlussbericht über die Neuigkeiten-Funktion zu veröffentlichen. Damit helfen Sie anderen, von Ihrem Vorhaben zu lernen!
+      subject: Erinnerung Abschlussbericht
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
       greeting: Liebe/r Herr/Frau %{name}
