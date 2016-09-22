@@ -884,11 +884,11 @@ de:
       heading: Über uns
       vision_heading: Vision
       vision_html: |-
-        <p><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
-        <br />
-        <p>
-        <em>bunt und verbindlich</em> möchte<br /><br />
-        <ul>
+        <p class="c-text-block"><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
+        <p class="c-text-block">
+        <em>bunt und verbindlich</em> möchte
+        </p>
+        <ul class="c-text-block c-text-block--list">
           <li><b>eine digitale Anlaufstelle sein</b><br />
         ...für Unternehmen, Initiativen, Organisationen, Vereine und Ehrenamtliche, die Leistungen konkret für Integrationsmaßnahmen anbieten wollen.<br /><br />
           <li><b>eine Informationsplattform anbieten</b><br />
@@ -896,7 +896,6 @@ de:
           <li><b>den Wirkungsgrad vergrößern und existierende Angebote stärken</b><br />
         ...durch die Vernetzung und den Austausch der verschiedenen Akteure im Flüchtlingsbereich.
         </ul>
-        </p>
     contact:
       header: Kontakt
       text_html: |-
@@ -948,7 +947,7 @@ de:
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
     howitworks:
-      header: So funktioniert`s
+      header: So funktioniert’s
       p1_html: Bei <em>bunt und verbindlich</em> können sich alle Unternehmen, Initiativen, Organisationen, Vereine und Privatpersonen engagieren, die gern einen Beitrag zur Integration von geflüchteten Menschen leisten wollen. Dieser Beitrag kann entweder eine Sach-, Geld- oder Zeitspende sein oder das Angebot einer Dienstleistung.
       p2: 
       p2_html: |-
