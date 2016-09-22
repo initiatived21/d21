@@ -15,7 +15,7 @@ export const TERMS_PATH = '/terms'
 export const PRIVACY_PATH = '/privacy'
 
 /* Search */
-export const NUM_RESULTS_PAGINATION = 3
+export const NUM_RESULTS_PAGINATION = 12
 
 /* UI Behaviour, related to CSS */
 export const TRANSITION_TIME = 250
