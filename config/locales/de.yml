@@ -95,7 +95,7 @@ de:
     heading: So funktioniert es…
     step: 'Schritt {{step}}:'
     text:
-      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“ Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
+      step1: 'Veröffentlichen Sie Ihr Versprechen in der Form: „Wir werden etwas tun, wenn genügend andere Personen mithelfen“. Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn 3 Ehrenamtliche diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“ Bitte beachten: Jedes Versprechen wird von der Redaktion kurz überprüft und freigeschaltet.'
       step2: 'Mobilisieren Sie Ihre Unterstützer: Bewerben Sie Ihr Versprechen in Ihren Netzwerken!'
       step3: Ihr Versprechen ist erfolgreich? Gratulation, dann geht es in die Umsetzungsphase! Vergessen Sie nicht, nach der Umsetzung einen Bericht zu veröffentlichen, damit andere von Ihrem Vorhaben lernen können.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
@@ -1112,5 +1112,3 @@ de:
     pagination:
       last: 
       next: 
-  ImageDropzone:
-    dismiss_image: Bild verwerfen

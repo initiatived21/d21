@@ -1076,5 +1076,3 @@ en:
     pagination:
       last: 
       next: 
-  ImageDropzone:
-    dismiss_image: Dismiss image
