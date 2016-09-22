@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SessionContainer from '../../UserSession/containers/SessionContainer'
+import LanguageNav from './LanguageNav'
 import localPath from '../../lib/browser/localPath'
 import { NEWSLETTER_URL } from '../../lib/config'
 
@@ -33,22 +34,15 @@ export default class SecondaryNav extends ChildComponent {
             </a>
           </li>
         </ul>
-
-        <ul className="c-secondary-nav__lang o-list-inline">
-          <li className={`c-secondary-nav__item${I18n.locale === 'de' ? ' c-secondary-nav__item--active' : ''}`}>
-            <a className="c-secondary-nav__link" href="/de">
-              de
-            </a>
-          </li>
-          <li className={`c-secondary-nav__item${I18n.locale === 'en' ? ' c-secondary-nav__item--active' : ''}`}>
-            <a className="c-secondary-nav__link" href="/en">
-              en
-            </a>
-          </li>
-        </ul>
-
+        {
+        /*
+         * Hide language navigation until final release.
+         */
+        /*
+        <LanguageNav />
+        */
+        }
         <SessionContainer authToken={authToken} currentUser={currentUser} />
-
       </nav>
     )
   }
