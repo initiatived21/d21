@@ -880,6 +880,10 @@ en:
         terms_link: Terms
         twitter_title: Bunt und Verbindlich on Twitter
   pages:
+    about:
+      heading: About us
+      vision_heading: Vision
+      vision_html: 
     contact:
       header: Contact
       text_html: |-
