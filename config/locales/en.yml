@@ -81,23 +81,23 @@ en:
     preview_explanation: During the next step you can verify your pledge before submitting it.
     promise:
       part1: "“We promise"
-      part3: 
+      part3:
       part4: if
       part8: ".”"
     save_draft: Save draft
     tooltip:
-      deadline: 
-      image: 
-      location: 
+      deadline:
+      image:
+      location:
   PledgeFormHelp:
     faq_link: Look into our FAQ.
     further_questions: Further questions?
     heading: How it works…
     step: 'Step {{step}}:'
     text:
-      step1: 
-      step2: 
-      step3: 
+      step1:
+      step2:
+      step3:
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
       step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
@@ -168,7 +168,7 @@ en:
   QuestionForm:
     submit: Submit
   ReportPledgeForm:
-    description: 
+    description:
     report_pledge: Report pledge
   SearchBar:
     search_placeholder: e.g. search for companies
@@ -186,15 +186,15 @@ en:
     sign_up_link: Create a pledge and sign up
     submit: Sign in
   SignPledgeForm:
-    email_hint: 
+    email_hint:
     i_sign: I sign this pledge.
     sign: Sign
     signed_message: Thank you! Please check your email account in order to confirm your signature.
-    small_print: 
+    small_print:
     tooltip:
-      anonymous: 
-      contact_person: 
-      email: 
+      anonymous:
+      contact_person:
+      email:
   Signee:
     anonymous: Name is known to the editors
     contact_person: contact person
@@ -232,133 +232,134 @@ en:
     title: Share via Xing
   active_admin:
     scopes:
-      admin: 
-      all: 
+      admin:
+      all:
     sidebars:
-      Filter: 
-      Zustand: 
+      Filter:
+      Zustand:
   activemodel:
     attributes:
       base_pledge:
-        title: 
+        title:
     models:
-      base_pledge: 
+      base_pledge:
   activerecord:
     attributes:
       active_admin/comment:
-        author_type: 
-        body: 
-        created_at: 
-        namespace: 
-        resource_type: 
-        updated_at: 
+        author_type:
+        body:
+        created_at:
+        namespace:
+        resource_type:
+        updated_at:
       admin_user:
-        created_at: 
-        current_sign_in_at: 
-        email: 
-        encrypted_password: 
-        failed_attempts: 
-        id: 
-        locked_at: 
-        password: 
-        password_confirmation: 
-        sign_in_count: 
-        unlock_token: 
-        updated_at: 
+        created_at:
+        current_sign_in_at:
+        email:
+        encrypted_password:
+        failed_attempts:
+        id:
+        locked_at:
+        password:
+        password_confirmation:
+        sign_in_count:
+        unlock_token:
+        updated_at:
       comment:
-        content: 
-        created_at: 
-        id: 
-        pledge: 
-        pledge_id: 
-        response: 
-        updated_at: 
+        content:
+        created_at:
+        id:
+        pledge:
+        pledge_id:
+        response:
+        updated_at:
       pledge:
-        aasm_state: 
-        amount: 
-        comments: 
-        content: 
-        created_at: 
-        deadline: 
-        description: 
-        id: 
-        image: 
-        initiator: 
-        location: 
-        pg_search_document: 
-        pledges_tags: 
-        recommended: 
-        report_count: 
-        requirement: 
-        signatures: 
-        signatures_count: 
-        tags: 
-        title: 
-        updated_at: 
-        updates: 
-        user_id: 
-        who: 
+        aasm_state:
+        amount:
+        comments:
+        content:
+        created_at:
+        deadline:
+        description:
+        id:
+        image:
+        initiator:
+        location:
+        pg_search_document:
+        pledges_tags:
+        recommended:
+        report_count:
+        requirement:
+        signatures:
+        signatures_count:
+        tags:
+        title:
+        updated_at:
+        updates:
+        user_id:
+        who:
       signature:
-        aasm_state: 
-        anonymous: 
-        confirmation_hash: 
-        confirmed: 
-        contact_person: 
-        created_at: 
-        email: 
-        id: 
-        name: 
-        organization: 
-        pledge: 
-        pledge_id: 
-        reason: 
-        updated_at: 
+        aasm_state:
+        anonymous:
+        confirmation_hash:
+        confirmed:
+        contact_person:
+        created_at:
+        email:
+        id:
+        name:
+        organization:
+        pledge:
+        pledge_id:
+        reason:
+        updated_at:
       tag:
-        color: 
-        created_at: 
-        id: 
-        name: 
-        pledges: 
-        pledges_tags: 
-        updated_at: 
+        color:
+        created_at:
+        id:
+        name:
+        pledges:
+        pledges_tags:
+        updated_at:
       update:
-        content: 
-        created_at: 
-        pledge: 
-        updated_at: 
+        content:
+        created_at:
+        pledge:
+        updated_at:
       user:
-        avatar: 
-        confirmation_sent_at: 
-        confirmation_token: 
-        confirmed_at: 
-        created_at: 
-        current_sign_in_at: 
-        current_sign_in_ip: 
-        encrypted_password: 
-        id: 
-        last_sign_in_at: 
-        last_sign_in_ip: 
-        name: 
-        organization: 
-        remember_created_at: 
-        reset_password_sent_at: 
-        reset_password_token: 
-        sign_in_count: 
-        updated_at: 
+        avatar:
+        confirmation_sent_at:
+        confirmation_token:
+        confirmed_at:
+        created_at:
+        current_sign_in_at:
+        current_sign_in_ip:
+        encrypted_password:
+        id:
+        last_sign_in_at:
+        last_sign_in_ip:
+        name:
+        organization:
+        remember_created_at:
+        reset_password_sent_at:
+        reset_password_token:
+        sign_in_count:
+        updated_at:
     models:
-      admin: 
-      admin_user: 
-      comment: 
-      fragen_und_antworten: 
-      fragenund_antworten: 
-      fund_a: 
-      pledge: 
-      signature: 
-      tag: 
-      update: 
+      admin:
+      admin_user:
+      comment:
+      fragen_und_antworten:
+      fragenund_antworten:
+      fund_a:
+      pledge:
+      signature:
+      tag:
+      update:
   application_mailer:
-    farewell: 
-    impressum: |-
+    farewell:
+    impressum_html: |-
+      ---
       <p><strong>Impressum</strong></p>
 
       <p>Inhaberin der Domain www.buntundverbindlich.de ist die</p>
@@ -381,35 +382,35 @@ en:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
-    signed: 
+    signed:
   devise:
     confirmations:
       new:
         heading: Resend confirmation instructions
         resend_instructions: Resend confirmation instructions
-        send_instructions: 
+        send_instructions:
     mailer:
       confirmation_instructions:
-        confirm_link: 
-        greeting: 
-        paragraph1: 
-        paragraph2: 
-        paragraph3: 
-        paragraph4: 
+        confirm_link:
+        greeting:
+        paragraph1:
+        paragraph2:
+        paragraph3:
+        paragraph4:
         user_subject: Confirmation instructions
       password_change:
-        greeting: 
+        greeting:
         paragraph1: We're contacting you to notify you that your password has been changed.
       reset_password_instructions:
         edit_password_link: Change my password
-        greeting: 
+        greeting:
         paragraph1: Someone has requested a link to change your password. You can do this through the link below.
         paragraph2: |-
           If you didn't request this, please ignore this email.
           Your password won't change until you access the link above and create a new one.
         user_subject: Reset password instructions
       unlock_instructions:
-        greeting: 
+        greeting:
         paragraph1: |-
           Your account has been locked due to an excessive number of unsuccessful sign in attempts.
 
@@ -489,380 +490,380 @@ en:
     true?: must be true
     type?: must be %{type}
     unique?: must not have been already used
-  first_paragraph: 
+  first_paragraph:
   flash:
     actions:
       create:
-        notice: 
+        notice:
       destroy:
-        notice: 
+        notice:
       update:
-        notice: 
+        notice:
   formtastic:
     actions:
       admin_user:
         new:
-          create: 
+          create:
       comment:
         edit:
-          update: 
+          update:
       pledge:
         edit:
-          update: 
+          update:
       signature:
         edit:
-          update: 
+          update:
       tag:
         edit:
-          update: 
+          update:
         new:
-          create: 
+          create:
       user:
         edit:
-          update: 
+          update:
     hints:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
-          password_confirmation: 
+          email:
+          password:
+          password_confirmation:
       comment:
         edit:
-          content: 
-          pledge: 
-          response: 
+          content:
+          pledge:
+          response:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          image: 
-          initiator: 
-          location: 
-          recommended: 
-          requirement: 
-          title: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          recommended:
+          requirement:
+          title:
+          who:
       signature:
         edit:
-          aasm_state: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          email: 
-          name: 
-          organization: 
-          pledge: 
-          reason: 
+          aasm_state:
+          anonymous:
+          confirmation_hash:
+          confirmed:
+          contact_person:
+          email:
+          name:
+          organization:
+          pledge:
+          reason:
       tag:
         edit:
-          color: 
-          created_at: 
-          name: 
+          color:
+          created_at:
+          name:
         new:
-          color: 
-          name: 
+          color:
+          name:
       user:
         edit:
-          email: 
-          name: 
-          organization: 
+          email:
+          name:
+          organization:
     labels:
       admin_user:
         new:
-          email: 
-          password: 
-          password_confirmation: 
+          email:
+          password:
+          password_confirmation:
       comment:
         edit:
-          content: 
-          pledge: 
-          response: 
+          content:
+          pledge:
+          response:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          image: 
-          initiator: 
-          location: 
-          recommended: 
-          requirement: 
-          title: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          recommended:
+          requirement:
+          title:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          anonymous: 
-          author_type: 
-          body: 
-          color: 
-          comments: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          email: 
-          image: 
-          initiator: 
-          location: 
-          name: 
-          namespace: 
-          organization: 
-          pg_search_document: 
-          pledge: 
-          pledges: 
-          pledges_tags: 
-          reason: 
-          recommended: 
-          requirement: 
-          resource_type: 
-          response: 
-          signatures: 
-          tags: 
-          title: 
-          updated_at: 
-          updates: 
-          who: 
+          aasm_state:
+          amount:
+          anonymous:
+          author_type:
+          body:
+          color:
+          comments:
+          confirmation_hash:
+          confirmed:
+          contact_person:
+          content:
+          created_at:
+          deadline:
+          description:
+          email:
+          image:
+          initiator:
+          location:
+          name:
+          namespace:
+          organization:
+          pg_search_document:
+          pledge:
+          pledges:
+          pledges_tags:
+          reason:
+          recommended:
+          requirement:
+          resource_type:
+          response:
+          signatures:
+          tags:
+          title:
+          updated_at:
+          updates:
+          who:
       signature:
         edit:
-          aasm_state: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          email: 
-          name: 
-          organization: 
-          pledge: 
-          reason: 
+          aasm_state:
+          anonymous:
+          confirmation_hash:
+          confirmed:
+          contact_person:
+          email:
+          name:
+          organization:
+          pledge:
+          reason:
       tag:
         edit:
-          color: 
-          created_at: 
-          name: 
+          color:
+          created_at:
+          name:
         new:
-          color: 
-          name: 
+          color:
+          name:
       user:
         edit:
-          email: 
-          name: 
-          organization: 
+          email:
+          name:
+          organization:
     placeholders:
       active_admin/comment:
         show:
-          body: 
+          body:
       admin_user:
         create:
-          email: 
-          password: 
+          email:
+          password:
         new:
-          email: 
-          password: 
-          password_confirmation: 
+          email:
+          password:
+          password_confirmation:
       comment:
         edit:
-          content: 
-          response: 
+          content:
+          response:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          description: 
-          location: 
-          requirement: 
-          title: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          description:
+          location:
+          requirement:
+          title:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          body: 
-          color: 
-          confirmation_hash: 
-          content: 
-          description: 
-          email: 
-          image: 
-          location: 
-          name: 
-          namespace: 
-          organization: 
-          reason: 
-          requirement: 
-          response: 
-          title: 
-          who: 
+          aasm_state:
+          amount:
+          body:
+          color:
+          confirmation_hash:
+          content:
+          description:
+          email:
+          image:
+          location:
+          name:
+          namespace:
+          organization:
+          reason:
+          requirement:
+          response:
+          title:
+          who:
       signature:
         edit:
-          aasm_state: 
-          confirmation_hash: 
-          email: 
-          name: 
-          organization: 
-          reason: 
+          aasm_state:
+          confirmation_hash:
+          email:
+          name:
+          organization:
+          reason:
       tag:
         edit:
-          color: 
-          name: 
+          color:
+          name:
         new:
-          color: 
-          name: 
+          color:
+          name:
       user:
         edit:
-          email: 
-          name: 
-          organization: 
+          email:
+          name:
+          organization:
   helpers:
     label:
       admin_user:
         new:
-          email: 
-          password: 
-          password_confirmation: 
+          email:
+          password:
+          password_confirmation:
       comment:
         edit:
-          content: 
-          pledge: 
-          response: 
+          content:
+          pledge:
+          response:
       pledge:
         edit:
-          aasm_state: 
-          amount: 
-          content: 
-          deadline: 
-          description: 
-          image: 
-          initiator: 
-          location: 
-          recommended: 
-          requirement: 
-          title: 
-          who: 
+          aasm_state:
+          amount:
+          content:
+          deadline:
+          description:
+          image:
+          initiator:
+          location:
+          recommended:
+          requirement:
+          title:
+          who:
       q:
         index:
-          aasm_state: 
-          amount: 
-          anonymous: 
-          author_type: 
-          body: 
-          color: 
-          comments: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          content: 
-          created_at: 
-          deadline: 
-          description: 
-          email: 
-          image: 
-          initiator: 
-          location: 
-          name: 
-          namespace: 
-          organization: 
-          pg_search_document: 
-          pledge: 
-          pledges: 
-          pledges_tags: 
-          reason: 
-          recommended: 
-          requirement: 
-          resource_type: 
-          response: 
-          signatures: 
-          tags: 
-          title: 
-          updated_at: 
-          updates: 
-          who: 
+          aasm_state:
+          amount:
+          anonymous:
+          author_type:
+          body:
+          color:
+          comments:
+          confirmation_hash:
+          confirmed:
+          contact_person:
+          content:
+          created_at:
+          deadline:
+          description:
+          email:
+          image:
+          initiator:
+          location:
+          name:
+          namespace:
+          organization:
+          pg_search_document:
+          pledge:
+          pledges:
+          pledges_tags:
+          reason:
+          recommended:
+          requirement:
+          resource_type:
+          response:
+          signatures:
+          tags:
+          title:
+          updated_at:
+          updates:
+          who:
       signature:
         edit:
-          aasm_state: 
-          anonymous: 
-          confirmation_hash: 
-          confirmed: 
-          contact_person: 
-          email: 
-          name: 
-          organization: 
-          pledge: 
-          reason: 
+          aasm_state:
+          anonymous:
+          confirmation_hash:
+          confirmed:
+          contact_person:
+          email:
+          name:
+          organization:
+          pledge:
+          reason:
       tag:
         edit:
-          color: 
-          created_at: 
-          name: 
+          color:
+          created_at:
+          name:
         new:
-          color: 
-          name: 
+          color:
+          name:
       user:
         edit:
-          email: 
-          name: 
-          organization: 
-        email: 
-        password: 
-        password_confirmation: 
-        remember_me: 
+          email:
+          name:
+          organization:
+        email:
+        password:
+        password_confirmation:
+        remember_me:
     submit:
       user:
         create: Create User
-        update: 
+        update:
   initiator_mailer:
     new_question:
-      first_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
+      first_paragraph:
+      greeting:
+      second_paragraph:
+      subject:
     pledge_failed:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting:
+      link:
+      paragraph1:
+      paragraph2:
+      paragraph3:
+      paragraph4:
+      paragraph5:
+      subject:
     pledge_successful:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting:
+      link:
+      paragraph1:
+      paragraph2:
+      paragraph3:
+      paragraph4:
+      paragraph5:
+      subject:
     pledge_was_approved:
-      faq_paragraph: 
-      greeting: 
-      intro_paragraph: 
-      outro_paragraph: 
-      subject: 
+      faq_paragraph:
+      greeting:
+      intro_paragraph:
+      outro_paragraph:
+      subject:
       success_paragraph:
-        first_line: 
+        first_line:
         steps:
-          '1': 
-          '2': 
-          '3': 
+          '1':
+          '2':
+          '3':
   layouts:
     partials:
       footer:
@@ -896,7 +897,7 @@ en:
       answer5: Translation not yet available.
       answer6: Translation not yet available.
       answer7: Translation not yet available.
-      answer8: 
+      answer8:
       question1: What is *bunt und verbindlich?*
       question2: How does it work?
       question3: How can I register?
@@ -904,7 +905,7 @@ en:
       question5: Why does my pledge not appear on the website?
       question6: Why can`t I update my pledge?
       question7: How can I contact my supporters?
-      question8: 
+      question8:
     home:
       masthead:
         text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
@@ -913,19 +914,21 @@ en:
       recommended: Recommended by the editors
       successful: Successful promises
     howitworks:
-      header: 
-      p1_html: 
-      p2: 
-      p2_html: 
-      p3_html: 
-      p4_html: 
-      p5_html: 
-      p6_html: 
-      q1: 
-      q2: 
-      q3: 
-      q4: 
-    impressum: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p>\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p>\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p>\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>"
+      header:
+      p1_html:
+      p2:
+      p2_html:
+      p3_html:
+      p4_html:
+      p5_html:
+      p6_html:
+      q1:
+      q2:
+      q3:
+      q4:
+    impressum:
+      header: Imprint
+      text_html: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p><br />\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p><br />\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p><br />\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>"
     not_found:
       content: Sorry, the requested page was either not found or you don't have the necessary rights to view it.
       heading: Page not found
@@ -947,7 +950,7 @@ en:
       success: Pledge successfully deleted.
   ransack:
     predicates:
-      contains: 
+      contains:
   reports:
     create:
       success: The Pledge was reported.
@@ -972,7 +975,7 @@ en:
         placeholder: "*Please select date"
       description:
         label: More Info (optional)
-        placeholder: 
+        placeholder:
       image:
         label: Image
       initiator:
@@ -1013,10 +1016,10 @@ en:
       contact_person:
         label: I am the contact person
       email:
-        label: 
+        label:
         placeholder: Email*
       name:
-        label: 
+        label:
         placeholder: Name*
       organization:
         placeholder: Company or Organization (optional)
@@ -1039,7 +1042,7 @@ en:
         label: New Password
       organization:
         label: Your Company / Your Organization
-        placeholder: 
+        placeholder:
       password:
         label: Password
         placeholder: Password
@@ -1049,38 +1052,38 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
-      first_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
+      first_paragraph:
+      greeting:
+      second_paragraph:
+      subject:
     pledge_failed:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting:
+      link:
+      paragraph1:
+      paragraph2:
+      paragraph3:
+      paragraph4:
+      paragraph5:
+      subject:
     pledge_successful:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting:
+      link:
+      paragraph1:
+      paragraph2:
+      paragraph3:
+      paragraph4:
+      paragraph5:
+      subject:
     signature_created:
       button_confirm_signature: Click here to confirm
       button_delete_signature: Delete signature
-      fifth_paragraph: 
-      first_paragraph: 
-      fourth_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
-      third_paragraph: 
+      fifth_paragraph:
+      first_paragraph:
+      fourth_paragraph:
+      greeting:
+      second_paragraph:
+      subject:
+      third_paragraph:
   tags:
     names:
       accomodation: Accomodation
@@ -1106,5 +1109,5 @@ en:
       youth: Youth
   views:
     pagination:
-      last: 
-      next: 
+      last:
+      next:
