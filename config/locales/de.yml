@@ -875,6 +875,23 @@ de:
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
   pages:
+    about:
+      heading: Über uns
+      vision_heading: Vision
+      vision_html: |-
+        <p><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
+        <br />
+        <p>
+        <em>bunt und verbindlich</em> möchte<br /><br />
+        <ul>
+          <li><b>eine digitale Anlaufstelle sein</b><br />
+        ...für Unternehmen, Initiativen, Organisationen, Vereine und Ehrenamtliche, die Leistungen konkret für Integrationsmaßnahmen anbieten wollen.<br /><br />
+          <li><b>eine Informationsplattform anbieten</b><br />
+        ....um voneinander zu lernen und sich zu verbinden.<br /><br />
+          <li><b>den Wirkungsgrad vergrößern und existierende Angebote stärken</b><br />
+        ...durch die Vernetzung und den Austausch der verschiedenen Akteure im Flüchtlingsbereich.
+        </ul>
+        </p>
     contact:
       header: Kontakt
       text_html: |-
