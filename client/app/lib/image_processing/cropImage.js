@@ -3,6 +3,8 @@
  *  Crop image function
  *  Used for image crop tool
  *
+ *  https://gist.github.com/DominicTobias/b1fb501349893922ec7f
+ *
  *  Returns image data uri, not the loaded image
  */
 
@@ -11,11 +13,11 @@ function cropImage(originalImg, crop, maxWidth, maxHeight) {
     imageWidth = originalImg.naturalWidth,
     imageHeight = originalImg.naturalHeight,
 
-    cropX = (crop.x / 100) * imageWidth,
-    cropY = (crop.y / 100) * imageHeight,
+    cropX = Math.round((crop.x / 100) * imageWidth),
+    cropY = Math.round((crop.y / 100) * imageHeight),
 
-    cropWidth = (crop.width / 100) * imageWidth,
-    cropHeight = (crop.height / 100) * imageHeight
+    cropWidth = Math.round((crop.width / 100) * imageWidth),
+    cropHeight = Math.round((crop.height / 100) * imageHeight)
 
   let
     destWidth = cropWidth,
@@ -30,15 +32,16 @@ function cropImage(originalImg, crop, maxWidth, maxHeight) {
       maxHeight: maxHeight
     })
 
+    /* NEVER USED: Waiting for answer from original author on why it's in it. */
     // Scale the image based on the crop scale.
-    const scaledImage = scale({
-      scale: scaledCrop.scale,
-      width: imageWidth,
-      height: imageHeight
-    })
+    // const scaledImage = scale({
+    //   scale: scaledCrop.scale,
+    //   width: imageWidth,
+    //   height: imageHeight
+    // })
 
-    destWidth = scaledCrop.width
-    destHeight = scaledCrop.height
+    destWidth = Math.round(scaledCrop.width)
+    destHeight = Math.round(scaledCrop.height)
   }
 
   const canvas = document.createElement('canvas')
@@ -46,6 +49,7 @@ function cropImage(originalImg, crop, maxWidth, maxHeight) {
   canvas.height = destHeight
 
   const ctx = canvas.getContext('2d')
+
   ctx.drawImage(originalImg, cropX, cropY, cropWidth, cropHeight, 0, 0, destWidth, destHeight)
 
   const imgDest = canvas.toDataURL('image/jpeg')
