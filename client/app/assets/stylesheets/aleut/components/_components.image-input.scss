@@ -13,16 +13,3 @@
 .c-image-input__crop-area {
   max-width: 100%;
 }
-
-.c-image-input--avatar .c-image-input__preview {
-  img {
-    width: $avatar-size;
-    border-radius: $avatar-size / 2;
-  }
-}
-
-.c-image-input--pledge-image .c-image-input__preview {
-  img {
-    max-width: 100%;
-  }
-}

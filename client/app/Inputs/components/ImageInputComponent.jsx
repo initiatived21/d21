@@ -66,7 +66,7 @@ export default class ImageInputComponent extends ChildComponent {
     } else {
       modalElement = (
         <div className="o-layout">
-          <div className="o-layout__item u-1/2@m">
+          <div className="o-layout__item u-1/2@m u-mb@s">
             <ImageDropzone onDropFile={onDropFile} onRemoveFileClick={onRemoveFileClick}
               filename={filename} />
           </div>
