@@ -1,7 +1,10 @@
 p= t('.greeting', name: @pledge.initiator.name)
 
-Dein Versprechen ist seit 2 Wochen erfolgreich aber du hast seit Abschluss
-keine Neuigkeiten mehr geschrieben. Tu das doch bitte.
+p
+  = t('.p1')
+  br
+  = link_to pledge_url(id: @pledge.id, locale: :de),
+    pledge_url(id: @pledge.id, locale: :de)
 
 p
   = t('application_mailer.farewell')
