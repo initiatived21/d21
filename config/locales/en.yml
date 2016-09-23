@@ -887,6 +887,8 @@ en:
   pages:
     about:
       heading: About us
+      team_heading: Team
+      team_html: 
       vision_heading: Vision
       vision_html: 
     contact:

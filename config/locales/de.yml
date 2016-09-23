@@ -127,7 +127,7 @@ de:
     no_updates: Es gibt noch keine Neuigkeiten.
   PreviewDraft:
     edit_pledge: Versprechen bearbeiten
-    explanation: Ihr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Werktagen veröffentlicht. Sie können Ihr Versprechen in Ihrem Nutzerkonto verwalten.
+    explanation: "Ihr Versprechen sieht gut aus? Dann schicken Sie es mit dem Button \"Versprechen abschicken\" an uns. \n\nIhr Versprechen wird von unserer Redaktion geprüft und innerhalb von ein bis drei Werktagen veröffentlicht. Sie erhalten dann eine Email-Benachrichtigung. Sie können den Status auch in Ihrem Nutzerkonto einsehen."
     legal:
       part1: 'Mit dem Abschicken stimmen Sie unseren '
       part2: " und der "
@@ -150,7 +150,7 @@ de:
       question: Wie geht es weiter?
       user_account: Ihrem Nutzerkonto
   PreviewUnconfirmed:
-    confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail, um dieses Versprechen fertigzustellen.
+    confirm_email: Schauen Sie in Ihrem Postfach nach und bestätigen Sie Ihre E-Mail. Rufen Sie danach diese Seite erneut auf, um Ihr Versprechen zur Prüfung an die Redaktion zu schicken.
     edit_pledge: Versprechen bearbeiten
   PrimaryNav:
     about_link: Über uns
@@ -395,7 +395,7 @@ de:
         greeting: Liebe/r %{name},
         paragraph1: herzlichen Dank für die Nutzung unserer Plattform!
         paragraph2: 'Bitte bestätigen Sie im nächsten Schritt Ihre Emailadresse über diesen Link:'
-        paragraph3: Wir werden Ihr Versprechen prüfen und auf der Plattform freischalten. Sie erhalten dazu eine Benachrichtigung.
+        paragraph3: Danach können Sie Ihr Versprechen an die Redaktion zur Freischaltung verschicken. Rufen Sie dazu die Versprechensvorschau erneut auf und nutzen Sie den Button "Versprechen verschicken".
         paragraph4: Zusätzlich können Sie den Status Ihres Versprechens in Ihrem Profil einsehen.
         user_subject: Registrierung abschliessen
       password_change:
@@ -882,6 +882,30 @@ de:
   pages:
     about:
       heading: Über uns
+      team_heading: Team
+      team_html: |-
+        <p class="c-text-block">
+        <b>Projektmanagement:</b><br /><br />
+        Björn Stecher<br /> Digitale Infrastruktur und Daten-/Verbraucherschutz im Netz<br /> +49 30 5268722-54<br /> bjoern.stecher@initiatived21.de<br /><br />
+        Stefanie Kaste<br /> Projektleitung, Community Management, Redaktion<br /> +49 30 5268722-51<br /> stefanie.kaste@initiatived21.de<br /><br />
+        Melanie Gernert<br /> Praktikantin<br /> redaktion@buntundverbindlich.de
+        </p>
+
+        <p class="c-text-block">
+        <b>Technik:</b><br /><br />
+        Anna Fischer<br /> Technische Projektleitung<br /> anna.fischer@7unicorns.de<br /><br />
+        Konstantin Koss<br /> Backend-Entwickler<br /><br />
+        Marc Altmann<br /> Frontend-Entwickler
+        </p>
+
+        <p class="c-text-block">
+        <b>Unterstützung durch die Initiative D21:</b><br /><br />
+        Lena-Sophie Müller<br /> Geschäftsführerin <br /> lena-sophie.mueller@initiatived21.de<br /><br />
+        Sabrina Dietrich<br /> Presse- und Öffentlichkeitsarbeit<br /> sabrina.dietrich@initiatived21.de <br /><br />
+        Jana Kausch<br />  Bildung und Medienkompetenz<br /> jana.kausch@initiatived21.de<br /><br />
+        Marcel Rist<br />Praktikant Presse- und Öffentlichkeitsarbeit <br /><br />
+        Nicole Schardien<br /> Assistenz der Geschäftsführung / Teamassistenz<br /> nicole.schardien@initiatived21.de<br /><br />
+        </p>
       vision_heading: Vision
       vision_html: |-
         <p class="c-text-block"><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
