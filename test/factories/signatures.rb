@@ -15,6 +15,10 @@ FactoryGirl.define do
     trait :unconfirmed do
       confirmed false
     end
+
+    trait :with_hash do
+      confirmation_hash 'foobar'
+    end
   end
 end
 
