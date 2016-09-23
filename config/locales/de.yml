@@ -953,25 +953,25 @@ de:
       p2_html: |-
         Es gibt zwei Möglichkeiten sich bei <em>bunt und verbindlich</em> einzubringen:<br />
         <br />
-        Durch das Einstellen eines Versprechens:<br />
+        <b>Durch das Einstellen eines Versprechens:</b><br />
         Sie können selbst ein Versprechen formulieren und auf bunt und verbindlich einstellen. Der Vielfalt der Versprechen ist keine Grenze gesetzt. Sie können die Fähigkeiten, Ressourcen und Erfahrungen einbringen, die Ihnen zur Verfügung stehen. Es kann sich dabei um das Angebot konkreter Materialien oder Gegenstände, um die Erbringung einer Dienstleistung oder um eine Zeitspende handeln.<br />
         Die Logik der Plattform basiert auf dem Prinzip: Ich mache X aber nur, wenn jemand mit Y hilft. So kann zum Beispiel ein Unternehmen Tablets spenden, diese Spende aber daran knüpfen, dass sich jemand bereit erklärt, diese Tablets für den Sprachunterricht mit Geflüchteten einzusetzen.<br />
         <br />
-        Durch das Unterzeichnen eines Versprechens:<br />
+        <b>Durch das Unterzeichnen eines Versprechens:</b><br />
         Alternativ zur Erstellung eines eigenen Versprechens kann man ein oder mehrere Versprechen anderer Initiatoren unterzeichnen. Auf jeder Versprechenskachel wird angezeigt, wie viele Unterstützer noch für das jeweilige Versprechen benötigt werden. Wenn die Anzahl der gesuchten Unterzeichner erreicht ist, wird das Versprechen automatisch geschlossen und der Kontakt zwischen dem Initiator und den Unterzeichnern hergestellt. Die Umsetzung des Versprechens erfolgt dann in Absprache zwischen Initiator und Unterzeichnern.
       p3_html: 'Unter dem Menüpunkt „Ich versprech`s“ befindet sich eine Eingabemaske, in die der Nutzer ein Versprechen eingeben kann. Hier werden alle wichtigen Details zum Versprechen abgefragt:'
       p4_html: |-
-        <b>Was:</b> Was genau möchten Sie anbieten (Geldspende, Sachspende, Zeitspende, Dienstleistung)?<br />
-        <b>Wie viele:</b> Wie viele Menschen sollen Ihr Versprechen unterzeichnen?<br />
-        <b>Wer:</b> Wer soll Ihr Angebot konkret unterstützen (ehrenamtliche Helfer, Initiativen, Unternehmen etc.)<br />
-        <b>Was tun:</b> Welche Leistung soll konkret als Zusatz zu Ihrem eigenen Angebot erbracht werden?<br />
-        <b>Ort:</b> Hier können Sie entscheiden, ob Ihr Angebot auf einen bestimmten oder auf mehrere Orte beschränkt ist oder bundesweit umgesetzt werden kann.<br />
-        <b>Datum:</b> Durch die Auswahl eines Datums können Sie festlegen, bis wann Ihr Versprechen unterzeichnet werden kann. Sie können die Laufzeit Ihres Angebotes frei wählen.<br />
-        <b>Titel:</b> Bitte wählen Sie einen Titel für Ihr Angebot. Dieser erscheint auf der Vorderseite der Versprechenskachel. Der Titel ist das Erste, was andere Nutzer von Ihrem Versprechen sehen. Er sollte also möglichst informativ sein und neugierig machen.<br />
-        <b>Mehr Infos:</b> Hier können Sie Informationen zu Ihrem Unternehmen und zusätzliche Details zum Versprechen einstellen. Sie können erläutern, welche Zielsetzungen Sie mit Ihrem Versprechen verfolgen, warum Sie sich engagieren und was Sie sich von den Unterzeichnern Ihres Versprechens wünschen.<br />
-        <b>Bild:</b> Sie können optional ein Bild hochladen, welches Sie gern auf der Seite Ihres Versprechens zeigen möchten. Das kann beispielsweise ein Bild Ihres Unternehmens oder Ihrer Initiative sein.<br />
-        <b>Themenbereiche:</b> Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).<br />
-        <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.<br />
+        <b>Was:</b> Was genau möchten Sie anbieten (Geldspende, Sachspende, Zeitspende, Dienstleistung)?<br /><br />
+        <b>Wie viele:</b> Wie viele Menschen sollen Ihr Versprechen unterzeichnen?<br /><br />
+        <b>Wer:</b> Wer soll Ihr Angebot konkret unterstützen (ehrenamtliche Helfer, Initiativen, Unternehmen etc.)<br /><br />
+        <b>Was tun:</b> Welche Leistung soll konkret als Zusatz zu Ihrem eigenen Angebot erbracht werden?<br /><br />
+        <b>Ort:</b> Hier können Sie entscheiden, ob Ihr Angebot auf einen bestimmten oder auf mehrere Orte beschränkt ist oder bundesweit umgesetzt werden kann.<br /><br />
+        <b>Datum:</b> Durch die Auswahl eines Datums können Sie festlegen, bis wann Ihr Versprechen unterzeichnet werden kann. Sie können die Laufzeit Ihres Angebotes frei wählen.<br /><br />
+        <b>Titel:</b> Bitte wählen Sie einen Titel für Ihr Angebot. Dieser erscheint auf der Vorderseite der Versprechenskachel. Der Titel ist das Erste, was andere Nutzer von Ihrem Versprechen sehen. Er sollte also möglichst informativ sein und neugierig machen.<br /><br />
+        <b>Mehr Infos:</b> Hier können Sie Informationen zu Ihrem Unternehmen und zusätzliche Details zum Versprechen einstellen. Sie können erläutern, welche Zielsetzungen Sie mit Ihrem Versprechen verfolgen, warum Sie sich engagieren und was Sie sich von den Unterzeichnern Ihres Versprechens wünschen.<br /><br />
+        <b>Bild:</b> Sie können optional ein Bild hochladen, welches Sie gern auf der Seite Ihres Versprechens zeigen möchten. Das kann beispielsweise ein Bild Ihres Unternehmens oder Ihrer Initiative sein.<br /><br />
+        <b>Themenbereiche:</b> Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).<br /><br />
+        <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.<br /><br />
       p5_html: |-
         Alle Versprechen können im Nachhinein bearbeitet werden, so lange sie noch nicht veröffentlicht sind. Unter dem Menupunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
         <br />
