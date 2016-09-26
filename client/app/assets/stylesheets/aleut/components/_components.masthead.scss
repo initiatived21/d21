@@ -7,7 +7,7 @@
  */
 
 .c-masthead {
-  background: url('/images/masthead.jpg') center center rgb(229, 212, 168);
+  background: url('/images/masthead.jpg') center 75% rgb(214, 176, 114);
   background-size: cover;
 
   @include media-query(s) {
@@ -37,7 +37,7 @@
 .c-masthead__copy {
   position: absolute;
   bottom: 0;
-  right: $spacing;
+
   width: 34em;
 
   padding: $spacing--small $spacing $spacing;
@@ -57,4 +57,17 @@
 
   @include font-size(24px, 1.5);
   color: $primary-color;
+}
+
+
+/**
+ * Variants
+ */
+
+.c-masthead--left .c-masthead__copy {
+  left: $spacing;
+}
+
+.c-masthead--right .c-masthead__copy {
+  right: $spacing;
 }
