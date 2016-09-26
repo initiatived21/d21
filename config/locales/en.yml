@@ -471,6 +471,8 @@ en:
     lt?: must be less than %{num}
     lteq?: must be less than or equal to %{num}
     max_size?: size cannot be greater than %{num}
+    messages:
+      extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
     not_eql?: must not be equal to %{left}
@@ -498,6 +500,7 @@ en:
       destroy:
         notice: 
       update:
+        alert: 
         notice: 
   formtastic:
     actions:
@@ -509,6 +512,8 @@ en:
           update: 
       pledge:
         edit:
+          update: 
+        update:
           update: 
       signature:
         edit:
@@ -540,6 +545,19 @@ en:
           response: 
       pledge:
         edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          recommended: 
+          requirement: 
+          title: 
+          who: 
+        update:
           aasm_state: 
           amount: 
           content: 
@@ -590,6 +608,19 @@ en:
           response: 
       pledge:
         edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          recommended: 
+          requirement: 
+          title: 
+          who: 
+        update:
           aasm_state: 
           amount: 
           content: 
@@ -691,6 +722,15 @@ en:
           requirement: 
           title: 
           who: 
+        update:
+          aasm_state: 
+          amount: 
+          content: 
+          description: 
+          location: 
+          requirement: 
+          title: 
+          who: 
       q:
         index:
           aasm_state: 
@@ -745,6 +785,19 @@ en:
           response: 
       pledge:
         edit:
+          aasm_state: 
+          amount: 
+          content: 
+          deadline: 
+          description: 
+          image: 
+          initiator: 
+          location: 
+          recommended: 
+          requirement: 
+          title: 
+          who: 
+        update:
           aasm_state: 
           amount: 
           content: 
