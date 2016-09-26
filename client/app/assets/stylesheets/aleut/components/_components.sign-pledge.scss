@@ -11,12 +11,7 @@
 
 .c-sign-pledge__submit {
   height: 50px;
-  @include font-size(22px, 1.25);
-
-  @include media-query(m) {
-    height: 60px;
-    @include font-size(24px, 1.5);
-  }
+  @include font-size(21px, 1.25);
 }
 
 .c-sign-pledge__small-print {
