@@ -37,7 +37,7 @@ describe('<PledgeCommentList />', function () {
     wrapper.find('p').length.should.equal(1)
   })
 
-  it('should render the question form with an id based on length of comments array', function() {
+  it('should render the question form with a unique id so that it gets cleared on submit', function() {
     const wrapper = shallow(<PledgeCommentList {...props} />)
 
     const questionFormProps = wrapper.find('QuestionForm').props()
