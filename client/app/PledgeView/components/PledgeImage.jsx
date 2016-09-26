@@ -11,7 +11,7 @@ export default class PledgeImage extends ChildComponent {
 
     return (
       <img
-        className="c-pledge-img"
+        className="c-pledge__image"
         src={src}
         alt={this.t('.img_alt')}
       />
