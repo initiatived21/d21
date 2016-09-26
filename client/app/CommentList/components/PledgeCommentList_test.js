@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import PledgeCommentList from './PledgeCommentList'
+import QuestionForm from './QuestionForm'
 
 describe('<PledgeCommentList />', function () {
   const props = {
@@ -34,5 +35,12 @@ describe('<PledgeCommentList />', function () {
     const wrapper = shallow(<PledgeCommentList {...props} comments={[]} />)
 
     wrapper.find('p').length.should.equal(1)
+  })
+
+  it('should render the question form with an id based on length of comments array', function() {
+    const wrapper = shallow(<PledgeCommentList {...props} />)
+
+    const questionFormProps = wrapper.find('QuestionForm').props()
+    questionFormProps.id.should.equal(2)
   })
 })

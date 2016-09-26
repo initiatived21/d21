@@ -15,7 +15,7 @@ export default class AnswerForm extends ChildComponent {
     return (
       <Form
         className="c-comment__answer-form o-layout o-layout--small"
-        id={`AnswerForm${id}`}
+        id={`AnswerForm-${id}`}
         formObjectClass={NewAnswerFormObject}
         ajax={true}
         method='PUT'

@@ -39,7 +39,7 @@ export default class PledgeCommentList extends ChildComponent {
     let potentialQuestionForm
     if (userCanAskQuestions) {
       potentialQuestionForm =
-        <QuestionForm formData={questionForm} isSubmitting={isSubmitting} />
+        <QuestionForm formData={questionForm} id={comments.length} isSubmitting={isSubmitting} />
     }
 
     return (

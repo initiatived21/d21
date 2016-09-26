@@ -6,16 +6,18 @@ import NewQuestionFormObject from '../../lib/form_objects/new_question_form'
 export default class QuestionForm extends ChildComponent {
   static propTypes = {
     formData: PropTypes.object.isRequired,
+    id: PropTypes.number.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
   }
 
   render() {
-    const { formData, isSubmitting } = this.props
+    const { formData, id, isSubmitting } = this.props
 
     return (
       <Form
         className="c-comment__question-form o-layout o-layout--small"
         formObjectClass={NewQuestionFormObject}
+        id={`QuestionForm-${id}`}
         ajax={true}
         {...formData}>
 
