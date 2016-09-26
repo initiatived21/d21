@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :name, :organization, :email, :created_at
+  permit_params :name, :organization, :email, :avatar
 
   index do
     selectable_column
@@ -21,6 +21,7 @@ ActiveAdmin.register User do
       f.input :name
       f.input :email
       f.input :organization
+      f.input :avatar
     end
     f.actions
   end
