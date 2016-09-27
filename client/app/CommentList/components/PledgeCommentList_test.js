@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import PledgeCommentList from './PledgeCommentList'
-import QuestionForm from './QuestionForm'
+import QuestionFormContainer from '../containers/QuestionFormContainer'
 
 describe('<PledgeCommentList />', function () {
   const props = {
@@ -40,7 +40,7 @@ describe('<PledgeCommentList />', function () {
   it('should render the question form with a unique id so that it gets cleared on submit', function() {
     const wrapper = shallow(<PledgeCommentList {...props} />)
 
-    const questionFormProps = wrapper.find('QuestionForm').props()
+    const questionFormProps = wrapper.find(QuestionFormContainer).props()
     questionFormProps.id.should.equal(2)
   })
 })
