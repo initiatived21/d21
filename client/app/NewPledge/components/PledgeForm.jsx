@@ -109,6 +109,7 @@ export default class PledgeForm extends ChildComponent {
             />
           </div>
 
+          {/*
           <div className="o-layout o-layout--small u-mb">
             <div className="o-layout__item u-1/4@m u-mb-tiny">
               <Label attribute="image" />
@@ -131,6 +132,7 @@ export default class PledgeForm extends ChildComponent {
               </div>
             </div>
           </div>
+            */}
 
           <div className="o-layout o-layout--small">
             <div className="o-layout__item u-1/4@m u-mb-tiny">
