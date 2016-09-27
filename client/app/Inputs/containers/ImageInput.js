@@ -1,10 +1,12 @@
 import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
+import merge from 'lodash/merge'
 import { updateAction } from 'rform'
 
 import cropImageFunction from '../../lib/image_processing/cropImage'
-import loadImage, { changeCrop, cropImage, clearImage } from '../actions/imageInputActions'
+import loadImage, { changeCrop, cropImage, clearImage }
+  from '../actions/imageInputActions'
 import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInput'
 import ImageInputComponent from '../components/ImageInputComponent'
 
@@ -48,6 +50,7 @@ const mapStateToProps = function(state, ownProps) {
     croppedImageUrl,
     errors,
     value,
+    attrs,
   }
 }
 
@@ -66,13 +69,25 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 }
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {
-  const { originalImage, crop } = stateProps
+  const { originalImage, crop, attrs } = stateProps
   const {
-    formId, attribute, submodel, scaleToX, scaleToY, aspectRatio
+    formId, attribute, submodel, scaleToX, scaleToY, aspectRatio,
+    formObjectClass
   } = ownProps
   const { dispatch } = dispatchProps
 
   const id = attribute  // attribute serves as id for the store
+
+  const validate = () => {
+    const formObject = new formObjectClass(stateProps.attrs)
+    formObject.validate(attribute)
+    const errorKey = formObject.errorKey(attribute, submodel)
+    const errors = formObject.attributes.errors[errorKey]
+
+    if (!errors && (!attrs.errors || !attrs.errors[errorKey])) return
+    dispatchProps.dispatch(updateAction(formId, errorKey, 'errors', errors))
+  }
+
 
   return {
     ...stateProps,
@@ -94,6 +109,7 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
       event.preventDefault()
       dispatch(clearImage(id))
       dispatch(updateAction(formId, 'cropping', submodel, null))
+      validate()
     },
 
     handleFinishCrop: function() {
@@ -106,6 +122,8 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
 
       dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
+      validate()
     }
   }
 }
