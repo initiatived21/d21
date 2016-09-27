@@ -4388,9 +4388,9 @@
       "dev": true
     },
     "rform": {
-      "version": "0.2.7",
-      "from": "rform@0.2.7",
-      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.7.tgz",
+      "version": "0.2.8",
+      "from": "rform@0.2.8",
+      "resolved": "https://registry.npmjs.org/rform/-/rform-0.2.8.tgz",
       "dependencies": {
         "lodash": {
           "version": "4.16.2",

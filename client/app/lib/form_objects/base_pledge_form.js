@@ -4,7 +4,7 @@ export default class BasePledgeFormObject extends FormObject {
   static get properties() {
     return [
       'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'image', 'description', 'tag_ids'
+      'image', 'description', 'tag_ids', 'cropping'
     ]
   }
 
@@ -13,6 +13,13 @@ export default class BasePledgeFormObject extends FormObject {
   }
 
   validation() {
+    this.configure({
+      'notCropping?': (_validatable, cropping) => {
+        console.log('not?', cropping, 'has_error:', !!cropping)
+        return !cropping
+      }
+    })
+
     this.required('title').filled({'max_size?': 85})
     this.required('content').filled({'max_size?': 80})
     this.required('amount').filled('int?', {'gt?': 0})
@@ -22,5 +29,7 @@ export default class BasePledgeFormObject extends FormObject {
     this.required('deadline').filled({
       'gt?': new Date().toISOString().substring(0,10)
     })
+    this.maybe('image', {if: !!this.attributes.cropping})
+      .filled({'notCropping?': this.attributes.cropping})
   }
 }

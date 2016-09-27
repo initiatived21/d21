@@ -127,8 +127,8 @@ export default class PledgeForm extends ChildComponent {
                 <Tooltip className="o-marginal__note">
                   {this.t('.tooltip.image')}
                 </Tooltip>
-                <Errors attribute='image' />
               </div>
+              <Errors attribute='image' />
             </div>
           </div>
 

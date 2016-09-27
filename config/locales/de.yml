@@ -487,6 +487,7 @@ de:
     true?: must be true
     type?: must be %{type}
     unique?: darf noch nicht benutzt worden sein
+    notCropping?: Auswahl muss bestätigt werden
   first_paragraph: 
   flash:
     actions:

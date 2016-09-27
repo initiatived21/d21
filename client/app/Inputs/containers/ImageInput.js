@@ -52,22 +52,11 @@ const mapStateToProps = function(state, ownProps) {
 }
 
 const mapDispatchToProps = function(dispatch, ownProps) {
-  const { attribute, aspectRatio } = ownProps
+  const { attribute } = ownProps
 
   const id = attribute  // attribute serves as id for the store
 
   return {
-    handleChangeCrop: function(crop) {
-      dispatch(changeCrop(id, crop))
-    },
-    onDropFile(files) {
-      const file = files[0]
-      dispatch(loadImage(id, file, aspectRatio))
-    },
-    onCancelClick(event) {
-      event.preventDefault()
-      dispatch(clearImage(id))
-    },
     onRemoveFileClick(event) {
       event.preventDefault()
       dispatch(clearImage(id))
@@ -78,7 +67,9 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {
   const { originalImage, crop } = stateProps
-  const { formId, attribute, submodel, scaleToX, scaleToY } = ownProps
+  const {
+    formId, attribute, submodel, scaleToX, scaleToY, aspectRatio
+  } = ownProps
   const { dispatch } = dispatchProps
 
   const id = attribute  // attribute serves as id for the store
@@ -87,6 +78,23 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     ...stateProps,
     ...dispatchProps,
     ...ownProps,
+
+    onDropFile(files) {
+      const file = files[0]
+      dispatch(loadImage(id, file, aspectRatio))
+      dispatch(updateAction(formId, 'cropping', submodel, attribute))
+    },
+
+    handleChangeCrop: function(crop) {
+      dispatch(changeCrop(id, crop))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
+    },
+
+    onCancelClick(event) {
+      event.preventDefault()
+      dispatch(clearImage(id))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
+    },
 
     handleFinishCrop: function() {
       const croppedImageUrl = cropImageFunction(
