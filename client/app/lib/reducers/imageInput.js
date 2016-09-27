@@ -10,19 +10,15 @@ export const IMAGE_STATE_CROPPED = 3
 export default function imageInputs(state={}, action) {
   let originalImage, aspect, crop
 
+  if (state.id !== action.id) {
+    return state
+  }
+
   switch (action.type) {
   case types.LOAD_IMAGE_START:
-    if (state.id !== action.id) {
-      return state
-    }
-
     return assign({}, state, { imageState: IMAGE_STATE_LOADING})
 
   case types.LOAD_IMAGE_SUCCESS:
-    if (state.id !== action.id) {
-      return state
-    }
-
     originalImage = action.image
     aspect = action.aspect
     crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
@@ -32,45 +28,31 @@ export default function imageInputs(state={}, action) {
       originalImage,
       originalImageWidth: originalImage.width,
       originalImageHeight: originalImage.height,
+      filename: action.filename,
       crop,
-      imageState: IMAGE_STATE_LOADED
+      imageState: IMAGE_STATE_LOADED,
     }
 
     return newState
 
   case types.LOAD_IMAGE_FAILURE:
-    if (state.id !== action.id) {
-      return state
-    }
-
     return assign({}, state, { imageState: IMAGE_STATE_NONE })
 
   case types.CHANGE_CROP:
-    if (state.id !== action.id) {
-      return state
-    }
-
     return assign({}, state, { crop: action.crop })
 
   case types.CROP_IMAGE:
-    if (state.id !== action.id) {
-      return state
-    }
-
     return {
       id: state.id,
       imageState: IMAGE_STATE_CROPPED,
-      croppedImageUrl: action.croppedImageUrl
+      croppedImageUrl: action.croppedImageUrl,
+      filename: state.filename,
     }
 
-  // Theoretical action – is not present in UI at the moment
   case types.CLEAR_IMAGE:
-    if (state.id !== action.id) {
-      return state
-    }
-
     return {
-      id: state.id
+      id: state.id,
+      imageState: IMAGE_STATE_NONE,
     }
 
   default:
