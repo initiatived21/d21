@@ -8,10 +8,11 @@ export default class QuestionForm extends ChildComponent {
     formData: PropTypes.object.isRequired,
     id: PropTypes.number.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
+    handleResponse: PropTypes.func.isRequired,
   }
 
   render() {
-    const { formData, id, isSubmitting } = this.props
+    const { formData, id, isSubmitting, handleResponse } = this.props
 
     return (
       <Form
@@ -19,6 +20,7 @@ export default class QuestionForm extends ChildComponent {
         formObjectClass={NewQuestionFormObject}
         id={`QuestionForm-${id}`}
         ajax={true}
+        handleResponse={handleResponse}
         {...formData}>
 
         <InputSet ariaLabelOnly

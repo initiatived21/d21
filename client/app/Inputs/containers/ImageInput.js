@@ -10,12 +10,12 @@ import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
   const formId = ownProps.formId
-  const attrs = state.forms[ownProps.formId]
+  const attrs = state.rform[ownProps.formId]
 
   let errors = null
 
-  if (state.forms[formId] && state.forms[formId].errors) {
-    errors = state.forms[formId].errors[ownProps.attribute] || []
+  if (state.rform[formId] && state.rform[formId].errors) {
+    errors = state.rform[formId].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 

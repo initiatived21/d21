@@ -21,7 +21,6 @@ const mapStateToProps = (state, ownProps) => {
     comments,
     userCanAskQuestions,
     userCanAnswer: !userCanAskQuestions,
-    isSubmitting: false, // TODO
   }
 }
 

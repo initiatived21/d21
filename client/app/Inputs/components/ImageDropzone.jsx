@@ -2,10 +2,6 @@ import React, { PropTypes } from 'react'
 import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
-import {
-  IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
-  IMAGE_STATE_CROPPED
-} from '../reducers/imageInputReducer'
 
 export default class ImageDropzone extends ChildComponent {
   static propTypes = {

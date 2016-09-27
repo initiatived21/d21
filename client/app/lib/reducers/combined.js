@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { reducer as forms, initialState as initialFormState } from 'rform'
+import { reducer as rform } from 'rform'
 import entities from './entities'
 import flashMessages from './flashMessages'
 import searchLoadingState from './searchLoadingState'
@@ -22,5 +22,5 @@ export default combineReducers({
   imageInputs,
   currentUser,
   authToken,
-  forms,
+  rform,
 })

@@ -5,7 +5,7 @@ import { addFlashMessage } from '../../Flash/actions/flashActions'
 import { signPledge } from '../actions/sidebarActions'
 
 const mapStateToProps = (state, ownProps) => ({
-  isSubmitting: state.forms.isSubmitting.NewSignatureFormObject || false,
+  isSubmitting: state.rform.isSubmitting.NewSignatureFormObject || false,
   isAlreadySigned: state.signedPledges.includes(ownProps.id)
 })
 
