@@ -7,7 +7,7 @@ export default class ImageDropzone extends ChildComponent {
   static propTypes = {
     onDropFile: PropTypes.func.isRequired,
     onRemoveFileClick: PropTypes.func.isRequired,
-    filename: PropTypes.string
+    filename: PropTypes.string,
   }
 
   render() {

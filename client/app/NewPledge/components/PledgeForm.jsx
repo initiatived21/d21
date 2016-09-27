@@ -21,19 +21,19 @@ export default class PledgeForm extends ChildComponent {
     form: PropTypes.object.isRequired,
     availableTags: PropTypes.array.isRequired,
     onLinkClick: PropTypes.func.isRequired,
-    currentUser: PropTypes.object,
+    userLoggedIn: PropTypes.bool.isRequired,
   }
 
   render() {
     const {
-      onLinkClick, currentUser, form, afterResponse, formId
+      onLinkClick, userLoggedIn, form, afterResponse, formId
     } = this.props
 
     const formObjectClass =
-      currentUser ? BasePledgeFormObject : PledgeWithInitiatorFormObject
+      userLoggedIn ? BasePledgeFormObject : PledgeWithInitiatorFormObject
 
-    const initiatorForm = currentUser ? null : this.renderInitiatorForm()
-    const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
+    const initiatorForm = userLoggedIn ? null : this.renderInitiatorForm()
+    const loginPrompt = userLoggedIn ? null : this.renderLoginPrompt(onLinkClick)
 
     return(
       <Form
@@ -181,9 +181,9 @@ export default class PledgeForm extends ChildComponent {
   }
 
   renderInitiatorForm() {
-    const { onLinkClick, currentUser } = this.props
+    const { onLinkClick, userLoggedIn } = this.props
 
-    const loginPrompt = currentUser ? null : this.renderLoginPrompt(onLinkClick)
+    const loginPrompt = userLoggedIn ? null : this.renderLoginPrompt(onLinkClick)
 
     return (
       <div className='c-new-pledge__user-data'>

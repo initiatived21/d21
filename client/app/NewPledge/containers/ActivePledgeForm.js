@@ -7,7 +7,7 @@ import PledgeForm from '../components/PledgeForm'
 const mapStateToProps = function(state, ownProps) {
   return {
     availableTags: assembleTags(ownProps.tags),
-    currentUser: state.currentUser,
+    userLoggedIn: state.currentUser !== null,
     formId: ['PledgeForm', ownProps.id].join('-'),
   }
 }
@@ -38,6 +38,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...ownProps,
 
   afterResponse: json => {
+    console.log(json)
     if (json.status === 'success') {
       dispatchProps.dispatch(setEntity(stateProps.formId, {}))
     }
