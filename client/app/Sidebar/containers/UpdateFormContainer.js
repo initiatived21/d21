@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import I18n from 'i18n-js'
 import { addFlashMessage } from '../../Flash/actions/flashActions'
 import { submitUpdate } from '../actions/sidebarActions'
+import { addEntities } from '../../lib/actions/entityActions'
 import UpdateForm from '../components/UpdateForm'
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,7 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatch
+  handleResponse: (_formId, data) => dispatch(addEntities(data)),
+  dispatch,
 })
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {

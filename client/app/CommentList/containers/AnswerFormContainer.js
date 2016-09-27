@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import merge from 'lodash/merge'
 import clone from 'lodash/clone'
 import AnswerForm from '../components/AnswerForm'
-import addEntities from '../../lib/actions/entityActions'
+import { addEntities } from '../../lib/actions/entityActions'
 
 const mapStateToProps = (state, ownProps) => {
   // We receive the put action with a placeholder, insert the ID there

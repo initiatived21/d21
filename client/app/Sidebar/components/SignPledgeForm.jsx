@@ -14,19 +14,21 @@ export default class SignPledgeForm extends ChildComponent {
     formData: PropTypes.shape({
       action: PropTypes.string.isRequired,
     }),
+    handleResponse: PropTypes.func.isRequired,
     afterResponse: PropTypes.func.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
     isAlreadySigned: PropTypes.bool.isRequired
   }
 
   render() {
-    const { formData, isSubmitting, afterResponse, isAlreadySigned } = this.props
+    const { formData, isSubmitting, handleResponse, afterResponse, isAlreadySigned } = this.props
 
     return isAlreadySigned ? <PledgeSignedMessage /> : (
       <Form
         className="c-sidebar c-sidebar--secondary c-sign-pledge"
         ajax={true}
         formObjectClass={NewSignatureFormObject}
+        handleResponse={handleResponse}
         afterResponse={afterResponse}
         {...formData}
       >

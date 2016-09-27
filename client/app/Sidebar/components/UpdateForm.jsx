@@ -9,12 +9,13 @@ export default class UpdateForm extends ChildComponent {
   static propTypes = {
     formData: PropTypes.object.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
+    handleResponse: PropTypes.func.isRequired,
     afterResponse: PropTypes.func.isRequired,
   }
 
   render() {
     const {
-      formData, isSubmitting, afterResponse, wasSubmitted
+      formData, isSubmitting, handleResponse, afterResponse, wasSubmitted
     } = this.props
 
     if (wasSubmitted) return (<UpdateSentMessage />)
@@ -24,6 +25,7 @@ export default class UpdateForm extends ChildComponent {
         className="c-sidebar"
         formObjectClass={NewUpdateFormObject}
         ajax={true}
+        handleResponse={handleResponse}
         afterResponse={afterResponse}
         {...formData}
       >

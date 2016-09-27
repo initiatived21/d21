@@ -7,9 +7,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  handleResponse: (_formId, data) => {
-    dispatch(addEntities(data))
-  }
+  handleResponse: (_formId, data) => dispatch(addEntities(data))
 })
 
 export default connect(
