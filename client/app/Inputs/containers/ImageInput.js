@@ -68,10 +68,6 @@ const mapDispatchToProps = function(dispatch, ownProps) {
       event.preventDefault()
       dispatch(clearImage(id))
     },
-    onRemoveFileClick(event) {
-      event.preventDefault()
-      dispatch(clearImage(id))
-    },
     dispatch,
   }
 }
@@ -87,7 +83,6 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     ...stateProps,
     ...dispatchProps,
     ...ownProps,
-
     handleFinishCrop: function() {
       const croppedImageUrl = cropImageFunction(
         originalImage,
@@ -95,10 +90,16 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
         scaleToX,
         scaleToY
       )
-
       dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
-    }
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '0'))
+    },
+    onRemoveFileClick(event) {
+      event.preventDefault()
+      dispatch(clearImage(id))
+      // Set hidden input field to remove image from server
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '1'))
+    },
   }
 }
 

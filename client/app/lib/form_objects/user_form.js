@@ -4,7 +4,7 @@ export default class UserFormObject extends FormObject {
   static get properties() {
     return [
       'name', 'organization', 'email', 'password', 'password_confirmation',
-      'avatar'
+      'avatar', 'remove_avatar'
     ]
   }
 

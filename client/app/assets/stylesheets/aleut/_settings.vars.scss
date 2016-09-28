@@ -66,6 +66,7 @@ $success-color:                    rgb(47%, 60%, 69%);
 $urgent-color:                     rgb(71%, 6%, 5%);
 
 $warning-color:                    rgb(182,15,12);
+$warning-color-highlight:          lighten($warning-color, 5%);
 $warning-color-background:         rgba(182,15,12,0.05);
 
 

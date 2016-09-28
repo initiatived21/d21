@@ -1,17 +1,19 @@
 import React, { PropTypes } from 'react'
+import { Input } from 'rform'
 import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class ImageDropzone extends ChildComponent {
   static propTypes = {
+    type: PropTypes.string.isRequired,
     onDropFile: PropTypes.func.isRequired,
     onRemoveFileClick: PropTypes.func.isRequired,
     filename: PropTypes.string,
   }
 
   render() {
-    const { onDropFile, onRemoveFileClick, filename } = this.props
+    const { type, onDropFile, onRemoveFileClick, filename } = this.props
 
     let modalElement
     if (filename) {
@@ -41,6 +43,11 @@ export default class ImageDropzone extends ChildComponent {
       )
     }
 
-    return modalElement
+    return (
+      <div>
+        {modalElement}
+        <Input type="hidden" attribute={`remove_${type}`} />
+      </div>
+    )
   }
 }

@@ -4,6 +4,7 @@ class UserForm < Reform::Form
   property :name
   property :organization
   property :avatar
+  property :remove_avatar
   property :email
   property :password
   property :password_confirmation, virtual: true

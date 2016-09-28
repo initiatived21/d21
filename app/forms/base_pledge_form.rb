@@ -9,6 +9,7 @@ class BasePledgeForm < Reform::Form
   property :location
   property :deadline
   property :image
+  property :remove_image
   property :description
   property :tag_ids
 
