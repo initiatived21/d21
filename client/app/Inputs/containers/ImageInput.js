@@ -5,7 +5,6 @@ import { updateAction } from 'rform'
 
 import cropImageFunction from '../../lib/image_processing/cropImage'
 import loadImage, { changeCrop, cropImage, clearImage } from '../actions/imageInputActions'
-import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInput'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
@@ -31,12 +30,6 @@ const mapStateToProps = function(state, ownProps) {
     imageState, originalImage, originalImageWidth, originalImageHeight, filename,
     crop, croppedImageUrl
   } = state.imageInputs[ownProps.attribute]
-
-  if (!croppedImageUrl && attrs && attrs.image && attrs.image.image && attrs.image.image.url) {
-    // TODO: Does this work for submodels?
-    imageState = IMAGE_STATE_CROPPED
-    croppedImageUrl = attrs.image.image.url
-  }
 
   return {
     imageState,

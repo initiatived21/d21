@@ -36,6 +36,19 @@ describe ('actions', function() {
     actions.cropImage(id, croppedImageUrl, scaleToX, scaleToY).should.eql(expectedAction)
   })
 
+  it ('should create an action to set a server image', function() {
+    const
+      id = 'image_id',
+      imageUrl = 'http://www.example.com/example-image.jpg'
+    const expectedAction = {
+      type: types.SET_SERVER_IMAGE,
+      id,
+      imageUrl,
+    }
+
+    actions.setServerImage(id, imageUrl).should.eql(expectedAction)
+  })
+
   it ('should create an action to clear an image', function() {
     const id = 'image_id'
     const expectedAction = {

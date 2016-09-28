@@ -38,7 +38,7 @@ class UserForm < Reform::Form
   def as_json options = {}
     json = super
     # Delete image content, browsers don't let us set that value anyway
-    json['fields']['avatar'] = ''
+    #json['fields']['avatar'] = ''
     json
   end
 end

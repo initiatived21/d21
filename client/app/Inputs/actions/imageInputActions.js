@@ -19,6 +19,14 @@ export const cropImage = function(id, croppedImageUrl, scaleToX, scaleToY) {
   }
 }
 
+export const setServerImage = function(id, imageUrl) {
+  return {
+    type: types.SET_SERVER_IMAGE,
+    id,
+    imageUrl
+  }
+}
+
 export const clearImage = function(id) {
   return {
     type: types.CLEAR_IMAGE,

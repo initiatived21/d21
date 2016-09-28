@@ -18,6 +18,7 @@ de:
     select_detail: Ausschnitt wählen
   ImageDropzone:
     dismiss_image: Bild verwerfen
+    previously_uploaded: Zuvor hochgeladen
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -165,6 +166,8 @@ de:
     form_sent: Ihre Daten wurden erfolgreich aktualisiert.
   ProfileView:
     heading: Ihr Profil
+    your_data: Ihre Daten
+    your_pledges: Ihre Versprechen
   QuestionForm:
     submit: Absenden
   ReportPledgeForm:
@@ -470,6 +473,7 @@ de:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
+    notCropping?: Auswahl muss bestätigt werden
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -587,6 +591,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -688,6 +693,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -865,6 +871,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 

@@ -19,6 +19,7 @@ export default function imageInputs(state = initialState, action) {
   case types.LOAD_IMAGE_FAILURE:
   case types.CHANGE_CROP:
   case types.CROP_IMAGE:
+  case types.SET_SERVER_IMAGE:
   case types.CLEAR_IMAGE:
     return {
       avatar: imageInput(state.avatar, action),

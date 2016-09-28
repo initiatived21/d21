@@ -10,18 +10,19 @@ export default class ImageDropzone extends ChildComponent {
     onDropFile: PropTypes.func.isRequired,
     onRemoveFileClick: PropTypes.func.isRequired,
     filename: PropTypes.string,
+    isServerImage: PropTypes.bool,
   }
 
   render() {
-    const { type, onDropFile, onRemoveFileClick, filename } = this.props
+    const { type, onDropFile, onRemoveFileClick, filename, isServerImage } = this.props
 
     let modalElement
-    if (filename) {
+    if (filename || isServerImage) {
       modalElement = (
         <div className="c-dropzone c-dropzone--loaded">
           <div className="c-dropzone__inner">
             <p className="c-dropzone__filename">
-              {filename}
+              {filename || this.t('.previously_uploaded')}
             </p>
             <a href="#" onClick={onRemoveFileClick} className="c-dropzone__remove-button"
               title={this.t('.dismiss_image')}>
