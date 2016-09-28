@@ -23,9 +23,11 @@ export default class QuestionForm extends ChildComponent {
         handleResponse={handleResponse}
         {...formData}>
 
-        <InputSet ariaLabelOnly
+        <InputSet
+          ariaLabelOnly
           wrapperClassName="c-input o-layout__item u-4/5@m u-mb-small@s"
           attribute='content'
+          key={id}
         />
 
         <div className="o-layout__item u-1/5@m">
