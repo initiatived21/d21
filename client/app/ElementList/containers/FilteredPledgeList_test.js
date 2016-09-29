@@ -100,6 +100,29 @@ describe('FilteredPledgeList', function() {
         ]
       })
     })
+
+    it('reduces the number of pledges to maxPledges if necessary', function() {
+      mapStateToProps(state, { maxPledges: 2 }).should.deep.equal({
+        pledges: [
+          {
+            id: 1,
+            aasm_state: 'successful',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          },
+          {
+            id: 5,
+            aasm_state: 'active',
+            initiator: {
+              id: 3,
+              name: 'Max'
+            }
+          },
+        ]
+      })
+    })
   })
 
   describe('mapDispatchToProps', function() {
