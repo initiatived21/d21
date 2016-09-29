@@ -18,6 +18,7 @@ de:
     select_detail: Ausschnitt wählen
   ImageDropzone:
     dismiss_image: Bild verwerfen
+    previously_uploaded: Zuvor hochgeladen
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -165,6 +166,8 @@ de:
     form_sent: Ihre Daten wurden erfolgreich aktualisiert.
   ProfileView:
     heading: Ihr Profil
+    your_data: Ihre Daten
+    your_pledges: Ihre Versprechen
   QuestionForm:
     submit: Absenden
   ReportPledgeForm:
@@ -470,6 +473,7 @@ de:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
+    notCropping?: Auswahl muss bestätigt werden
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -587,6 +591,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -688,6 +693,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -865,6 +871,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -935,12 +942,18 @@ de:
   pages:
     about:
       heading: Über uns
+      inspiration_heading: Inspiration
+      inspiration_html: |-
+        <p class="c-text-block">
+        Die Idee, das Prinzip „Ich mache X, wenn Du Y machst" mit sozialen und gesellschaftspolitischen Themen zu verknüpfen, gab es 2005 in England mit der PledgeBank. Dieses Prinzip war der kreative Ausgangspunkt für bunt und verbindlich, um das Thema Integration nachhaltig zu verankern, Ehrenämtler zu mobilisieren und Unternehmen zu motivieren, ihr Engagement zielgerichtet für Integration von geflüchteten Menschen einzubringen.
+        </p>
       team_heading: Team
       team_html: |-
         <p class="c-text-block">
-        <b>Projektmanagement:</b><br /><br />
-        Björn Stecher<br /> Digitale Infrastruktur und Daten-/Verbraucherschutz im Netz<br /> +49 30 5268722-54<br /> bjoern.stecher@initiatived21.de<br /><br />
-        Stefanie Kaste<br /> Projektleitung, Community Management, Redaktion<br /> +49 30 5268722-51<br /> stefanie.kaste@initiatived21.de<br /><br />
+        <b>Projektorganisation:</b><br /><br />
+        Lena-Sophie Müller<br /> Geschäftsführerin D21<br /> lena-sophie.mueller@initiatived21.de<br /><br />
+        Björn Stecher<br /> Projektleitung<br /> +49 30 5268722-54<br /> bjoern.stecher@initiatived21.de<br /><br />
+        Stefanie Kaste<br /> Akquise, Community Management, Kommunikationsleitung<br /> +49 30 5268722-51<br /> stefanie.kaste@initiatived21.de<br /><br />
         Melanie Gernert<br /> Praktikantin<br /> redaktion@buntundverbindlich.de
         </p>
 
@@ -949,15 +962,6 @@ de:
         Anna Fischer<br /> Technische Projektleitung<br /> anna.fischer@7unicorns.de<br /><br />
         Konstantin Koss<br /> Backend-Entwickler<br /><br />
         Marc Altmann<br /> Frontend-Entwickler
-        </p>
-
-        <p class="c-text-block">
-        <b>Unterstützung durch die Initiative D21:</b><br /><br />
-        Lena-Sophie Müller<br /> Geschäftsführerin <br /> lena-sophie.mueller@initiatived21.de<br /><br />
-        Sabrina Dietrich<br /> Presse- und Öffentlichkeitsarbeit<br /> sabrina.dietrich@initiatived21.de <br /><br />
-        Jana Kausch<br />  Bildung und Medienkompetenz<br /> jana.kausch@initiatived21.de<br /><br />
-        Marcel Rist<br />Praktikant Presse- und Öffentlichkeitsarbeit <br /><br />
-        Nicole Schardien<br /> Assistenz der Geschäftsführung / Teamassistenz<br /> nicole.schardien@initiatived21.de<br /><br />
         </p>
       vision_heading: Vision
       vision_html: |-
