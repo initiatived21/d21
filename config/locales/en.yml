@@ -18,6 +18,7 @@ en:
     select_detail: Select detail
   ImageDropzone:
     dismiss_image: Dismiss image
+    previously_uploaded: Previously uploaded
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -165,6 +166,8 @@ en:
     form_sent: Your data has been updated.
   ProfileView:
     heading: Your Profile
+    your_data: Your profile data
+    your_pledges: Your pledges
   QuestionForm:
     submit: Submit
   ReportPledgeForm:
@@ -475,6 +478,7 @@ en:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
+    notCropping?: selection must be confirmed
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -592,6 +596,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -693,6 +698,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -870,6 +876,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -940,6 +947,8 @@ en:
   pages:
     about:
       heading: About us
+      inspiration_heading: Inspiration
+      inspiration_html: 
       team_heading: Team
       team_html: 
       vision_heading: Vision
