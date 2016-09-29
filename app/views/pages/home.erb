@@ -1,0 +1,60 @@
+<section class="c-masthead c-masthead--left">
+  <div class="o-wrapper">
+    <div class="c-masthead__copy">
+      <h2 class="c-masthead__title">
+        <%= t('.masthead.title') %>
+      </h2>
+      <p>
+        <%= t('.masthead.text') %>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="c-pledge-list c-base-layout__main">
+  <div class="o-wrapper u-mt u-mb">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-thumbs-o-up">
+          <%= t('.recommended') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @recommended_pledges, filter: :recommended, max_pledges: 6,
+                                                 params: params %>
+  </div>
+
+  <div class="o-wrapper">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-star">
+          <%= t('.newest') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @newest_pledges, filter: :active, max_pledges: 12,
+                                            params: params %>
+  </div>
+
+  <div class="o-wrapper">
+    <h1>Testüberschrift</h1>
+    <div class="o-layout">
+      <div class="o-layout__item u-1/2@m u-mb@s">
+        <h2>Testüberschrift</h2>
+        <%= t('.main.text_html') %>
+      </div><!--
+      --><div class="o-layout__item u-1/2@m">
+        <div class="c-responsive-video">
+          <iframe
+            class="c-responsive-video__iframe"
+            src="https://player.vimeo.com/video/66969939"
+            width="1600" height="900" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
