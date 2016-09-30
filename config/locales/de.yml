@@ -1222,6 +1222,9 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
+    pledge_deleted:
+      greeting: 
+      subject: 
   tags:
     names:
       accomodation: Unterbringung
@@ -1250,3 +1253,5 @@ de:
     pagination:
       last: 
       next: 
+  PledgeText:
+    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.

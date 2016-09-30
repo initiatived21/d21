@@ -8,6 +8,7 @@ class PledgeWithInitiatorForm < BasePledgeForm
     property :email
     property :password
     property :password_confirmation, virtual: true
+    property :locale
 
     validation :default do
       configure do

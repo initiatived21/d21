@@ -200,6 +200,11 @@ class PledgesController < ApplicationController
       pledge_params[:tag_ids] = pledge_params[:tag_ids].split(',')
     end
 
+    pledge_params[:locale] = params[:locale]
+    if pledge_params[:initiator]
+      pledge_params[:initiator][:locale] = params[:locale]
+    end
+
     pledge_params
   end
 

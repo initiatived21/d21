@@ -8,13 +8,16 @@
 
 micro = User.create! name: 'Bill Tore',
                      organization: 'Winzigweich Deutschland GmbH',
+                     locale: 'de',
                      email: 'user@user.com',
                      password: 'password'
 privat = User.create! name: 'Max Mustermann',
+                      locale: 'de',
                       email: 'max@example.org',
                       password: 'password'
 corn = User.create! name: 'Frieda Freude',
                     organization: 'Getreidelsen Verlag',
+                    locale: 'de',
                     email: 'frieda@example.org',
                     password: 'password'
 
@@ -50,6 +53,7 @@ Pledge.create!(
   deadline: 5.days.from_now,
   aasm_state: 'initialized',
   initiator: micro,
+  locale: 'de',
   tags: [family, language]
 )
 
@@ -62,6 +66,7 @@ Pledge.create!(
   requirement: 'endlich mal mein Versprechen freischaltet',
   deadline: 6.days.from_now,
   aasm_state: 'requested',
+  locale: 'de',
   initiator: privat
 )
 
@@ -76,6 +81,7 @@ active_none = Pledge.create!(
   deadline: 7.days.from_now,
   aasm_state: 'active',
   initiator: micro,
+  locale: 'de',
   tags: [family, language]
 )
 Comment.create!(
@@ -88,6 +94,22 @@ Comment.create!(
   content: 'Warum bekomme ich keine Antwort?'
 )
 FactoryGirl.create :signature, :unconfirmed, pledge: active_none
+
+# English active pledge
+Pledge.create!(
+  title: 'Teaching English',
+  content: 'teach the English language to 10 refugees',
+  amount: 20,
+  who: 'other people',
+  requirement: 'do the same',
+  location: 'everywhere',
+  deadline: 7.days.from_now,
+  aasm_state: 'active',
+  initiator: privat,
+  locale: 'en',
+  tags: [family],
+  recommended: true
+)
 
 # active pledge with a few signatures
 active_few = Pledge.create!(
@@ -102,6 +124,7 @@ active_few = Pledge.create!(
   deadline: 8.days.from_now,
   aasm_state: 'active',
   initiator: corn,
+  locale: 'de',
   recommended: true
 )
 FactoryGirl.create :signature, pledge: active_few
@@ -118,6 +141,7 @@ active_enough = Pledge.create!(
   location: 'Brandenburg',
   deadline: 9.days.from_now,
   aasm_state: 'active',
+  locale: 'de',
   initiator: micro
 )
 15.times do
@@ -135,6 +159,7 @@ Pledge.create!(
   deadline: 2.days.ago,
   aasm_state: 'failed',
   initiator: privat,
+  locale: 'de',
   recommended: true # Still not shown
 )
 
@@ -151,6 +176,7 @@ successful = Pledge.create!(
   aasm_state: 'successful',
   initiator: privat,
   tags: [family, language],
+  locale: 'de',
   recommended: true
 )
 10.times do
@@ -167,5 +193,6 @@ Pledge.create!(
   location: 'Bielefeld',
   deadline: 10.days.from_now,
   aasm_state: 'disapproved',
+  locale: 'de',
   initiator: privat
 )

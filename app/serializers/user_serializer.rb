@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :organization
+  attributes :id, :name, :organization, :locale
 
   attribute :avatar do
     { url: object.avatar.url }
