@@ -1,7 +1,15 @@
 h1 FAQ
 
-- question_answer_sets.each do |question, answer|
-  div[class="c-faq__question u-2/3@l"]
+nav
+  ol
+    - question_answer_sets.each do |question, answerObject|
+      li
+        a href="##{answerObject[:index]}"
+          == question
+
+
+- question_answer_sets.each do |question, answerObject|
+  div[class="c-faq__question u-2/3@l" id=answerObject[:index]]
     == question
   div[class="c-faq__answer u-2/3@l"]
-    == answer
+    == answerObject[:answer]
