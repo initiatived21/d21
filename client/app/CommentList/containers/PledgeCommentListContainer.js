@@ -4,14 +4,15 @@ import PledgeCommentList from '../components/PledgeCommentList'
 
 const mapStateToProps = (state, ownProps) => {
   const comments =
-    values(state.comments).filter(
+    values(state.entities.comments).filter(
       comment => comment.pledge_id == ownProps.pledge_id
     )
 
-  const currentPledge = state.pledges[ownProps.pledge_id]
+  const currentPledge = state.entities.pledges[ownProps.pledge_id]
+
   let userCanAskQuestions
-  if (state.currentUser && currentPledge) {
-    userCanAskQuestions = state.currentUser.id != currentPledge.user_id
+  if (state.currentUser !== null && currentPledge) {
+    userCanAskQuestions = state.currentUser !== currentPledge.user_id
   } else {
     userCanAskQuestions = true
   }
@@ -20,7 +21,6 @@ const mapStateToProps = (state, ownProps) => {
     comments,
     userCanAskQuestions,
     userCanAnswer: !userCanAskQuestions,
-    isSubmitting: false, // TODO
   }
 }
 

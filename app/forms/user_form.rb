@@ -4,6 +4,7 @@ class UserForm < Reform::Form
   property :name
   property :organization
   property :avatar
+  property :remove_avatar
   property :email
   property :password
   property :password_confirmation, virtual: true
@@ -37,7 +38,7 @@ class UserForm < Reform::Form
   def as_json options = {}
     json = super
     # Delete image content, browsers don't let us set that value anyway
-    json['fields']['avatar'] = ''
+    #json['fields']['avatar'] = ''
     json
   end
 end

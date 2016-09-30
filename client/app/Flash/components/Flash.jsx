@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../../lib/store'
 import FlashMessageListContainer from '../containers/FlashMessageListContainer'
 import RootComponent from '../../lib/Base/components/RootComponent'
-import { addFlashMessageAction } from '../actions/flashActions'
+import { addFlashMessage } from '../actions/flashActions'
 
 export default class Flash extends RootComponent {
   static propTypes = {
@@ -21,7 +21,7 @@ export default class Flash extends RootComponent {
 
     for (let type in flash) {
       let text = flash[type]
-      store.dispatch(addFlashMessageAction(type, text))
+      store.dispatch(addFlashMessage(type, text))
     }
   }
 

@@ -6,8 +6,8 @@ import ImagePreview from './ImagePreview'
 import ImageCrop from './ImageCrop'
 import {
   IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
-  IMAGE_STATE_CROPPED
-} from '../reducers/imageInputReducer'
+  IMAGE_STATE_CROPPED, IMAGE_STATE_SERVER
+} from '../../lib/reducers/imageInput'
 
 export default class ImageInputComponent extends ChildComponent {
   static propTypes = {
@@ -67,8 +67,12 @@ export default class ImageInputComponent extends ChildComponent {
       modalElement = (
         <div className="o-layout">
           <div className="o-layout__item u-1/2@m u-mb@s">
-            <ImageDropzone onDropFile={onDropFile} onRemoveFileClick={onRemoveFileClick}
-              filename={filename} />
+            <ImageDropzone
+              type={type}
+              onDropFile={onDropFile}
+              onRemoveFileClick={onRemoveFileClick}
+              filename={filename}
+              isServerImage={imageState === IMAGE_STATE_SERVER ? true : false} />
           </div>
           <div className="o-layout__item u-1/2@m">
             <ImagePreview

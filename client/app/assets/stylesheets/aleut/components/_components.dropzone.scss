@@ -101,4 +101,8 @@
 
 .c-dropzone__remove-icon {
   color: $warning-color;
+
+  &:hover, &:active {
+    color: $warning-color-highlight;
+  }
 }

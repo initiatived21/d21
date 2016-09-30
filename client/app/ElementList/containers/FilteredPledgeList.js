@@ -4,7 +4,7 @@ import PledgeList from '../components/PledgeList'
 
 export function mapStateToProps(state, ownProps) {
   return ({
-    pledges: sortPledges(filterPledges(deNormalizePledges(state), ownProps.filter))
+    pledges: sortPledges(filterPledges(deNormalizePledges(state.entities), ownProps.filter))
   })
 }
 

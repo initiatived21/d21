@@ -7,12 +7,27 @@ import RootComponent from '../../lib/Base/components/RootComponent'
 import ActivePledgeForm from '../containers/ActivePledgeForm'
 import PledgeFormHelp from './PledgeFormHelp'
 import { BREAKPOINT_L } from '../../lib/config'
+import { setServerImage } from '../../Inputs/actions/imageInputActions'
 
 export default class NewPledge extends RootComponent {
   static propTypes = {
     form: PropTypes.object.isRequired,
     tags: PropTypes.array.isRequired,
     id: PropTypes.number,
+  }
+
+  constructor(props) {
+    super(props)
+    this.componentWillMount = this.componentWillMount.bind(this)
+  }
+
+  componentWillMount() {
+    super.componentWillMount()
+
+    const imageUrl = this.props.form.seedData.fields.image.image.url
+    if (imageUrl) {
+      store.dispatch(setServerImage('image', imageUrl))
+    }
   }
 
   render() {

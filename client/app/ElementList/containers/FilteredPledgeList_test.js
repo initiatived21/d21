@@ -3,37 +3,39 @@ import { mapStateToProps, mapDispatchToProps } from './FilteredPledgeList'
 describe('FilteredPledgeList', function() {
   describe('mapStateToProps', function() {
     const state = {
-      pledges: {
-        1: {
-          id: 1,
-          aasm_state: 'successful',
-          initiator: 3
+      entities: {
+        pledges: {
+          1: {
+            id: 1,
+            aasm_state: 'successful',
+            initiator: 3
+          },
+          5: {
+            id: 5,
+            aasm_state: 'active',
+            initiator: 3
+          },
+          7: {
+            id: 7,
+            aasm_state: 'active',
+            initiator: 2
+          }
         },
-        5: {
-          id: 5,
-          aasm_state: 'active',
-          initiator: 3
-        },
-        7: {
-          id: 7,
-          aasm_state: 'active',
-          initiator: 2
-        }
-      },
-      users: {
-        2: {
-          id: 2,
-          name: 'Carl'
-        },
-        3: {
-          id: 3,
-          name: 'Max'
+        users: {
+          2: {
+            id: 2,
+            name: 'Carl'
+          },
+          3: {
+            id: 3,
+            name: 'Max'
+          }
         }
       }
     }
 
     it('sets all pledges if no filter is given', function() {
-      mapStateToProps(state, {}).should.deep.equal({
+      mapStateToProps(state, {}).should.eql({
         pledges: [
           {
             id: 1,

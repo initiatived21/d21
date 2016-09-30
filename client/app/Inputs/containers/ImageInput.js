@@ -3,20 +3,18 @@ import concat from 'lodash/concat'
 import compact from 'lodash/compact'
 import { updateAction } from 'rform'
 
-import cropImage from '../../lib/image_processing/cropImage'
-import loadImageAction, { changeCropAction, cropImageAction, clearImageAction }
-  from '../actions/imageInputActions'
-import { IMAGE_STATE_CROPPED } from '../reducers/imageInputReducer'
+import cropImageFunction from '../../lib/image_processing/cropImage'
+import loadImage, { changeCrop, cropImage, clearImage } from '../actions/imageInputActions'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
   const formId = ownProps.formId
-  const attrs = state[ownProps.formId]
+  const attrs = state.rform[ownProps.formId]
 
   let errors = null
 
-  if (state[formId] && state[formId].errors) {
-    errors = state[formId].errors[ownProps.attribute] || []
+  if (state.rform[formId] && state.rform[formId].errors) {
+    errors = state.rform[formId].errors[ownProps.attribute] || []
   }
   errors = compact(concat(errors, ownProps.serverErrors))
 
@@ -32,12 +30,6 @@ const mapStateToProps = function(state, ownProps) {
     imageState, originalImage, originalImageWidth, originalImageHeight, filename,
     crop, croppedImageUrl
   } = state.imageInputs[ownProps.attribute]
-
-  if (!croppedImageUrl && attrs && attrs.image && attrs.image.image && attrs.image.image.url) {
-    // TODO: Does this work for submodels?
-    imageState = IMAGE_STATE_CROPPED
-    croppedImageUrl = attrs.image.image.url
-  }
 
   return {
     imageState,
@@ -59,19 +51,15 @@ const mapDispatchToProps = function(dispatch, ownProps) {
 
   return {
     handleChangeCrop: function(crop) {
-      dispatch(changeCropAction(id, crop))
+      dispatch(changeCrop(id, crop))
     },
     onDropFile(files) {
       const file = files[0]
-      dispatch(loadImageAction(id, file, aspectRatio))
+      dispatch(loadImage(id, file, aspectRatio))
     },
     onCancelClick(event) {
       event.preventDefault()
-      dispatch(clearImageAction(id))
-    },
-    onRemoveFileClick(event) {
-      event.preventDefault()
-      dispatch(clearImageAction(id))
+      dispatch(clearImage(id))
     },
     dispatch,
   }
@@ -88,18 +76,23 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     ...stateProps,
     ...dispatchProps,
     ...ownProps,
-
     handleFinishCrop: function() {
-      const croppedImageUrl = cropImage(
+      const croppedImageUrl = cropImageFunction(
         originalImage,
         crop,
         scaleToX,
         scaleToY
       )
-
-      dispatch(cropImageAction(id, croppedImageUrl, scaleToX, scaleToY))
+      dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
-    }
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '0'))
+    },
+    onRemoveFileClick(event) {
+      event.preventDefault()
+      dispatch(clearImage(id))
+      // Set hidden input field to remove image from server
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '1'))
+    },
   }
 }
 

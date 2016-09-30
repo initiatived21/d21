@@ -4,7 +4,7 @@ export default class BasePledgeFormObject extends FormObject {
   static get properties() {
     return [
       'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'image', 'description', 'tag_ids'
+      'image', 'remove_image', 'description', 'tag_ids'
     ]
   }
 

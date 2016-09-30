@@ -4,7 +4,7 @@ import SelectInputComponent from '../components/SelectInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
 
-  const attrs = state[ownProps.formId]
+  const attrs = state.rform[ownProps.formId]
   let value = ''
   if (attrs && ownProps.submodel && attrs[ownProps.submodel]) {
     value = attrs[ownProps.submodel][ownProps.attribute] || ''

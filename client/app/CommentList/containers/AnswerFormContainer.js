@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import merge from 'lodash/merge'
 import clone from 'lodash/clone'
 import AnswerForm from '../components/AnswerForm'
+import { addEntities } from '../../lib/actions/entityActions'
 
 const mapStateToProps = (state, ownProps) => {
   // We receive the put action with a placeholder, insert the ID there
@@ -11,11 +12,12 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     formData,
-    isSubmitting: state.isSubmitting.NewAnswerFormObject
+    isSubmitting: state.rform.isSubmitting.NewAnswerFormObject === true
   }
 }
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch) => ({
+  handleResponse: (_formId, data) => dispatch(addEntities(data))
 })
 
 export default connect(

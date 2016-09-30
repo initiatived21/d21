@@ -1,16 +1,18 @@
 import { connect } from 'react-redux'
 import I18n from 'i18n-js'
 import SignPledgeForm from '../components/SignPledgeForm'
-import { addFlashMessageAction } from '../../Flash/actions/flashActions'
-import signPledgeAction from '../actions/signPledgeAction'
+import { addFlashMessage } from '../../Flash/actions/flashActions'
+import { signPledge } from '../actions/sidebarActions'
+import { addEntities } from '../../lib/actions/entityActions'
 
 const mapStateToProps = (state, ownProps) => ({
-  isSubmitting: state.isSubmitting.NewSignatureFormObject || false,
-  isAlreadySigned: state.pledgesSigned.includes(ownProps.id)
+  isSubmitting: state.rform.isSubmitting.NewSignatureFormObject || false,
+  isAlreadySigned: state.signedPledges.includes(ownProps.id)
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatch
+  handleResponse: (_formId, data) => dispatch(addEntities(data)),
+  dispatch,
 })
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {
@@ -22,10 +24,10 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     ...dispatchProps,
     ...ownProps,
 
-    onResponse: function(response) {
+    afterResponse: function(response) {
       if (response.status === 'success') {
-        dispatch(addFlashMessageAction('success', I18n.t('SignPledgeForm.signed_message')))
-        dispatch(signPledgeAction(id))
+        dispatch(addFlashMessage('success', I18n.t('SignPledgeForm.signed_message')))
+        dispatch(signPledge(id))
       }
     }
   }

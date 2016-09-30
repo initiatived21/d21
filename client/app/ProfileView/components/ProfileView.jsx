@@ -6,6 +6,7 @@ import RootComponent from '../../lib/Base/components/RootComponent'
 import ProfileUserForm from '../containers/ProfileUserForm'
 import ProfilePledgeListContainer
   from '../containers/ProfilePledgeListContainer'
+import { setServerImage } from '../../Inputs/actions/imageInputActions'
 
 export default class ProfileView extends RootComponent {
   static propTypes = {
@@ -16,18 +17,34 @@ export default class ProfileView extends RootComponent {
     return ['pledges']
   }
 
+  constructor(props) {
+    super(props)
+    this.componentWillMount = this.componentWillMount.bind(this)
+  }
+
+  componentWillMount() {
+    super.componentWillMount()
+
+    const avatarUrl = this.props.editForm.seedData.fields.avatar.avatar.url
+    if (avatarUrl) {
+      store.dispatch(setServerImage('avatar', avatarUrl))
+    }
+  }
+
   render() {
+    console.log(this.props)
+
     return (
       <Provider store={store}>
         <div className="o-wrapper">
           <h1>{I18n.t('ProfileView.heading')}</h1>
 
-          <h2>Ihre Daten</h2>
+          <h2>{I18n.t('ProfileView.your_data')}</h2>
           <ProfileUserForm formConfig={this.props.editForm} />
 
           <hr className="c-ruler" />
 
-          <h2 id="your_pledges">Ihre Versprechen</h2>
+          <h2 id="your_pledges">{I18n.t('ProfileView.your_pledges')}</h2>
           <ProfilePledgeListContainer />
         </div>
       </Provider>

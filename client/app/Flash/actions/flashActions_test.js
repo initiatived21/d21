@@ -12,7 +12,7 @@ describe ('actions', function() {
       text
     }
 
-    actions.addFlashMessageAction(flashType, text).should.eql(expectedAction)
+    actions.addFlashMessage(flashType, text).should.eql(expectedAction)
   })
 
   it('creates a REMOVE_FLASH_MESSAGE action', function() {
@@ -22,6 +22,6 @@ describe ('actions', function() {
       id
     }
 
-    actions.removeFlashMessageAction(id).should.eql(expectedAction)
+    actions.removeFlashMessage(id).should.eql(expectedAction)
   })
 })

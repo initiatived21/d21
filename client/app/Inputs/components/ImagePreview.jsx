@@ -2,10 +2,6 @@ import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import EmptyPreview from './EmptyPreview'
-import {
-  IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
-  IMAGE_STATE_CROPPED
-} from '../reducers/imageInputReducer'
 
 export default class ImagePreview extends ChildComponent {
   static propTypes = {

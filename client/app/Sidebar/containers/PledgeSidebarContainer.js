@@ -3,17 +3,19 @@ import I18n from 'i18n-js'
 import PledgeSidebar from '../components/PledgeSidebar'
 
 const mapStateToProps = (state, ownProps) => {
-  const currentPledge = state.pledges[ownProps.pledge_id]
-  const currentUser = state.currentUser
+  const currentPledge = state.entities.pledges[ownProps.pledge_id]
+  const currentUserId = state.currentUser
 
   let userIsInitiator
-  if (currentUser && currentPledge) {
-    userIsInitiator = currentUser.id == currentPledge.user_id
+  if (currentUserId !== null && currentPledge) {
+    userIsInitiator = currentUserId === currentPledge.user_id
   } else {
     userIsInitiator = false
   }
 
   const renderReportForm = !userIsInitiator
+
+  const currentUser = state.entities.users[currentUserId]
 
   return {
     isPreview: ['initialized', 'requested'].includes(currentPledge.aasm_state),

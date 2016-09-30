@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import ChildComponent from '../../lib/Base/components/ChildComponent.js'
 import PledgeComment from './PledgeComment'
-import QuestionForm from './QuestionForm'
+import QuestionFormContainer from '../containers/QuestionFormContainer'
 
 export default class PledgeCommentList extends ChildComponent {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class PledgeCommentList extends ChildComponent {
 
   render() {
     const {
-      comments, forms, isSubmitting, userCanAskQuestions, userCanAnswer
+      comments, forms, userCanAskQuestions, userCanAnswer
     } = this.props
     const { questionForm, answerForm } = forms
 
@@ -39,7 +39,7 @@ export default class PledgeCommentList extends ChildComponent {
     let potentialQuestionForm
     if (userCanAskQuestions) {
       potentialQuestionForm =
-        <QuestionForm formData={questionForm} id={comments.length} isSubmitting={isSubmitting} />
+        <QuestionFormContainer formData={questionForm} id={comments.length} />
     }
 
     return (

@@ -8,10 +8,11 @@ export default class AnswerForm extends ChildComponent {
     id: PropTypes.number.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
     formData: PropTypes.object.isRequired,
+    handleResponse: PropTypes.func.isRequired,
   }
 
   render() {
-    const { formData, isSubmitting, id } = this.props
+    const { formData, isSubmitting, id, handleResponse } = this.props
     return (
       <Form
         className="c-comment__answer-form o-layout o-layout--small"
@@ -19,6 +20,7 @@ export default class AnswerForm extends ChildComponent {
         formObjectClass={NewAnswerFormObject}
         ajax={true}
         method='PUT'
+        handleResponse={handleResponse}
         {...formData}
       >
         <InputSet ariaLabelOnly
