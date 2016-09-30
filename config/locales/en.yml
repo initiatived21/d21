@@ -18,6 +18,7 @@ en:
     select_detail: Select detail
   ImageDropzone:
     dismiss_image: Dismiss image
+    previously_uploaded: Previously uploaded
   Initiator:
     title: Initiator
   InitiatorWithImage:
@@ -165,6 +166,8 @@ en:
     form_sent: Your data has been updated.
   ProfileView:
     heading: Your Profile
+    your_data: Your profile data
+    your_pledges: Your pledges
   QuestionForm:
     submit: Submit
   ReportPledgeForm:
@@ -945,6 +948,8 @@ en:
       team_html: 
       vision_heading: Vision
       vision_html: 
+      inspiration_heading: Inspiration
+      inspiration_html: 
     contact:
       header: Contact
       text_html: |-
@@ -978,6 +983,8 @@ en:
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
+      main:
+        text_html: 
     howitworks:
       header: 
       p1_html: 
@@ -1177,3 +1184,7 @@ en:
     pagination:
       last: 
       next: 
+  components:
+    PledgeTileFront:
+      of: of
+      signees: signees

@@ -1,5 +1,5 @@
 import React, { PropTypes  } from 'react'
-import { InputSet, Label } from 'rform'
+import { InputSet, Label, Errors } from 'rform'
 
 import ImageInput from '../../Inputs/wrappers/ImageInputWrapper'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
@@ -48,6 +48,7 @@ export default class UserForm extends ChildComponent {
             scaleToX={200}
             scaleToY={200}
           />
+          <Errors attribute='avatar' submodel={asSubmodel} />
         </div>
 
         <div className="o-layout u-mb">
