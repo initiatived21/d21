@@ -1,0 +1,14 @@
+p= t('.greeting', name: @recipient.try(:name))
+
+p
+  = @pledge.title
+  wurde gelöscht
+
+
+p
+  = t('application_mailer.farewell')
+  br
+  = t('application_mailer.signed')
+
+p
+  = t('application_mailer.impressum_html')
