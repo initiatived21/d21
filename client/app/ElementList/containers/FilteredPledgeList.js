@@ -1,11 +1,21 @@
 import { connect } from 'react-redux'
+import { take } from 'lodash'
 import deNormalizePledges from '../../lib/state/deNormalizePledges'
 import PledgeList from '../components/PledgeList'
 
 export function mapStateToProps(state, ownProps) {
   return ({
-    pledges: sortPledges(filterPledges(deNormalizePledges(state.entities), ownProps.filter))
+    pledges: limitPledges(sortPledges(filterPledges(deNormalizePledges(state.entities),
+      ownProps.filter)), ownProps.maxPledges)
   })
+}
+
+function limitPledges(pledges, limit) {
+  if (limit) {
+    return take(pledges, limit)
+  } else {
+    return pledges
+  }
 }
 
 function sortPledges(pledges) {

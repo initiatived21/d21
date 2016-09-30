@@ -12,7 +12,7 @@ section.c-pledge-list.c-base-layout__main
       h2.c-pledge-list__title
         span.fa.fa-thumbs-o-up>
         = t '.recommended'
-    == cell :pledge_list, @recommended_pledges, filter: :recommended,
+    == cell :pledge_list, @recommended_pledges, filter: :recommended, max_pledges: 6,
                                                 params: params
 
   div.o-wrapper
@@ -20,4 +20,5 @@ section.c-pledge-list.c-base-layout__main
       h2.c-pledge-list__title
         span.fa.fa-star>
         = t '.newest'
-    == cell :pledge_list, @newest_pledges, filter: :active, params: params
+    == cell :pledge_list, @newest_pledges, filter: :active, max_pledges: 12,
+                                           params: params
