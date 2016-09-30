@@ -10,3 +10,16 @@ active:
   description: activeDescription
   user_id: 1
   aasm_state: active
+
+failed:
+  id: 2
+  title: failedTitle
+  content: failedContent
+  amount: 10
+  who: failedWho
+  requirement: failedRequirement
+  location: failedLocation
+  deadline: 2000-01-01
+  description: failedDescription
+  user_id: 1
+  aasm_state: failed

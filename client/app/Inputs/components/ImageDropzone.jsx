@@ -1,25 +1,28 @@
 import React, { PropTypes } from 'react'
+import { Input } from 'rform'
 import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 
 export default class ImageDropzone extends ChildComponent {
   static propTypes = {
+    type: PropTypes.string.isRequired,
     onDropFile: PropTypes.func.isRequired,
     onRemoveFileClick: PropTypes.func.isRequired,
-    filename: PropTypes.string
+    filename: PropTypes.string,
+    isServerImage: PropTypes.bool,
   }
 
   render() {
-    const { onDropFile, onRemoveFileClick, filename } = this.props
+    const { type, onDropFile, onRemoveFileClick, filename, isServerImage } = this.props
 
     let modalElement
-    if (filename) {
+    if (filename || isServerImage) {
       modalElement = (
         <div className="c-dropzone c-dropzone--loaded">
           <div className="c-dropzone__inner">
             <p className="c-dropzone__filename">
-              {filename}
+              {filename || this.t('.previously_uploaded')}
             </p>
             <a href="#" onClick={onRemoveFileClick} className="c-dropzone__remove-button"
               title={this.t('.dismiss_image')}>
@@ -41,6 +44,11 @@ export default class ImageDropzone extends ChildComponent {
       )
     }
 
-    return modalElement
+    return (
+      <div>
+        {modalElement}
+        <Input type="hidden" attribute={`remove_${type}`} />
+      </div>
+    )
   }
 }

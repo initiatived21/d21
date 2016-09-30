@@ -7,7 +7,6 @@ import { updateAction } from 'rform'
 import cropImageFunction from '../../lib/image_processing/cropImage'
 import loadImage, { changeCrop, cropImage, clearImage }
   from '../actions/imageInputActions'
-import { IMAGE_STATE_CROPPED } from '../../lib/reducers/imageInput'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
@@ -34,12 +33,6 @@ const mapStateToProps = function(state, ownProps) {
     crop, croppedImageUrl
   } = state.imageInputs[ownProps.attribute]
 
-  if (!croppedImageUrl && attrs && attrs.image && attrs.image.image && attrs.image.image.url) {
-    // TODO: Does this work for submodels?
-    imageState = IMAGE_STATE_CROPPED
-    croppedImageUrl = attrs.image.image.url
-  }
-
   return {
     imageState,
     originalImage,
@@ -55,15 +48,7 @@ const mapStateToProps = function(state, ownProps) {
 }
 
 const mapDispatchToProps = function(dispatch, ownProps) {
-  const { attribute } = ownProps
-
-  const id = attribute  // attribute serves as id for the store
-
   return {
-    onRemoveFileClick(event) {
-      event.preventDefault()
-      dispatch(clearImage(id))
-    },
     dispatch,
   }
 }
@@ -119,12 +104,19 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
         scaleToX,
         scaleToY
       )
-
       dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
       dispatch(updateAction(formId, 'cropping', submodel, null))
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '0'))
       validate()
-    }
+    },
+
+    onRemoveFileClick(event) {
+      event.preventDefault()
+      dispatch(clearImage(id))
+      // Set hidden input field to remove image from server
+      dispatch(updateAction(formId, `remove_${attribute}`, submodel, '1'))
+    },
   }
 }
 

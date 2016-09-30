@@ -3,8 +3,8 @@ import { FormObject } from 'rform'
 export default class BasePledgeFormObject extends FormObject {
   static get properties() {
     return [
-      'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'image', 'description', 'tag_ids', 'cropping'
+      'title', 'content', 'amount', 'who', 'requirement', 'location',
+      'deadline', 'image', 'remove_image', 'description', 'tag_ids', 'cropping'
     ]
   }
 

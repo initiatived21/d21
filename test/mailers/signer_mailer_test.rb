@@ -33,6 +33,18 @@ describe SignerMailer do
     end
   end
 
+  describe '#new_pledge_update should work for pledges without signees' do
+    subject { SignerMailer.new_pledge_update(updates(:for_failed_pledge).id) }
+
+    it 'should send an email about the new pledge update' do
+      subject.must deliver_to 'redaktion@buntundverbindlich.de'
+      subject.must have_subject(
+        'Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen'
+      )
+      subject.must have_body_text '/pledges/2'
+    end
+  end
+
   describe '#pledge_successful' do
     subject { SignerMailer.pledge_successful(1) }
 

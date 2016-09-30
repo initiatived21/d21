@@ -478,6 +478,7 @@ en:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
+    notCropping?: selection must be confirmed
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -596,6 +597,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -697,6 +699,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -874,6 +877,7 @@ en:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -944,6 +948,8 @@ en:
   pages:
     about:
       heading: About us
+      inspiration_heading: Inspiration
+      inspiration_html: 
       team_heading: Team
       team_html: 
       vision_heading: Vision

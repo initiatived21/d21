@@ -17,7 +17,8 @@ class PledgeListCell < Cell::ViewModel
     {
       locale: I18n.locale,
       pledges: model,
-      filter: options[:filter]
+      filter: options[:filter],
+      maxPledges: options[:max_pledges]
     }
   end
 

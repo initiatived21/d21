@@ -4,16 +4,18 @@ import PledgeSidebar from '../components/PledgeSidebar'
 
 const mapStateToProps = (state, ownProps) => {
   const currentPledge = state.entities.pledges[ownProps.pledge_id]
-  const currentUser = state.currentUser
+  const currentUserId = state.currentUser
 
   let userIsInitiator
-  if (currentUser !== null && currentPledge) {
-    userIsInitiator = currentUser === currentPledge.user_id
+  if (currentUserId !== null && currentPledge) {
+    userIsInitiator = currentUserId === currentPledge.user_id
   } else {
     userIsInitiator = false
   }
 
   const renderReportForm = !userIsInitiator
+
+  const currentUser = state.entities.users[currentUserId]
 
   return {
     isPreview: ['initialized', 'requested'].includes(currentPledge.aasm_state),

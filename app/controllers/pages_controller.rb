@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
     recommended_query =
       Pledge.where(aasm_state: %w(active successful failed), recommended: true)
-            .order(updated_at: :desc).limit(3)
+            .order(updated_at: :desc).limit(6)
     @recommended_pledges = serialize(recommended_query)
   end
 

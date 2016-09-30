@@ -8,15 +8,15 @@ class SignerMailer < ApplicationMailer
   # Prepares sending multiple update notifications, one to each signer and one
   # to admin
   def new_pledge_update update_id
-    update = Update.find(update_id)
-    pledge = update.pledge
-    signatures = pledge.signatures.confirmed.all
+    @update = Update.find(update_id)
+    @pledge = @update.pledge
+    signatures = @pledge.signatures.confirmed.all
 
     signatures.each do |recipient|
-      single_new_pledge_update recipient, update, pledge
+      single_new_pledge_update recipient
     end
 
-    # send to admin as well    
+    # send to admin as well
     mail(subject: t('.subject'), to: SYSTEM_MAIL).deliver
   end
 
@@ -36,10 +36,8 @@ class SignerMailer < ApplicationMailer
 
   private
 
-  def single_new_pledge_update recipient, update, pledge
+  def single_new_pledge_update recipient
     @recipient = recipient
-    @update = update
-    @pledge = pledge
 
     mail(subject: t('.subject'), to: @recipient.email).deliver
   end

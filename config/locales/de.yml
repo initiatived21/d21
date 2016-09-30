@@ -473,6 +473,7 @@ de:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
+    notCropping?: Auswahl muss bestätigt werden
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -591,6 +592,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -692,6 +694,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -869,6 +872,7 @@ de:
           name: 
       user:
         edit:
+          avatar: 
           email: 
           name: 
           organization: 
@@ -939,6 +943,11 @@ de:
   pages:
     about:
       heading: Über uns
+      inspiration_heading: Inspiration
+      inspiration_html: |-
+        <p class="c-text-block">
+        Die Idee, das Prinzip „Ich mache X, wenn Du Y machst" mit sozialen und gesellschaftspolitischen Themen zu verknüpfen, gab es 2005 in England mit der PledgeBank. Dieses Prinzip war der kreative Ausgangspunkt für bunt und verbindlich, um das Thema Integration nachhaltig zu verankern, Ehrenämtler zu mobilisieren und Unternehmen zu motivieren, ihr Engagement zielgerichtet für Integration von geflüchteten Menschen einzubringen.
+        </p>
       team_heading: Team
       team_html: |-
         <p class="c-text-block">

@@ -6,6 +6,7 @@ export const IMAGE_STATE_NONE = 0
 export const IMAGE_STATE_LOADING = 1
 export const IMAGE_STATE_LOADED = 2
 export const IMAGE_STATE_CROPPED = 3
+export const IMAGE_STATE_SERVER = 4
 
 export default function imageInputs(state={}, action) {
   let originalImage, aspect, crop
@@ -47,6 +48,13 @@ export default function imageInputs(state={}, action) {
       imageState: IMAGE_STATE_CROPPED,
       croppedImageUrl: action.croppedImageUrl,
       filename: state.filename,
+    }
+
+  case types.SET_SERVER_IMAGE:
+    return {
+      id: state.id,
+      imageState: IMAGE_STATE_SERVER,
+      croppedImageUrl: action.imageUrl,
     }
 
   case types.CLEAR_IMAGE:

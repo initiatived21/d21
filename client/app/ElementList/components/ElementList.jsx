@@ -8,7 +8,8 @@ import FilteredPledgeList    from '../containers/FilteredPledgeList.js'
 export default class ElementList extends RootComponent {
   static propTypes = {
     pledges: PropTypes.array.isRequired,
-    filter:  PropTypes.string.isRequired
+    filter:  PropTypes.string.isRequired,
+    maxPledges: PropTypes.number,
   };
 
   get objectsToForwardToState() {
@@ -16,9 +17,11 @@ export default class ElementList extends RootComponent {
   }
 
   render() {
+    const { filter, maxPledges } = this.props
+
     return(
       <Provider store={store}>
-        <FilteredPledgeList filter={this.props.filter} />
+        <FilteredPledgeList filter={filter} maxPledges={maxPledges} />
       </Provider>
     )
   }
