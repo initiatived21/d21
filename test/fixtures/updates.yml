@@ -2,3 +2,8 @@ basic:
   id: 1
   content: basicUpdateContent
   pledge_id: 1
+
+for_failed_pledge:
+  id: 2
+  content: failedUpdateContent
+  pledge_id: 2
