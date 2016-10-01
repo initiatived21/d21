@@ -17,4 +17,4 @@ translations:
       "*.PreviewUnconfirmed.*", "*.PreviewRequested.*", "*.UpdateSentMessage.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
       "*.OffCanvasMenu.*", "*.SocialMediaIcons.*",
-      "*.rform.*", "*.paths.*", "*.tags.*", "*.errors.*"]
+      "*.rform.*", "*.paths.*", "*.tags.*", "de.errors.*", "en.errors.*"]

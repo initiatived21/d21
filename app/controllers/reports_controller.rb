@@ -6,6 +6,8 @@ class ReportsController < ApplicationController
       pledge.save!
     end
     flash[:success] = t('.success')
-    redirect_to :back
+    redirect_back(
+      fallback_location: pledge_path(locale: I18n.locale, id: params[:id])
+    )
   end
 end

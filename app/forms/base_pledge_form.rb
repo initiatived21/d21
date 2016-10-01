@@ -17,7 +17,7 @@ class BasePledgeForm < Reform::Form
   validation :default do
     configure { config.messages = :i18n }
 
-    required(:title).filled(max_size?: 85)
+    required(:title).filled(max_size?: 80)
     required(:content).filled(max_size?: 80)
     required(:amount).filled(:int?, gt?: 0)
     required(:who).filled(max_size?: 65)

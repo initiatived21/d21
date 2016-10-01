@@ -15,7 +15,7 @@ export default class BasePledgeFormObject extends FormObject {
   validation() {
     this.configure({'notCropping?': (_validatable, cropping) => !cropping})
 
-    this.required('title').filled({'max_size?': 85})
+    this.required('title').filled({'max_size?': 80})
     this.required('content').filled({'max_size?': 80})
     this.required('amount').filled('int?', {'gt?': 0})
     this.required('who').filled({'max_size?': 65})
