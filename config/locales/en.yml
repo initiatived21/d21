@@ -81,7 +81,7 @@ en:
     preview: Preview pledge
     preview_explanation: During the next step you can verify your pledge before submitting it.
     promise:
-      part1: "“We promise"
+      part1: "“We promise to"
       part3: 
       part4: if
       part8: ".”"
@@ -118,6 +118,8 @@ en:
       one: day
       other: days
     still: still
+  PledgeText:
+    sentence: We promise to %{content} if %{amount} %{who} %{requirement}.
   PledgeTileBack:
     show_pledge: show pledge
   PledgeTileFront:
@@ -478,7 +480,7 @@ en:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
-    notCropping?: selection must be confirmed
+    notCropping?: detail must be selected
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -496,7 +498,6 @@ en:
     true?: must be true
     type?: must be %{type}
     unique?: must not have been already used
-    notCropping?: selection must be confirmed
   first_paragraph: 
   flash:
     actions:
@@ -954,8 +955,6 @@ en:
       team_html: 
       vision_heading: Vision
       vision_html: 
-      inspiration_heading: Inspiration
-      inspiration_html: 
     contact:
       header: Contact
       text_html: |-
@@ -983,14 +982,14 @@ en:
       question7: How can I contact my supporters?
       question8: 
     home:
+      main:
+        text_html: 
       masthead:
         text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
         title: Headline Info
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
-      main:
-        text_html: 
     howitworks:
       header: 
       p1_html: 
@@ -1047,7 +1046,7 @@ en:
         placeholder: 10
       content:
         label: what?
-        placeholder: to give a refugee family a home
+        placeholder: give a refugee family a home
       deadline:
         label: Can be signed until
         placeholder: "*Please select date"
@@ -1134,6 +1133,9 @@ en:
       greeting: 
       second_paragraph: 
       subject: 
+    pledge_deleted:
+      greeting: 
+      subject: 
     pledge_failed:
       greeting: 
       link: 
@@ -1190,7 +1192,3 @@ en:
     pagination:
       last: 
       next: 
-  components:
-    PledgeTileFront:
-      of: of
-      signees: signees
