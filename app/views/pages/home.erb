@@ -11,8 +11,8 @@
   </div>
 </section>
 
-<section class="c-pledge-list c-base-layout__main">
-  <div class="o-wrapper u-mt u-mb">
+<div class="c-base-layout__main">
+  <section class="c-pledge-list o-wrapper u-mt u-mb">
     <header class="c-pledge-list__header">
       <h2 class="c-pledge-list__title">
         <span class="fa fa-thumbs-o-up">
@@ -23,9 +23,9 @@
 
     <%= cell :pledge_list, @recommended_pledges, filter: :recommended, max_pledges: 6,
                                                  params: params %>
-  </div>
+  </section>
 
-  <div class="o-wrapper">
+  <section class="c-pledge-list o-wrapper u-mb-large">
     <header class="c-pledge-list__header">
       <h2 class="c-pledge-list__title">
         <span class="fa fa-star">
@@ -36,20 +36,26 @@
 
     <%= cell :pledge_list, @newest_pledges, filter: :active, max_pledges: 12,
                                             params: params %>
-  </div>
+
+    <footer class="c-pledge-list__footer">
+      <a class="o-btn c-pledge-list__button c-btn c-btn--primary"
+         href="<%= pledges_path(locale: I18n.locale) %>">
+        <span class="fa fa-check"></span>
+        <%= t('.more_pledges') %>
+      </a>
+    </footer>
+  </section>
 
   <div class="o-wrapper">
-    <h1>Testüberschrift</h1>
     <div class="o-layout">
       <div class="o-layout__item u-1/2@m u-mb@s">
-        <h2>Testüberschrift</h2>
-        <%= t('.main.text_html') %>
+        <%= t('.main_text_html') %>
       </div><!--
       --><div class="o-layout__item u-1/2@m">
         <div class="c-responsive-video">
           <iframe
             class="c-responsive-video__iframe"
-            src="https://player.vimeo.com/video/66969939"
+            src="https://player.vimeo.com/video/184976874"
             width="1600" height="900" frameborder="0"
             webkitallowfullscreen mozallowfullscreen allowfullscreen>
           </iframe>
@@ -57,4 +63,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>

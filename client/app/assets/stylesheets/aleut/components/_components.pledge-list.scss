@@ -32,3 +32,14 @@
     margin-right: 0.15em;
   }
 }
+
+.c-pledge-list__footer {
+  text-align: center;
+}
+
+.c-pledge-list__footer .c-pledge-list__button {
+  @include media-query(m) {
+    @include font-size(24px, 1.5);
+    height: 58px;
+  }
+}
