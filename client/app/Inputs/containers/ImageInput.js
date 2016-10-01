@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import concat from 'lodash/concat'
 import compact from 'lodash/compact'
-import merge from 'lodash/merge'
 import { updateAction } from 'rform'
 
 import cropImageFunction from '../../lib/image_processing/cropImage'
@@ -47,7 +46,7 @@ const mapStateToProps = function(state, ownProps) {
   }
 }
 
-const mapDispatchToProps = function(dispatch, ownProps) {
+const mapDispatchToProps = function(dispatch) {
   return {
     dispatch,
   }

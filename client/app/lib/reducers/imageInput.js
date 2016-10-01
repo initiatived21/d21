@@ -23,7 +23,6 @@ export default function imageInputs(state={}, action) {
     originalImage = action.image
     aspect = action.aspect
     crop = calculateDefaultCrop(originalImage.width, originalImage.height, aspect)
-
     return {
       id: state.id,
       originalImage,
@@ -33,8 +32,6 @@ export default function imageInputs(state={}, action) {
       crop,
       imageState: IMAGE_STATE_LOADED,
     }
-
-    return newState
 
   case types.LOAD_IMAGE_FAILURE:
     return assign({}, state, { imageState: IMAGE_STATE_NONE })

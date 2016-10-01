@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import EmptyPreview from './EmptyPreview'
 
