@@ -81,6 +81,12 @@ class Pledge < ApplicationRecord
     active? || successful? || failed?
   end
 
+  def pledge_text
+    I18n.t('misc.pledge_sentence',
+           content: content, amount: amount, who: who, requirement: requirement,
+           locale: locale)
+  end
+
   # Search
   include PgSearch
   multisearchable(

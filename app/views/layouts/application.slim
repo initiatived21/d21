@@ -3,6 +3,18 @@ html lang=I18n.locale
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
+
+    - if controller_name == 'pledges' && action_name == 'show'
+      meta property="og:url" content="#{request.original_url}"
+      meta property="og:type" content="article"
+      meta property="og:title" content="#{@pledge.title}"
+      meta property="og:description" content="#{@pledge.pledge_text}"
+      - if @pledge.image.present?
+        meta property="og:image" content="#{request.base_url}#{@pledge.image}"
+    - else
+      meta property="og:url" content="#{request.original_url}"
+      meta property="og:title" content="bunt und verbindlich"
+
     title
       | bunt und verbindlich
 

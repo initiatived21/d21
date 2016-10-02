@@ -946,6 +946,8 @@ en:
         sitemap_link: Sitemap
         terms_link: Terms
         twitter_title: Bunt und Verbindlich on Twitter
+  misc:
+    pledge_sentence: We promise to %{content} if %{amount} %{who} %{requirement}.
   pages:
     about:
       heading: About us
@@ -982,11 +984,11 @@ en:
       question7: How can I contact my supporters?
       question8: 
     home:
-      main:
-        text_html: 
+      main_text_html: 
       masthead:
         text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
         title: Headline Info
+      more_pledges: more success stories
       newest: Newest pledges
       recommended: Recommended by the editors
       successful: Successful promises
@@ -1164,9 +1166,6 @@ en:
       second_paragraph: 
       subject: 
       third_paragraph: 
-    pledge_deleted:
-      greeting: 
-      subject: 
   tags:
     names:
       accomodation: Accomodation
@@ -1195,5 +1194,3 @@ en:
     pagination:
       last: 
       next: 
-  PledgeText:
-    sentence: We promise to %{content} if %{amount} %{who} %{requirement}.

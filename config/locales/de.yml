@@ -941,6 +941,8 @@ de:
         sitemap_link: Sitemap
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
+  misc:
+    pledge_sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
   pages:
     about:
       heading: Über uns
@@ -1023,14 +1025,14 @@ de:
       question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
-      main:
-        text_html: |-
-          <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
+      main_text_html: |-
+        <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
 
-          <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
+        <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
+      more_pledges: mehr Erfolgsgeschichten
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
@@ -1232,9 +1234,6 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
-    pledge_deleted:
-      greeting: 
-      subject: 
   tags:
     names:
       accomodation: Unterbringung
@@ -1263,5 +1262,3 @@ de:
     pagination:
       last: 
       next: 
-  PledgeText:
-    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
