@@ -22,7 +22,7 @@ function filterResults(pledges, resultIds) {
   })
 }
 
-const mapDispatchToProps = function(dispatch, ownProps) {
+const mapDispatchToProps = function(dispatch) {
   return {
     dispatch
   }

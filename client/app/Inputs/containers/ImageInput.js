@@ -4,7 +4,8 @@ import compact from 'lodash/compact'
 import { updateAction } from 'rform'
 
 import cropImageFunction from '../../lib/image_processing/cropImage'
-import loadImage, { changeCrop, cropImage, clearImage } from '../actions/imageInputActions'
+import loadImage, { changeCrop, cropImage, clearImage }
+  from '../actions/imageInputActions'
 import ImageInputComponent from '../components/ImageInputComponent'
 
 const mapStateToProps = function(state, ownProps) {
@@ -41,41 +42,60 @@ const mapStateToProps = function(state, ownProps) {
     croppedImageUrl,
     errors,
     value,
+    attrs,
   }
 }
 
-const mapDispatchToProps = function(dispatch, ownProps) {
-  const { attribute, aspectRatio } = ownProps
-
-  const id = attribute  // attribute serves as id for the store
-
+const mapDispatchToProps = function(dispatch) {
   return {
-    handleChangeCrop: function(crop) {
-      dispatch(changeCrop(id, crop))
-    },
-    onDropFile(files) {
-      const file = files[0]
-      dispatch(loadImage(id, file, aspectRatio))
-    },
-    onCancelClick(event) {
-      event.preventDefault()
-      dispatch(clearImage(id))
-    },
     dispatch,
   }
 }
 
 const mergeProps = function(stateProps, dispatchProps, ownProps) {
-  const { originalImage, crop } = stateProps
-  const { formId, attribute, submodel, scaleToX, scaleToY } = ownProps
+  const { originalImage, crop, attrs } = stateProps
+  const {
+    formId, attribute, submodel, scaleToX, scaleToY, aspectRatio,
+    formObjectClass
+  } = ownProps
   const { dispatch } = dispatchProps
 
   const id = attribute  // attribute serves as id for the store
+
+  const validate = () => {
+    const formObject = new formObjectClass(stateProps.attrs)
+    formObject.validate(attribute)
+    const errorKey = formObject.errorKey(attribute, submodel)
+    const errors = formObject.attributes.errors[errorKey]
+
+    if (!errors && (!attrs.errors || !attrs.errors[errorKey])) return
+    dispatchProps.dispatch(updateAction(formId, errorKey, 'errors', errors))
+  }
+
 
   return {
     ...stateProps,
     ...dispatchProps,
     ...ownProps,
+
+    onDropFile(files) {
+      const file = files[0]
+      dispatch(loadImage(id, file, aspectRatio))
+      dispatch(updateAction(formId, 'cropping', submodel, attribute))
+    },
+
+    handleChangeCrop: function(crop) {
+      dispatch(changeCrop(id, crop))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
+    },
+
+    onCancelClick(event) {
+      event.preventDefault()
+      dispatch(clearImage(id))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
+      validate()
+    },
+
     handleFinishCrop: function() {
       const croppedImageUrl = cropImageFunction(
         originalImage,
@@ -85,8 +105,11 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
       )
       dispatch(cropImage(id, croppedImageUrl, scaleToX, scaleToY))
       dispatch(updateAction(formId, attribute, submodel, croppedImageUrl))
+      dispatch(updateAction(formId, 'cropping', submodel, null))
       dispatch(updateAction(formId, `remove_${attribute}`, submodel, '0'))
+      validate()
     },
+
     onRemoveFileClick(event) {
       event.preventDefault()
       dispatch(clearImage(id))

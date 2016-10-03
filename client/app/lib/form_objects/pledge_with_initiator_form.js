@@ -4,7 +4,7 @@ export default class PledgeWithInitiatorFormObject extends FormObject {
   static get properties() {
     return [
       'title', 'content', 'amount', 'who', 'requirement', 'location', 'deadline',
-      'image', 'description', 'tag_ids'
+      'image', 'description', 'tag_ids', 'cropping'
     ]
   }
 
@@ -20,12 +20,14 @@ export default class PledgeWithInitiatorFormObject extends FormObject {
     return {
       initiator: [
         'name', 'organization', 'email', 'password', 'password_confirmation',
-        'avatar'
+        'avatar', 'cropping'
       ]
     }
   }
 
   validation() {
+    this.configure({'notCropping?': (_validatable, cropping) => !cropping})
+
     this.required('title').filled({'max_size?': 85})
     this.required('content').filled({'max_size?': 80})
     this.required('amount').filled('int?', {'gt?': 0})
@@ -35,6 +37,8 @@ export default class PledgeWithInitiatorFormObject extends FormObject {
     this.required('deadline').filled({
       'gt?': new Date().toISOString().substring(0,10)
     })
+    this.maybe('image', {if: !!this.attributes.cropping})
+      .filled({'notCropping?': this.attributes.cropping})
 
     this.inSubmodel('initiator', () => {
       this.required('name').filled()
@@ -43,6 +47,8 @@ export default class PledgeWithInitiatorFormObject extends FormObject {
       this.required('password_confirmation').filled({
         'matches?': this.attributes.initiator.password
       })
+      this.maybe('avatar', {if: !!this.attributes.initiator.cropping})
+        .filled({'notCropping?': this.attributes.initiator.cropping})
     })
   }
 }
