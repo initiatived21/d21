@@ -5,6 +5,7 @@ FactoryGirl.define do
     name { FFaker::Internet.user_name }
     organization { maybe FFaker::Company.name }
     email { FFaker::Internet.email }
+    locale { I18n.available_locales.sample }
     password 'password'
     confirmed_at { Time.zone.now }
   end

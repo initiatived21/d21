@@ -18,6 +18,7 @@ export default class PledgeTile extends ChildComponent {
       requirement: PropTypes.string.isRequired,
       deadline: PropTypes.string.isRequired,
       signatures_count: PropTypes.number.isRequired,
+      locale: PropTypes.string.isRequired,
       initiator: PropTypes.shape({
         name: PropTypes.string.isRequired,
         avatar: PropTypes.shape({
@@ -63,6 +64,7 @@ export default class PledgeTile extends ChildComponent {
                 signatures_total={pledge.amount}
                 path={pledgePath}
                 tags={pledge.tags}
+                locale={pledge.locale}
               />
             </div>
             <div className="o-flipper__back">
@@ -75,6 +77,7 @@ export default class PledgeTile extends ChildComponent {
                 who={pledge.who}
                 requirement={pledge.requirement}
                 path={pledgePath}
+                locale={pledge.locale}
               />
             </div>
           </article>

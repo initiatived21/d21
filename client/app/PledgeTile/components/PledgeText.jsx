@@ -6,16 +6,17 @@ export default class PledgeText extends ChildComponent {
     content:     PropTypes.string.isRequired,
     amount:      PropTypes.number.isRequired,
     who:         PropTypes.string.isRequired,
-    requirement: PropTypes.string.isRequired
-  };
+    requirement: PropTypes.string.isRequired,
+    locale:      PropTypes.string.isRequired,
+  }
 
   render() {
-    const { content, amount, who, requirement } = this.props
+    const { content, amount, who, requirement, locale } = this.props
 
     return (
       <p className="c-pledge-tile__text">
         <q>
-          Wir versprechen, {content}, wenn {amount} {who} {requirement}.
+          {this.t('.sentence', {content, amount, who, requirement, locale})}
         </q>
       </p>
     )

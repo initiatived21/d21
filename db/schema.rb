@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913123312) do
+ActiveRecord::Schema.define(version: 20160930114829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,21 +61,22 @@ ActiveRecord::Schema.define(version: 20160913123312) do
   end
 
   create_table "pledges", force: :cascade do |t|
-    t.string   "content",                      null: false
-    t.integer  "amount",                       null: false
-    t.string   "who",                          null: false
-    t.string   "requirement",                  null: false
+    t.string   "content",                                null: false
+    t.integer  "amount",                                 null: false
+    t.string   "who",                                    null: false
+    t.string   "requirement",                            null: false
     t.string   "location"
-    t.date     "deadline",                     null: false
+    t.date     "deadline",                               null: false
     t.text     "description"
-    t.string   "aasm_state",                   null: false
-    t.integer  "user_id",                      null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "aasm_state",                             null: false
+    t.integer  "user_id",                                null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "image"
-    t.string   "title",                        null: false
-    t.integer  "report_count", default: 0,     null: false
-    t.boolean  "recommended",  default: false, null: false
+    t.string   "title",                                  null: false
+    t.integer  "report_count",           default: 0,     null: false
+    t.boolean  "recommended",            default: false, null: false
+    t.string   "locale",       limit: 2,                 null: false
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 
@@ -106,6 +107,7 @@ ActiveRecord::Schema.define(version: 20160913123312) do
     t.string   "aasm_state",        limit: 32
     t.boolean  "confirmed",                    default: false
     t.string   "confirmation_hash"
+    t.string   "locale",            limit: 2,                  null: false
     t.index ["pledge_id", "confirmed"], name: "index_signatures_on_pledge_id_and_confirmed", using: :btree
     t.index ["pledge_id"], name: "index_signatures_on_pledge_id", using: :btree
   end
@@ -125,16 +127,16 @@ ActiveRecord::Schema.define(version: 20160913123312) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                                null: false
+    t.string   "name",                                          null: false
     t.string   "organization"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.string   "email",                            default: "", null: false
+    t.string   "encrypted_password",               default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                    default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -143,6 +145,7 @@ ActiveRecord::Schema.define(version: 20160913123312) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "avatar"
+    t.string   "locale",                 limit: 2,              null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

@@ -12,6 +12,7 @@ class BasePledgeForm < Reform::Form
   property :remove_image
   property :description
   property :tag_ids
+  property :locale
 
   # Validations
   validation :default do

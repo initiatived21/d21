@@ -8,6 +8,7 @@ FactoryGirl.define do
     contact_person { maybe true }
     anonymous { maybe true }
     reason { maybe FFaker::Lorem.sentence }
+    locale { I18n.available_locales.sample }
     confirmed true
 
     pledge

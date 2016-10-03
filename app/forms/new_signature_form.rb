@@ -8,7 +8,8 @@ class NewSignatureForm < Reform::Form
   property :organization
   property :contact_person
 
-  property :confirmation_hash
+  property :confirmation_hash # ?
+  property :locale
 
   # Validation
 

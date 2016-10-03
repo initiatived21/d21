@@ -10,6 +10,7 @@ active:
   description: activeDescription
   user_id: 1
   aasm_state: active
+  locale: de
 
 failed:
   id: 2
@@ -23,3 +24,4 @@ failed:
   description: failedDescription
   user_id: 1
   aasm_state: failed
+  locale: de

@@ -1164,6 +1164,9 @@ en:
       second_paragraph: 
       subject: 
       third_paragraph: 
+    pledge_deleted:
+      greeting: 
+      subject: 
   tags:
     names:
       accomodation: Accomodation
@@ -1192,3 +1195,5 @@ en:
     pagination:
       last: 
       next: 
+  PledgeText:
+    sentence: We promise to %{content} if %{amount} %{who} %{requirement}.

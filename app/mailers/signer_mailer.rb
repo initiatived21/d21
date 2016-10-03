@@ -2,7 +2,9 @@
 class SignerMailer < ApplicationMailer
   def signature_created signature_id
     @signature = Signature.find(signature_id)
-    mail(subject: t('.subject'), to: @signature.email)
+    I18n.with_locale(@signature.locale) do
+      mail(subject: t('.subject'), to: @signature.email)
+    end
   end
 
   # Prepares sending multiple update notifications, one to each signer and one
@@ -13,7 +15,9 @@ class SignerMailer < ApplicationMailer
     signatures = @pledge.signatures.confirmed.all
 
     signatures.each do |recipient|
-      single_new_pledge_update recipient
+      I18n.with_locale(recipient.locale) do
+        single_new_pledge_update recipient
+      end
     end
 
     # send to admin as well
@@ -23,14 +27,18 @@ class SignerMailer < ApplicationMailer
   def pledge_successful pledge_id
     pledge = Pledge.find(pledge_id)
     pledge.signatures.confirmed.all.each do |recipient|
-      single_pledge_successful recipient, pledge
+      I18n.with_locale(recipient.locale) do
+        single_pledge_successful recipient, pledge
+      end
     end
   end
 
   def pledge_failed pledge_id
     pledge = Pledge.find(pledge_id)
     pledge.signatures.confirmed.all.each do |recipient|
-      single_pledge_failed recipient, pledge
+      I18n.with_locale(recipient.locale) do
+        single_pledge_failed recipient, pledge
+      end
     end
   end
 
