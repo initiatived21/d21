@@ -941,6 +941,8 @@ de:
         sitemap_link: Sitemap
         terms_link: AGB
         twitter_title: Bunt und Verbindlich auf Twitter
+  misc:
+    pledge_sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
   pages:
     about:
       heading: Über uns
@@ -989,32 +991,51 @@ de:
         Fax +49 30 5268722-60<br />
         Mail: <a href="mailto:redaktion@buntundverbindlich.de">redaktion@buntundverbindlich.de</a>
     faq:
-      answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
+      answer1: |-
+        <p><em>bunt und verbindlich</em> ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von <em>bunt und verbindlich</em> ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.</p>
+
+        <p>Die Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:
+        Unternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.</p>
+
+        <p>Hier setzt <em>bunt und verbindlich</em> an:</p>
+
+        <ul>
+        <li>Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern.</li>
+        <li>Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen.</li>
+        <li>Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.</li>
+        </ul>
+
+        <p>Mit <em>bunt und verbindlich</em> wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken.</p>
       answer2: |-
-        bunt und verbindlich hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Ich mache X, wenn du mir mit Y hilfst.“
+        <p><em>bunt und verbindlich</em> hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Ich mache X, wenn du mir mit Y hilfst.“</p>
 
-        Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“
+        <p>Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“</p>
 
-        Bei jedem Versprechen wird vor der Veröffentlichung überprüft, ob die Inhalte unseren Nutzungsbedingungen entsprechen.
-        Das veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit für Ihr eigenes Versprechen nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.
+        <p>Bei jedem Versprechen wird vor der Veröffentlichung überprüft, ob die Inhalte unseren Nutzungsbedingungen entsprechen.
+        Das veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit für Ihr eigenes Versprechen nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.</p>
 
-        Ist das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.
+        <p>Ist das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.</p>
 
-        Erfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren.
+        <p>Erfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren.</p>
       answer3: |-
-        Sie registrieren sich, wenn Sie ein Versprechen einstellen.
-        Als Unterzeichner müssen Sie sich nicht registrieren.
-      answer4: Ja, die Nutzung ist kostenfrei.
+        <p>Sie registrieren sich, wenn Sie ein Versprechen einstellen.
+        Als Unterzeichner müssen Sie sich nicht registrieren.</p>
+      answer4: "<p>Ja, die Nutzung ist kostenfrei.</p>"
       answer5: |-
-        Jedes Versprechen wird von der Redaktion innerhalb von 1-3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten nicht zu veröffentlichen.
-        Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.
-      answer6: Klicken Sie unten im Versprechensformular auf den "Zur Vorschau" Button. Wenn Ihnen die Vorschau zusagt, und Sie das Versprechen nicht weiter bearbeiten wollen, können Sie oben rechts das Versprechen an die Redaktion verschicken. Bitte beachten Sie, dass danach eine Änderung am Versprechen nicht mehr möglich ist.
-      answer7: "Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen. \n\nDas ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.\n\nBei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen."
-      answer8: |-
-        Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
+        <p>Jedes Versprechen wird von der Redaktion innerhalb von 1–3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten nicht zu veröffentlichen.
+        Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.</p>
+      answer6: "<p>Klicken Sie unten im Versprechensformular auf den „Zur Vorschau“ Button. Wenn Ihnen die Vorschau zusagt, und Sie das Versprechen nicht weiter bearbeiten wollen, können Sie oben rechts das Versprechen an die Redaktion verschicken. Bitte beachten Sie, dass danach eine Änderung am Versprechen nicht mehr möglich ist.</p>"
+      answer7: |-
+        <p>Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen.</p>
 
-        Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
-      question1: Was ist *bunt und verbindlich?*
+        <p>Das ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.</p>
+
+        <p>Bei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen.</p>
+      answer8: |-
+        <p>Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.</p>
+
+        <p>Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.</p>
+      question1: Was ist <em>bunt und verbindlich?</em>
       question2: Wie funktioniert das?
       question3: Wie kann ich mich registrieren?
       question4: Ist die Nutzung kostenfei?
@@ -1023,14 +1044,14 @@ de:
       question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
-      main:
-        text_html: |-
-          <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
+      main_text_html: |-
+        <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
 
-          <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
+        <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
+      more_pledges: mehr Erfolgsgeschichten
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
@@ -1232,9 +1253,6 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
-    pledge_deleted:
-      greeting: 
-      subject: 
   tags:
     names:
       accomodation: Unterbringung
@@ -1263,5 +1281,3 @@ de:
     pagination:
       last: 
       next: 
-  PledgeText:
-    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
