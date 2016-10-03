@@ -1,6 +1,6 @@
 translations:
   - file: "client/vendor/translations.js"
-    only: ["*.layouts.*", "*.pages.*", "*.LoggedIn.*", "*.PledgeForm.*",
+    only: ["*.LoggedIn.*", "*.PledgeForm.*",
       "*.PledgeFormHelp.*", "*.PledgeQuote.*", "*.PledgeFeatures.*",
       "*.ImageInputComponent.*", "*.EmptyPreview.*", "*.ImageCrop.*", "*.ImageDropzone.*",
       "*.PledgeUpdateList.*",
@@ -17,4 +17,4 @@ translations:
       "*.PreviewUnconfirmed.*", "*.PreviewRequested.*", "*.UpdateSentMessage.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
       "*.OffCanvasMenu.*", "*.SocialMediaIcons.*", "*.PledgeText.*",
-      "*.rform.*", "*.paths.*", "*.tags.*", "de.errors.*", "en.errors.*"]
+      "*.rform.*", "*.tags.*", "de.errors.*", "en.errors.*"]
