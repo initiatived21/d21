@@ -16,5 +16,5 @@ translations:
       "*.PledgeTileFront.*", "*.PreviewExplanation.*", "*.PreviewDraft.*",
       "*.PreviewUnconfirmed.*", "*.PreviewRequested.*", "*.UpdateSentMessage.*",
       "*.PrimaryNav.*", "*.SecondaryNav.*", "*.SearchBar.*", "*.HeaderLogo.*",
-      "*.OffCanvasMenu.*", "*.SocialMediaIcons.*",
-      "*.rform.*", "*.paths.*", "*.tags.*", "*.errors.*"]
+      "*.OffCanvasMenu.*", "*.SocialMediaIcons.*", "*.PledgeText.*",
+      "*.rform.*", "*.paths.*", "*.tags.*", "de.errors.*", "en.errors.*"]

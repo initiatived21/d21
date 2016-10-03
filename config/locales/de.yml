@@ -118,6 +118,8 @@ de:
       one: Tag
       other: Tage
     still: noch
+  PledgeText:
+    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
   PledgeTileBack:
     show_pledge: zum Versprechen
   PledgeTileFront:
@@ -473,7 +475,7 @@ de:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
-    notCropping?: Auswahl muss bestätigt werden
+    notCropping?: Bildausschnitt muss ausgewählt werden
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -1021,6 +1023,11 @@ de:
       question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
+      main:
+        text_html: |-
+          <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
+
+          <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
@@ -1194,6 +1201,9 @@ de:
       greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
       subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
+    pledge_deleted:
+      greeting: 
+      subject: 
     pledge_failed:
       greeting: Liebe/r Herr/Frau %{name}
       link: Zum Versprechen
@@ -1222,6 +1232,9 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
+    pledge_deleted:
+      greeting: 
+      subject: 
   tags:
     names:
       accomodation: Unterbringung
@@ -1250,3 +1263,5 @@ de:
     pagination:
       last: 
       next: 
+  PledgeText:
+    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.

@@ -17,6 +17,7 @@ describe PledgeSerializer do
       signatures_count: 1,
       aasm_state: 'active',
       created_at: pledge.created_at,
+      locale: 'de',
       image: { url: nil },
       user_id: 1,
       recommended: false,
@@ -25,6 +26,7 @@ describe PledgeSerializer do
         name: 'pledgerName',
         organization: 'pledgerOrganiztion',
         confirmed: true,
+        locale: 'de',
         avatar: {
           url: nil
         }

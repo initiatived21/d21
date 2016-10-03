@@ -7,7 +7,7 @@ describe SignerMailer do
   include Rails.application.routes.url_helpers
 
   describe '#signature_created' do
-    let(:signature) { FactoryGirl.create :signature, :with_hash }
+    let(:signature) { FactoryGirl.create :signature, :with_hash, locale: 'de' }
     subject { SignerMailer.signature_created(signature.id) }
 
     it 'should send an email about the created signature' do

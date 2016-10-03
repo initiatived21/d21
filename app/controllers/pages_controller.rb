@@ -1,7 +1,8 @@
 # Static pages
 class PagesController < ApplicationController
   def locale_forward
-    redirect_to "/#{I18n.default_locale}"
+    redirect_locale = current_user ? current_user.locale : I18n.default_locale
+    redirect_to "/#{redirect_locale}"
   end
 
   def home

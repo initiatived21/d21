@@ -9,6 +9,7 @@ FactoryGirl.define do
     requirement { FFaker::Lorem.words(rand(3..5)).join(' ') }
     location { FFaker::Address.city }
     deadline { Time.zone.now.to_date + rand(1..10).days }
+    locale { I18n.available_locales.sample }
 
     initiator
 

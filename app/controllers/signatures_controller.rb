@@ -20,7 +20,7 @@ class SignaturesController < ApplicationController
     authorize @signature
     @signature.update_column :confirmed, true
     flash[:success] = 'Erfolgreich bestätigt'
-    redirect_to pledge_path(@signature.pledge, locale: I18n.locale)
+    redirect_to pledge_path(@signature.pledge, locale: @signature.locale)
   end
 
   def destroy
@@ -29,7 +29,7 @@ class SignaturesController < ApplicationController
     pledge = @signature.pledge
     @signature.destroy!
     flash[:success] = 'Erfolgreich gelöscht'
-    redirect_to pledge_path(pledge, locale: I18n.locale)
+    redirect_to pledge_path(pledge, locale: @signature.locale)
   end
 
   private
@@ -67,8 +67,10 @@ class SignaturesController < ApplicationController
   end
 
   def signature_params
-    params.require(:signature).permit(
+    _params = params.require(:signature).permit(
       :name, :email, :anonymous, :reason, :organization, :contact_person
     )
+    _params[:locale] = params[:locale]
+    _params
   end
 end
