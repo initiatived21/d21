@@ -444,7 +444,6 @@ GEM
       foreman
       rails (>= 3.2)
       rainbow (~> 2.1)
-    redcarpet (3.3.4)
     redis (3.3.0)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
@@ -652,7 +651,6 @@ DEPENDENCIES
   rails_best_practices
   rake
   react_on_rails (= 6.0.5)
-  redcarpet
   redis (>= 3.0)
   reform
   rubocop
@@ -679,4 +677,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.1
+   1.13.2

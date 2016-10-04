@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #TOC
+\*------------------------------------*/
+
+/**
+ * Table of contents component
+ */
+
+.c-toc {
+  margin-bottom: 22.5px;
+
+  @include font-size(16px, 1.5);
+}
+
+.c-toc__item {
+  margin-left: 1.1em;
+}
