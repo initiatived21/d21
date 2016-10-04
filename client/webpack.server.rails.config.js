@@ -37,7 +37,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loader: 'strip-loader?strip[]=console.log!babel-loader', exclude: /node_modules/ },
       { test: require.resolve('i18n-js'), loader: 'expose?I18n' },
     ],
   },

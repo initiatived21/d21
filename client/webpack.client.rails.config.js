@@ -27,11 +27,12 @@ config.entry.vendor.unshift(
 config.entry.vendor.push('jquery-ujs')
 
 // See webpack.common.config for adding modules common to both the webpack dev server and rails
+const stripConsoleLogs = !devBuild
 
 config.module.loaders.push(
   {
     test: /\.jsx?$/,
-    loader: 'babel-loader',
+    loader: `${stripConsoleLogs ? 'strip-loader?strip[]=console.log!' : ''}babel-loader`,
     exclude: /node_modules/,
   },
   {
@@ -52,28 +53,31 @@ config.module.loaders.push(
   {
     test: /\.woff$/,
     loader: 'url?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]'
-  }/*,
-  {
-    test: /\.(png|jpe?g)$/,
-    include: [
-      path.resolve(process.cwd(), 'app/assets/images')
-    ],
-    loader: 'file?name=images/[name].[ext]'
-  }*/
+  }
 )
 
 config.postcss = function() {
   return [autoprefixer({ browsers: ['last 2 versions'] })]
 }
 
-module.exports = config
-
 if (devBuild) {
   console.log('Webpack dev build for Rails') // eslint-disable-line no-console
   module.exports.devtool = 'eval-source-map'
 } else {
   config.plugins.push(
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        // Keep React component names which our I18n depends on
+        keep_fnames: true,
+      },
+      sourceMap: false,
+    })
   )
   console.log('Webpack production build for Rails') // eslint-disable-line no-console
 }
+
+module.exports = config
