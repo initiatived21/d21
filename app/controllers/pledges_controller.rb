@@ -19,10 +19,10 @@ class PledgesController < ApplicationController
   end
 
   def show
-    pledge = Pledge.find(params[:id])
-    authorize pledge
+    @pledge = Pledge.find(params[:id])
+    authorize @pledge
     @pledge_props = {
-      pledge: serialize(pledge),
+      pledge: serialize(@pledge),
       forms: {
         signPledgeForm: {
           action: signatures_path(id: params[:id], locale: I18n.locale),
@@ -46,10 +46,10 @@ class PledgesController < ApplicationController
           method: 'PATCH'
         }
       },
-      user: serialize(pledge.initiator),
-      signatures: serialize(pledge.signatures.confirmed),
-      updates: pledge.updates,
-      comments: pledge.comments
+      user: serialize(@pledge.initiator),
+      signatures: serialize(@pledge.signatures.confirmed),
+      updates: @pledge.updates,
+      comments: @pledge.comments
     }
   end
 
