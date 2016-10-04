@@ -289,6 +289,7 @@ en:
         id: 
         image: 
         initiator: 
+        locale: 
         location: 
         pg_search_document: 
         pledges_tags: 
@@ -659,6 +660,7 @@ en:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -750,6 +752,7 @@ en:
           description: 
           email: 
           image: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -837,6 +840,7 @@ en:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -975,7 +979,7 @@ en:
       answer6: Translation not yet available.
       answer7: Translation not yet available.
       answer8: 
-      question1: What is *bunt und verbindlich?*
+      question1: What is <em>bunt und verbindlich?</em>
       question2: How does it work?
       question3: How can I register?
       question4: Is it free to use the platform?
