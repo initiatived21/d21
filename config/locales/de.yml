@@ -136,7 +136,7 @@ de:
       part2: " und der "
       part3: " zu."
       privacy: Datenschutzerklärung
-      terms: AGB
+      terms: Nutzungs­bedingungen
     submit_pledge: Versprechen abschicken
   PreviewExplanation:
     title: Versprechensvorschau
@@ -195,7 +195,7 @@ de:
     i_sign: Ich unterzeichne dieses Versprechen.
     sign: Unterzeichnen
     signed_message: Vielen Dank! Bitte überprüfen Sie Ihr E-Mail-Postfach, um Ihre Unterschrift zu bestätigen.
-    small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
+    small_print: Mit Ihrer Unterschrift akzeptieren Sie die Nutzungsbedingungen und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
     tooltip:
       anonymous: Ihr Klarname wird in der Unterschriftenliste nicht angezeigt. Der Initiator des Versprechens erhält Ihre Daten nur dann, wenn das Versprechen erfolgreich ist, um mit Ihnen Kontakt aufzunehmen.
       contact_person: Wenn mehrere Unterzeichner dieselbe Organisation vertreten, hilft diese Angabe dem Initiator, den richtigen Ansprechpartner zu wählen.
@@ -289,6 +289,7 @@ de:
         id: Id
         image: Image
         initiator: Initiator
+        locale: Locale
         location: Location
         pg_search_document: Pg search document
         pledges_tags: Pledges tags
@@ -654,6 +655,7 @@ de:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -745,6 +747,7 @@ de:
           description: 
           email: 
           image: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -832,6 +835,7 @@ de:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -939,7 +943,7 @@ de:
         newsletter_link: Newsletter
         privacy_link: Datenschutz
         sitemap_link: Sitemap
-        terms_link: AGB
+        terms_link: Nutzungs­bedingungen
         twitter_title: Bunt und Verbindlich auf Twitter
   misc:
     pledge_sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
@@ -1045,7 +1049,7 @@ de:
       question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
       main_text_html: |-
-        <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement zu bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
+        <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
 
         <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
       masthead:
