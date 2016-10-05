@@ -37,7 +37,7 @@ de:
       all_pledges: Alle Versprechen
       blog: Blog
       howitworks: So funktioniert's
-      new_pledge: Ich versprech's
+      new_pledge: Mein Versprechen
       press: Presse
       start: Start
   PaginatedSearchResults:
@@ -160,7 +160,7 @@ de:
     all_pledges_link: Alle Versprechen
     blog_link: Blog
     howitworks_link: So funktioniert’s
-    new_pledge_link: Ich versprech’s
+    new_pledge_link: Mein Versprechen
     press_link: Presse
     start_link: Start
   ProfileUserForm:
