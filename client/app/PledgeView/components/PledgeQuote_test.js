@@ -11,6 +11,7 @@ describe('<PledgeQuote />', function () {
     amount: 10,
     who: 'Dolmetscher',
     requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
+    locale: 'de',
   }
 
   it('should render', function () {

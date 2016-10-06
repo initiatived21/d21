@@ -25,6 +25,7 @@ describe('<PledgeTile />', function () {
           }
         }
       },
+      locale: 'de',
       tags: [
         {
           id: 1,
