@@ -956,20 +956,199 @@ de:
         Die Idee, das Prinzip „Ich mache X, wenn Du Y machst" mit sozialen und gesellschaftspolitischen Themen zu verknüpfen, gab es 2005 in England mit der PledgeBank. Dieses Prinzip war der kreative Ausgangspunkt für bunt und verbindlich, um das Thema Integration nachhaltig zu verankern, Ehrenämtler zu mobilisieren und Unternehmen zu motivieren, ihr Engagement zielgerichtet für Integration von geflüchteten Menschen einzubringen.
         </p>
       team_heading: Team
-      team_html: |-
-        <p class="c-text-block">
-        <b>Projektorganisation:</b><br /><br />
-        Lena-Sophie Müller<br /> Geschäftsführerin D21<br /> lena-sophie.mueller@initiatived21.de<br /><br />
-        Björn Stecher<br /> Projektleitung<br /> +49 30 5268722-54<br /> bjoern.stecher@initiatived21.de<br /><br />
-        Stefanie Kaste<br /> Akquise, Community Management, Kommunikationsleitung<br /> +49 30 5268722-51<br /> stefanie.kaste@initiatived21.de<br /><br />
-        Melanie Gernert<br /> Praktikantin<br /> redaktion@buntundverbindlich.de
+      team_html: |
+        <p class="c-text-block"><b>Projektorganisation:</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-lena.jpg" / alt="Foto von Lena-Sophie Müller">
+          <div class="o-media__body">
+            <p>
+              <b>Lena-Sophie Müller</b><br />
+              Geschäftsführerin D21<br />
+              lena-sophie.mueller@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Mut und Neugierde, das Fremde kennenlernen zu wollen. Offenheit, Unbekanntem vorurteilsfrei zu begegnen. Willensstärke und Überzeugung, gleichzeitig Diversität und Zugehörigkeit zu wollen und zuzulassen. Und das Bewusstsein, dass das eigene Handeln den Unterschied machen kann. Und das jeden Tag, überall. In der Schule, beim Kochen, im Sportverein, auf der Arbeit, in der Freizeit und in den eigenen Gedanken. Integration ist keine Aufgabe einzelner Gruppen – Integration ist eine Aufgabe, die eine Gesellschaft durch viele einzelne bunte Puzzlesteine zusammen meistern wird.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        bunt und verbindlich zeigt, wie einfach es ist, einen Beitrag zu leisten, selbst aktiv zu werden. Und das schöne ist – es zeigt, dass man es nicht alleine machen muss. Aber einer (oder eine) muss den ersten Schritt gehen. Und da hoffe ich, dass das einfach ganz Viele tun. Denn wie Michael Jackson schon sagte: „If you wanna make the world a better place, take a look at yourself and then make that change."</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Als unserer Idee, dass das wirklich klappen könnte, Vertrauen geschenkt wurde.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-bjoern.jpg" alt="Foto von Björn Stecher" />
+          <div class="o-media__body">
+            <p>
+              <b>Björn Stecher</b><br />
+              Projektleitung<br />
+              +49 30 5268722-54<br />
+              bjoern.stecher@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet für mich neue Freunde kennenlernen. Integration findet auf beiden Seiten statt und das ist das Spannende. Es ist die Reflexion auf seine eigenen Werte, Lebensgeschichte und Historie und gleichzeitig das Kennenlernen neuer Lebensgeschichten und Einstellungen. Es ein wenig so, wenn eine Familie ein Kind bekommt. Es ist spannend, voller Entwicklung, neu und man fühlt sich manchmal unsicher und macht auch Fehler. Es ist auch mal schwer aber immer mit einer Perspektive gleichwohl aber immer ein Gewinn.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Es ist so vielschichtig. Bunte Projekte aber mit einem verbindlichen Charakter. Es erlaubt soviel Kreativität mit dem Thema Integration. Wenn Unternehmen das Prinzip verinnerlicht haben, macht es Spaß zu sehen, wie die Ideen nur so sprudeln. Das mitzuerleben wie aus den eigenen zum Teil kleinen Ideen tolle Projekte werden, die gleichzeitig viel bewirken können. Das überzeugt mich, weil von den Ideen auch unsere Unternehmen und Initiativen überzeugt sind.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Es gab zwei. Als der ersten Wireframes zu sehen waren und als mir Stefanie am Telefon völlig euphorisiert von immer tolleren Versprechen erzählte.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-stefanie.jpg" alt="Foto von Stefanie Kaste" />
+          <div class="o-media__body">
+            <p>
+              <b>Stefanie Kaste</b><br />
+              Akquise, Community Management, Kommunikationsleitung<br />
+              +49 30 5268722-51<br />
+              stefanie.kaste@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration ist für mich die Bereitschaft, Unterschiede zuzulassen, den anderen sein lassen zu können ohne ihn oder sie in ein Muster zwingen zu wollen. Menschen zu integrieren beinhaltet meiner Meinung nach ein großes Potential, um voneinander zu lernen. Dafür müssen wir alle uns mit Neugier statt Misstrauen begegnen. Integration ist für mich die absolute Überzeugung, dass jeder Mensch ein Chance auf ein sicheres und glückliches Leben verdient.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Einfachheit der Logik: niemand muss etwas allein tun, sondern kann sich ganz einfach Gleichgesinnte suchen, die unterstützen. Es gibt so viele tolle Flüchtlingsinitiativen, deren Arbeit durch konkrete Unterstützung von Unternehmen leichter wäre. Auf der anderen Seite hab ich während des Projektaufbaus gemerkt, wie viele engagierte Unternehmen es gibt, die ohne große Umstände bereit sind, Sach- und Dienstleistungen zu spenden. bunt und verbindlich bringt diese zwei Seiten zu einem schönen Ganzen zusammen.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Der schönste Moment war definitiv, als ich merkte, dass unsere Idee funktioniert, weil Unternehmen und Initiativen uns ein tolles Feedback gaben. Immer wieder passiert es, dass ich beeindruckt bin, wenn ich sehe, wie ein Unternehmen sich ernsthaft Gedanken macht, welchen sinnvollen Beitrag es leisten kann. Das Gleiche gilt für so viele Initiativen, ob groß oder klein, die oft ehrenamtlich unsagbar tolle Arbeit leisten. Das berührt mich sehr und lässt mich, auch bei diesem oft so schwer beladenen Thema, den Glauben daran, dass das Gute überwiegt, nicht verlieren.</p>
+
+
+        <div class="o-media u-mb">
+        <svg class="c-avatar c-avatar--comment c-avatar--large o-media__img" width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Avatar Anonym</title>
+            <defs>
+                <path d="M21.5,43 C33.3741221,43 43,33.3741221 43,21.5 C43,16.527185 41.3117299,11.9486866 38.4770901,8.30640523 C34.5431573,3.25162186 28.4013071,0 21.5,0 C9.62587788,0 0,9.62587788 0,21.5 C0,33.3741221 9.62587788,43 21.5,43 Z" id="path-1"></path>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="43" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+            </defs>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Avatar-Anonym">
+                    <g>
+                        <g id="Page-1" transform="translate(5.000000, 4.000000)" fill="#B3B3B3">
+                            <path d="M16.4215941,38.1310871 C12.4750311,38.2457077 8.64389823,37.1333239 5.26399188,35.1810153 C3.27973978,34.0357486 1.51013033,32.5898376 0,30.8949556 C0.571426447,29.620036 1.58453978,28.9163406 2.79226246,28.5659021 C5.07510634,27.9054242 7.26732333,27.0344954 9.49388314,26.2377881 C9.91362878,26.087466 10.1196857,26.0301557 10.4115997,25.5942215 C10.9715786,24.7589942 10.8647342,23.9359805 10.8990771,23.0782049 L8.6534379,18.3223885 C7.83111804,17.8009586 7.85687516,16.7975584 7.40946447,16.1511733 C6.86761101,15.3676192 7.43999142,14.5117225 6.897184,13.9141921 C5.87548496,12.7877156 6.96109981,12.0774436 7.56496115,11.6875455 C8.1392495,11.3173773 7.8292101,11.3324095 7.77006413,10.9058705 C7.35318039,7.92291572 7.42091208,4.98129955 9.83349552,2.69452416 C10.6911122,1.88184515 10.3839347,1.20915363 9.55302912,0 C11.3045132,0.340103817 12.4931565,0.732820379 13.6903856,0.758187239 C14.8904765,0.783554098 16.0934293,0.327890144 17.302106,0.289370099 C19.1880994,0.228301734 20.2937476,1.52295107 21.3307101,2.85142289 C21.5110099,3.08254316 21.6913098,3.42922357 21.9278937,3.48371534 C23.8902045,3.93374222 24.7420974,5.12692412 24.6323911,7.0886279 C24.5713372,8.16531015 24.578015,9.25138753 24.6409769,10.3280698 C24.6695959,10.8156772 24.8813766,11.3023451 25.0626304,11.7692832 C25.278227,12.323596 25.3764857,13.5233545 25.163751,14.5164201 C24.9519702,15.5047881 25.0073003,16.8125906 24.3824517,17.3969679 C22.8952166,18.7893266 22.6242899,20.6824459 21.7571335,22.3106225 C20.7955344,24.1154276 21.188569,25.2325089 22.9305134,26.2049052 C24.2632058,26.9489997 25.7246838,27.3905709 27.1813919,27.8312027 C29.254363,28.4587976 31.3321039,29.0732393 32.43966,31.0227294 C28.115326,35.7043242 22.7196866,37.947882 16.4215941,38.1310871" id="Fill-1"></path>
+                        </g>
+                        <use id="Oval-3" stroke="#999999" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+          <div class="o-media__body">
+            <p>
+              <b>Melanie Gernert</b><br />
+              Praktikantin<br />
+              redaktion@buntundverbindlich.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet wörtlich „geistig auffrischen“. Und genau so versteh ich es auch: wir müssen mit den vielen verschiedenen Vorurteilen in den Köpfen der Menschen aufräumen, indem wir aufeinander zugehen und uns kennenlernen.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Zwei Wörter beschreiben dieses Projekt sehr gut: Teamgeist und Herzblut!
+        Mit diesen beiden Eigenschaften kann man jede Hürde überwinden.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Die erste Mail mit den Worten „Ein Versprechen wartet auf deine Freigabe“.</p>
+
+
+        <p class="c-text-block"><b>Technik:</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-anna.jpg" alt="Foto von Anna Fischer" />
+          <div class="o-media__body">
+            <p>
+              <b>Anna Fischer</b><br />
+              Technische Projektleitung<br />
+              anna.fischer@7unicorns.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet für mich, als neu Hinzugekommener seinen Platz in der Gesellschaft zu finden. Wie das aussieht, ist individuell und vielfältig, und verändert auf eine bereichernde Weise sowohl den Hinzugekommenen als auch die Gesellschaft.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Bereitschaft, Geflüchtete zu unterstützen, ist nach wie vor groß in Deutschland. Wir können das sichtbar machen, und spendenden Unternehmen und Flüchtlingshelfern helfen, leichter zueinander zu finden.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Als wir unseren geschlossene Beta-Phase gestartet haben, und seitdem alles dank des großartigen Teams wie am Schnürchen läuft.
         </p>
 
-        <p class="c-text-block">
-        <b>Technik:</b><br /><br />
-        Anna Fischer<br /> Technische Projektleitung<br /> anna.fischer@7unicorns.de<br /><br />
-        Konstantin Koss<br /> Backend-Entwickler<br /><br />
-        Marc Altmann<br /> Frontend-Entwickler
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-konstantin.jpg" alt="Foto von Konstantin Koss" />
+          <div class="o-media__body">
+            <p>
+              <b>Konstantin Koss</b><br />
+              Backend-Entwickler
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Im Kontext von Immigration bedeutet es für mich gegenseitige Anpassung und Akzeptanz. Ein neues Mitglied der Gesellschaft lernt, sich mit den sozialen und kulturellen Gegebenheiten seiner neuen Heimat zurechtzufinden und sich ohne Verleugnung der eigenen Herkunft an diese anzupassen. Im gleichen Zuge bedeutet es für die Gesellschaft, diesen Prozess mit Einfühlsamkeit und Verständnis zu unterstützen und sich ebenfalls auf die sozialen und kulturellen Gegebenheiten der neuen Mitglieder einzustellen.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Plattform unterstützt einen sich multiplizierenden positiven Effekt. Wenn ich mich als Einzelperson engagieren möchte, kann ich mich schnell verloren fühlen. Bringt das was ich tue wirklich etwas oder ist das nur ein sprichwörtlicher Tropfen auf den heißen Stein? Habe ich hingegen die Sicherheit, dass ich etwas mit vielen Anderen unternehme – selbst wenn wir nicht am selben Ort sind – kann ich daraus Motivation schöpfen.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Zum Anfang des Projektes haben wir nur leere, unschöne Seiten mit Lorem-Ipsum-Texten befüllt und diese mit Funktionalität versehen. Es war sehr schön zu sehen, wie diese schlagartig eine ganz andere Ausstrahlungskraft bekommen haben, als wir die ersten Screen-Designs bekommen und umgesetzt haben.</p>
+
+
+        <div class="o-media u-mb">
+        <svg class="c-avatar c-avatar--comment c-avatar--large o-media__img" width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Avatar Anonym</title>
+            <defs>
+                <path d="M21.5,43 C33.3741221,43 43,33.3741221 43,21.5 C43,16.527185 41.3117299,11.9486866 38.4770901,8.30640523 C34.5431573,3.25162186 28.4013071,0 21.5,0 C9.62587788,0 0,9.62587788 0,21.5 C0,33.3741221 9.62587788,43 21.5,43 Z" id="path-1"></path>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="43" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+            </defs>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Avatar-Anonym">
+                    <g>
+                        <g id="Page-1" transform="translate(5.000000, 4.000000)" fill="#B3B3B3">
+                            <path d="M16.4215941,38.1310871 C12.4750311,38.2457077 8.64389823,37.1333239 5.26399188,35.1810153 C3.27973978,34.0357486 1.51013033,32.5898376 0,30.8949556 C0.571426447,29.620036 1.58453978,28.9163406 2.79226246,28.5659021 C5.07510634,27.9054242 7.26732333,27.0344954 9.49388314,26.2377881 C9.91362878,26.087466 10.1196857,26.0301557 10.4115997,25.5942215 C10.9715786,24.7589942 10.8647342,23.9359805 10.8990771,23.0782049 L8.6534379,18.3223885 C7.83111804,17.8009586 7.85687516,16.7975584 7.40946447,16.1511733 C6.86761101,15.3676192 7.43999142,14.5117225 6.897184,13.9141921 C5.87548496,12.7877156 6.96109981,12.0774436 7.56496115,11.6875455 C8.1392495,11.3173773 7.8292101,11.3324095 7.77006413,10.9058705 C7.35318039,7.92291572 7.42091208,4.98129955 9.83349552,2.69452416 C10.6911122,1.88184515 10.3839347,1.20915363 9.55302912,0 C11.3045132,0.340103817 12.4931565,0.732820379 13.6903856,0.758187239 C14.8904765,0.783554098 16.0934293,0.327890144 17.302106,0.289370099 C19.1880994,0.228301734 20.2937476,1.52295107 21.3307101,2.85142289 C21.5110099,3.08254316 21.6913098,3.42922357 21.9278937,3.48371534 C23.8902045,3.93374222 24.7420974,5.12692412 24.6323911,7.0886279 C24.5713372,8.16531015 24.578015,9.25138753 24.6409769,10.3280698 C24.6695959,10.8156772 24.8813766,11.3023451 25.0626304,11.7692832 C25.278227,12.323596 25.3764857,13.5233545 25.163751,14.5164201 C24.9519702,15.5047881 25.0073003,16.8125906 24.3824517,17.3969679 C22.8952166,18.7893266 22.6242899,20.6824459 21.7571335,22.3106225 C20.7955344,24.1154276 21.188569,25.2325089 22.9305134,26.2049052 C24.2632058,26.9489997 25.7246838,27.3905709 27.1813919,27.8312027 C29.254363,28.4587976 31.3321039,29.0732393 32.43966,31.0227294 C28.115326,35.7043242 22.7196866,37.947882 16.4215941,38.1310871" id="Fill-1"></path>
+                        </g>
+                        <use id="Oval-3" stroke="#999999" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+
+          <div class="o-media__body">
+            <p>
+              <b>Marc Altmann</b><br />
+              Frontend-Entwickler<br />
+              mail@marcaltmann.com
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration ist für mich ein Prozess, durch den sich beide Seiten verändern.
+        </p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Ich finde das Ziel des Projektes überzeugend sowie das einfache Konzept der Webseite.
+        </p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Am besten gefallen hat mir die Zeit kurz vor dem Start der Webseite im Oktober.
         </p>
       vision_heading: Vision
       vision_html: |-
