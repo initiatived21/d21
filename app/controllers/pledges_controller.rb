@@ -19,7 +19,8 @@ class PledgesController < ApplicationController
   end
 
   def show
-    @pledge = Pledge.find(params[:id])
+    @pledge = Pledge.includes(:initiator).find(params[:id])
+    @initiator = @pledge.initiator
     authorize @pledge
     @pledge_props = {
       pledge: serialize(@pledge),
@@ -46,7 +47,7 @@ class PledgesController < ApplicationController
           method: 'PATCH'
         }
       },
-      user: serialize(@pledge.initiator),
+      user: serialize(@initiator),
       signatures: serialize(@pledge.signatures.confirmed),
       updates: @pledge.updates,
       comments: @pledge.comments
