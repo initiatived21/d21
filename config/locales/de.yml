@@ -1150,6 +1150,8 @@ de:
         <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
         Am besten gefallen hat mir die Zeit kurz vor dem Start der Webseite im Oktober.
         </p>
+
+        <p class="c-text-block">Fotos: CC BY 3.0 DE Jana Kausch</p>
       vision_heading: Vision
       vision_html: |-
         <p class="c-text-block"><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
@@ -1234,7 +1236,7 @@ de:
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
-      more_pledges: mehr Erfolgsgeschichten
+      more_pledges: Mehr anzeigen
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
@@ -1265,7 +1267,7 @@ de:
         <b>Themenbereiche:</b> Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).<br /><br />
         <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.
       p5_html: |-
-        Alle Versprechen können im Nachhinein bearbeitet werden, so lange sie noch nicht veröffentlicht sind. Unter dem Menupunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
+        Alle Versprechen können im Nachhinein bearbeitet werden, solange sie noch nicht veröffentlicht sind. Unter dem Menüpunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
         <br />
         Erst nachdem die Versprechen von Ihnen an die Redaktion zur Freigabe geschickt wurden, können sie nicht mehr verändert werden. Da die Unterzeichner eines Versprechens einen konkreten Wortlaut unterschreiben, ist eine Veränderung der Versprechen nach deren Veröffentlichung nicht mehr möglich. Rechtschreibfehler und kleine Korrekturen können durch die Redaktion des <em>bunt und verbindlich</em> Teams umgesetzt werden. Bitte senden Sie dazu eine Mail an <em>redaktion@buntundverbindlich.de.</em>
       p6_html: Nachdem sie Ihr Versprechen fertig erstellt haben, können Sie es zur <em>bunt und verbindlich</em> Redaktion schicken, damit diese Ihr Versprechen veröffentlicht. Alle Versprechen werden innerhalb von 1–3 Werktage nach Beantragung durch den Initiator freigeschaltet.
