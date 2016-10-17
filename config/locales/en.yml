@@ -344,6 +344,7 @@ en:
         id: 
         last_sign_in_at: 
         last_sign_in_ip: 
+        locale: 
         name: 
         organization: 
         remember_created_at: 
@@ -559,6 +560,7 @@ en:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -623,6 +625,7 @@ en:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -728,6 +731,7 @@ en:
           amount: 
           content: 
           description: 
+          locale: 
           location: 
           requirement: 
           title: 
@@ -803,6 +807,7 @@ en:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -1147,6 +1152,7 @@ en:
       subject: 
     pledge_deleted:
       greeting: 
+      paragraph1: 
       subject: 
     pledge_failed:
       greeting: 

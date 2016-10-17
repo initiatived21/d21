@@ -344,6 +344,7 @@ de:
         id: Id
         last_sign_in_at: Last Sign In At
         last_sign_in_ip: Last Sign In Ip
+        locale: Locale
         name: Name
         organization: Organization
         remember_created_at: Remember Created At
@@ -554,6 +555,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -618,6 +620,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -723,6 +726,7 @@ de:
           amount: 
           content: 
           description: 
+          locale: 
           location: 
           requirement: 
           title: 
@@ -798,6 +802,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -1414,8 +1419,9 @@ de:
       second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
       subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
     pledge_deleted:
-      greeting: 
-      subject: 
+      greeting: Liebe/r Herr/Frau %{name}
+      paragraph1: 'Das von Ihnen unterzeichnete Versprechen wurde von dem Initiator gelöscht:'
+      subject: Ihr unterzeichnetes Versprechen wurde gelöscht
     pledge_failed:
       greeting: Liebe/r Herr/Frau %{name}
       link: Zum Versprechen
