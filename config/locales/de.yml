@@ -37,7 +37,7 @@ de:
       all_pledges: Alle Versprechen
       blog: Blog
       howitworks: So funktioniert's
-      new_pledge: Ich versprech's
+      new_pledge: Mein Versprechen
       press: Presse
       start: Start
   PaginatedSearchResults:
@@ -118,6 +118,8 @@ de:
       one: Tag
       other: Tage
     still: noch
+  PledgeText:
+    sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
   PledgeTileBack:
     show_pledge: zum Versprechen
   PledgeTileFront:
@@ -134,7 +136,7 @@ de:
       part2: " und der "
       part3: " zu."
       privacy: Datenschutzerklärung
-      terms: AGB
+      terms: Nutzungs­bedingungen
     submit_pledge: Versprechen abschicken
   PreviewExplanation:
     title: Versprechensvorschau
@@ -158,7 +160,7 @@ de:
     all_pledges_link: Alle Versprechen
     blog_link: Blog
     howitworks_link: So funktioniert’s
-    new_pledge_link: Ich versprech’s
+    new_pledge_link: Mein Versprechen
     press_link: Presse
     start_link: Start
   ProfileUserForm:
@@ -193,7 +195,7 @@ de:
     i_sign: Ich unterzeichne dieses Versprechen.
     sign: Unterzeichnen
     signed_message: Vielen Dank! Bitte überprüfen Sie Ihr E-Mail-Postfach, um Ihre Unterschrift zu bestätigen.
-    small_print: Mit Ihrer Unterschrift akzeptieren Sie die AGB und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
+    small_print: Mit Ihrer Unterschrift akzeptieren Sie die Nutzungsbedingungen und Datenschutzerklärung von {{project}} und stimmen zu, dass Sie E-Mails über den Verlauf dieses Versprechens erhalten. Sie können sich jederzeit aus den Benachrichtigungen austragen lassen. Ist das Versprechen erfolgreich, werden Ihr Name und Ihre E-Mail-Adresse an den Initiator weitergegeben.
     tooltip:
       anonymous: Ihr Klarname wird in der Unterschriftenliste nicht angezeigt. Der Initiator des Versprechens erhält Ihre Daten nur dann, wenn das Versprechen erfolgreich ist, um mit Ihnen Kontakt aufzunehmen.
       contact_person: Wenn mehrere Unterzeichner dieselbe Organisation vertreten, hilft diese Angabe dem Initiator, den richtigen Ansprechpartner zu wählen.
@@ -287,6 +289,7 @@ de:
         id: Id
         image: Image
         initiator: Initiator
+        locale: Locale
         location: Location
         pg_search_document: Pg search document
         pledges_tags: Pledges tags
@@ -341,6 +344,7 @@ de:
         id: Id
         last_sign_in_at: Last Sign In At
         last_sign_in_ip: Last Sign In Ip
+        locale: Locale
         name: Name
         organization: Organization
         remember_created_at: Remember Created At
@@ -473,7 +477,7 @@ de:
       extension_white_list_error: 
     min_size?: size cannot be less than %{num}
     none?: cannot be defined
-    notCropping?: Auswahl muss bestätigt werden
+    notCropping?: Bildausschnitt muss ausgewählt werden
     not_eql?: must not be equal to %{left}
     number?: must be a number
     odd?: must be odd
@@ -551,6 +555,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -615,6 +620,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -652,6 +658,7 @@ de:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -719,6 +726,7 @@ de:
           amount: 
           content: 
           description: 
+          locale: 
           location: 
           requirement: 
           title: 
@@ -743,6 +751,7 @@ de:
           description: 
           email: 
           image: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -793,6 +802,7 @@ de:
           description: 
           image: 
           initiator: 
+          locale: 
           location: 
           recommended: 
           requirement: 
@@ -830,6 +840,7 @@ de:
           email: 
           image: 
           initiator: 
+          locale: 
           location: 
           name: 
           namespace: 
@@ -937,8 +948,10 @@ de:
         newsletter_link: Newsletter
         privacy_link: Datenschutz
         sitemap_link: Sitemap
-        terms_link: AGB
+        terms_link: Nutzungs­bedingungen
         twitter_title: Bunt und Verbindlich auf Twitter
+  misc:
+    pledge_sentence: Wir versprechen, %{content}, wenn %{amount} %{who} %{requirement}.
   pages:
     about:
       heading: Über uns
@@ -948,21 +961,202 @@ de:
         Die Idee, das Prinzip „Ich mache X, wenn Du Y machst" mit sozialen und gesellschaftspolitischen Themen zu verknüpfen, gab es 2005 in England mit der PledgeBank. Dieses Prinzip war der kreative Ausgangspunkt für bunt und verbindlich, um das Thema Integration nachhaltig zu verankern, Ehrenämtler zu mobilisieren und Unternehmen zu motivieren, ihr Engagement zielgerichtet für Integration von geflüchteten Menschen einzubringen.
         </p>
       team_heading: Team
-      team_html: |-
-        <p class="c-text-block">
-        <b>Projektorganisation:</b><br /><br />
-        Lena-Sophie Müller<br /> Geschäftsführerin D21<br /> lena-sophie.mueller@initiatived21.de<br /><br />
-        Björn Stecher<br /> Projektleitung<br /> +49 30 5268722-54<br /> bjoern.stecher@initiatived21.de<br /><br />
-        Stefanie Kaste<br /> Akquise, Community Management, Kommunikationsleitung<br /> +49 30 5268722-51<br /> stefanie.kaste@initiatived21.de<br /><br />
-        Melanie Gernert<br /> Praktikantin<br /> redaktion@buntundverbindlich.de
+      team_html: |
+        <p class="c-text-block"><b>Projektorganisation:</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-lena.jpg" / alt="Foto von Lena-Sophie Müller">
+          <div class="o-media__body">
+            <p>
+              <b>Lena-Sophie Müller</b><br />
+              Geschäftsführerin D21<br />
+              lena-sophie.mueller@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Mut und Neugierde, das Fremde kennenlernen zu wollen. Offenheit, Unbekanntem vorurteilsfrei zu begegnen. Willensstärke und Überzeugung, gleichzeitig Diversität und Zugehörigkeit zu wollen und zuzulassen. Und das Bewusstsein, dass das eigene Handeln den Unterschied machen kann. Und das jeden Tag, überall. In der Schule, beim Kochen, im Sportverein, auf der Arbeit, in der Freizeit und in den eigenen Gedanken. Integration ist keine Aufgabe einzelner Gruppen – Integration ist eine Aufgabe, die eine Gesellschaft durch viele einzelne bunte Puzzlesteine zusammen meistern wird.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        bunt und verbindlich zeigt, wie einfach es ist, einen Beitrag zu leisten, selbst aktiv zu werden. Und das schöne ist – es zeigt, dass man es nicht alleine machen muss. Aber einer (oder eine) muss den ersten Schritt gehen. Und da hoffe ich, dass das einfach ganz Viele tun. Denn wie Michael Jackson schon sagte: „If you wanna make the world a better place, take a look at yourself and then make that change."</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Als unserer Idee, dass das wirklich klappen könnte, Vertrauen geschenkt wurde.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-bjoern.jpg" alt="Foto von Björn Stecher" />
+          <div class="o-media__body">
+            <p>
+              <b>Björn Stecher</b><br />
+              Projektleitung<br />
+              +49 30 5268722-54<br />
+              bjoern.stecher@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet für mich neue Freunde kennenlernen. Integration findet auf beiden Seiten statt und das ist das Spannende. Es ist die Reflexion auf seine eigenen Werte, Lebensgeschichte und Historie und gleichzeitig das Kennenlernen neuer Lebensgeschichten und Einstellungen. Es ein wenig so, wenn eine Familie ein Kind bekommt. Es ist spannend, voller Entwicklung, neu und man fühlt sich manchmal unsicher und macht auch Fehler. Es ist auch mal schwer aber immer mit einer Perspektive gleichwohl aber immer ein Gewinn.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Es ist so vielschichtig. Bunte Projekte aber mit einem verbindlichen Charakter. Es erlaubt soviel Kreativität mit dem Thema Integration. Wenn Unternehmen das Prinzip verinnerlicht haben, macht es Spaß zu sehen, wie die Ideen nur so sprudeln. Das mitzuerleben wie aus den eigenen zum Teil kleinen Ideen tolle Projekte werden, die gleichzeitig viel bewirken können. Das überzeugt mich, weil von den Ideen auch unsere Unternehmen und Initiativen überzeugt sind.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Es gab zwei. Als der ersten Wireframes zu sehen waren und als mir Stefanie am Telefon völlig euphorisiert von immer tolleren Versprechen erzählte.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-stefanie.jpg" alt="Foto von Stefanie Kaste" />
+          <div class="o-media__body">
+            <p>
+              <b>Stefanie Kaste</b><br />
+              Akquise, Community Management, Kommunikationsleitung<br />
+              +49 30 5268722-51<br />
+              stefanie.kaste@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration ist für mich die Bereitschaft, Unterschiede zuzulassen, den anderen sein lassen zu können ohne ihn oder sie in ein Muster zwingen zu wollen. Menschen zu integrieren beinhaltet meiner Meinung nach ein großes Potential, um voneinander zu lernen. Dafür müssen wir alle uns mit Neugier statt Misstrauen begegnen. Integration ist für mich die absolute Überzeugung, dass jeder Mensch ein Chance auf ein sicheres und glückliches Leben verdient.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Einfachheit der Logik: niemand muss etwas allein tun, sondern kann sich ganz einfach Gleichgesinnte suchen, die unterstützen. Es gibt so viele tolle Flüchtlingsinitiativen, deren Arbeit durch konkrete Unterstützung von Unternehmen leichter wäre. Auf der anderen Seite hab ich während des Projektaufbaus gemerkt, wie viele engagierte Unternehmen es gibt, die ohne große Umstände bereit sind, Sach- und Dienstleistungen zu spenden. bunt und verbindlich bringt diese zwei Seiten zu einem schönen Ganzen zusammen.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Der schönste Moment war definitiv, als ich merkte, dass unsere Idee funktioniert, weil Unternehmen und Initiativen uns ein tolles Feedback gaben. Immer wieder passiert es, dass ich beeindruckt bin, wenn ich sehe, wie ein Unternehmen sich ernsthaft Gedanken macht, welchen sinnvollen Beitrag es leisten kann. Das Gleiche gilt für so viele Initiativen, ob groß oder klein, die oft ehrenamtlich unsagbar tolle Arbeit leisten. Das berührt mich sehr und lässt mich, auch bei diesem oft so schwer beladenen Thema, den Glauben daran, dass das Gute überwiegt, nicht verlieren.</p>
+
+
+        <div class="o-media u-mb">
+        <svg class="c-avatar c-avatar--comment c-avatar--large o-media__img" width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Avatar Anonym</title>
+            <defs>
+                <path d="M21.5,43 C33.3741221,43 43,33.3741221 43,21.5 C43,16.527185 41.3117299,11.9486866 38.4770901,8.30640523 C34.5431573,3.25162186 28.4013071,0 21.5,0 C9.62587788,0 0,9.62587788 0,21.5 C0,33.3741221 9.62587788,43 21.5,43 Z" id="path-1"></path>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="43" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+            </defs>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Avatar-Anonym">
+                    <g>
+                        <g id="Page-1" transform="translate(5.000000, 4.000000)" fill="#B3B3B3">
+                            <path d="M16.4215941,38.1310871 C12.4750311,38.2457077 8.64389823,37.1333239 5.26399188,35.1810153 C3.27973978,34.0357486 1.51013033,32.5898376 0,30.8949556 C0.571426447,29.620036 1.58453978,28.9163406 2.79226246,28.5659021 C5.07510634,27.9054242 7.26732333,27.0344954 9.49388314,26.2377881 C9.91362878,26.087466 10.1196857,26.0301557 10.4115997,25.5942215 C10.9715786,24.7589942 10.8647342,23.9359805 10.8990771,23.0782049 L8.6534379,18.3223885 C7.83111804,17.8009586 7.85687516,16.7975584 7.40946447,16.1511733 C6.86761101,15.3676192 7.43999142,14.5117225 6.897184,13.9141921 C5.87548496,12.7877156 6.96109981,12.0774436 7.56496115,11.6875455 C8.1392495,11.3173773 7.8292101,11.3324095 7.77006413,10.9058705 C7.35318039,7.92291572 7.42091208,4.98129955 9.83349552,2.69452416 C10.6911122,1.88184515 10.3839347,1.20915363 9.55302912,0 C11.3045132,0.340103817 12.4931565,0.732820379 13.6903856,0.758187239 C14.8904765,0.783554098 16.0934293,0.327890144 17.302106,0.289370099 C19.1880994,0.228301734 20.2937476,1.52295107 21.3307101,2.85142289 C21.5110099,3.08254316 21.6913098,3.42922357 21.9278937,3.48371534 C23.8902045,3.93374222 24.7420974,5.12692412 24.6323911,7.0886279 C24.5713372,8.16531015 24.578015,9.25138753 24.6409769,10.3280698 C24.6695959,10.8156772 24.8813766,11.3023451 25.0626304,11.7692832 C25.278227,12.323596 25.3764857,13.5233545 25.163751,14.5164201 C24.9519702,15.5047881 25.0073003,16.8125906 24.3824517,17.3969679 C22.8952166,18.7893266 22.6242899,20.6824459 21.7571335,22.3106225 C20.7955344,24.1154276 21.188569,25.2325089 22.9305134,26.2049052 C24.2632058,26.9489997 25.7246838,27.3905709 27.1813919,27.8312027 C29.254363,28.4587976 31.3321039,29.0732393 32.43966,31.0227294 C28.115326,35.7043242 22.7196866,37.947882 16.4215941,38.1310871" id="Fill-1"></path>
+                        </g>
+                        <use id="Oval-3" stroke="#999999" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+          <div class="o-media__body">
+            <p>
+              <b>Melanie Gernert</b><br />
+              Praktikantin<br />
+              redaktion@buntundverbindlich.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet wörtlich „geistig auffrischen“. Und genau so versteh ich es auch: wir müssen mit den vielen verschiedenen Vorurteilen in den Köpfen der Menschen aufräumen, indem wir aufeinander zugehen und uns kennenlernen.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Zwei Wörter beschreiben dieses Projekt sehr gut: Teamgeist und Herzblut!
+        Mit diesen beiden Eigenschaften kann man jede Hürde überwinden.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Die erste Mail mit den Worten „Ein Versprechen wartet auf deine Freigabe“.</p>
+
+
+        <p class="c-text-block"><b>Technik:</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-anna.jpg" alt="Foto von Anna Fischer" />
+          <div class="o-media__body">
+            <p>
+              <b>Anna Fischer</b><br />
+              Technische Projektleitung<br />
+              anna.fischer@7unicorns.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration bedeutet für mich, als neu Hinzugekommener seinen Platz in der Gesellschaft zu finden. Wie das aussieht, ist individuell und vielfältig, und verändert auf eine bereichernde Weise sowohl den Hinzugekommenen als auch die Gesellschaft.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Bereitschaft, Geflüchtete zu unterstützen, ist nach wie vor groß in Deutschland. Wir können das sichtbar machen, und spendenden Unternehmen und Flüchtlingshelfern helfen, leichter zueinander zu finden.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Als wir unseren geschlossene Beta-Phase gestartet haben, und seitdem alles dank des großartigen Teams wie am Schnürchen läuft.
         </p>
 
-        <p class="c-text-block">
-        <b>Technik:</b><br /><br />
-        Anna Fischer<br /> Technische Projektleitung<br /> anna.fischer@7unicorns.de<br /><br />
-        Konstantin Koss<br /> Backend-Entwickler<br /><br />
-        Marc Altmann<br /> Frontend-Entwickler
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-konstantin.jpg" alt="Foto von Konstantin Koss" />
+          <div class="o-media__body">
+            <p>
+              <b>Konstantin Koss</b><br />
+              Backend-Entwickler
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Im Kontext von Immigration bedeutet es für mich gegenseitige Anpassung und Akzeptanz. Ein neues Mitglied der Gesellschaft lernt, sich mit den sozialen und kulturellen Gegebenheiten seiner neuen Heimat zurechtzufinden und sich ohne Verleugnung der eigenen Herkunft an diese anzupassen. Im gleichen Zuge bedeutet es für die Gesellschaft, diesen Prozess mit Einfühlsamkeit und Verständnis zu unterstützen und sich ebenfalls auf die sozialen und kulturellen Gegebenheiten der neuen Mitglieder einzustellen.</p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Die Plattform unterstützt einen sich multiplizierenden positiven Effekt. Wenn ich mich als Einzelperson engagieren möchte, kann ich mich schnell verloren fühlen. Bringt das was ich tue wirklich etwas oder ist das nur ein sprichwörtlicher Tropfen auf den heißen Stein? Habe ich hingegen die Sicherheit, dass ich etwas mit vielen Anderen unternehme – selbst wenn wir nicht am selben Ort sind – kann ich daraus Motivation schöpfen.</p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Zum Anfang des Projektes haben wir nur leere, unschöne Seiten mit Lorem-Ipsum-Texten befüllt und diese mit Funktionalität versehen. Es war sehr schön zu sehen, wie diese schlagartig eine ganz andere Ausstrahlungskraft bekommen haben, als wir die ersten Screen-Designs bekommen und umgesetzt haben.</p>
+
+
+        <div class="o-media u-mb">
+        <svg class="c-avatar c-avatar--comment c-avatar--large o-media__img" width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Avatar Anonym</title>
+            <defs>
+                <path d="M21.5,43 C33.3741221,43 43,33.3741221 43,21.5 C43,16.527185 41.3117299,11.9486866 38.4770901,8.30640523 C34.5431573,3.25162186 28.4013071,0 21.5,0 C9.62587788,0 0,9.62587788 0,21.5 C0,33.3741221 9.62587788,43 21.5,43 Z" id="path-1"></path>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="43" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+            </defs>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Avatar-Anonym">
+                    <g>
+                        <g id="Page-1" transform="translate(5.000000, 4.000000)" fill="#B3B3B3">
+                            <path d="M16.4215941,38.1310871 C12.4750311,38.2457077 8.64389823,37.1333239 5.26399188,35.1810153 C3.27973978,34.0357486 1.51013033,32.5898376 0,30.8949556 C0.571426447,29.620036 1.58453978,28.9163406 2.79226246,28.5659021 C5.07510634,27.9054242 7.26732333,27.0344954 9.49388314,26.2377881 C9.91362878,26.087466 10.1196857,26.0301557 10.4115997,25.5942215 C10.9715786,24.7589942 10.8647342,23.9359805 10.8990771,23.0782049 L8.6534379,18.3223885 C7.83111804,17.8009586 7.85687516,16.7975584 7.40946447,16.1511733 C6.86761101,15.3676192 7.43999142,14.5117225 6.897184,13.9141921 C5.87548496,12.7877156 6.96109981,12.0774436 7.56496115,11.6875455 C8.1392495,11.3173773 7.8292101,11.3324095 7.77006413,10.9058705 C7.35318039,7.92291572 7.42091208,4.98129955 9.83349552,2.69452416 C10.6911122,1.88184515 10.3839347,1.20915363 9.55302912,0 C11.3045132,0.340103817 12.4931565,0.732820379 13.6903856,0.758187239 C14.8904765,0.783554098 16.0934293,0.327890144 17.302106,0.289370099 C19.1880994,0.228301734 20.2937476,1.52295107 21.3307101,2.85142289 C21.5110099,3.08254316 21.6913098,3.42922357 21.9278937,3.48371534 C23.8902045,3.93374222 24.7420974,5.12692412 24.6323911,7.0886279 C24.5713372,8.16531015 24.578015,9.25138753 24.6409769,10.3280698 C24.6695959,10.8156772 24.8813766,11.3023451 25.0626304,11.7692832 C25.278227,12.323596 25.3764857,13.5233545 25.163751,14.5164201 C24.9519702,15.5047881 25.0073003,16.8125906 24.3824517,17.3969679 C22.8952166,18.7893266 22.6242899,20.6824459 21.7571335,22.3106225 C20.7955344,24.1154276 21.188569,25.2325089 22.9305134,26.2049052 C24.2632058,26.9489997 25.7246838,27.3905709 27.1813919,27.8312027 C29.254363,28.4587976 31.3321039,29.0732393 32.43966,31.0227294 C28.115326,35.7043242 22.7196866,37.947882 16.4215941,38.1310871" id="Fill-1"></path>
+                        </g>
+                        <use id="Oval-3" stroke="#999999" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+
+          <div class="o-media__body">
+            <p>
+              <b>Marc Altmann</b><br />
+              Frontend-Entwickler<br />
+              mail@marcaltmann.com
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>Was bedeutet für dich Integration?</i><br />
+        Integration ist für mich ein Prozess, durch den sich beide Seiten verändern.
         </p>
+
+        <p class="c-text-block"><i>Was überzeugt dich an „bunt und verbindlich“?</i><br />
+        Ich finde das Ziel des Projektes überzeugend sowie das einfache Konzept der Webseite.
+        </p>
+
+        <p class="c-text-block"><i>Was ist dein bisher schönster Moment im Projekt?</i><br />
+        Am besten gefallen hat mir die Zeit kurz vor dem Start der Webseite im Oktober.
+        </p>
+
+        <p class="c-text-block">Fotos: CC BY 3.0 DE Jana Kausch</p>
       vision_heading: Vision
       vision_html: |-
         <p class="c-text-block"><b>Wir wollen zeigen, wie einfach Hilfe ist. Wir wollen es jedem leicht machen, die Integration von Geflüchteten zu unterstützen.</b></p>
@@ -987,32 +1181,51 @@ de:
         Fax +49 30 5268722-60<br />
         Mail: <a href="mailto:redaktion@buntundverbindlich.de">redaktion@buntundverbindlich.de</a>
     faq:
-      answer1: "*bunt und verbindlich* ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von *bunt und verbindlich* ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.\n\nDie Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:\nUnternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.\n\nHier setzt *bunt und verbindlich* an:\n\n- Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern. \n- Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen. \n- Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.\n\nMit *bunt und verbindlich* wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken."
+      answer1: |-
+        <p><em>bunt und verbindlich</em> ist eine Plattform, die zeigt, wie einfach Hilfe ist. Das Ziel von <em>bunt und verbindlich</em> ist es, die bisherige starke Hilfsbereitschaft für Geflüchtete auch in den kommenden Jahren zu sichern, und sie gezielt für deren Integration einzusetzen.</p>
+
+        <p>Die Plattform richtet sich an Unternehmen, Initiativen und Ehrenamtliche:
+        Unternehmen haben Sach- oder Geldspenden, aber oftmals keine personellen Ressourcen, um Integrationsprojekte zu konzipieren und umzusetzen. Viele Initiativen und Ehrenamtliche sind bereit, sich zeitlich zu engagieren und haben Integrationsideen, aber nicht die finanziellen oder materiellen Mittel, um diese umzusetzen.</p>
+
+        <p>Hier setzt <em>bunt und verbindlich</em> an:</p>
+
+        <ul>
+        <li>Unternehmen helfen mit konkreten Leistungen, um gemeinsam mit der Unterstützung der Engagierten die Integration von Flüchtlingen zu fördern.</li>
+        <li>Die Plattform verbindet diejenigen, die Zeit, Material oder Geld spenden wollen mit denjenigen, die diese Spende sinnvoll für Geflüchtete einsetzen.</li>
+        <li>Außerdem verbindet sie bestehende Angebote und liefert Informationen, Tipps, und Anregungen rund um das Thema Integration.</li>
+        </ul>
+
+        <p>Mit <em>bunt und verbindlich</em> wollen wir nicht einfach eine weitere Plattform unter vielen schaffen. Stattdessen wollen wir die Bereitschaft zum Engagement mit anderen Engagierten verknüpfen, um so einen größeren Wirkungsgrad zu entfalten und die existierenden Angebote zu stärken.</p>
       answer2: |-
-        bunt und verbindlich hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Ich mache X, wenn du mir mit Y hilfst.“
+        <p><em>bunt und verbindlich</em> hilft dabei, Akteure für Integrationsvorhaben zusammenzubringen. Dazu können öffentliche Versprechen abgegeben werden. Die Versprechen haben die Form „Ich mache X, wenn du mir mit Y hilfst.“</p>
 
-        Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“
+        <p>Ein Beispiel: „Wir versprechen, 15 Gitarren zu spenden, wenn sich 3 Ehrenamtliche finden, die diese Gitarren für den Musikunterricht mit geflüchteten Kindern nutzen.“</p>
 
-        Bei jedem Versprechen wird vor der Veröffentlichung überprüft, ob die Inhalte unseren Nutzungsbedingungen entsprechen.
-        Das veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit für Ihr eigenes Versprechen nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.
+        <p>Bei jedem Versprechen wird vor der Veröffentlichung überprüft, ob die Inhalte unseren Nutzungsbedingungen entsprechen.
+        Das veröffentlichte Versprechen hat eine bestimmte Laufzeit, um die benötigte Anzahl von Unterstützern zu erreichen. Sie können diese Zeit für Ihr eigenes Versprechen nutzen, um gezielt nach Unterstützern zu suchen, z.B. über Ihre Social Media Kanäle.</p>
 
-        Ist das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.
+        <p>Ist das Versprechen abgelaufen, erhalten Sie und Ihre Unterstützer eine Benachrichtigung, ob Ihr Ziel erreicht wurde oder nicht.</p>
 
-        Erfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren.
+        <p>Erfolgreiche Versprechen bitten wir, nach einer bestimmten Frist einen Bericht zu veröffentlichen. Besonders spannende Erfolgsgeschichten veröffentlichen wir zusätzlich auf unserem Blog. Ziel ist dabei, Best Practice Beispiele zusammenzustellen, die andere inspirieren.</p>
       answer3: |-
-        Sie registrieren sich, wenn Sie ein Versprechen einstellen.
-        Als Unterzeichner müssen Sie sich nicht registrieren.
-      answer4: Ja, die Nutzung ist kostenfrei.
+        <p>Sie registrieren sich, wenn Sie ein Versprechen einstellen.
+        Als Unterzeichner müssen Sie sich nicht registrieren.</p>
+      answer4: "<p>Ja, die Nutzung ist kostenfrei.</p>"
       answer5: |-
-        Jedes Versprechen wird von der Redaktion innerhalb von 1-3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten nicht zu veröffentlichen.
-        Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.
-      answer6: Klicken Sie unten im Versprechensformular auf den "Zur Vorschau" Button. Wenn Ihnen die Vorschau zusagt, und Sie das Versprechen nicht weiter bearbeiten wollen, können Sie oben rechts das Versprechen an die Redaktion verschicken. Bitte beachten Sie, dass danach eine Änderung am Versprechen nicht mehr möglich ist.
-      answer7: "Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen. \n\nDas ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.\n\nBei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen."
-      answer8: |-
-        Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.
+        <p>Jedes Versprechen wird von der Redaktion innerhalb von 1–3 Werktagen freigeschaltet. Wir behalten uns vor, Versprechen mit missbräuchlichen Inhalten nicht zu veröffentlichen.
+        Sie können den Status Ihres Versprechens in Ihrem Profil einsehen.</p>
+      answer6: "<p>Klicken Sie unten im Versprechensformular auf den „Zur Vorschau“ Button. Wenn Ihnen die Vorschau zusagt, und Sie das Versprechen nicht weiter bearbeiten wollen, können Sie oben rechts das Versprechen an die Redaktion verschicken. Bitte beachten Sie, dass danach eine Änderung am Versprechen nicht mehr möglich ist.</p>"
+      answer7: |-
+        <p>Nachdem Sie ein Versprechen zum Freischalten an die Redaktion gesendet haben, können Sie selbst keine Änderungen mehr vornehmen.</p>
 
-        Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.
-      question1: Was ist *bunt und verbindlich?*
+        <p>Das ist deshalb nicht möglich, weil sich die Unterschriften der Unterzeichner auf den genauen Wortlaut des Versprechens beziehen. Durch eine nachträgliche Änderung würden diese Unterschriften nicht mehr gültig sein.</p>
+
+        <p>Bei kleineren Änderungen, z.B. bei Grammatikfehlern, können Sie die Redaktion kontaktieren, um die Änderung vorzunehmen. Bei größeren Änderungen müssen Sie das Versprechen neu einstellen. Sie können in diesem Fall die bisherigen Unterzeichner mit der Neuigkeiten-Funktion bitten, das neue Versprechen ebenfalls zu unterzeichnen. Danach können sie das alte Versprechen löschen.</p>
+      answer8: |-
+        <p>Solange das Versprechen noch nicht abgelaufen ist, können Sie dazu die Neuigkeiten-Funktion nutzen. Diese finden Sie weiter unten auf der Versprechens-Seite. Alle Unterzeichner erhalten dann eine Benachrichtigung per Email.</p>
+
+        <p>Ist ein Versprechen erfolgreich, erhalten Sie die Emailadressen aller Unterzeichner, damit Sie das weitere Vorgehen koordinieren können.</p>
+      question1: Was ist <em>bunt und verbindlich?</em>
       question2: Wie funktioniert das?
       question3: Wie kann ich mich registrieren?
       question4: Ist die Nutzung kostenfei?
@@ -1021,9 +1234,14 @@ de:
       question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
       question8: Wie kann ich mit den Unterzeichnern von meinem Versprechen Kontakt aufnehmen?
     home:
+      main_text_html: |-
+        <p class="u-mb"><i>bunt und verbindlich</i> setzt sich für eine offene, tolerante, bunte und vielfältige Gesellschaft ein. Deshalb laden wir jeden Interessierten herzlich ein, sich durch <i>bunt und verbindlich</i> für Geflüchtete zu engagieren. Das Miteinander auf unserer Plattform hat einen verbindlichen Charakter, der auf Verlässlichkeit basiert. Wir möchten Unternehmen und Menschen, die sich allein oder in Vereinen und Initiativen für die Integration von Geflüchteten engagieren, auf Augenhöhe zusammenbringen. Wir wollen ihr Engagement bündeln und unterstützen. Dafür müssen wir gegenseitig aufeinander zählen können.</p>
+
+        <p>Wir freuen uns auf eine große Bandbreite an Versprechen, auf Ihre Ideen und Ihre Kreativität.</p>
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
+      more_pledges: Mehr anzeigen
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
       successful: Erfolgreiche Versprechen
@@ -1052,9 +1270,9 @@ de:
         <b>Mehr Infos:</b> Hier können Sie Informationen zu Ihrem Unternehmen und zusätzliche Details zum Versprechen einstellen. Sie können erläutern, welche Zielsetzungen Sie mit Ihrem Versprechen verfolgen, warum Sie sich engagieren und was Sie sich von den Unterzeichnern Ihres Versprechens wünschen.<br /><br />
         <b>Bild:</b> Sie können optional ein Bild hochladen, welches Sie gern auf der Seite Ihres Versprechens zeigen möchten. Das kann beispielsweise ein Bild Ihres Unternehmens oder Ihrer Initiative sein.<br /><br />
         <b>Themenbereiche:</b> Sie können hier Themenbereiche auswählen, die auf Ihr Versprechen zutreffen. Diese sogenannten „Tags“ helfen anderen Nutzern, gezielt nach bestimmten Themenbereichen zu suchen (z.B. Versprechen, die sich auf geflüchtete Familien beziehen).<br /><br />
-        <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.<br /><br />
+        <b>Nutzerkonto:</b> Hier können Sie alle notwendigen Daten für Ihr Nutzerkonto speichern. Die Daten müssen nur einmalig eingegeben werden. Danach werden Sie durch Ihr Login automatisch abgerufen. Sie können Ihre Versprechen also in mehreren Schritten bearbeiten, ohne Ihre Daten erneut eingeben zu müssen.
       p5_html: |-
-        Alle Versprechen können im Nachhinein bearbeitet werden, so lange sie noch nicht veröffentlicht sind. Unter dem Menupunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
+        Alle Versprechen können im Nachhinein bearbeitet werden, solange sie noch nicht veröffentlicht sind. Unter dem Menüpunkt „Mein Konto“, den Sie nach erfolgtem Login oben rechts sehen, können Sie ihre Daten und Ihre Versprechen jederzeit bearbeiten. <br />
         <br />
         Erst nachdem die Versprechen von Ihnen an die Redaktion zur Freigabe geschickt wurden, können sie nicht mehr verändert werden. Da die Unterzeichner eines Versprechens einen konkreten Wortlaut unterschreiben, ist eine Veränderung der Versprechen nach deren Veröffentlichung nicht mehr möglich. Rechtschreibfehler und kleine Korrekturen können durch die Redaktion des <em>bunt und verbindlich</em> Teams umgesetzt werden. Bitte senden Sie dazu eine Mail an <em>redaktion@buntundverbindlich.de.</em>
       p6_html: Nachdem sie Ihr Versprechen fertig erstellt haben, können Sie es zur <em>bunt und verbindlich</em> Redaktion schicken, damit diese Ihr Versprechen veröffentlicht. Alle Versprechen werden innerhalb von 1–3 Werktage nach Beantragung durch den Initiator freigeschaltet.
@@ -1064,10 +1282,16 @@ de:
       q4: Wie wird mein Versprechen veröffentlicht?
     impressum:
       header: Impressum
-      text_html: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p><br />\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p><br />\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p><br />\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>"
+      text_html: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p><br />\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p><br />\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p><br />\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p><br />\n\n<p><strong>Impressum Haftungshinweis</strong><br />\nTrotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n</p><br />\n<p>\nDie Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.\n</p><br />\n<p>\nBei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb des Verantwortungsbereiches des Betreibers liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten, in dem der Betreiber von den Inhalten Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.\nDer Betreiber erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der gelinkten/verknüpfte Seiten hat der Betreiber keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller gelinkten /verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Betreiber eingerichteten Gästebüchern, Diskussionsforen und Mailinglisten. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.\n</p><br />\n<p>\nAlle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!\n</p><br />\n<p>\nDas Copyright für veröffentlichte, vom Betreiber selbst erstellte Objekte bleibt allein beim Betreiber der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Betreibers nicht gestattet.\n</p><br />\n<p>\nWir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.\n</p><br />\n<p>\nDer Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.\n</p>"
     not_found:
       content: Tut uns leid, die angefragte Seite existiert leider nicht oder Sie haben keine Berechtigung dafür.
       heading: Seite nicht gefunden
+    privacy:
+      header: Datenschutzhinweise bunt und verbindlich
+      text_html: "<p class=\"c-text-block\"><b>Geltungsbereich</b><br />\nDiese Datenschutzerklärung klärt Nutzer über Art, Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten durch die Initiative D21, Reinhardtstr. 38, 10117 Berlin (verantwortlicher Anbieter) auf dieser Webseite auf. \n</p>\n\n<p class=\"c-text-block\">Personenbezogene Daten sind Informationen, mit deren Hilfe eine Person bestimmt werden kann oder bestimmbar ist. Personenbezogene Daten werden vom Anbieter dieser Webseite nur dann erhoben, genutzt und weiter gegeben, wenn dies gesetzlich erlaubt ist oder der Nutzer seine Einwilligung zur Datenerhebung und –verwendung erteilt hat.\n</p>\n\n<p class=\"c-text-block\"><b>Registrierung auf bunt & verbindlich</b><br />\nDer Nutzer hat die Möglichkeit sich auf der Webseite ein Profil einzurichten. Die Profildaten dienen zum Austausch der Nutzer untereinander. Dabei werden Emailadresse und Vor- und Zuname benötigt. Die weiteren Registrierungsdaten sind optional. Die für die Registrierung erforderlichen und eingegeben Daten werde für den Zweck der Nutzung der Webseite verwendet. Die Nutzer können über angebotsrelevante Informationen per E-Mail informiert werden.  \n</p>\n\n<p class=\"c-text-block\">Der Nutzer willigt ein, dass er Informationen (Änderungen der Webseite, Informationen über eingestellte Versprechen sowie Informationen über Veranstaltungen die von bunt und verbindlich organisiert werden) über die Webseite in Form von E-Mails erhält.\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung der Emailadresse</b><br />\nNach Ablauf eines Versprechens erhält der Nutzer, der ein Versprechen auf der Webseite eingestellt hat, die Möglichkeit die Unterstützer des Versprechens mit Hilfe der veröffentlichten Emailadresse zu kontaktieren. Der Nutzer hat die Möglichkeit Unterstützer via Email zu kontaktieren, wenn der Unterstützer seine Emailadresse auf der Webseite veröffentlicht hat. Die Emailadresse von Nutzern die anonym unterzeichnen, werden nicht ohne die schriftliche Einwilligung vom Unterstützer an Nutzer weitergegeben, die ein Versprechen einstellen. \n</p>\n\n<p class=\"c-text-block\"><b>Speicherung der personenbezogenen Daten</b><br /> \nDie auf der Webseite erhobenen und verwendeten Daten werden solange vom Anbieter gespeichert, wie es für die Beantwortung der Anfrage, der Nutzung des Angebots oder zur Erfüllung der eingestellten Versprechen erforderlich ist. \n</p>\n\n<p class=\"c-text-block\">Wenn ein Nutzer auf der Webseite widerrechtliche Inhalte hinterlässt, wird die IP-Adresse des Nutzers zur Sicherheit des Anbieters gespeichert um gegebenenfalls die Identität des Nutzers feststellen zu können. Bei strafrechtlich relevanten Inhalten auf der Webseite werden diese Informationen an die zuständigen Behörden zur weiteren Strafverfolgung weitergeleitet. \n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von Facebook-Plugins</b><br />\nDie Webseite verwendet Plugins in geschützter Form des Anbieters facebook.com. Diese sind an einem der Facebook-Logi erkennbar (weißes „f“ auf blauer Kachel oder ein „Daumen hoch“-Zeichen („Like-Button“ oder „Gefällt mir-Button“)) oder sind mit dem Zusatz “Facebook Social Plugin” gekennzeichnet. Der „Gefällt mir-Button“ in geschützter Form zeichnet sich durch die Texterweiterung „Mit Facebook verbinden“ aus.\n</p>\n\n<p class=\"c-text-block\">Wenn Sie den Button “Mit Facebook verbinden” anklicken, erscheint der oben genannte „Gefällt-mir-Button“. Erst wenn Sie diesen „Gefällt-mir-Button“ anklicken, baut Ihr Browser eine Verbindung mit den Servern von Facebook auf. Der Inhalt des Plugins wird dann von Facebook direkt an Ihren Browser übermittelt und von diesem in die Webseite eingebunden. Wir als Betreiber der Seite www.initiatived21.de haben daher keinen Einfluss auf den Umfang der Daten, die Facebook mit Hilfe dieses Plugins erhebt.\n</p>\n\n<p class=\"c-text-block\">Durch die Einbindung der Plugins in Verbindung mit Ihrer Einwilligung erhält Facebook die Information, dass Sie die entsprechende Seite unseres Internetauftritts aufgerufen haben. Sind Sie bei Facebook eingeloggt, kann das Netzwerk den Besuch Ihrem Account zuordnen. Wenn Sie mit den Plugins interagieren, zum Beispiel den „Like-Button“ betätigen oder einen Kommentar abgeben, wird die entsprechende Information von Ihrem Browser direkt an Facebook übermittelt und dort gespeichert. Wenn Sie nicht wünschen, dass Facebook Ihre Daten übermittelt bekommt und verarbeitet, empfehlen wir Ihnen die o.g. Buttons nicht anzuklicken.\n</p>\n\n<p class=\"c-text-block\">Zweck und Umfang der Datenerhebung und die weitere Verarbeitung und Nutzung der Daten durch Facebook sowie Ihre Rechte und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre entnehmen Sie bitte den Hinweisen zum Datenschutz des Anbieters Facebook unter <a href=\"http://www.facebook.com/privacy/explanation.php\" target=\"_blank\">http://www.facebook.com/privacy/explanation.php</a>.\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von Google-Plugins</b><br />\nDie Webseite verwendet die “+1″-Schaltfläche des sozialen Netzwerkes Google Plus, welches von der Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States betrieben wird (“Google”). Der Button ist an dem Zeichen “+1″ auf weißem oder farbigen Hintergrund erkennbar.\n</p>\n\n<p class=\"c-text-block\">Wenn Sie eine Webseite unseres Internetauftritts aufrufen, die eine solche Schaltfläche enthält, baut Ihr Browser eine direkte Verbindung mit den Servern von Google auf. Der Inhalt der “+1″-Schaltfläche wird von Google direkt an Ihren Browser übermittelt und von diesem in die Webseite eingebunden. Wir haben daher keinen Einfluss auf den Umfang der Daten, die Google mit der Schaltfläche erhebt. Wenn Sie Google Plus-Mitglied sind und nicht möchten, dass Google über unseren Internetauftritt Daten über Sie sammelt und mit Ihren bei Google gespeicherten Mitgliedsdaten verknüpft, müssen Sie sich vor Ihrem Besuch unseres Internetauftritts bei Google Plus ausloggen.\n</p>\n\n<p class=\"c-text-block\">Zweck und Umfang der Datenerhebung und die weitere Verarbeitung und Nutzung der Daten durch Google sowie Ihre Rechte und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre entnehmen Sie bitte den Hinweisen zum Datenschutz des Anbieters Googles zu der “+1″-Schaltfläche: <a href=\"http://www.google.com/intl/de/+/policy/+1button.html\" target=\"_blank\">http://www.google.com/intl/de/+/policy/+1button.html</a>\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung des Newsletter-Tools CleverReach</b><br />\nFür unsere Webseite verwenden wir das Newsletter-Tool CleverReach für die Erstellung und Verwaltung des Newsletters. Die erforderlichen Daten der Newsletter-Empfänger werden dabei webbasiert auf einem Server von CleverReach in einem Bereich gehostet, zu dem ausschließlich die Initiative D21 einen passwortgeschützten Zugang hat. Auf der Vertragsbasis zwischen Cleverreach.de und dem Anbieter wird zugesichert, dass  CleverReach weder auf die Daten der Newsletter-Empfänger zugreift noch sie in irgendeiner anderen Weise nutzt. Das Newsletter-Tool analysiert die Reichweite der jeweiligen Newsletter, um sicherzustellen, dass die Sendungen die Empfänger tatsächlich erreichen. Die dabei erkennbaren individuellen Verhaltensmuster werden lediglich für eine statistische Auswertung des Newsletter-Erfolges verwendet und keinesfalls an Dritte weitergegeben oder zu anderen Zwecken eingesetzt. Mit der Anmeldung und Nutzung des Newsletters auf dieser Website erklären Sie sich mit der Datenverarbeitung durch CleverReach in dem ersichtlichen Umfang einverstanden.\t\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von LinkedIn</b><br />\nAuf unseren Seiten sind Plugins des sozialen Netzwerks LinkedIn der LinkedIn Corporation, 2029 Stierlin Court, Mountain View, CA 94043, USA (nachfolgend \"LinkedIn\") integriert. Die LinkedIn-Plugins erkennen Sie an dem LinkedIn-Logo oder dem \"Recommend-Button\" (\"Empfehlen“) auf unserer Seite. Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem LinkedIn-Server hergestellt. LinkedIn erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den LinkedIn „Recommend-Button“ anklicken während Sie in Ihrem LinkedIn-Account eingeloggt sind,\nkönnen Sie die Inhalte unserer Seiten auf Ihrem LinkedIn-Profil verlinken. Dadurch kann LinkedIn den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch LinkedIn erhalten. Details zur Datenerhebung (Zweck, Umfang, weitere Verarbeitung, Nutzung) sowie zu Ihren Rechten und Einstellungsmöglichkeiten können Sie den Datenschutzhinweisen von LinkedIn entnehmen. Diese Hinweise finden Sie unter: <a href=\"https://www.linkedin.com/legal/privacy-policy\" target=\"_blank\">LinkedIn-Datenschutzerklärung</a>\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von XING</b><br />\nAuf unserer Webseite wird der \" XING Share-Button\" eingesetzt. Beim Aufruf dieser Internetseite wird über Ihren Browser kurzfristig eine Verbindung zu Servern der XING AG (\" XING \") aufgebaut, mit denen die \" XING Share-Button\"-Funktionen (insbesondere die Berechnung/Anzeige des Zählerwerts) erbracht werden. XING speichert keine personenbezogenen Daten und insbesondere keine IP-Adresse von den Nutzern über den Aufruf dieser Webseite. Es findet auch keine Auswertung des Nutzungsverhaltens über die Verwendung von Cookies im Zusammenhang mit dem \" XING Share-Button\" statt. Die jeweils aktuellen Datenschutzinformationen zum \" XING Share-Button\" und ergänzende Informationen können auf dieser Internetseite abgerufen werden: <a href=\"https://www.xing.com/app/share?op=data_protection\" target=\"_blank\">Xing-Datenschutzerklärung</a>.\n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von Cookies</b><br />\nCookies sind kleine Dateien, die es ermöglichen, auf dem Zugriffsgerät der Nutzer (PC, Smartphone o.ä.) spezifische, auf das Gerät bezogene Informationen zu speichern. Sie dienen zum einen der Benutzerfreundlichkeit von Webseiten und damit den Nutzern (z.B. Speicherung von Logindaten). Zum anderen dienen sie dazu, die statistischen Daten der Webseitennutzung zu erfassen und sie zwecks Verbesserung des Angebotes analysieren zu können. Die meisten der vom Anbieter verwendeten Cookies sind so genannte „Session-Cookies“, die nach dem Besuch des Nutzers automatisch gelöscht werden. Die Nutzer können auf den Einsatz der Cookies Einfluss nehmen. Die meisten Browser verfügen über eine Option mit der das Speichern von Cookies eingeschränkt oder komplett verhindert wird. Allerdings wird darauf hingewiesen, dass die Nutzung und insbesondere der Nutzungskomfort ohne Cookies eingeschränkt werden. \n</p>\n\n<p class=\"c-text-block\"><b>Verwendung von Google Analytics</b><br />\nDie Webseite benutzt Google Analytics, einen Webanalysedienst der Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA („Google“). Google Analytics verwendet ebenfalls Cookies, also Textdateien, die auf Ihrem Computer gespeichert werden und eine Analyse der Nutzung unseres Angebots durch Google ermöglicht. Die durch den Cookie erzeugten Informationen über Benutzung dieser Website durch die Nutzer werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird die IP-Adresse der Nutzer von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Die IP-Anonymisierung ist auf dieser Website aktiv. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um die Nutzung der Website durch die Nutzer auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Die Nutzer können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; Dieses Angebot weist die Nutzer jedoch darauf hin, dass sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Die Nutzer können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href=\"http://tools.google.com/dlpage/gaoptout?hl=de\" target=\"_blank\">http://tools.google.com/dlpage/gaoptout?hl=de</a>.\n</p>\n\n<p class=\"c-text-block\"><b>Widerruf, Änderung, Berichtigung der personenbezogenen Daten</b><br />\nDer Nutzer hat das Recht, auf Antrag Auskunft über die personenbezogenen Daten zu erhalten, die über ihn gespeichert wurden. Zusätzlich hat der Nutzer das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung seiner personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht. \n</p>\n\n<p class=\"c-text-block\">Für Fragen des Datenschutzes schreiben Sie uns eine Email: redaktion@buntundverbindlich.de\n</p>"
+    terms:
+      header: Nutzungsbedingungen bunt und verbindlich
+      text_html: "<p class=\"c-text-block\">Die nachfolgenden Bedingungen regeln die Nutzung der Plattform „bunt und verbindlich“ zwischen dem Anbieter der Plattform (Initiative D21 e.V. , Reinhardtstr. 38, 10117 Berlin) und den Nutzern.  Mit der Registrierung stimmt der Nutzer diesen Nutzungsbestimmungen zu.</p>\n\n<p class=\"c-text-block\">Bei Fragen zum Datenschutz lesen Sie bitte unsere <a href=\"privacy\">Datenschutzbestimmungen</a> oder schreiben Sie uns eine Email an redaktion@buntundverbindlich.de</p>\n\n<p class=\"c-text-block\"><b>1. Registrierung und Nutzung</b></p>\n\n<p class=\"c-text-block\">\na. Für die vollumfängliche Nutzung der Plattform ist eine Registrierung notwendig. Die Registrierung erfordert eine gültige E-Mailadresse.<br />\nb. Die E-Mailadresse und der Benutzername dürfen keine diskriminierenden, rassistischen, beleidigenden oder verunglimpfenden Wörter, Begriffe oder ähnliche Bestandteile enthalten. Für den Fall behalten wir uns eine Löschung des Nutzerkontos vor.\n</p>\n\n<p class=\"c-text-block\"><b>2. Plattform Service</b></p> \n\n<p class=\"c-text-block\">\na. Wir stellen den Nutzern die Vermittlung von Versprechen in Form von Sach-, Geld- oder Dienstleistungen oder auch Gesuchen zur Verfügung. Die Versprechen haben das Ziel, hilfsbereite Organisationen und Ehrenämtler im Rahmen ihres Engagements für Integration zu unterstützen.<br /> \nb. Im Rahmen unserer personellen und wirtschaftlichen Ressourcen unterstützen wir die Nutzer im Matching der einzelnen Versprechen.<br /> \nc. Wir sind sehr bemüht den Betrieb dieser Plattform stets verfügbar zu halten. Aufgrund von Wartung und Sicherheit kann es jedoch zu Einschränkungen kommen.  Einen Anspruch auf ständige Verfügbarkeit können wir den Nutzern nicht gewähren. \n</p>\n\n<p class=\"c-text-block\"><b>3. Nutzung der Plattform</b></p>\n\n<p class=\"c-text-block\">\na. Alle Nutzer verpflichten sich keine Versprechen auf der Plattform einzustellen oder Beiträge, Inhalte und Kommentare zu posten:</p>\n\n<p class=\"c-text-block\">\n- die gegen gesetzliche Vorschriften oder die guten Sitten verstoßen,<br /> \n- Versprechen einzustellen die gegen eine Gebühr oder ein Entgelt vom Unterstützer erbracht werden müssen oder Links zu Webseiten, Banner oder sonstige Verweise enthalten,<br /> \n- Versprechen einzustellen die gegen gesetzliche Vorschriften verstoßen, insbesondere Versprechen und Gesuche die sich auf Medikamente, Waffen, Munition, Tiere, Drogen, Alkohol, Betäubungsmittel, Raubkopien, Plagiate, Artikel die durch Aufsichtsbehörden indiziert wurden oder nur unter Auflagen oder altersbeschränkt in Umlauf gebracht werden dürfen, beziehen,<br /> \n- die diskriminierende, beleidigende, verunglimpfende, rassistische, antisemitische, rechtsextremistische oder sonstige extremistischen Aussagen oder Bestandteile enthalten,<br /> \n- die Rechte Dritter, insbesondere Urheberrechte und Markenrechte, verletzen,<br /> \n- die Spam, Kettenbriefe oder kommerzielle Werbung enthalten,\n</p>\n\n<p class=\"c-text-block\">\nb. Beiträge, Inhalte, Kommentare oder Versprechen die gegen diese Bedingungen verstoßen, werden entfernt sowie der Nutzer mit seinem Profil von der Plattform dauerhaft gelöscht.<br />\nc. Der Nutzer ist uns bei einem etwaigen Schaden die sich aus einem Verstoß ergibt, zum Ausgleich verpflichtet.\n</p>\n\n<p class=\"c-text-block\"><b>4. Haftungshinweis</b></p>\n\n<p class=\"c-text-block\">\na. Für Nutzerinhalte sowie eingestellte Versprechen der Nutzer übernehmen wir keine Gewähr auf Richtigkeit, Aktualität, Vollständigkeit oder Qualität.<br />  \nb. Soweit nichts anderes bestimmt ist haften wir nur Schadensersatzansprüche aufgrund einer Verletzung des Lebens, des Körpers, der Gesundheit.\n</p>\n\n<p class=\"c-text-block\"><b>5. Schlussbestimmung</b></p>\n\n<p class=\"c-text-block\">\na. Wir sind berechtigt den Dienst von bunt und verbindlich ganz oder teilweise einzustellen.<br /> \nb. Das Recht auf Änderungen der Nutzungsbedingungen behalten wir uns vor. \n</p>"
   paths:
     create_session: "/de/users/sign_in"
     destroy_session: "/de/users/sign_out"
@@ -1194,6 +1418,10 @@ de:
       greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
       subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
+    pledge_deleted:
+      greeting: Liebe/r Herr/Frau %{name}
+      paragraph1: 'Das von Ihnen unterzeichnete Versprechen wurde von dem Initiator gelöscht:'
+      subject: Ihr unterzeichnetes Versprechen wurde gelöscht
     pledge_failed:
       greeting: Liebe/r Herr/Frau %{name}
       link: Zum Versprechen
@@ -1221,7 +1449,17 @@ de:
       greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
-      third_paragraph: 'Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: <Hier kommt ein Text, damit wir Spassversprechen möglichst ausschliessen.>'
+      third_paragraph: |-
+        Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: "Versprochen ist versprochen und wird nicht gebrochen“. Getreu diesem
+        Motto verstehen wir das „verbindlich“ bei „bunt und verbindlich“. Auf
+        dieser Plattform werden keine Verträge geschlossen. Wir vertrauen auf
+        unsere Nutzercommunity, dass ein Versprechen eingehalten wird. Es sollte
+        daher jedem Nutzer bewusst sein, dass ein Einstellen von Versprechen oder
+        auch das Unterzeichnen einen verbindlichen Charakter hat, und wir
+        Spaßunterzeichnungen oder Versprechen, die nicht ernst gemeint sind,
+        kritisch sehen und im Wiederholungsfall auch sanktionieren. Lasst uns
+        daher gemeinsam tolle Versprechen umsetzen, die für alle Nutzer der
+        Plattform vor allem bunt aber auch verbindlich sind.
   tags:
     names:
       accomodation: Unterbringung
