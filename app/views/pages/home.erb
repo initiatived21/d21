@@ -25,6 +25,19 @@
                                                  params: params %>
   </section>
 
+  <section class="c-pledge-list o-wrapper u-mt u-mb">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-check">
+          <%= t('.successful') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @successful_pledges, filter: :successful, max_pledges: 6,
+                                                 params: params %>
+  </section>
+
   <section class="c-pledge-list o-wrapper u-mb-large">
     <header class="c-pledge-list__header">
       <h2 class="c-pledge-list__title">
