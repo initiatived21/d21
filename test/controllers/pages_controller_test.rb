@@ -6,6 +6,13 @@ describe PagesController do
       get :home, params: { locale: 'de' }
       assert_response :success
     end
+
+    it 'should set instance variables' do
+      get :home, params: { locale: 'de' }
+      assert_not_nil assigns[:recommended_pledges]
+      assert_not_nil assigns[:successful_pledges]
+      assert_not_nil assigns[:newest_pledges]
+    end
   end
 
   describe "GET 'faq'" do
