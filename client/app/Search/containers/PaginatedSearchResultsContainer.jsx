@@ -9,11 +9,32 @@ import { NUM_RESULTS_PAGINATION } from '../../lib/config'
 import localPath from '../../lib/browser/localPath'
 
 const mapStateToProps = function(state, ownProps) {
+  let results = filterResults(deNormalizePledges(state.entities), state.searchResults)
+
+  // TODO: Normal search results are not sorted yet, only "all pledges" or empty queries
+  if (ownProps.query === '') {
+    results = sortResults(results)
+  }
+
   return {
-    results: filterResults(deNormalizePledges(state.entities), state.searchResults),
+    results,
     query: ownProps.query,
     isLoading: state.searchLoadingState,
   }
+}
+
+function sortResults(pledges) {
+  return pledges.sort(function(a, b) {
+    // Sort on creation time, descending, first
+    let difference = Date.parse(b.created_at) - Date.parse(a.created_at)
+
+    // Sort on id, ascending, third
+    if (difference === 0) {
+      difference = a.id - b.id
+    }
+
+    return difference
+  })
 }
 
 function filterResults(pledges, resultIds) {
