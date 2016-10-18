@@ -19,10 +19,11 @@ class PledgesController < ApplicationController
   end
 
   def show
-    pledge = Pledge.find(params[:id])
-    authorize pledge
+    @pledge = Pledge.includes(:initiator).find(params[:id])
+    @initiator = @pledge.initiator
+    authorize @pledge
     @pledge_props = {
-      pledge: serialize(pledge),
+      pledge: serialize(@pledge),
       forms: {
         signPledgeForm: {
           action: signatures_path(id: params[:id], locale: I18n.locale),
@@ -46,10 +47,10 @@ class PledgesController < ApplicationController
           method: 'PATCH'
         }
       },
-      user: serialize(pledge.initiator),
-      signatures: serialize(pledge.signatures.confirmed),
-      updates: pledge.updates,
-      comments: pledge.comments
+      user: serialize(@initiator),
+      signatures: serialize(@pledge.signatures.confirmed),
+      updates: @pledge.updates,
+      comments: @pledge.comments
     }
   end
 
@@ -199,6 +200,11 @@ class PledgesController < ApplicationController
 
     if pledge_params[:tag_ids]
       pledge_params[:tag_ids] = pledge_params[:tag_ids].split(',')
+    end
+
+    pledge_params[:locale] = params[:locale]
+    if pledge_params[:initiator]
+      pledge_params[:initiator][:locale] = params[:locale]
     end
 
     pledge_params

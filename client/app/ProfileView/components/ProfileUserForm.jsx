@@ -15,7 +15,7 @@ export default class ProfileUserForm extends ChildComponent {
     const { formConfig, afterResponse } = this.props
 
     return (
-      <Form ajax
+      <Form ajax requireValid
         className="u-2/3@l"
         model='user'
         formObjectClass={UserFormObject}

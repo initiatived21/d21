@@ -109,30 +109,27 @@ export default class PledgeForm extends ChildComponent {
             />
           </div>
 
-          {/*
           <div className="o-layout o-layout--small u-mb">
             <div className="o-layout__item u-1/4@m u-mb-tiny">
-              <Label attribute="image" />
-            </div>
-            <div className="o-layout__item u-3/4@m">
               <div className="o-marginal">
-                <ImageInput
-                  type="pledge-image"
-                  className="o-marginal__content"
-                  attribute="image"
-                  previewArea={300000}
-                  aspectRatio={3/2}
-                  scaleToX={1200}
-                  scaleToY={800}
-                />
+                <Label className="o-marginal__content" attribute="image" />
                 <Tooltip className="o-marginal__note">
                   {this.t('.tooltip.image')}
                 </Tooltip>
-                <Errors attribute='image' />
               </div>
             </div>
+            <div className="o-layout__item u-3/4@m">
+              <ImageInput
+                type="pledge-image"
+                attribute="image"
+                previewArea={300000}
+                aspectRatio={3/2}
+                scaleToX={1200}
+                scaleToY={800}
+              />
+              <Errors attribute='image' />
+            </div>
           </div>
-            */}
 
           <div className="o-layout o-layout--small">
             <div className="o-layout__item u-1/4@m u-mb-tiny">

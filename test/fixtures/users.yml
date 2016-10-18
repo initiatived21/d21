@@ -4,3 +4,4 @@ pledger:
   organization: pledgerOrganiztion
   email: pledgerEmail
   confirmed_at: 2000-01-01
+  locale: de

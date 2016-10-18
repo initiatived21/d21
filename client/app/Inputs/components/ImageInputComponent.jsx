@@ -1,12 +1,10 @@
 import React, { PropTypes } from 'react'
-import FontAwesome from 'react-fontawesome'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import ImageDropzone from './ImageDropzone'
 import ImagePreview from './ImagePreview'
 import ImageCrop from './ImageCrop'
 import {
-  IMAGE_STATE_NONE, IMAGE_STATE_LOADING, IMAGE_STATE_LOADED,
-  IMAGE_STATE_CROPPED, IMAGE_STATE_SERVER
+  IMAGE_STATE_LOADING, IMAGE_STATE_LOADED, IMAGE_STATE_SERVER
 } from '../../lib/reducers/imageInput'
 
 export default class ImageInputComponent extends ChildComponent {

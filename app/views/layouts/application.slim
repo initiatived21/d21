@@ -3,14 +3,31 @@ html lang=I18n.locale
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
+
+    meta property="og:url" content="#{request.original_url}"
+    - if controller_name == 'pledges' && action_name == 'show'
+      meta property="og:type" content="article"
+      meta property="og:title" content="#{@pledge.title}"
+      meta property="og:description" content="#{@pledge.pledge_text}"
+      - if @pledge.image.present?
+        meta property="og:image" content="#{request.base_url}#{@pledge.image}"
+      - else
+        meta property="og:image" content="#{request.base_url}/images/buv-logo-facebook.png"
+        meta property="og:image:width" content="1200"
+        meta property="og:image:height" content="628"
+    - else
+      meta property="og:title" content="bunt und verbindlich"
+      meta property="og:image" content="#{request.base_url}/images/buv-logo-facebook.png"
+      meta property="og:image:width" content="1200"
+      meta property="og:image:height" content="628"
+
     title
       | bunt und verbindlich
 
     = csrf_meta_tags
     = action_cable_meta_tag
 
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"
 
     - unless params['nojs'] == '1'

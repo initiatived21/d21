@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
-import I18n from 'i18n-js'
 import ChildComponent from '../../lib/Base/components/ChildComponent'
 import SessionContainer from '../../UserSession/containers/SessionContainer'
-import LanguageNav from './LanguageNav'
+/* import LanguageNav from './LanguageNav' */
 import localPath from '../../lib/browser/localPath'
 import { NEWSLETTER_URL } from '../../lib/config'
 

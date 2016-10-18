@@ -28,6 +28,7 @@ describe('<Pledge />', function () {
     },
     signatures_count: 5,
     created_at: '2016-09-01T12:45:22.964Z',
+    locale: 'de',
     user: {
       name: '',
       avatar: {

@@ -4,7 +4,8 @@ import TagList from '../../TagList/components/TagList'
 import PledgeLocation from './PledgeLocation'
 import PledgeQuote from './PledgeQuote'
 import PledgeData from './PledgeData'
-import SocialMediaButtons from '../../SocialMediaButtons/components/SocialMediaButtons'
+import SocialMediaButtons
+  from '../../SocialMediaButtons/components/SocialMediaButtons'
 import PledgeImage from './PledgeImage'
 import PledgeDescription from './PledgeDescription'
 import PledgeCreatedAt from './PledgeCreatedAt'
@@ -28,12 +29,13 @@ export default class Pledge extends ChildComponent {
     created_at: PropTypes.string.isRequired,
     user: PropTypes.object.isRequired,
     tags: PropTypes.array.isRequired,
+    locale: PropTypes.string.isRequired,
   }
 
   render() {
     const {
-      title, content, amount, who, requirement, location, deadline, description, image,
-      aasm_state, signatures_count, created_at, user, tags
+      title, content, amount, who, requirement, location, deadline, locale,
+      description, image, aasm_state, signatures_count, created_at, user, tags
     } = this.props
 
     const initiator = user.organization || user.name
@@ -43,7 +45,10 @@ export default class Pledge extends ChildComponent {
     ) : null
 
     let pledgeCreatedAt
-    if (aasm_state === 'active' || aasm_state === 'successful' || aasm_state === 'failed') {
+    if (
+      aasm_state === 'active' || aasm_state === 'successful' ||
+        aasm_state === 'failed'
+    ) {
       pledgeCreatedAt = (
         <PledgeCreatedAt>{created_at}</PledgeCreatedAt>
       )
@@ -64,6 +69,7 @@ export default class Pledge extends ChildComponent {
             amount={amount}
             who={who}
             requirement={requirement}
+            locale={locale}
           />
           <PledgeData
             state={aasm_state}

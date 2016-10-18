@@ -45,6 +45,7 @@ describe('<PledgeList />', function() {
               }
             }
           },
+          locale: 'de',
           tags: [
             {
               id: 1,
@@ -77,6 +78,7 @@ describe('<PledgeList />', function() {
               }
             }
           },
+          locale: 'en',
           tags: []
         },
 
@@ -98,6 +100,7 @@ describe('<PledgeList />', function() {
               }
             }
           },
+          locale: 'de',
           tags: []
         }
       ]

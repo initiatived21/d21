@@ -203,4 +203,30 @@ describe Pledge do
       end
     end
   end
+
+  describe 'methods' do
+    describe '#pledge_text' do
+      it 'should return the correct pledge text' do
+        pledge = FactoryGirl.build(:pledge, content: 'etwas Gutes zu tun',
+                                            amount: 10,
+                                            who: 'andere Leute',
+                                            requirement: 'uns dabei helfen',
+                                            locale: 'de')
+        pledge.pledge_text.must_equal(
+          'Wir versprechen, etwas Gutes zu tun, wenn 10 andere Leute uns dabei helfen.'
+        )
+      end
+
+      it 'should return the correct pledge text for English pledges' do
+        pledge = FactoryGirl.build(:pledge, content: 'do something good',
+                                            amount: 10,
+                                            who: 'other people',
+                                            requirement: 'help us',
+                                            locale: 'en')
+        pledge.pledge_text.must_equal(
+          'We promise to do something good if 10 other people help us.'
+        )
+      end
+    end
+  end
 end
