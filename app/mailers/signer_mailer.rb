@@ -42,6 +42,16 @@ class SignerMailer < ApplicationMailer
     end
   end
 
+  # Careful, call this while there is still a reference to the deleted pledge
+  # in memory
+  def pledge_deleted pledge
+    @pledge = pledge
+    pledge.signatures.all.select(&:confirmed?).each do |recipient|
+      @recipient = recipient
+      mail(subject: t('.subject'), to: recipient.email).deliver
+    end
+  end
+
   private
 
   def single_new_pledge_update recipient

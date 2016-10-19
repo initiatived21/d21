@@ -12,7 +12,7 @@ class Search
     if empty?
       @unscoped_results = Pledge
         .where(aasm_state: ['active', 'successful', 'failed'])
-        .order(deadline: :desc)
+        .order(created_at: :desc, id: :asc)
     else
       @unscoped_results = PgSearch.multisearch(@query)
     end

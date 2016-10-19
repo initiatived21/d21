@@ -8,7 +8,7 @@ export const DOMAIN_PROD = 'https://www.buntundverbindlich.de'
 export const FACEBOOK_ACCOUNT_URL = 'https://www.facebook.com/Buntundverbindlichde-895164520594209/'
 export const TWITTER_ACCOUNT_URL = 'https://twitter.com/buntverbindlich'
 export const NEWSLETTER_URL = 'http://seu1.cleverreach.com/f/66295-182181'
-export const BLOG_URL = 'http://buntundverbindlich.de/blog'
+export const BLOG_URL = 'http://blog.buntundverbindlich.de/'
 
 export const FAQ_PATH = '/faq'
 export const TERMS_PATH = '/terms'

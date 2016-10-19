@@ -12,7 +12,8 @@ describe('<PledgeTileBack />', function () {
     amount: 10,
     who: 'Dolmetscher',
     requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
-    path: 'http://www.example.com/pledges/1'
+    path: 'http://www.example.com/pledges/1',
+    locale: 'de',
   }
 
   it('should render', function () {

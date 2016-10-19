@@ -18,6 +18,7 @@ describe('<PledgeView />', function () {
       signatures_count: 5,
       created_at: '2016-09-01T12:45:22.964Z',
       aasm_state: 'active',
+      locale: 'de',
       tags: [
         {
           id: 1,

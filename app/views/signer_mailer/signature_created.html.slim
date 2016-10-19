@@ -10,6 +10,9 @@ p
     id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
 
 p
+  = t('.third_paragraph')  
+
+p
   = t('.fourth_paragraph')
   br
   = link_to t('.button_delete_signature'), destroy_signature_url(\

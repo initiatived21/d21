@@ -1,0 +1,79 @@
+<section class="c-masthead c-masthead--left">
+  <div class="o-wrapper">
+    <div class="c-masthead__copy">
+      <h2 class="c-masthead__title">
+        <%= t('.masthead.title') %>
+      </h2>
+      <p>
+        <%= t('.masthead.text') %>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="c-base-layout__main">
+  <section class="c-pledge-list o-wrapper u-mt u-mb">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-thumbs-o-up">
+          <%= t('.recommended') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @recommended_pledges, filter: :recommended, max_pledges: 6,
+                                                 params: params %>
+  </section>
+
+  <section class="c-pledge-list o-wrapper u-mt u-mb">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-check">
+          <%= t('.successful') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @successful_pledges, filter: :successful, max_pledges: 6,
+                                                 params: params %>
+  </section>
+
+  <section class="c-pledge-list o-wrapper u-mb-large">
+    <header class="c-pledge-list__header">
+      <h2 class="c-pledge-list__title">
+        <span class="fa fa-star">
+          <%= t('.newest') %>
+        </span>
+      </h2>
+    </header>
+
+    <%= cell :pledge_list, @newest_pledges, filter: :active, max_pledges: 12,
+                                            params: params %>
+
+    <footer class="c-pledge-list__footer">
+      <a class="o-btn c-pledge-list__button c-btn c-btn--primary"
+         href="<%= pledges_path(locale: I18n.locale) %>">
+        <span class="fa fa-check"></span>
+        <%= t('.more_pledges') %>
+      </a>
+    </footer>
+  </section>
+
+  <div class="o-wrapper">
+    <div class="o-layout">
+      <div class="o-layout__item u-1/2@m u-mb@s">
+        <%= t('.main_text_html') %>
+      </div><!--
+      --><div class="o-layout__item u-1/2@m">
+        <div class="c-responsive-video">
+          <iframe
+            class="c-responsive-video__iframe"
+            src="https://player.vimeo.com/video/184976874"
+            width="1600" height="900" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

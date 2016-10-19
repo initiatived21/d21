@@ -7,7 +7,8 @@ describe('<PledgeText />', function () {
     content: 'Schulbücher im Wert von 2.500 Euro für den Einsatz in Willkommensklassen bereitzustellen',
     amount: 10,
     who: 'Dolmetscher',
-    requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen'
+    requirement: 'bereit sind, im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen',
+    locale: 'de',
   }
 
   it('should render', function () {
@@ -15,8 +16,5 @@ describe('<PledgeText />', function () {
 
     wrapper.hasClass('c-pledge-tile__text').should.be.true
     wrapper.find('q').length.should.equal(1)
-    wrapper.text().should.equal('Wir versprechen, Schulbücher im Wert von 2.500 Euro für den Einsatz '
-      + 'in Willkommensklassen bereitzustellen, wenn 10 Dolmetscher bereit sind, '
-      + 'im Gegenzug jeweils ein bekanntes Kinderbuch auf arabisch zu übersetzen.')
   })
 })
