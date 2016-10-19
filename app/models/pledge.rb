@@ -2,11 +2,11 @@ class Pledge < ApplicationRecord
   # Associations
   belongs_to :initiator, class_name: 'User', foreign_key: 'user_id',
                          inverse_of: :initiated_pledges
-  has_many :pledges_tags, inverse_of: :pledge
+  has_many :pledges_tags, inverse_of: :pledge, dependent: :destroy
   has_many :tags, through: :pledges_tags, inverse_of: :pledges
-  has_many :signatures, inverse_of: :pledge
-  has_many :updates, inverse_of: :pledge
-  has_many :comments, inverse_of: :pledge
+  has_many :signatures, inverse_of: :pledge, dependent: :destroy
+  has_many :updates, inverse_of: :pledge, dependent: :destroy
+  has_many :comments, inverse_of: :pledge, dependent: :destroy
 
   # State Machine
   include AASM

@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :confirmable
 
   # Associations
-  has_many :initiated_pledges, class_name: 'Pledge', inverse_of: :initiator
+  has_many :initiated_pledges, class_name: 'Pledge', inverse_of: :initiator,
+                               dependent: :destroy
 
   # CarrierWave Image Uploader
   mount_base64_uploader :avatar, AvatarUploader, file_name: 'avatar'
