@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930114829) do
+ActiveRecord::Schema.define(version: 20161010084631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,8 @@ ActiveRecord::Schema.define(version: 20160930114829) do
     t.integer  "report_count",           default: 0,     null: false
     t.boolean  "recommended",            default: false, null: false
     t.string   "locale",       limit: 2,                 null: false
+    t.integer  "image_width"
+    t.integer  "image_height"
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 
@@ -146,6 +148,8 @@ ActiveRecord::Schema.define(version: 20160930114829) do
     t.datetime "confirmation_sent_at"
     t.string   "avatar"
     t.string   "locale",                 limit: 2,              null: false
+    t.integer  "avatar_width"
+    t.integer  "avatar_height"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

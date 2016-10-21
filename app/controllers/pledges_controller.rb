@@ -21,6 +21,7 @@ class PledgesController < ApplicationController
   def show
     @pledge = Pledge.includes(:initiator).find(params[:id])
     @initiator = @pledge.initiator
+
     authorize @pledge
     @pledge_props = {
       pledge: serialize(@pledge),

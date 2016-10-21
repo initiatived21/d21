@@ -1,2 +1,6 @@
+= content_for :facebook do
+  = render partial: '/layouts/partials/facebook_tags_for_pledge',
+           locals: { pledge: @pledge, initiator: @initiator }
+
 = react_component 'PledgeView', ReactHelper.settings(@pledge_props, params,
   class: 'c-base-layout__main')
