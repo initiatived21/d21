@@ -23,7 +23,7 @@ class NewSignatureForm < Reform::Form
       end
     end
 
-    required(:name) { size?(2..32) }
-    required(:email).filled(:unique?, size?: 2..32)
+    required(:name) { size?(2..50) }
+    required(:email).filled(:unique?, size?: 2..50)
   end
 end
