@@ -12,7 +12,7 @@ export default class NewSignatureFormObject extends FormObject {
   }
 
   validation() {
-    this.required('name').filled({'size?': [2, 32]})
-    this.required('email').filled({'size?': [2, 32]})
+    this.required('name').filled({'size?': [2, 50]})
+    this.required('email').filled({'size?': [2, 50]})
   }
 }
