@@ -2,17 +2,19 @@ main.c-base-layout__main
   .o-wrapper
     h1= t('.header')
 
+    nav.c-toc= t('.toc_html')
+
     p.c-text-block= t('.p1_html')
 
-  	p.c-text-block.c-text-block--question= t('.q1')
-  	p.c-text-block= t('.p2_html')
+    p.c-text-block.c-text-block--question#question1= t('.q1')
+    p.c-text-block= t('.p2_html')
 
-  	p.c-text-block.c-text-block--question= t('.q2')
-  	p.c-text-block= t('.p3_html')
-  	p.c-text-block= t('.p4_html')
+    p.c-text-block.c-text-block--question#question2= t('.q2')
+    p.c-text-block= t('.p3_html')
+    p.c-text-block= t('.p4_html')
 
-  	p.c-text-block.c-text-block--question= t('.q3')
-  	p.c-text-block= t('.p5_html')
+    p.c-text-block.c-text-block--question#question3= t('.q3')
+    p.c-text-block= t('.p5_html')
 
-  	p.c-text-block.c-text-block--question= t('.q4')
-  	p.c-text-block= t('.p6_html')
+    p.c-text-block.c-text-block--question#question4= t('.q4')
+    p.c-text-block= t('.p6_html')
