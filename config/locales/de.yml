@@ -1230,7 +1230,7 @@ de:
       question1: Was ist <em>bunt und verbindlich?</em>
       question2: Wie funktioniert das?
       question3: Wie kann ich mich registrieren?
-      question4: Ist die Nutzung kostenfei?
+      question4: Ist die Nutzung kostenfrei?
       question5: Warum erscheint mein Versprechen nicht auf der Webseite?
       question6: Wie schicke ich ein Versprechen zum Freischalten an die Redaktion?
       question7: Warum kann ich mein Versprechen nicht ändern, nachdem ich es abgeschickt habe?
@@ -1352,9 +1352,7 @@ de:
         placeholder: "*Bitte Datum auswählen"
       description:
         label: Mehr Infos (optional)
-        placeholder: |-
-          Informieren Sie Ihre Unterstützer über den Hintergrund Ihres
-          Versprechens und Ihre Motivation.
+        placeholder: Informieren Sie Ihre Unterstützer über den Hintergrund Ihres Versprechens und Ihre Motivation.
       image:
         label: Bild
       initiator:
