@@ -13,6 +13,7 @@ export default class AnswerForm extends ChildComponent {
 
   render() {
     const { formData, isSubmitting, id, handleResponse } = this.props
+
     return (
       <Form
         className="c-comment__answer-form o-layout o-layout--small"
@@ -21,10 +22,13 @@ export default class AnswerForm extends ChildComponent {
         ajax={true}
         method='PUT'
         handleResponse={handleResponse}
-        {...formData}
-      >
-        <InputSet ariaLabelOnly
-          attribute='response' wrapperClassName="c-input o-layout__item u-4/5@m u-mb-small@s"
+        {...formData}>
+
+        <InputSet
+          ariaLabelOnly
+          wrapperClassName="c-textarea c-textarea--narrow o-layout__item u-4/5@m u-mb-small@s"
+          attribute="response"
+          type="textarea"
         />
 
         <div className="o-layout__item u-1/5@m">

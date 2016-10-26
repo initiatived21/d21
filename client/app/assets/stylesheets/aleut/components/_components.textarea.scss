@@ -14,3 +14,7 @@
   border-radius: 5px;
   background-color: transparent;
 }
+
+.c-textarea.c-textarea--narrow > textarea {
+  height: 4em;
+}

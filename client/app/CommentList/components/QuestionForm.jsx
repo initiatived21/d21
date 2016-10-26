@@ -25,8 +25,9 @@ export default class QuestionForm extends ChildComponent {
 
         <InputSet
           ariaLabelOnly
-          wrapperClassName="c-input o-layout__item u-4/5@m u-mb-small@s"
-          attribute='content'
+          wrapperClassName="c-textarea c-textarea--narrow o-layout__item u-4/5@m u-mb-small@s"
+          attribute="content"
+          type="textarea"
           key={id}
         />
 
