@@ -102,7 +102,7 @@ Rails.application.configure do
 
   config.middleware.use ExceptionNotification::Rack,
     email: {
-      email_prefix: "[PRODUCTION] ",
+      email_prefix: "[BUV ERROR] ",
       sender_address: %{"Exception notification" <notifier@buntundverbindlich.de},
       exception_recipients: %w{exception-notification@buntundverbindlich.de}
     }
