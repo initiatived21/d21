@@ -71,6 +71,9 @@ gem 'sidekiq'
 gem 'sidekiq-cron'
 gem 'sinatra', '>= 2.0.0.beta2', require: false # for sidekiq web ui
 
+# Error monitoring
+gem 'exception_notification'
+
 # group :production, :staging do
 #   gem 'rails_12factor'
 # end
