@@ -237,7 +237,7 @@ en:
     title: Share via Xing
   active_admin:
     scopes:
-      admin: 
+      admin: Admin
       all: 
     sidebars:
       Filter: 
@@ -288,6 +288,8 @@ en:
         description: 
         id: 
         image: 
+        image_height: 
+        image_width: 
         initiator: 
         locale: 
         location: 
@@ -302,7 +304,9 @@ en:
         title: 
         updated_at: 
         updates: 
+        user: 
         user_id: 
+        user_name: 
         who: 
       signature:
         aasm_state: 
@@ -313,10 +317,12 @@ en:
         created_at: 
         email: 
         id: 
+        locale: 
         name: 
         organization: 
         pledge: 
         pledge_id: 
+        pledge_title: 
         reason: 
         updated_at: 
       tag:
@@ -662,6 +668,8 @@ en:
           description: 
           email: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -756,6 +764,8 @@ en:
           description: 
           email: 
           image: 
+          image_height: 
+          image_width: 
           locale: 
           location: 
           name: 
@@ -844,6 +854,8 @@ en:
           description: 
           email: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
