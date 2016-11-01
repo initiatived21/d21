@@ -17,6 +17,15 @@ class InitiatorMailer < ApplicationMailer
     end
   end
 
+  def new_signature signature_id
+    @signature = Signature.find(signature_id)
+    @pledge = @signature.pledge
+
+    I18n.with_locale(@pledge.initiator.locale) do
+      mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
+    end
+  end
+
   def pledge_successful pledge_id
     @pledge = Pledge.find(pledge_id)
 
