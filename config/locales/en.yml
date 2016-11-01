@@ -15,7 +15,7 @@ en:
   ImageCrop:
     cancel: Cancel
     crop_explanation: You can now crop the image.
-    select_detail: Select area
+    select_detail: Crop to selection
   ImageDropzone:
     dismiss_image: Discard image
     previously_uploaded: Previously uploaded
@@ -42,7 +42,18 @@ en:
       start: Start
   PaginatedSearchResults:
     no_results_for: No search results for
-    pledges_total: "{{num_pledges}} pledges total"
+    pledges_active:
+      one: 1 active pledge in total
+      other: "{{count}} active pledges in total"
+    pledges_failed:
+      one: 1 failed pledge in total
+      other: "{{count}} failed pledges in total"
+    pledges_successful:
+      one: 1 successful pledge in total
+      other: "{{count}} successful pledges in total"
+    pledges_total:
+      one: 1 pledge in total
+      other: "{{count}} pledges in total"
     results_for:
       one: search result for
       other: search results for
@@ -74,7 +85,7 @@ en:
       have_one: Already have an account?
       heading: Your user account data
       login: Please login to retrieve your information.
-    draft_explanation: Save pledge draft on your account.
+    draft_explanation: Save pledge draft to your account.
     heading: Make a pledge
     location:
       label: Location
@@ -117,7 +128,7 @@ en:
     days:
       one: day
       other: days
-    still: left
+    still: still
   PledgeText:
     sentence: We pledge to %{content} if %{amount} %{who} %{requirement}.
   PledgeTileBack:
@@ -176,7 +187,7 @@ en:
     description: Have you noticed something negative about the contents of this website? Please let our editorial staff know and we will take a look at the page.
     report_pledge: Report pledge
   SearchBar:
-    search_placeholder: e.g. search for keywords
+    search_placeholder: search for keywords
     search_title: Search
   SecondaryNav:
     contact_link: Contact
@@ -565,6 +576,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -630,6 +643,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -739,6 +754,8 @@ en:
           amount: 
           content: 
           description: 
+          image_height: 
+          image_width: 
           locale: 
           location: 
           requirement: 
@@ -816,6 +833,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -922,6 +941,10 @@ en:
       greeting: Dear Mr/Mrs %{name},
       second_paragraph: 'To answer this query login and select your pledge:'
       subject: Question about your pledge
+    new_signature:
+      first_paragraph: 'A user has just signed your pledge:'
+      greeting: Dear Mr/Mrs %{name},
+      subject: New signature
     pledge_failed:
       greeting: Dear Mr/Mrs %{name},
       link: Your pledge
@@ -1146,7 +1169,7 @@ en:
           <li><b>to provide an information platform</b><br />
         ....to learn from each other and connect.<br /><br />
           <li><b>to increase effectiveness and strengthen existing offers</b><br />
-        ...through networking and and exchanging with various bodies within the refugee support sector
+        ...through networking and exchanging with various bodies within the refugee support sector.
         </ul>
     contact:
       header: Contact
@@ -1168,16 +1191,16 @@ en:
         <ul>
         <li>Helping companies with concrete plans and services, in order to promote the integration of refugees together with the support of volunteers.</li>
 
-        <li>he platform connects those who wish to donate time, material items or money with others who will meaningfully use these donations with refugees.</li>
+        <li>The platform connects those who wish to donate time, material items or money with others who will meaningfully use these donations with refugees.</li>
 
         <li>The platform also connects existing offers and provides information, tips and suggestions within the field of integration.</li>
         </ul>
 
         <p>With <em>bunt und verbindlich</em> we don't just want to create yet another platform in a crowded market. We want to connect the willingness to help with other people who are committed to helping to unleash a bigger effect and strengthen existing offers.</p>
 
-        <p><em>bunt und verbindlich</em> is also an open source project.<a href="https://github.com/initiatived21/d21" target="_blank">The source code is freely available here</a>  and can also be used for other social causes.</p>
+        <p><em>bunt und verbindlich</em> is also an open source project. <a href="https://github.com/initiatived21/d21" target="_blank">The source code is freely available here</a>  and can also be used for other social causes.</p>
       answer2: |-
-        <p><em>bunt und verbindlich</em> helps to bring different players together, who have a mutual interested in the area of integration. Publish pledges can also be submitted. The pledges are in the format “I'll do X if you help with Y”.</p>
+        <p><em>bunt und verbindlich</em> helps to bring different players together, who have a mutual interest in the area of integration. Publish pledges can also be submitted. The pledges are in the format “I'll do X if you help with Y”.</p>
 
         <p>For example: “We pledge to donate 15 guitars, if there are 3 volunteers who will use these guitars in music lessons with refugee children”.</p>
 
@@ -1214,11 +1237,11 @@ en:
 
         <p>We are looking forward to a broad scope of pledges, to your ideas and to your creativity.</p>
       masthead:
-        text: "<em>bunt und verbindlich</em> – colourful and binding – connects people who want to donate something with people who want to use this donation meaningfully for the integration of refugees in our society."
+        text: bunt und verbindlich – colourful and binding – connects people who want to donate something with people who want to use this donation meaningfully for the integration of refugees in our society.
         title: I'll do X if someone with Y helps
-      more_pledges: Show more
       newest: Newest pledges
       recommended: Recommended by the editors
+      show_more: Show more
       successful: Successful pledges
     howitworks:
       header: How it works
@@ -1233,7 +1256,7 @@ en:
         <br />
         <b>By signing a pledge:</b><br />
         Instead of creating your own pledge, you can sign one or several pledges from other initiators. On every pledge card you can see how many supporters are still needed for that particular pledge. When the required number of signees has been met, the pledge will automatically be closed and the initiator and signees will be put in touch with one another. The pledge will then be carried out after the initiator and signees have discussed the next steps and a course of action.
-      p3_html: 'Under the menu item “I pledge” you will find a form in which users can enter a pledge. Here we will ask all of the important details about the pledge:'
+      p3_html: 'Under the menu item “Make a pledge” you will find a form in which users can enter a pledge. Here we will ask all of the important details about the pledge:'
       p4_html: |-
         <b>What:</b> what exactly do you wish to offer? (Financial or material donation, donating your time or a service)?<br /><br />
         <b>How many:</b> how many people have to sign your pledge?<br /><br />
@@ -1249,7 +1272,7 @@ en:
       p5_html: |-
         All pledges can be edited retrospectively, as long as they have not already been published. Under the menu option “My account” which you will see on the upper right-hand side after logging in you can edit your details and pledge at any time. <br />
         <br />
-        Once you have seen your pledge to our editors to be activated it can no longer be changed. As the signees of a pledge a specific wording, a change of the pledge is no longer possible after publication. Grammatical mistakes and small corrections can be made by the editors of <em>bunt und verbindlich</em>. Please send an email to <em>redaktion@buntundverbindlich.de</em>.
+        Once you have sent your pledge to our editors to be activated it can no longer be changed. As the signees of a pledge sign a specific wording, a change of the pledge is no longer possible after publication. Grammatical mistakes and small corrections can be made by the editors of <em>bunt und verbindlich</em>. Please send an email to <em>redaktion@buntundverbindlich.de</em>.
       p6_html: After your pledge has been created you can send it to the <em>bunt und verbindlich</em> editors for publication. All pledges will be activated within 1-3 days after being completed by the initiator.
       q1: How exactly can you help?
       q2: How do you create a pledge?
@@ -1319,10 +1342,10 @@ en:
         placeholder: 10
       content:
         label: What?
-        placeholder: to support a refugee family as guardians
+        placeholder: support a refugee family through mentoring
       deadline:
         label: Can be signed until
-        placeholder: "*Please select date"
+        placeholder: "*please select date"
       description:
         label: More Info (optional)
         placeholder: Let your supporters know about the background of your pledge and your motivation.
@@ -1335,10 +1358,10 @@ en:
           label: Your Email
           placeholder: "*"
         name:
-          label: Your Name
+          label: Your name
           placeholder: "*"
         organization:
-          label: Your company / your organization
+          label: Your company / organisation
         password:
           label: Password
           placeholder: "*"
@@ -1347,10 +1370,10 @@ en:
           placeholder: "*"
       location:
         label: Location
-        placeholder: "*for example nationwide"
+        placeholder: "*e.g. nationwide"
       requirement:
         label: Do what?
-        placeholder: Do the same
+        placeholder: do the same
       tag_ids:
         label: Topics
         placeholder: "*Please select a topic"
@@ -1358,7 +1381,7 @@ en:
         label: Title
         placeholder: "*e.g. Sponsorship"
       who:
-        label: who?
+        label: Who?
         placeholder: other people
     signature:
       anonymous:
@@ -1372,7 +1395,7 @@ en:
         label: 
         placeholder: Name*
       organization:
-        placeholder: Company or Organization (optional)
+        placeholder: Company or organisation (optional)
       reason:
         placeholder: I'm supporting this because … (optional)
     update:
@@ -1381,23 +1404,23 @@ en:
         placeholder: Send a project update to all signees.
     user:
       avatar:
-        label: Your Profile Picture
+        label: Your profile picture
       email:
         label: Email
         placeholder: Email
       name:
-        label: Your Name
+        label: Your name
         placeholder: "*"
       new_password:
-        label: New Password
+        label: New password
       organization:
-        label: Your Company / Your Organization
+        label: Your company / organisation
         placeholder: 
       password:
         label: Password
         placeholder: Password
       password_confirmation:
-        label: Repeat New Password
+        label: Repeat new password
       remember_me:
         label: Stay signed in
   signer_mailer:
@@ -1434,16 +1457,16 @@ en:
       fifth_paragraph: Help the pledge be successful by sharing it in your networks and circles and finding other supporters!
       first_paragraph: Thanks for using our platform!
       fourth_paragraph: 'If you wish to delete your signature, you can do so using the following link:'
-      greeting: Liebe/r Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name},
       second_paragraph: 'We need a confirmation from you in order for your signature to be published. Please use the following link:'
       subject: Please confirm your email address and signature
       third_paragraph: 'Please note that that by signing you are committing to the following: "A promise is a promise and will not be broken". We understand the "verbindlich" ("binding") of "bunt und verbindlich" according to this motto. There are no contracts on this platform. We trust our user community to keep their promises. Every user should therefore be conscious of the fact that creating or signing a pledge has a binding quality and that we are critical of insincere signatures or pledges and will consider sanctions with repeat offenders. So let''s realise great pledges together, which are above all colourful, but also binding for all our users.'
   tags:
     names:
       accomodation: Accommodation
-      application: Application
+      application: Applications
       children: Children
-      counseling: Counseling
+      counseling: Counselling
       culture: Culture
       donation: Donation
       education: Education

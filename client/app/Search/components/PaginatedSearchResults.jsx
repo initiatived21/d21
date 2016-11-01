@@ -7,13 +7,14 @@ export default class PaginatedSearchResults extends ChildComponent {
   static propTypes = {
     results: PropTypes.arrayOf(PropTypes.object).isRequired,
     query: PropTypes.string.isRequired,
+    filter: PropTypes.string.isRequired,
     resultCount: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func.isRequired
   }
 
   render() {
-    const { results, query, resultCount, isLoading, onButtonClick } = this.props
+    const { results, query, filter, resultCount, isLoading, onButtonClick } = this.props
 
     const showMoreButton = resultCount > results.length
 
@@ -28,7 +29,11 @@ export default class PaginatedSearchResults extends ChildComponent {
     }
 
     if (query === '') {
-      resultTitle = <h1>{this.t('.pledges_total', { num_pledges: resultCount })}</h1>
+      if (filter === '') {
+        resultTitle = <h1>{this.t('.pledges_total', { count: resultCount })}</h1>
+      } else {
+        resultTitle = <h1>{this.t(`.pledges_${filter}`, { count: resultCount })}</h1>
+      }
     }
 
     return (

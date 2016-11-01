@@ -42,7 +42,18 @@ de:
       start: Start
   PaginatedSearchResults:
     no_results_for: Keine Suchergebnisse für
-    pledges_total: Insgesamt {{num_pledges}} Versprechen
+    pledges_active:
+      one: Insgesamt 1 laufendes Versprechen
+      other: Insgesamt {{count}} laufende Versprechen
+    pledges_failed:
+      one: Insgesamt 1 gescheitertes Versprechen
+      other: Insgesamt {{count}} gescheiterte Versprechen
+    pledges_successful:
+      one: Insgesamt 1 erfolgreiches Versprechen
+      other: Insgesamt {{count}} erfolgreiche Versprechen
+    pledges_total:
+      one: Insgesamt 1 Versprechen
+      other: Insgesamt {{count}} Versprechen
     results_for:
       one: Suchergebnis für
       other: Suchergebnisse für
@@ -560,6 +571,8 @@ de:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -625,6 +638,8 @@ de:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -734,6 +749,8 @@ de:
           amount: 
           content: 
           description: 
+          image_height: 
+          image_width: 
           locale: 
           location: 
           requirement: 
@@ -811,6 +828,8 @@ de:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -917,6 +936,10 @@ de:
       greeting: Liebe/r Herr/Frau %{name}
       second_paragraph: 'Zum Beantworten der Rückfrage loggen Sie sich bitte ein und rufen Ihr Versprechen auf:'
       subject: Rückfrage zu Ihrem Versprechen
+    new_signature:
+      first_paragraph: 'Ein Nutzer hat soeben Ihr Versprechen unterzeichnet:'
+      greeting: Liebe/r Herr/Frau %{name}
+      subject: Neue Unterschrift
     pledge_failed:
       greeting: Liebe/r Herr/Frau %{name}
       link: Ihr Versprechen
@@ -1216,9 +1239,9 @@ de:
       masthead:
         text: bunt und verbindlich verbindet diejenigen, die etwas spenden wollen mit denjenigen, die diese Spende sinnvoll für die Integration von Geflüchteten in unsere Gesellschaft einsetzen.
         title: Ich mache X, wenn jemand mit Y hilft
-      more_pledges: Mehr anzeigen
       newest: Neueste Versprechen
       recommended: Von der Redaktion empfohlen
+      show_more: Mehr anzeigen
       successful: Erfolgreiche Versprechen
     howitworks:
       header: So funktioniert’s
