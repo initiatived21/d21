@@ -9,11 +9,12 @@ import { NUM_RESULTS_PAGINATION } from '../../lib/config'
 import localPath from '../../lib/browser/localPath'
 
 const mapStateToProps = function(state, ownProps) {
-  let results = filterResults(deNormalizePledges(state.entities), state.searchResults)
+  let results = applySearchResults(deNormalizePledges(state.entities), state.searchResults)
 
-  // TODO: Normal search results are not sorted yet, only "all pledges" or empty queries
+  // TODO: Normal search results are not sorted yet, only "all pledges" or empty queries.
+  // Filtering is also not applied to normal searches because it is the same way in backend.
   if (ownProps.query === '') {
-    results = sortResults(results)
+    results = sortResults(filterResults(results, ownProps.filter))
   }
 
   return {
@@ -37,7 +38,17 @@ function sortResults(pledges) {
   })
 }
 
-function filterResults(pledges, resultIds) {
+function filterResults(pledges, filter) {
+  if (filter === '') {
+    return pledges
+  } else {
+    return pledges.filter(function(pledge) {
+      return pledge.aasm_state === filter
+    })
+  }
+}
+
+function applySearchResults(pledges, resultIds) {
   return pledges.filter(function(pledge) {
     return resultIds.includes(pledge.id)
   })
