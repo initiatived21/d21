@@ -12,6 +12,7 @@ export default class Search extends RootComponent {
       PropTypes.object
     ).isRequired,
     query: PropTypes.string.isRequired,
+    filter: PropTypes.string.isRequired,
     resultCount: PropTypes.number.isRequired,
     resultIds: PropTypes.array.isRequired
   }
@@ -31,7 +32,7 @@ export default class Search extends RootComponent {
   }
 
   render() {
-    const { query, resultCount, resultIds } = this.props
+    const { query, filter, resultCount, resultIds } = this.props
 
     return (
       <Provider store={store}>
@@ -40,6 +41,7 @@ export default class Search extends RootComponent {
             resultCount={resultCount}
             resultIds={resultIds}
             query={query}
+            filter={filter}
           />
         </div>
       </Provider>

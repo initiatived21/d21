@@ -49,11 +49,11 @@ const mapDispatchToProps = function(dispatch) {
   }
 }
 
-function fetchMoreResults (dispatch, query, offset, limit) {
+function fetchMoreResults (dispatch, query, filter, offset, limit) {
   if (!query) { query = '' }
 
   // Ajax request
-  fetch(localPath(`/pledges?query=${query}&range=${offset}..${offset + limit - 1}`), {
+  fetch(localPath(`/pledges?query=${query}&filter=${filter}&range=${offset}..${offset + limit - 1}`), {
     method: 'GET',
     headers: {
       Accept: 'application/json'
@@ -87,7 +87,7 @@ const mergeProps = function(stateProps, dispatchProps, ownProps) {
     onButtonClick: () => {
       dispatch(setSearchLoadingState(true))
 
-      fetchMoreResults(dispatch, ownProps.query, results.length, NUM_RESULTS_PAGINATION)
+      fetchMoreResults(dispatch, ownProps.query, ownProps.filter, results.length, NUM_RESULTS_PAGINATION)
     },
   }
 }

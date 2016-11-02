@@ -61,6 +61,7 @@ class PledgesController < ApplicationController
     search.run
     @pledges = search.solved_results
     @query = search.query || ''
+    @filter = search.filter || ''
     @result_ids = search.solved_results.map(&:id)
     @result_count = search.unscoped_results.count
 
@@ -71,7 +72,7 @@ class PledgesController < ApplicationController
       end
       format.json do
         render json: {
-          status: 'success', query: @query, pledges: @pledges,
+          status: 'success', query: @query, filter: @filter, pledges: @pledges,
           resultIds: @result_ids, resultCount: @result_count
         }
       end

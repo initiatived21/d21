@@ -36,6 +36,14 @@
 
     <%= cell :pledge_list, @successful_pledges, filter: :successful, max_pledges: 6,
                                                  params: params %>
+
+    <footer class="c-pledge-list__footer">
+      <a class="o-btn c-pledge-list__button c-btn c-btn--primary"
+         href="<%= pledges_path(locale: I18n.locale, filter: 'successful') %>">
+        <span class="fa fa-check"></span>
+        <%= t('.show_more') %>
+      </a>
+    </footer>
   </section>
 
   <section class="c-pledge-list o-wrapper u-mb-large">
@@ -54,7 +62,7 @@
       <a class="o-btn c-pledge-list__button c-btn c-btn--primary"
          href="<%= pledges_path(locale: I18n.locale) %>">
         <span class="fa fa-check"></span>
-        <%= t('.more_pledges') %>
+        <%= t('.show_more') %>
       </a>
     </footer>
   </section>
