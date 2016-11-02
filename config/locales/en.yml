@@ -11,13 +11,13 @@ en:
   GoogleplusButton:
     title: Share via Google+
   HeaderLogo:
-    title: Bunt und Verbindlich. Integration platform
+    title: Bunt und Verbindlich. A platform for integration.
   ImageCrop:
     cancel: Cancel
-    crop_explanation: You can crop the image now.
-    select_detail: Select detail
+    crop_explanation: You can now crop the image.
+    select_detail: Crop to selection
   ImageDropzone:
-    dismiss_image: Dismiss image
+    dismiss_image: Discard image
     previously_uploaded: Previously uploaded
   Initiator:
     title: Initiator
@@ -28,7 +28,7 @@ en:
   LoggedIn:
     logged_in_as: Logged in as
     logout: Sign out
-    my_data: My profile data
+    my_data: My profile information
     my_pledges: My pledges
     welcome: Welcome,
   OffCanvasMenu:
@@ -42,13 +42,24 @@ en:
       start: Start
   PaginatedSearchResults:
     no_results_for: No search results for
-    pledges_total: "{{num_pledges}} pledges total"
+    pledges_active:
+      one: 1 active pledge in total
+      other: "{{count}} active pledges in total"
+    pledges_failed:
+      one: 1 failed pledge in total
+      other: "{{count}} failed pledges in total"
+    pledges_successful:
+      one: 1 successful pledge in total
+      other: "{{count}} successful pledges in total"
+    pledges_total:
+      one: 1 pledge in total
+      other: "{{count}} pledges in total"
     results_for:
       one: search result for
       other: search results for
     show_more: Show more…
   PledgeCommentList:
-    heading: Questions and answers to the initiator
+    heading: Questions and answers for the initiator
     no_questions: There are no questions yet.
     submit: Submit
   PledgeCreatedAt:
@@ -62,24 +73,24 @@ en:
       signees: signees
       title: Signees
     time:
-      closed_on: Closed on
-      closes_on: Closes on
+      closed_on: Expired on
+      closes_on: Expires on
       days: days
       title_default: Time left
       title_failed: Failed
       title_successful: Successful
   PledgeForm:
     account:
-      explanation: Through your user account you manage the pledge.
-      have_one: You already have an account?
+      explanation: You can manage your pledge through your user account.
+      have_one: Already have an account?
       heading: Your user account data
-      login: Please login to carry over your data.
-    draft_explanation: Stores pledge draft into your account.
+      login: Please login to retrieve your information.
+    draft_explanation: Save pledge draft to your account.
     heading: Make a pledge
     location:
       label: Location
     preview: Preview pledge
-    preview_explanation: During the next step you can verify your pledge before submitting it.
+    preview_explanation: In the next step you can check your pledge before submitting it.
     promise:
       part1: "“We promise to"
       part3: 
@@ -87,18 +98,18 @@ en:
       part8: ".”"
     save_draft: Save draft
     tooltip:
-      deadline: 
-      image: 
-      location: 
+      deadline: Your pledge is successful if it receives enough supporters by the selected date.
+      image: Landscape photos with a width of at least 1200 pixels are ideal.
+      location: Where should your pledge be carried out? For example across Germany, not location specific, Berlin, Bavaria
   PledgeFormHelp:
-    faq_link: Look into our FAQ.
+    faq_link: Look at our FAQ.
     further_questions: Further questions?
     heading: How it works…
     step: 'Step {{step}}:'
     text:
-      step1: 
-      step2: 
-      step3: 
+      step1: Publish your pledge in the format “We will do something if enough people help”. For example, “We pledge to donate 15 guitars, if three volunteers use these guitars for music lessons with child refugees”. Please note that each pledge will be reviewed by our editors before being activated.
+      step2: Mobilise your supporters and promote your pledge in your circles and networks.
+      step3: Was your pledge successful? Congratulations, now on to the implementation phase! Don't forget to publish a report after carrying out your pledge so that others can learn from you.
       step4: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
       step5: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
   PledgeImage:
@@ -107,7 +118,7 @@ en:
     title: Location
   PledgeQuote:
     promise:
-      part1: We promise to
+      part1: We pledge to
       part2: " if"
   PledgeSignedMessage:
     email: Please confirm your signature through the email that we have just sent you. Your signature will not be valid without confirmation.
@@ -119,7 +130,7 @@ en:
       other: days
     still: still
   PledgeText:
-    sentence: We promise to %{content} if %{amount} %{who} %{requirement}.
+    sentence: We pledge to %{content} if %{amount} %{who} %{requirement}.
   PledgeTileBack:
     show_pledge: show pledge
   PledgeTileFront:
@@ -130,20 +141,20 @@ en:
     no_updates: There are no updates yet.
   PreviewDraft:
     edit_pledge: Edit pledge
-    explanation: Your pledge will be reviewed by our editorial staff and published within one to three weekdays. You can manage your pledge through your user account.
+    explanation: Are you happy with your pledge? Then send it to use by clicking on "submit pledge". Your pledge will be reviewed by our editors and published within three weekdays. You can manage your pledge through your user account.
     legal:
       part1: 'By submitting you agree to our '
       part2: " and our "
       part3: "."
-      privacy: privacy statement
-      terms: terms
+      privacy: privacy policy
+      terms: terms of use
     submit_pledge: Submit pledge
   PreviewExplanation:
     title: Pledge preview
   PreviewRequested:
     explanation: You have successfully submitted your pledge!
     improve_success:
-      post_updates: Regularly post updates concerning your project.
+      post_updates: Regularly post updates about your project.
       social_media: Promote the pledge through your social media channels.
       title: 'How to make your pledge successful:'
     next_steps:
@@ -153,7 +164,7 @@ en:
       question: What's next?
       user_account: your user account
   PreviewUnconfirmed:
-    confirm_email: Please confirm your email to finalize this pledge.
+    confirm_email: Have a look in your email inbox and confirm your email address. You will then be able to send your pledge to our editorial staff by reloading this page.
     edit_pledge: Edit pledge
   PrimaryNav:
     about_link: About us
@@ -164,19 +175,19 @@ en:
     press_link: Press
     start_link: Start
   ProfileUserForm:
-    button: Submit
+    button: Update
     form_sent: Your data has been updated.
   ProfileView:
     heading: Your Profile
-    your_data: Your profile data
+    your_data: Your information
     your_pledges: Your pledges
   QuestionForm:
     submit: Submit
   ReportPledgeForm:
-    description: 
+    description: Have you noticed something negative about the contents of this website? Please let our editorial staff know and we will take a look at the page.
     report_pledge: Report pledge
   SearchBar:
-    search_placeholder: e.g. search for companies
+    search_placeholder: search for keywords
     search_title: Search
   SecondaryNav:
     contact_link: Contact
@@ -186,23 +197,23 @@ en:
     my_account: My account
     sign_in: Login
   SignInForm:
-    forgot_password: Forgot password?
+    forgot_password: Forgot your password?
     no_account: No account yet?
     sign_up_link: Create a pledge and sign up
     submit: Sign in
   SignPledgeForm:
-    email_hint: 
+    email_hint: Your email address will not be published.
     i_sign: I sign this pledge.
     sign: Sign
-    signed_message: Thank you! Please check your email account in order to confirm your signature.
-    small_print: 
+    signed_message: Thank you! Please check your email inbox in order to confirm your signature.
+    small_print: With your signature you agree to the terms of use and privacy policy of {{projekt}} and agree to received emails about the development of this pledge. You can deactivate notifications at any time. If the pledge is successful, your name and email address will be forwarded to the initiator.
     tooltip:
-      anonymous: 
-      contact_person: 
-      email: 
+      anonymous: Your real name will not be showed in the list of signatures. The initiator of the pledge will only receive your information when the pledge is successful, so that they can contact you.
+      contact_person: If several signees represent the same organisation, this can help the initiator to choose the right contact person.
+      email: Your email address will not be shown in the list of signatures. The initiator of the pledge will only receive your information when the pledge has been successful, so that they can contact you.
   Signee:
-    anonymous: Name is known to the editors
-    contact_person: contact person
+    anonymous: Name is only known to the editors
+    contact_person: Contact person
   SigneeList:
     heading: Signees
     no_signees: There are no signees yet.
@@ -210,28 +221,28 @@ en:
     facebook_title: Bunt und Verbindlich on Facebook
     twitter_title: Bunt und Verbindlich on Twitter
   StateFooter:
-    contact: Contact signers
+    contact: Contact signees
     delete: Delete
-    delete_confirmation: Are you sure to delete this pledge?
-    delete_confirmation_active: This pledge is already published. Are you sure to delete it?
+    delete_confirmation: Are you sure you want to delete this pledge?
+    delete_confirmation_active: This pledge has already been published. Are you sure you want to delete it?
     edit: Edit
     republish: Republish
   StateHeader:
     active: Published
-    disapproved: Disapproved
-    failed: Not successful
+    disapproved: Rejected
+    failed: Unsuccessful
     initialized: Draft
-    requested: Waiting for Review
+    requested: Waiting to be reviewed for activation
     successful: Successful
   TwitterButton:
     text: 'Sign pledge:'
     title: Share via Twitter
   UpdateForm:
-    sent_message: You have posted an update for this pledge.
+    sent_message: You have posted an update about this pledge.
     submit: Submit
     title: Updates
   UpdateSentMessage:
-    explanation: You habe submitted your update successfully.
+    explanation: You have successfully submitted an update.
     title: Update submitted
   XingButton:
     title: Share via Xing
@@ -370,7 +381,7 @@ en:
       tag: 
       update: 
   application_mailer:
-    farewell: 
+    farewell: Best regards,
     impressum_html: |-
       ---
       <p><strong>Impressum</strong></p>
@@ -395,50 +406,50 @@ en:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
-    signed: 
+    signed: Your bunt und verbindlich editorial team
   devise:
     confirmations:
       new:
-        heading: Resend confirmation instructions
+        heading: Send confirmation instructions
         resend_instructions: Resend confirmation instructions
         send_instructions: 
     mailer:
       confirmation_instructions:
-        confirm_link: 
-        greeting: 
-        paragraph1: 
-        paragraph2: 
-        paragraph3: 
-        paragraph4: 
-        user_subject: Confirmation instructions
+        confirm_link: Confirmation link
+        greeting: Dear %{name},
+        paragraph1: Thanks for using our platform!
+        paragraph2: 'Please confirm your email address by clicking on the following link:'
+        paragraph3: Afterwards you can send your pledge to our editors to be activated. Select the pledge preview again and click on "send pledge".
+        paragraph4: You can also view the status of your pledge on your profile.
+        user_subject: Complete registration
       password_change:
-        greeting: 
+        greeting: Dear %{name},
         paragraph1: We're contacting you to notify you that your password has been changed.
       reset_password_instructions:
         edit_password_link: Change my password
-        greeting: 
-        paragraph1: Someone has requested a link to change your password. You can do this through the link below.
+        greeting: Dear %{name},
+        paragraph1: You have requested a link to change your password. To do this click on the link below.
         paragraph2: |-
           If you didn't request this, please ignore this email.
           Your password won't change until you access the link above and create a new one.
-        user_subject: Reset password instructions
+        user_subject: Change your password
       unlock_instructions:
-        greeting: 
+        greeting: Dear %{email}
         paragraph1: |-
-          Your account has been locked due to an excessive number of unsuccessful sign in attempts.
+          Your account has been locked due to too many failed login attempts.
 
           Click the link below to unlock your account:
         unlock_link: Unlock my account
     passwords:
       edit:
         change_password: Change my password
-        characters_minimum: characters minimum
+        characters_minimum: minimum number of characters
         confirm_new_password: Confirm new password
         heading: Change your password
         new_password: New password
       new:
         heading: Forgot your password?
-        send_instructions: Send me reset password instructions
+        send_instructions: Send me instructions to reset my password
     sessions:
       new:
         heading: Sign in
@@ -565,6 +576,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -630,6 +643,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -739,6 +754,8 @@ en:
           amount: 
           content: 
           description: 
+          image_height: 
+          image_width: 
           locale: 
           location: 
           requirement: 
@@ -816,6 +833,8 @@ en:
           deadline: 
           description: 
           image: 
+          image_height: 
+          image_width: 
           initiator: 
           locale: 
           location: 
@@ -913,29 +932,33 @@ en:
         update: 
   initiator_mailer:
     needs_successful_update:
-      greeting: 
-      link: 
-      p1: 
-      subject: 
+      greeting: Dear Mr/Mrs %{name},
+      link: Your pledge
+      p1: Your pledge successfully ended two weeks ago. We would like to remind you to write a summary report using the update function. This will help others to learn from your project!
+      subject: Summary report reminder
     new_question:
-      first_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
+      first_paragraph: A user has just asked a question about your pledge.
+      greeting: Dear Mr/Mrs %{name},
+      second_paragraph: 'To answer this query login and select your pledge:'
+      subject: Question about your pledge
+    new_signature:
+      first_paragraph: 'A user has just signed your pledge:'
+      greeting: Dear Mr/Mrs %{name},
+      subject: New signature
     pledge_failed:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting: Dear Mr/Mrs %{name},
+      link: Your pledge
+      paragraph1: 'Unfortunately your pledge has expired and did not find enough supporters:'
+      paragraph2: What happens now?
+      paragraph3: You could rework your pledge and try again
+      paragraph4: You could post another pledge
+      paragraph5: You could support the pledges of other users
+      subject: Unfortunately your pledge was unsuccessful
     pledge_successful:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
+      greeting: Dear Mr/Mrs %{name},
+      link: Your pledge
+      paragraph1: Congratulations, your pledge reached the required number of supporters!
+      paragraph2: 'You can view the list of signees here:'
       paragraph3: 
       paragraph4: 
       paragraph5: 
@@ -963,70 +986,313 @@ en:
         logo_bmfsfj_title: Logo of Federal Ministry of Family Affairs, Senior Citizens, Women and Youth
         logo_d21_title: Logo of Initiative D21 e.V.
         newsletter_link: Newsletter
-        privacy_link: Privacy
+        privacy_link: Privacy policy
         sitemap_link: Sitemap
-        terms_link: Terms
+        terms_link: Terms of use
         twitter_title: Bunt und Verbindlich on Twitter
   misc:
-    pledge_sentence: We promise to %{content} if %{amount} %{who} %{requirement}.
+    pledge_sentence: We pledge to %{content} if %{amount} %{who} %{requirement}.
   pages:
     about:
       heading: About us
       inspiration_heading: Inspiration
-      inspiration_html: 
+      inspiration_html: |-
+        <p class="c-text-block">
+        The idea of linking the principle “I'll do X if you do Y” with social and socio-political topics was already around with the PledgeBank in England in 2005. This principle was the creative starting point for bunt und verbindlich in sustainably rooting the topic of integration, mobilising volunteers and motivating companies to make their engagement directed towards the integration of refugees.
+        </p>
       team_heading: Team
-      team_html: 
+      team_html: |-
+        <p class="c-text-block"><b>Project organisation:</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-lena.jpg" / alt="Photo of Lena-Sophie Müller">
+          <div class="o-media__body">
+            <p>
+              <b>Lena-Sophie Müller</b><br />
+              Director of D21<br />
+              lena-sophie.mueller@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        The courage and curiosity to want to get to know the unknown. The openness to meet new people without prejudice. The will power and conviction to want and allow diversity and belonging at the same time. And the awareness that your own actions can make a difference. And that every day, everywhere. At school, when cooking, in a sports team, at work, in your free time and in your own thoughts. Integration is not the task of individual groups. Integration is a task that society will master together through many individual, colourful puzzle pieces.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        bunt und verbindlich shows how simple it is to contribute something, to be active yourself. And the beautiful thing is, it shows that you don't have to do it alone. But someone has to take the first step. And I just hope that many will do so. As Michael Jackson said: “If you wanna make the world a better place, take a look at yourself and then make that change.”</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        When people put trust in our idea that this could really happen.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-bjoern.jpg" alt="Photo of Björn Stecher" />
+          <div class="o-media__body">
+            <p>
+              <b>Björn Stecher</b><br />
+              Project leader<br />
+              +49 30 5268722-54<br />
+              bjoern.stecher@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        For me integration means making new friends. Integration takes place on both sides and that's exciting. It's the reflection upon your own values, life story and history, and at the same time getting to know new life stories and attitudes. It's a bit like when a family gets a new child. It's exciting, full of development, new and you sometimes feel unsure and also make mistakes. It can also be difficult but with perspective nonetheless always a win.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        It's so eclectic. Colourful projects, but with a binding quality. It allows so much creativity within the topic of integration. If companies take in this principle, it will be fun to see how ideas come to life. To experience how, your own, in part small ideas transform into amazing projects which can achieve a lot. That convinces me, because our companies and initiatives are also convinced.</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        There have been two. As we saw the first wireframes for the site and when Stefanie euphorically told me on the phone about pledges that just kept getting better and better.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-stefanie.jpg" alt="Photo of Stefanie Kaste" />
+          <div class="o-media__body">
+            <p>
+              <b>Stefanie Kaste</b><br />
+              Acquisition, community management, communication<br />
+              +49 30 5268722-51<br />
+              stefanie.kaste@initiatived21.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        Integration for me is the willingness to accept differences, to be able to leave others be, without wanting to force them into a pigeonholing them. Integrating people contains, in my opinion, a lot of potential to learn from one another. To do that, we all need to face one another with curiosity instead of suspicion. Integration for me is the absolute conviction that every person deserves the chance of a safe and happy life.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        The simplicity of the logic: no one has to do anything alone. You can easily find like-minded people who will support you. There are so many great refugee initiatives whose work would be made easier through concrete support from companies. On the other hand, I noticed whilst the project was being set up, how many committed companies there are, who are ready to donate material items or services without a fuss. bunt und verbindlich brings these two sides to a wonderful whole.</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        The best moment was definitely as I noticed that our idea works, as companies and initiatives gave great feedback. Again and again, I'm impressed when I see how a company really thinks about what meaningful contributions it can make. The same goes for so many initiatives, big or small, which often do such amazing work on a voluntary basis. That really moves me and doesn't let me lose my belief (even with such a heavily loaded topic), that good prevails.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-melanie.jpg" alt="Photo of Melanie Gernert" />
+          <div class="o-media__body">
+            <p>
+              <b>Melanie Gernert</b><br />
+              Intern<br />
+              redaktion@buntundverbindlich.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        Integration literally means to spiritually or intellectually renew. And that's exactly how I understand it. We have to clear out the many different prejudices people have in their heads by approaching each other and getting to know one another.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        Two phrases describe this project very well: Team spirit and pouring your heart and soul into something. You can overcome any obstacle with these two traits.</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        The first email with the words “A pledge is waiting to be activated”.</p>
+
+
+        <p class="c-text-block"><b>IT</b></p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-anna.jpg" alt="Photo of Anna Fischer" />
+          <div class="o-media__body">
+            <p>
+              <b>Anna Fischer</b><br />
+              Technical Project Management<br />
+              anna.fischer@7unicorns.de
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        To me integration means finding your place in society as a newcomer. How that actually looks is individual and diverse and changes both the newcomer and the society in an enriching way.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        The willingness to support refugees is still big in Germany. We can make that visible and help donating companies and people working with refugees to find each other more easily.</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        As we started our closed beta-phase. Since then everything has been running like clockwork thanks to an awesome team.
+        </p>
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-konstantin.jpg" alt="Photo of Konstantin Koss" />
+          <div class="o-media__body">
+            <p>
+              <b>Konstantin Koss</b><br />
+              Backend developer
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        In the context of immigration, to me it means means mutual assimilation and acceptance. A new member of a society learns to find their way in new social and cultural surroundings and a new home and, without renouncing their own roots, to adapt to these. At the same time, that means for society supporting this process with empathy and understanding, and also adapting to the cultural and social factors of these new members.</p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        The platform creates a kind of positive snowball effect. If I as an individual would like to get involved, I can quickly feel lost. Is what I'm doing actually achieving something or is it just proverbial a drop in the ocean? But if I have the security of undertaking something with others – even if we're not in the same place – I can create motivation out of it.</p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        At the beginning of the project we filled ugly pages full of Lorem Ipsum texts and provided them with functionality. It was great to see how they suddenly took on a completely different flair as we received the first screen designs and implemented them.</p>
+
+
+        <div class="o-media u-mb">
+          <img class="c-avatar c-avatar--comment c-avatar--large o-media__img" src="/images/team-marc.jpg" alt="Photo of Marc Altmann" />
+          <div class="o-media__body">
+            <p>
+              <b>Marc Altmann</b><br />
+              Frontend developer<br />
+              mail@marcaltmann.com
+            </p>
+          </div>
+        </div>
+
+        <p class="c-text-block"><i>What does integration mean to you?</i><br />
+        Integration ist für mich ein Prozess, durch den sich beide Seiten verändern.
+        </p>
+
+        <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
+        I find the aim of the project convincing as well as the simple design of the website.
+        </p>
+
+        <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
+        I really enjoyed the time just before the launch of the website in October.
+        </p>
+
+        <p class="c-text-block">Fotos: CC BY 3.0 DE Jana Kausch</p>
       vision_heading: Vision
-      vision_html: 
+      vision_html: |-
+        <p class="c-text-block"><b>We want to show how easy it is to help. We want to make it simple for everyone who wants to support the integration of refugees.</b></p>
+        <p class="c-text-block">
+        <em>bunt und verbindlich</em> would like
+        </p>
+        <ul class="c-text-block c-text-block--list">
+          <li><b>to be a digital point of contact</b><br />
+        ...for companies, initiatives, organisations, clubs and volunteers who want to offer concrete services for integration.<br /><br />
+          <li><b>to provide an information platform</b><br />
+        ....to learn from each other and connect.<br /><br />
+          <li><b>to increase effectiveness and strengthen existing offers</b><br />
+        ...through networking and exchanging with various bodies within the refugee support sector.
+        </ul>
     contact:
       header: Contact
       text_html: |-
-        <b>Anschrift:</b><br />
+        <b>Address:</b><br />
         Initiative D21 e.V.<br />
         Reinhardtstraße 38, 10117 Berlin<br />
         Tel. +49 30 5268722-50<br />
         Fax +49 30 5268722-60<br />
-        Mail: <a href="mailto:redaktion@buntundverbindlich.de">redaktion@buntundverbindlich.de</a>
+        Email: <a href="mailto:redaktion@buntundverbindlich.de">redaktion@buntundverbindlich.de</a>
     faq:
-      answer1: Translation not yet available.
-      answer2: Translation not yet available.
-      answer3: Translation not yet available.
-      answer4: Translation not yet available.
-      answer5: Translation not yet available.
-      answer6: Translation not yet available.
-      answer7: Translation not yet available.
-      answer8: 
+      answer1: |-
+        <p><em>bunt und verbindlich</em> is a platform which shows how easy it is to help. The aim of <em>bunt und verbindlich</em> is to secure the willingness to help refugees we've seen so far over the coming years and, specifically, to apply this to their integration.</p>
+
+        <p>The platform is aimed at companies, initiatives and volunteers. Companies make material and financial donations but often lack the man and womanpower to come up with and realise integration projects. Many initiatives and volunteers are prepared to commit their time and have ideas for integration, but not the financial or material means to carry these out.</p>
+
+        <p>This is where <em>bunt und verbindlich</em> comes in:</p>
+
+        <ul>
+        <li>Helping companies with concrete plans and services, in order to promote the integration of refugees together with the support of volunteers.</li>
+
+        <li>The platform connects those who wish to donate time, material items or money with others who will meaningfully use these donations with refugees.</li>
+
+        <li>The platform also connects existing offers and provides information, tips and suggestions within the field of integration.</li>
+        </ul>
+
+        <p>With <em>bunt und verbindlich</em> we don't just want to create yet another platform in a crowded market. We want to connect the willingness to help with other people who are committed to helping to unleash a bigger effect and strengthen existing offers.</p>
+
+        <p><em>bunt und verbindlich</em> is also an open source project. <a href="https://github.com/initiatived21/d21" target="_blank">The source code is freely available here</a>  and can also be used for other social causes.</p>
+      answer2: |-
+        <p><em>bunt und verbindlich</em> helps to bring different players together, who have a mutual interest in the area of integration. Publish pledges can also be submitted. The pledges are in the format “I'll do X if you help with Y”.</p>
+
+        <p>For example: “We pledge to donate 15 guitars, if there are 3 volunteers who will use these guitars in music lessons with refugee children”.</p>
+
+        <p>Before the publication of each pledge we will check the content to ensure they adhere to our terms of use. Each published pledge has a particular time-frame to reach the required number of supporters. You can use this time for your own pledge to find supporters, for example through your social media channels.</p>
+
+        <p>When your pledge has expired, you will receive a notification informing you whether your goal was reached or not.</p>
+
+        <p>With successful pledges we ask that you post a summary report after a certain period of time. We will also post particularly exciting success stories on our blog. The aim is to compile examples of best practice which will inspire others.</p>
+      answer3: "<p>You can register when creating a pledge. As a signee you don't have to register.</p>"
+      answer4: "<p>Yes, the platform is free to use.</p>"
+      answer5: "<p>Every pledge will be activated by our editors within 1-3 days. We reserve the right not to publish any pledges with abusive content. You can check the status of your pledge on your profile.</p>"
+      answer6: "<p>Click on the “preview” button at the bottom of the pledge form. If the preview works and you do not wish to edit your pledge further, you can click on “send my pledge to the editors” in the top right-hand corner. Please note that afterwards no further changes will be possible.</p>"
+      answer7: |-
+        <p>After sending a pledge to our editors for activation, you can no longer make any changes yourself.</p>
+
+        <p>This is due to the fact that supporters will be signing an exact wording of a pledge. Retrospectively changing the pledge would make these signatures invalid.</p>
+
+        <p>For small changes, such as grammatical mistakes, you can contact our editors. For big changes you will have to create your pledge again. In this case, you are able to ask your signees so far to sign the new pledge with the “news” function. Afterwards, you can delete the old pledge.</p>
+      answer8: |-
+        <p>As long as the pledge has not expired, you can use the update function. This is at the bottom of the pledge page. All signees will then receive a notification by email.</p>
+
+        <p>If a pledge is successful, you will receive the email addresses of all signees, so that you can co-ordinate the next steps.</p>
       question1: What is <em>bunt und verbindlich?</em>
       question2: How does it work?
       question3: How can I register?
       question4: Is it free to use the platform?
-      question5: Why does my pledge not appear on the website?
-      question6: Why can`t I update my pledge?
-      question7: How can I contact my supporters?
-      question8: 
+      question5: Why has my pledge not appeared on the website yet?
+      question6: How do I submit a pledge to the editors for activation?
+      question7: Why can't I change my pledge after I've submitted it?
+      question8: How can I get in touch with the signees of my pledge?
     home:
-      main_text_html: 
+      main_text_html: |-
+        <p class="u-mb"><i>bunt und verbindlich</i> supports an open, tolerant, colourful and diverse society. That's why we would like to invite everyone who is interested to help refugees with <i>bunt und verbindlich</i>. Co-operation on our platform has a binding quality based on reliability. We would like to bring organisations and people who are active in the integration of refugees – whether as individuals or in groups or clubs – together on a level playing field. We want to pool and support your engagement. And to do that, we need to be able to count on each other.</p>
+
+        <p>We are looking forward to a broad scope of pledges, to your ideas and to your creativity.</p>
       masthead:
-        text: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-        title: Headline Info
-      more_pledges: Show more
+        text: bunt und verbindlich – colourful and binding – connects people who want to donate something with people who want to use this donation meaningfully for the integration of refugees in our society.
+        title: I'll do X if someone with Y helps
       newest: Newest pledges
       recommended: Recommended by the editors
-      successful: Successful promises
+      show_more: Show more
+      successful: Successful pledges
     howitworks:
-      header: 
-      p1_html: 
+      header: How it works
+      p1_html: "<em>bunt und verbindlich</em> offers a platform for all companies, initiatives, organisations, clubs and individuals who want to contribute to the integration of refugees. This contribution could either be material, financial, or time or service based. "
       p2: 
-      p2_html: 
-      p3_html: 
-      p4_html: 
-      p5_html: 
-      p6_html: 
-      q1: 
-      q2: 
-      q3: 
-      q4: 
-      toc_html: 
+      p2_html: |-
+        There are two ways to get involved with <em>bunt und verbindlich</em>:<br />
+        <br />
+        <b>By making a pledge:</b><br />
+        You can formulate a pledge yourself and post it on bunt und verbindlich. There's no limit to what that pledge might be. You are free to use the skills, resources and experiences you have at your disposal. Whether it's an offer of concrete things or objects, the fulfilment of a service or a donation of your time, everything is possible. <br />
+        The platform is based on the principle of “I'll do X, but only if someone helps with Y”. For example, a company could offer to donate tablets, but only if someone is prepared to use these tablets in language classes with refugees. <br />
+        <br />
+        <b>By signing a pledge:</b><br />
+        Instead of creating your own pledge, you can sign one or several pledges from other initiators. On every pledge card you can see how many supporters are still needed for that particular pledge. When the required number of signees has been met, the pledge will automatically be closed and the initiator and signees will be put in touch with one another. The pledge will then be carried out after the initiator and signees have discussed the next steps and a course of action.
+      p3_html: 'Under the menu item “Make a pledge” you will find a form in which users can enter a pledge. Here we will ask all of the important details about the pledge:'
+      p4_html: |-
+        <b>What:</b> What exactly do you wish to offer? (Financial or material donation, donating your time or a service)?<br /><br />
+        <b>How many:</b> How many people have to sign your pledge?<br /><br />
+        <b>Who:</b> Who exactly should sign your pledge? (volunteers, initiatives, companies etc.)<br /><br />
+        <b>What needs to be done:</b> Which exact service or activity should complement your offer?<br /><br />
+        <b>Location:</b> Here you can decide whether your offer is limited to one or several locations or can be carried out nationwide.<br /><br />
+        <b>Date:</b> By choosing a date you can decide when your pledge can be signed until. You are free to choose the duration of your offer.<br /><br />
+        <b>Title:</b> Please choose a title for your offer. It will appear on the front side of the pledge card. The title is the first thing that other users will see about your pledge. It should be as informative as possible and make them want to find out more<br /><br />
+        <b>More information:</b> Here you can add extra information about your pledge. You can explain the aims and objectives of your pledge, why you are getting involved and what you wish from the signees of your pledge.<br /><br />
+        <b>Image:</b> There is also the option to upload an image you would like to be shown on your pledge page. This could be, for example, a picture or photo or your company or initiative.<br /><br />
+        <b>Topics:</b> You can choose topics or subject areas here which apply to your pledge. Tags help other users to search for particular topics or subject areas.<br /><br />
+        <b>User account:</b> You can save all necessary data and information to your user account. You only have to enter the information once and then it will be automatically retrieved each time you log in. This way, you can work on your pledge in several steps without having to re-enter your details.
+      p5_html: |-
+        All pledges can be edited retrospectively, as long as they have not already been published. Under the menu option “My account”, which you will see on the upper right-hand side after logging in, you can edit your details and pledge at any time. <br />
+        <br />
+        Once you have sent your pledge to our editors to be activated it can no longer be changed. As the signees of a pledge sign a specific wording, editing your pledge is no longer possible after publication. Grammatical mistakes and small corrections can be made by our editorial staff. Please send an email to <em>redaktion@buntundverbindlich.de</em>.
+      p6_html: After your pledge has been created you can send it to the <em>bunt und verbindlich</em> editors for publication. All pledges will be activated within 1-3 days after being submitted by the initiator.
+      q1: How exactly can I help?
+      q2: How do I create a pledge?
+      q3: How can I edit my pledge?
+      q4: How will my pledge be published?
+      toc_html: |-
+        <ol class="c-toc__list">
+          <li class="c-toc__item">
+            <a class="c-toc__link" href="#question1">How exactly can I help?</a>
+          </li>
+          <li class="c-toc__item">
+            <a class="c-toc__link" href="#question2">How do I create a pledge?</a>
+          </li>
+          <li class="c-toc__item">
+            <a class="c-toc__link" href="#question3">How can I edit my pledge?</a>
+          </li>
+          <li class="c-toc__item">
+            <a class="c-toc__link" href="#question4">How will my pledge be published?</a>
+          </li>
+        </ol>
     impressum:
       header: Imprint
       text_html: "<p><strong>Initiative D21 e.V.</strong><br />\n\t\tAnschrift: Reinhardtstraße 38, 10117 Berlin<br />\n\t\tVereinsregister- Nr. 19386 Nz<br />\n\t\tAG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />\n\t\tTelefon 030 90177-0, Fax 030 90177-447</p><br />\n\t\t<p><strong>Verantwortlich</strong><br />\n\t\tLena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />\n\t\tTelefon: 030 5268722-50, Telefax: 030 5268722-60<br />\n\t\t<a title=\"Öffnet ein Fenster zum Versenden einer E-Mail\" href=\"mailto:kontakt@initiatived21.de\">kontakt@initiatived21.de</a></p><br />\n\t\t<p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />\n\t\tSabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />\n\t\tTelefon: 030 5268722-55, Telefax: 030 5268722-60<br />\n\t\t<a href=\"mailto:sabrina.dietrich@initiatived21.de\">sabrina.dietrich@initiatived21.de</a></p><br />\n\t\t<p><strong>Vertretungsberechtigung</strong><br />\n\t\tGemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p><br />\n\n<p><strong>Impressum Haftungshinweis</strong><br />\nTrotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n</p><br />\n<p>\nDie Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.\n</p><br />\n<p>\nBei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb des Verantwortungsbereiches des Betreibers liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten, in dem der Betreiber von den Inhalten Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.\nDer Betreiber erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der gelinkten/verknüpfte Seiten hat der Betreiber keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller gelinkten /verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Betreiber eingerichteten Gästebüchern, Diskussionsforen und Mailinglisten. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.\n</p><br />\n<p>\nAlle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!\n</p><br />\n<p>\nDas Copyright für veröffentlichte, vom Betreiber selbst erstellte Objekte bleibt allein beim Betreiber der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Betreibers nicht gestattet.\n</p><br />\n<p>\nWir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.\n</p><br />\n<p>\nDer Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.\n</p>"
@@ -1060,7 +1326,7 @@ en:
       contains: 
   reports:
     create:
-      success: The Pledge was reported.
+      success: You have successfully reported this pledge.
   rform:
     comment:
       content:
@@ -1072,17 +1338,17 @@ en:
     date_format: DD/MM/YYYY
     pledge:
       amount:
-        label: how many?
+        label: How many?
         placeholder: 10
       content:
-        label: what?
-        placeholder: give a refugee family a home
+        label: What?
+        placeholder: support a refugee family through mentoring
       deadline:
         label: Can be signed until
-        placeholder: "*Please select date"
+        placeholder: "*please select date"
       description:
         label: More Info (optional)
-        placeholder: 
+        placeholder: Let your supporters know about the background of your pledge and your motivation.
       image:
         label: Image
       initiator:
@@ -1092,10 +1358,10 @@ en:
           label: Your Email
           placeholder: "*"
         name:
-          label: Your Name
+          label: Your name
           placeholder: "*"
         organization:
-          label: Your company / your organization
+          label: Your company / organisation
         password:
           label: Password
           placeholder: "*"
@@ -1104,18 +1370,18 @@ en:
           placeholder: "*"
       location:
         label: Location
-        placeholder: "*"
+        placeholder: "*e.g. nationwide"
       requirement:
-        label: do what?
+        label: Do what?
         placeholder: do the same
       tag_ids:
         label: Topics
-        placeholder: "*Please select topic"
+        placeholder: "*Please select a topic"
       title:
         label: Title
         placeholder: "*e.g. Sponsorship"
       who:
-        label: who?
+        label: Who?
         placeholder: other people
     signature:
       anonymous:
@@ -1129,7 +1395,7 @@ en:
         label: 
         placeholder: Name*
       organization:
-        placeholder: Company or Organization (optional)
+        placeholder: Company or organisation (optional)
       reason:
         placeholder: I'm supporting this because … (optional)
     update:
@@ -1138,80 +1404,80 @@ en:
         placeholder: Send a project update to all signees.
     user:
       avatar:
-        label: Your Profile Picture
+        label: Your profile picture
       email:
         label: Email
         placeholder: Email
       name:
-        label: Your Name
+        label: Your name
         placeholder: "*"
       new_password:
-        label: New Password
+        label: New password
       organization:
-        label: Your Company / Your Organization
+        label: Your company / organisation
         placeholder: 
       password:
         label: Password
         placeholder: Password
       password_confirmation:
-        label: Repeat New Password
+        label: Repeat new password
       remember_me:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
-      first_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
+      first_paragraph: There has just been a update to the pledge you signed.
+      greeting: Dear Mr/Mrs %{name},
+      second_paragraph: In case you have any questions regarding the update, please get in touch with the initiator. Use the "questions for the initiator" section.
+      subject: Updates about the pledge you signed
     pledge_deleted:
-      greeting: 
-      paragraph1: 
-      subject: 
+      greeting: Dear Mr/Mrs %{name}
+      paragraph1: 'The pledge you signed was deleted by the initiator:'
+      subject: The pledge you signed was deleted
     pledge_failed:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting: Dear Mr/Mrs %{name},
+      link: To the pledge
+      paragraph1: Unfortunately the pledge you signed did not reach the required number of signatures.
+      paragraph2: 'Click here to go to the pledge:'
+      paragraph3: What happens now?
+      paragraph4: You could make a pledge yourself
+      paragraph5: You could support the pledges of other users
+      subject: Unfortunately, the pledge you signed was not successful
     pledge_successful:
-      greeting: 
-      link: 
-      paragraph1: 
-      paragraph2: 
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      greeting: Dear Mr/Mrs %{name}
+      link: To the pledge
+      paragraph1: Congratulations, the pledge you signed reached the required number of signatures!
+      paragraph2: 'Click here to go the pledge:'
+      paragraph3: What happens now?
+      paragraph4: If you do not need any further information from the initiator to carry the pledge out, then carry the pledge out!
+      paragraph5: Otherwise, the initiator will get in touch with you soon.
+      subject: The pledge you signed was successful!
     signature_created:
       button_confirm_signature: Click here to confirm
       button_delete_signature: Delete signature
-      fifth_paragraph: 
-      first_paragraph: 
-      fourth_paragraph: 
-      greeting: 
-      second_paragraph: 
-      subject: 
-      third_paragraph: 
+      fifth_paragraph: Help the pledge be successful by sharing it in your networks and circles and finding other supporters!
+      first_paragraph: Thanks for using our platform!
+      fourth_paragraph: 'If you wish to delete your signature, you can do so using the following link:'
+      greeting: Dear Mr/Mrs %{name},
+      second_paragraph: 'We need a confirmation from you in order for your signature to be published. Please use the following link:'
+      subject: Please confirm your email address and signature
+      third_paragraph: 'Please note that that by signing you are committing to the following: "A promise is a promise and will not be broken". We understand the "verbindlich" ("binding") of "bunt und verbindlich" according to this motto. There are no contracts on this platform. We trust our user community to keep their promises. Every user should therefore be conscious of the fact that creating or signing a pledge has a binding quality and that we are critical of insincere signatures or pledges and will consider sanctions with repeat offenders. So let''s realise great pledges together, which are above all colourful, but also binding for all our users.'
   tags:
     names:
-      accomodation: Accomodation
-      application: Application
+      accomodation: Accommodation
+      application: Applications
       children: Children
-      counseling: Counseling
-      culture: culture
+      counseling: Counselling
+      culture: Culture
       donation: Donation
       education: Education
-      family: family
+      family: Family
       language: Language
       men: Men
-      mentorship: Mentorship
+      mentorship: Mentoring
       money: Money
-      platform: platform
+      platform: Platform
       programming: Programming
-      social life: Social Life
+      social life: Participation
       sport: Sport
       technology: Technology
       training: Training
