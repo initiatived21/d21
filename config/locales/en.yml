@@ -369,6 +369,7 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
+        mailings_enabled: 
     models:
       admin: 
       admin_user: 
@@ -409,6 +410,7 @@ en:
     signed: |-
       Best regards,
       Your bunt und verbindlich editorial team
+    imprint_html: 
   devise:
     confirmations:
       new:
@@ -626,6 +628,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     labels:
       admin_user:
         new:
@@ -734,6 +737,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     placeholders:
       active_admin/comment:
         show:
@@ -924,6 +928,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
         email: 
         password: 
         password_confirmation: 

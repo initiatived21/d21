@@ -22,6 +22,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :organization
       f.input :avatar
+      f.input :mailings_enabled
     end
     f.actions
   end

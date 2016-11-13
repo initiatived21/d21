@@ -369,6 +369,7 @@ de:
         reset_password_token: Reset Password Token
         sign_in_count: Sign In Count
         updated_at: Updated At
+        mailings_enabled: Mailings enabled
     models:
       admin: Admin
       admin_user: Admin Users
@@ -407,6 +408,19 @@ de:
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
     signed: Ihre bunt und verbindlich Redaktion
+    imprint_html: |-
+      <p>
+      <span style="font-size: 1rem; font-weight: bold;">Stefanie Kaste</span><br />
+      Kommunikationsleitung | Community Management | Redaktion<br />
+      Reinhardtstraße 38, 10117 Berlin
+      </p>
+
+      <p>
+      Mail: <a href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
+      Web: <a href="https://www.buntundverbindlich.de/de" target="_blank">www.buntundverbindlich.de</a><br />
+      Facebook: <a href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
+      Twitter: <a href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a><br />
+      </p>
   devise:
     confirmations:
       new:
@@ -619,6 +633,7 @@ de:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     labels:
       admin_user:
         new:
@@ -727,6 +742,7 @@ de:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     placeholders:
       active_admin/comment:
         show:
@@ -917,6 +933,7 @@ de:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
         email: 
         password: 
         password_confirmation: 
