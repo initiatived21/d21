@@ -12,35 +12,50 @@ class InitiatorMailer < ApplicationMailer
     @comment = Comment.find(comment_id)
     @pledge = @comment.pledge
 
-    I18n.with_locale(@pledge.initiator.locale) do
-      mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
+    send_to_initiator_or_only_admin do |mailing_options|
+      mail mailing_options
     end
   end
 
   def pledge_successful pledge_id
     @pledge = Pledge.find(pledge_id)
 
-    I18n.with_locale(@pledge.initiator.locale) do
-      mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
+    send_to_initiator_or_only_admin do |mailing_options|
+      mail mailing_options
     end
   end
 
   def pledge_failed pledge_id
     @pledge = Pledge.find(pledge_id)
 
-    I18n.with_locale(@pledge.initiator.locale) do
-      mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
+    send_to_initiator_or_only_admin do |mailing_options|
+      mail mailing_options
     end
   end
 
   def needs_successful_update pledge_id
-    # The email is temporarily disabled due to ongoing discussions, until ticket #354 is implemented.
-    # Also there is the open question if this email should rather be sent to signers of the pledge.
+    @pledge = Pledge.find(pledge_id)
 
-    # @pledge = Pledge.find(pledge_id)
+    send_to_initiator_or_only_admin do |mailing_options|
+      mail mailing_options
+    end
+  end
 
-    # I18n.with_locale(@pledge.initiator.locale) do
-    #   mail subject: t('.subject'), to: @pledge.initiator.email, bcc: SYSTEM_MAIL
-    # end
+  private
+
+  def send_to_initiator_or_only_admin &block
+    mailing_options = { subject: t('.subject') }
+    initiator = @pledge.initiator
+    if (initiator.mailings_enabled)
+      mailing_options[:to] = initiator.email
+      mailing_options[:bcc] = SYSTEM_MAIL
+    else
+      mailing_options[:to] = SYSTEM_MAIL
+    end
+
+
+    I18n.with_locale(initiator.locale) do
+      mail mailing_options
+    end
   end
 end

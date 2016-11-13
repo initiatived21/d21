@@ -224,7 +224,7 @@ describe Pledge do
                                             requirement: 'help us',
                                             locale: 'en')
         pledge.pledge_text.must_equal(
-          'We promise to do something good if 10 other people help us.'
+          'We pledge to do something good if 10 other people help us.'
         )
       end
     end
