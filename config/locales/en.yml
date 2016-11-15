@@ -319,6 +319,7 @@ en:
         user_id: 
         user_name: 
         who: 
+        users: 
       signature:
         aasm_state: 
         anonymous: 
@@ -369,6 +370,9 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
+        mailings_enabled: 
+        avatar_height: 
+        avatar_width: 
     models:
       admin: 
       admin_user: 
@@ -406,7 +410,10 @@ en:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
-    signed: Your bunt und verbindlich editorial team
+    signed: |-
+      Best regards,
+      Your bunt und verbindlich editorial team
+    imprint_html: 
   devise:
     confirmations:
       new:
@@ -532,6 +539,8 @@ en:
       admin_user:
         new:
           create: 
+        edit:
+          update: 
       comment:
         edit:
           update: 
@@ -560,6 +569,10 @@ en:
           email: 
           password: 
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -624,9 +637,14 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     labels:
       admin_user:
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -732,6 +750,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     placeholders:
       active_admin/comment:
         show:
@@ -741,6 +760,10 @@ en:
           email: 
           password: 
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -820,6 +843,10 @@ en:
           email: 
           password: 
           password_confirmation: 
+        edit:
+          email: 
+          password: 
+          password_confirmation: 
       comment:
         edit:
           content: 
@@ -922,6 +949,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
         email: 
         password: 
         password_confirmation: 
@@ -959,22 +987,22 @@ en:
       link: Your pledge
       paragraph1: Congratulations, your pledge reached the required number of supporters!
       paragraph2: 'You can view the list of signees here:'
-      paragraph3: 
-      paragraph4: 
-      paragraph5: 
-      subject: 
+      paragraph3: What happens now?
+      paragraph4: Get in touch with your signees to discuss the details of carrying out the pledge
+      paragraph5: Post a summary report under "updates" as soon as the pledge has been carried out
+      subject: Your pledge has been successful!
     pledge_was_approved:
-      faq_paragraph: 
-      greeting: 
-      intro_paragraph: 
-      outro_paragraph: 
-      subject: 
+      faq_paragraph: 'You can find out here what happens with published pledges:'
+      greeting: Dear Mr/Mrs %{name},
+      intro_paragraph: 'Your pledge has just been published and can now be signed by other users:'
+      outro_paragraph: We wish you the best of luck!
+      subject: Your pledge has been published
       success_paragraph:
-        first_line: 
+        first_line: 'How to make your pledge successful:'
         steps:
-          '1': 
-          '2': 
-          '3': 
+          '1': Promote your pledge in your networks
+          '2': Write regular updates about your pledge
+          '3': Respond quickly to questions about your pledge from other users
   layouts:
     partials:
       footer:
@@ -998,7 +1026,7 @@ en:
       inspiration_heading: Inspiration
       inspiration_html: |-
         <p class="c-text-block">
-        The idea of linking the principle “I'll do X if you do Y” with social and socio-political topics was already around with the PledgeBank in England in 2005. This principle was the creative starting point for bunt und verbindlich in sustainably rooting the topic of integration, mobilising volunteers and motivating companies to make their engagement directed towards the integration of refugees.
+        The idea of linking the principle “I'll do X if you help with Y” with social and socio-political topics was already around with the PledgeBank in England in 2005. This principle was the creative starting point for bunt und verbindlich in sustainably rooting the topic of integration, mobilising volunteers and motivating companies to make their engagement directed towards the integration of refugees.
         </p>
       team_heading: Team
       team_html: |-
@@ -1038,10 +1066,10 @@ en:
         </div>
 
         <p class="c-text-block"><i>What does integration mean to you?</i><br />
-        For me integration means making new friends. Integration takes place on both sides and that's exciting. It's the reflection upon your own values, life story and history, and at the same time getting to know new life stories and attitudes. It's a bit like when a family gets a new child. It's exciting, full of development, new and you sometimes feel unsure and also make mistakes. It can also be difficult but with perspective nonetheless always a win.</p>
+        For me integration means making new friends. Integration takes place on both sides and that's exciting. It's the reflection upon your own values, life story and history, and at the same time getting to know new life stories and attitudes. It's a bit like when a family gets a new child. It's exciting, full of development, new and you sometimes feel unsure and also make mistakes. It can also be difficult, but with perspective nonetheless always a win.</p>
 
         <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
-        It's so eclectic. Colourful projects, but with a binding quality. It allows so much creativity within the topic of integration. If companies take in this principle, it will be fun to see how ideas come to life. To experience how, your own, in part small ideas transform into amazing projects which can achieve a lot. That convinces me, because our companies and initiatives are also convinced.</p>
+        It's so eclectic. Colourful projects, but with a binding quality. It allows so much creativity within the topic of integration. If companies take in this principle, it will be fun to see how ideas come to life. To experience how your own, in part small ideas transform into amazing projects which can achieve a lot. That convinces me, because our companies and initiatives are also convinced.</p>
 
         <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
         There have been two. As we saw the first wireframes for the site and when Stefanie euphorically told me on the phone about pledges that just kept getting better and better.</p>
@@ -1060,13 +1088,13 @@ en:
         </div>
 
         <p class="c-text-block"><i>What does integration mean to you?</i><br />
-        Integration for me is the willingness to accept differences, to be able to leave others be, without wanting to force them into a pigeonholing them. Integrating people contains, in my opinion, a lot of potential to learn from one another. To do that, we all need to face one another with curiosity instead of suspicion. Integration for me is the absolute conviction that every person deserves the chance of a safe and happy life.</p>
+        Integration for me is the willingness to accept differences, to be able to leave others be, without wanting to pigeonhole them. Integration contains, in my opinion, a lot of potential to learn from one another. To do that, we all need to face one another with curiosity instead of suspicion. Integration for me is the absolute conviction that every person deserves the chance of a safe and happy life.</p>
 
         <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
         The simplicity of the logic: no one has to do anything alone. You can easily find like-minded people who will support you. There are so many great refugee initiatives whose work would be made easier through concrete support from companies. On the other hand, I noticed whilst the project was being set up, how many committed companies there are, who are ready to donate material items or services without a fuss. bunt und verbindlich brings these two sides to a wonderful whole.</p>
 
         <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
-        The best moment was definitely as I noticed that our idea works, as companies and initiatives gave great feedback. Again and again, I'm impressed when I see how a company really thinks about what meaningful contributions it can make. The same goes for so many initiatives, big or small, which often do such amazing work on a voluntary basis. That really moves me and doesn't let me lose my belief (even with such a heavily loaded topic), that good prevails.</p>
+        The best moment was definitely as I noticed that our idea works, as companies and initiatives gave great feedback. Again and again, I'm impressed when I see how a company really thinks about what meaningful contributions it can make. The same goes for so many initiatives, big or small, which often do such amazing work on a voluntary basis. That really moves me and allows me to hold on to my belief (even with such a heavily loaded topic) that good prevails.</p>
 
 
         <div class="o-media u-mb">
@@ -1107,7 +1135,7 @@ en:
         To me integration means finding your place in society as a newcomer. How that actually looks is individual and diverse and changes both the newcomer and the society in an enriching way.</p>
 
         <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
-        The willingness to support refugees is still big in Germany. We can make that visible and help donating companies and people working with refugees to find each other more easily.</p>
+        The willingness to support refugees is still big in Germany. We can make this visible and help donating companies and people working with refugees to find each other more easily.</p>
 
         <p class="c-text-block"><i>What has been your best moment with the project so far?</i><br />
         As we started our closed beta-phase. Since then everything has been running like clockwork thanks to an awesome team.
@@ -1124,7 +1152,7 @@ en:
         </div>
 
         <p class="c-text-block"><i>What does integration mean to you?</i><br />
-        In the context of immigration, to me it means means mutual assimilation and acceptance. A new member of a society learns to find their way in new social and cultural surroundings and a new home and, without renouncing their own roots, to adapt to these. At the same time, that means for society supporting this process with empathy and understanding, and also adapting to the cultural and social factors of these new members.</p>
+        In the context of immigration, to me it means mutual assimilation and acceptance. A new member of a society learns to find their way in new social and cultural surroundings and a new home and, without renouncing their own roots, to adapt to these. At the same time, that means for society supporting this process with empathy and understanding, and also adapting to the cultural and social factors of these new members.</p>
 
         <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
         The platform creates a kind of positive snowball effect. If I as an individual would like to get involved, I can quickly feel lost. Is what I'm doing actually achieving something or is it just proverbial a drop in the ocean? But if I have the security of undertaking something with others – even if we're not in the same place – I can create motivation out of it.</p>
@@ -1145,7 +1173,7 @@ en:
         </div>
 
         <p class="c-text-block"><i>What does integration mean to you?</i><br />
-        Integration ist für mich ein Prozess, durch den sich beide Seiten verändern.
+        Integration is to me a process through which both sides change.
         </p>
 
         <p class="c-text-block"><i>What do you find convincing about “bunt und verbindlich”?</i><br />
@@ -1196,11 +1224,11 @@ en:
         <li>The platform also connects existing offers and provides information, tips and suggestions within the field of integration.</li>
         </ul>
 
-        <p>With <em>bunt und verbindlich</em> we don't just want to create yet another platform in a crowded market. We want to connect the willingness to help with other people who are committed to helping to unleash a bigger effect and strengthen existing offers.</p>
+        <p>With <em>bunt und verbindlich</em> we don't just want to create yet another platform in a crowded market. We want to connect the willingness to help with people who are committed in order to unleash a bigger effect and strengthen existing offers.</p>
 
-        <p><em>bunt und verbindlich</em> is also an open source project. <a href="https://github.com/initiatived21/d21" target="_blank">The source code is freely available here</a>  and can also be used for other social causes.</p>
+        <p><em>bunt und verbindlich</em> is also an open source project. <a href="https://github.com/initiatived21/d21" target="_blank">The source code is freely available here</a> and can also be used for other social causes.</p>
       answer2: |-
-        <p><em>bunt und verbindlich</em> helps to bring different players together, who have a mutual interest in the area of integration. Publish pledges can also be submitted. The pledges are in the format “I'll do X if you help with Y”.</p>
+        <p><em>bunt und verbindlich</em> helps to bring different people and organisations together, who have a mutual interest in the area of integration. Additionally, public pledges can be submitted using our platform. The pledges are in the format “I'll do X if you help with Y”.</p>
 
         <p>For example: “We pledge to donate 15 guitars, if there are 3 volunteers who will use these guitars in music lessons with refugee children”.</p>
 
@@ -1208,7 +1236,7 @@ en:
 
         <p>When your pledge has expired, you will receive a notification informing you whether your goal was reached or not.</p>
 
-        <p>With successful pledges we ask that you post a summary report after a certain period of time. We will also post particularly exciting success stories on our blog. The aim is to compile examples of best practice which will inspire others.</p>
+        <p>With successful pledges we will ask that you post a summary report after a certain period of time. We will also post particularly exciting success stories on our blog. The aim is to compile examples of best practice which will inspire others.</p>
       answer3: "<p>You can register when creating a pledge. As a signee you don't have to register.</p>"
       answer4: "<p>Yes, the platform is free to use.</p>"
       answer5: "<p>Every pledge will be activated by our editors within 1-3 days. We reserve the right not to publish any pledges with abusive content. You can check the status of your pledge on your profile.</p>"
@@ -1218,7 +1246,7 @@ en:
 
         <p>This is due to the fact that supporters will be signing an exact wording of a pledge. Retrospectively changing the pledge would make these signatures invalid.</p>
 
-        <p>For small changes, such as grammatical mistakes, you can contact our editors. For big changes you will have to create your pledge again. In this case, you are able to ask your signees so far to sign the new pledge with the “news” function. Afterwards, you can delete the old pledge.</p>
+        <p>For small changes, such as grammatical mistakes, you can contact our editors. For big changes you will have to create your pledge again. In this case, you are able to ask your signees so far to sign the new pledge with the update function. Afterwards, you can delete the old pledge.</p>
       answer8: |-
         <p>As long as the pledge has not expired, you can use the update function. This is at the bottom of the pledge page. All signees will then receive a notification by email.</p>
 
@@ -1238,7 +1266,7 @@ en:
         <p>We are looking forward to a broad scope of pledges, to your ideas and to your creativity.</p>
       masthead:
         text: bunt und verbindlich – colourful and binding – connects people who want to donate something with people who want to use this donation meaningfully for the integration of refugees in our society.
-        title: I'll do X if someone with Y helps
+        title: I'll do X if you help with Y
       newest: Newest pledges
       recommended: Recommended by the editors
       show_more: Show more
@@ -1460,7 +1488,7 @@ en:
       greeting: Dear Mr/Mrs %{name},
       second_paragraph: 'We need a confirmation from you in order for your signature to be published. Please use the following link:'
       subject: Please confirm your email address and signature
-      third_paragraph: 'Please note that that by signing you are committing to the following: "A promise is a promise and will not be broken". We understand the "verbindlich" ("binding") of "bunt und verbindlich" according to this motto. There are no contracts on this platform. We trust our user community to keep their promises. Every user should therefore be conscious of the fact that creating or signing a pledge has a binding quality and that we are critical of insincere signatures or pledges and will consider sanctions with repeat offenders. So let''s realise great pledges together, which are above all colourful, but also binding for all our users.'
+      third_paragraph: 'Please note that by signing you are committing to the following: "A promise is a promise and will not be broken". We understand the "verbindlich" ("binding") of "bunt und verbindlich" according to this motto. There are no contracts on this platform and we trust our user community to keep their promises. Every user should therefore be conscious of the fact that creating or signing a pledge has a binding quality, and that we are critical of insincere signatures or pledges and will consider sanctions for repeat offenders. So let''s bring great pledges to life together, which are above all colourful, but also binding for all our users.'
   tags:
     names:
       accomodation: Accommodation
