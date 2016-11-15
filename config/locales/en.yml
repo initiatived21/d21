@@ -319,6 +319,7 @@ en:
         user_id: 
         user_name: 
         who: 
+        users: 
       signature:
         aasm_state: 
         anonymous: 
@@ -369,6 +370,9 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
+        mailings_enabled: 
+        avatar_height: 
+        avatar_width: 
     models:
       admin: 
       admin_user: 
@@ -409,6 +413,7 @@ en:
     signed: |-
       Best regards,
       Your bunt und verbindlich editorial team
+    imprint_html: 
   devise:
     confirmations:
       new:
@@ -534,6 +539,8 @@ en:
       admin_user:
         new:
           create: 
+        edit:
+          update: 
       comment:
         edit:
           update: 
@@ -562,6 +569,10 @@ en:
           email: 
           password: 
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -626,9 +637,14 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     labels:
       admin_user:
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -734,6 +750,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
     placeholders:
       active_admin/comment:
         show:
@@ -743,6 +760,10 @@ en:
           email: 
           password: 
         new:
+          email: 
+          password: 
+          password_confirmation: 
+        edit:
           email: 
           password: 
           password_confirmation: 
@@ -822,6 +843,10 @@ en:
           email: 
           password: 
           password_confirmation: 
+        edit:
+          email: 
+          password: 
+          password_confirmation: 
       comment:
         edit:
           content: 
@@ -924,6 +949,7 @@ en:
           email: 
           name: 
           organization: 
+          mailings_enabled: 
         email: 
         password: 
         password_confirmation: 

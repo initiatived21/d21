@@ -19,6 +19,7 @@ class SignaturesController < ApplicationController
     find_signature_and_set_hash
     authorize @signature
     @signature.update_column :confirmed, true
+    InitiatorMailer.new_signature(@signature.id).deliver_later
     flash[:success] = 'Erfolgreich bestätigt'
     redirect_to pledge_path(@signature.pledge, locale: @signature.locale)
   end
