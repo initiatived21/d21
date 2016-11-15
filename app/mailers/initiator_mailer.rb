@@ -2,9 +2,12 @@
 class InitiatorMailer < ApplicationMailer
   def pledge_was_approved pledge_id
     @pledge = Pledge.find(pledge_id)
+    initiator = @pledge.initiator
 
-    I18n.with_locale(@pledge.initiator.locale) do
-      mail subject: t('.subject'), to: @pledge.initiator.email
+    return unless initiator.mailings_enabled
+
+    I18n.with_locale(initiator.locale) do
+      mail subject: t('.subject'), to: initiator.email
     end
   end
 
