@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #PARTNER LIST
+\*------------------------------------*/
+
+/**
+ * Partner / sponsors list component
+ */
+
+.c-partner-list {
+  margin-bottom: 1.5em;
+  list-style-type: none;
+  text-align: center;
+}
+
+.c-partner-list--left {
+  text-align: left;
+}
+
+.c-partner-list__item {
+  display: inline-block;
+  padding: 12px 24px 12px 0;
+}
+
+.c-partner-list__logo {
+  height: 24px;
+}
+
+@include media-query(m) {
+  .c-partner-list__item {
+    padding: 24px 48px 24px 0;
+  }
+
+  .c-partner-list__logo {
+    height: 48px;
+  }
+}

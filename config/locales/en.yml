@@ -318,8 +318,8 @@ en:
         user: 
         user_id: 
         user_name: 
-        who: 
         users: 
+        who: 
       signature:
         aasm_state: 
         anonymous: 
@@ -352,6 +352,8 @@ en:
         updated_at: 
       user:
         avatar: 
+        avatar_height: 
+        avatar_width: 
         confirmation_sent_at: 
         confirmation_token: 
         confirmed_at: 
@@ -363,6 +365,7 @@ en:
         last_sign_in_at: 
         last_sign_in_ip: 
         locale: 
+        mailings_enabled: 
         name: 
         organization: 
         remember_created_at: 
@@ -370,9 +373,6 @@ en:
         reset_password_token: 
         sign_in_count: 
         updated_at: 
-        mailings_enabled: 
-        avatar_height: 
-        avatar_width: 
     models:
       admin: 
       admin_user: 
@@ -410,10 +410,10 @@ en:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
+    imprint_html: 
     signed: |-
       Best regards,
       Your bunt und verbindlich editorial team
-    imprint_html: 
   devise:
     confirmations:
       new:
@@ -537,10 +537,10 @@ en:
   formtastic:
     actions:
       admin_user:
-        new:
-          create: 
         edit:
           update: 
+        new:
+          create: 
       comment:
         edit:
           update: 
@@ -568,11 +568,11 @@ en:
         create:
           email: 
           password: 
-        new:
+        edit:
           email: 
           password: 
           password_confirmation: 
-        edit:
+        new:
           email: 
           password: 
           password_confirmation: 
@@ -635,16 +635,16 @@ en:
         edit:
           avatar: 
           email: 
+          mailings_enabled: 
           name: 
           organization: 
-          mailings_enabled: 
     labels:
       admin_user:
-        new:
+        edit:
           email: 
           password: 
           password_confirmation: 
-        edit:
+        new:
           email: 
           password: 
           password_confirmation: 
@@ -748,9 +748,9 @@ en:
         edit:
           avatar: 
           email: 
+          mailings_enabled: 
           name: 
           organization: 
-          mailings_enabled: 
     placeholders:
       active_admin/comment:
         show:
@@ -759,11 +759,11 @@ en:
         create:
           email: 
           password: 
-        new:
+        edit:
           email: 
           password: 
           password_confirmation: 
-        edit:
+        new:
           email: 
           password: 
           password_confirmation: 
@@ -839,11 +839,11 @@ en:
   helpers:
     label:
       admin_user:
-        new:
+        edit:
           email: 
           password: 
           password_confirmation: 
-        edit:
+        new:
           email: 
           password: 
           password_confirmation: 
@@ -947,9 +947,9 @@ en:
         edit:
           avatar: 
           email: 
+          mailings_enabled: 
           name: 
           organization: 
-          mailings_enabled: 
         email: 
         password: 
         password_confirmation: 
@@ -1028,6 +1028,46 @@ en:
         <p class="c-text-block">
         The idea of linking the principle “I'll do X if you help with Y” with social and socio-political topics was already around with the PledgeBank in England in 2005. This principle was the creative starting point for bunt und verbindlich in sustainably rooting the topic of integration, mobilising volunteers and motivating companies to make their engagement directed towards the integration of refugees.
         </p>
+      partners_heading: Partners
+      partners_html: |-
+        <p class="c-text-block"><em>bunt und verbindlich</em> would like to support the work of existing refugee initiatives and contribute to strengthening their amazing commitment. Within the framework of our project we have already got to know these initiatives and their work. They all work to help refugees become a part of our society and for that we would like to say THANK YOU!</p>
+
+        <ul class="c-partner-list c-partner-list--left">
+          <li class="c-partner-list__item">
+            <a href="https://govolunteer.com/" target="_blank" alt="" title="GoVolunteer">
+              <img class="c-partner-list__logo" src="/images/partners/govolunteer.png" />
+            </a>
+          </li>
+          <li class="c-partner-list__item">
+            <a href="https://himate.org/" target="_blank" alt="" title="HiMate">
+              <img class="c-partner-list__logo" src="/images/partners/himate.png" />
+            </a>
+          </li>
+          <li class="c-partner-list__item">
+            <a href="https://kiron.ngo/" target="_blank" alt="" title="Kiron">
+              <img class="c-partner-list__logo" src="/images/partners/kiron.png" />
+            </a>
+          </li>
+          <li class="c-partner-list__item">
+            <a href="http://www.redi-school.org/" target="_blank" alt="" title="ReDI School of Digital Integration">
+              <img class="c-partner-list__logo" src="/images/partners/redi.png" />
+            </a>
+          </li>
+          <li class="c-partner-list__item">
+            <a href="http://start-coding.de/" target="_blank" alt="" title="Start Coding e.V.">
+              <img class="c-partner-list__logo" src="/images/partners/startcoding.png" />
+            </a>
+          </li>
+        </ul>
+      sponsors_heading: Sponsors
+      sponsors_html: |-
+        <ul class="c-partner-list c-partner-list--left">
+          <li class="c-partner-list__item">
+            <a href="https://www.anynines.com/" target="_blank" alt="" title="anynines">
+              <img class="c-partner-list__logo" src="/images/sponsors/anynines.png" />
+            </a>
+          </li>
+        </ul>
       team_heading: Team
       team_html: |-
         <p class="c-text-block"><b>Project organisation:</b></p>
