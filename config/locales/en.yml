@@ -1032,39 +1032,39 @@ en:
       partners_html: |-
         <p class="c-text-block"><em>bunt und verbindlich</em> would like to support the work of existing refugee initiatives and contribute to strengthening their amazing commitment. Within the framework of our project we have already got to know these initiatives and their work. They all work to help refugees become a part of our society and for that we would like to say THANK YOU!</p>
 
-        <ul class="c-partner-list c-partner-list--left">
+        <ul class="c-partner-list">
           <li class="c-partner-list__item">
             <a href="https://govolunteer.com/" target="_blank" alt="" title="GoVolunteer">
-              <img class="c-partner-list__logo" src="/images/partners/govolunteer.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--govolunteer" src="/images/partners/govolunteer.png" />
             </a>
           </li>
           <li class="c-partner-list__item">
             <a href="https://himate.org/" target="_blank" alt="" title="HiMate">
-              <img class="c-partner-list__logo" src="/images/partners/himate.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--himate" src="/images/partners/himate.png" />
             </a>
           </li>
           <li class="c-partner-list__item">
             <a href="https://kiron.ngo/" target="_blank" alt="" title="Kiron">
-              <img class="c-partner-list__logo" src="/images/partners/kiron.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--kiron" src="/images/partners/kiron.png" />
             </a>
           </li>
           <li class="c-partner-list__item">
             <a href="http://www.redi-school.org/" target="_blank" alt="" title="ReDI School of Digital Integration">
-              <img class="c-partner-list__logo" src="/images/partners/redi.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--redi" src="/images/partners/redi.png" />
             </a>
           </li>
           <li class="c-partner-list__item">
             <a href="http://start-coding.de/" target="_blank" alt="" title="Start Coding e.V.">
-              <img class="c-partner-list__logo" src="/images/partners/startcoding.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--startcoding" src="/images/partners/startcoding.png" />
             </a>
           </li>
         </ul>
       sponsors_heading: Sponsors
       sponsors_html: |-
-        <ul class="c-partner-list c-partner-list--left">
+        <ul class="c-partner-list">
           <li class="c-partner-list__item">
             <a href="https://www.anynines.com/" target="_blank" alt="" title="anynines">
-              <img class="c-partner-list__logo" src="/images/sponsors/anynines.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--anynines" src="/images/sponsors/anynines.png" />
             </a>
           </li>
         </ul>

@@ -7,30 +7,64 @@
  */
 
 .c-partner-list {
-  margin-bottom: 1.5em;
   list-style-type: none;
-  text-align: center;
-}
-
-.c-partner-list--left {
-  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .c-partner-list__item {
-  display: inline-block;
-  padding: 12px 24px 12px 0;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-.c-partner-list__logo {
-  height: 24px;
+.c-partner-list__logo--govolunteer {
+  height: 50px;
+}
+
+.c-partner-list__logo--himate {
+  height: 42px;
+}
+
+.c-partner-list__logo--kiron {
+  height: 28px;
+}
+
+.c-partner-list__logo--redi {
+  height: 22px;
+}
+
+.c-partner-list__logo--startcoding {
+  height: 17px;
+}
+
+.c-partner-list__logo--anynines {
+  height: 28px;
 }
 
 @include media-query(m) {
-  .c-partner-list__item {
-    padding: 24px 48px 24px 0;
+  .c-partner-list__logo--govolunteer {
+    height: 100px;
   }
 
-  .c-partner-list__logo {
-    height: 48px;
+  .c-partner-list__logo--himate {
+    height: 83px;
+  }
+
+  .c-partner-list__logo--kiron {
+    height: 56px;
+  }
+
+  .c-partner-list__logo--redi {
+    height: 43px;
+  }
+
+  .c-partner-list__logo--startcoding {
+    height: 34px;
+  }
+
+  .c-partner-list__logo--anynines {
+    height: 55px;
   }
 }
