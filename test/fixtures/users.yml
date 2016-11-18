@@ -5,3 +5,4 @@ pledger:
   email: pledgerEmail
   confirmed_at: 2000-01-01
   locale: de
+  mailings_enabled: t
