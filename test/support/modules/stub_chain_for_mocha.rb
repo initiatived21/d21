@@ -14,7 +14,7 @@ module StubChainMocha
     def expect_chain(*methods)
       if methods.length > 1
         next_in_chain = ::Object.new
-        expects(methods.shift).returns(next_in_chain)
+        expects(methods.shift).at_least_once.returns(next_in_chain)
         next_in_chain.expect_chain(*methods)
       else
         expects(methods.shift)

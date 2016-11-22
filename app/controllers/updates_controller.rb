@@ -15,8 +15,10 @@ class UpdatesController < ApplicationController
 
   def validate_success!
     @form.save
-    # TODO: Temporarilly deactivated due to bug in mailer
-    # SignerMailer.new_pledge_update(@form.model.id).deliver_later
+    recipients = @form.model.pledge.signatures.pluck(:id)
+    MailDelivery.to_multiple_plus_admin(
+      SignerMailer, :new_pledge_update, recipients, @form.model.id
+    )
     respond_to do |format|
       format.html do
         redirect_to pledge_path(@update.pledge, locale: I18n.locale)

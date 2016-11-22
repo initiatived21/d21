@@ -12,8 +12,17 @@ describe UpdatesController do
         updates(:basic).attributes
       end
 
+      def expect_new_pledge_updates
+        stub = OpenStruct.new
+        stub.expects(:deliver_now).once # for admin
+        stub.expects(:deliver_later).once # for the 1 signature of the pledge
+        SignerMailer.expects(:new_pledge_update).twice.returns(stub)
+      end
+
       it 'should save and redirect for HTML' do
         Update.any_instance.expects(:save)
+        expect_new_pledge_updates
+
         post :create, params: { locale: 'de', id: 1, update: update_params }
         assert_response 302
         assert_redirected_to '/de/pledges/1'
@@ -21,6 +30,8 @@ describe UpdatesController do
 
       it 'should save and render for JSON' do
         Update.any_instance.expects(:save)
+        expect_new_pledge_updates
+
         post :create, format: :json,
                       params: { locale: 'de', id: 1, update: update_params }
         assert_response 200

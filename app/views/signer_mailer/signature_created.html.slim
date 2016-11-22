@@ -1,4 +1,4 @@
-p= t('.greeting', name: @signature.name)
+p= t('.greeting', name: @recipient.name)
 
 p
   = t('.first_paragraph')
@@ -7,19 +7,19 @@ p
   = t('.second_paragraph')
   br
   = link_to t('.button_confirm_signature'), confirm_signature_url(\
-    id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
+    id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de)
 
 p
-  = t('.third_paragraph')  
+  = t('.third_paragraph')
 
 p
   = t('.fourth_paragraph')
   br
   = link_to t('.button_delete_signature'), destroy_signature_url(\
-    id: @signature.id, hash: @signature.confirmation_hash, locale: :de)
+    id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de)
 
 p
-  = t('.fifth_paragraph')  
+  = t('.fifth_paragraph')
 
 p
   = t('application_mailer.farewell')

@@ -98,7 +98,9 @@ class PledgesController < ApplicationController
     @pledge = Pledge.where(id: params[:id]).includes(:signatures).first
     authorize @pledge
     @pledge.destroy!
-    SignerMailer.pledge_deleted(@pledge).deliver_now
+    MailDelivery.to_multiple(
+      SignerMailer, :pledge_deleted, @pledge.signatures, @pledge
+    )
     flash[:success] = t('.success')
     redirect_to profile_path
   end

@@ -69,12 +69,12 @@ class Pledge < ApplicationRecord
 
   def successful_enter_side_effects!
     InitiatorMailer.pledge_successful(id).deliver_later
-    SignerMailer.pledge_successful(id).deliver_later
+    MailDelivery.to_multiple(SignerMailer, :pledge_successful, signature_ids, id)
   end
 
   def failed_enter_side_effects!
     InitiatorMailer.pledge_failed(id).deliver_later
-    SignerMailer.pledge_failed(id).deliver_later
+    MailDelivery.to_multiple(SignerMailer, :pledge_failed, signature_ids, id)
   end
 
   def searchable?

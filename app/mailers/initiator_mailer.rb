@@ -65,7 +65,6 @@ class InitiatorMailer < ApplicationMailer
       mailing_options[:to] = SYSTEM_MAIL
     end
 
-
     I18n.with_locale(initiator.locale) do
       mail mailing_options
     end
