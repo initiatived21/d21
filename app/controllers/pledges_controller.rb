@@ -96,11 +96,10 @@ class PledgesController < ApplicationController
 
   def destroy
     @pledge = Pledge.where(id: params[:id]).includes(:signatures).first
+    signatures = @pledge.signatures.confirmed.all.to_a
     authorize @pledge
     @pledge.destroy!
-    MailDelivery.to_multiple(
-      SignerMailer, :pledge_deleted, @pledge.signatures, @pledge
-    )
+    MailDelivery.to_multiple(SignerMailer, :pledge_deleted, signatures, @pledge)
     flash[:success] = t('.success')
     redirect_to profile_path
   end

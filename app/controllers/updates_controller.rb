@@ -15,7 +15,7 @@ class UpdatesController < ApplicationController
 
   def validate_success!
     @form.save
-    recipients = @form.model.pledge.signatures.pluck(:id)
+    recipients = @form.model.pledge.signatures.confirmed.pluck(:id)
     MailDelivery.to_multiple_plus_admin(
       SignerMailer, :new_pledge_update, recipients, @form.model.id
     )
