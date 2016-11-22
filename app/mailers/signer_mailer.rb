@@ -1,76 +1,42 @@
 # Contains mailings to the signers of a pledge
 class SignerMailer < ApplicationMailer
   def signature_created signature_id
-    @signature = Signature.find(signature_id)
-    I18n.with_locale(@signature.locale) do
-      mail(subject: t('.subject'), to: @signature.email)
-    end
+    @recipient = Signature.find(signature_id)
+    mail_with_locale
   end
 
-  # Prepares sending multiple update notifications, one to each signer and one
-  # to admin
-  def new_pledge_update update_id
+  def new_pledge_update signature, update_id
+    @recipient = find_or_use_recipient(Signature, signature)
     @update = Update.find(update_id)
     @pledge = @update.pledge
-    signatures = @pledge.signatures.confirmed.all
-
-    signatures.each do |recipient|
-      I18n.with_locale(recipient.locale) do
-        single_new_pledge_update recipient
-      end
-    end
-
-    # send to admin as well
-    mail(subject: t('.subject'), to: SYSTEM_MAIL).deliver
+    mail_with_locale
   end
 
-  def pledge_successful pledge_id
-    pledge = Pledge.find(pledge_id)
-    pledge.signatures.confirmed.all.each do |recipient|
-      I18n.with_locale(recipient.locale) do
-        single_pledge_successful recipient, pledge
-      end
-    end
+  def pledge_successful signature, pledge_id
+    @recipient = find_or_use_recipient(Signature, signature)
+    @pledge = Pledge.find(pledge_id)
+    mail_with_locale
   end
 
-  def pledge_failed pledge_id
-    pledge = Pledge.find(pledge_id)
-    pledge.signatures.confirmed.all.each do |recipient|
-      I18n.with_locale(recipient.locale) do
-        single_pledge_failed recipient, pledge
-      end
-    end
+  def pledge_failed signature, pledge_id
+    @recipient = find_or_use_recipient(Signature, signature)
+    @pledge = Pledge.find(pledge_id)
+    mail_with_locale
   end
 
   # Careful, call this while there is still a reference to the deleted pledge
-  # in memory
-  def pledge_deleted pledge
+  # in memory => needs "now" delivery
+  def pledge_deleted signature, pledge
+    @recipient = signature
     @pledge = pledge
-    pledge.signatures.all.select(&:confirmed?).each do |recipient|
-      @recipient = recipient
-      mail(subject: t('.subject'), to: recipient.email).deliver
-    end
+    mail_with_locale
   end
 
   private
 
-  def single_new_pledge_update recipient
-    @recipient = recipient
-
-    mail(subject: t('.subject'), to: @recipient.email).deliver
-  end
-
-  def single_pledge_successful recipient, pledge
-    @recipient = recipient
-    @pledge = pledge
-
-    mail(subject: t('.subject'), to: @recipient.email).deliver
-  end
-
-  def single_pledge_failed recipient, pledge
-    @recipient = recipient
-    @pledge = pledge
-
-    mail(subject: t('.subject'), to: @recipient.email).deliver
+  def mail_with_locale
+    I18n.with_locale(@recipient.locale) do
+      mail(subject: t('.subject'), to: @recipient.email)
+    end
   end
 end

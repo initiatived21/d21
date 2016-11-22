@@ -1,17 +1,17 @@
-<%= t('.greeting', name: @signature.name) %>
+<%= t('.greeting', name: @recipient.name) %>
 
 <%= t('.first_paragraph') %>
 
 <%= t('.second_paragraph') %>
 <%= confirm_signature_url(
-  id: @signature.id, hash: @signature.confirmation_hash, locale: :de
+  id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de
 ) %>
 
 <%= t('.third_paragraph') %>
 
 <%= t('.fourth_paragraph') %>
 <%= destroy_signature_url(
-  id: @signature.id, hash: @signature.confirmation_hash, locale: :de
+  id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de
 ) %>
 
 <%= t('.fifth_paragraph') %>

@@ -17,7 +17,7 @@ class FinishPledgeTest < ActiveSupport::TestCase
     pledge.update_column :amount, 1
     FactoryGirl.create :signature, pledge: pledge
     InitiatorMailer.expect_chain(:pledge_successful, :deliver_later)
-    SignerMailer.expect_chain(:pledge_successful, :deliver_later)
+    SignerMailer.expect_chain(:pledge_successful, :deliver_later).twice
     worker.perform(pledge.id)
     pledge.reload.aasm_state.must_equal 'successful'
   end
