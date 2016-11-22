@@ -386,6 +386,30 @@ en:
       update: 
   application_mailer:
     farewell: Best regards,
+    impressum: |-
+      ---
+      Impressum
+
+      Inhaberin der Domain www.buntundverbindlich.de ist die
+
+      Initiative D21 e.V.
+      Anschrift: Reinhardtstraße 38, 10117 Berlin
+      Vereinsregister- Nr. 19386 Nz
+      AG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg
+      Telefon 030 90177-0, Fax 030 90177-447
+
+      Verantwortlich
+      Lena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.
+      Telefon: 030 5268722-50, Telefax: 030 5268722-60
+      kontakt@initiatived21.de
+
+      Verantwortlich für journalistisch-redaktionelle Angebote
+      Sabrina Dietrich, Presse- und Öffentlichkeitsarbeit
+      Telefon: 030 5268722-55, Telefax: 030 5268722-60
+      sabrina.dietrich@initiatived21.de
+
+      Vertretungsberechtigung
+      Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.
     impressum_html: |-
       ---
       <p><strong>Impressum</strong></p>
@@ -411,9 +435,7 @@ en:
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
     imprint_html: 
-    signed: |-
-      Best regards,
-      Your bunt und verbindlich editorial team
+    signed: Your bunt und verbindlich editorial team
   devise:
     confirmations:
       new:
