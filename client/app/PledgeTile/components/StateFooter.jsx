@@ -9,31 +9,41 @@ export default class StateFooter extends ChildComponent {
     pledgeId: PropTypes.number.isRequired,
     showEditButton: PropTypes.bool,
     showDeleteButton: PropTypes.bool,
+    showRequestButton: PropTypes.bool,
     deleteConfirmationMessage: PropTypes.string,
   }
 
   render() {
-    const { pledgeId, showEditButton, showDeleteButton, deleteConfirmationMessage } = this.props
+    const { pledgeId, showEditButton, showDeleteButton, showRequestButton,
+      deleteConfirmationMessage } = this.props
+
+    console.log('showRequestButton', showRequestButton)
 
     const editButton = showEditButton ? (
-      <a className="o-btn c-btn c-btn--tertiary u-mt-small"
+      <a className="o-btn c-btn c-btn--tertiary c-btn--tiny"
         href={localPath(`/pledges/${pledgeId}/edit`)}>
-        <FontAwesome name="pencil" />
-        {' '}
         {this.t('.edit')}
       </a>
     ) : null
 
     const deleteButton = showDeleteButton ? (
       <FormButton
-        className="o-btn c-btn c-btn--secondary u-mt-small"
+        className="o-btn c-btn c-btn--secondary c-btn--tiny"
         action={localPath(`/pledges/${pledgeId}`)}
         method="DELETE"
         confirm={deleteConfirmationMessage}
         >
-        <FontAwesome name="trash-o" />
-        {' '}
         {this.t('.delete')}
+      </FormButton>
+    ) : null
+
+    const requestButton = showRequestButton ? (
+      <FormButton
+        className="o-btn c-btn c-btn--primary c-btn--tiny"
+        action={localPath(`/pledges/${pledgeId}/finalize`)}
+        method='PATCH'
+      >
+        {this.t('.submit')}
       </FormButton>
     ) : null
 
@@ -42,6 +52,8 @@ export default class StateFooter extends ChildComponent {
         {editButton}
         {' '}
         {deleteButton}
+        {' '}
+        {requestButton}
       </div>
     )
   }

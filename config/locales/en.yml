@@ -227,6 +227,7 @@ en:
     delete_confirmation_active: This pledge has already been published. Are you sure you want to delete it?
     edit: Edit
     republish: Republish
+    submit: Submit
   StateHeader:
     active: Published
     disapproved: Rejected

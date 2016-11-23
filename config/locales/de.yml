@@ -227,6 +227,7 @@ de:
     delete_confirmation_active: Dieses Versprechen ist bereits veröffentlicht. Sind Sie sicher, dass Sie es löschen wollen?
     edit: Bearbeiten
     republish: Erneut einstellen
+    submit: Absenden
   StateHeader:
     active: Veröffentlicht
     disapproved: Abgelehnt

@@ -6,12 +6,17 @@ const mapStateToProps = (state, ownProps) => {
   const pledge = ownProps.pledge
   const aasm_state = pledge.aasm_state
 
-  let showEditButton, showDeleteButton, deleteConfirmationMessage
+  const currentUserId = state.currentUser
+  const currentUser = state.entities.users[currentUserId]
+  const userConfirmed = !!(currentUser && currentUser.confirmed)
+
+  let showEditButton, showDeleteButton, showRequestButton, deleteConfirmationMessage
 
   switch(aasm_state) {
   case 'initialized':
     showEditButton = true
     showDeleteButton = true
+    showRequestButton = userConfirmed ? true : false
     deleteConfirmationMessage = I18n.t('StateFooter.delete_confirmation')
     break
   case 'requested':
@@ -32,7 +37,8 @@ const mapStateToProps = (state, ownProps) => {
     pledgeId: pledge.id,
     showEditButton,
     showDeleteButton,
-    deleteConfirmationMessage
+    showRequestButton,
+    deleteConfirmationMessage,
   }
 }
 
