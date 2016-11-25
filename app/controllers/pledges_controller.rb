@@ -1,6 +1,6 @@
 class PledgesController < ApplicationController
   before_action :set_new_form, only: [:new, :create]
-  before_action :set_edit_form, only: [:edit, :update]
+  before_action :set_edit_form, only: [:edit, :update, :finalize]
   before_action :authenticate_user!, except: [:new, :create, :index, :show]
 
   def new
@@ -107,11 +107,14 @@ class PledgesController < ApplicationController
   # single-purpose action with which the initiator requests approval of their
   # draft
   def finalize
-    @pledge = Pledge.find(params['id'])
     authorize @pledge
-    @pledge.finalize!
-    AdminMailer.new_pledge(@pledge.id).deliver_later
-    redirect_to pledge_path(id: @pledge.id)
+    if @form.validate(JSON.parse(@pledge.to_json))
+      @pledge.finalize!
+      AdminMailer.new_pledge(@pledge.id).deliver_later
+      redirect_to pledge_path(id: @pledge.id)
+    else
+      redirect_to edit_pledge_path(validate: @form.errors.messages.keys)
+    end
   end
 
   private
@@ -220,7 +223,8 @@ class PledgesController < ApplicationController
         authToken: form_authenticity_token,
         model: 'pledge',
         seedData: @form.as_json,
-        method: method
+        method: method,
+        validate: params[:validate]
       },
       id: params['id'],
       tags: Tag.all
