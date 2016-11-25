@@ -70,14 +70,14 @@ class Pledge < ApplicationRecord
   def successful_enter_side_effects!
     InitiatorMailer.pledge_successful(id).deliver_later
     MailDelivery.to_multiple(
-      SignerMailer, :pledge_successful, signatures.confirmed.pluck(:ids), id
+      SignerMailer, :pledge_successful, signatures.confirmed.pluck(:id), id
     )
   end
 
   def failed_enter_side_effects!
     InitiatorMailer.pledge_failed(id).deliver_later
     MailDelivery.to_multiple(
-      SignerMailer, :pledge_failed, signatures.confirmed.pluck(:ids), id
+      SignerMailer, :pledge_failed, signatures.confirmed.pluck(:id), id
     )
   end
 
