@@ -13,12 +13,10 @@
   margin-bottom: $spacing--small;
   position: relative;
   min-height: $comment-avatar-size;
+  @include clearfix;
 }
 
 .c-comment__question-text, .c-comment__answer-text {
-  //clear: both;
-  @include clearfix;
-
   padding: $spacing--tiny $spacing--small;
   border-radius: 5px;
 }
