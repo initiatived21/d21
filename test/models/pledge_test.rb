@@ -124,6 +124,22 @@ describe Pledge do
         event.transitions_to_state?(:failed).must_equal true
         event.transitions_to_state?(:disapproved).must_equal false
       end
+
+      it 'must finish an unsuccessful pledge to `failed`' do
+        pledge = pledges(:active)
+        pledge.update_columns amount: 999, deadline: Date.current - 1.day
+        pledge.finish!
+        pledge.failed?.must_equal true
+        pledge.successful?.must_equal false
+      end
+
+      it 'must finish a successful pledge to `successful`' do
+        pledge = pledges(:active)
+        pledge.update_columns amount: 1, deadline: Date.current - 1.day
+        pledge.finish!
+        pledge.failed?.must_equal false
+        pledge.successful?.must_equal true
+      end
     end
 
     describe 'when active' do
