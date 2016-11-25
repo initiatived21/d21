@@ -40,7 +40,7 @@ export default class PledgeTileFront extends ChildComponent {
     return (
       <div className={combinedClassName}>
         <a className="c-pledge-tile__link" href={path}>
-          <TagList tags={tags} />
+          <TagList tags={tags} summary />
           <InitiatorWithImage imagePath={initiatorImage}>
             {initiatorName}
           </InitiatorWithImage>

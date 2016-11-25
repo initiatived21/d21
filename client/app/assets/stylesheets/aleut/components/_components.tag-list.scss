@@ -9,26 +9,34 @@
  */
 
 /**
- * 1. Background color gets overwritten in React components through style attribute.
- * 2. Spacing between tags.
+ * 1. Set height to exactly 24px (no more no less) for stable pledge tile height.
+ * 2. Background color gets overwritten in React components through style attribute.
+ * 3. Spacing between tags.
  */
 
 .c-tag-list {
-  height: 24px;
+  @include font-size(12px);
+}
+
+.c-tag-list--summary {
+  height: 24px; /* [1] */
+  overflow: hidden;
 }
 
 .c-tag-list__item {
-  @include font-size(12px);
-
   border-radius: $border-radius;
 
   color: $white;
-  background-color: $mid-dark-gray; /* [1] */
+  background-color: $mid-dark-gray; /* [2] */
 
   padding: 0 $spacing--tiny;
-  margin-right: $spacing--tiny; /* [2] */
+  margin-right: $spacing--tiny; /* [3] */
 
   &:last-child {
-    margin-right: 0; /* [2] */
+    margin-right: 0; /* [3] */
   }
+}
+
+.c-tag-list__ellipsis {
+  color: $gray;
 }
