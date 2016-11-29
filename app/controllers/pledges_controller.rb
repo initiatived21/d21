@@ -113,7 +113,7 @@ class PledgesController < ApplicationController
       AdminMailer.new_pledge(@pledge.id).deliver_later
       redirect_to pledge_path(id: @pledge.id)
     else
-      redirect_to edit_pledge_path(validate: @form.errors.messages.keys)
+      redirect_to edit_pledge_path(validate: true)
     end
   end
 
@@ -133,6 +133,7 @@ class PledgesController < ApplicationController
   def set_edit_form
     @pledge = Pledge.find(params['id'])
     @form = BasePledgeForm.new(@pledge)
+    @form.validate(JSON.parse(@pledge.to_json)) if params[:validate]
   end
 
   def create_success!
