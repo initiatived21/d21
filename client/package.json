@@ -97,7 +97,7 @@
     "redux": "^3.3.1",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.0.1",
-    "rform": "^0.2.9",
+    "rform": "^0.2.11",
     "sass-loader": "^3.2.0",
     "strip-loader": "^0.1.2",
     "url-loader": "^0.5.7",

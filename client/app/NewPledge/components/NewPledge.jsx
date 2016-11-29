@@ -24,7 +24,10 @@ export default class NewPledge extends RootComponent {
   componentWillMount() {
     super.componentWillMount()
 
-    const imageUrl = this.props.form.seedData.fields.image.image.url
+    const imageUrl =
+      this.props.form.seedData.fields.image.url ||
+      ( this.props.form.seedData.fields.image.image &&
+        this.props.form.seedData.fields.image.image.url )
     if (imageUrl) {
       store.dispatch(setServerImage('image', imageUrl))
     }

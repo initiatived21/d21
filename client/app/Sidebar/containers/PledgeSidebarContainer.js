@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import I18n from 'i18n-js'
 import PledgeSidebar from '../components/PledgeSidebar'
+import localPath from '../../lib/browser/localPath'
 
 const mapStateToProps = (state, ownProps) => {
   const currentPledge = state.entities.pledges[ownProps.pledge_id]
@@ -22,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
     isDraft: currentPledge.aasm_state === 'initialized',
     showSignForm: currentPledge.aasm_state === 'active',
     userConfirmed: !!(currentUser && currentUser.confirmed),
-    activateAction: `/${I18n.locale}/pledges/${currentPledge.id}/finalize`,
+    activateAction: localPath(`/pledges/${currentPledge.id}/finalize`),
     userIsInitiator,
     renderReportForm
   }
