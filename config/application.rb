@@ -17,5 +17,9 @@ module D21
     config.logger = Logger.new(STDOUT)
 
     config.time_zone = 'Berlin'
+
+    config.to_prepare do
+      Devise::Mailer.layout "mailer"
+    end
   end
 end

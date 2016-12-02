@@ -435,10 +435,17 @@ de:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
+    imprint: |-
+      Redaktion | bunt und verbindlich
+      Reinhardtstraße 38, 10117 Berlin
+
+      Mail: redaktion@buntundverbindlich.de
+      Web: www.buntundverbindlich.de
+      Facebook: www.facebook.com/buntundverbindlich
+      Twitter: twitter.com/buntverbindlich
     imprint_html: |-
       <p>
-      <span style="font-size: 1rem; font-weight: bold;">Stefanie Kaste</span><br />
-      Kommunikationsleitung | Community Management | Redaktion<br />
+      <span style="font-size: 1rem; font-weight: bold;">Redaktion | bunt und verbindlich</span><br />
       Reinhardtstraße 38, 10117 Berlin
       </p>
 
@@ -1564,16 +1571,9 @@ de:
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: |-
-        Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: "Versprochen ist versprochen und wird nicht gebrochen“. Getreu diesem
-        Motto verstehen wir das „verbindlich“ bei „bunt und verbindlich“. Auf
-        dieser Plattform werden keine Verträge geschlossen. Wir vertrauen auf
-        unsere Nutzercommunity, dass ein Versprechen eingehalten wird. Es sollte
-        daher jedem Nutzer bewusst sein, dass ein Einstellen von Versprechen oder
-        auch das Unterzeichnen einen verbindlichen Charakter hat, und wir
-        Spaßunterzeichnungen oder Versprechen, die nicht ernst gemeint sind,
-        kritisch sehen und im Wiederholungsfall auch sanktionieren. Lasst uns
-        daher gemeinsam tolle Versprechen umsetzen, die für alle Nutzer der
-        Plattform vor allem bunt aber auch verbindlich sind.
+        Bitte beachten Sie, dass Sie durch die Unterschrift zu folgendem verpflichten: „Versprochen ist versprochen und wird nicht gebrochen“. Getreu diesem Motto verstehen wir das „verbindlich“ bei „bunt und verbindlich“. Auf dieser Plattform werden keine Verträge geschlossen. Wir vertrauen auf
+        unsere Nutzercommunity, dass ein Versprechen eingehalten wird. Es sollte daher jedem Nutzer bewusst sein, dass ein Einstellen von Versprechen oder auch das Unterzeichnen einen verbindlichen Charakter hat, und wir Spaßunterzeichnungen oder Versprechen, die nicht ernst gemeint sind,
+        kritisch sehen und im Wiederholungsfall auch sanktionieren. Lasst uns daher gemeinsam tolle Versprechen umsetzen, die für alle Nutzer der Plattform vor allem bunt aber auch verbindlich sind.
   tags:
     names:
       accomodation: Unterbringung

@@ -1,4 +1,4 @@
-p= t('.greeting', name: @pledge.initiator.name)
+p[style="font-weight: bold;"]= t('.greeting', name: @pledge.initiator.name)
 
 p
   = t('.intro_paragraph')
@@ -11,17 +11,14 @@ p
   br
   = link_to faq_url(locale: :de), faq_url(locale: :de)
 
-p
+p[style="margin-bottom: 0;"]
   = t('.success_paragraph.first_line')
-  ul
-    li = t('.success_paragraph.steps.1')
-    li = t('.success_paragraph.steps.2')
-    li = t('.success_paragraph.steps.3')
+ul[style="margin-top: 0;"]
+  li= t('.success_paragraph.steps.1')
+  li= t('.success_paragraph.steps.2')
+  li= t('.success_paragraph.steps.3')
 
 p
   = t('application_mailer.farewell')
   br
   = t('application_mailer.signed')
-
-p
-  = t('application_mailer.impressum_html')

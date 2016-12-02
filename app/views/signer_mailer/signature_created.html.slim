@@ -1,4 +1,4 @@
-p= t('.greeting', name: @recipient.name)
+p[style="font-weight: bold;"]= t('.greeting', name: @recipient.name)
 
 p
   = t('.first_paragraph')
@@ -25,6 +25,3 @@ p
   = t('application_mailer.farewell')
   br
   = t('application_mailer.signed')
-
-p
-  = t('application_mailer.impressum_html')

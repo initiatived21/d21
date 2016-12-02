@@ -42,6 +42,8 @@ describe SignerMailer do
         'Das von Ihnen unterzeichnete Versprechen ist erfolgreich!'
       )
       subject.must have_body_text '/pledges/1'
+      subject.must have_body_text 'Falls Sie für die weitere Umsetzung keine'
+      subject.must have_body_text 'Ansonsten wird der Initiator Sie'
     end
   end
 

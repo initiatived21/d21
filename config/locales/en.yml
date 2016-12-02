@@ -435,7 +435,26 @@ en:
 
       <p><strong>Vertretungsberechtigung</strong><br />
       Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
-    imprint_html: 
+    imprint: |-
+      Editorial | bunt und verbindlich
+      Reinhardtstraße 38, 10117 Berlin, Germany
+
+      Mail: redaktion@buntundverbindlich.de
+      Web: www.buntundverbindlich.de
+      Facebook: www.facebook.com/buntundverbindlich
+      Twitter: twitter.com/buntverbindlich
+    imprint_html: |-
+      <p>
+      <span style="font-size: 1rem; font-weight: bold;">Editorial | bunt und verbindlich</span><br />
+      Reinhardtstraße 38, 10117 Berlin, Germany
+      </p>
+
+      <p>
+      Mail: <a href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
+      Web: <a href="https://www.buntundverbindlich.de/en" target="_blank">www.buntundverbindlich.de</a><br />
+      Facebook: <a href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
+      Twitter: <a href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a><br />
+      </p>
     signed: Your bunt und verbindlich editorial team
   devise:
     confirmations:

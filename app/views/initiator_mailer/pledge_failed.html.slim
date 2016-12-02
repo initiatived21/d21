@@ -1,4 +1,4 @@
-p= t('.greeting', name: @pledge.initiator.name)
+p[style="font-weight: bold;"]= t('.greeting', name: @pledge.initiator.name)
 
 p
   = t('.paragraph1')
@@ -6,17 +6,14 @@ p
   = link_to pledge_url(id: @pledge.id, locale: :de),
     pledge_url(id: @pledge.id, locale: :de)
 
-p
+p[style="margin-bottom: 0;"]
   = t('.paragraph2')
-  ul
-    li = t('.paragraph3')    
-    li = t('.paragraph4')
-    li = t('.paragraph5')
+ul[style="margin-top: 0;"]
+  li= t('.paragraph3')
+  li= t('.paragraph4')
+  li= t('.paragraph5')
 
 p
   = t('application_mailer.farewell')
   br
   = t('application_mailer.signed')
-
-p
-  = t('application_mailer.impressum_html')

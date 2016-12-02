@@ -7,7 +7,16 @@
     </style>
   </head>
 
-  <body>
+  <body style="color: #3d3d3d; font: 1em/1.4 Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;">
+
+    <%= render('/layouts/partials/logo_mailer') %>
+
     <%= yield %>
+
+    <hr style="border-style: solid; border-bottom: none;" />
+
+    <div style="margin-top: 2.5em; font: 0.85em Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      <%= t('application_mailer.imprint_html') %>
+    </div>
   </body>
 </html>
