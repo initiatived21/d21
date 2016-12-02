@@ -7,6 +7,7 @@ import Search from '../../Search/components/Search'
 import Flash from '../../Flash/components/Flash'
 import PageHeader from '../../PageHeader/components/PageHeader'
 import OffCanvasMenu from '../../OffCanvasMenu/components/OffCanvasMenu'
+import SocialMediaCard from '../../SocialMediaCard/components/SocialMediaCard'
 
 ReactOnRails.register({
   ElementList,
@@ -16,5 +17,6 @@ ReactOnRails.register({
   Search,
   Flash,
   PageHeader,
-  OffCanvasMenu
+  OffCanvasMenu,
+  SocialMediaCard,
 })

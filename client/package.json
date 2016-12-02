@@ -89,7 +89,7 @@
     "react-dropzone": "^3.6.0",
     "react-fontawesome": "^1.1.0",
     "react-image-crop": "^1.0.0-rc5",
-    "react-on-rails": "6.0.4",
+    "react-on-rails": "6.1.2",
     "react-onclickoutside": "^5.3.2",
     "react-redux": "^4.4.1",
     "react-responsive": "^1.1.4",

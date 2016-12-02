@@ -218,6 +218,25 @@ describe Pledge do
         end
       end
     end
+
+    describe 'callbacks' do
+      describe '#after_active_success' do
+        it 'should render card and send mail to initiator' do
+          stubbed_pledge = FactoryGirl.build_stubbed(:pledge)
+          InitiatorMailer.expect_chain(:pledge_was_approved, :deliver_later)
+          RenderCardWorker.expects(:perform_async).with(stubbed_pledge.id)
+          stubbed_pledge.after_activate_success
+        end
+      end
+
+      describe '#after_finish_commit' do
+        it 'should render card' do
+          stubbed_pledge = FactoryGirl.build_stubbed(:pledge)
+          RenderCardWorker.expects(:perform_async).with(stubbed_pledge.id)
+          stubbed_pledge.after_finish_commit
+        end
+      end
+    end
   end
 
   describe 'methods' do

@@ -27,6 +27,9 @@ Then you will also need to `rake db:create` and `rake db:migrate` to get the
 database up and running. You can `rake db:seed` to load some initial testing
 data.
 
+For Facebook/Twitter card generation to work, install wkhtmltopdf and optipng.
+The optipng binary is installed with the bundle.
+
 The rails server is started via `npm run rails-server`
 
 Testing

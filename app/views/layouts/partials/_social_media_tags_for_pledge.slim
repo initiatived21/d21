@@ -1,0 +1,12 @@
+/ Twitter specific meta tags
+meta name="twitter:card" content="summary_large_image"
+meta name="twitter:site" content="@buntverbindlich"
+/ Meta tags for Facebook and Twitter
+meta property="og:url" content="#{request.original_url}"
+meta property="og:type" content="article"
+meta property="og:title" content="#{@pledge.title}"
+meta property="og:description" content="#{@pledge.pledge_text}"
+- if card_available?(pledge, I18n.locale)
+  meta property="og:image" content="#{request.base_url}#{@pledge.send('card_' + I18n.locale.to_s)}"
+  meta property="og:image:width" content="840"
+  meta property="og:image:height" content="440"

@@ -40,7 +40,7 @@ class Pledge < ApplicationRecord
       transitions from: :active, to: :disapproved
     end
 
-    event :finish, guard: :past_deadline? do
+    event :finish, guard: :past_deadline?, after_commit: :after_finish_commit do
       transitions from: :active, to: :successful,
                   guard: :sufficient_signatures?
       transitions from: :active, to: :failed
@@ -60,7 +60,7 @@ class Pledge < ApplicationRecord
   end
 
   def after_activate_success
-    # Send Mailing
+    RenderCardWorker.perform_async(id)
     InitiatorMailer.pledge_was_approved(id).deliver_later
 
     # Send new pledge over ActionCable
@@ -81,6 +81,10 @@ class Pledge < ApplicationRecord
     )
   end
 
+  def after_finish_commit
+    RenderCardWorker.perform_async(id)
+  end
+
   def searchable?
     active? || successful? || failed?
   end
@@ -98,6 +102,8 @@ class Pledge < ApplicationRecord
     if: :searchable?
   )
 
-  # CarrierWave Image Uploader
+  # CarrierWave Image Uploaders
   mount_base64_uploader :image, PledgeImageUploader, file_name: 'pledge_image'
+  mount_uploader :card_de, CardUploader, file_name: 'pledge_card_de'
+  mount_uploader :card_en, CardUploader, file_name: 'pledge_card_en'
 end

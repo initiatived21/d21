@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124145524) do
+ActiveRecord::Schema.define(version: 20161203142144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 20161124145524) do
     t.string   "locale",       limit: 2,                 null: false
     t.integer  "image_width"
     t.integer  "image_height"
+    t.string   "card_de"
+    t.string   "card_en"
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
   end
 

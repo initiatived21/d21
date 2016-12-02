@@ -27,7 +27,7 @@ gem 'turbolinks', '~> 5.x'
 gem 'i18n-js'
 
 # React
-gem 'react_on_rails', '6.0.5'
+gem 'react_on_rails', '6.1.2'
 
 ########################
 ### Rails extensions ###
@@ -60,6 +60,11 @@ gem 'redis', '>= 3.0'
 gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'mini_magick'
+
+# HTML to image
+gem 'imgkit', '~> 1.6.1'
+gem 'image_optim', '~> 0.24'
+gem 'image_optim_pack'
 
 # Admin Backend
 gem 'activeadmin', github: 'activeadmin'

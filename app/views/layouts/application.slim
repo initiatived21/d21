@@ -4,10 +4,10 @@ html lang=I18n.locale
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
 
-    - if content_for?(:facebook)
-      = content_for(:facebook)
+    - if content_for?(:social_media)
+      = content_for(:social_media)
     - else
-      = render '/layouts/partials/facebook_tags_generic'
+      = render '/layouts/partials/social_media_tags_generic'
 
     title
       | bunt und verbindlich

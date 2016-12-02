@@ -97,9 +97,10 @@ $tooltip-width:                    180px;
 $border-radius:                    5px;
 $border-radius-large:              8px;
 
-$btn-radius: $border-radius/2;
+$btn-radius:                       $border-radius/2;
 
-$box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+$box-shadow:                       0 0 10px rgba(0, 0, 0, 0.5);
+$box-shadow-light:                 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
 
 
 /**

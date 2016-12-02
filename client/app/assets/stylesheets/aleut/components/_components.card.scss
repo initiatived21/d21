@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+/**
+ * Social media card
+ */
+
+.c-card__front,
+.c-card__back {
+  position: absolute;
+  top: 20px;
+  width: 347px;
+}
+
+.c-card__front {
+  left: 45px;
+}
+
+.c-card__back {
+  left: 45px + 347px + 56px;
+}

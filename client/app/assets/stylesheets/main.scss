@@ -197,6 +197,9 @@ $o-flipper-height: $pledge-tile-height;
 @import "aleut/components/components.pledge-form";
 @import "aleut/components/components.tooltip";
 
+/* Server-side components */
+@import "aleut/components/components.card";
+
 
 /*------------------------------------*\
     #Utilities (u-prefix)
