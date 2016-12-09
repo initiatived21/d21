@@ -13,4 +13,15 @@ describe AdminMailer do
       subject.must have_body_text '/admin/pledges/1'
     end
   end
+
+  describe '#new_report' do
+    subject { AdminMailer.new_report(2) }
+
+    it 'should send an email about the report' do
+      subject.must deliver_to 'redaktion@buntundverbindlich.de'
+      subject.must have_subject 'Ein Versprechen wurde gemeldet'
+      subject.must have_body_text '/de/pledges/2'
+      subject.must have_body_text 'Das Versprechen wurde bisher 2 Mal gemeldet.'
+    end
+  end
 end

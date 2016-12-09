@@ -6,4 +6,11 @@ class AdminMailer < ApplicationMailer
     mail subject: 'Ein Versprechen wartet auf Freigabe',
          to: SYSTEM_MAIL
   end
+
+  def new_report pledge_id
+    @pledge = Pledge.find(pledge_id)
+
+    mail subject: 'Ein Versprechen wurde gemeldet',
+         to: SYSTEM_MAIL
+  end
 end
