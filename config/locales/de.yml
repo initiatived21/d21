@@ -182,7 +182,9 @@ de:
     your_data: Ihre Daten
     your_pledges: Ihre Versprechen
   QuestionForm:
+    question_received: Wir haben Ihre Frage empfangen und schalten sie so bald wie möglich frei.
     submit: Absenden
+    thank_you: Vielen Dank!
   ReportPledgeForm:
     description: Ihnen ist etwas Negatives an den Inhalten dieser Seite aufgefallen? Melden Sie es an unsere Redaktion, und wir überprüfen die Seite.
     report_pledge: Versprechen melden
@@ -387,6 +389,14 @@ de:
       update: Updates
   application_mailer:
     farewell: Mit besten Grüßen,
+    footer:
+      address: Reinhardtstraße 38, 10117 Berlin
+      links_html: |-
+        Mail: <a style="color: #1f70b8;" href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
+        Web: <a style="color: #1f70b8;" href="https://www.buntundverbindlich.de/de" target="_blank">www.buntundverbindlich.de</a><br />
+        Facebook: <a style="color: #1f70b8;" href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
+        Twitter: <a style="color: #1f70b8;" href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a>
+      title: Redaktion | bunt und verbindlich
     impressum: |-
       ---
       Impressum
@@ -473,17 +483,13 @@ de:
         user_subject: Registrierung abschliessen
       password_change:
         greeting: Liebe/r %{name},
-        paragraph1: Wir teilen Ihnen mit, dass Ihr Passwort erfolgreich geändert wurde.
+        paragraph1: wir teilen Ihnen mit, dass Ihr Passwort erfolgreich geändert wurde.
       reset_password_instructions:
         edit_password_link: Neues Passwort erstellen
         greeting: Liebe/r %{name},
         paragraph1: 'Sie haben ein neues Passwort angefordert. Um ein neues Passwort zu erstellen, folgen Sie bitte folgendem Link:'
         paragraph2: Wenn Sie diese Email nicht angefordert haben, können Sie sie ignorieren. Ihr Passwort wird nicht geändert, solange Sie nicht den obigen Link benutzen.
         user_subject: Neues Passwort erstellen
-      unlock_instructions:
-        greeting: Liebe/r %{email}
-        paragraph1: 'Ihr Nutzerkonto wurde gesperrt, da es zu viele Versuche gab, sich einzuloggen. Klicken Sie auf den folgenden Link, um Ihr Konto wieder zu entsperren:'
-        unlock_link: Mein Konto entsperren
     passwords:
       edit:
         change_password: Mein Passwort ändern
@@ -997,21 +1003,21 @@ de:
         update: Update Benutzer
   initiator_mailer:
     needs_successful_update:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       link: Ihr Versprechen
       p1: Ihr Versprechen hat vor zwei Wochen erfolgreich geendet. Wir möchten Sie daran erinnern, einen Abschlussbericht über die Neuigkeiten-Funktion zu veröffentlichen. Damit helfen Sie anderen, von Ihrem Vorhaben zu lernen!
       subject: Erinnerung Abschlussbericht
     new_question:
       first_paragraph: Ein Nutzer hat soeben eine Rückfrage zu Ihrem Versprechen gestellt.
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       second_paragraph: 'Zum Beantworten der Rückfrage loggen Sie sich bitte ein und rufen Ihr Versprechen auf:'
       subject: Rückfrage zu Ihrem Versprechen
     new_signature:
       first_paragraph: 'Ein Nutzer hat soeben Ihr Versprechen unterzeichnet:'
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       subject: Neue Unterschrift
     pledge_failed:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       link: Ihr Versprechen
       paragraph1: 'leider ist Ihr Versprechen abgelaufen und hat nicht genügend Unterstützer gefunden:'
       paragraph2: Wie könnte es nun weiter gehen?
@@ -1020,7 +1026,7 @@ de:
       paragraph5: Sie könnten Versprechen anderer Nutzer unterstützen
       subject: Ihr Versprechen ist leider nicht erfolgreich
     pledge_successful:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       link: Ihr Versprechen
       paragraph1: herzlichen Glückwunsch, Ihr Versprechen hat die nötige Anzahl an Unterstützern gefunden!
       paragraph2: 'Sie können die Liste der Unterzeichner hier einsehen:'
@@ -1030,7 +1036,7 @@ de:
       subject: Ihr Versprechen ist erfolgreich!
     pledge_was_approved:
       faq_paragraph: 'Wie es mit veröffentlichten Versprechen weiter geht, können Sie hier nachlesen:'
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       intro_paragraph: 'Ihr Versprechen wurde soeben veröffentlicht und kann nun von anderen Nutzern unterzeichnet werden:'
       outro_paragraph: Wir wünschen Ihnen viel Erfolg!
       subject: Ihr Versprechen wurde veröffentlicht
@@ -1536,15 +1542,15 @@ de:
   signer_mailer:
     new_pledge_update:
       first_paragraph: 'Zu dem von Ihnen unterzeichneten Versprechen wurde soeben eine Neuigkeit veröffentlicht:'
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       second_paragraph: Falls Sie Rückfragen zu der Neuigkeit haben, wenden Sie sich bitte direkt an den Initiator. Nutzen Sie dazu den Bereich "Fragen an den Initiator".
       subject: Neuigkeiten zu dem von Ihnen unterzeichneten Versprechen
     pledge_deleted:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       paragraph1: 'Das von Ihnen unterzeichnete Versprechen wurde von dem Initiator gelöscht:'
       subject: Ihr unterzeichnetes Versprechen wurde gelöscht
     pledge_failed:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       link: Zum Versprechen
       paragraph1: leider hat das von Ihnen unterzeichnete Versprechen nicht die nötige Anzahl an Unterstützern gefunden!
       paragraph2: 'Hier geht es zum Versprechen:'
@@ -1553,7 +1559,7 @@ de:
       paragraph5: Sie könnten Versprechen anderer Nutzer unterstützen
       subject: Das von Ihnen unterzeichnete Versprechen ist leider nicht erfolgreich
     pledge_successful:
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       link: Zum Versprechen
       paragraph1: herzlichen Glückwunsch, das von Ihnen unterzeichnete Versprechen hat die nötige Anzahl an Unterstützern gefunden!
       paragraph2: 'Hier geht es zum Versprechen:'
@@ -1567,7 +1573,7 @@ de:
       fifth_paragraph: 'Helfen Sie mit, damit das Versprechen erfolgreich ist: Teilen Sie das Versprechen in Ihren Netzwerken und organisieren Sie weitere Unterstützer!'
       first_paragraph: herzlichen Dank für die Nutzung unserer Plattform!
       fourth_paragraph: 'Sollten Sie Ihre Unterschrift wieder löschen wollen, nutzen Sie dazu bitte folgenden Link:'
-      greeting: Liebe/r Herr/Frau %{name}
+      greeting: Liebe/r Herr/Frau %{name},
       second_paragraph: 'Damit Ihre Unterschrift veröffentlicht werden kann, benötigen wir von Ihnen eine Bestätigung. Bitte nutzen Sie dazu folgenden Link:'
       subject: Bitte Emailadresse und Unterschrift bestätigen
       third_paragraph: |-

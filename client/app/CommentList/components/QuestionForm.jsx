@@ -9,35 +9,49 @@ export default class QuestionForm extends ChildComponent {
     id: PropTypes.number.isRequired,
     isSubmitting: PropTypes.bool.isRequired,
     handleResponse: PropTypes.func.isRequired,
+    afterResponse: PropTypes.func.isRequired,
+    wasSubmitted: PropTypes.bool,
   }
 
   render() {
-    const { formData, id, isSubmitting, handleResponse } = this.props
+    const { formData, id, isSubmitting, handleResponse, afterResponse, wasSubmitted } = this.props
 
-    return (
-      <Form
-        className="c-comment__question-form o-layout o-layout--small"
-        formObjectClass={NewQuestionFormObject}
-        id={`QuestionForm-${id}`}
-        ajax={true}
-        handleResponse={handleResponse}
-        {...formData}>
+    let formOrMessage
+    if (wasSubmitted) {
+      formOrMessage = (
+        <p className="u-mt u-mb">
+          <strong>{this.t('.thank_you')}</strong><br/>
+          {this.t('.question_received')}
+        </p>
+      )
+    } else {
+      formOrMessage = (
+        <Form
+          className="c-comment__question-form o-layout o-layout--small"
+          formObjectClass={NewQuestionFormObject}
+          id={`QuestionForm-${id}`}
+          ajax={true}
+          handleResponse={handleResponse}
+          afterResponse={afterResponse}
+          {...formData}>
 
-        <InputSet
-          ariaLabelOnly
-          wrapperClassName="c-textarea c-textarea--narrow o-layout__item u-4/5@m u-mb-small@s"
-          attribute="content"
-          type="textarea"
-          key={id}
-        />
+          <InputSet
+            ariaLabelOnly
+            wrapperClassName="c-textarea c-textarea--narrow o-layout__item u-4/5@m u-mb-small@s"
+            attribute="content"
+            type="textarea"
+          />
 
-        <div className="o-layout__item u-1/5@m">
-          <button className="c-comment__submit o-btn c-btn c-btn--primary"
-            type="submit" disabled={isSubmitting}>
-            {this.t('.submit')}
-          </button>
-        </div>
-      </Form>
-    )
+          <div className="o-layout__item u-1/5@m">
+            <button className="c-comment__submit o-btn c-btn c-btn--primary"
+              type="submit" disabled={isSubmitting}>
+              {this.t('.submit')}
+            </button>
+          </div>
+        </Form>
+      )
+    }
+
+    return formOrMessage
   }
 }

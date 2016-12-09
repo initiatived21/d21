@@ -24,4 +24,14 @@ describe AdminMailer do
       subject.must have_body_text 'Das Versprechen wurde bisher 2 Mal gemeldet.'
     end
   end
+
+  describe '#new_question' do
+    subject { AdminMailer.new_question(1) }
+
+    it 'should send an email about the question' do
+      subject.must deliver_to 'redaktion@buntundverbindlich.de'
+      subject.must have_subject 'Eine Frage wartet auf Freigabe'
+      subject.must have_body_text '/admin/comments/1'
+    end
+  end
 end

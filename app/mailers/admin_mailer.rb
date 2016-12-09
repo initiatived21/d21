@@ -13,4 +13,10 @@ class AdminMailer < ApplicationMailer
     mail subject: 'Ein Versprechen wurde gemeldet',
          to: SYSTEM_MAIL
   end
+
+  def new_question comment_id
+    @comment = Comment.find(comment_id)
+
+    mail(subject: 'Eine Frage wartet auf Freigabe', to: SYSTEM_MAIL)
+  end
 end

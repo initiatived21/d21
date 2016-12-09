@@ -7,15 +7,17 @@ describe CommentsController do
         comments(:unanswered).attributes
       end
 
-      it 'should save and redirect for HTML' do
+      it 'should save, send an email and redirect for HTML' do
         Comment.any_instance.expects(:save)
+        AdminMailer.expect_chain(:new_question, :deliver_later)
         post :create, params: { locale: 'de', id: 1, comment: comment_params }
         assert_response 302
         assert_redirected_to '/de/pledges/1'
       end
 
-      it 'should save and render for JSON' do
+      it 'should save, send an email and render for JSON' do
         Comment.any_instance.expects(:save)
+        AdminMailer.expect_chain(:new_question, :deliver_later)
         post :create, format: :json,
                       params: { locale: 'de', id: 1, comment: comment_params }
         assert_response 200

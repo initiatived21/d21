@@ -23,11 +23,10 @@ export const REMOVE_FLASH_MESSAGE        = 'REMOVE_FLASH_MESSAGE'
 export const ADD_SEARCH_RESULTS          = 'ADD_SEARCH_RESULTS'
 export const SET_SEARCH_LOADING_STATE    = 'SET_SEARCH_LOADING_STATE'
 
-/* Signed pledges */
+/* Signed pledges, submitted updates and asked questions */
 export const SIGN_PLEDGE                 = 'SIGN_PLEDGE'
-
-/* Submitted updates */
 export const SUBMIT_UPDATE               = 'SUBMIT_UPDATE'
+export const ASK_QUESTION                = 'ASK_QUESTION'
 
 /* Session */
 export const TOGGLE_SESSION_POPUP        = 'TOGGLE_SESSION_POPUP'

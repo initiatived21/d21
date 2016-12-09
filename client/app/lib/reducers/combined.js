@@ -7,6 +7,7 @@ import searchResults from './searchResults'
 import sessionPopup from './sessionPopup'
 import signedPledges from './signedPledges'
 import submittedUpdates from './submittedUpdates'
+import askedQuestions from './askedQuestions'
 import imageInputs from './imageInputs'
 import currentUser from './currentUser'
 import authToken from './authToken'
@@ -19,6 +20,7 @@ export default combineReducers({
   sessionPopup,
   signedPledges,
   submittedUpdates,
+  askedQuestions,
   imageInputs,
   currentUser,
   authToken,

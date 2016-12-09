@@ -5,6 +5,7 @@ import QuestionFormContainer from '../containers/QuestionFormContainer'
 
 describe('<PledgeCommentList />', function () {
   const props = {
+    pledge_id: 1,
     comments: [
       {
         id: 1,
@@ -22,7 +23,8 @@ describe('<PledgeCommentList />', function () {
     },
     userCanAskQuestions: true,
     userCanAnswer: false,
-    isSubmitting: false
+    isSubmitting: false,
+    questionFormId: 2,
   }
 
   it('should render', function () {
@@ -37,10 +39,12 @@ describe('<PledgeCommentList />', function () {
     wrapper.find('p').length.should.equal(1)
   })
 
-  it('should render the question form with a unique id so that it gets cleared on submit', function() {
+  it('should render a question form with the given id', function() {
     const wrapper = shallow(<PledgeCommentList {...props} />)
 
-    const questionFormProps = wrapper.find(QuestionFormContainer).props()
-    questionFormProps.id.should.equal(2)
+    const questionForm = wrapper.find(QuestionFormContainer)
+
+    questionForm.length.should.equal(1)
+    questionForm.props().id.should.equal(2)
   })
 })

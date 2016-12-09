@@ -182,7 +182,9 @@ en:
     your_data: Your information
     your_pledges: Your pledges
   QuestionForm:
+    question_received: We have received your question and will publish it as soon as possible.
     submit: Submit
+    thank_you: Thank you!
   ReportPledgeForm:
     description: Have you noticed something negative about the contents of this website? Please let our editorial staff know and we will take a look at the page.
     report_pledge: Report pledge
@@ -387,6 +389,14 @@ en:
       update: 
   application_mailer:
     farewell: Best regards,
+    footer:
+      address: Reinhardtstraße 38, 10117 Berlin, Germany
+      links_html: |-
+        Mail: <a style="color: #1f70b8;" href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
+        Web: <a style="color: #1f70b8;" href="https://www.buntundverbindlich.de/de" target="_blank">www.buntundverbindlich.de</a><br />
+        Facebook: <a style="color: #1f70b8;" href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
+        Twitter: <a style="color: #1f70b8;" href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a>
+      title: Editorial | bunt und verbindlich
     impressum: |-
       ---
       Impressum
@@ -465,30 +475,23 @@ en:
     mailer:
       confirmation_instructions:
         confirm_link: Confirmation link
-        greeting: Dear %{name},
+        greeting: Dear %{name}
         paragraph1: Thanks for using our platform!
         paragraph2: 'Please confirm your email address by clicking on the following link:'
         paragraph3: Afterwards you can send your pledge to our editors to be activated. Select the pledge preview again and click on "send pledge".
         paragraph4: You can also view the status of your pledge on your profile.
         user_subject: Complete registration
       password_change:
-        greeting: Dear %{name},
+        greeting: Dear %{name}
         paragraph1: We're contacting you to notify you that your password has been changed.
       reset_password_instructions:
         edit_password_link: Change my password
-        greeting: Dear %{name},
+        greeting: Dear %{name}
         paragraph1: You have requested a link to change your password. To do this click on the link below.
         paragraph2: |-
           If you didn't request this, please ignore this email.
           Your password won't change until you access the link above and create a new one.
         user_subject: Change your password
-      unlock_instructions:
-        greeting: Dear %{email}
-        paragraph1: |-
-          Your account has been locked due to too many failed login attempts.
-
-          Click the link below to unlock your account:
-        unlock_link: Unlock my account
     passwords:
       edit:
         change_password: Change my password
@@ -1002,21 +1005,21 @@ en:
         update: 
   initiator_mailer:
     needs_successful_update:
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       link: Your pledge
       p1: Your pledge successfully ended two weeks ago. We would like to remind you to write a summary report using the update function. This will help others to learn from your project!
       subject: Summary report reminder
     new_question:
       first_paragraph: A user has just asked a question about your pledge.
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       second_paragraph: 'To answer this query login and select your pledge:'
       subject: Question about your pledge
     new_signature:
       first_paragraph: 'A user has just signed your pledge:'
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       subject: New signature
     pledge_failed:
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       link: Your pledge
       paragraph1: 'Unfortunately your pledge has expired and did not find enough supporters:'
       paragraph2: What happens now?
@@ -1025,7 +1028,7 @@ en:
       paragraph5: You could support the pledges of other users
       subject: Unfortunately your pledge was unsuccessful
     pledge_successful:
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       link: Your pledge
       paragraph1: Congratulations, your pledge reached the required number of supporters!
       paragraph2: 'You can view the list of signees here:'
@@ -1535,8 +1538,8 @@ en:
         label: Stay signed in
   signer_mailer:
     new_pledge_update:
-      first_paragraph: There has just been a update to the pledge you signed.
-      greeting: Dear Mr/Mrs %{name},
+      first_paragraph: There has just been an update to the pledge you signed.
+      greeting: Dear Mr/Mrs %{name}
       second_paragraph: In case you have any questions regarding the update, please get in touch with the initiator. Use the "questions for the initiator" section.
       subject: Updates about the pledge you signed
     pledge_deleted:
@@ -1544,7 +1547,7 @@ en:
       paragraph1: 'The pledge you signed was deleted by the initiator:'
       subject: The pledge you signed was deleted
     pledge_failed:
-      greeting: Dear Mr/Mrs %{name},
+      greeting: Dear Mr/Mrs %{name}
       link: To the pledge
       paragraph1: Unfortunately the pledge you signed did not reach the required number of signatures.
       paragraph2: 'Click here to go to the pledge:'

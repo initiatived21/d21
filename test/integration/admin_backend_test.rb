@@ -78,5 +78,37 @@ class AdminBackendTest < AcceptanceTest
         pledge.reload.aasm_state.must_equal 'disapproved'
       end
     end
+
+    describe 'comment administration' do
+      it 'must allow to approve questions' do
+        comment = FactoryGirl.create :comment
+        comment.may_approve?.must_equal true
+
+        visit '/admin'
+        click_link 'Question'
+        click_link comment.id
+
+        page.must_have_content 'Aktuell: initialized'
+        click_link 'Approve'
+
+        page.must_have_content 'Aktuell: approved'
+        comment.reload.aasm_state.must_equal 'approved'
+      end
+
+      it 'must allow to disapprove questions' do
+        comment = FactoryGirl.create :comment
+        comment.may_disapprove?.must_equal true
+
+        visit '/admin'
+        click_link 'Question'
+        click_link comment.id
+
+        page.must_have_content 'Aktuell: initialized'
+        click_link 'Disapprove'
+
+        page.must_have_content 'Aktuell: disapproved'
+        comment.reload.aasm_state.must_equal 'disapproved'
+      end
+    end
   end
 end

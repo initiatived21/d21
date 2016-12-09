@@ -3,12 +3,13 @@ import values from 'lodash/values'
 import PledgeCommentList from '../components/PledgeCommentList'
 
 const mapStateToProps = (state, ownProps) => {
-  const comments =
-    values(state.entities.comments).filter(
-      comment => comment.pledge_id == ownProps.pledge_id
-    )
+  const pledgeId = ownProps.pledge_id
+  const ownComments = filterOwnComments(values(state.entities.comments), pledgeId)
 
-  const currentPledge = state.entities.pledges[ownProps.pledge_id]
+  // The question form should be rendered with a unique id so that it gets cleared on submit
+  const questionFormId = ownComments.length
+  const comments = filterApprovedComments(ownComments)
+  const currentPledge = state.entities.pledges[pledgeId]
 
   let userCanAskQuestions
   if (state.currentUser !== null && currentPledge) {
@@ -21,7 +22,20 @@ const mapStateToProps = (state, ownProps) => {
     comments,
     userCanAskQuestions,
     userCanAnswer: !userCanAskQuestions,
+    questionFormId
   }
+}
+
+export const filterOwnComments = function(comments, pledgeId) {
+  return comments.filter(
+    comment => (parseInt(comment.pledge_id) === pledgeId)
+  )
+}
+
+export const filterApprovedComments = function(comments) {
+  return comments.filter(
+    comment => (comment.aasm_state === 'approved')
+  )
 }
 
 const mapDispatchToProps = () => ({

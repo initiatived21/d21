@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
   def validate_success!
     @form.save
     unless @form.model.response? # is new question
-      InitiatorMailer.new_question(@form.model.id).deliver_later
+      AdminMailer.new_question(@form.model.id).deliver_later
     end
 
     respond_to do |format|

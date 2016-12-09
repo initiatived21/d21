@@ -17,13 +17,13 @@ ActiveAdmin.register Pledge do
     column :title
 
     column 'Initiator', :users do |pledge|
-     table_for pledge.initiator do
-      column do |initiator|
-        link_to initiator.name, [ :admin, initiator ]
-       end
-      column do |initiator|
-        link_to initiator.organization, [ :admin, initiator ]
-       end
+      table_for pledge.initiator do
+        column do |initiator|
+          link_to initiator.name, [ :admin, initiator ]
+        end
+        column do |initiator|
+          link_to initiator.organization, [ :admin, initiator ]
+        end
       end
     end
 
@@ -36,35 +36,35 @@ ActiveAdmin.register Pledge do
     actions
   end
 
-show do
-  attributes_table do
-    row :title
-    table_for pledge.initiator do
-      column "Initiator" do |initiator|
-        link_to initiator.name, [ :admin, initiator ]
-       end
-      column do |initiator|
-        link_to initiator.organization, [ :admin, initiator ]
-       end
+  show do
+    attributes_table do
+      row :title
+      table_for pledge.initiator do
+        column "Initiator" do |initiator|
+          link_to initiator.name, [ :admin, initiator ]
+         end
+        column do |initiator|
+          link_to initiator.organization, [ :admin, initiator ]
+        end
+      end
+      row :content
+      row :amount
+      row :who
+      row :requirement
+      row :location
+      row :deadline
+      row :description
+      row :created_at
+      row :updated_at
+      row :user_id
+      row :image
+      row :report_count
+      row :recommended
+      row :locale
+      row :image_width
+      row :image_height
     end
-    row :content
-    row :amount
-    row :who
-    row :requirement
-    row :location
-    row :deadline
-    row :description
-    row :created_at
-    row :updated_at
-    row :user_id
-    row :image
-    row :report_count
-    row :recommended
-    row :locale        
-    row :image_width
-    row :image_height        
   end
-end
 
   sidebar 'Zustand', only: :show do
     attributes_table_for pledge do

@@ -19,6 +19,21 @@ ActiveAdmin.register_page 'Dashboard' do
       end
 
       column do
+        panel 'Fragen, die auf Bestätigung warten' do
+          initialized_questions = Comment.initialized
+          if initialized_questions.count > 0
+            ul do
+              initialized_questions.map do |question|
+                li link_to(question.content, admin_question_path(question))
+              end
+            end
+          else
+            para 'Aktuell warten keine Fragen auf Bestätigung.'
+          end
+        end
+      end
+
+      column do
         panel 'Info' do
           para "Wir haben aktuell #{Pledge.active.count} aktive Pledges auf"\
                ' der Plattform.'
@@ -30,6 +45,8 @@ ActiveAdmin.register_page 'Dashboard' do
                ' der Plattform.'
           para "Wir haben aktuell #{Pledge.failed.count} beendete nicht-erfolgreiche Pledges auf"\
                ' der Plattform.'
+          para "Wir haben aktuell #{Comment.initialized.count} auf Freischaltung wartende Fragen"\
+               ' auf der Plattform.'
           para "Wir haben aktuell #{User.count} registrierte Nutzer auf"\
                ' der Plattform.'
           para "Wir haben aktuell #{Signature.count} Unterschriften insgesamt auf"\
