@@ -1103,13 +1103,9 @@ en:
               <img class="c-partner-list__logo c-partner-list__logo--startcoding" src="/images/partners/startcoding.png" />
             </a>
           </li>
-        </ul>
-      sponsors_heading: Sponsors
-      sponsors_html: |-
-        <ul class="c-partner-list">
           <li class="c-partner-list__item">
             <a href="https://www.anynines.com/" target="_blank" alt="" title="anynines">
-              <img class="c-partner-list__logo c-partner-list__logo--anynines" src="/images/sponsors/anynines.png" />
+              <img class="c-partner-list__logo c-partner-list__logo--anynines" src="/images/partners/anynines.png" />
             </a>
           </li>
         </ul>
