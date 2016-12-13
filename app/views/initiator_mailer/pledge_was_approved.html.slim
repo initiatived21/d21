@@ -1,24 +1,22 @@
-p[style="font-weight: bold;"]= t('.greeting', name: @pledge.initiator.name)
+= mail_paragraph do
+  b= t('.greeting', name: @pledge.initiator.name)
 
-p
+= mail_paragraph do
   = t('.intro_paragraph')
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
-    pledge_url(id: @pledge.id, locale: :de)
+    pledge_url(id: @pledge.id, locale: :de),
+    style: 'color: #1f70b8;'
 
-p
+= mail_paragraph do
   = t('.faq_paragraph')
   br
-  = link_to faq_url(locale: :de), faq_url(locale: :de)
+  = link_to faq_url(locale: :de), faq_url(locale: :de),
+    style: 'color: #1f70b8;'
 
-p[style="margin-bottom: 0;"]
+= mail_paragraph do
   = t('.success_paragraph.first_line')
-ul[style="margin-top: 0;"]
-  li= t('.success_paragraph.steps.1')
-  li= t('.success_paragraph.steps.2')
-  li= t('.success_paragraph.steps.3')
-
-p
-  = t('application_mailer.farewell')
-  br
-  = t('application_mailer.signed')
+  ul[style="margin-top: 0; margin-bottom: 0;"]
+    li= t('.success_paragraph.steps.1')
+    li= t('.success_paragraph.steps.2')
+    li= t('.success_paragraph.steps.3')

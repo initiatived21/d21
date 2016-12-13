@@ -1,19 +1,68 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= I18n.locale %>" lang="<%= I18n.locale %>">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  <title><%= message.subject %></title>
+</head>
+<body>
 
-  <body style="color: #3d3d3d; font: 1em/1.4 Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
 
-    <img src="https://www.buntundverbindlich.de/images/buv-logo-email.png" width="300" style="margin-bottom: 1.5em; width: 300px; max-width: 100%;" alt="Bunt und Verbindlich Logo" />
+      <tr>
+        <td>
+          <img src="https://www.buntundverbindlich.de/images/buv-logo-email.png" width="300"
+            style="width: 300px; max-width: 100%;" alt="Bunt und Verbindlich Logo" />
+        </td>
+      </tr>
 
-    <%= yield %>
+      <%= render '/layouts/partials/mail_spacer', height: 30 %>
 
-    <hr style="border-style: solid; border-bottom: none;" />
+      <%= yield %>
 
-    <div style="margin-top: 2.5em; font: 0.85em Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-      <%= t('application_mailer.imprint_html') %>
-    </div>
-  </body>
+      <tr>
+        <td style="color: #3d3d3d; font-family: Times, 'Times New Roman', 'Liberation Serif', serif; font-size: 16px; font-weight: bold; line-height: 20px;">
+          <%= t('application_mailer.farewell') %>
+          <br/>
+          <%= t('application_mailer.signed') %>
+        </td>
+      </tr>
+
+      <%= render '/layouts/partials/mail_spacer', height: 10 %>
+
+    </tbody>
+  </table>
+
+  <hr style="border-style: solid; border-bottom: none;" />
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+
+      <%= render '/layouts/partials/mail_spacer' %>
+
+      <tr>
+        <td style="color: #3d3d3d; font-size: 16px; font-weight: bold; line-height: 20px; font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+          <%= t('application_mailer.footer.title') %>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="color: #3d3d3d; font-size: 14px; line-height: 18px; font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+          <%= t('application_mailer.footer.address') %>
+        </td>
+      </tr>
+
+      <%= render '/layouts/partials/mail_spacer'%>
+
+      <tr>
+        <td style="color: #3d3d3d; font-size: 14px; line-height: 18px; font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+          <%= t('application_mailer.footer.links_html') %>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
 </html>

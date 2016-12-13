@@ -1,11 +1,7 @@
-p[style="font-weight: bold;"]= t('.greeting', name: @recipient.try(:name))
+= mail_paragraph do
+  b= t('.greeting', name: @recipient.try(:name))
 
-p
+= mail_paragraph do
   = t('.paragraph1')
   br
   = @pledge.title
-
-p
-  = t('application_mailer.farewell')
-  br
-  = t('application_mailer.signed')

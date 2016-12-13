@@ -1,20 +1,18 @@
-p[style="font-weight: bold;"]= t('.greeting', name: @pledge.initiator.name)
+= mail_paragraph do
+  b= t('.greeting', name: @pledge.initiator.name)
 
-p= t('.paragraph1')
+= mail_paragraph do
+  = t('.paragraph1')
 
-p
+= mail_paragraph do
   = t('.paragraph2')
   br
   = link_to pledge_url(id: @pledge.id, locale: :de),
-    pledge_url(id: @pledge.id, locale: :de)
+    pledge_url(id: @pledge.id, locale: :de),
+    style: 'color: #1f70b8;'
 
-p[style="margin-bottom: 0;"]
+= mail_paragraph do
   = t('.paragraph3')
-ul[style="margin-top: 0;"]
-  li= t('.paragraph4')
-  li= t('.paragraph5')
-
-p
-  = t('application_mailer.farewell')
-  br
-  = t('application_mailer.signed')
+  ul[style="margin-top: 0; margin-bottom: 0;"]
+    li= t('.paragraph4')
+    li= t('.paragraph5')

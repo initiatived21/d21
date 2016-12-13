@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
+  helper ApplicationHelper
   SYSTEM_MAIL = 'redaktion@buntundverbindlich.de'.freeze
   default from: SYSTEM_MAIL
   layout 'mailer'

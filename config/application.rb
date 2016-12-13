@@ -20,6 +20,7 @@ module D21
 
     config.to_prepare do
       Devise::Mailer.layout "mailer"
+      Devise::Mailer.helper :application
     end
   end
 end

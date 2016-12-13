@@ -1,8 +1,6 @@
 <%= t('.greeting', name: @pledge.initiator.name) %>
 
 <%= t('.first_paragraph') %>
+
 <%= t('.second_paragraph') %>
 <%= pledge_url(id: @pledge.id, locale: @pledge.initiator.locale) %>
-
-<%= t('application_mailer.farewell') %>
-<%= t('application_mailer.signed') %>

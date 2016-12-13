@@ -1,0 +1,19 @@
+= mail_paragraph do
+  b= t('.greeting', name: @resource.name)
+
+= mail_paragraph do
+  = t('.paragraph1')
+
+= mail_paragraph do
+  = t('.paragraph2')
+
+= mail_paragraph do
+  = link_to t('.confirm_link'),
+    confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale),
+    style: 'color: #1f70b8;'
+
+= mail_paragraph do
+  = t('.paragraph3')
+
+= mail_paragraph do
+  = t('.paragraph4')

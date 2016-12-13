@@ -1,27 +1,25 @@
-p[style="font-weight: bold;"]= t('.greeting', name: @recipient.name)
+= mail_paragraph do
+  b= t('.greeting', name: @recipient.name)
 
-p
+= mail_paragraph do
   = t('.first_paragraph')
 
-p
+= mail_paragraph do
   = t('.second_paragraph')
   br
-  = link_to t('.button_confirm_signature'), confirm_signature_url(\
-    id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de)
+  = link_to t('.button_confirm_signature'),
+    confirm_signature_url(id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de),
+    style: 'color: #1f70b8;'
 
-p
+= mail_paragraph do
   = t('.third_paragraph')
 
-p
+= mail_paragraph do
   = t('.fourth_paragraph')
   br
-  = link_to t('.button_delete_signature'), destroy_signature_url(\
-    id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de)
+  = link_to t('.button_delete_signature'),
+    destroy_signature_url(id: @recipient.id, hash: @recipient.confirmation_hash, locale: :de),
+    style: 'color: #1f70b8;'
 
-p
+= mail_paragraph do
   = t('.fifth_paragraph')
-
-p
-  = t('application_mailer.farewell')
-  br
-  = t('application_mailer.signed')
