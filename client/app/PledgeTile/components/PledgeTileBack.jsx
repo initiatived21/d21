@@ -50,8 +50,8 @@ export default class PledgeTileBack extends ChildComponent {
         <div className="c-pledge-tile__button">
           <a href={path} className="o-btn c-btn c-btn--primary">
             <FontAwesome name="reply" flip="horizontal" />
-            {' '}
-            {this.t('.show_pledge')}
+            {'\u00a0' /* Non-breaking spaces because of bug in card renderer/wkhtmltoimage */}
+            {this.t('.show_pledge').replace(/ /g, '\u00a0')}
           </a>
         </div>
         <SocialMediaButtons url={`${DOMAIN_PROD}${path}`} />
