@@ -391,80 +391,17 @@ de:
     farewell: Mit besten Grüßen,
     footer:
       address: Reinhardtstraße 38, 10117 Berlin
+      links: |-
+        Mail: redaktion@buntundverbindlich.de
+        Web: www.buntundverbindlich.de
+        Facebook: www.facebook.com/buntundverbindlich
+        Twitter: twitter.com/buntverbindlich
       links_html: |-
         Mail: <a style="color: #1f70b8;" href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
         Web: <a style="color: #1f70b8;" href="https://www.buntundverbindlich.de/de" target="_blank">www.buntundverbindlich.de</a><br />
         Facebook: <a style="color: #1f70b8;" href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
         Twitter: <a style="color: #1f70b8;" href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a>
       title: Redaktion | bunt und verbindlich
-    impressum: |-
-      ---
-      Impressum
-
-      Inhaberin der Domain www.buntundverbindlich.de ist die
-
-      Initiative D21 e.V.
-      Anschrift: Reinhardtstraße 38, 10117 Berlin
-      Vereinsregister- Nr. 19386 Nz
-      AG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg
-      Telefon 030 90177-0, Fax 030 90177-447
-
-      Verantwortlich
-      Lena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.
-      Telefon: 030 5268722-50, Telefax: 030 5268722-60
-      kontakt@initiatived21.de
-
-      Verantwortlich für journalistisch-redaktionelle Angebote
-      Sabrina Dietrich, Presse- und Öffentlichkeitsarbeit
-      Telefon: 030 5268722-55, Telefax: 030 5268722-60
-      sabrina.dietrich@initiatived21.de
-
-      Vertretungsberechtigung
-      Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.
-    impressum_html: |-
-      ---
-      <p><strong>Impressum</strong></p>
-
-      <p>Inhaberin der Domain www.buntundverbindlich.de ist die</p>
-
-      <p><strong>Initiative D21 e.V.</strong><br />
-      Anschrift: Reinhardtstraße 38, 10117 Berlin<br />
-      Vereinsregister- Nr. 19386 Nz<br />
-      AG Charlottenburg, Amtsgerichtsplatz 1, 14057 Berlin-Charlottenburg<br />
-      Telefon 030 90177-0, Fax 030 90177-447</p>
-
-      <p><strong>Verantwortlich</strong><br />
-      Lena-Sophie Müller, Geschäftsführerin Initiative D21 e.V.<br />
-      Telefon: 030 5268722-50, Telefax: 030 5268722-60<br />
-      kontakt@initiatived21.de</p>
-
-      <p><strong>Verantwortlich für journalistisch-redaktionelle Angebote</strong><br />
-      Sabrina Dietrich, Presse- und Öffentlichkeitsarbeit<br />
-      Telefon: 030 5268722-55, Telefax: 030 5268722-60<br />
-      sabrina.dietrich@initiatived21.de</p>
-
-      <p><strong>Vertretungsberechtigung</strong><br />
-      Gemäß § 19 Nr. 3 der Satzung vertreten der Präsident/die Präsidentin und ein weiteres Mitglied des Präsidiums den Verein gerichtlich und außergerichtlich.</p>
-    imprint: |-
-      Redaktion | bunt und verbindlich
-      Reinhardtstraße 38, 10117 Berlin
-
-      Mail: redaktion@buntundverbindlich.de
-      Web: www.buntundverbindlich.de
-      Facebook: www.facebook.com/buntundverbindlich
-      Twitter: twitter.com/buntverbindlich
-    imprint_html: |-
-      <p>
-      <span style="font-size: 1rem; font-weight: bold;">Redaktion | bunt und verbindlich</span><br />
-      Reinhardtstraße 38, 10117 Berlin
-      </p>
-
-      <p>
-      Mail: <a href="mailto:redaktion@buntundverbindlich.de" target="_blank">redaktion@buntundverbindlich.de</a><br />
-      Web: <a href="https://www.buntundverbindlich.de/de" target="_blank">www.buntundverbindlich.de</a><br />
-      Facebook: <a href="https://www.facebook.com/buntundverbindlich" target="_blank">www.facebook.com/buntundverbindlich</a><br />
-      Twitter: <a href="https://twitter.com/buntverbindlich" target="_blank">twitter.com/buntverbindlich</a><br />
-      </p>
     signed: Ihre bunt und verbindlich Redaktion
   devise:
     confirmations:
