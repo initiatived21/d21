@@ -34,8 +34,14 @@ describe PledgesHelper do
   describe '#card_image_url' do
     it 'should return url with cache-busting query string for de locale' do
       pledge.stubs(:card_de).returns('/dummy/path')
-      assert_match(/^dummy_base_url\/dummy\/path\?v=\d+$/,
-        card_image_url(pledge, :de))
+      pledge.stubs(:updated_at).returns(Time.new(2015, 1, 1))
+      assert_equal('dummy_base_url/dummy/path?v=1420066800', card_image_url(pledge, :de))
+    end
+
+    it 'should return url with cache-busting query string for en locale' do
+      pledge.stubs(:card_en).returns('/dummy/path')
+      pledge.stubs(:updated_at).returns(Time.new(2015, 1, 1))
+      assert_equal('dummy_base_url/dummy/path?v=1420066800', card_image_url(pledge, :en))
     end
   end
 end
