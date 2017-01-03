@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203142144) do
+ActiveRecord::Schema.define(version: 20170103141919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,8 +78,6 @@ ActiveRecord::Schema.define(version: 20161203142144) do
     t.integer  "report_count",           default: 0,     null: false
     t.boolean  "recommended",            default: false, null: false
     t.string   "locale",       limit: 2,                 null: false
-    t.integer  "image_width"
-    t.integer  "image_height"
     t.string   "card_de"
     t.string   "card_en"
     t.index ["user_id"], name: "index_pledges_on_user_id", using: :btree
@@ -151,8 +149,6 @@ ActiveRecord::Schema.define(version: 20161203142144) do
     t.datetime "confirmation_sent_at"
     t.string   "avatar"
     t.string   "locale",                 limit: 2,                 null: false
-    t.integer  "avatar_width"
-    t.integer  "avatar_height"
     t.boolean  "mailings_enabled",                 default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree

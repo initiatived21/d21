@@ -35,7 +35,6 @@ class PledgeImageUploader < CarrierWave::Uploader::Base
   # end
 
   process resize_to_fit: [1200, 800]
-  process :store_dimensions
 
   # Create different versions of your uploaded files:
   # version :thumb do
@@ -59,11 +58,5 @@ class PledgeImageUploader < CarrierWave::Uploader::Base
   def secure_token
     var = :"@#{mounted_as}_secure_token"
     model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
-  end
-
-  def store_dimensions
-    if file && model
-      model.image_width, model.image_height = ::MiniMagick::Image.open(file.file)[:dimensions]
-    end
   end
 end

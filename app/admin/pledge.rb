@@ -61,8 +61,6 @@ ActiveAdmin.register Pledge do
       row :report_count
       row :recommended
       row :locale
-      row :image_width
-      row :image_height
     end
   end
 

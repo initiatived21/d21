@@ -35,7 +35,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   process resize_to_fill: [200, 200]
-  process :store_dimensions
 
   # Create different versions of your uploaded files:
   # version :thumb do
@@ -59,11 +58,5 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def secure_token
     var = :"@#{mounted_as}_secure_token"
     model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
-  end
-
-  def store_dimensions
-    if file && model
-      model.avatar_width, model.avatar_height = ::MiniMagick::Image.open(file.file)[:dimensions]
-    end
   end
 end
