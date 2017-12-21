@@ -4,11 +4,19 @@ class PledgesController < ApplicationController
   before_action :authenticate_user!, except: [:new, :create, :index, :show]
 
   def new
+    # Quick fix: In preparation for the discontinuation of this project, the
+    # create link was to be removed.
+    redirect_to root_path
+    # /Quick fix
     @pledge_props = pledge_form_props('POST', pledges_path)
     render :new
   end
 
   def create
+    # Quick fix: In preparation for the discontinuation of this project, the
+    # create link was to be removed.
+    redirect_to root_path
+    # /Quick fix
     authorize @form.model
 
     if @form.validate(pledge_params)
