@@ -57,7 +57,7 @@
 .c-btn--disabled {
   background-color: $c-btn--disabled-background;
   border-color: $c-btn--disabled-background;
-  cursor: progress; /* or 'auto' */
+  cursor: initial;
 }
 
 .c-btn--tiny {

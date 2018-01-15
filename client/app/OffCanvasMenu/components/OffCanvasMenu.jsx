@@ -34,6 +34,7 @@ class OffCanvasMenu extends ChildComponent {
           handleClick={this.hide}>
           {this.t('.items.start')}
         </OffCanvasMenuItem>
+        {/*
         <OffCanvasMenuItem href={localPath('/pledges/new')} active={currentPage === 'pledges#new'}
           handleClick={this.hide}>
           {this.t('.items.new_pledge')}
@@ -50,7 +51,6 @@ class OffCanvasMenu extends ChildComponent {
           handleClick={this.hide}>
           {this.t('.items.about')}
         </OffCanvasMenuItem>
-        {/*
         <OffCanvasMenuItem href={localPath('/press')} active={currentPage === 'pages#press'}
           handleClick={this.hide}>
           {this.t('.items.press')}

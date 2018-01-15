@@ -32,20 +32,24 @@ export default class PageHeader extends RootComponent {
   }
 
   render() {
-    const { controller, action, authToken, currentUser } = this.props
+    const { controller, action, /* authToken, currentUser */ } = this.props
 
     return (
       <Provider store={store}>
-        <div className="o-wrapper">
+        <div className="o-wrapper" style={{ marginTop: '1em' }}>
+          {/*
           <MediaQuery maxWidth={BREAKPOINT_M - 1}>
             <MenuButton />
           </MediaQuery>
           <SecondaryNav authToken={authToken} currentUser={currentUser} />
+          */}
           <HeaderLogo />
+          {/*
           <SearchBar />
           <MediaQuery minWidth={BREAKPOINT_L}>
             <SocialMediaIcons />
           </MediaQuery>
+          */}
           <MediaQuery minWidth={BREAKPOINT_M}>
             <PrimaryNav controller={controller} action={action} />
           </MediaQuery>

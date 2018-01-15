@@ -19,6 +19,7 @@ export default class PrimaryNav extends ChildComponent {
           <PrimaryNavItem active={currentPage === 'pages#home'} href={localPath('/')}>
             {this.t('.start_link')}
           </PrimaryNavItem>
+          {/*
           <PrimaryNavItem active={currentPage === 'pledges#new'} href={localPath('/pledges/new')}>
             {this.t('.new_pledge_link')}
           </PrimaryNavItem>
@@ -31,7 +32,6 @@ export default class PrimaryNav extends ChildComponent {
           <PrimaryNavItem active={currentPage === 'pages#about'} href={localPath('/about')}>
             {this.t('.about_link')}
           </PrimaryNavItem>
-          {/*
           <PrimaryNavItem active={currentPage === 'pages#press'} href={localPath('/press')}>
             {this.t('.press_link')}
           </PrimaryNavItem>

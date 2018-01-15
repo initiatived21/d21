@@ -39,7 +39,7 @@ export default class PledgeTileFront extends ChildComponent {
 
     return (
       <div className={combinedClassName}>
-        <a className="c-pledge-tile__link" href={path}>
+        <span className="c-pledge-tile__link">
           <TagList tags={tags} summary />
           <InitiatorWithImage imagePath={initiatorImage}>
             {initiatorName}
@@ -60,7 +60,7 @@ export default class PledgeTileFront extends ChildComponent {
               <ProgressBar percentage={percentage} urgent={isUrgent} />
             </div>
           </div>
-        </a>
+        </span>
       </div>
     )
   }

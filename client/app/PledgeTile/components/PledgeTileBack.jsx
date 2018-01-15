@@ -30,7 +30,7 @@ export default class PledgeTileBack extends ChildComponent {
 
     return (
       <div className={combinedClassName}>
-        <a className="c-pledge-tile__link" href={path}>
+        <span className="c-pledge-tile__link">
           <div className="o-block o-block--center" aria-hidden={true}>
             <Avatar
               className="o-block__img" name={initiatorName}
@@ -46,13 +46,13 @@ export default class PledgeTileBack extends ChildComponent {
               />
             </div>
           </div>
-        </a>
+        </span>
         <div className="c-pledge-tile__button">
-          <a href={path} className="o-btn c-btn c-btn--primary">
+          <span className="o-btn c-btn c-btn--disabled">
             <FontAwesome name="reply" flip="horizontal" />
             {'\u00a0' /* Non-breaking spaces because of bug in card renderer/wkhtmltoimage */}
             {this.t('.show_pledge').replace(/ /g, '\u00a0')}
-          </a>
+          </span>
         </div>
         <SocialMediaButtons url={`${DOMAIN_PROD}${path}`} />
       </div>
