@@ -13,15 +13,14 @@ export default class PrimaryNav extends ChildComponent {
   render() {
     const currentPage = `${this.props.controller}#${this.props.action}`
 
-    // <PrimaryNavItem active={currentPage === 'pledges#new'} href={localPath('/pledges/new')}>
-    // {this.t('.new_pledge_link')}
-    // </PrimaryNavItem>
-
     return (
       <nav className="c-primary-nav">
         <ul className="o-list-inline">
           <PrimaryNavItem active={currentPage === 'pages#home'} href={localPath('/')}>
             {this.t('.start_link')}
+          </PrimaryNavItem>
+          <PrimaryNavItem active={currentPage === 'pledges#new'} href={localPath('/pledges/new')}>
+            {this.t('.new_pledge_link')}
           </PrimaryNavItem>
           <PrimaryNavItem active={currentPage === 'pledges#index'} href={localPath('/pledges')}>
             {this.t('.all_pledges_link')}
