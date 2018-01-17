@@ -6,7 +6,7 @@ gem 'rails', '5.0.0.rc1'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0.6'
 
 ##################
 ### JAVASCRIPT ###
