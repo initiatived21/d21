@@ -79,7 +79,7 @@
     "loader-utils": "^0.2.13",
     "lodash": "^4.7.0",
     "mirror-creator": "1.1.0",
-    "node-sass": "^3.7.0",
+    "node-sass": "^3.13.1",
     "normalizr": "^2.0.1",
     "postcss-loader": "^0.9.1",
     "react": "^15.1.0",
